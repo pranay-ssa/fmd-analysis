@@ -1,0 +1,55 @@
+# === Source images (raw BMPs, ~7GB) ===
+data/incoming/
+
+# === Crop outputs (production BMPs, ~6.4GB) ===
+run/single-size_fixed_crop/
+run/multi-size_fixed_crop/
+
+# === Old variable-size crops (deleted, but guard against recreate) ===
+run/crops/
+run/center_ab/
+run/training/
+
+# === EDA crop image subdirs (keep .py/.json/.md only) ===
+run/eda/
+
+# === Augmentation previews (generated PNGs, regenerable from the library) ===
+run/augment/
+
+# === Generated reports (keep fixed_size_crop_spec.md) ===
+run/reports/*.html
+run/reports/*.json
+run/reports/*.pptx
+run/reports/*.png
+run/reports/*.py
+run/reports/deck_assets/
+!run/reports/fixed_size_crop_spec.md
+
+# === Experiments (deleted, guard against recreate) ===
+tests/circular_crop_test/
+
+# === Python ===
+__pycache__/
+*.pyc
+.venv/
+
+# === OS / editor cruft ===
+~$*
+Thumbs.db
+.DS_Store
+
+# === Keep tracked ===
+!data/annotations.xml
+
+# === Local tool artifacts ===
+.obsidian-vault/
+
+# === Run outputs (crops, weights, per-epoch logs; ~9GB) ===
+runs/
+
+# === Python cache ===
+.pytest_cache/
+*.egg-info/
+
+# === Root Obsidian config (the vault at .obsidian-vault/ carries its own) ===
+/.obsidian/

@@ -1,0 +1,1699 @@
+{
+  "architectures": [
+    "ResNet50",
+    "ResNet50-Inception MultiLevel MultiScale"
+  ],
+  "lines": [
+    {
+      "line": "L24",
+      "test_pictures": 858,
+      "accuracy_resnet50": 0.873,
+      "accuracy_multiscale": 0.8939,
+      "accuracy_gap": 0.0209,
+      "macro_recall_resnet50": 0.577,
+      "macro_recall_multiscale": 0.6511,
+      "macro_recall_gap": 0.0741,
+      "macro_f1_resnet50": 0.5664,
+      "macro_f1_multiscale": 0.652,
+      "macro_f1_gap": 0.0856,
+      "train_minutes_resnet50": 18.5,
+      "train_minutes_multiscale": 20.6,
+      "classes_scored": 19,
+      "per_class": {
+        "Bubble": {
+          "support": 25,
+          "resnet50": 0.76,
+          "multiscale": 0.76,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Bubble Cluster": {
+          "support": 5,
+          "resnet50": 0.2,
+          "multiscale": 0.2,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Bubble Irregular": {
+          "support": 4,
+          "resnet50": 0.25,
+          "multiscale": 0.5,
+          "gap": 0.25,
+          "correct_change": 1
+        },
+        "Bubble On Edge": {
+          "support": 1,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Cavity Off Center": {
+          "support": 28,
+          "resnet50": 1.0,
+          "multiscale": 0.9643,
+          "gap": -0.0357,
+          "correct_change": -1
+        },
+        "Dirty Camera": {
+          "support": 8,
+          "resnet50": 1.0,
+          "multiscale": 0.875,
+          "gap": -0.125,
+          "correct_change": -1
+        },
+        "Extraneous Polymer": {
+          "support": 18,
+          "resnet50": 0.0556,
+          "multiscale": 0.1667,
+          "gap": 0.1111,
+          "correct_change": 2
+        },
+        "Fiber": {
+          "support": 26,
+          "resnet50": 0.5385,
+          "multiscale": 0.6538,
+          "gap": 0.1154,
+          "correct_change": 3
+        },
+        "Foreign Matter": {
+          "support": 86,
+          "resnet50": 0.7558,
+          "multiscale": 0.7326,
+          "gap": -0.0233,
+          "correct_change": -2
+        },
+        "HEMA Fragment": {
+          "support": 2,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "HEMA Obstruction": {
+          "support": 45,
+          "resnet50": 0.9556,
+          "multiscale": 0.9333,
+          "gap": -0.0222,
+          "correct_change": -1
+        },
+        "Lens Off Center": {
+          "support": 59,
+          "resnet50": 0.9153,
+          "multiscale": 0.9153,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Low Dose Obstructing Region of Interest": {
+          "support": 32,
+          "resnet50": 0.7188,
+          "multiscale": 0.75,
+          "gap": 0.0312,
+          "correct_change": 1
+        },
+        "Missing Lens": {
+          "support": 55,
+          "resnet50": 0.9818,
+          "multiscale": 0.9818,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Missing Primary Package": {
+          "support": 344,
+          "resnet50": 1.0,
+          "multiscale": 0.9971,
+          "gap": -0.0029,
+          "correct_change": -1
+        },
+        "Multiple Lenses": {
+          "support": 101,
+          "resnet50": 0.8317,
+          "multiscale": 0.9406,
+          "gap": 0.1089,
+          "correct_change": 11
+        },
+        "Package Misalignment": {
+          "support": 10,
+          "resnet50": 1.0,
+          "multiscale": 1.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "View Obstructed": {
+          "support": 6,
+          "resnet50": 0.0,
+          "multiscale": 1.0,
+          "gap": 1.0,
+          "correct_change": 6
+        },
+        "Wet Package": {
+          "support": 3,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        }
+      }
+    },
+    {
+      "line": "L25",
+      "test_pictures": 287,
+      "accuracy_resnet50": 0.9129,
+      "accuracy_multiscale": 0.899,
+      "accuracy_gap": -0.0139,
+      "macro_recall_resnet50": 0.6009,
+      "macro_recall_multiscale": 0.5675,
+      "macro_recall_gap": -0.0335,
+      "macro_f1_resnet50": 0.5908,
+      "macro_f1_multiscale": 0.5717,
+      "macro_f1_gap": -0.0191,
+      "train_minutes_resnet50": 5.9,
+      "train_minutes_multiscale": 6.9,
+      "classes_scored": 17,
+      "per_class": {
+        "Bubble": {
+          "support": 5,
+          "resnet50": 1.0,
+          "multiscale": 0.4,
+          "gap": -0.6,
+          "correct_change": -3
+        },
+        "Bubble Cluster": {
+          "support": 1,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Bubble On Edge": {
+          "support": 1,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Cavity Off Center": {
+          "support": 12,
+          "resnet50": 1.0,
+          "multiscale": 1.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Dirty Strobe": {
+          "support": 4,
+          "resnet50": 1.0,
+          "multiscale": 1.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Extraneous Polymer": {
+          "support": 3,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Fiber": {
+          "support": 11,
+          "resnet50": 0.6364,
+          "multiscale": 0.8182,
+          "gap": 0.1818,
+          "correct_change": 2
+        },
+        "Foreign Matter": {
+          "support": 25,
+          "resnet50": 0.84,
+          "multiscale": 0.8,
+          "gap": -0.04,
+          "correct_change": -1
+        },
+        "HEMA Obstruction": {
+          "support": 5,
+          "resnet50": 0.4,
+          "multiscale": 0.4,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Lens Off Center": {
+          "support": 2,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Low Dose Obstructing Region of Interest": {
+          "support": 17,
+          "resnet50": 0.8824,
+          "multiscale": 0.7647,
+          "gap": -0.1176,
+          "correct_change": -2
+        },
+        "Missing Lens": {
+          "support": 2,
+          "resnet50": 0.5,
+          "multiscale": 0.5,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Missing Primary Package": {
+          "support": 57,
+          "resnet50": 1.0,
+          "multiscale": 1.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Multiple Lenses": {
+          "support": 83,
+          "resnet50": 0.9759,
+          "multiscale": 0.9639,
+          "gap": -0.012,
+          "correct_change": -1
+        },
+        "Package Misalignment": {
+          "support": 53,
+          "resnet50": 0.9811,
+          "multiscale": 1.0,
+          "gap": 0.0189,
+          "correct_change": 1
+        },
+        "View Obstructed": {
+          "support": 5,
+          "resnet50": 1.0,
+          "multiscale": 1.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Wet Package": {
+          "support": 1,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        }
+      }
+    },
+    {
+      "line": "L26",
+      "test_pictures": 365,
+      "accuracy_resnet50": 0.8438,
+      "accuracy_multiscale": 0.9041,
+      "accuracy_gap": 0.0603,
+      "macro_recall_resnet50": 0.6379,
+      "macro_recall_multiscale": 0.5479,
+      "macro_recall_gap": -0.09,
+      "macro_f1_resnet50": 0.601,
+      "macro_f1_multiscale": 0.5705,
+      "macro_f1_gap": -0.0305,
+      "train_minutes_resnet50": 7.6,
+      "train_minutes_multiscale": 8.9,
+      "classes_scored": 17,
+      "per_class": {
+        "Bubble": {
+          "support": 4,
+          "resnet50": 1.0,
+          "multiscale": 0.5,
+          "gap": -0.5,
+          "correct_change": -2
+        },
+        "Bubble Cluster": {
+          "support": 1,
+          "resnet50": 1.0,
+          "multiscale": 0.0,
+          "gap": -1.0,
+          "correct_change": -1
+        },
+        "Bubble Irregular": {
+          "support": 2,
+          "resnet50": 0.5,
+          "multiscale": 0.0,
+          "gap": -0.5,
+          "correct_change": -1
+        },
+        "Cavity Off Center": {
+          "support": 7,
+          "resnet50": 0.7143,
+          "multiscale": 1.0,
+          "gap": 0.2857,
+          "correct_change": 2
+        },
+        "Dirty Strobe": {
+          "support": 9,
+          "resnet50": 1.0,
+          "multiscale": 1.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Extraneous Polymer": {
+          "support": 40,
+          "resnet50": 0.55,
+          "multiscale": 0.8,
+          "gap": 0.25,
+          "correct_change": 10
+        },
+        "Fiber": {
+          "support": 8,
+          "resnet50": 0.375,
+          "multiscale": 0.25,
+          "gap": -0.125,
+          "correct_change": -1
+        },
+        "Foreign Matter": {
+          "support": 49,
+          "resnet50": 0.8367,
+          "multiscale": 0.9796,
+          "gap": 0.1429,
+          "correct_change": 7
+        },
+        "HEMA Obstruction": {
+          "support": 1,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Lens Off Center": {
+          "support": 2,
+          "resnet50": 1.0,
+          "multiscale": 0.0,
+          "gap": -1.0,
+          "correct_change": -2
+        },
+        "Low Dose Obstructing Region of Interest": {
+          "support": 4,
+          "resnet50": 0.0,
+          "multiscale": 0.25,
+          "gap": 0.25,
+          "correct_change": 1
+        },
+        "Missing Lens": {
+          "support": 1,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Missing Primary Package": {
+          "support": 2,
+          "resnet50": 1.0,
+          "multiscale": 1.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Multiple Lenses": {
+          "support": 202,
+          "resnet50": 0.9802,
+          "multiscale": 0.9901,
+          "gap": 0.0099,
+          "correct_change": 2
+        },
+        "Package Misalignment": {
+          "support": 7,
+          "resnet50": 1.0,
+          "multiscale": 0.8571,
+          "gap": -0.1429,
+          "correct_change": -1
+        },
+        "View Obstructed": {
+          "support": 10,
+          "resnet50": 0.2,
+          "multiscale": 1.0,
+          "gap": 0.8,
+          "correct_change": 8
+        },
+        "Wet Package": {
+          "support": 16,
+          "resnet50": 0.6875,
+          "multiscale": 0.6875,
+          "gap": 0.0,
+          "correct_change": 0
+        }
+      }
+    },
+    {
+      "line": "L27",
+      "test_pictures": 409,
+      "accuracy_resnet50": 0.846,
+      "accuracy_multiscale": 0.868,
+      "accuracy_gap": 0.022,
+      "macro_recall_resnet50": 0.6603,
+      "macro_recall_multiscale": 0.6071,
+      "macro_recall_gap": -0.0533,
+      "macro_f1_resnet50": 0.6287,
+      "macro_f1_multiscale": 0.6037,
+      "macro_f1_gap": -0.025,
+      "train_minutes_resnet50": 8.3,
+      "train_minutes_multiscale": 10.0,
+      "classes_scored": 15,
+      "per_class": {
+        "Bubble Cluster": {
+          "support": 3,
+          "resnet50": 0.0,
+          "multiscale": 0.6667,
+          "gap": 0.6667,
+          "correct_change": 2
+        },
+        "Bubble Irregular": {
+          "support": 6,
+          "resnet50": 0.6667,
+          "multiscale": 0.3333,
+          "gap": -0.3333,
+          "correct_change": -2
+        },
+        "Bubble Scatter": {
+          "support": 1,
+          "resnet50": 1.0,
+          "multiscale": 0.0,
+          "gap": -1.0,
+          "correct_change": -1
+        },
+        "Cavity Off Center": {
+          "support": 4,
+          "resnet50": 1.0,
+          "multiscale": 1.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Extraneous Polymer": {
+          "support": 5,
+          "resnet50": 0.0,
+          "multiscale": 0.2,
+          "gap": 0.2,
+          "correct_change": 1
+        },
+        "Fiber": {
+          "support": 27,
+          "resnet50": 0.6667,
+          "multiscale": 0.4815,
+          "gap": -0.1852,
+          "correct_change": -5
+        },
+        "Foreign Matter": {
+          "support": 165,
+          "resnet50": 0.8303,
+          "multiscale": 0.9333,
+          "gap": 0.103,
+          "correct_change": 17
+        },
+        "HEMA Obstruction": {
+          "support": 1,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Lens Off Center": {
+          "support": 8,
+          "resnet50": 0.125,
+          "multiscale": 0.0,
+          "gap": -0.125,
+          "correct_change": -1
+        },
+        "Low Dose Obstructing Region of Interest": {
+          "support": 139,
+          "resnet50": 0.9496,
+          "multiscale": 0.9496,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Missing Lens": {
+          "support": 24,
+          "resnet50": 1.0,
+          "multiscale": 1.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Missing Primary Package": {
+          "support": 4,
+          "resnet50": 1.0,
+          "multiscale": 1.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Multiple Lenses": {
+          "support": 16,
+          "resnet50": 1.0,
+          "multiscale": 0.875,
+          "gap": -0.125,
+          "correct_change": -2
+        },
+        "Package Misalignment": {
+          "support": 3,
+          "resnet50": 0.6667,
+          "multiscale": 1.0,
+          "gap": 0.3333,
+          "correct_change": 1
+        },
+        "View Obstructed": {
+          "support": 3,
+          "resnet50": 1.0,
+          "multiscale": 0.6667,
+          "gap": -0.3333,
+          "correct_change": -1
+        }
+      }
+    },
+    {
+      "line": "L31",
+      "test_pictures": 608,
+      "accuracy_resnet50": 0.9095,
+      "accuracy_multiscale": 0.9062,
+      "accuracy_gap": -0.0033,
+      "macro_recall_resnet50": 0.487,
+      "macro_recall_multiscale": 0.4562,
+      "macro_recall_gap": -0.0308,
+      "macro_f1_resnet50": 0.4834,
+      "macro_f1_multiscale": 0.4562,
+      "macro_f1_gap": -0.0272,
+      "train_minutes_resnet50": 12.2,
+      "train_minutes_multiscale": 14.6,
+      "classes_scored": 19,
+      "per_class": {
+        "Bubble Cluster": {
+          "support": 1,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Bubble Irregular": {
+          "support": 1,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Bubble On 123": {
+          "support": 4,
+          "resnet50": 0.25,
+          "multiscale": 0.0,
+          "gap": -0.25,
+          "correct_change": -1
+        },
+        "Bubble On Edge": {
+          "support": 2,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Bubble Scatter": {
+          "support": 1,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Cavity Off Center": {
+          "support": 4,
+          "resnet50": 1.0,
+          "multiscale": 1.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Extraneous Polymer": {
+          "support": 5,
+          "resnet50": 0.4,
+          "multiscale": 0.2,
+          "gap": -0.2,
+          "correct_change": -1
+        },
+        "Fiber": {
+          "support": 36,
+          "resnet50": 0.8889,
+          "multiscale": 0.9444,
+          "gap": 0.0556,
+          "correct_change": 2
+        },
+        "Foreign Matter": {
+          "support": 59,
+          "resnet50": 0.5424,
+          "multiscale": 0.5932,
+          "gap": 0.0508,
+          "correct_change": 3
+        },
+        "HEMA Fragment": {
+          "support": 3,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "HEMA Obstruction": {
+          "support": 1,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Lens Off Center": {
+          "support": 6,
+          "resnet50": 0.3333,
+          "multiscale": 0.1667,
+          "gap": -0.1667,
+          "correct_change": -1
+        },
+        "Low Dose Obstructing Region of Interest": {
+          "support": 392,
+          "resnet50": 0.9974,
+          "multiscale": 0.9923,
+          "gap": -0.0051,
+          "correct_change": -2
+        },
+        "Missing Lens": {
+          "support": 15,
+          "resnet50": 1.0,
+          "multiscale": 1.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Missing Primary Package": {
+          "support": 22,
+          "resnet50": 1.0,
+          "multiscale": 1.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Multiple Lenses": {
+          "support": 29,
+          "resnet50": 0.931,
+          "multiscale": 0.8621,
+          "gap": -0.069,
+          "correct_change": -2
+        },
+        "Package Misalignment": {
+          "support": 15,
+          "resnet50": 1.0,
+          "multiscale": 1.0,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "View Obstructed": {
+          "support": 11,
+          "resnet50": 0.9091,
+          "multiscale": 0.9091,
+          "gap": 0.0,
+          "correct_change": 0
+        },
+        "Wet Package": {
+          "support": 1,
+          "resnet50": 0.0,
+          "multiscale": 0.0,
+          "gap": 0.0,
+          "correct_change": 0
+        }
+      }
+    }
+  ],
+  "per_class": [
+    {
+      "line": "L24",
+      "cls": "Bubble",
+      "support": 25,
+      "recall_resnet50": 0.76,
+      "recall_multiscale": 0.76,
+      "recall_gap": 0.0,
+      "correct_resnet50": 19,
+      "correct_multiscale": 19,
+      "correct_change": 0
+    },
+    {
+      "line": "L24",
+      "cls": "Bubble Cluster",
+      "support": 5,
+      "recall_resnet50": 0.2,
+      "recall_multiscale": 0.2,
+      "recall_gap": 0.0,
+      "correct_resnet50": 1,
+      "correct_multiscale": 1,
+      "correct_change": 0
+    },
+    {
+      "line": "L24",
+      "cls": "Bubble Irregular",
+      "support": 4,
+      "recall_resnet50": 0.25,
+      "recall_multiscale": 0.5,
+      "recall_gap": 0.25,
+      "correct_resnet50": 1,
+      "correct_multiscale": 2,
+      "correct_change": 1
+    },
+    {
+      "line": "L24",
+      "cls": "Bubble On Edge",
+      "support": 1,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L24",
+      "cls": "Cavity Off Center",
+      "support": 28,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 0.9643,
+      "recall_gap": -0.0357,
+      "correct_resnet50": 28,
+      "correct_multiscale": 27,
+      "correct_change": -1
+    },
+    {
+      "line": "L24",
+      "cls": "Dirty Camera",
+      "support": 8,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 0.875,
+      "recall_gap": -0.125,
+      "correct_resnet50": 8,
+      "correct_multiscale": 7,
+      "correct_change": -1
+    },
+    {
+      "line": "L24",
+      "cls": "Extraneous Polymer",
+      "support": 18,
+      "recall_resnet50": 0.0556,
+      "recall_multiscale": 0.1667,
+      "recall_gap": 0.1111,
+      "correct_resnet50": 1,
+      "correct_multiscale": 3,
+      "correct_change": 2
+    },
+    {
+      "line": "L24",
+      "cls": "Fiber",
+      "support": 26,
+      "recall_resnet50": 0.5385,
+      "recall_multiscale": 0.6538,
+      "recall_gap": 0.1154,
+      "correct_resnet50": 14,
+      "correct_multiscale": 17,
+      "correct_change": 3
+    },
+    {
+      "line": "L24",
+      "cls": "Foreign Matter",
+      "support": 86,
+      "recall_resnet50": 0.7558,
+      "recall_multiscale": 0.7326,
+      "recall_gap": -0.0233,
+      "correct_resnet50": 65,
+      "correct_multiscale": 63,
+      "correct_change": -2
+    },
+    {
+      "line": "L24",
+      "cls": "HEMA Fragment",
+      "support": 2,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L24",
+      "cls": "HEMA Obstruction",
+      "support": 45,
+      "recall_resnet50": 0.9556,
+      "recall_multiscale": 0.9333,
+      "recall_gap": -0.0222,
+      "correct_resnet50": 43,
+      "correct_multiscale": 42,
+      "correct_change": -1
+    },
+    {
+      "line": "L24",
+      "cls": "Lens Off Center",
+      "support": 59,
+      "recall_resnet50": 0.9153,
+      "recall_multiscale": 0.9153,
+      "recall_gap": 0.0,
+      "correct_resnet50": 54,
+      "correct_multiscale": 54,
+      "correct_change": 0
+    },
+    {
+      "line": "L24",
+      "cls": "Low Dose Obstructing Region of Interest",
+      "support": 32,
+      "recall_resnet50": 0.7188,
+      "recall_multiscale": 0.75,
+      "recall_gap": 0.0312,
+      "correct_resnet50": 23,
+      "correct_multiscale": 24,
+      "correct_change": 1
+    },
+    {
+      "line": "L24",
+      "cls": "Missing Lens",
+      "support": 55,
+      "recall_resnet50": 0.9818,
+      "recall_multiscale": 0.9818,
+      "recall_gap": 0.0,
+      "correct_resnet50": 54,
+      "correct_multiscale": 54,
+      "correct_change": 0
+    },
+    {
+      "line": "L24",
+      "cls": "Missing Primary Package",
+      "support": 344,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 0.9971,
+      "recall_gap": -0.0029,
+      "correct_resnet50": 344,
+      "correct_multiscale": 343,
+      "correct_change": -1
+    },
+    {
+      "line": "L24",
+      "cls": "Multiple Lenses",
+      "support": 101,
+      "recall_resnet50": 0.8317,
+      "recall_multiscale": 0.9406,
+      "recall_gap": 0.1089,
+      "correct_resnet50": 84,
+      "correct_multiscale": 95,
+      "correct_change": 11
+    },
+    {
+      "line": "L24",
+      "cls": "Package Misalignment",
+      "support": 10,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 10,
+      "correct_multiscale": 10,
+      "correct_change": 0
+    },
+    {
+      "line": "L24",
+      "cls": "View Obstructed",
+      "support": 6,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 1.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 6,
+      "correct_change": 6
+    },
+    {
+      "line": "L24",
+      "cls": "Wet Package",
+      "support": 3,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L25",
+      "cls": "Bubble",
+      "support": 5,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 0.4,
+      "recall_gap": -0.6,
+      "correct_resnet50": 5,
+      "correct_multiscale": 2,
+      "correct_change": -3
+    },
+    {
+      "line": "L25",
+      "cls": "Bubble Cluster",
+      "support": 1,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L25",
+      "cls": "Bubble On Edge",
+      "support": 1,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L25",
+      "cls": "Cavity Off Center",
+      "support": 12,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 12,
+      "correct_multiscale": 12,
+      "correct_change": 0
+    },
+    {
+      "line": "L25",
+      "cls": "Dirty Strobe",
+      "support": 4,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 4,
+      "correct_multiscale": 4,
+      "correct_change": 0
+    },
+    {
+      "line": "L25",
+      "cls": "Extraneous Polymer",
+      "support": 3,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L25",
+      "cls": "Fiber",
+      "support": 11,
+      "recall_resnet50": 0.6364,
+      "recall_multiscale": 0.8182,
+      "recall_gap": 0.1818,
+      "correct_resnet50": 7,
+      "correct_multiscale": 9,
+      "correct_change": 2
+    },
+    {
+      "line": "L25",
+      "cls": "Foreign Matter",
+      "support": 25,
+      "recall_resnet50": 0.84,
+      "recall_multiscale": 0.8,
+      "recall_gap": -0.04,
+      "correct_resnet50": 21,
+      "correct_multiscale": 20,
+      "correct_change": -1
+    },
+    {
+      "line": "L25",
+      "cls": "HEMA Obstruction",
+      "support": 5,
+      "recall_resnet50": 0.4,
+      "recall_multiscale": 0.4,
+      "recall_gap": 0.0,
+      "correct_resnet50": 2,
+      "correct_multiscale": 2,
+      "correct_change": 0
+    },
+    {
+      "line": "L25",
+      "cls": "Lens Off Center",
+      "support": 2,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L25",
+      "cls": "Low Dose Obstructing Region of Interest",
+      "support": 17,
+      "recall_resnet50": 0.8824,
+      "recall_multiscale": 0.7647,
+      "recall_gap": -0.1176,
+      "correct_resnet50": 15,
+      "correct_multiscale": 13,
+      "correct_change": -2
+    },
+    {
+      "line": "L25",
+      "cls": "Missing Lens",
+      "support": 2,
+      "recall_resnet50": 0.5,
+      "recall_multiscale": 0.5,
+      "recall_gap": 0.0,
+      "correct_resnet50": 1,
+      "correct_multiscale": 1,
+      "correct_change": 0
+    },
+    {
+      "line": "L25",
+      "cls": "Missing Primary Package",
+      "support": 57,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 57,
+      "correct_multiscale": 57,
+      "correct_change": 0
+    },
+    {
+      "line": "L25",
+      "cls": "Multiple Lenses",
+      "support": 83,
+      "recall_resnet50": 0.9759,
+      "recall_multiscale": 0.9639,
+      "recall_gap": -0.012,
+      "correct_resnet50": 81,
+      "correct_multiscale": 80,
+      "correct_change": -1
+    },
+    {
+      "line": "L25",
+      "cls": "Package Misalignment",
+      "support": 53,
+      "recall_resnet50": 0.9811,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0189,
+      "correct_resnet50": 52,
+      "correct_multiscale": 53,
+      "correct_change": 1
+    },
+    {
+      "line": "L25",
+      "cls": "View Obstructed",
+      "support": 5,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 5,
+      "correct_multiscale": 5,
+      "correct_change": 0
+    },
+    {
+      "line": "L25",
+      "cls": "Wet Package",
+      "support": 1,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L26",
+      "cls": "Bubble",
+      "support": 4,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 0.5,
+      "recall_gap": -0.5,
+      "correct_resnet50": 4,
+      "correct_multiscale": 2,
+      "correct_change": -2
+    },
+    {
+      "line": "L26",
+      "cls": "Bubble Cluster",
+      "support": 1,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": -1.0,
+      "correct_resnet50": 1,
+      "correct_multiscale": 0,
+      "correct_change": -1
+    },
+    {
+      "line": "L26",
+      "cls": "Bubble Irregular",
+      "support": 2,
+      "recall_resnet50": 0.5,
+      "recall_multiscale": 0.0,
+      "recall_gap": -0.5,
+      "correct_resnet50": 1,
+      "correct_multiscale": 0,
+      "correct_change": -1
+    },
+    {
+      "line": "L26",
+      "cls": "Cavity Off Center",
+      "support": 7,
+      "recall_resnet50": 0.7143,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.2857,
+      "correct_resnet50": 5,
+      "correct_multiscale": 7,
+      "correct_change": 2
+    },
+    {
+      "line": "L26",
+      "cls": "Dirty Strobe",
+      "support": 9,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 9,
+      "correct_multiscale": 9,
+      "correct_change": 0
+    },
+    {
+      "line": "L26",
+      "cls": "Extraneous Polymer",
+      "support": 40,
+      "recall_resnet50": 0.55,
+      "recall_multiscale": 0.8,
+      "recall_gap": 0.25,
+      "correct_resnet50": 22,
+      "correct_multiscale": 32,
+      "correct_change": 10
+    },
+    {
+      "line": "L26",
+      "cls": "Fiber",
+      "support": 8,
+      "recall_resnet50": 0.375,
+      "recall_multiscale": 0.25,
+      "recall_gap": -0.125,
+      "correct_resnet50": 3,
+      "correct_multiscale": 2,
+      "correct_change": -1
+    },
+    {
+      "line": "L26",
+      "cls": "Foreign Matter",
+      "support": 49,
+      "recall_resnet50": 0.8367,
+      "recall_multiscale": 0.9796,
+      "recall_gap": 0.1429,
+      "correct_resnet50": 41,
+      "correct_multiscale": 48,
+      "correct_change": 7
+    },
+    {
+      "line": "L26",
+      "cls": "HEMA Obstruction",
+      "support": 1,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L26",
+      "cls": "Lens Off Center",
+      "support": 2,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": -1.0,
+      "correct_resnet50": 2,
+      "correct_multiscale": 0,
+      "correct_change": -2
+    },
+    {
+      "line": "L26",
+      "cls": "Low Dose Obstructing Region of Interest",
+      "support": 4,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.25,
+      "recall_gap": 0.25,
+      "correct_resnet50": 0,
+      "correct_multiscale": 1,
+      "correct_change": 1
+    },
+    {
+      "line": "L26",
+      "cls": "Missing Lens",
+      "support": 1,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L26",
+      "cls": "Missing Primary Package",
+      "support": 2,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 2,
+      "correct_multiscale": 2,
+      "correct_change": 0
+    },
+    {
+      "line": "L26",
+      "cls": "Multiple Lenses",
+      "support": 202,
+      "recall_resnet50": 0.9802,
+      "recall_multiscale": 0.9901,
+      "recall_gap": 0.0099,
+      "correct_resnet50": 198,
+      "correct_multiscale": 200,
+      "correct_change": 2
+    },
+    {
+      "line": "L26",
+      "cls": "Package Misalignment",
+      "support": 7,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 0.8571,
+      "recall_gap": -0.1429,
+      "correct_resnet50": 7,
+      "correct_multiscale": 6,
+      "correct_change": -1
+    },
+    {
+      "line": "L26",
+      "cls": "View Obstructed",
+      "support": 10,
+      "recall_resnet50": 0.2,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.8,
+      "correct_resnet50": 2,
+      "correct_multiscale": 10,
+      "correct_change": 8
+    },
+    {
+      "line": "L26",
+      "cls": "Wet Package",
+      "support": 16,
+      "recall_resnet50": 0.6875,
+      "recall_multiscale": 0.6875,
+      "recall_gap": 0.0,
+      "correct_resnet50": 11,
+      "correct_multiscale": 11,
+      "correct_change": 0
+    },
+    {
+      "line": "L27",
+      "cls": "Bubble Cluster",
+      "support": 3,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.6667,
+      "recall_gap": 0.6667,
+      "correct_resnet50": 0,
+      "correct_multiscale": 2,
+      "correct_change": 2
+    },
+    {
+      "line": "L27",
+      "cls": "Bubble Irregular",
+      "support": 6,
+      "recall_resnet50": 0.6667,
+      "recall_multiscale": 0.3333,
+      "recall_gap": -0.3333,
+      "correct_resnet50": 4,
+      "correct_multiscale": 2,
+      "correct_change": -2
+    },
+    {
+      "line": "L27",
+      "cls": "Bubble Scatter",
+      "support": 1,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": -1.0,
+      "correct_resnet50": 1,
+      "correct_multiscale": 0,
+      "correct_change": -1
+    },
+    {
+      "line": "L27",
+      "cls": "Cavity Off Center",
+      "support": 4,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 4,
+      "correct_multiscale": 4,
+      "correct_change": 0
+    },
+    {
+      "line": "L27",
+      "cls": "Extraneous Polymer",
+      "support": 5,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.2,
+      "recall_gap": 0.2,
+      "correct_resnet50": 0,
+      "correct_multiscale": 1,
+      "correct_change": 1
+    },
+    {
+      "line": "L27",
+      "cls": "Fiber",
+      "support": 27,
+      "recall_resnet50": 0.6667,
+      "recall_multiscale": 0.4815,
+      "recall_gap": -0.1852,
+      "correct_resnet50": 18,
+      "correct_multiscale": 13,
+      "correct_change": -5
+    },
+    {
+      "line": "L27",
+      "cls": "Foreign Matter",
+      "support": 165,
+      "recall_resnet50": 0.8303,
+      "recall_multiscale": 0.9333,
+      "recall_gap": 0.103,
+      "correct_resnet50": 137,
+      "correct_multiscale": 154,
+      "correct_change": 17
+    },
+    {
+      "line": "L27",
+      "cls": "HEMA Obstruction",
+      "support": 1,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L27",
+      "cls": "Lens Off Center",
+      "support": 8,
+      "recall_resnet50": 0.125,
+      "recall_multiscale": 0.0,
+      "recall_gap": -0.125,
+      "correct_resnet50": 1,
+      "correct_multiscale": 0,
+      "correct_change": -1
+    },
+    {
+      "line": "L27",
+      "cls": "Low Dose Obstructing Region of Interest",
+      "support": 139,
+      "recall_resnet50": 0.9496,
+      "recall_multiscale": 0.9496,
+      "recall_gap": 0.0,
+      "correct_resnet50": 132,
+      "correct_multiscale": 132,
+      "correct_change": 0
+    },
+    {
+      "line": "L27",
+      "cls": "Missing Lens",
+      "support": 24,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 24,
+      "correct_multiscale": 24,
+      "correct_change": 0
+    },
+    {
+      "line": "L27",
+      "cls": "Missing Primary Package",
+      "support": 4,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 4,
+      "correct_multiscale": 4,
+      "correct_change": 0
+    },
+    {
+      "line": "L27",
+      "cls": "Multiple Lenses",
+      "support": 16,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 0.875,
+      "recall_gap": -0.125,
+      "correct_resnet50": 16,
+      "correct_multiscale": 14,
+      "correct_change": -2
+    },
+    {
+      "line": "L27",
+      "cls": "Package Misalignment",
+      "support": 3,
+      "recall_resnet50": 0.6667,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.3333,
+      "correct_resnet50": 2,
+      "correct_multiscale": 3,
+      "correct_change": 1
+    },
+    {
+      "line": "L27",
+      "cls": "View Obstructed",
+      "support": 3,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 0.6667,
+      "recall_gap": -0.3333,
+      "correct_resnet50": 3,
+      "correct_multiscale": 2,
+      "correct_change": -1
+    },
+    {
+      "line": "L31",
+      "cls": "Bubble Cluster",
+      "support": 1,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L31",
+      "cls": "Bubble Irregular",
+      "support": 1,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L31",
+      "cls": "Bubble On 123",
+      "support": 4,
+      "recall_resnet50": 0.25,
+      "recall_multiscale": 0.0,
+      "recall_gap": -0.25,
+      "correct_resnet50": 1,
+      "correct_multiscale": 0,
+      "correct_change": -1
+    },
+    {
+      "line": "L31",
+      "cls": "Bubble On Edge",
+      "support": 2,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L31",
+      "cls": "Bubble Scatter",
+      "support": 1,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L31",
+      "cls": "Cavity Off Center",
+      "support": 4,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 4,
+      "correct_multiscale": 4,
+      "correct_change": 0
+    },
+    {
+      "line": "L31",
+      "cls": "Extraneous Polymer",
+      "support": 5,
+      "recall_resnet50": 0.4,
+      "recall_multiscale": 0.2,
+      "recall_gap": -0.2,
+      "correct_resnet50": 2,
+      "correct_multiscale": 1,
+      "correct_change": -1
+    },
+    {
+      "line": "L31",
+      "cls": "Fiber",
+      "support": 36,
+      "recall_resnet50": 0.8889,
+      "recall_multiscale": 0.9444,
+      "recall_gap": 0.0556,
+      "correct_resnet50": 32,
+      "correct_multiscale": 34,
+      "correct_change": 2
+    },
+    {
+      "line": "L31",
+      "cls": "Foreign Matter",
+      "support": 59,
+      "recall_resnet50": 0.5424,
+      "recall_multiscale": 0.5932,
+      "recall_gap": 0.0508,
+      "correct_resnet50": 32,
+      "correct_multiscale": 35,
+      "correct_change": 3
+    },
+    {
+      "line": "L31",
+      "cls": "HEMA Fragment",
+      "support": 3,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L31",
+      "cls": "HEMA Obstruction",
+      "support": 1,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    },
+    {
+      "line": "L31",
+      "cls": "Lens Off Center",
+      "support": 6,
+      "recall_resnet50": 0.3333,
+      "recall_multiscale": 0.1667,
+      "recall_gap": -0.1667,
+      "correct_resnet50": 2,
+      "correct_multiscale": 1,
+      "correct_change": -1
+    },
+    {
+      "line": "L31",
+      "cls": "Low Dose Obstructing Region of Interest",
+      "support": 392,
+      "recall_resnet50": 0.9974,
+      "recall_multiscale": 0.9923,
+      "recall_gap": -0.0051,
+      "correct_resnet50": 391,
+      "correct_multiscale": 389,
+      "correct_change": -2
+    },
+    {
+      "line": "L31",
+      "cls": "Missing Lens",
+      "support": 15,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 15,
+      "correct_multiscale": 15,
+      "correct_change": 0
+    },
+    {
+      "line": "L31",
+      "cls": "Missing Primary Package",
+      "support": 22,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 22,
+      "correct_multiscale": 22,
+      "correct_change": 0
+    },
+    {
+      "line": "L31",
+      "cls": "Multiple Lenses",
+      "support": 29,
+      "recall_resnet50": 0.931,
+      "recall_multiscale": 0.8621,
+      "recall_gap": -0.069,
+      "correct_resnet50": 27,
+      "correct_multiscale": 25,
+      "correct_change": -2
+    },
+    {
+      "line": "L31",
+      "cls": "Package Misalignment",
+      "support": 15,
+      "recall_resnet50": 1.0,
+      "recall_multiscale": 1.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 15,
+      "correct_multiscale": 15,
+      "correct_change": 0
+    },
+    {
+      "line": "L31",
+      "cls": "View Obstructed",
+      "support": 11,
+      "recall_resnet50": 0.9091,
+      "recall_multiscale": 0.9091,
+      "recall_gap": 0.0,
+      "correct_resnet50": 10,
+      "correct_multiscale": 10,
+      "correct_change": 0
+    },
+    {
+      "line": "L31",
+      "cls": "Wet Package",
+      "support": 1,
+      "recall_resnet50": 0.0,
+      "recall_multiscale": 0.0,
+      "recall_gap": 0.0,
+      "correct_resnet50": 0,
+      "correct_multiscale": 0,
+      "correct_change": 0
+    }
+  ],
+  "pooled": {
+    "test_pictures": 2527,
+    "accuracy_resnet50": 0.877721,
+    "accuracy_multiscale": 0.894737,
+    "accuracy_gap": 0.017016224772457456,
+    "attribution_by_class_share": {
+      "Bubble": -0.0019786307874950534,
+      "Bubble Cluster": 0.0003957261574990107,
+      "Bubble Irregular": -0.0007914523149980214,
+      "Bubble On Edge": 0.0,
+      "Cavity Off Center": 0.0003957261574990107,
+      "Dirty Camera": -0.0003957261574990107,
+      "Extraneous Polymer": 0.004748713889988128,
+      "Fiber": 0.0003957261574990107,
+      "Foreign Matter": 0.009497427779976256,
+      "HEMA Fragment": 0.0,
+      "HEMA Obstruction": -0.0003957261574990107,
+      "Lens Off Center": -0.0015829046299960427,
+      "Low Dose Obstructing Region of Interest": -0.0007914523149980214,
+      "Missing Lens": 0.0,
+      "Missing Primary Package": -0.0003957261574990107,
+      "Multiple Lenses": 0.0031658092599920855,
+      "Package Misalignment": 0.0003957261574990107,
+      "View Obstructed": 0.0051444400474871385,
+      "Wet Package": 0.0,
+      "Dirty Strobe": 0.0,
+      "Bubble Scatter": -0.0003957261574990107,
+      "Bubble On 123": -0.0003957261574990107
+    },
+    "cells_better": 20,
+    "cells_worse": 26,
+    "cells_same": 41
+  }
+}

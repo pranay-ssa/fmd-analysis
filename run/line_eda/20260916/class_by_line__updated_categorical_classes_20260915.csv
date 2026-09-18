@@ -1,0 +1,15 @@
+class,L24,L25,L26,L27,L31,untagged,total
+Bubble Scatter,1,0,0,3,2,0,6
+Cavity Off Center,93,40,24,13,13,0,183
+Dirty Camera,25,0,0,0,0,0,25
+Dirty Strobe,0,11,31,0,0,0,42
+HEMA Obstruction,151,18,2,2,2,0,175
+Lens Off Center,195,5,11,27,20,0,258
+Low Dose,108,57,14,464,1309,0,1952
+Missing Lens,183,6,3,81,51,0,324
+Missing Primary Package,1147,189,7,12,72,0,1427
+Multiple Lenses,335,277,676,54,97,0,1439
+Package Misalignment,32,176,24,11,50,0,293
+View Obstructed,19,16,33,11,38,0,117
+duplicates,35,24,71,0,13,0,143
+TOTAL,2324,819,896,678,1667,0,6384

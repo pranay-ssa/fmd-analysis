@@ -1,0 +1,190 @@
+[
+  {
+    "experiment": "MC Control (stock yolo26n, pretrained)",
+    "run_dir": "/home/pranayp/yolo_ooi/runs/yolo26_mc_arch/mc_control_stock",
+    "train_s": 566.5,
+    "epochs_run": 100,
+    "precision": 0.758,
+    "recall": 0.467,
+    "mAP50": 0.5355,
+    "mAP50-95": 0.3211,
+    "params_before_train": 2572280,
+    "head_children_best_ckpt": [
+      "cv2",
+      "cv3",
+      "dfl",
+      "one2one_cv2",
+      "one2one_cv3"
+    ],
+    "head_reg_max_best_ckpt": 1,
+    "lr_first_epoch_actual": 0.000232591,
+    "init": "pretrained yolo26n.pt",
+    "yaml_md5": null,
+    "per_class": [
+      {
+        "class": "Bubble Cluster",
+        "AP50": 0.3563,
+        "AP50_95": 0.1898,
+        "precision": 0.5624,
+        "recall": 0.3077
+      },
+      {
+        "class": "Bubble",
+        "AP50": 0.6322,
+        "AP50_95": 0.3888,
+        "precision": 0.6008,
+        "recall": 0.6388
+      },
+      {
+        "class": "Bubble On 123",
+        "AP50": 0.1317,
+        "AP50_95": 0.0717,
+        "precision": 1.0,
+        "recall": 0.0
+      },
+      {
+        "class": "Bubble Irregular",
+        "AP50": 0.94,
+        "AP50_95": 0.7915,
+        "precision": 0.8983,
+        "recall": 0.9826
+      },
+      {
+        "class": "Bubble On Edge",
+        "AP50": 0.2964,
+        "AP50_95": 0.2242,
+        "precision": 0.5893,
+        "recall": 0.25
+      },
+      {
+        "class": "Extraneous Polymer",
+        "AP50": 0.665,
+        "AP50_95": 0.1939,
+        "precision": 0.6485,
+        "recall": 0.6667
+      },
+      {
+        "class": "Fiber",
+        "AP50": 0.4487,
+        "AP50_95": 0.1814,
+        "precision": 0.7143,
+        "recall": 0.4167
+      },
+      {
+        "class": "Foreign Matter",
+        "AP50": 0.7386,
+        "AP50_95": 0.4424,
+        "precision": 0.8363,
+        "recall": 0.5789
+      },
+      {
+        "class": "HEMA Fragment",
+        "AP50": 0.2697,
+        "AP50_95": 0.1529,
+        "precision": 1.0,
+        "recall": 0.0
+      },
+      {
+        "class": "Wet Package",
+        "AP50": 0.8762,
+        "AP50_95": 0.5745,
+        "precision": 0.7305,
+        "recall": 0.8286
+      }
+    ]
+  },
+  {
+    "experiment": "MC Fork (processed P3 tap, pretrained)",
+    "run_dir": "/home/pranayp/yolo_ooi/runs/yolo26_mc_arch/mc_fork_p3proc",
+    "train_s": 589.7,
+    "epochs_run": 100,
+    "precision": 0.6811,
+    "recall": 0.3611,
+    "mAP50": 0.4363,
+    "mAP50-95": 0.232,
+    "params_before_train": 2676344,
+    "head_children_best_ckpt": [
+      "cv2",
+      "cv3",
+      "dfl",
+      "one2one_cv2",
+      "one2one_cv3"
+    ],
+    "head_reg_max_best_ckpt": 1,
+    "lr_first_epoch_actual": 0.000232591,
+    "init": "pretrained yolo26n.pt loaded into the fork yaml",
+    "yaml_md5": "01dbbb696d77a22cc3df3de0c16da8fa",
+    "per_class": [
+      {
+        "class": "Bubble Cluster",
+        "AP50": 0.2112,
+        "AP50_95": 0.1287,
+        "precision": 0.4491,
+        "recall": 0.2201
+      },
+      {
+        "class": "Bubble",
+        "AP50": 0.6512,
+        "AP50_95": 0.3756,
+        "precision": 0.5828,
+        "recall": 0.6476
+      },
+      {
+        "class": "Bubble On 123",
+        "AP50": 0.0045,
+        "AP50_95": 0.0015,
+        "precision": 1.0,
+        "recall": 0.0
+      },
+      {
+        "class": "Bubble Irregular",
+        "AP50": 0.9675,
+        "AP50_95": 0.7085,
+        "precision": 0.7978,
+        "recall": 0.8889
+      },
+      {
+        "class": "Bubble On Edge",
+        "AP50": 0.0367,
+        "AP50_95": 0.0208,
+        "precision": 1.0,
+        "recall": 0.0
+      },
+      {
+        "class": "Extraneous Polymer",
+        "AP50": 0.0514,
+        "AP50_95": 0.0155,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      {
+        "class": "Fiber",
+        "AP50": 0.4164,
+        "AP50_95": 0.1505,
+        "precision": 0.4947,
+        "recall": 0.4167
+      },
+      {
+        "class": "Foreign Matter",
+        "AP50": 0.7666,
+        "AP50_95": 0.3506,
+        "precision": 0.8524,
+        "recall": 0.6089
+      },
+      {
+        "class": "HEMA Fragment",
+        "AP50": 0.495,
+        "AP50_95": 0.0575,
+        "precision": 1.0,
+        "recall": 0.0
+      },
+      {
+        "class": "Wet Package",
+        "AP50": 0.7619,
+        "AP50_95": 0.5108,
+        "precision": 0.6339,
+        "recall": 0.8286
+      }
+    ]
+  }
+]

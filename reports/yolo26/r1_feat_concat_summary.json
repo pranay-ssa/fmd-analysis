@@ -1,0 +1,48 @@
+[
+  {
+    "experiment": "R1 Control (stock yolo26n, pretrained)",
+    "run_dir": "/home/pranayp/yolo_ooi/runs/yolo26_arch_r1/r1_control_stock",
+    "train_s": 553.9,
+    "epochs_run": 100,
+    "precision": 0.5993,
+    "recall": 0.6711,
+    "mAP50": 0.6637,
+    "mAP50-95": 0.4111,
+    "params_before_train": 2572280,
+    "params_best_ckpt": 2504190,
+    "head_children_best_ckpt": [
+      "cv2",
+      "cv3",
+      "dfl",
+      "one2one_cv2",
+      "one2one_cv3"
+    ],
+    "head_reg_max_best_ckpt": 1,
+    "lr_first_epoch_actual": 0.000651515,
+    "init": "pretrained yolo26n.pt",
+    "yaml_md5": null
+  },
+  {
+    "experiment": "R1 Fork (one raw P3 tap, pretrained)",
+    "run_dir": "/home/pranayp/yolo_ooi/runs/yolo26_arch_r1/r1_fork_p3tap",
+    "train_s": 555.7,
+    "epochs_run": 100,
+    "precision": 0.5807,
+    "recall": 0.5987,
+    "mAP50": 0.6077,
+    "mAP50-95": 0.3598,
+    "params_before_train": 2654328,
+    "params_best_ckpt": 2586238,
+    "head_children_best_ckpt": [
+      "cv2",
+      "cv3",
+      "dfl",
+      "one2one_cv2",
+      "one2one_cv3"
+    ],
+    "head_reg_max_best_ckpt": 1,
+    "lr_first_epoch_actual": 0.000651515,
+    "init": "pretrained yolo26n.pt loaded into the fork yaml",
+    "yaml_md5": "20e9c33e2afabc11e9f52cdfd4f76d5f"
+  }
+]

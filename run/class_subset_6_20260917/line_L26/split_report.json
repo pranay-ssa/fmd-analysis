@@ -1,0 +1,40 @@
+{
+  "line": "L26",
+  "classes": {
+    "Missing Primary Package": {
+      "pictures": 7,
+      "train": 5,
+      "test": 2
+    },
+    "Multiple Lenses": {
+      "pictures": 674,
+      "train": 472,
+      "test": 202
+    },
+    "Foreign Matter": {
+      "pictures": 162,
+      "train": 113,
+      "test": 49
+    },
+    "Lens Off Center": {
+      "pictures": 8,
+      "train": 6,
+      "test": 2
+    },
+    "Missing Lens": {
+      "pictures": 3,
+      "train": 2,
+      "test": 1
+    },
+    "HEMA Obstruction": {
+      "pictures": 2,
+      "train": 1,
+      "test": 1
+    }
+  },
+  "totals": {
+    "pictures": 856,
+    "train": 599,
+    "test": 257
+  }
+}

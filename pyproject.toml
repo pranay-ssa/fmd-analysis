@@ -1,0 +1,14 @@
+[project]
+name = "fmd-preprocess"
+version = "1.0.0"
+description = "Black-border removal pipeline for FMD inspection BMPs (ROI-Crop: connected components + size/brightness filter)"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "pillow>=10.0",
+    "python-pptx>=1.0.2",
+    "scipy>=1.11",
+]
+
+[tool.uv]
+# Run with:  uv run preprocess.py

@@ -1,0 +1,38 @@
+# attention-backbone: swap the last two backbone `C3k2` blocks (rows 6, 8) for `C2PSA`.
+# C2PSA is already in the file (last backbone row), so the module name is known
+# to resolve. Effect: spatial+channel attention in the deepest backbone stages
+# (where defect features are most abstract); supported by MDPI May 2026 paper
+# (Improved YOLO11n-OBB) which reports +6.9% mAP50 from attention + BiFPN.
+# We are doing ONLY the backbone swap; neck BiFPN is parked in Section 5b.
+nc: 80
+
+scales:
+  n: [0.50, 0.25, 1024]
+
+backbone:
+  - [-1, 1, Conv, [64, 3, 2]]
+  - [-1, 1, Conv, [128, 3, 2]]
+  - [-1, 2, C3k2, [256, False, 0.25]]
+  - [-1, 1, Conv, [256, 3, 2]]
+  - [-1, 2, C3k2, [512, False, 0.25]]
+  - [-1, 1, Conv, [512, 3, 2]]
+  - [-1, 2, C2PSA, [512, True]]   # row 6: was C3k2 -> C2PSA
+  - [-1, 1, Conv, [1024, 3, 2]]
+  - [-1, 2, C2PSA, [1024, True]]  # row 8: was C3k2 -> C2PSA
+  - [-1, 1, SPPF, [1024, 5]]
+  - [-1, 2, C2PSA, [1024]]
+
+head:
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [[-1, 6], 1, Concat, [1]]
+  - [-1, 2, C3k2, [512, False]]
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [[-1, 4], 1, Concat, [1]]
+  - [-1, 2, C3k2, [256, False]]
+  - [-1, 1, Conv, [256, 3, 2]]
+  - [[-1, 13], 1, Concat, [1]]
+  - [-1, 2, C3k2, [512, False]]
+  - [-1, 1, Conv, [512, 3, 2]]
+  - [[-1, 10], 1, Concat, [1]]
+  - [-1, 2, C3k2, [1024, True]]
+  - [[16, 19, 22], 1, OBB, [nc, 1]]

@@ -1,0 +1,1691 @@
+{
+ "schema_version": 2,
+ "updated": "2026-09-15 (port program rows: noise floor, attention port, SPPF k7, P4 Conv, consolidated, raw tap control)",
+ "owner": "Pranay",
+ "source_of_truth": [
+  "reports/yolo11/yolo_arch_experiments_spec.md (YOLO11 OBB log, Section 10, timestamped)",
+  "reports/yolo26/yolo26_arch_experiments_spec.md (YOLO26 detect log, Section 10, timestamped)",
+  "this registry.json (summary - regenerated from results.csv / metrics.json, never hand-typed)",
+  "experiments/README.md (governance: dos/don'ts, pitfalls, ADRs, blast radius)"
+ ],
+ "protocol": {
+  "task": "OBB detection on OoI contact-lens defect crops",
+  "classes": 10,
+  "split": {
+   "train": 346,
+   "val": 88,
+   "seed": 42,
+   "stratified": true,
+   "by_source_image": true
+  },
+  "frozen_config": {
+   "epochs": 100,
+   "patience": 50,
+   "imgsz": 640,
+   "optimizer": "auto",
+   "lr0": 0.01,
+   "seed": 42,
+   "workers": 8
+  },
+  "batch": {
+   "batch_1": 16,
+   "batch_2_plus": 8
+  },
+  "metrics_of_record": [
+   "mAP50",
+   "mAP50-95",
+   "iou_mean_matched"
+  ],
+  "metrics_diagnostic": [
+   "precision",
+   "recall"
+  ],
+  "data_layout": "canonical dir tree (dataset_obb/images+labels beside each other; NOT path-list)"
+ },
+ "comparability_note": "Deltas are valid ONLY within the same (model_family, data_arena, imgsz, task). Three arenas are in use: (1) crop_obb_640_multiclass - YOLO11 OBB on crops at 640; (2) crop_detect_1280_singlecls - YOLO11/YOLO26 class-agnostic detection on crops at 1280; (3) multiclass_detect_1280_10cls - YOLO26 10-class detection on the AABB-converted labels at 1280. Never compare across arenas or across model families. The multiclass baseline is NOT comparable to the single-class crop rows (different label space, different head).",
+ "experiments": [
+  {
+   "id": "baseline_obb",
+   "file": "experiments/yolo11/baseline_obb.yaml",
+   "summary": "yolo11n-obb, unmodified (control, batch 1)",
+   "axis": "control",
+   "theoretical_possible": true,
+   "batch": 16,
+   "params": 2655673,
+   "status": "done",
+   "results": {
+    "params": 2655673,
+    "best_epoch": 86,
+    "mAP50": 0.27447,
+    "mAP50_95": 0.15549,
+    "precision": 0.46376,
+    "recall": 0.27813,
+    "batch": 16,
+    "iou_mean_matched": 0.5969,
+    "match_rate": 0.321,
+    "iou_per_class": {
+     "Bubble Cluster": {
+      "gt": 26,
+      "matched": 2,
+      "mean_iou": 0.6094,
+      "match_rate": 0.0769
+     },
+     "Bubble": {
+      "gt": 227,
+      "matched": 80,
+      "mean_iou": 0.5946,
+      "match_rate": 0.3524
+     },
+     "Bubble On 123": {
+      "gt": 32,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Bubble Irregular": {
+      "gt": 9,
+      "matched": 7,
+      "mean_iou": 0.7857,
+      "match_rate": 0.7778
+     },
+     "Bubble On Edge": {
+      "gt": 12,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Extraneous Polymer": {
+      "gt": 3,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Fiber": {
+      "gt": 12,
+      "matched": 2,
+      "mean_iou": 0.3868,
+      "match_rate": 0.1667
+     },
+     "Foreign Matter": {
+      "gt": 19,
+      "matched": 3,
+      "mean_iou": 0.6635,
+      "match_rate": 0.1579
+     },
+     "HEMA Fragment": {
+      "gt": 2,
+      "matched": 1,
+      "mean_iou": 0.3214,
+      "match_rate": 0.5
+     },
+     "Wet Package": {
+      "gt": 35,
+      "matched": 26,
+      "mean_iou": 0.5712,
+      "match_rate": 0.7429
+     }
+    }
+   },
+   "results_source": "runs/yolo11/yolo_arch/baseline_obb/metrics.json, iou_metrics.json",
+   "note": "Control at batch 16. IoU IS measured for this row (iou_mean_matched 0.5969, per-class block present); an earlier note claiming otherwise was wrong.",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "sppf_cspc_obb",
+   "file": "experiments/yolo11/sppf_cspc_obb.yaml",
+   "summary": "SPPF kernel 5 -> 7 (enlarged receptive field); zero params change",
+   "axis": "module (free)",
+   "theoretical_possible": true,
+   "batch": 16,
+   "params": 2655673,
+   "status": "done",
+   "results": {
+    "best_epoch": 83.0,
+    "mAP50": 0.29252,
+    "mAP50_95": 0.16269,
+    "precision": 0.53291,
+    "recall": 0.32542,
+    "iou_mean_matched": 0.5773,
+    "match_rate": 0.3475,
+    "iou_per_class": {
+     "Bubble Cluster": {
+      "gt": 26,
+      "matched": 3,
+      "mean_iou": 0.7597,
+      "match_rate": 0.1154
+     },
+     "Bubble": {
+      "gt": 227,
+      "matched": 92,
+      "mean_iou": 0.563,
+      "match_rate": 0.4053
+     },
+     "Bubble On 123": {
+      "gt": 32,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Bubble Irregular": {
+      "gt": 9,
+      "matched": 7,
+      "mean_iou": 0.804,
+      "match_rate": 0.7778
+     },
+     "Bubble On Edge": {
+      "gt": 12,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Extraneous Polymer": {
+      "gt": 3,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Fiber": {
+      "gt": 12,
+      "matched": 3,
+      "mean_iou": 0.3424,
+      "match_rate": 0.25
+     },
+     "Foreign Matter": {
+      "gt": 19,
+      "matched": 2,
+      "mean_iou": 0.5603,
+      "match_rate": 0.1053
+     },
+     "HEMA Fragment": {
+      "gt": 2,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Wet Package": {
+      "gt": 35,
+      "matched": 24,
+      "mean_iou": 0.5739,
+      "match_rate": 0.6857
+     }
+    }
+   },
+   "results_source": "runs/yolo11/yolo_arch/sppf_cspc_obb/results.csv, iou_metrics.json",
+   "note": "Free win: bigger pooling field on spread/clustered defects. Keep unconditionally.",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "yolo11s_obb",
+   "file": "experiments/yolo11/yolo11s-obb.yaml",
+   "summary": "s scale (width 0.50) - wider channels all stages",
+   "axis": "capacity (scale)",
+   "theoretical_possible": true,
+   "batch": 16,
+   "params": 9744931,
+   "status": "done",
+   "results": {
+    "best_epoch": 84.0,
+    "mAP50": 0.33307,
+    "mAP50_95": 0.18493,
+    "precision": 0.41211,
+    "recall": 0.33703,
+    "iou_mean_matched": 0.6045,
+    "match_rate": 0.4111,
+    "iou_per_class": {
+     "Bubble Cluster": {
+      "gt": 26,
+      "matched": 4,
+      "mean_iou": 0.5433,
+      "match_rate": 0.1538
+     },
+     "Bubble": {
+      "gt": 227,
+      "matched": 108,
+      "mean_iou": 0.5879,
+      "match_rate": 0.4758
+     },
+     "Bubble On 123": {
+      "gt": 32,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Bubble Irregular": {
+      "gt": 9,
+      "matched": 6,
+      "mean_iou": 0.7891,
+      "match_rate": 0.6667
+     },
+     "Bubble On Edge": {
+      "gt": 12,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Extraneous Polymer": {
+      "gt": 3,
+      "matched": 1,
+      "mean_iou": 0.5617,
+      "match_rate": 0.3333
+     },
+     "Fiber": {
+      "gt": 12,
+      "matched": 2,
+      "mean_iou": 0.459,
+      "match_rate": 0.1667
+     },
+     "Foreign Matter": {
+      "gt": 19,
+      "matched": 7,
+      "mean_iou": 0.6275,
+      "match_rate": 0.3684
+     },
+     "HEMA Fragment": {
+      "gt": 2,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Wet Package": {
+      "gt": 35,
+      "matched": 27,
+      "mean_iou": 0.6454,
+      "match_rate": 0.7714
+     }
+    }
+   },
+   "results_source": "runs/yolo11/yolo_arch/yolo11s-obb/results.csv, iou_metrics.json",
+   "note": "Filename carries the scale (ultralytics picks scale from the yaml filename).",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "attention_backbone_obb",
+   "file": "experiments/yolo11/attention_backbone_obb.yaml",
+   "summary": "C2PSA (attention) in place of C3k2 on backbone rows 6 and 8",
+   "axis": "module (attention)",
+   "theoretical_possible": true,
+   "batch": 16,
+   "params": 3174851,
+   "status": "done",
+   "results": {
+    "best_epoch": 99.0,
+    "mAP50": 0.3339,
+    "mAP50_95": 0.16915,
+    "precision": 0.5115,
+    "recall": 0.36354,
+    "iou_mean_matched": 0.5865,
+    "match_rate": 0.3236,
+    "iou_per_class": {
+     "Bubble Cluster": {
+      "gt": 26,
+      "matched": 2,
+      "mean_iou": 0.7291,
+      "match_rate": 0.0769
+     },
+     "Bubble": {
+      "gt": 227,
+      "matched": 89,
+      "mean_iou": 0.5763,
+      "match_rate": 0.3921
+     },
+     "Bubble On 123": {
+      "gt": 32,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Bubble Irregular": {
+      "gt": 9,
+      "matched": 6,
+      "mean_iou": 0.7925,
+      "match_rate": 0.6667
+     },
+     "Bubble On Edge": {
+      "gt": 12,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Extraneous Polymer": {
+      "gt": 3,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Fiber": {
+      "gt": 12,
+      "matched": 2,
+      "mean_iou": 0.2341,
+      "match_rate": 0.1667
+     },
+     "Foreign Matter": {
+      "gt": 19,
+      "matched": 1,
+      "mean_iou": 0.7028,
+      "match_rate": 0.0526
+     },
+     "HEMA Fragment": {
+      "gt": 2,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Wet Package": {
+      "gt": 35,
+      "matched": 22,
+      "mean_iou": 0.5852,
+      "match_rate": 0.6286
+     }
+    }
+   },
+   "results_source": "runs/yolo11/yolo_arch/attention_backbone_obb/results.csv, iou_metrics.json",
+   "note": "Best accuracy-per-param of batch 1 (matches s-scale gain at 1/3 params); lifts Extraneous Polymer and HEMA Fragment.",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "scale_wider_only_obb",
+   "file": "experiments/yolo11/scale_wider_only_obb.yaml",
+   "summary": "n topology, depth 0.50, width 0.75",
+   "axis": "capacity (scale)",
+   "theoretical_possible": true,
+   "batch": 16,
+   "params": 21327571,
+   "status": "done",
+   "results": {
+    "best_epoch": 94.0,
+    "mAP50": 0.36103,
+    "mAP50_95": 0.21133,
+    "precision": 0.49011,
+    "recall": 0.31102,
+    "iou_mean_matched": 0.6094,
+    "match_rate": 0.4138,
+    "iou_per_class": {
+     "Bubble Cluster": {
+      "gt": 26,
+      "matched": 5,
+      "mean_iou": 0.7007,
+      "match_rate": 0.1923
+     },
+     "Bubble": {
+      "gt": 227,
+      "matched": 104,
+      "mean_iou": 0.6028,
+      "match_rate": 0.4581
+     },
+     "Bubble On 123": {
+      "gt": 32,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Bubble Irregular": {
+      "gt": 9,
+      "matched": 6,
+      "mean_iou": 0.8187,
+      "match_rate": 0.6667
+     },
+     "Bubble On Edge": {
+      "gt": 12,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Extraneous Polymer": {
+      "gt": 3,
+      "matched": 1,
+      "mean_iou": 0.5197,
+      "match_rate": 0.3333
+     },
+     "Fiber": {
+      "gt": 12,
+      "matched": 4,
+      "mean_iou": 0.307,
+      "match_rate": 0.3333
+     },
+     "Foreign Matter": {
+      "gt": 19,
+      "matched": 7,
+      "mean_iou": 0.5669,
+      "match_rate": 0.3684
+     },
+     "HEMA Fragment": {
+      "gt": 2,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Wet Package": {
+      "gt": 35,
+      "matched": 29,
+      "mean_iou": 0.6292,
+      "match_rate": 0.8286
+     }
+    }
+   },
+   "results_source": "runs/yolo11/yolo_arch/scale_wider_only_obb/results.csv, iou_metrics.json",
+   "note": "Best raw mAP50/mAP50-95 of batch 1 but ~7x baseline compute (48.7 GFLOPs); deployment question.",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "baseline_b8",
+   "file": "experiments/yolo11/baseline_obb.yaml",
+   "summary": "yolo11n-obb control, re-run at batch 8 (batch-2 control for IoU)",
+   "axis": "control",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": 2695747,
+   "status": "done",
+   "results": {
+    "params": 2695747,
+    "best_epoch": 90.0,
+    "mAP50": 0.27293,
+    "mAP50_95": 0.15555,
+    "precision": 0.40589,
+    "recall": 0.31288,
+    "batch": 8,
+    "iou_mean_matched": 0.5682,
+    "match_rate": 0.374,
+    "iou_per_class": {
+     "Bubble Cluster": {
+      "gt": 26,
+      "matched": 1,
+      "mean_iou": 0.7937,
+      "match_rate": 0.0385
+     },
+     "Bubble": {
+      "gt": 227,
+      "matched": 97,
+      "mean_iou": 0.5679,
+      "match_rate": 0.4273
+     },
+     "Bubble On 123": {
+      "gt": 32,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Bubble Irregular": {
+      "gt": 9,
+      "matched": 8,
+      "mean_iou": 0.7692,
+      "match_rate": 0.8889
+     },
+     "Bubble On Edge": {
+      "gt": 12,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Extraneous Polymer": {
+      "gt": 3,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Fiber": {
+      "gt": 12,
+      "matched": 3,
+      "mean_iou": 0.3336,
+      "match_rate": 0.25
+     },
+     "Foreign Matter": {
+      "gt": 19,
+      "matched": 5,
+      "mean_iou": 0.6217,
+      "match_rate": 0.2632
+     },
+     "HEMA Fragment": {
+      "gt": 2,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Wet Package": {
+      "gt": 35,
+      "matched": 27,
+      "mean_iou": 0.5178,
+      "match_rate": 0.7714
+     }
+    }
+   },
+   "results_source": "runs/yolo11/yolo_arch/baseline_b8/metrics.json, iou_metrics.json",
+   "note": "First IoU-measured run. Matched-IoU 0.568 at conf 0.25, match rate 37.4% (recall is the bottleneck, not box accuracy).",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "depth_plus2_deep",
+   "file": "experiments/yolo11/depth_plus2_deep_obb.yaml",
+   "summary": "+2 PLAIN Conv [1024,3,1] at the deepest P5 stage (between final C3k2 and SPPF)",
+   "axis": "depth (plain conv, deep)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": 3876419,
+   "status": "done",
+   "verdict": "NULL",
+   "results": {
+    "params": 3876419,
+    "best_epoch": 74.0,
+    "mAP50": 0.27694,
+    "mAP50_95": 0.14339,
+    "precision": 0.53918,
+    "recall": 0.25914,
+    "batch": 8,
+    "iou_mean_matched": 0.5559,
+    "match_rate": 0.3846,
+    "iou_per_class": {
+     "Bubble Cluster": {
+      "gt": 26,
+      "matched": 2,
+      "mean_iou": 0.7398,
+      "match_rate": 0.0769
+     },
+     "Bubble": {
+      "gt": 227,
+      "matched": 116,
+      "mean_iou": 0.5419,
+      "match_rate": 0.511
+     },
+     "Bubble On 123": {
+      "gt": 32,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Bubble Irregular": {
+      "gt": 9,
+      "matched": 6,
+      "mean_iou": 0.7805,
+      "match_rate": 0.6667
+     },
+     "Bubble On Edge": {
+      "gt": 12,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Extraneous Polymer": {
+      "gt": 3,
+      "matched": 1,
+      "mean_iou": 0.4197,
+      "match_rate": 0.3333
+     },
+     "Fiber": {
+      "gt": 12,
+      "matched": 1,
+      "mean_iou": 0.6361,
+      "match_rate": 0.0833
+     },
+     "Foreign Matter": {
+      "gt": 19,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "HEMA Fragment": {
+      "gt": 2,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Wet Package": {
+      "gt": 35,
+      "matched": 19,
+      "mean_iou": 0.5544,
+      "match_rate": 0.5429
+     }
+    }
+   },
+   "results_source": "runs/yolo11/yolo_arch/depth_plus2_deep/metrics.json, iou_metrics.json",
+   "note": "NULL on the metrics that matter (mAP50 flat +0.004; mAP50-95 -0.012; IoU -0.012). More precise, less sensitive (P up, R down). Conflated fact/type/location/dose - attribution deferred to batch 3.",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "armA_residual_deep",
+   "file": "experiments/yolo11/armA_residual_deep_obb.yaml",
+   "summary": "2 x C3k2 [1024, True] (RESIDUAL bottleneck + skip) at same deep spot as depth_plus2_deep",
+   "axis": "depth attribution (TYPE)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": 3387971,
+   "status": "done",
+   "hypothesis": "If plain-conv type caused the depth-plus2 null, swapping to residual blocks at the SAME location should recover a gain. Controls for the attention-at-this-region finding (attention helped here, so the stage can use a new mechanism).",
+   "results": {
+    "params": 3387971,
+    "best_epoch": 89.0,
+    "mAP50": 0.26779,
+    "mAP50_95": 0.13791,
+    "precision": 0.38938,
+    "recall": 0.28343,
+    "batch": 8,
+    "iou_mean_matched": 0.5773,
+    "match_rate": 0.3369,
+    "iou_per_class": {
+     "Bubble Cluster": {
+      "gt": 26,
+      "matched": 2,
+      "mean_iou": 0.617,
+      "match_rate": 0.0769
+     },
+     "Bubble": {
+      "gt": 227,
+      "matched": 91,
+      "mean_iou": 0.5794,
+      "match_rate": 0.4009
+     },
+     "Bubble On 123": {
+      "gt": 32,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Bubble Irregular": {
+      "gt": 9,
+      "matched": 8,
+      "mean_iou": 0.6833,
+      "match_rate": 0.8889
+     },
+     "Bubble On Edge": {
+      "gt": 12,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Extraneous Polymer": {
+      "gt": 3,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Fiber": {
+      "gt": 12,
+      "matched": 4,
+      "mean_iou": 0.2955,
+      "match_rate": 0.3333
+     },
+     "Foreign Matter": {
+      "gt": 19,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "HEMA Fragment": {
+      "gt": 2,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Wet Package": {
+      "gt": 35,
+      "matched": 22,
+      "mean_iou": 0.5777,
+      "match_rate": 0.6286
+     }
+    }
+   },
+   "note": "Batch-3 TYPE arm: residual C3k2 at the same deep P5 spot. NULL (mAP50 0.2678 below the 0.2729 baseline, mAP50-95 0.1379 below 0.1556, IoU 0.577 ~ baseline), so the depth-plus2 null was NOT caused by the plain-conv layer type. Structurally validated PASS before training.",
+   "results_source": "runs/yolo11/yolo_arch/armA_residual_deep/metrics.json, iou_metrics.json",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "armB_conv_p4",
+   "file": "experiments/yolo11/armB_conv_p4_obb.yaml",
+   "summary": "2 x plain Conv [512,3,1] at the higher-resolution P4 stage (after row 6, before the P5 stem)",
+   "axis": "depth attribution (LOCATION)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": 2991171,
+   "status": "done",
+   "hypothesis": "If deepest-scale placement caused the null (small defects live at small scales; P5 addition invisible to them), moving plain convs to P4 should help.",
+   "results": {
+    "params": 2991171,
+    "best_epoch": 73.0,
+    "mAP50": 0.30959,
+    "mAP50_95": 0.15081,
+    "precision": 0.42703,
+    "recall": 0.31289,
+    "batch": 8,
+    "iou_mean_matched": 0.5831,
+    "match_rate": 0.3846,
+    "iou_per_class": {
+     "Bubble Cluster": {
+      "gt": 26,
+      "matched": 3,
+      "mean_iou": 0.5761,
+      "match_rate": 0.1154
+     },
+     "Bubble": {
+      "gt": 227,
+      "matched": 107,
+      "mean_iou": 0.5769,
+      "match_rate": 0.4714
+     },
+     "Bubble On 123": {
+      "gt": 32,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Bubble Irregular": {
+      "gt": 9,
+      "matched": 7,
+      "mean_iou": 0.7984,
+      "match_rate": 0.7778
+     },
+     "Bubble On Edge": {
+      "gt": 12,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Extraneous Polymer": {
+      "gt": 3,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Fiber": {
+      "gt": 12,
+      "matched": 3,
+      "mean_iou": 0.4901,
+      "match_rate": 0.25
+     },
+     "Foreign Matter": {
+      "gt": 19,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "HEMA Fragment": {
+      "gt": 2,
+      "matched": 0,
+      "mean_iou": null,
+      "match_rate": 0.0
+     },
+     "Wet Package": {
+      "gt": 35,
+      "matched": 25,
+      "mean_iou": 0.5612,
+      "match_rate": 0.7143
+     }
+    }
+   },
+   "note": "Batch-3 LOCATION arm: same plain convs moved to the higher-resolution P4 stage. WIN (mAP50 0.3096, +0.037 over baseline_b8 and best of the batch-2/3 set; matched IoU 0.583, +0.015). Added capacity is worth it only at a resolution the small defects route through. Structurally validated PASS before training.",
+   "results_source": "runs/yolo11/yolo_arch/armB_conv_p4/metrics.json, iou_metrics.json",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "consolidated_obb",
+   "file": "experiments/consolidated_obb.yaml (to create)",
+   "summary": "Consolidated best module-level wins: C2PSA on rows 6/8 (attention) + SPPF k7; NO plain depth convs",
+   "axis": "combo (module)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "Attention-at-deep + bigger pooling field are independent free/cheap wins; combining them (11 rows, in-place swaps, no retap) should exceed either alone.",
+   "results": null,
+   "note": "Pure in-place module swap, 11 rows, head indices unchanged. Preferred next candidate.",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "consolidated_s_obb",
+   "file": "experiments/consolidated_s_obb.yaml (to create)",
+   "summary": "consolidated_obb at s width (0.50) - adds the capacity/width component",
+   "axis": "combo (module + capacity)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "Combines the two winning axes (attention + width); strongest practical candidate before the compute-heavy scale_wider extreme.",
+   "results": null,
+   "note": "Only the scales block changes vs consolidated_obb (~9.7M params).",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "armC_p6_scale",
+   "file": "nil (design)",
+   "summary": "2 x stride-2 Conv creating a new P6 (stride 64) detection scale",
+   "axis": "depth + new scale (structural)",
+   "theoretical_possible": "partial",
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "A real new pyramid level changes multi-scale detection, not just depth. Only pursued if armA and armB both stay null.",
+   "results": null,
+   "note": "PARTIAL: needs a new head branch feeding a P6 slot and OBB input list rewiring; markedly more invasive than a backbone-only edit.",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "scale_m_obb",
+   "file": "nil (scales block only)",
+   "summary": "m scale preset (deeper + wider, ~72 GFLOPs)",
+   "axis": "capacity (scale)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "parked",
+   "results": null,
+   "note": "High compute; parked until width story is settled.",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "scale_deeper_only_obb",
+   "file": "nil (scales block only)",
+   "summary": "depth 0.50 -> 1.00, width 0.25 (deeper-only)",
+   "axis": "depth (scale)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "parked",
+   "results": null,
+   "note": "Parked; the batch-2/3 depth attribution informs whether depth is worth any cost at all.",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "p2_small_head",
+   "file": "nil (head edit)",
+   "summary": "Add a P2 (stride 4) detection slot for small defects",
+   "axis": "scale (head)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "parked",
+   "results": null,
+   "note": "Head change (out of backbone-only scope). Adds upsampling + concat branch + a 4th OBB input. Relevant only if small-box recall (Bubble On 123, Bubble On Edge, Extraneous) is judged important.",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "neck_bifpn",
+   "file": "nil (neck edit)",
+   "summary": "Replace PAN neck with BiFPN",
+   "axis": "module (neck)",
+   "theoretical_possible": "custom-needed",
+   "batch": 8,
+   "params": null,
+   "status": "parked",
+   "results": null,
+   "note": "BiFPN is NOT registered as a module in ultralytics 8.4.142 - possible only with a custom Python module registered at runtime. Not possible out-of-the-box.",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "imgsz_1280",
+   "file": "nil (training arg)",
+   "summary": "Train/eval at 1280 px input",
+   "axis": "resolution (training)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "parked",
+   "results": null,
+   "note": "Train-time arg, not an architecture edit. High VRAM. Known lever for small objects.",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "freeze_backbone",
+   "file": "nil (training flag)",
+   "summary": "Freeze backbone during training",
+   "axis": "training regime",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "parked",
+   "results": null,
+   "note": "Not architecture; separate training-round concern.",
+   "model_family": "YOLO11",
+   "data_arena": "crop_obb_640_multiclass"
+  },
+  {
+   "id": "yolo11n_crop_repro",
+   "model_family": "YOLO11",
+   "data_arena": "crop_detect_1280_singlecls",
+   "file": "stock yolo11n.pt (pretrained, no fork)",
+   "summary": "Stock YOLO11n, class-agnostic detection on our crops (YOLO26 reference baseline)",
+   "axis": "model_family (stock baseline)",
+   "theoretical_possible": true,
+   "single_cls": true,
+   "imgsz": 1280,
+   "batch": 16,
+   "epochs": 100,
+   "params": 2590035,
+   "status": "done",
+   "results": {
+    "mAP50": 0.6007,
+    "mAP50_95": 0.3666,
+    "precision": 0.6218,
+    "recall": 0.5713,
+    "matched_iou_mean": 0.6953,
+    "matched_iou_median": 0.7863,
+    "match_rate": 0.9629,
+    "ceiling_mean": 0.7274,
+    "ceiling_f>=0.5": 0.878,
+    "ceiling_f>=0.75": 0.6286,
+    "ceiling_hardmiss": 0.0371
+   },
+   "results_source": "reports/yolo26/crop_repro_summary.json + crop_repro_iou.json (mirrored from VM)",
+   "note": "YOLO11 reference for the YOLO26 comparison on the crop pipeline. IoU metrics from save_txt detections (Ultralytics normalized frame), greedy match conf 0.001."
+  },
+  {
+   "id": "yolo26n_crop_repro",
+   "model_family": "YOLO26",
+   "data_arena": "crop_detect_1280_singlecls",
+   "file": "stock yolo26n.pt (pretrained, no fork)",
+   "summary": "Stock YOLO26n, class-agnostic detection on our crops (YOLO26 reference baseline)",
+   "axis": "model_family (stock baseline)",
+   "theoretical_possible": true,
+   "single_cls": true,
+   "imgsz": 1280,
+   "batch": 16,
+   "epochs": 100,
+   "params": 2504190,
+   "status": "done",
+   "results": {
+    "mAP50": 0.6166,
+    "mAP50_95": 0.3937,
+    "precision": 0.5959,
+    "recall": 0.6259,
+    "matched_iou_mean": 0.7278,
+    "matched_iou_median": 0.8042,
+    "match_rate": 0.9576,
+    "ceiling_mean": 0.7382,
+    "ceiling_f>=0.5": 0.878,
+    "ceiling_f>=0.75": 0.7003,
+    "ceiling_hardmiss": 0.0424
+   },
+   "results_source": "reports/yolo26/crop_repro_summary.json + crop_repro_iou.json (mirrored from VM)",
+   "note": "YOLO26 reference for the crop pipeline. Beats YOLO11n on every metric on our crops (mAP50-95 +0.027, matched-IoU +0.033, IoU>=0.75 +7 pts)."
+  },
+  {
+   "id": "yolo11n_crop_fixedlr",
+   "model_family": "YOLO11",
+   "data_arena": "crop_detect_1280_singlecls",
+   "file": "stock yolo11n.pt (pretrained, no fork)",
+   "summary": "Labelled 'fixed LR 1e-4' but the trainer ignored lr0=0.0001 and used the auto schedule.",
+   "axis": "training regime (learning rate)",
+   "theoretical_possible": true,
+   "single_cls": true,
+   "imgsz": 1280,
+   "batch": 16,
+   "epochs": 100,
+   "params": null,
+   "status": "done",
+   "verdict": "UNATTRIBUTABLE",
+   "results": {
+    "mAP50": 0.5907,
+    "mAP50_95": 0.3687,
+    "precision": 0.608,
+    "recall": 0.626,
+    "matched_iou_mean": 0.7298,
+    "matched_iou_median": 0.7996,
+    "match_rate": 0.9629
+   },
+   "results_source": "reports/yolo26/crop_repro_summary_fixedlr.json + crop_repro_iou_fixedlr.json (mirrored from VM)",
+   "note": "The run passed lr0=1e-4 and lrf=0.0 but left optimizer=auto, which in ultralytics 8.4.142 ignores lr0 (log: \"ignoring 'lr0=0.0001'\" and \"optimizer: AdamW(lr=0.002)\"). Measured lr/pg0 from results.csv: epoch 1 = 0.000636364 and peak = 0.00194, identical to the auto-LR arm from epoch 1 through at least epoch 80. The only realised difference between the two arms is the final LR (2e-5 vs 3.98e-5). Not a fixed-1e-4 run; do not quote it as one. Re-run required: R2. R2 has since run properly: see yolo11n_crop_fixedlr_flat (0.5678, auto ahead by +0.0329 mAP50)."
+  },
+  {
+   "id": "yolo26n_crop_fixedlr",
+   "model_family": "YOLO26",
+   "data_arena": "crop_detect_1280_singlecls",
+   "file": "stock yolo26n.pt (pretrained, no fork)",
+   "summary": "Labelled 'fixed LR 1e-4' but the trainer ignored lr0=0.0001 and used the auto schedule.",
+   "axis": "training regime (learning rate)",
+   "theoretical_possible": true,
+   "single_cls": true,
+   "imgsz": 1280,
+   "batch": 16,
+   "epochs": 100,
+   "params": null,
+   "status": "done",
+   "verdict": "UNATTRIBUTABLE",
+   "results": {
+    "mAP50": 0.6016,
+    "mAP50_95": 0.3807,
+    "precision": 0.6293,
+    "recall": 0.5809,
+    "matched_iou_mean": 0.7281,
+    "matched_iou_median": 0.794,
+    "match_rate": 0.9655
+   },
+   "results_source": "reports/yolo26/crop_repro_summary_fixedlr.json + crop_repro_iou_fixedlr.json (mirrored from VM)",
+   "note": "Same defect as the YOLO11 arm: optimizer stayed auto, lr0 ignored, measured lr/pg0 epoch 1 = 0.000636364 with peak 0.00194. The ~1% gap to the auto-LR arm is a decay-tail difference, not a fixed-vs-auto comparison. Re-run required: R2. R2 has since run properly: see yolo26n_crop_fixedlr_flat (0.5772, auto ahead by +0.0394 mAP50)."
+  },
+  {
+   "id": "yolo11n_crop_fixedlr_flat",
+   "model_family": "YOLO11",
+   "data_arena": "crop_detect_1280_singlecls",
+   "file": "stock yolo11n.pt (pretrained, no fork)",
+   "summary": "R2: fixed flat 1e-4 arm run with the reference script's exact knobs (AdamW, lr0 1e-4, lrf 1.0, cos_lr false, warmup_epochs 0).",
+   "axis": "training regime (learning rate)",
+   "theoretical_possible": true,
+   "single_cls": true,
+   "imgsz": 1280,
+   "batch": 16,
+   "epochs": 100,
+   "params": null,
+   "status": "done",
+   "verdict": "VALID",
+   "results": {
+    "mAP50": 0.5678,
+    "mAP50_95": 0.34,
+    "precision": 0.6121,
+    "recall": 0.5525,
+    "epochs_run": 79,
+    "matched_iou_mean": null
+   },
+   "results_source": "reports/yolo26/crop_repro_summary_fixedlr_flat.json (mirrored from VM) + runs/crop_repro/yolo11n_crop_crop_bbox_fixedlr_flat",
+   "note": "GATE PASSED: args.yaml carries optimizer AdamW / lr0 0.0001 / lrf 1.0 / cos_lr false / warmup_epochs 0, and results.csv lr/pg0 reads 0.0001 at epoch 1 and at the final epoch (the invalidated 2026-09-10 arm read 0.000636364). Early-stopped at epoch 79. Head to head with the matching auto arm (yolo11n_crop_repro, 0.6007 / 0.3666): auto is +0.0329 mAP50 (+5.8% of the fixed arm) and +0.0266 mAP50-95 (+7.8%). Params not recorded by the run script. Matched-IoU for this run is not yet computed."
+  },
+  {
+   "id": "yolo26n_crop_fixedlr_flat",
+   "model_family": "YOLO26",
+   "data_arena": "crop_detect_1280_singlecls",
+   "file": "stock yolo26n.pt (pretrained, no fork)",
+   "summary": "R2: fixed flat 1e-4 arm run with the reference script's exact knobs (AdamW, lr0 1e-4, lrf 1.0, cos_lr false, warmup_epochs 0).",
+   "axis": "training regime (learning rate)",
+   "theoretical_possible": true,
+   "single_cls": true,
+   "imgsz": 1280,
+   "batch": 16,
+   "epochs": 100,
+   "params": null,
+   "status": "done",
+   "verdict": "VALID",
+   "results": {
+    "mAP50": 0.5772,
+    "mAP50_95": 0.3423,
+    "precision": 0.5278,
+    "recall": 0.6101,
+    "epochs_run": 100,
+    "matched_iou_mean": null
+   },
+   "results_source": "reports/yolo26/crop_repro_summary_fixedlr_flat.json (mirrored from VM) + runs/crop_repro/yolo26n_crop_crop_bbox_fixedlr_flat",
+   "note": "GATE PASSED: same args as the YOLO11n arm, lr/pg0 = 0.0001 at epoch 1 and at epoch 100. Head to head with the matching auto arm (yolo26n_crop_repro, 0.6166 / 0.3937): auto is +0.0394 mAP50 (+6.8%) and +0.0514 mAP50-95 (+15.0%). This replaces the earlier '~1% gap / LR does not matter' reading, which came from two arms that both ran the auto schedule. Params not recorded by the run script. Matched-IoU for this run is not yet computed."
+  },
+  {
+   "id": "yolo26n_crop_b8_auto",
+   "model_family": "YOLO26",
+   "data_arena": "crop_detect_1280_singlecls",
+   "file": "stock yolo26n.pt (pretrained, no fork)",
+   "summary": "YOLO26n batch-8 baseline, auto LR (reference for feat_concat experiments)",
+   "axis": "model_family (stock baseline, batch 8)",
+   "theoretical_possible": true,
+   "single_cls": true,
+   "imgsz": 1280,
+   "batch": 8,
+   "epochs": 100,
+   "params": 2504190,
+   "status": "done",
+   "results": {
+    "mAP50": 0.6637,
+    "mAP50_95": 0.4111,
+    "precision": 0.5993,
+    "recall": 0.6711
+   },
+   "results_source": "runs/yolo26_arch/yolo26n_baseline (VM)",
+   "note": "Batch-8 baseline for YOLO26 architecture experiments. Higher mAP50 than batch-16 repro (0.664 vs 0.617) due to batch size difference."
+  },
+  {
+   "id": "yolo26n_feat_concat_v1",
+   "model_family": "YOLO26",
+   "data_arena": "crop_detect_1280_singlecls",
+   "file": "experiments/yolo26/yolo26_feat_concat.yaml (VM: experiments/yolo26_feat_concat.yaml)",
+   "summary": "NO head edit was in the file: topology is stock yolo26n (verified by building it on the VM).",
+   "axis": "neck (feature concat, replacement)",
+   "theoretical_possible": true,
+   "single_cls": true,
+   "imgsz": 1280,
+   "batch": 8,
+   "epochs": 100,
+   "params": 2693491,
+   "status": "done",
+   "results": {
+    "mAP50": 0.4112,
+    "mAP50_95": 0.2372,
+    "precision": 0.4015,
+    "recall": 0.4536
+   },
+   "results_source": "runs/yolo26_arch/yolo26n_feat_concat (VM)",
+   "note": "INVALID AS A FEAT-CONCAT TEST (verified on VM 2026-09-11). (a) The yaml's head rows are the stock YOLO26 head: row 17 [16,...] is the same reference as stock [-1,...], and stock already has the P3-downsample-into-P4-stage path at rows 17-18 and the P5->P4 link at row 12, so no connection was changed. (b) The yaml drops the stock 'end2end: True' and 'reg_max: 1' keys, so the head rebuilt as reg_max=16 with no one2one branch: the trained checkpoint shows head.reg_max=16 and children [cv2, cv3, dfl] vs the control's reg_max=1 with one2one_cv2/one2one_cv3 (params 2693491 vs 2504190). (c) The SPPF row is the legacy [1024, 5] form, which the 8.4.142 parser activates and strips the residual from, unlike stock [1024, 5, 3, True]. (d) The driver built the fork with YOLO(yaml) and trained it from scratch while the control loaded pretrained yolo26n.pt. Four uncontrolled variables. Re-run required: see pending_reruns R1. R1 has now run the clean version: yolo26n_r1_p3tap scored 0.6077 against a 0.6637 control, so the attributable effect of a raw P3 tap is -0.056 mAP50, not -0.253.",
+   "verdict": "UNATTRIBUTABLE"
+  },
+  {
+   "id": "yolo26n_feat_concat_v2",
+   "model_family": "YOLO26",
+   "data_arena": "crop_detect_1280_singlecls",
+   "file": "experiments/yolo26/yolo26_feat_concat_v2.yaml (VM: yolo26_feat_concat_v2.yaml in the project root)",
+   "summary": "Only real edit: row 18 concat becomes 3-way, adding row 11 (raw upsampled P5) at the P4 stage.",
+   "axis": "neck (feature concat, additive)",
+   "theoretical_possible": true,
+   "single_cls": true,
+   "imgsz": 1280,
+   "batch": 8,
+   "epochs": 100,
+   "params": 2726259,
+   "status": "done",
+   "results": {
+    "mAP50": 0.451,
+    "mAP50_95": 0.2709,
+    "precision": 0.4804,
+    "recall": 0.4456
+   },
+   "results_source": "runs/yolo26_arch/yolo26n_feat_concat_v2 (VM)",
+   "note": "INVALID AS A FEAT-CONCAT TEST (verified on VM 2026-09-11). The described change ('added P3 skip') is not what the file does: rows 11-17 are stock, and the only diff at row 18 is [[-1, 11, 13]] vs stock [[-1, 13]], i.e. it adds the RAW upsampled P5 tensor, not P3 (params 2726259 vs 2693491 for V1, the 32768 delta matching one extra 256-channel input group). It also drops 'end2end'/'reg_max' (head rebuilt at reg_max=16, no one2one branch), uses the legacy SPPF row, and trained from scratch against a pretrained control. Re-run required: see pending_reruns R1. R1 (yolo26n_r1_p3tap) answers the P3-tap question at -0.056 mAP50; the raw upsampled-P5 edit this fork actually made is still untested cleanly.",
+   "verdict": "UNATTRIBUTABLE"
+  },
+  {
+   "id": "yolo26n_r1_control",
+   "model_family": "YOLO26",
+   "data_arena": "crop_detect_1280_singlecls",
+   "axis": "neck (raw low-layer feature concat)",
+   "theoretical_possible": true,
+   "single_cls": true,
+   "imgsz": 1280,
+   "batch": 8,
+   "epochs": 100,
+   "status": "done",
+   "results_source": "reports/yolo26/r1_feat_concat_summary.json (mirrored from VM) + runs/yolo26_arch_r1/",
+   "file": "stock yolo26n.pt (pretrained, no fork)",
+   "summary": "R1 control: stock YOLO26n trained in the same session as the fork, same init and hyperparameters.",
+   "verdict": "VALID",
+   "results": {
+    "mAP50": 0.6637,
+    "mAP50_95": 0.4111,
+    "precision": 0.5993,
+    "recall": 0.6711,
+    "params_before_train": 2572280,
+    "epochs_run": 100,
+    "lr_first_epoch_actual": 0.000651515
+   },
+   "note": "Reproduces the 2026-09-10 batch-8 baseline EXACTLY (0.6637 / 0.4111, P 0.5993, R 0.6711), which validates both the earlier baseline and this session's protocol. init: pretrained yolo26n.pt. Head verified at reg_max=1 with one2one_cv2/one2one_cv3."
+  },
+  {
+   "id": "yolo26n_r1_p3tap",
+   "model_family": "YOLO26",
+   "data_arena": "crop_detect_1280_singlecls",
+   "axis": "neck (raw low-layer feature concat)",
+   "theoretical_possible": true,
+   "single_cls": true,
+   "imgsz": 1280,
+   "batch": 8,
+   "epochs": 100,
+   "status": "done",
+   "results_source": "reports/yolo26/r1_feat_concat_summary.json (mirrored from VM) + runs/yolo26_arch_r1/",
+   "file": "experiments/yolo26/yolo26_feat_concat_r1.yaml (md5 20e9c33e2afabc11e9f52cdfd4f76d5f)",
+   "summary": "R1 fork: stock yolo26.yaml + ONE added tap, a stride-2 conv on raw backbone P3 (row 4) concatenated into the P4 output stage.",
+   "verdict": "VALID",
+   "results": {
+    "mAP50": 0.6077,
+    "mAP50_95": 0.3598,
+    "precision": 0.5807,
+    "recall": 0.5987,
+    "params_before_train": 2654328,
+    "epochs_run": 100,
+    "lr_first_epoch_actual": 0.000651515
+   },
+   "note": "ATTRIBUTABLE result, first in this line. Preflight gate PASSED: stock keys kept (end2end True, reg_max 1), SPPF arg form identical, built head reg_max=1 with one2one_cv2/one2one_cv3, and the row diff shows only the intended edit plus the index shifts it forces (24 -> 25 layers, +82048 params). Matched init: pretrained weights loaded into the fork with .load(). Identical first-epoch lr to the control (0.000651515). Effect: mAP50 -0.0560 (-8.4% of the control), mAP50-95 -0.0513 (-12.5%), recall -0.0724. Adding raw backbone P3 to the mid stage hurts, confirming the SIGN of the old V1/V2 verdict but at a quarter of its magnitude: the old -0.253 / -0.213 were mostly head-config and init confounds. Caveat: the edit inherently adds params (the widened concat), so this is not a param-matched control."
+  },
+  {
+   "id": "yolo26n_mc_baseline",
+   "model_family": "YOLO26",
+   "data_arena": "multiclass_detect_1280_10cls",
+   "file": "stock yolo26n.pt (pretrained, no fork)",
+   "summary": "YOLO26n multiclass baseline (10 defect classes, AABB from OBB)",
+   "axis": "model_family (multiclass baseline)",
+   "theoretical_possible": true,
+   "single_cls": false,
+   "imgsz": 1280,
+   "batch": 8,
+   "epochs": 100,
+   "params": 2507700,
+   "status": "done",
+   "results": {
+    "mAP50": 0.5355,
+    "mAP50_95": 0.3211,
+    "precision": 0.758,
+    "recall": 0.467,
+    "params": 2507700,
+    "reg_max": 1,
+    "end2end": true
+   },
+   "per_class_ap50": {
+    "Bubble Irregular": 0.94,
+    "Wet Package": 0.876,
+    "Foreign Matter": 0.739,
+    "Extraneous Polymer": 0.665,
+    "Bubble": 0.632,
+    "Fiber": 0.449,
+    "Bubble Cluster": 0.356,
+    "Bubble On Edge": 0.296,
+    "HEMA Fragment": 0.27,
+    "Bubble On 123": 0.132
+   },
+   "results_source": "runs/yolo26_multiclass/yolo26n_mc_baseline (VM): headline metrics from yolo26_mc_summary.json, per-class AP50 and P/R from vm/drivers/per_class_simple.py (v.summary()); note yolo26_mc_summary.json itself carries an empty per_class_ap50 list.",
+   "note": "Multiclass baseline and the reference for all architecture experiments. VERIFIED CLEAN on the VM (2026-09-11): pretrained init from yolo26n.pt, single change-free control, stock YOLO26 head (head.reg_max=1 with one2one_cv2/one2one_cv3), nc=10, params 2507700, 100 epochs. Bubble On 123 (0.132, 0% recall) is the primary target; Fiber (0.449) and Bubble Cluster (0.356) secondary."
+  },
+  {
+   "id": "mc_bifpn",
+   "model_family": "YOLO26",
+   "data_arena": "multiclass_detect_1280_10cls",
+   "file": "nil (neck edit, to build)",
+   "summary": "H1: replace the PAN neck with BiFPN (weighted bidirectional cross-scale fusion)",
+   "axis": "module (neck)",
+   "theoretical_possible": "custom-needed",
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "Bidirectional weighted fusion lets P3/P4/P5 exchange information more freely and should lift the weak classes (Bubble On 123, Fiber, Bubble Cluster, Bubble On Edge). Expected +1-2% overall mAP50. Confidence: medium.",
+   "results": null,
+   "note": "TOP PRIORITY. BiFPN is not registered in ultralytics 8.4.142, so a custom module plus a fork yaml are needed. Build rules: copy the stock head keys verbatim (end2end: True, reg_max: 1, SPPF [1024, 5, 3, True]) or the fork silently builds a different head (see ADR-011). Validate the param count and head children on the VM before training, and initialise both arms the same way. PRIOR LOWERED 2026-09-15: H2 (processed low-layer tap) cost -0.0992 mAP50 on this arena, and the raw tap cost -0.0560 on the crops arena, so added cross-scale inputs have now failed twice. BiFPN is not the same failure mode (it restructures weighted fusion inside the pathway instead of bolting on a new input), so it is still worth one run, but it is no longer the highest-expected-value experiment: the changes with actual positive evidence are the within-pathway ones from the YOLO11 line (attention C2PSA +0.059, P4 Conv +0.037, SPPF k7 +0.018), which have never been run on YOLO26."
+  },
+  {
+   "id": "mc_processed_p3_control",
+   "model_family": "YOLO26",
+   "data_arena": "multiclass_detect_1280_10cls",
+   "axis": "control (stock, no fork)",
+   "theoretical_possible": true,
+   "single_cls": false,
+   "imgsz": 1280,
+   "batch": 8,
+   "epochs": 100,
+   "status": "done",
+   "results_source": "reports/yolo26/mc_processed_p3_summary.json (mirrored from VM) + runs/yolo26_mc_arch/mc_control_stock",
+   "file": "stock yolo26n.pt (no yaml)",
+   "summary": "Control for H2: stock YOLO26n, pretrained, same session and same protocol as the fork arm.",
+   "verdict": "VALID",
+   "results": {
+    "mAP50": 0.5355,
+    "mAP50_95": 0.3211,
+    "precision": 0.758,
+    "recall": 0.467,
+    "params_before_train": 2572280,
+    "epochs_run": 100,
+    "lr_first_epoch_actual": 0.000232591
+   },
+   "note": "Third independent reproduction of the multiclass baseline, exact to 4 decimals (0.5355 / 0.3211 / 0.758 / 0.467) across sessions on 2026-09-11 and 2026-09-15. This is the strongest protocol-validation evidence in the line: same seed, stock init, stock head (reg_max=1, one2one present) on the best checkpoint."
+  },
+  {
+   "id": "mc_processed_p3",
+   "model_family": "YOLO26",
+   "data_arena": "multiclass_detect_1280_10cls",
+   "axis": "neck (processed low-layer feature concat)",
+   "theoretical_possible": true,
+   "single_cls": false,
+   "imgsz": 1280,
+   "batch": 8,
+   "epochs": 100,
+   "status": "done",
+   "results_source": "reports/yolo26/mc_processed_p3_summary.json (mirrored from VM) + runs/yolo26_mc_arch/mc_fork_p3proc",
+   "file": "experiments/yolo26/yolo26_mc_processed_p3.yaml (md5 01dbbb696d77a22cc3df3de0c16da8fa)",
+   "summary": "H2 fork: stock yolo26.yaml + raw backbone P3 (row 4) downsampled, PROCESSED through C3k2, then concatenated into the P4 stage as a third input.",
+   "verdict": "VALID",
+   "results": {
+    "mAP50": 0.4363,
+    "mAP50_95": 0.232,
+    "precision": 0.6811,
+    "recall": 0.3611,
+    "params_before_train": 2676344,
+    "epochs_run": 100,
+    "lr_first_epoch_actual": 0.000232591
+   },
+   "note": "ATTRIBUTABLE, and NEGATIVE. Preflight gate PASSED (9 differing rows, all from the intended edit group: one explicit 'from' on the existing P3 downsample row, plus 2 added rows and the 3-way concat). Matched init: pretrained yolo26n.pt loaded into the fork yaml (363/768 items transferred; the new tap starts from scratch). Identical first-epoch lr in both arms (0.000232591), so the LR schedule is controlled. Head stayed stock on the best checkpoint (reg_max=1, one2one_cv2/one2one_cv3). Effect: mAP50 -0.0992 (-18.5% of the control), mAP50-95 -0.0891 (-27.8%), precision -0.0769, recall -0.1059, +104,064 params. H2 is FALSIFIED on this arena: routing low-layer features through a C3k2 block before the P4 concat does not rescue the raw-tap idea, it degrades detection further than the raw tap did on the crops arena (-0.0560). Do NOT compare the two magnitudes directly: different arenas and different baselines (0.6637 single-class crops vs 0.5355 multiclass). What is comparable is the sign, which is negative in both. Per-class: gains on Bubble (+0.0190, 227 val instances, the only well-supported class) and Foreign Matter (+0.0280, 19); losses on Bubble Cluster (-0.1451, 26), Wet Package (-0.1143, 35), Bubble On Edge (-0.2597, 12), Fiber (-0.0323, 12). Bubble On 123 fell to 0.0045 with 0% recall, so the primary target got worse, not better. Caveats: single seed; the noise floor is still unmeasured, so treat ~0.1 as a real but uncalibrated effect size; the edit adds params, so there is no param-matched control; matched-IoU for these arms is not yet computed."
+  },
+  {
+   "id": "mc_tap_points",
+   "model_family": "YOLO26",
+   "data_arena": "multiclass_detect_1280_10cls",
+   "file": "nil (backbone edit)",
+   "summary": "H3: change which backbone rows feed the head (e.g. row 2 instead of row 4 for P3)",
+   "axis": "feature-fusion (tap points)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "Current taps are YOLO defaults, not tuned for our defect sizes. Expected 0-2% mAP50, variable per class. Confidence: medium-low.",
+   "results": null,
+   "note": "Needs the YOLO11 finding first: LOCATION (P4, mid-resolution) is what mattered, not layer TYPE."
+  },
+  {
+   "id": "mc_fpn_widths",
+   "model_family": "YOLO26",
+   "data_arena": "multiclass_detect_1280_10cls",
+   "file": "nil (neck edit)",
+   "summary": "H4: widen FPN channels (e.g. 768 instead of 512 at P4)",
+   "axis": "capacity (neck width)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "Current widths are already calibrated for n-scale. Expected 0-1% mAP50. Confidence: low.",
+   "results": null,
+   "note": "Low priority. Do not spend GPU time before H1/H2 are resolved."
+  },
+  {
+   "id": "res_input_size_native_crops",
+   "model_family": "YOLO26",
+   "data_arena": "production_size_and_data_levers",
+   "file": "nil (protocol change: imgsz 1568 instead of 1280)",
+   "summary": "Train the multiclass baseline at native crop size (about 1568 px) instead of 1280.",
+   "axis": "input resolution",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "Smaller gain than the full-frame case. Our crop already hands the model about 11 px of defect at 1280, against about 7 px for a full frame at 1280, so the remaining step is 1.22x of linear detail, not 1.86x. Expected +0.02 to +0.05 mAP50, unproven.",
+   "results": null,
+   "note": "Cost is the attraction: about 1.5x training time (566 s to roughly 850 s per 100-epoch arm) and 1.38x inference (7.65 to 10.57 ms per image, measured 2026-09-15). Deferred to the production set; the decision belongs on a measured size-versus-score-versus-time curve."
+  },
+  {
+   "id": "res_crop_margin_tight",
+   "model_family": "any",
+   "data_arena": "production_size_and_data_levers",
+   "file": "nil (preprocessing change, no model change)",
+   "summary": "Tighten the crop margin so the defect occupies a larger share of the input, at identical model and inference cost.",
+   "axis": "input resolution (free detail, preprocessing only)",
+   "theoretical_possible": true,
+   "batch": null,
+   "params": 0,
+   "status": "ideated",
+   "hypothesis": "If score scales with defect pixels, reducing empty border raises the defect's share for free. The multi-size crop mode is already tighter than the single-size mode used for detection, so the material exists.",
+   "results": null,
+   "note": "Cheapest idea on the list: no GPU cost for the crop itself, one training run to test. Watch the trade: a tighter crop risks cutting defects that sit near the border."
+  },
+  {
+   "id": "res_two_stage_cascade",
+   "model_family": "YOLO26",
+   "data_arena": "production_size_and_data_levers",
+   "file": "nil (two-stage pipeline)",
+   "summary": "Stage one detects on the 1280 crop, stage two re-runs only the candidate regions at native resolution.",
+   "axis": "input resolution at compute parity",
+   "theoretical_possible": true,
+   "batch": null,
+   "params": 0,
+   "status": "ideated",
+   "hypothesis": "Pays the native-resolution price only on a few small regions instead of the whole image, so most of the +26% quality could arrive without the 3x inference cost.",
+   "results": null,
+   "note": "Needs a harness and a second model pass, so it is the most engineering of the resolution ideas. Matters most if deployment lands on an edge device."
+  },
+  {
+   "id": "data_iou_ceiling",
+   "model_family": "nil (data measurement)",
+   "data_arena": "production_size_and_data_levers",
+   "file": "nil",
+   "summary": "Measure the annotation ceiling: re-annotate a subset of frames independently and compute the overlap between the two label sets.",
+   "axis": "data quality (label noise floor)",
+   "theoretical_possible": true,
+   "batch": null,
+   "params": 0,
+   "status": "ideated",
+   "hypothesis": "Median overlap between a found box and the correct box is stuck at about 0.80 across every model, setting and pipeline, which points at the labels rather than the model. If human annotators disagree at about 0.80 on the same defect, box precision is at its ceiling.",
+   "results": null,
+   "note": "No GPU cost and it tests our main blocker directly. The decisive experiment for the box-precision claim; it turns that claim from inference into a number."
+  },
+  {
+   "id": "aug_small_object",
+   "model_family": "YOLO26",
+   "data_arena": "production_size_and_data_levers",
+   "file": "nil (training config)",
+   "summary": "Augmentation aimed at small objects: scale jitter, copy-paste of defect patches, mosaic on against off.",
+   "axis": "data augmentation",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "At 13 px defects the model is starved of defect pixels. Scale jitter and copy-paste manufacture defect detail without new annotation, so they should raise recall before any architecture edit does.",
+   "results": null,
+   "note": "Cheap in GPU time and orthogonal to every architecture idea, so it can run in parallel with them."
+  },
+  {
+   "id": "model_scale_s",
+   "model_family": "YOLO26",
+   "data_arena": "production_size_and_data_levers",
+   "file": "yolo26s.yaml (stock)",
+   "summary": "One capacity step up, from the nano model to the small model, stock architecture.",
+   "axis": "model capacity",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "We have spent weeks editing the nano architecture; on small defects a larger model may buy more than the edits did. Compare against the +0.059 best architecture result.",
+   "results": null,
+   "note": "Costs about 2-3x the training time of the nano model. A cheap way to find out where the ceiling is."
+  },
+  {
+   "id": "res_seed_ensemble",
+   "model_family": "YOLO26",
+   "data_arena": "production_size_and_data_levers",
+   "file": "nil (3 seeds on the same config)",
+   "summary": "Three seeds of the baseline, evaluated individually and as a merged ensemble.",
+   "axis": "variance and ensembling",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "Two results for one cost: the spread across seeds gives the noise floor we have never measured, and the ensemble itself usually beats a single architecture edit on a small set.",
+   "results": null,
+   "note": "This is the experiment that makes every other delta in this registry interpretable. Highest priority of the list once GPU time is available."
+  },
+  {
+   "id": "mc_noise_floor",
+   "model_family": "YOLO26",
+   "data_arena": "multiclass_detect_1280_10cls",
+   "file": "nil (stock config, seeds 42 / 43 / 44)",
+   "summary": "H0: the seed-noise floor. Run the stock config three times with different seeds and report the spread.",
+   "axis": "measurement (variance)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "Without the seed spread, no delta in this registry can be separated from run-to-run variation. Everything so far is single-seed on 88 val images.",
+   "results": null,
+   "note": "Do this before any of the port arms: three of their four expected deltas are 0.01 to 0.04, which is exactly the range a seed change can produce. Cost: 3 runs, about 30 minutes."
+  },
+  {
+   "id": "mc_attention_port",
+   "model_family": "YOLO26",
+   "data_arena": "multiclass_detect_1280_10cls",
+   "file": "experiments/yolo26/yolo26_mc_attention.yaml (to be written)",
+   "summary": "H5a: backbone rows 6 and 8, C3k2 becomes C2PSA. Port of the winning YOLO11 attention change.",
+   "axis": "architecture (attention, inside the pathway)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "+0.02 to +0.06 mAP50 over 0.5355 / 0.3211 (mc_baseline, reproduced three times). Recall should rise more than precision, and any gain should concentrate in the weak classes (Bubble On 123, Fiber, Bubble Cluster, Bubble On Edge). Evidence: +0.059 mAP50 on the YOLO11 OBB arena, the best accuracy per parameter of everything tried there, and the only variant that detected HEMA Fragment.",
+   "results": null,
+   "note": "Highest-priority architecture change: it strengthens processing inside the existing pathway, which is where every positive result came from, unlike the two failed input-bolt-on ideas. Adds about 0.4M params (YOLO11 analogue 2.66M to 3.13M), so no param-matched control. Preflight gate required; must keep the stock head keys."
+  },
+  {
+   "id": "mc_sppf_k7",
+   "model_family": "YOLO26",
+   "data_arena": "multiclass_detect_1280_10cls",
+   "file": "experiments/yolo26/yolo26_mc_sppf_k7.yaml (to be written)",
+   "summary": "H5b: backbone row 9 SPPF kernel 5 becomes 7. Zero params, zero compute, pure field of view.",
+   "axis": "architecture (receptive field)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": 0,
+   "status": "ideated",
+   "hypothesis": "0.00 to +0.02 mAP50. Its YOLO11 value was +0.018 mAP50 and +0.007 mAP50-95, which sits at the edge of what 88 val images can resolve.",
+   "results": null,
+   "note": "The arg form must stay complete: [1024, 7, 3, True], never [1024, 7]. Dropping the extra arguments silently changes the block's behaviour (the trap that invalidated V1/V2). Run it after the noise floor, and treat a positive result as suggestive rather than settled."
+  },
+  {
+   "id": "mc_p4_conv",
+   "model_family": "YOLO26",
+   "data_arena": "multiclass_detect_1280_10cls",
+   "file": "experiments/yolo26/yolo26_mc_p4_conv.yaml (to be written)",
+   "summary": "H5c: two extra plain Conv [512,3,1] at the P4 stage (after row 6, before row 7).",
+   "axis": "architecture (depth at P4)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "+0.01 to +0.04 mAP50. Evidence: +0.037 mAP50 on the YOLO11 line, where this change was armB, and where extra depth at P4 helped while extra depth at P5 did not (LOCATION matters, not TYPE).",
+   "results": null,
+   "note": "Cheap. Read it against the noise floor before claiming anything: the expected range straddles it."
+  },
+  {
+   "id": "mc_consolidated",
+   "model_family": "YOLO26",
+   "data_arena": "multiclass_detect_1280_10cls",
+   "file": "experiments/yolo26/yolo26_mc_consolidated.yaml (to be written)",
+   "summary": "H5d: combine the H5 changes that individually cleared the noise floor.",
+   "axis": "architecture (combination)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "Roughly the sum of the parts if the changes act independently, less if they overlap. This is the arm that would actually ship.",
+   "results": null,
+   "note": "Build it only from changes that individually passed, and only after they have passed. The YOLO11 line carries the analogue as the ideated row consolidated_obb."
+  },
+  {
+   "id": "mc_raw_p3_tap",
+   "model_family": "YOLO26",
+   "data_arena": "multiclass_detect_1280_10cls",
+   "file": "experiments/yolo26/yolo26_mc_raw_p3_tap.yaml (to be written)",
+   "summary": "H2b: R1's raw backbone-P3 tap, re-run on the multiclass arena so raw and processed are ranked on identical ground.",
+   "axis": "architecture (added low-layer input, control for H2)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "Both arms negative is the expectation; the open question is which is less bad.",
+   "results": null,
+   "note": "R1 (raw, single-class crops) cost -0.0560 and H2 (processed, multiclass) cost -0.0992, and those two numbers are NOT comparable because the arenas and baselines differ. This arm is the only clean raw-versus-processed comparison. Control plus fork in one session."
+  }
+ ],
+ "dimensions": [
+  "model_family",
+  "data_arena"
+ ],
+ "protocol_note": "protocol below describes the YOLO11 OBB arena only (first arena). The two detect arenas have their own protocol blocks in protocols_by_arena; never mix them.",
+ "protocols_by_arena": {
+  "crop_obb_640_multiclass": {
+   "task": "OBB detection, multiclass (10 classes)",
+   "imgsz": 640,
+   "batch": {
+    "batch_1": 16,
+    "batch_2_plus": 8
+   },
+   "epochs": 100,
+   "patience": 50,
+   "optimizer": "auto",
+   "lr0": 0.01,
+   "seed": 42,
+   "metrics_of_record": [
+    "mAP50",
+    "mAP50-95",
+    "iou_mean_matched"
+   ]
+  },
+  "crop_detect_1280_singlecls": {
+   "task": "axis-aligned detection, single class (single_cls=true)",
+   "imgsz": 1280,
+   "batch": {
+    "crop_repro_reference": 16,
+    "arch_experiments": 8
+   },
+   "epochs": 100,
+   "patience": {
+    "crop_repro_reference": 30,
+    "arch_experiments": 50
+   },
+   "optimizer": "auto",
+   "lr0": 0.01,
+   "seed": 42,
+   "metrics_of_record": [
+    "mAP50",
+    "mAP50-95",
+    "matched_iou_mean"
+   ]
+  },
+  "multiclass_detect_1280_10cls": {
+   "task": "axis-aligned detection, 10 classes (AABB converted from the OBB labels)",
+   "imgsz": 1280,
+   "batch": 8,
+   "epochs": 100,
+   "patience": 50,
+   "optimizer": "auto",
+   "lr0": 0.01,
+   "seed": 42,
+   "metrics_of_record": [
+    "mAP50",
+    "mAP50-95"
+   ],
+   "per_class_metric": "AP50 (plus P/R per class for diagnostics)"
+  },
+  "production_size_and_data_levers": {
+   "task": "same task and metrics as the arena each idea is compared against; not yet run",
+   "imgsz": "grid (1280 / 1568 / native frame width)",
+   "epochs": 100,
+   "seed": 42,
+   "note": "Planned arena. Every row here is ideated and waits for the production-grade set, because on 346 training images effects below about 0.02 cannot be separated from run-to-run variation and the noise floor is still unmeasured."
+  }
+ },
+ "pending_reruns": [
+  {
+   "id": "R1",
+   "title": "Attributable FeatConcat re-run",
+   "why": "yolo26n_feat_concat_v1 tested no head change and both forks changed head config, SPPF behaviour and init. One variable only.",
+   "how": "Copy stock yolo26.yaml verbatim, apply the single intended edit, keep end2end: True / reg_max: 1 / SPPF [1024, 5, 3, True] / nc: 80; initialise control and fork identically (both from the yaml, or load yolo26n.pt into the fork). Gate: built param count must match the control and the head must show reg_max=1 with one2one_cv2/one2one_cv3. DONE 2026-09-11.",
+   "status": "done",
+   "verdict": "raw backbone-P3 tap into the P4 stage hurts by -0.056 mAP50 (attributable, one variable, matched init)",
+   "results": {
+    "control": "0.6637 / 0.4111 (reproduces the 2026-09-10 baseline exactly)",
+    "fork_p3tap": "0.6077 / 0.3598 (params 2654328 vs control 2572280)",
+    "delta_mAP50": "-0.0560 (-8.4%)",
+    "delta_mAP50_95": "-0.0513 (-12.5%)",
+    "recall_delta": "-0.0724",
+    "gate": "preflight PASS: stock keys, SPPF arg form, reg_max=1 with one2one present, row diff = intended edit only",
+    "init": "both pretrained yolo26n.pt; the fork loaded the checkpoint explicitly",
+    "caveats": "single seed; the edit adds 82048 params (widened concat) so no param-matched control; matched-IoU not yet computed",
+    "context": "the old V1/V2 deltas (-0.253 / -0.213) were 4-5x larger and mostly confounds"
+   }
+  },
+  {
+   "id": "R2",
+   "title": "Real fixed-vs-auto LR arm",
+   "why": "The 'fixed 1e-4' arms never ran at 1e-4; lr0 was ignored because optimizer stayed auto.",
+   "how": "Mirror the reference script exactly: optimizer=AdamW, lr0=1e-4, lrf=1.0, cos_lr=False, warmup_epochs=0 (source: /home/amd100-user/FMD_Data_26082026/fmd_temp_images/YOLO26_ICube_Defects/run_bbox_experiments.py, whose own lr/pg0 column reads 0.0001 at epoch 1 and at epoch 100). Leave the auto arm as is. Confirm the lr column in results.csv before reading any metric. DONE 2026-09-11.",
+   "status": "done",
+   "verdict": "auto LR beats flat 1e-4 on our crops; the earlier '~1% / does not matter' reading is dead",
+   "results": {
+    "auto_vs_flat_mAP50": {
+     "YOLO11n": "0.6007 vs 0.5678 (+0.0329, +5.8%)",
+     "YOLO26n": "0.6166 vs 0.5772 (+0.0394, +6.8%)"
+    },
+    "auto_vs_flat_mAP50_95": {
+     "YOLO11n": "0.3666 vs 0.3400 (+0.0266, +7.8%)",
+     "YOLO26n": "0.3937 vs 0.3423 (+0.0514, +15.0%)"
+    },
+    "run_dirs": "runs/crop_repro/yolo11n_crop_bbox_fixedlr_flat, runs/crop_repro/yolo26n_crop_bbox_fixedlr_flat",
+    "gate": "lr/pg0 = 0.0001 constant, epoch 1 and final epoch, both arms",
+    "caveats": "single seed per arm; the reference's fixed arm also disables warmup, so the comparison bundles schedule shape with warmup; YOLO11n fixed arm early-stopped at 79 epochs; matched-IoU not yet computed",
+    "reference_comparison": "the reference script's own 1280 gap was +2.1% of its fixed arm, and +15.8% at native 2464 - our crop gap lands between those"
+   }
+  },
+  {
+   "id": "R3",
+   "title": "Optional LR control",
+   "why": "The two LR arms also differed in early stopping (87 vs 100 epochs on YOLO11) and in the decay tail.",
+   "how": "Re-run both arms with lrf held equal to isolate init, early stopping and the tail."
+  }
+ ]
+}

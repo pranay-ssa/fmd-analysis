@@ -1,0 +1,40 @@
+{
+  "line": "L31",
+  "classes": {
+    "Missing Primary Package": {
+      "pictures": 72,
+      "train": 50,
+      "test": 22
+    },
+    "Multiple Lenses": {
+      "pictures": 97,
+      "train": 68,
+      "test": 29
+    },
+    "Foreign Matter": {
+      "pictures": 196,
+      "train": 137,
+      "test": 59
+    },
+    "Lens Off Center": {
+      "pictures": 20,
+      "train": 14,
+      "test": 6
+    },
+    "Missing Lens": {
+      "pictures": 51,
+      "train": 36,
+      "test": 15
+    },
+    "HEMA Obstruction": {
+      "pictures": 2,
+      "train": 1,
+      "test": 1
+    }
+  },
+  "totals": {
+    "pictures": 438,
+    "train": 306,
+    "test": 132
+  }
+}

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Production line analysis, 2026-09-16</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{
+  color-scheme: light;
+  --page-plane:#f9f9f7; --surface-1:#fcfcfb; --surface-card:#ffffff;
+  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#898781;
+  --gridline:#e6e5de; --border:rgba(11,11,11,0.10);
+  --series-1:#2a78d6; --series-1-wash:rgba(42,120,214,0.10);
+  --ok:#0ca30c; --bad:#d03b3b;
+  --shadow:0 1px 2px rgba(11,11,11,0.06),0 1px 8px rgba(11,11,11,0.04);
+}
+@media (prefers-color-scheme:dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme:dark;
+    --page-plane:#0d0d0d; --surface-1:#1a1a19; --surface-card:#201f1d;
+    --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#898781;
+    --gridline:#2c2c2a; --border:rgba(255,255,255,0.10);
+    --series-1:#3987e5; --series-1-wash:rgba(57,135,229,0.14);
+    --ok:#3fb950; --bad:#e66767;
+    --shadow:0 1px 2px rgba(0,0,0,0.3),0 1px 10px rgba(0,0,0,0.25);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page-plane:#0d0d0d; --surface-1:#1a1a19; --surface-card:#201f1d;
+  --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#898781;
+  --gridline:#2c2c2a; --border:rgba(255,255,255,0.10);
+  --series-1:#3987e5; --series-1-wash:rgba(57,135,229,0.14);
+  --ok:#3fb950; --bad:#e66767;
+  --shadow:0 1px 2px rgba(0,0,0,0.3),0 1px 10px rgba(0,0,0,0.25);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--page-plane);color:var(--text-primary);
+  font-family:"JetBrains Mono",ui-monospace,monospace;letter-spacing:0;-webkit-font-smoothing:antialiased;line-height:1.55}
+a{color:var(--series-1)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px 90px}
+header.top{position:sticky;top:0;z-index:50;background:var(--surface-1);border-bottom:1px solid var(--border);backdrop-filter:blur(6px)}
+.topbar{max-width:1180px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.topbar h1{font-size:15px;font-weight:600;margin:0}
+nav.sections{display:flex;gap:2px;flex-wrap:wrap;font-size:13px;margin-left:auto}
+nav.sections a{color:var(--text-secondary);text-decoration:none;padding:5px 9px;border-radius:6px}
+nav.sections a:hover{background:var(--series-1-wash);color:var(--text-primary)}
+.theme-toggle{border:1px solid var(--border);background:var(--surface-card);color:var(--text-secondary);border-radius:6px;padding:5px 10px;font-size:12.5px;cursor:pointer}
+.hero{padding:30px 0 4px}
+.hero h2{font-size:27px;margin:0 0 8px;letter-spacing:-0.01em}
+.hero .meta{color:var(--text-secondary);font-size:13.5px;line-height:1.7;max-width:900px}
+.hero .meta code{background:var(--surface-card);border:1px solid var(--border);border-radius:4px;padding:1px 5px;font-size:12px}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:18px 0}
+.stat-tile{background:var(--surface-card);border:1px solid var(--border);border-radius:12px;padding:15px;box-shadow:var(--shadow)}
+.stat-tile .label{font-size:11.5px;color:var(--text-secondary);margin-bottom:6px}
+.stat-tile .value{font-size:24px;font-weight:600;letter-spacing:-0.01em}
+.stat-tile .value.ok{color:var(--ok)} .stat-tile .value.bad{color:var(--bad)}
+.stat-tile .sub{font-size:11px;color:var(--text-muted);margin-top:5px;line-height:1.45}
+section{margin-top:52px;scroll-margin-top:66px}
+section h3{font-size:20px;margin:0 0 6px;letter-spacing:-0.01em}
+section h4{font-size:15px;margin:26px 0 8px;color:var(--text-secondary);font-weight:600}
+p.desc{color:var(--text-secondary);font-size:13.5px;margin:0 0 12px;max-width:900px}
+p.note{color:var(--text-secondary);font-size:12.5px;margin:8px 0 4px;max-width:900px;padding-left:12px;border-left:2px solid var(--gridline)}
+code{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:0.9em}
+.chart{width:100%;height:auto;margin:6px 0;overflow:visible}
+.chart .grid{stroke:var(--gridline);stroke-width:1}
+.chart .c-lab{fill:var(--text-secondary);font-size:11px}
+.chart .c-val{fill:var(--text-primary);font-size:11px;font-weight:500}
+.chart .c-tick{fill:var(--text-muted);font-size:10px}
+.chart .c-in{fill:#fff;font-size:10px;font-weight:600}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--text-secondary);margin:4px 0 2px}
+.legend .lg{display:flex;align-items:center;gap:5px}
+.legend .lg i{width:11px;height:11px;border-radius:3px;display:inline-block}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+@media(max-width:760px){.two-col{grid-template-columns:1fr}}
+.twrap{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th,td{padding:6px 10px;border-bottom:1px solid var(--border);white-space:nowrap}
+th{color:var(--text-secondary);font-weight:600;font-size:11.5px;text-transform:uppercase;letter-spacing:0.03em}
+td .ok,span.ok{color:var(--ok);font-weight:600}
+td .bad,span.bad{color:var(--bad);font-weight:600}
+ul.findings,ol.findings{font-size:13px;color:var(--text-secondary);line-height:1.7;max-width:940px;padding-left:22px}
+ul.findings li,ol.findings li{margin:7px 0}
+ul.findings b,ol.findings b{color:var(--text-primary)}
+.hero .foot{margin-top:14px;font-size:12px;color:var(--text-muted)}
+</style>
+</head>
+<body>
+<header class="top"><div class="topbar"><h1>Production line analysis</h1><nav class="sections"><a href="#found">1 What we found</a><a href="#lines">2 Images per line</a><a href="#coverage">3 Comparison set</a><a href="#dupes">4 Duplicates</a><a href="#split">5 Five models</a><a href="#questions">6 Questions</a><a href="#next">7 Recommendations</a></nav><button class="theme-toggle" onclick="var r=document.documentElement,d=r.getAttribute('data-theme')==='dark';r.setAttribute('data-theme',d?'light':'dark')">◐ theme</button></div></header>
+<div class="wrap">
+<div class="hero"><h2>Can one model handle every production line?</h2><div class="meta">
+This page counts what we have, line by line, and sets out the plan and the open decisions. The three folders hold <b>12,079</b> images across <b>5</b> production lines. After removing repeated pictures they hold <b>10,614</b> unique pictures, of which <b>8,401</b> carry one of the <b>22</b> defect classes and every one carries a line number, so <b>no image is unassigned</b>. Because the folders label the same classes, the analysis pools them by class rather than by folder, and the pooled set is what the models use. To answer the client question we train <b>5 separate ResNet-50 models, one per line</b>, and compare them on the classes that three or more lines share (17 classes). If those models agree on the classes they have in common, the line carries no signal and one model is enough.
+<div class="foot">Generated 2026-09-16 18:25 by <code>src/make_line_report.py</code> from the VM image library and the storage account listing. Counts were taken twice from two independent sources and agree exactly. Companion: <code>reports/lines/LINE_TAG_ANALYSIS_20260916.md</code>.</div>
+</div></div>
+<section id="found"><h3>1 · What we found</h3>
+<p class="desc">The numbers that frame every later decision.</p>
+<div class="stat-grid">
+<div class="stat-tile"><div class="label">Images</div><div class="value">12,079</div><div class="sub">three folders combined</div></div>
+<div class="stat-tile"><div class="label">Unique images</div><div class="value">10,614</div><div class="sub">1,465 files are repeated copies</div></div>
+<div class="stat-tile"><div class="label">Production lines</div><div class="value">5</div><div class="sub">L24, L25, L26, L27, L31</div></div>
+<div class="stat-tile"><div class="label">Defect-class dataset</div><div class="value">8,401</div><div class="sub">22 classes, pooled from all three folders; 2,213 pictures carry no defect label and sit outside it</div></div>
+<div class="stat-tile"><div class="label">Images with no line number</div><div class="value ok">0</div><div class="sub">the line question is answerable for every image</div></div>
+</div>
+<p class="note">Two independent counts were taken: one from the storage account listing and one from the files on the analysis machine. All 12,079 rows match, cell for cell, with the same fingerprint (51ae788b). A third count of the older library from a separate local copy also matched exactly, 1,465 files against 1,465 files.</p>
+</section>
+<section id="lines"><h3>2 · The data, as delivered</h3>
+<p class="desc">Three folders arrived and they label the same pictures in different ways, so this section describes what came in. Section 3 pools the folders by defect class, which is the unit the five models use.</p>
+<div class="legend"><span class="lg"><i style="background:#2a78d6"></i>Updated Objects</span><span class="lg"><i style="background:#1baf7a"></i>Updated Categorical</span><span class="lg"><i style="background:#eda100"></i>Older library</span></div>
+<svg viewBox="0 0 720 164" class="chart" role="img">
+<text x="52" y="19" text-anchor="end" class="c-lab" dominant-baseline="middle">L24</text>
+<rect x="78.0" y="11" width="215.5" height="17" rx="2" fill="#2a78d6"><title>L24, Updated Objects: 1,997 images</title></rect>
+<text x="185.8" y="19" text-anchor="middle" class="c-in" dominant-baseline="middle">1,997</text>
+<rect x="293.5" y="11" width="250.8" height="17" rx="2" fill="#1baf7a"><title>L24, Updated Categorical: 2,324 images</title></rect>
+<text x="418.9" y="19" text-anchor="middle" class="c-in" dominant-baseline="middle">2,324</text>
+<rect x="544.3" y="11" width="85.7" height="17" rx="2" fill="#eda100"><title>L24, Older library: 794 images</title></rect>
+<text x="587.2" y="19" text-anchor="middle" class="c-in" dominant-baseline="middle">794</text>
+<text x="638.0" y="19" class="c-val" dominant-baseline="middle">5,115</text>
+<text x="52" y="49" text-anchor="end" class="c-lab" dominant-baseline="middle">L25</text>
+<rect x="78.0" y="41" width="16.5" height="17" rx="2" fill="#2a78d6"><title>L25, Updated Objects: 153 images</title></rect>
+<rect x="94.5" y="41" width="88.4" height="17" rx="2" fill="#1baf7a"><title>L25, Updated Categorical: 819 images</title></rect>
+<text x="138.7" y="49" text-anchor="middle" class="c-in" dominant-baseline="middle">819</text>
+<rect x="182.9" y="41" width="17.4" height="17" rx="2" fill="#eda100"><title>L25, Older library: 161 images</title></rect>
+<text x="208.3" y="49" class="c-val" dominant-baseline="middle">1,133</text>
+<text x="52" y="79" text-anchor="end" class="c-lab" dominant-baseline="middle">L26</text>
+<rect x="78.0" y="71" width="72.2" height="17" rx="2" fill="#2a78d6"><title>L26, Updated Objects: 669 images</title></rect>
+<text x="114.1" y="79" text-anchor="middle" class="c-in" dominant-baseline="middle">669</text>
+<rect x="150.2" y="71" width="96.7" height="17" rx="2" fill="#1baf7a"><title>L26, Updated Categorical: 896 images</title></rect>
+<text x="198.5" y="79" text-anchor="middle" class="c-in" dominant-baseline="middle">896</text>
+<rect x="246.9" y="71" width="27.4" height="17" rx="2" fill="#eda100"><title>L26, Older library: 254 images</title></rect>
+<text x="282.3" y="79" class="c-val" dominant-baseline="middle">1,819</text>
+<text x="52" y="109" text-anchor="end" class="c-lab" dominant-baseline="middle">L27</text>
+<rect x="78.0" y="101" width="100.6" height="17" rx="2" fill="#2a78d6"><title>L27, Updated Objects: 932 images</title></rect>
+<text x="128.3" y="109" text-anchor="middle" class="c-in" dominant-baseline="middle">932</text>
+<rect x="178.6" y="101" width="73.2" height="17" rx="2" fill="#1baf7a"><title>L27, Updated Categorical: 678 images</title></rect>
+<text x="215.2" y="109" text-anchor="middle" class="c-in" dominant-baseline="middle">678</text>
+<rect x="251.7" y="101" width="12.4" height="17" rx="2" fill="#eda100"><title>L27, Older library: 115 images</title></rect>
+<text x="272.2" y="109" class="c-val" dominant-baseline="middle">1,725</text>
+<text x="52" y="139" text-anchor="end" class="c-lab" dominant-baseline="middle">L31</text>
+<rect x="78.0" y="131" width="51.7" height="17" rx="2" fill="#2a78d6"><title>L31, Updated Objects: 479 images</title></rect>
+<text x="103.8" y="139" text-anchor="middle" class="c-in" dominant-baseline="middle">479</text>
+<rect x="129.7" y="131" width="179.9" height="17" rx="2" fill="#1baf7a"><title>L31, Updated Categorical: 1,667 images</title></rect>
+<text x="219.6" y="139" text-anchor="middle" class="c-in" dominant-baseline="middle">1,667</text>
+<rect x="309.6" y="131" width="15.2" height="17" rx="2" fill="#eda100"><title>L31, Older library: 141 images</title></rect>
+<text x="332.8" y="139" class="c-val" dominant-baseline="middle">2,287</text>
+</svg>
+<div class="twrap"><table><thead><tr><th style="text-align:left">Line</th><th style="text-align:right">Updated Objects</th><th style="text-align:right">Updated Categorical</th><th style="text-align:right">Older library</th><th style="text-align:right">Total</th></tr></thead><tbody>
+<tr><td style="text-align:left">L24</td><td style="text-align:right">1,997</td><td style="text-align:right">2,324</td><td style="text-align:right">794</td><td style="text-align:right"><b>5,115</b></td></tr>
+<tr><td style="text-align:left">L25</td><td style="text-align:right">153</td><td style="text-align:right">819</td><td style="text-align:right">161</td><td style="text-align:right"><b>1,133</b></td></tr>
+<tr><td style="text-align:left">L26</td><td style="text-align:right">669</td><td style="text-align:right">896</td><td style="text-align:right">254</td><td style="text-align:right"><b>1,819</b></td></tr>
+<tr><td style="text-align:left">L27</td><td style="text-align:right">932</td><td style="text-align:right">678</td><td style="text-align:right">115</td><td style="text-align:right"><b>1,725</b></td></tr>
+<tr><td style="text-align:left">L31</td><td style="text-align:right">479</td><td style="text-align:right">1,667</td><td style="text-align:right">141</td><td style="text-align:right"><b>2,287</b></td></tr>
+</tbody></table></div>
+<p class="note">L24 alone holds 5,115 of the 12,079 files (42 percent) and L25 holds 1,133 (9 percent). Each of the five models trains on one line, so this table sets the raw volume behind each of them before any pooling.</p>
+<h4>The Updated Objects folder: object types, not defect classes</h4>
+<div class="twrap"><table><thead><tr><th style="text-align:left">Group</th><th style="text-align:right">L24</th><th style="text-align:right">L25</th><th style="text-align:right">L26</th><th style="text-align:right">L27</th><th style="text-align:right">L31</th><th style="text-align:right">Total</th></tr></thead><tbody>
+<tr><td style="text-align:left">Clear</td><td style="text-align:right">1,550</td><td style="text-align:right">22</td><td style="text-align:right">348</td><td style="text-align:right">276</td><td style="text-align:right">137</td><td style="text-align:right">2,333</td></tr>
+<tr><td style="text-align:left">Foreign Matter</td><td style="text-align:right">291</td><td style="text-align:right">84</td><td style="text-align:right">162</td><td style="text-align:right">550</td><td style="text-align:right">195</td><td style="text-align:right">1,282</td></tr>
+<tr><td style="text-align:left">Fiber</td><td style="text-align:right">83</td><td style="text-align:right">15</td><td style="text-align:right">25</td><td style="text-align:right">86</td><td style="text-align:right">119</td><td style="text-align:right">328</td></tr>
+<tr><td style="text-align:left">Extraneous Polymer</td><td style="text-align:right">64</td><td style="text-align:right">31</td><td style="text-align:right">134</td><td style="text-align:right">20</td><td style="text-align:right">18</td><td style="text-align:right">267</td></tr>
+<tr><td style="text-align:left">HEMA</td><td style="text-align:right">9</td><td style="text-align:right">1</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td style="text-align:right">10</td><td style="text-align:right">20</td></tr>
+<tr><td style="text-align:left"><b>Total</b></td><td style="text-align:right"><b>1,997</b></td><td style="text-align:right"><b>153</b></td><td style="text-align:right"><b>669</b></td><td style="text-align:right"><b>932</b></td><td style="text-align:right"><b>479</b></td><td style="text-align:right"><b>4,230</b></td></tr>
+</tbody></table></div>
+<p class="note">This folder groups by object type, not by defect class, and it holds no duplicates of its own: its 4,230 files are 4,230 different pictures. It cannot serve as the defect-class dataset, because "Clear" is 2,333 of its pictures and is not a class in the library taxonomy, and "HEMA" is 20 pictures that split between two library classes (8 HEMA Fragment, 4 HEMA Obstruction). Where it does help is with three classes the new Categorical folder does not carry at all: Fiber, Foreign Matter and Extraneous Polymer, 1,877 pictures between them. Those pictures join the pool in section 3 and are what lifts Fiber from 61 pictures in the library to 359, Foreign Matter from 71 to 1,278, and Extraneous Polymer from 17 to 234.</p>
+</section>
+<section id="coverage"><h3>3 · The 22 defect classes, line by line</h3>
+<p class="desc">This section pools the three source folders by defect class, so the unit is the class and not the folder, and every picture is counted once even when it sits in two folders. Three rules make the pool: "Low Dose" and "Low Dose Obstructing Region of Interest" are one class; "Clear", "HEMA" and "duplicates" are not classes, so the 2,213 pictures whose only label is one of those fall outside this table; and the 51 pictures that carry two defect classes take the class the older library assigns, which is the canonical taxonomy. 1,226 pictures sit in more than one folder, and 0 of those disagree on their line number, so the line is independent of which folder a copy sits in.</p>
+<svg viewBox="0 0 616 516" class="chart" role="img">
+<text x="249" y="12" text-anchor="middle" class="c-tick">L24</text>
+<text x="313" y="12" text-anchor="middle" class="c-tick">L25</text>
+<text x="377" y="12" text-anchor="middle" class="c-tick">L26</text>
+<text x="441" y="12" text-anchor="middle" class="c-tick">L27</text>
+<text x="505" y="12" text-anchor="middle" class="c-tick">L31</text>
+<text x="568" y="12" text-anchor="middle" class="c-tick">total</text>
+<text x="210" y="30.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Low Dose Obstructing Region of I</text>
+<rect x="218" y="20" width="62" height="20" rx="2" fill="#256abf"><title>Low Dose Obstructing Region of Interest, L24: 108 pictures, 32 of them test at 70:30</title></rect>
+<text x="249" y="30.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">108</text>
+<rect x="282" y="20" width="62" height="20" rx="2" fill="#2a78d6"><title>Low Dose Obstructing Region of Interest, L25: 57 pictures, 17 of them test at 70:30</title></rect>
+<text x="313" y="30.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">57</text>
+<rect x="346" y="20" width="62" height="20" rx="2" fill="#6da7ec"><title>Low Dose Obstructing Region of Interest, L26: 14 pictures, 4 of them test at 70:30</title></rect>
+<text x="377" y="30.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">14</text>
+<rect x="410" y="20" width="62" height="20" rx="2" fill="#184f95"><title>Low Dose Obstructing Region of Interest, L27: 464 pictures, 139 of them test at 70:30</title></rect>
+<text x="441" y="30.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">464</text>
+<rect x="474" y="20" width="62" height="20" rx="2" fill="#0d366b"><title>Low Dose Obstructing Region of Interest, L31: 1307 pictures, 392 of them test at 70:30</title></rect>
+<text x="505" y="30.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">1307</text>
+<text x="542" y="30.0" class="c-val" dominant-baseline="middle">1,950</text>
+<text x="210" y="52.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Multiple Lenses</text>
+<rect x="218" y="42" width="62" height="20" rx="2" fill="#1c5cab"><title>Multiple Lenses, L24: 335 pictures, 101 of them test at 70:30</title></rect>
+<text x="249" y="52.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">335</text>
+<rect x="282" y="42" width="62" height="20" rx="2" fill="#1c5cab"><title>Multiple Lenses, L25: 276 pictures, 83 of them test at 70:30</title></rect>
+<text x="313" y="52.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">276</text>
+<rect x="346" y="42" width="62" height="20" rx="2" fill="#184f95"><title>Multiple Lenses, L26: 674 pictures, 202 of them test at 70:30</title></rect>
+<text x="377" y="52.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">674</text>
+<rect x="410" y="42" width="62" height="20" rx="2" fill="#2a78d6"><title>Multiple Lenses, L27: 54 pictures, 16 of them test at 70:30</title></rect>
+<text x="441" y="52.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">54</text>
+<rect x="474" y="42" width="62" height="20" rx="2" fill="#256abf"><title>Multiple Lenses, L31: 97 pictures, 29 of them test at 70:30</title></rect>
+<text x="505" y="52.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">97</text>
+<text x="542" y="52.0" class="c-val" dominant-baseline="middle">1,436</text>
+<text x="210" y="74.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Missing Primary Package</text>
+<rect x="218" y="64" width="62" height="20" rx="2" fill="#0d366b"><title>Missing Primary Package, L24: 1147 pictures, 344 of them test at 70:30</title></rect>
+<text x="249" y="74.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">1147</text>
+<rect x="282" y="64" width="62" height="20" rx="2" fill="#1c5cab"><title>Missing Primary Package, L25: 189 pictures, 57 of them test at 70:30</title></rect>
+<text x="313" y="74.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">189</text>
+<rect x="346" y="64" width="62" height="20" rx="2" fill="#6da7ec"><title>Missing Primary Package, L26: 7 pictures, 2 of them test at 70:30</title></rect>
+<text x="377" y="74.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">7</text>
+<rect x="410" y="64" width="62" height="20" rx="2" fill="#6da7ec"><title>Missing Primary Package, L27: 12 pictures, 4 of them test at 70:30</title></rect>
+<text x="441" y="74.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">12</text>
+<rect x="474" y="64" width="62" height="20" rx="2" fill="#2a78d6"><title>Missing Primary Package, L31: 72 pictures, 22 of them test at 70:30</title></rect>
+<text x="505" y="74.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">72</text>
+<text x="542" y="74.0" class="c-val" dominant-baseline="middle">1,427</text>
+<text x="210" y="96.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Foreign Matter</text>
+<rect x="218" y="86" width="62" height="20" rx="2" fill="#1c5cab"><title>Foreign Matter, L24: 287 pictures, 86 of them test at 70:30</title></rect>
+<text x="249" y="96.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">287</text>
+<rect x="282" y="86" width="62" height="20" rx="2" fill="#256abf"><title>Foreign Matter, L25: 84 pictures, 25 of them test at 70:30</title></rect>
+<text x="313" y="96.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">84</text>
+<rect x="346" y="86" width="62" height="20" rx="2" fill="#256abf"><title>Foreign Matter, L26: 162 pictures, 49 of them test at 70:30</title></rect>
+<text x="377" y="96.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">162</text>
+<rect x="410" y="86" width="62" height="20" rx="2" fill="#184f95"><title>Foreign Matter, L27: 549 pictures, 165 of them test at 70:30</title></rect>
+<text x="441" y="96.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">549</text>
+<rect x="474" y="86" width="62" height="20" rx="2" fill="#1c5cab"><title>Foreign Matter, L31: 196 pictures, 59 of them test at 70:30</title></rect>
+<text x="505" y="96.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">196</text>
+<text x="542" y="96.0" class="c-val" dominant-baseline="middle">1,278</text>
+<text x="210" y="118.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Fiber</text>
+<rect x="218" y="108" width="62" height="20" rx="2" fill="#256abf"><title>Fiber, L24: 86 pictures, 26 of them test at 70:30</title></rect>
+<text x="249" y="118.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">86</text>
+<rect x="282" y="108" width="62" height="20" rx="2" fill="#2a78d6"><title>Fiber, L25: 37 pictures, 11 of them test at 70:30</title></rect>
+<text x="313" y="118.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">37</text>
+<rect x="346" y="108" width="62" height="20" rx="2" fill="#5598e7"><title>Fiber, L26: 26 pictures, 8 of them test at 70:30</title></rect>
+<text x="377" y="118.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">26</text>
+<rect x="410" y="108" width="62" height="20" rx="2" fill="#256abf"><title>Fiber, L27: 90 pictures, 27 of them test at 70:30</title></rect>
+<text x="441" y="118.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">90</text>
+<rect x="474" y="108" width="62" height="20" rx="2" fill="#256abf"><title>Fiber, L31: 120 pictures, 36 of them test at 70:30</title></rect>
+<text x="505" y="118.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">120</text>
+<text x="542" y="118.0" class="c-val" dominant-baseline="middle">359</text>
+<text x="210" y="140.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Missing Lens</text>
+<rect x="218" y="130" width="62" height="20" rx="2" fill="#1c5cab"><title>Missing Lens, L24: 183 pictures, 55 of them test at 70:30</title></rect>
+<text x="249" y="140.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">183</text>
+<rect x="282" y="130" width="62" height="20" rx="2" fill="#86b6ef"><title>Missing Lens, L25: 6 pictures, 2 of them test at 70:30</title></rect>
+<text x="313" y="140.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">6</text>
+<rect x="346" y="130" width="62" height="20" rx="2" fill="#86b6ef"><title>Missing Lens, L26: 3 pictures, 1 of them test at 70:30</title></rect>
+<text x="377" y="140.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">3</text>
+<rect x="410" y="130" width="62" height="20" rx="2" fill="#256abf"><title>Missing Lens, L27: 81 pictures, 24 of them test at 70:30</title></rect>
+<text x="441" y="140.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">81</text>
+<rect x="474" y="130" width="62" height="20" rx="2" fill="#2a78d6"><title>Missing Lens, L31: 51 pictures, 15 of them test at 70:30</title></rect>
+<text x="505" y="140.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">51</text>
+<text x="542" y="140.0" class="c-val" dominant-baseline="middle">324</text>
+<text x="210" y="162.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Package Misalignment</text>
+<rect x="218" y="152" width="62" height="20" rx="2" fill="#5598e7"><title>Package Misalignment, L24: 32 pictures, 10 of them test at 70:30</title></rect>
+<text x="249" y="162.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">32</text>
+<rect x="282" y="152" width="62" height="20" rx="2" fill="#256abf"><title>Package Misalignment, L25: 176 pictures, 53 of them test at 70:30</title></rect>
+<text x="313" y="162.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">176</text>
+<rect x="346" y="152" width="62" height="20" rx="2" fill="#5598e7"><title>Package Misalignment, L26: 24 pictures, 7 of them test at 70:30</title></rect>
+<text x="377" y="162.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">24</text>
+<rect x="410" y="152" width="62" height="20" rx="2" fill="#6da7ec"><title>Package Misalignment, L27: 11 pictures, 3 of them test at 70:30</title></rect>
+<text x="441" y="162.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">11</text>
+<rect x="474" y="152" width="62" height="20" rx="2" fill="#2a78d6"><title>Package Misalignment, L31: 50 pictures, 15 of them test at 70:30</title></rect>
+<text x="505" y="162.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">50</text>
+<text x="542" y="162.0" class="c-val" dominant-baseline="middle">293</text>
+<text x="210" y="184.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Lens Off Center</text>
+<rect x="218" y="174" width="62" height="20" rx="2" fill="#1c5cab"><title>Lens Off Center, L24: 195 pictures, 59 of them test at 70:30</title></rect>
+<text x="249" y="184.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">195</text>
+<rect x="282" y="174" width="62" height="20" rx="2" fill="#86b6ef"><title>Lens Off Center, L25: 5 pictures, 2 of them test at 70:30</title></rect>
+<text x="313" y="184.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">5</text>
+<rect x="346" y="174" width="62" height="20" rx="2" fill="#6da7ec"><title>Lens Off Center, L26: 8 pictures, 2 of them test at 70:30</title></rect>
+<text x="377" y="184.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">8</text>
+<rect x="410" y="174" width="62" height="20" rx="2" fill="#5598e7"><title>Lens Off Center, L27: 27 pictures, 8 of them test at 70:30</title></rect>
+<text x="441" y="184.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">27</text>
+<rect x="474" y="174" width="62" height="20" rx="2" fill="#5598e7"><title>Lens Off Center, L31: 20 pictures, 6 of them test at 70:30</title></rect>
+<text x="505" y="184.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">20</text>
+<text x="542" y="184.0" class="c-val" dominant-baseline="middle">255</text>
+<text x="210" y="206.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Extraneous Polymer</text>
+<rect x="218" y="196" width="62" height="20" rx="2" fill="#2a78d6"><title>Extraneous Polymer, L24: 59 pictures, 18 of them test at 70:30</title></rect>
+<text x="249" y="206.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">59</text>
+<rect x="282" y="196" width="62" height="20" rx="2" fill="#6da7ec"><title>Extraneous Polymer, L25: 9 pictures, 3 of them test at 70:30</title></rect>
+<text x="313" y="206.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">9</text>
+<rect x="346" y="196" width="62" height="20" rx="2" fill="#256abf"><title>Extraneous Polymer, L26: 134 pictures, 40 of them test at 70:30</title></rect>
+<text x="377" y="206.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">134</text>
+<rect x="410" y="196" width="62" height="20" rx="2" fill="#5598e7"><title>Extraneous Polymer, L27: 16 pictures, 5 of them test at 70:30</title></rect>
+<text x="441" y="206.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">16</text>
+<rect x="474" y="196" width="62" height="20" rx="2" fill="#5598e7"><title>Extraneous Polymer, L31: 16 pictures, 5 of them test at 70:30</title></rect>
+<text x="505" y="206.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">16</text>
+<text x="542" y="206.0" class="c-val" dominant-baseline="middle">234</text>
+<text x="210" y="228.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Cavity Off Center</text>
+<rect x="218" y="218" width="62" height="20" rx="2" fill="#256abf"><title>Cavity Off Center, L24: 93 pictures, 28 of them test at 70:30</title></rect>
+<text x="249" y="228.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">93</text>
+<rect x="282" y="218" width="62" height="20" rx="2" fill="#2a78d6"><title>Cavity Off Center, L25: 40 pictures, 12 of them test at 70:30</title></rect>
+<text x="313" y="228.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">40</text>
+<rect x="346" y="218" width="62" height="20" rx="2" fill="#5598e7"><title>Cavity Off Center, L26: 24 pictures, 7 of them test at 70:30</title></rect>
+<text x="377" y="228.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">24</text>
+<rect x="410" y="218" width="62" height="20" rx="2" fill="#6da7ec"><title>Cavity Off Center, L27: 13 pictures, 4 of them test at 70:30</title></rect>
+<text x="441" y="228.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">13</text>
+<rect x="474" y="218" width="62" height="20" rx="2" fill="#6da7ec"><title>Cavity Off Center, L31: 13 pictures, 4 of them test at 70:30</title></rect>
+<text x="505" y="228.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">13</text>
+<text x="542" y="228.0" class="c-val" dominant-baseline="middle">183</text>
+<text x="210" y="250.0" text-anchor="end" class="c-lab" dominant-baseline="middle">HEMA Obstruction</text>
+<rect x="218" y="240" width="62" height="20" rx="2" fill="#256abf"><title>HEMA Obstruction, L24: 151 pictures, 45 of them test at 70:30</title></rect>
+<text x="249" y="250.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">151</text>
+<rect x="282" y="240" width="62" height="20" rx="2" fill="#5598e7"><title>HEMA Obstruction, L25: 18 pictures, 5 of them test at 70:30</title></rect>
+<text x="313" y="250.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">18</text>
+<rect x="346" y="240" width="62" height="20" rx="2" fill="#9ec5f4"><title>HEMA Obstruction, L26: 2 pictures, 1 of them test at 70:30</title></rect>
+<text x="377" y="250.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">2</text>
+<rect x="410" y="240" width="62" height="20" rx="2" fill="#9ec5f4"><title>HEMA Obstruction, L27: 2 pictures, 1 of them test at 70:30</title></rect>
+<text x="441" y="250.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">2</text>
+<rect x="474" y="240" width="62" height="20" rx="2" fill="#9ec5f4"><title>HEMA Obstruction, L31: 2 pictures, 1 of them test at 70:30</title></rect>
+<text x="505" y="250.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">2</text>
+<text x="542" y="250.0" class="c-val" dominant-baseline="middle">175</text>
+<text x="210" y="272.0" text-anchor="end" class="c-lab" dominant-baseline="middle">View Obstructed</text>
+<rect x="218" y="262" width="62" height="20" rx="2" fill="#5598e7"><title>View Obstructed, L24: 19 pictures, 6 of them test at 70:30</title></rect>
+<text x="249" y="272.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">19</text>
+<rect x="282" y="262" width="62" height="20" rx="2" fill="#5598e7"><title>View Obstructed, L25: 16 pictures, 5 of them test at 70:30</title></rect>
+<text x="313" y="272.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">16</text>
+<rect x="346" y="262" width="62" height="20" rx="2" fill="#5598e7"><title>View Obstructed, L26: 33 pictures, 10 of them test at 70:30</title></rect>
+<text x="377" y="272.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">33</text>
+<rect x="410" y="262" width="62" height="20" rx="2" fill="#6da7ec"><title>View Obstructed, L27: 11 pictures, 3 of them test at 70:30</title></rect>
+<text x="441" y="272.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">11</text>
+<rect x="474" y="262" width="62" height="20" rx="2" fill="#2a78d6"><title>View Obstructed, L31: 38 pictures, 11 of them test at 70:30</title></rect>
+<text x="505" y="272.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">38</text>
+<text x="542" y="272.0" class="c-val" dominant-baseline="middle">117</text>
+<text x="210" y="294.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Bubble</text>
+<rect x="218" y="284" width="62" height="20" rx="2" fill="#256abf"><title>Bubble, L24: 82 pictures, 25 of them test at 70:30</title></rect>
+<text x="249" y="294.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">82</text>
+<rect x="282" y="284" width="62" height="20" rx="2" fill="#5598e7"><title>Bubble, L25: 18 pictures, 5 of them test at 70:30</title></rect>
+<text x="313" y="294.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">18</text>
+<rect x="346" y="284" width="62" height="20" rx="2" fill="#6da7ec"><title>Bubble, L26: 13 pictures, 4 of them test at 70:30</title></rect>
+<text x="377" y="294.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">13</text>
+<rect x="410" y="284" width="62" height="20" rx="2" fill="var(--gridline)"><title>Bubble, L27: 0 pictures, 0 of them test at 70:30</title></rect>
+<rect x="474" y="284" width="62" height="20" rx="2" fill="var(--gridline)"><title>Bubble, L31: 0 pictures, 0 of them test at 70:30</title></rect>
+<text x="542" y="294.0" class="c-val" dominant-baseline="middle">113</text>
+<text x="210" y="316.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Wet Package</text>
+<rect x="218" y="306" width="62" height="20" rx="2" fill="#6da7ec"><title>Wet Package, L24: 10 pictures, 3 of them test at 70:30</title></rect>
+<text x="249" y="316.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">10</text>
+<rect x="282" y="306" width="62" height="20" rx="2" fill="#9ec5f4"><title>Wet Package, L25: 2 pictures, 1 of them test at 70:30</title></rect>
+<text x="313" y="316.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">2</text>
+<rect x="346" y="306" width="62" height="20" rx="2" fill="#2a78d6"><title>Wet Package, L26: 52 pictures, 16 of them test at 70:30</title></rect>
+<text x="377" y="316.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="#fff">52</text>
+<rect x="410" y="306" width="62" height="20" rx="2" fill="var(--gridline)"><title>Wet Package, L27: 0 pictures, 0 of them test at 70:30</title></rect>
+<rect x="474" y="306" width="62" height="20" rx="2" fill="#9ec5f4"><title>Wet Package, L31: 2 pictures, 1 of them test at 70:30</title></rect>
+<text x="505" y="316.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">2</text>
+<text x="542" y="316.0" class="c-val" dominant-baseline="middle">66</text>
+<text x="210" y="338.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Bubble Irregular</text>
+<rect x="218" y="328" width="62" height="20" rx="2" fill="#6da7ec"><title>Bubble Irregular, L24: 13 pictures, 4 of them test at 70:30</title></rect>
+<text x="249" y="338.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">13</text>
+<rect x="282" y="328" width="62" height="20" rx="2" fill="#9ec5f4"><title>Bubble Irregular, L25: 1 pictures, 0 of them test at 70:30</title></rect>
+<text x="313" y="338.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">1</text>
+<rect x="346" y="328" width="62" height="20" rx="2" fill="#6da7ec"><title>Bubble Irregular, L26: 7 pictures, 2 of them test at 70:30</title></rect>
+<text x="377" y="338.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">7</text>
+<rect x="410" y="328" width="62" height="20" rx="2" fill="#5598e7"><title>Bubble Irregular, L27: 21 pictures, 6 of them test at 70:30</title></rect>
+<text x="441" y="338.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">21</text>
+<rect x="474" y="328" width="62" height="20" rx="2" fill="#9ec5f4"><title>Bubble Irregular, L31: 2 pictures, 1 of them test at 70:30</title></rect>
+<text x="505" y="338.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">2</text>
+<text x="542" y="338.0" class="c-val" dominant-baseline="middle">44</text>
+<text x="210" y="360.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Dirty Strobe</text>
+<rect x="218" y="350" width="62" height="20" rx="2" fill="var(--gridline)"><title>Dirty Strobe, L24: 0 pictures, 0 of them test at 70:30</title></rect>
+<rect x="282" y="350" width="62" height="20" rx="2" fill="#6da7ec"><title>Dirty Strobe, L25: 12 pictures, 4 of them test at 70:30</title></rect>
+<text x="313" y="360.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">12</text>
+<rect x="346" y="350" width="62" height="20" rx="2" fill="#5598e7"><title>Dirty Strobe, L26: 31 pictures, 9 of them test at 70:30</title></rect>
+<text x="377" y="360.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">31</text>
+<rect x="410" y="350" width="62" height="20" rx="2" fill="var(--gridline)"><title>Dirty Strobe, L27: 0 pictures, 0 of them test at 70:30</title></rect>
+<rect x="474" y="350" width="62" height="20" rx="2" fill="var(--gridline)"><title>Dirty Strobe, L31: 0 pictures, 0 of them test at 70:30</title></rect>
+<text x="542" y="360.0" class="c-val" dominant-baseline="middle">43</text>
+<text x="210" y="382.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Bubble Cluster</text>
+<rect x="218" y="372" width="62" height="20" rx="2" fill="#5598e7"><title>Bubble Cluster, L24: 18 pictures, 5 of them test at 70:30</title></rect>
+<text x="249" y="382.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">18</text>
+<rect x="282" y="372" width="62" height="20" rx="2" fill="#9ec5f4"><title>Bubble Cluster, L25: 2 pictures, 1 of them test at 70:30</title></rect>
+<text x="313" y="382.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">2</text>
+<rect x="346" y="372" width="62" height="20" rx="2" fill="#86b6ef"><title>Bubble Cluster, L26: 4 pictures, 1 of them test at 70:30</title></rect>
+<text x="377" y="382.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">4</text>
+<rect x="410" y="372" width="62" height="20" rx="2" fill="#6da7ec"><title>Bubble Cluster, L27: 10 pictures, 3 of them test at 70:30</title></rect>
+<text x="441" y="382.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">10</text>
+<rect x="474" y="372" width="62" height="20" rx="2" fill="#9ec5f4"><title>Bubble Cluster, L31: 2 pictures, 1 of them test at 70:30</title></rect>
+<text x="505" y="382.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">2</text>
+<text x="542" y="382.0" class="c-val" dominant-baseline="middle">36</text>
+<text x="210" y="404.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Dirty Camera</text>
+<rect x="218" y="394" width="62" height="20" rx="2" fill="#5598e7"><title>Dirty Camera, L24: 25 pictures, 8 of them test at 70:30</title></rect>
+<text x="249" y="404.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">25</text>
+<rect x="282" y="394" width="62" height="20" rx="2" fill="var(--gridline)"><title>Dirty Camera, L25: 0 pictures, 0 of them test at 70:30</title></rect>
+<rect x="346" y="394" width="62" height="20" rx="2" fill="var(--gridline)"><title>Dirty Camera, L26: 0 pictures, 0 of them test at 70:30</title></rect>
+<rect x="410" y="394" width="62" height="20" rx="2" fill="var(--gridline)"><title>Dirty Camera, L27: 0 pictures, 0 of them test at 70:30</title></rect>
+<rect x="474" y="394" width="62" height="20" rx="2" fill="var(--gridline)"><title>Dirty Camera, L31: 0 pictures, 0 of them test at 70:30</title></rect>
+<text x="542" y="404.0" class="c-val" dominant-baseline="middle">25</text>
+<text x="210" y="426.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Bubble On 123</text>
+<rect x="218" y="416" width="62" height="20" rx="2" fill="#9ec5f4"><title>Bubble On 123, L24: 1 pictures, 0 of them test at 70:30</title></rect>
+<text x="249" y="426.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">1</text>
+<rect x="282" y="416" width="62" height="20" rx="2" fill="var(--gridline)"><title>Bubble On 123, L25: 0 pictures, 0 of them test at 70:30</title></rect>
+<rect x="346" y="416" width="62" height="20" rx="2" fill="var(--gridline)"><title>Bubble On 123, L26: 0 pictures, 0 of them test at 70:30</title></rect>
+<rect x="410" y="416" width="62" height="20" rx="2" fill="var(--gridline)"><title>Bubble On 123, L27: 0 pictures, 0 of them test at 70:30</title></rect>
+<rect x="474" y="416" width="62" height="20" rx="2" fill="#6da7ec"><title>Bubble On 123, L31: 13 pictures, 4 of them test at 70:30</title></rect>
+<text x="505" y="426.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">13</text>
+<text x="542" y="426.0" class="c-val" dominant-baseline="middle">14</text>
+<text x="210" y="448.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Bubble On Edge</text>
+<rect x="218" y="438" width="62" height="20" rx="2" fill="#86b6ef"><title>Bubble On Edge, L24: 3 pictures, 1 of them test at 70:30</title></rect>
+<text x="249" y="448.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">3</text>
+<rect x="282" y="438" width="62" height="20" rx="2" fill="#86b6ef"><title>Bubble On Edge, L25: 3 pictures, 1 of them test at 70:30</title></rect>
+<text x="313" y="448.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">3</text>
+<rect x="346" y="438" width="62" height="20" rx="2" fill="#9ec5f4"><title>Bubble On Edge, L26: 1 pictures, 0 of them test at 70:30</title></rect>
+<text x="377" y="448.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">1</text>
+<rect x="410" y="438" width="62" height="20" rx="2" fill="#9ec5f4"><title>Bubble On Edge, L27: 1 pictures, 0 of them test at 70:30</title></rect>
+<text x="441" y="448.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">1</text>
+<rect x="474" y="438" width="62" height="20" rx="2" fill="#86b6ef"><title>Bubble On Edge, L31: 6 pictures, 2 of them test at 70:30</title></rect>
+<text x="505" y="448.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">6</text>
+<text x="542" y="448.0" class="c-val" dominant-baseline="middle">14</text>
+<text x="210" y="470.0" text-anchor="end" class="c-lab" dominant-baseline="middle">HEMA Fragment</text>
+<rect x="218" y="460" width="62" height="20" rx="2" fill="#86b6ef"><title>HEMA Fragment, L24: 5 pictures, 2 of them test at 70:30</title></rect>
+<text x="249" y="470.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">5</text>
+<rect x="282" y="460" width="62" height="20" rx="2" fill="var(--gridline)"><title>HEMA Fragment, L25: 0 pictures, 0 of them test at 70:30</title></rect>
+<rect x="346" y="460" width="62" height="20" rx="2" fill="var(--gridline)"><title>HEMA Fragment, L26: 0 pictures, 0 of them test at 70:30</title></rect>
+<rect x="410" y="460" width="62" height="20" rx="2" fill="var(--gridline)"><title>HEMA Fragment, L27: 0 pictures, 0 of them test at 70:30</title></rect>
+<rect x="474" y="460" width="62" height="20" rx="2" fill="#86b6ef"><title>HEMA Fragment, L31: 3 pictures, 1 of them test at 70:30</title></rect>
+<text x="505" y="470.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">3</text>
+<text x="542" y="470.0" class="c-val" dominant-baseline="middle">8</text>
+<text x="210" y="492.0" text-anchor="end" class="c-lab" dominant-baseline="middle">Bubble Scatter</text>
+<rect x="218" y="482" width="62" height="20" rx="2" fill="#9ec5f4"><title>Bubble Scatter, L24: 1 pictures, 0 of them test at 70:30</title></rect>
+<text x="249" y="492.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">1</text>
+<rect x="282" y="482" width="62" height="20" rx="2" fill="var(--gridline)"><title>Bubble Scatter, L25: 0 pictures, 0 of them test at 70:30</title></rect>
+<rect x="346" y="482" width="62" height="20" rx="2" fill="#9ec5f4"><title>Bubble Scatter, L26: 1 pictures, 0 of them test at 70:30</title></rect>
+<text x="377" y="492.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">1</text>
+<rect x="410" y="482" width="62" height="20" rx="2" fill="#86b6ef"><title>Bubble Scatter, L27: 3 pictures, 1 of them test at 70:30</title></rect>
+<text x="441" y="492.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">3</text>
+<rect x="474" y="482" width="62" height="20" rx="2" fill="#9ec5f4"><title>Bubble Scatter, L31: 2 pictures, 1 of them test at 70:30</title></rect>
+<text x="505" y="492.0" text-anchor="middle" dominant-baseline="middle" style="font-size:10px" fill="var(--text-primary)">2</text>
+<text x="542" y="492.0" class="c-val" dominant-baseline="middle">7</text>
+</svg>
+<p class="note">Each cell is the number of pictures of that class on that line, coloured on a log scale, so a pale cell still holds pictures. Hover a cell to see how many of them become test images.</p>
+<div class="twrap"><table><thead><tr><th style="text-align:left">Class</th><th style="text-align:right">L24</th><th style="text-align:right">L25</th><th style="text-align:right">L26</th><th style="text-align:right">L27</th><th style="text-align:right">L31</th><th style="text-align:right">Total</th><th style="text-align:right">Lines scorable</th><th style="text-align:right">Comparisons</th><th style="text-align:right">Thinnest line</th><th style="text-align:right">Test images</th></tr></thead><tbody>
+<tr><td style="text-align:left">Low Dose Obstructing Region of Interest</td><td style="text-align:right">108</td><td style="text-align:right">57</td><td style="text-align:right">14</td><td style="text-align:right">464</td><td style="text-align:right">1,307</td><td style="text-align:right">1,950</td><td style="text-align:right">5</td><td style="text-align:right">10</td><td style="text-align:right">4</td><td style="text-align:right">584</td></tr>
+<tr><td style="text-align:left">Multiple Lenses</td><td style="text-align:right">335</td><td style="text-align:right">276</td><td style="text-align:right">674</td><td style="text-align:right">54</td><td style="text-align:right">97</td><td style="text-align:right">1,436</td><td style="text-align:right">5</td><td style="text-align:right">10</td><td style="text-align:right">16</td><td style="text-align:right">431</td></tr>
+<tr><td style="text-align:left">Missing Primary Package</td><td style="text-align:right">1,147</td><td style="text-align:right">189</td><td style="text-align:right">7</td><td style="text-align:right">12</td><td style="text-align:right">72</td><td style="text-align:right">1,427</td><td style="text-align:right">5</td><td style="text-align:right">10</td><td style="text-align:right">2</td><td style="text-align:right">429</td></tr>
+<tr><td style="text-align:left">Foreign Matter</td><td style="text-align:right">287</td><td style="text-align:right">84</td><td style="text-align:right">162</td><td style="text-align:right">549</td><td style="text-align:right">196</td><td style="text-align:right">1,278</td><td style="text-align:right">5</td><td style="text-align:right">10</td><td style="text-align:right">25</td><td style="text-align:right">384</td></tr>
+<tr><td style="text-align:left">Fiber</td><td style="text-align:right">86</td><td style="text-align:right">37</td><td style="text-align:right">26</td><td style="text-align:right">90</td><td style="text-align:right">120</td><td style="text-align:right">359</td><td style="text-align:right">5</td><td style="text-align:right">10</td><td style="text-align:right">8</td><td style="text-align:right">108</td></tr>
+<tr><td style="text-align:left">Missing Lens</td><td style="text-align:right">183</td><td style="text-align:right">6</td><td style="text-align:right">3</td><td style="text-align:right">81</td><td style="text-align:right">51</td><td style="text-align:right">324</td><td style="text-align:right">5</td><td style="text-align:right">10</td><td style="text-align:right">1</td><td style="text-align:right">97</td></tr>
+<tr><td style="text-align:left">Package Misalignment</td><td style="text-align:right">32</td><td style="text-align:right">176</td><td style="text-align:right">24</td><td style="text-align:right">11</td><td style="text-align:right">50</td><td style="text-align:right">293</td><td style="text-align:right">5</td><td style="text-align:right">10</td><td style="text-align:right">3</td><td style="text-align:right">88</td></tr>
+<tr><td style="text-align:left">Lens Off Center</td><td style="text-align:right">195</td><td style="text-align:right">5</td><td style="text-align:right">8</td><td style="text-align:right">27</td><td style="text-align:right">20</td><td style="text-align:right">255</td><td style="text-align:right">5</td><td style="text-align:right">10</td><td style="text-align:right">2</td><td style="text-align:right">77</td></tr>
+<tr><td style="text-align:left">Extraneous Polymer</td><td style="text-align:right">59</td><td style="text-align:right">9</td><td style="text-align:right">134</td><td style="text-align:right">16</td><td style="text-align:right">16</td><td style="text-align:right">234</td><td style="text-align:right">5</td><td style="text-align:right">10</td><td style="text-align:right">3</td><td style="text-align:right">71</td></tr>
+<tr><td style="text-align:left">Cavity Off Center</td><td style="text-align:right">93</td><td style="text-align:right">40</td><td style="text-align:right">24</td><td style="text-align:right">13</td><td style="text-align:right">13</td><td style="text-align:right">183</td><td style="text-align:right">5</td><td style="text-align:right">10</td><td style="text-align:right">4</td><td style="text-align:right">55</td></tr>
+<tr><td style="text-align:left">HEMA Obstruction</td><td style="text-align:right">151</td><td style="text-align:right">18</td><td style="text-align:right">2</td><td style="text-align:right">2</td><td style="text-align:right">2</td><td style="text-align:right">175</td><td style="text-align:right">5</td><td style="text-align:right">10</td><td style="text-align:right">1</td><td style="text-align:right">53</td></tr>
+<tr><td style="text-align:left">View Obstructed</td><td style="text-align:right">19</td><td style="text-align:right">16</td><td style="text-align:right">33</td><td style="text-align:right">11</td><td style="text-align:right">38</td><td style="text-align:right">117</td><td style="text-align:right">5</td><td style="text-align:right">10</td><td style="text-align:right">3</td><td style="text-align:right">35</td></tr>
+<tr><td style="text-align:left">Bubble</td><td style="text-align:right">82</td><td style="text-align:right">18</td><td style="text-align:right">13</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td style="text-align:right">113</td><td style="text-align:right">3</td><td style="text-align:right">3</td><td style="text-align:right">4</td><td style="text-align:right">34</td></tr>
+<tr><td style="text-align:left">Wet Package</td><td style="text-align:right">10</td><td style="text-align:right">2</td><td style="text-align:right">52</td><td style="text-align:right">0</td><td style="text-align:right">2</td><td style="text-align:right">66</td><td style="text-align:right">4</td><td style="text-align:right">6</td><td style="text-align:right">1</td><td style="text-align:right">21</td></tr>
+<tr><td style="text-align:left">Bubble Irregular</td><td style="text-align:right">13</td><td style="text-align:right">1</td><td style="text-align:right">7</td><td style="text-align:right">21</td><td style="text-align:right">2</td><td style="text-align:right">44</td><td style="text-align:right">4</td><td style="text-align:right">6</td><td style="text-align:right">1</td><td style="text-align:right">13</td></tr>
+<tr><td style="text-align:left">Dirty Strobe</td><td style="text-align:right">0</td><td style="text-align:right">12</td><td style="text-align:right">31</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td style="text-align:right">43</td><td style="text-align:right">2</td><td style="text-align:right">1</td><td style="text-align:right">4</td><td style="text-align:right">13</td></tr>
+<tr><td style="text-align:left">Bubble Cluster</td><td style="text-align:right">18</td><td style="text-align:right">2</td><td style="text-align:right">4</td><td style="text-align:right">10</td><td style="text-align:right">2</td><td style="text-align:right">36</td><td style="text-align:right">5</td><td style="text-align:right">10</td><td style="text-align:right">1</td><td style="text-align:right">11</td></tr>
+<tr><td style="text-align:left">Dirty Camera</td><td style="text-align:right">25</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td style="text-align:right">25</td><td style="text-align:right">1</td><td style="text-align:right">0</td><td style="text-align:right">8</td><td style="text-align:right">8</td></tr>
+<tr><td style="text-align:left">Bubble On 123</td><td style="text-align:right">1</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td style="text-align:right">13</td><td style="text-align:right">14</td><td style="text-align:right">1</td><td style="text-align:right">0</td><td style="text-align:right">4</td><td style="text-align:right">4</td></tr>
+<tr><td style="text-align:left">Bubble On Edge</td><td style="text-align:right">3</td><td style="text-align:right">3</td><td style="text-align:right">1</td><td style="text-align:right">1</td><td style="text-align:right">6</td><td style="text-align:right">14</td><td style="text-align:right">3</td><td style="text-align:right">3</td><td style="text-align:right">1</td><td style="text-align:right">4</td></tr>
+<tr><td style="text-align:left">HEMA Fragment</td><td style="text-align:right">5</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td style="text-align:right">3</td><td style="text-align:right">8</td><td style="text-align:right">2</td><td style="text-align:right">1</td><td style="text-align:right">1</td><td style="text-align:right">3</td></tr>
+<tr><td style="text-align:left">Bubble Scatter</td><td style="text-align:right">1</td><td style="text-align:right">0</td><td style="text-align:right">1</td><td style="text-align:right">3</td><td style="text-align:right">2</td><td style="text-align:right">7</td><td style="text-align:right">2</td><td style="text-align:right">1</td><td style="text-align:right">1</td><td style="text-align:right">2</td></tr>
+<tr><td style="text-align:left"><b>Total</b></td><td style="text-align:right"><b>2,853</b></td><td style="text-align:right"><b>951</b></td><td style="text-align:right"><b>1,220</b></td><td style="text-align:right"><b>1,365</b></td><td style="text-align:right"><b>2,012</b></td><td style="text-align:right"><b>8,401</b></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"><b>2,525</b></td></tr>
+</tbody></table></div>
+<p class="note">Four columns need a word of explanation. <b>Lines scorable</b> is how many lines hold enough pictures of that class to put at least one of them in a test set; a class scorable on one line gives no comparison at all. <b>Comparisons</b> is the number of line pairs that can be compared for that class, which is the scorable count taken two at a time. <b>Thinnest line</b> is the test count on the line with the fewest, and it bounds every comparison for that class, because a pair is only as strong as its weaker side. <b>Test images</b> is the total across all lines.</p>
+<p class="note">The pool reads well. 13 classes are scorable on all five lines, which gives ten line-to-line comparisons each. 2 classes are scorable on one line only and cannot be compared at all: Bubble On 123, Dirty Camera. 3 classes are scorable on two lines, which gives one comparison each: Bubble Scatter, Dirty Strobe, HEMA Fragment. Across the whole table, 35 class-line cells hold fewer than five test images, and those are the cells where a result will be inconclusive rather than informative.</p>
+<h4>What each line would train and test on, at 70:30</h4>
+<div class="twrap"><table><thead><tr><th style="text-align:left">Line</th><th style="text-align:right">Pictures</th><th style="text-align:right">Classes present</th><th style="text-align:right">Classes scorable</th><th style="text-align:right">Test images</th><th style="text-align:right">Train images</th><th style="text-align:right">Thin cells</th></tr></thead><tbody>
+<tr><td style="text-align:left">L24</td><td style="text-align:right">2,853</td><td style="text-align:right">21</td><td style="text-align:right">19</td><td style="text-align:right">858</td><td style="text-align:right">1,995</td><td style="text-align:right">4</td></tr>
+<tr><td style="text-align:left">L25</td><td style="text-align:right">951</td><td style="text-align:right">18</td><td style="text-align:right">17</td><td style="text-align:right">287</td><td style="text-align:right">664</td><td style="text-align:right">7</td></tr>
+<tr><td style="text-align:left">L26</td><td style="text-align:right">1,220</td><td style="text-align:right">19</td><td style="text-align:right">17</td><td style="text-align:right">365</td><td style="text-align:right">855</td><td style="text-align:right">8</td></tr>
+<tr><td style="text-align:left">L27</td><td style="text-align:right">1,365</td><td style="text-align:right">16</td><td style="text-align:right">15</td><td style="text-align:right">409</td><td style="text-align:right">956</td><td style="text-align:right">7</td></tr>
+<tr><td style="text-align:left">L31</td><td style="text-align:right">2,012</td><td style="text-align:right">19</td><td style="text-align:right">19</td><td style="text-align:right">606</td><td style="text-align:right">1,406</td><td style="text-align:right">9</td></tr>
+<tr><td style="text-align:left"><b>All lines</b></td><td style="text-align:right"><b>8,401</b></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"><b>2,525</b></td><td style="text-align:right"><b>5,876</b></td><td style="text-align:right"><b>35</b></td></tr>
+</tbody></table></div>
+<p class="note">Every line trains on between 951 and 2,853 pictures and is scored on between 287 and 858 test images, against 34 to 239 in the older library alone. Pooling the folders is what makes this workable: the new folders carry the same classes as the library, so they add pictures to a class rather than adding classes.</p>
+<h4>How the classes are distributed on each line</h4>
+<p class="note">Each line takes two rows: the first counts its classes by how many pictures they hold, the second by how many test images they produce. The band columns count classes; the last column is the line total.</p>
+<div class="twrap"><table><thead><tr><th style="text-align:left">Line and measure</th><th style="text-align:right">1</th><th style="text-align:right">2-4</th><th style="text-align:right">5-9</th><th style="text-align:right">10-24</th><th style="text-align:right">25-99</th><th style="text-align:right">100+</th><th style="text-align:right">Total</th></tr></thead><tbody>
+<tr><td style="text-align:left">L24, class pictures</td><td style="text-align:right">2</td><td style="text-align:right">1</td><td style="text-align:right">1</td><td style="text-align:right">4</td><td style="text-align:right">6</td><td style="text-align:right">7</td><td style="text-align:right">2,853</td></tr>
+<tr><td style="text-align:left">L24, test images</td><td style="text-align:right">1</td><td style="text-align:right">3</td><td style="text-align:right">3</td><td style="text-align:right">2</td><td style="text-align:right">8</td><td style="text-align:right">2</td><td style="text-align:right">858</td></tr>
+<tr><td style="text-align:left">L25, class pictures</td><td style="text-align:right">1</td><td style="text-align:right">3</td><td style="text-align:right">3</td><td style="text-align:right">4</td><td style="text-align:right">4</td><td style="text-align:right">3</td><td style="text-align:right">951</td></tr>
+<tr><td style="text-align:left">L25, test images</td><td style="text-align:right">3</td><td style="text-align:right">4</td><td style="text-align:right">3</td><td style="text-align:right">3</td><td style="text-align:right">4</td><td style="text-align:right">0</td><td style="text-align:right">287</td></tr>
+<tr><td style="text-align:left">L26, class pictures</td><td style="text-align:right">2</td><td style="text-align:right">3</td><td style="text-align:right">3</td><td style="text-align:right">4</td><td style="text-align:right">4</td><td style="text-align:right">3</td><td style="text-align:right">1,220</td></tr>
+<tr><td style="text-align:left">L26, test images</td><td style="text-align:right">3</td><td style="text-align:right">5</td><td style="text-align:right">4</td><td style="text-align:right">2</td><td style="text-align:right">2</td><td style="text-align:right">1</td><td style="text-align:right">365</td></tr>
+<tr><td style="text-align:left">L27, class pictures</td><td style="text-align:right">1</td><td style="text-align:right">2</td><td style="text-align:right">0</td><td style="text-align:right">7</td><td style="text-align:right">4</td><td style="text-align:right">2</td><td style="text-align:right">1,365</td></tr>
+<tr><td style="text-align:left">L27, test images</td><td style="text-align:right">2</td><td style="text-align:right">5</td><td style="text-align:right">3</td><td style="text-align:right">2</td><td style="text-align:right">1</td><td style="text-align:right">2</td><td style="text-align:right">409</td></tr>
+<tr><td style="text-align:left">L31, class pictures</td><td style="text-align:right">0</td><td style="text-align:right">6</td><td style="text-align:right">1</td><td style="text-align:right">4</td><td style="text-align:right">5</td><td style="text-align:right">3</td><td style="text-align:right">2,012</td></tr>
+<tr><td style="text-align:left">L31, test images</td><td style="text-align:right">6</td><td style="text-align:right">3</td><td style="text-align:right">2</td><td style="text-align:right">4</td><td style="text-align:right">3</td><td style="text-align:right">1</td><td style="text-align:right">606</td></tr>
+</tbody></table></div>
+<p class="note">The second row of each pair is the one that matters, because it is what the model is scored on. On L27, 7 classes produce fewer than five test images, and on L31, 9 do, so those are the lines and classes where a comparison between the five models will rest on a handful of pictures.</p>
+</section>
+<section id="dupes"><h3>4 · Repeats and label conflicts</h3>
+<p class="desc">Repeated pictures and conflicting labels decide whether a split is trustworthy. Identity was checked by content fingerprint, not by file name.</p>
+<div class="stat-grid">
+<div class="stat-tile"><div class="label">Repeated copies</div><div class="value">1,465</div><div class="sub">files beyond the 10,614 unique images</div></div>
+<div class="stat-tile"><div class="label">Same image, two labels</div><div class="value bad">418</div><div class="sub">the picture is identical, the class differs</div></div>
+<div class="stat-tile"><div class="label">Images the library alone holds</div><div class="value">177</div><div class="sub">no match in the new drop, across 9 library class folders</div></div>
+<div class="stat-tile"><div class="label">"duplicates" folder</div><div class="value">143</div><div class="sub">every one already exists in a class folder</div></div>
+</div>
+<div class="twrap"><table><thead><tr><th style="text-align:left">Where the repeat sits</th><th style="text-align:right">Count</th><th style="text-align:left">Why it matters</th></tr></thead><tbody>
+<tr><td style="text-align:left">Same name in the library and the new drop</td><td style="text-align:right">1,247</td><td style="text-align:left">identical content; the same image counted twice if the folders are pooled</td></tr>
+<tr><td style="text-align:left">Same name in both new folders</td><td style="text-align:right">27</td><td style="text-align:left">identical content across the two new folders</td></tr>
+<tr><td style="text-align:left">Same name in two classes of one folder</td><td style="text-align:right">4</td><td style="text-align:left">one picture, two class labels: a label conflict on identical content</td></tr>
+<tr><td style="text-align:left">Same picture under a different name</td><td style="text-align:right">187</td><td style="text-align:left">a name-based comparison undercounts the overlap</td></tr>
+</tbody></table></div>
+<h4>The conflicting labels that matter</h4>
+<div class="twrap"><table><thead><tr><th style="text-align:left">Label pair on the same picture</th><th style="text-align:right">Images</th></tr></thead><tbody>
+<tr><td style="text-align:left">Low Dose against Low Dose Obstructing Region of Interest</td><td style="text-align:right">86</td></tr>
+<tr><td style="text-align:left">Cavity Off Center against duplicates</td><td style="text-align:right">70</td></tr>
+<tr><td style="text-align:left">Multiple Lenses against duplicates</td><td style="text-align:right">54</td></tr>
+<tr><td style="text-align:left">Bubble against Clear</td><td style="text-align:right">37</td></tr>
+<tr><td style="text-align:left">Extraneous Polymer against Fiber</td><td style="text-align:right">33</td></tr>
+<tr><td style="text-align:left">Clear against Wet Package</td><td style="text-align:right">32</td></tr>
+</tbody></table></div>
+<p class="note">Three readings. The Low Dose pair is only a naming difference, so those 86 images confirm it is one class. The <b>Clear</b> rows are a real contradiction: 128 images are marked as a defect in the older library and as Clear in the new folder, so Clear may mean "readable image" rather than "no defect". And Extraneous Polymer against Fiber is a defect against a defect on 33 images, which no naming rule can settle.</p>
+<p class="note">If the older library is dropped, 177 unique images are lost: they sit in 9 library class folders, led by Bubble (72), Wet Package (28), Bubble Irregular (26). Separately, 7 classes exist only in the library and hold 313 images between them. Of those 313 images, 175 are unique to the library and the other 138 are the same pictures that the new drop files under a different class, most often Clear (118), HEMA (8). So those 7 classes bring 175 new images, not 313.</p>
+<p class="note">The overlap was checked twice, by file name and by content, and the two agree in one direction only. Of the older library's 1,465 files, 1,249 are found in the new drop by name and 1,287 by content, so a name comparison misses 38 files that are the same picture under a different name. In the other direction the names are trustworthy: no file name appears in two folders over different content, so a name match is never a false match. Taken across all three folders, 187 pictures are filed under more than one name, 122 of them across folders and 65 of them inside a single folder.</p>
+<p class="note">The three pool rules in section 3 resolve these conflicts, and the arithmetic closes. Of the 418 pictures that carry two labels, 86 are the Low Dose pair and are therefore one class, 271 involve "Clear" or "duplicates", which are not classes, and 10 pair HEMA with a defect class, which leaves one class standing. That leaves 51 pictures that keep two defect classes, and the older library decides those. This is how the pooled set in section 3 counts every picture once and still gives every picture a single label.</p>
+</section>
+<section id="split"><h3>5 · The five models and their splits</h3>
+<p class="desc">Each line gets its own model and its own split, so a model is scored only on pictures from its own line. The split is made inside each class inside each line, and a cell is <b>scorable</b> when a plain proportional share leaves it at least one test image; everything else trains. Nothing is discarded either way, because every picture that is not a test image is used for training, including the cells that hold a single picture and can never be scored.</p>
+<div class="twrap"><table><thead><tr><th style="text-align:left">Line</th><th style="text-align:right">Pictures</th><th style="text-align:right">Scorable 70:30</th><th style="text-align:right">Scorable 80:20</th><th style="text-align:right">Train (70%)</th><th style="text-align:right">Test (30%)</th><th style="text-align:right">Train (80%)</th><th style="text-align:right">Test (20%)</th></tr></thead><tbody>
+<tr><td style="text-align:left">L24</td><td style="text-align:right">2,853</td><td style="text-align:right">19</td><td style="text-align:right"><span class="bad">19</span></td><td style="text-align:right">1,995</td><td style="text-align:right">858</td><td style="text-align:right">2,282</td><td style="text-align:right">571</td></tr>
+<tr><td style="text-align:left">L25</td><td style="text-align:right">951</td><td style="text-align:right">17</td><td style="text-align:right"><span class="bad">15</span></td><td style="text-align:right">664</td><td style="text-align:right">287</td><td style="text-align:right">762</td><td style="text-align:right">189</td></tr>
+<tr><td style="text-align:left">L26</td><td style="text-align:right">1,220</td><td style="text-align:right">17</td><td style="text-align:right"><span class="bad">16</span></td><td style="text-align:right">855</td><td style="text-align:right">365</td><td style="text-align:right">976</td><td style="text-align:right">244</td></tr>
+<tr><td style="text-align:left">L27</td><td style="text-align:right">1,365</td><td style="text-align:right">15</td><td style="text-align:right"><span class="bad">14</span></td><td style="text-align:right">956</td><td style="text-align:right">409</td><td style="text-align:right">1,093</td><td style="text-align:right">272</td></tr>
+<tr><td style="text-align:left">L31</td><td style="text-align:right">2,012</td><td style="text-align:right">19</td><td style="text-align:right"><span class="bad">14</span></td><td style="text-align:right">1,406</td><td style="text-align:right">606</td><td style="text-align:right">1,612</td><td style="text-align:right">400</td></tr>
+<tr><td style="text-align:left"><b>All lines</b></td><td style="text-align:right"><b>8,401</b></td><td style="text-align:right"><b>87</b></td><td style="text-align:right"><b>78</b></td><td style="text-align:right"><b>5,876</b></td><td style="text-align:right"><b>2,525</b></td><td style="text-align:right"><b>6,725</b></td><td style="text-align:right"><b>1,676</b></td></tr>
+</tbody></table></div>
+<p class="note">The two ratios differ only in how much data goes to the test set and how many cells survive as scorable. 70:30 leaves a test image for 87 class-line cells against 78 at 80:20, and it scores the models on 2,525 test images against 1,676. 80:20 buys 849 more training pictures out of 8,401, which will not change what the models learn, and it costs 9 cells that can no longer be measured at all. <b>Split each line at 70:30.</b></p>
+<h4>What the comparison between the five models requires</h4>
+<p class="note">The five training sets would be unequal: L24 would train on 1,995 pictures and L25 on 664, three times fewer, so a gap between those two models could come from the training volume rather than from the line. Equalising the volume is practical: train every line on 664 pictures, the count of the smallest line, drawn in proportion to that line's own class mix. Equalising per class instead, the same number of pictures for every class on every line, is not practical: on its scarcest line a class can hold a single picture (HEMA Obstruction 1, Bubble Cluster 1, Bubble Irregular 1, Bubble Scatter 1), which would cut every line to about 181 training pictures against the 1,995 to 664 available today.</p>
+<p class="note">The five models carry different class lists, so their overall accuracy is not directly comparable: a model carrying 16 classes has a different chance level from one carrying 21. The comparable quantity is the per-class recall on the classes the lines share, which is what the comparison column in section 3 counts.</p>
+<p class="note">The thin cells bound what can be concluded. 35 class-line cells hold fewer than five test images, and the weakest lines are L27 and L31, where 7 and 9 classes respectively produce fewer than five test images. A stated tolerance, or a confidence interval per recall, is needed before any difference there can be called real or not.</p>
+<h4>A direct test of the premise</h4>
+<p class="note">The case for one model rests on the capture method being identical, so that a picture carries no trace of its line. All 12,079 files are the same format, 2,048 by 2,448 greyscale BMP of 5,014,582 bytes, so there is no resolution difference to find. Whether anything else in the pixels marks the line is testable in one short run: train a classifier to predict the line from the pooled pictures. If it cannot beat chance, the premise holds and the single-model conclusion rests on solid ground.</p>
+</section>
+<section id="questions"><h3>6 · Questions to settle</h3>
+<p class="desc">Training is on hold until these are answered. The first group we can decide. The second group needs a client or lead answer.</p>
+<h4>For us to decide</h4><ul class="findings">
+<li><b>Confirm the three rules that build the pool.</b> They are: "Low Dose" and "Low Dose Obstructing Region of Interest" are one class; "Clear", "HEMA" and "duplicates" are not classes, so 2,213 pictures fall outside the 22-class set; and the 51 pictures carrying two defect classes take the class the older library assigns. Every number in this page depends on those three.</li>
+<li><b>Volume-matched training sets, or the full line data?</b> L24 would train on 1,995 pictures and L25 on 664. Matching the volume, by training every line on 664 pictures drawn in proportion to its own class mix, makes a gap attributable to the line rather than to the volume. Matching per class instead would cut every line to about 181 pictures, because on its scarcest line a class can hold a single picture.</li>
+<li><b>What counts as similar?</b> An explicit tolerance for the recall comparison, for example within five points, or non-overlapping confidence intervals. Without a number, the result cannot be called the same or different.</li>
+<li><b>Keep the comparable cut at three or more lines?</b> That is 17 of the 22 classes, giving between three and ten line pairs each. Another 3 classes are scorable on exactly two lines, so widening the cut to two lines would add 3 classes, and each of them yields a single line pair.</li>
+<li><b>Do we run the line-predictability check?</b> One short run: if a classifier cannot tell which line a picture came from, the premise behind a single model is confirmed at the pixel level rather than inferred from five results.</li>
+</ul>
+<h4>For the client or the lead</h4><ul class="findings">
+<li><b>Do the 7 classes that only the older library carries still count?</b> They are Bubble, Bubble Cluster, Bubble Irregular, Bubble On 123, Bubble On Edge, HEMA Fragment, Wet Package, holding 313 pictures of which 175 exist nowhere else. Pooling the folders does not answer this, because no other folder labels them.</li>
+<li><b>If "Clear" is later ruled to be a class, it returns as a 23rd class.</b> 2,213 pictures carry Clear as their only label, and they are excluded from the 22-class pool today. If they come back, every per-line number in this page changes.</li>
+<li><b>Is a test set of 287 to 858 images per line enough, given the thin cells?</b> The pool gives each line 287 to 858 test images, but 35 class-line cells still hold fewer than five, and on L27 and L31 that is 7 and 9 classes. Those results will carry wide error bars.</li>
+<li><b>Four classes cannot support the line-by-line comparison.</b> Bubble On 123, Dirty Camera are scorable on one line only, and Bubble Scatter, Dirty Strobe, HEMA Fragment on two lines, so their results stand alone. Confirm that is acceptable.</li>
+</ul></section>
+<section id="next"><h3>7 · Recommendations</h3>
+<p class="desc">In order. Each one states its evidence in the same sentence.</p>
+<ol class="findings">
+<li><b>Run the line-predictability check before the five models.</b> It costs one short run, and if a classifier cannot tell which line a picture came from, the premise behind one model is confirmed at the pixel level rather than inferred from five results.</li>
+<li><b>Use the pooled class-centric dataset, not a single folder.</b> Pooling the three folders by defect class gives 8,401 pictures across 22 classes, which raises the classes scorable on all five lines from 4 to 13 and the test images per line from 34 to 239 up to 287 to 858.</li>
+<li><b>Record the three pool rules and keep them fixed.</b> Every number in this page depends on the rename of Low Dose, on Clear, HEMA and duplicates not being classes (2,213 pictures excluded), and on the older library deciding the class for the 51 pictures that carry two.</li>
+<li><b>Split each line at 70:30.</b> It leaves a test image for 87 class-line cells against 78 at 80:20, and it scores the models on 2,525 test images against 1,676. The 849 pictures that 80:20 buys back are not worth the 9 cells it costs.</li>
+<li><b>Match the training volume across the five models, not the per-class counts.</b> L24 would train on 1,995 pictures and L25 on 664, so an unmatched comparison would confound the line with the training volume and could be attributed to neither. Train every line on 664 pictures drawn in proportion to its own class mix; matching per class would cut every line to about 181 pictures, because on its scarcest line a class can hold a single picture.</li>
+<li><b>Compare per-class recall on the shared classes, not overall accuracy.</b> The five models carry different class lists, so a model with 16 classes has a different chance level from one with 21. The comparison set is the 17 classes that three or more lines can score.</li>
+<li><b>State the tolerance before the run.</b> 35 class-line cells hold fewer than five test images, so only a declared tolerance or a confidence interval can turn the result into a yes or no.</li>
+<li><b>Report the classes that cannot be compared separately.</b> Bubble On 123, Dirty Camera are scorable on one line and Bubble Scatter, Dirty Strobe, HEMA Fragment on two, so their numbers stand alone and must not be read as a cross-line result.</li>
+</ol></section>
+</div>
+</body>
+</html>

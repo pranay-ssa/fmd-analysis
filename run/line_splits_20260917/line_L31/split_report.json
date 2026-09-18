@@ -1,0 +1,108 @@
+{
+  "line": "L31",
+  "rule": "exact-count stratified: seed 42, test = round-half-up(pictures x 0.30), train = rest",
+  "seed": 42,
+  "classes": {
+    "Bubble Cluster": {
+      "pictures": 2,
+      "train": 1,
+      "test": 1
+    },
+    "Bubble Irregular": {
+      "pictures": 2,
+      "train": 1,
+      "test": 1
+    },
+    "Bubble On 123": {
+      "pictures": 13,
+      "train": 9,
+      "test": 4
+    },
+    "Bubble On Edge": {
+      "pictures": 6,
+      "train": 4,
+      "test": 2
+    },
+    "Bubble Scatter": {
+      "pictures": 2,
+      "train": 1,
+      "test": 1
+    },
+    "Cavity Off Center": {
+      "pictures": 13,
+      "train": 9,
+      "test": 4
+    },
+    "Extraneous Polymer": {
+      "pictures": 16,
+      "train": 11,
+      "test": 5
+    },
+    "Fiber": {
+      "pictures": 120,
+      "train": 84,
+      "test": 36
+    },
+    "Foreign Matter": {
+      "pictures": 196,
+      "train": 137,
+      "test": 59
+    },
+    "HEMA Fragment": {
+      "pictures": 10,
+      "train": 7,
+      "test": 3
+    },
+    "HEMA Obstruction": {
+      "pictures": 2,
+      "train": 1,
+      "test": 1
+    },
+    "Lens Off Center": {
+      "pictures": 20,
+      "train": 14,
+      "test": 6
+    },
+    "Low Dose Obstructing Region of Interest": {
+      "pictures": 1307,
+      "train": 915,
+      "test": 392
+    },
+    "Missing Lens": {
+      "pictures": 51,
+      "train": 36,
+      "test": 15
+    },
+    "Missing Primary Package": {
+      "pictures": 72,
+      "train": 50,
+      "test": 22
+    },
+    "Multiple Lenses": {
+      "pictures": 97,
+      "train": 68,
+      "test": 29
+    },
+    "Package Misalignment": {
+      "pictures": 50,
+      "train": 35,
+      "test": 15
+    },
+    "View Obstructed": {
+      "pictures": 38,
+      "train": 27,
+      "test": 11
+    },
+    "Wet Package": {
+      "pictures": 2,
+      "train": 1,
+      "test": 1
+    }
+  },
+  "totals": {
+    "classes": 19,
+    "pictures": 2019,
+    "train": 1411,
+    "test": 608
+  }
+}

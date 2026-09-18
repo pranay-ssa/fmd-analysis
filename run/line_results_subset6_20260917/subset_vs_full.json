@@ -1,0 +1,242 @@
+{
+  "classes": [
+    "Missing Primary Package",
+    "Multiple Lenses",
+    "Foreign Matter",
+    "Lens Off Center",
+    "Missing Lens",
+    "HEMA Obstruction"
+  ],
+  "lines": [
+    {
+      "line": "L24",
+      "test_pictures_of_the_six": 690,
+      "full_accuracy": 0.9333,
+      "six_accuracy": 0.9783,
+      "accuracy_gap": 0.045,
+      "full_macro_recall": 0.9067,
+      "six_macro_recall": 0.9609,
+      "macro_recall_gap": 0.0542,
+      "full_macro_f1": 0.8915,
+      "six_macro_f1": 0.9622,
+      "macro_f1_gap": 0.0707,
+      "per_class": {
+        "Missing Primary Package": {
+          "recall_full": 1.0,
+          "recall_six": 1.0,
+          "support": 344
+        },
+        "Multiple Lenses": {
+          "recall_full": 0.8317,
+          "recall_six": 0.9802,
+          "support": 101
+        },
+        "Foreign Matter": {
+          "recall_full": 0.7558,
+          "recall_six": 0.9651,
+          "support": 86
+        },
+        "Lens Off Center": {
+          "recall_full": 0.9153,
+          "recall_six": 0.8644,
+          "support": 59
+        },
+        "Missing Lens": {
+          "recall_full": 0.9818,
+          "recall_six": 1.0,
+          "support": 55
+        },
+        "HEMA Obstruction": {
+          "recall_full": 0.9556,
+          "recall_six": 0.9556,
+          "support": 45
+        }
+      }
+    },
+    {
+      "line": "L25",
+      "test_pictures_of_the_six": 174,
+      "full_accuracy": 0.931,
+      "six_accuracy": 0.9598,
+      "accuracy_gap": 0.0288,
+      "full_macro_recall": 0.6193,
+      "six_macro_recall": 0.7106,
+      "macro_recall_gap": 0.0913,
+      "full_macro_f1": 0.6777,
+      "six_macro_f1": 0.7194,
+      "macro_f1_gap": 0.0417,
+      "per_class": {
+        "Missing Primary Package": {
+          "recall_full": 1.0,
+          "recall_six": 1.0,
+          "support": 57
+        },
+        "Multiple Lenses": {
+          "recall_full": 0.9759,
+          "recall_six": 0.9639,
+          "support": 83
+        },
+        "Foreign Matter": {
+          "recall_full": 0.84,
+          "recall_six": 1.0,
+          "support": 25
+        },
+        "Lens Off Center": {
+          "recall_full": 0.0,
+          "recall_six": 0.0,
+          "support": 2
+        },
+        "Missing Lens": {
+          "recall_full": 0.5,
+          "recall_six": 0.5,
+          "support": 2
+        },
+        "HEMA Obstruction": {
+          "recall_full": 0.4,
+          "recall_six": 0.8,
+          "support": 5
+        }
+      }
+    },
+    {
+      "line": "L26",
+      "test_pictures_of_the_six": 257,
+      "full_accuracy": 0.9455,
+      "six_accuracy": 0.9455,
+      "accuracy_gap": -0.0,
+      "full_macro_recall": 0.6362,
+      "six_macro_recall": 0.5665,
+      "macro_recall_gap": -0.0697,
+      "full_macro_f1": 0.5899,
+      "six_macro_f1": 0.5006,
+      "macro_f1_gap": -0.0893,
+      "per_class": {
+        "Missing Primary Package": {
+          "recall_full": 1.0,
+          "recall_six": 1.0,
+          "support": 2
+        },
+        "Multiple Lenses": {
+          "recall_full": 0.9802,
+          "recall_six": 0.9604,
+          "support": 202
+        },
+        "Foreign Matter": {
+          "recall_full": 0.8367,
+          "recall_six": 0.9388,
+          "support": 49
+        },
+        "Lens Off Center": {
+          "recall_full": 1.0,
+          "recall_six": 0.5,
+          "support": 2
+        },
+        "Missing Lens": {
+          "recall_full": 0.0,
+          "recall_six": 0.0,
+          "support": 1
+        },
+        "HEMA Obstruction": {
+          "recall_full": 0.0,
+          "recall_six": 0.0,
+          "support": 1
+        }
+      }
+    },
+    {
+      "line": "L27",
+      "test_pictures_of_the_six": 218,
+      "full_accuracy": 0.8349,
+      "six_accuracy": 0.9633,
+      "accuracy_gap": 0.1284,
+      "full_macro_recall": 0.6592,
+      "six_macro_recall": 0.8064,
+      "macro_recall_gap": 0.1472,
+      "full_macro_f1": 0.6612,
+      "six_macro_f1": 0.7821,
+      "macro_f1_gap": 0.1209,
+      "per_class": {
+        "Missing Primary Package": {
+          "recall_full": 1.0,
+          "recall_six": 1.0,
+          "support": 4
+        },
+        "Multiple Lenses": {
+          "recall_full": 1.0,
+          "recall_six": 1.0,
+          "support": 16
+        },
+        "Foreign Matter": {
+          "recall_full": 0.8303,
+          "recall_six": 0.9636,
+          "support": 165
+        },
+        "Lens Off Center": {
+          "recall_full": 0.125,
+          "recall_six": 0.875,
+          "support": 8
+        },
+        "Missing Lens": {
+          "recall_full": 1.0,
+          "recall_six": 1.0,
+          "support": 24
+        },
+        "HEMA Obstruction": {
+          "recall_full": 0.0,
+          "recall_six": 0.0,
+          "support": 1
+        }
+      }
+    },
+    {
+      "line": "L31",
+      "test_pictures_of_the_six": 132,
+      "full_accuracy": 0.7424,
+      "six_accuracy": 0.9167,
+      "accuracy_gap": 0.1743,
+      "full_macro_recall": 0.6345,
+      "six_macro_recall": 0.7538,
+      "macro_recall_gap": 0.1193,
+      "full_macro_f1": 0.6796,
+      "six_macro_f1": 0.7307,
+      "macro_f1_gap": 0.0511,
+      "per_class": {
+        "Missing Primary Package": {
+          "recall_full": 1.0,
+          "recall_six": 1.0,
+          "support": 22
+        },
+        "Multiple Lenses": {
+          "recall_full": 0.931,
+          "recall_six": 0.6897,
+          "support": 29
+        },
+        "Foreign Matter": {
+          "recall_full": 0.5424,
+          "recall_six": 1.0,
+          "support": 59
+        },
+        "Lens Off Center": {
+          "recall_full": 0.3333,
+          "recall_six": 0.8333,
+          "support": 6
+        },
+        "Missing Lens": {
+          "recall_full": 1.0,
+          "recall_six": 1.0,
+          "support": 15
+        },
+        "HEMA Obstruction": {
+          "recall_full": 0.0,
+          "recall_six": 0.0,
+          "support": 1
+        }
+      }
+    }
+  ],
+  "pooled": {
+    "test_pictures": 1471,
+    "full_accuracy": 0.9034,
+    "six_accuracy": 0.9626
+  }
+}

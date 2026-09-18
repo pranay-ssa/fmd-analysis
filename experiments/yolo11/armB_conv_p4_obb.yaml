@@ -1,0 +1,43 @@
+# armB_conv_p4: depth-attribution ablation, ARM B (change LOCATION, keep TYPE).
+# Baseline yolo11n-obb + 2 PLAIN Conv [512, 3, 1] at the HIGHER-RES P4 stage (after row 6
+# C3k2, before the P5 stem Conv), instead of at the deepest P5 scale as depth_plus2_deep did.
+# Contrast: same plain-conv type as depth_plus2_deep, different (higher-resolution) location.
+# Small defects live at small scales, so a deep low-res addition may be invisible to them;
+# this tests whether LOCATION (not type) caused the null.
+# Row shift +2 from row 7 on: C2PSA 10 -> 12. Head retaps: P5 [-1,10]->[-1,12];
+# head P4 [-1,13]->[-1,15]; OBB [16,19,22]->[18,21,24]. P3/P4 backbone taps (4,6) unchanged.
+# nc overridden at runtime by dataset.yaml.
+nc: 80
+
+scales:
+  n: [0.50, 0.25, 1024]
+
+backbone:
+  - [-1, 1, Conv, [64, 3, 2]] # 0-P1/2
+  - [-1, 1, Conv, [128, 3, 2]] # 1-P2/4
+  - [-1, 2, C3k2, [256, False, 0.25]]
+  - [-1, 1, Conv, [256, 3, 2]] # 3-P3/8
+  - [-1, 2, C3k2, [512, False, 0.25]]
+  - [-1, 1, Conv, [512, 3, 2]] # 5-P4/16
+  - [-1, 2, C3k2, [512, True]]
+  - [-1, 1, Conv, [512, 3, 1]] # 7 NEW: P4 depth +1 (plain conv, higher res)
+  - [-1, 1, Conv, [512, 3, 1]] # 8 NEW: P4 depth +2
+  - [-1, 1, Conv, [1024, 3, 2]] # 9 (was 7) P5/32 stem (512 -> 1024)
+  - [-1, 2, C3k2, [1024, True]] # 10 (was 8)
+  - [-1, 1, SPPF, [1024, 5]] # 11 (was 9)
+  - [-1, 2, C2PSA, [1024]] # 12 (was 10)
+
+head:
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [[-1, 6], 1, Concat, [1]] # cat backbone P4 (row 6 unchanged)
+  - [-1, 2, C3k2, [512, False]] # 15
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [[-1, 4], 1, Concat, [1]] # cat backbone P3 (row 4 unchanged)
+  - [-1, 2, C3k2, [256, False]] # 18 (P3/8-small)
+  - [-1, 1, Conv, [256, 3, 2]]
+  - [[-1, 15], 1, Concat, [1]] # cat head P4 (was 13)
+  - [-1, 2, C3k2, [512, False]] # 21 (P4/16-medium)
+  - [-1, 1, Conv, [512, 3, 2]]
+  - [[-1, 12], 1, Concat, [1]] # cat head P5 (C2PSA now row 12)
+  - [-1, 2, C3k2, [1024, True]] # 24 (P5/32-large)
+  - [[18, 21, 24], 1, OBB, [nc, 1]] # OBB(P3, P4, P5)

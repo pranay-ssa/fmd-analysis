@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "YOLO11n Fixed LR",
+    "run_dir": "/home/pranayp/yolo_ooi/runs/crop_repro/yolo11n_crop_bbox_fixedlr",
+    "train_s": 304.3,
+    "epochs_run": 100,
+    "precision": 0.608,
+    "recall": 0.626,
+    "mAP50": 0.5907,
+    "mAP50-95": 0.3687,
+    "lr_mode": "fixed_1e-4"
+  },
+  {
+    "experiment": "YOLO26n Fixed LR",
+    "run_dir": "/home/pranayp/yolo_ooi/runs/crop_repro/yolo26n_crop_bbox_fixedlr",
+    "train_s": 382.0,
+    "epochs_run": 100,
+    "precision": 0.6293,
+    "recall": 0.5809,
+    "mAP50": 0.6016,
+    "mAP50-95": 0.3807,
+    "lr_mode": "fixed_1e-4"
+  }
+]

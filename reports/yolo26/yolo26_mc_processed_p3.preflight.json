@@ -1,0 +1,100 @@
+{
+  "fork": "experiments/yolo26/yolo26_mc_processed_p3.yaml",
+  "fork_md5": "01dbbb696d77a22cc3df3de0c16da8fa",
+  "stock": "yolo26n.yaml",
+  "stock_head": {
+    "type": "Detect",
+    "reg_max": 1,
+    "end2end": false,
+    "children": [
+      "cv2",
+      "cv3",
+      "dfl",
+      "one2one_cv2",
+      "one2one_cv3"
+    ],
+    "one2one": [
+      "one2one_cv2",
+      "one2one_cv3"
+    ],
+    "nc": 80,
+    "params": 2572280,
+    "n_layers": 24,
+    "layer_types": [
+      "Conv",
+      "Conv",
+      "C3k2",
+      "Conv",
+      "C3k2",
+      "Conv",
+      "C3k2",
+      "Conv",
+      "C3k2",
+      "SPPF",
+      "C2PSA",
+      "Upsample",
+      "Concat",
+      "C3k2",
+      "Upsample",
+      "Concat",
+      "C3k2",
+      "Conv",
+      "Concat",
+      "C3k2",
+      "Conv",
+      "Concat",
+      "C3k2",
+      "Detect"
+    ]
+  },
+  "fork_head": {
+    "type": "Detect",
+    "reg_max": 1,
+    "end2end": false,
+    "children": [
+      "cv2",
+      "cv3",
+      "dfl",
+      "one2one_cv2",
+      "one2one_cv3"
+    ],
+    "one2one": [
+      "one2one_cv2",
+      "one2one_cv3"
+    ],
+    "nc": 80,
+    "params": 2676344,
+    "n_layers": 26,
+    "layer_types": [
+      "Conv",
+      "Conv",
+      "C3k2",
+      "Conv",
+      "C3k2",
+      "Conv",
+      "C3k2",
+      "Conv",
+      "C3k2",
+      "SPPF",
+      "C2PSA",
+      "Upsample",
+      "Concat",
+      "C3k2",
+      "Upsample",
+      "Concat",
+      "C3k2",
+      "Conv",
+      "Conv",
+      "C3k2",
+      "Concat",
+      "C3k2",
+      "Conv",
+      "Concat",
+      "C3k2",
+      "Detect"
+    ]
+  },
+  "row_diff_count": 9,
+  "failures": [],
+  "verdict": "PASS"
+}

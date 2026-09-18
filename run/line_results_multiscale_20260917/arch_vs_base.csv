@@ -1,0 +1,6 @@
+line,test_pictures,accuracy_resnet50,accuracy_multiscale,accuracy_gap,macro_recall_resnet50,macro_recall_multiscale,macro_recall_gap,macro_f1_resnet50,macro_f1_multiscale,macro_f1_gap,train_minutes_resnet50,train_minutes_multiscale,classes_scored
+L24,858,0.873,0.8939,0.0209,0.577,0.6511,0.0741,0.5664,0.652,0.0856,18.5,20.6,19
+L25,287,0.9129,0.899,-0.0139,0.6009,0.5675,-0.0335,0.5908,0.5717,-0.0191,5.9,6.9,17
+L26,365,0.8438,0.9041,0.0603,0.6379,0.5479,-0.09,0.601,0.5705,-0.0305,7.6,8.9,17
+L27,409,0.846,0.868,0.022,0.6603,0.6071,-0.0533,0.6287,0.6037,-0.025,8.3,10.0,15
+L31,608,0.9095,0.9062,-0.0033,0.487,0.4562,-0.0308,0.4834,0.4562,-0.0272,12.2,14.6,19

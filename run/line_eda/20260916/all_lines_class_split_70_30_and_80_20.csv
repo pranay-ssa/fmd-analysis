@@ -1,0 +1,99 @@
+line,class,pictures,train_70,test_30,train_80,test_20,scorable_70,scorable_80,note
+L24,Missing Primary Package,1147,803,344,918,229,yes,yes,
+L24,Multiple Lenses,335,234,101,268,67,yes,yes,
+L24,Foreign Matter,287,201,86,230,57,yes,yes,
+L24,Lens Off Center,195,136,59,156,39,yes,yes,
+L24,Missing Lens,183,128,55,146,37,yes,yes,
+L24,HEMA Obstruction,151,106,45,121,30,yes,yes,
+L24,Low Dose Obstructing Region of Interest,108,76,32,86,22,yes,yes,
+L24,Cavity Off Center,93,65,28,74,19,yes,yes,
+L24,Fiber,86,60,26,69,17,yes,yes,
+L24,Bubble,82,57,25,66,16,yes,yes,
+L24,Extraneous Polymer,59,41,18,47,12,yes,yes,
+L24,Package Misalignment,32,22,10,26,6,yes,yes,
+L24,Dirty Camera,25,17,8,20,5,yes,yes,
+L24,View Obstructed,19,13,6,15,4,yes,yes,
+L24,Bubble Cluster,18,13,5,14,4,yes,yes,
+L24,Bubble Irregular,13,9,4,10,3,yes,yes,thin test set at 70:30
+L24,Wet Package,10,7,3,8,2,yes,yes,thin test set at 70:30
+L24,HEMA Fragment,5,3,2,4,1,yes,yes,thin test set at 70:30
+L24,Bubble On Edge,3,2,1,2,1,yes,yes,thin test set at 70:30
+L24,Bubble On 123,1,1,0,1,0,no,no,no test picture at 80:20
+L24,Bubble Scatter,1,1,0,1,0,no,no,no test picture at 80:20
+L24,TOTAL,2853,1995,858,2282,571,19,19,21 classes
+L25,Multiple Lenses,276,193,83,221,55,yes,yes,
+L25,Missing Primary Package,189,132,57,151,38,yes,yes,
+L25,Package Misalignment,176,123,53,141,35,yes,yes,
+L25,Foreign Matter,84,59,25,67,17,yes,yes,
+L25,Low Dose Obstructing Region of Interest,57,40,17,46,11,yes,yes,
+L25,Cavity Off Center,40,28,12,32,8,yes,yes,
+L25,Fiber,37,26,11,30,7,yes,yes,
+L25,Bubble,18,13,5,14,4,yes,yes,
+L25,HEMA Obstruction,18,13,5,14,4,yes,yes,
+L25,View Obstructed,16,11,5,13,3,yes,yes,
+L25,Dirty Strobe,12,8,4,10,2,yes,yes,thin test set at 70:30
+L25,Extraneous Polymer,9,6,3,7,2,yes,yes,thin test set at 70:30
+L25,Missing Lens,6,4,2,5,1,yes,yes,thin test set at 70:30
+L25,Lens Off Center,5,3,2,4,1,yes,yes,thin test set at 70:30
+L25,Bubble On Edge,3,2,1,2,1,yes,yes,thin test set at 70:30
+L25,Bubble Cluster,2,1,1,2,0,yes,no,no test picture at 80:20; thin test set at 70:30
+L25,Wet Package,2,1,1,2,0,yes,no,no test picture at 80:20; thin test set at 70:30
+L25,Bubble Irregular,1,1,0,1,0,no,no,no test picture at 80:20
+L25,TOTAL,951,664,287,762,189,17,15,18 classes
+L26,Multiple Lenses,674,472,202,539,135,yes,yes,
+L26,Foreign Matter,162,113,49,130,32,yes,yes,
+L26,Extraneous Polymer,134,94,40,107,27,yes,yes,
+L26,Wet Package,52,36,16,42,10,yes,yes,
+L26,View Obstructed,33,23,10,26,7,yes,yes,
+L26,Dirty Strobe,31,22,9,25,6,yes,yes,
+L26,Fiber,26,18,8,21,5,yes,yes,
+L26,Cavity Off Center,24,17,7,19,5,yes,yes,
+L26,Package Misalignment,24,17,7,19,5,yes,yes,
+L26,Low Dose Obstructing Region of Interest,14,10,4,11,3,yes,yes,thin test set at 70:30
+L26,Bubble,13,9,4,10,3,yes,yes,thin test set at 70:30
+L26,Lens Off Center,8,6,2,6,2,yes,yes,thin test set at 70:30
+L26,Bubble Irregular,7,5,2,6,1,yes,yes,thin test set at 70:30
+L26,Missing Primary Package,7,5,2,6,1,yes,yes,thin test set at 70:30
+L26,Bubble Cluster,4,3,1,3,1,yes,yes,thin test set at 70:30
+L26,Missing Lens,3,2,1,2,1,yes,yes,thin test set at 70:30
+L26,HEMA Obstruction,2,1,1,2,0,yes,no,no test picture at 80:20; thin test set at 70:30
+L26,Bubble On Edge,1,1,0,1,0,no,no,no test picture at 80:20
+L26,Bubble Scatter,1,1,0,1,0,no,no,no test picture at 80:20
+L26,TOTAL,1220,855,365,976,244,17,16,19 classes
+L27,Foreign Matter,549,384,165,439,110,yes,yes,
+L27,Low Dose Obstructing Region of Interest,464,325,139,371,93,yes,yes,
+L27,Fiber,90,63,27,72,18,yes,yes,
+L27,Missing Lens,81,57,24,65,16,yes,yes,
+L27,Multiple Lenses,54,38,16,43,11,yes,yes,
+L27,Lens Off Center,27,19,8,22,5,yes,yes,
+L27,Bubble Irregular,21,15,6,17,4,yes,yes,
+L27,Extraneous Polymer,16,11,5,13,3,yes,yes,
+L27,Cavity Off Center,13,9,4,10,3,yes,yes,thin test set at 70:30
+L27,Missing Primary Package,12,8,4,10,2,yes,yes,thin test set at 70:30
+L27,Package Misalignment,11,8,3,9,2,yes,yes,thin test set at 70:30
+L27,View Obstructed,11,8,3,9,2,yes,yes,thin test set at 70:30
+L27,Bubble Cluster,10,7,3,8,2,yes,yes,thin test set at 70:30
+L27,Bubble Scatter,3,2,1,2,1,yes,yes,thin test set at 70:30
+L27,HEMA Obstruction,2,1,1,2,0,yes,no,no test picture at 80:20; thin test set at 70:30
+L27,Bubble On Edge,1,1,0,1,0,no,no,no test picture at 80:20
+L27,TOTAL,1365,956,409,1093,272,15,14,16 classes
+L31,Low Dose Obstructing Region of Interest,1307,915,392,1046,261,yes,yes,
+L31,Foreign Matter,196,137,59,157,39,yes,yes,
+L31,Fiber,120,84,36,96,24,yes,yes,
+L31,Multiple Lenses,97,68,29,78,19,yes,yes,
+L31,Missing Primary Package,72,50,22,58,14,yes,yes,
+L31,Missing Lens,51,36,15,41,10,yes,yes,
+L31,Package Misalignment,50,35,15,40,10,yes,yes,
+L31,View Obstructed,38,27,11,30,8,yes,yes,
+L31,Lens Off Center,20,14,6,16,4,yes,yes,
+L31,Extraneous Polymer,16,11,5,13,3,yes,yes,
+L31,Bubble On 123,13,9,4,10,3,yes,yes,thin test set at 70:30
+L31,Cavity Off Center,13,9,4,10,3,yes,yes,thin test set at 70:30
+L31,Bubble On Edge,6,4,2,5,1,yes,yes,thin test set at 70:30
+L31,HEMA Fragment,3,2,1,2,1,yes,yes,thin test set at 70:30
+L31,Bubble Cluster,2,1,1,2,0,yes,no,no test picture at 80:20; thin test set at 70:30
+L31,Bubble Irregular,2,1,1,2,0,yes,no,no test picture at 80:20; thin test set at 70:30
+L31,Bubble Scatter,2,1,1,2,0,yes,no,no test picture at 80:20; thin test set at 70:30
+L31,HEMA Obstruction,2,1,1,2,0,yes,no,no test picture at 80:20; thin test set at 70:30
+L31,Wet Package,2,1,1,2,0,yes,no,no test picture at 80:20; thin test set at 70:30
+L31,TOTAL,2012,1406,606,1612,400,19,14,19 classes

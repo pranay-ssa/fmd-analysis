@@ -1,0 +1,1799 @@
+{
+  "lines": {
+    "L24": {
+      "line": "L24",
+      "arch": "resnet50_inception",
+      "arch_label": "ResNet50-Inception MultiLevel MultiScale (Architecture 1, multi-scale)",
+      "split_csv": "/home/pranayp/line_experiment_20260917/splits/line_L24/split.csv",
+      "preprocessing": "raw frame resized to 224x224 bilinear, no crop",
+      "epochs": 50,
+      "batch_size": 4,
+      "seed": 42,
+      "num_classes": 19,
+      "class_names": [
+        "Bubble",
+        "Bubble Cluster",
+        "Bubble Irregular",
+        "Bubble On Edge",
+        "Cavity Off Center",
+        "Dirty Camera",
+        "Extraneous Polymer",
+        "Fiber",
+        "Foreign Matter",
+        "HEMA Fragment",
+        "HEMA Obstruction",
+        "Lens Off Center",
+        "Low Dose Obstructing Region of Interest",
+        "Missing Lens",
+        "Missing Primary Package",
+        "Multiple Lenses",
+        "Package Misalignment",
+        "View Obstructed",
+        "Wet Package"
+      ],
+      "num_train_images": 1993,
+      "num_test_images": 858,
+      "per_class_support": {
+        "train": {
+          "Bubble": 57,
+          "Bubble Cluster": 13,
+          "Bubble Irregular": 9,
+          "Bubble On Edge": 2,
+          "Cavity Off Center": 65,
+          "Dirty Camera": 17,
+          "Extraneous Polymer": 41,
+          "Fiber": 60,
+          "Foreign Matter": 201,
+          "HEMA Fragment": 3,
+          "HEMA Obstruction": 106,
+          "Lens Off Center": 136,
+          "Low Dose Obstructing Region of Interest": 76,
+          "Missing Lens": 128,
+          "Missing Primary Package": 803,
+          "Multiple Lenses": 234,
+          "Package Misalignment": 22,
+          "View Obstructed": 13,
+          "Wet Package": 7
+        },
+        "test": {
+          "Bubble": 25,
+          "Bubble Cluster": 5,
+          "Bubble Irregular": 4,
+          "Bubble On Edge": 1,
+          "Cavity Off Center": 28,
+          "Dirty Camera": 8,
+          "Extraneous Polymer": 18,
+          "Fiber": 26,
+          "Foreign Matter": 86,
+          "HEMA Fragment": 2,
+          "HEMA Obstruction": 45,
+          "Lens Off Center": 59,
+          "Low Dose Obstructing Region of Interest": 32,
+          "Missing Lens": 55,
+          "Missing Primary Package": 344,
+          "Multiple Lenses": 101,
+          "Package Misalignment": 10,
+          "View Obstructed": 6,
+          "Wet Package": 3
+        }
+      },
+      "overall_accuracy": 0.8939,
+      "overall_recall": 0.6511,
+      "training_time_sec": 1238.77,
+      "inference_total_sec": 5.2737,
+      "inference_per_image_ms": 6.147,
+      "per_class": {
+        "Bubble": {
+          "recall": 0.76,
+          "precision": 0.76,
+          "f1": 0.76,
+          "support": 25
+        },
+        "Bubble Cluster": {
+          "recall": 0.2,
+          "precision": 0.2,
+          "f1": 0.2,
+          "support": 5
+        },
+        "Bubble Irregular": {
+          "recall": 0.5,
+          "precision": 1.0,
+          "f1": 0.6667,
+          "support": 4
+        },
+        "Bubble On Edge": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Cavity Off Center": {
+          "recall": 0.9643,
+          "precision": 1.0,
+          "f1": 0.9818,
+          "support": 28
+        },
+        "Dirty Camera": {
+          "recall": 0.875,
+          "precision": 0.7778,
+          "f1": 0.8235,
+          "support": 8
+        },
+        "Extraneous Polymer": {
+          "recall": 0.1667,
+          "precision": 0.375,
+          "f1": 0.2308,
+          "support": 18
+        },
+        "Fiber": {
+          "recall": 0.6538,
+          "precision": 0.3778,
+          "f1": 0.4789,
+          "support": 26
+        },
+        "Foreign Matter": {
+          "recall": 0.7326,
+          "precision": 0.75,
+          "f1": 0.7412,
+          "support": 86
+        },
+        "HEMA Fragment": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "HEMA Obstruction": {
+          "recall": 0.9333,
+          "precision": 0.8936,
+          "f1": 0.913,
+          "support": 45
+        },
+        "Lens Off Center": {
+          "recall": 0.9153,
+          "precision": 0.931,
+          "f1": 0.9231,
+          "support": 59
+        },
+        "Low Dose Obstructing Region of Interest": {
+          "recall": 0.75,
+          "precision": 0.8889,
+          "f1": 0.8136,
+          "support": 32
+        },
+        "Missing Lens": {
+          "recall": 0.9818,
+          "precision": 1.0,
+          "f1": 0.9908,
+          "support": 55
+        },
+        "Missing Primary Package": {
+          "recall": 0.9971,
+          "precision": 1.0,
+          "f1": 0.9985,
+          "support": 344
+        },
+        "Multiple Lenses": {
+          "recall": 0.9406,
+          "precision": 0.8879,
+          "f1": 0.9135,
+          "support": 101
+        },
+        "Package Misalignment": {
+          "recall": 1.0,
+          "precision": 0.9091,
+          "f1": 0.9524,
+          "support": 10
+        },
+        "View Obstructed": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 6
+        },
+        "Wet Package": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 3
+        }
+      },
+      "macro": {
+        "precision": 0.6711,
+        "recall": 0.6511,
+        "f1": 0.652
+      },
+      "weighted": {
+        "precision": 0.8935,
+        "recall": 0.8939,
+        "f1": 0.891
+      }
+    },
+    "L25": {
+      "line": "L25",
+      "arch": "resnet50_inception",
+      "arch_label": "ResNet50-Inception MultiLevel MultiScale (Architecture 1, multi-scale)",
+      "split_csv": "/home/pranayp/line_experiment_20260917/splits/line_L25/split.csv",
+      "preprocessing": "raw frame resized to 224x224 bilinear, no crop",
+      "epochs": 50,
+      "batch_size": 4,
+      "seed": 42,
+      "num_classes": 17,
+      "class_names": [
+        "Bubble",
+        "Bubble Cluster",
+        "Bubble On Edge",
+        "Cavity Off Center",
+        "Dirty Strobe",
+        "Extraneous Polymer",
+        "Fiber",
+        "Foreign Matter",
+        "HEMA Obstruction",
+        "Lens Off Center",
+        "Low Dose Obstructing Region of Interest",
+        "Missing Lens",
+        "Missing Primary Package",
+        "Multiple Lenses",
+        "Package Misalignment",
+        "View Obstructed",
+        "Wet Package"
+      ],
+      "num_train_images": 663,
+      "num_test_images": 287,
+      "per_class_support": {
+        "train": {
+          "Bubble": 13,
+          "Bubble Cluster": 1,
+          "Bubble On Edge": 2,
+          "Cavity Off Center": 28,
+          "Dirty Strobe": 8,
+          "Extraneous Polymer": 6,
+          "Fiber": 26,
+          "Foreign Matter": 59,
+          "HEMA Obstruction": 13,
+          "Lens Off Center": 3,
+          "Low Dose Obstructing Region of Interest": 40,
+          "Missing Lens": 4,
+          "Missing Primary Package": 132,
+          "Multiple Lenses": 193,
+          "Package Misalignment": 123,
+          "View Obstructed": 11,
+          "Wet Package": 1
+        },
+        "test": {
+          "Bubble": 5,
+          "Bubble Cluster": 1,
+          "Bubble On Edge": 1,
+          "Cavity Off Center": 12,
+          "Dirty Strobe": 4,
+          "Extraneous Polymer": 3,
+          "Fiber": 11,
+          "Foreign Matter": 25,
+          "HEMA Obstruction": 5,
+          "Lens Off Center": 2,
+          "Low Dose Obstructing Region of Interest": 17,
+          "Missing Lens": 2,
+          "Missing Primary Package": 57,
+          "Multiple Lenses": 83,
+          "Package Misalignment": 53,
+          "View Obstructed": 5,
+          "Wet Package": 1
+        }
+      },
+      "overall_accuracy": 0.899,
+      "overall_recall": 0.5675,
+      "training_time_sec": 415.09,
+      "inference_total_sec": 3.2712,
+      "inference_per_image_ms": 11.398,
+      "per_class": {
+        "Bubble": {
+          "recall": 0.4,
+          "precision": 0.6667,
+          "f1": 0.5,
+          "support": 5
+        },
+        "Bubble Cluster": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Bubble On Edge": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Cavity Off Center": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 12
+        },
+        "Dirty Strobe": {
+          "recall": 1.0,
+          "precision": 0.6667,
+          "f1": 0.8,
+          "support": 4
+        },
+        "Extraneous Polymer": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        "Fiber": {
+          "recall": 0.8182,
+          "precision": 0.5625,
+          "f1": 0.6667,
+          "support": 11
+        },
+        "Foreign Matter": {
+          "recall": 0.8,
+          "precision": 0.7143,
+          "f1": 0.7547,
+          "support": 25
+        },
+        "HEMA Obstruction": {
+          "recall": 0.4,
+          "precision": 1.0,
+          "f1": 0.5714,
+          "support": 5
+        },
+        "Lens Off Center": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "Low Dose Obstructing Region of Interest": {
+          "recall": 0.7647,
+          "precision": 0.9286,
+          "f1": 0.8387,
+          "support": 17
+        },
+        "Missing Lens": {
+          "recall": 0.5,
+          "precision": 1.0,
+          "f1": 0.6667,
+          "support": 2
+        },
+        "Missing Primary Package": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 57
+        },
+        "Multiple Lenses": {
+          "recall": 0.9639,
+          "precision": 0.8989,
+          "f1": 0.9302,
+          "support": 83
+        },
+        "Package Misalignment": {
+          "recall": 1.0,
+          "precision": 0.9815,
+          "f1": 0.9907,
+          "support": 53
+        },
+        "View Obstructed": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 5
+        },
+        "Wet Package": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        }
+      },
+      "macro": {
+        "precision": 0.6129,
+        "recall": 0.5675,
+        "f1": 0.5717
+      },
+      "weighted": {
+        "precision": 0.8831,
+        "recall": 0.899,
+        "f1": 0.8852
+      }
+    },
+    "L26": {
+      "line": "L26",
+      "arch": "resnet50_inception",
+      "arch_label": "ResNet50-Inception MultiLevel MultiScale (Architecture 1, multi-scale)",
+      "split_csv": "/home/pranayp/line_experiment_20260917/splits/line_L26/split.csv",
+      "preprocessing": "raw frame resized to 224x224 bilinear, no crop",
+      "epochs": 50,
+      "batch_size": 4,
+      "seed": 42,
+      "num_classes": 17,
+      "class_names": [
+        "Bubble",
+        "Bubble Cluster",
+        "Bubble Irregular",
+        "Cavity Off Center",
+        "Dirty Strobe",
+        "Extraneous Polymer",
+        "Fiber",
+        "Foreign Matter",
+        "HEMA Obstruction",
+        "Lens Off Center",
+        "Low Dose Obstructing Region of Interest",
+        "Missing Lens",
+        "Missing Primary Package",
+        "Multiple Lenses",
+        "Package Misalignment",
+        "View Obstructed",
+        "Wet Package"
+      ],
+      "num_train_images": 853,
+      "num_test_images": 365,
+      "per_class_support": {
+        "train": {
+          "Bubble": 9,
+          "Bubble Cluster": 3,
+          "Bubble Irregular": 5,
+          "Cavity Off Center": 17,
+          "Dirty Strobe": 22,
+          "Extraneous Polymer": 94,
+          "Fiber": 18,
+          "Foreign Matter": 113,
+          "HEMA Obstruction": 1,
+          "Lens Off Center": 6,
+          "Low Dose Obstructing Region of Interest": 10,
+          "Missing Lens": 2,
+          "Missing Primary Package": 5,
+          "Multiple Lenses": 472,
+          "Package Misalignment": 17,
+          "View Obstructed": 23,
+          "Wet Package": 36
+        },
+        "test": {
+          "Bubble": 4,
+          "Bubble Cluster": 1,
+          "Bubble Irregular": 2,
+          "Cavity Off Center": 7,
+          "Dirty Strobe": 9,
+          "Extraneous Polymer": 40,
+          "Fiber": 8,
+          "Foreign Matter": 49,
+          "HEMA Obstruction": 1,
+          "Lens Off Center": 2,
+          "Low Dose Obstructing Region of Interest": 4,
+          "Missing Lens": 1,
+          "Missing Primary Package": 2,
+          "Multiple Lenses": 202,
+          "Package Misalignment": 7,
+          "View Obstructed": 10,
+          "Wet Package": 16
+        }
+      },
+      "overall_accuracy": 0.9041,
+      "overall_recall": 0.5479,
+      "training_time_sec": 533.42,
+      "inference_total_sec": 3.682,
+      "inference_per_image_ms": 10.088,
+      "per_class": {
+        "Bubble": {
+          "recall": 0.5,
+          "precision": 1.0,
+          "f1": 0.6667,
+          "support": 4
+        },
+        "Bubble Cluster": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Bubble Irregular": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "Cavity Off Center": {
+          "recall": 1.0,
+          "precision": 0.875,
+          "f1": 0.9333,
+          "support": 7
+        },
+        "Dirty Strobe": {
+          "recall": 1.0,
+          "precision": 0.9,
+          "f1": 0.9474,
+          "support": 9
+        },
+        "Extraneous Polymer": {
+          "recall": 0.8,
+          "precision": 0.9412,
+          "f1": 0.8649,
+          "support": 40
+        },
+        "Fiber": {
+          "recall": 0.25,
+          "precision": 0.6667,
+          "f1": 0.3636,
+          "support": 8
+        },
+        "Foreign Matter": {
+          "recall": 0.9796,
+          "precision": 0.75,
+          "f1": 0.8496,
+          "support": 49
+        },
+        "HEMA Obstruction": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Lens Off Center": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "Low Dose Obstructing Region of Interest": {
+          "recall": 0.25,
+          "precision": 1.0,
+          "f1": 0.4,
+          "support": 4
+        },
+        "Missing Lens": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Missing Primary Package": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        "Multiple Lenses": {
+          "recall": 0.9901,
+          "precision": 0.939,
+          "f1": 0.9639,
+          "support": 202
+        },
+        "Package Misalignment": {
+          "recall": 0.8571,
+          "precision": 1.0,
+          "f1": 0.9231,
+          "support": 7
+        },
+        "View Obstructed": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 10
+        },
+        "Wet Package": {
+          "recall": 0.6875,
+          "precision": 0.9167,
+          "f1": 0.7857,
+          "support": 16
+        }
+      },
+      "macro": {
+        "precision": 0.6464,
+        "recall": 0.5479,
+        "f1": 0.5705
+      },
+      "weighted": {
+        "precision": 0.8912,
+        "recall": 0.9041,
+        "f1": 0.8882
+      }
+    },
+    "L27": {
+      "line": "L27",
+      "arch": "resnet50_inception",
+      "arch_label": "ResNet50-Inception MultiLevel MultiScale (Architecture 1, multi-scale)",
+      "split_csv": "/home/pranayp/line_experiment_20260917/splits/line_L27/split.csv",
+      "preprocessing": "raw frame resized to 224x224 bilinear, no crop",
+      "epochs": 50,
+      "batch_size": 4,
+      "seed": 42,
+      "num_classes": 15,
+      "class_names": [
+        "Bubble Cluster",
+        "Bubble Irregular",
+        "Bubble Scatter",
+        "Cavity Off Center",
+        "Extraneous Polymer",
+        "Fiber",
+        "Foreign Matter",
+        "HEMA Obstruction",
+        "Lens Off Center",
+        "Low Dose Obstructing Region of Interest",
+        "Missing Lens",
+        "Missing Primary Package",
+        "Multiple Lenses",
+        "Package Misalignment",
+        "View Obstructed"
+      ],
+      "num_train_images": 955,
+      "num_test_images": 409,
+      "per_class_support": {
+        "train": {
+          "Bubble Cluster": 7,
+          "Bubble Irregular": 15,
+          "Bubble Scatter": 2,
+          "Cavity Off Center": 9,
+          "Extraneous Polymer": 11,
+          "Fiber": 63,
+          "Foreign Matter": 384,
+          "HEMA Obstruction": 1,
+          "Lens Off Center": 19,
+          "Low Dose Obstructing Region of Interest": 325,
+          "Missing Lens": 57,
+          "Missing Primary Package": 8,
+          "Multiple Lenses": 38,
+          "Package Misalignment": 8,
+          "View Obstructed": 8
+        },
+        "test": {
+          "Bubble Cluster": 3,
+          "Bubble Irregular": 6,
+          "Bubble Scatter": 1,
+          "Cavity Off Center": 4,
+          "Extraneous Polymer": 5,
+          "Fiber": 27,
+          "Foreign Matter": 165,
+          "HEMA Obstruction": 1,
+          "Lens Off Center": 8,
+          "Low Dose Obstructing Region of Interest": 139,
+          "Missing Lens": 24,
+          "Missing Primary Package": 4,
+          "Multiple Lenses": 16,
+          "Package Misalignment": 3,
+          "View Obstructed": 3
+        }
+      },
+      "overall_accuracy": 0.868,
+      "overall_recall": 0.6071,
+      "training_time_sec": 598.15,
+      "inference_total_sec": 3.9052,
+      "inference_per_image_ms": 9.548,
+      "per_class": {
+        "Bubble Cluster": {
+          "recall": 0.6667,
+          "precision": 0.4,
+          "f1": 0.5,
+          "support": 3
+        },
+        "Bubble Irregular": {
+          "recall": 0.3333,
+          "precision": 0.5,
+          "f1": 0.4,
+          "support": 6
+        },
+        "Bubble Scatter": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Cavity Off Center": {
+          "recall": 1.0,
+          "precision": 0.8,
+          "f1": 0.8889,
+          "support": 4
+        },
+        "Extraneous Polymer": {
+          "recall": 0.2,
+          "precision": 0.1429,
+          "f1": 0.1667,
+          "support": 5
+        },
+        "Fiber": {
+          "recall": 0.4815,
+          "precision": 0.619,
+          "f1": 0.5417,
+          "support": 27
+        },
+        "Foreign Matter": {
+          "recall": 0.9333,
+          "precision": 0.8851,
+          "f1": 0.9086,
+          "support": 165
+        },
+        "HEMA Obstruction": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Lens Off Center": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 8
+        },
+        "Low Dose Obstructing Region of Interest": {
+          "recall": 0.9496,
+          "precision": 0.9429,
+          "f1": 0.9462,
+          "support": 139
+        },
+        "Missing Lens": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 24
+        },
+        "Missing Primary Package": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "Multiple Lenses": {
+          "recall": 0.875,
+          "precision": 0.9333,
+          "f1": 0.9032,
+          "support": 16
+        },
+        "Package Misalignment": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "View Obstructed": {
+          "recall": 0.6667,
+          "precision": 1.0,
+          "f1": 0.8,
+          "support": 3
+        }
+      },
+      "macro": {
+        "precision": 0.6149,
+        "recall": 0.6071,
+        "f1": 0.6037
+      },
+      "weighted": {
+        "precision": 0.8578,
+        "recall": 0.868,
+        "f1": 0.8611
+      }
+    },
+    "L31": {
+      "line": "L31",
+      "arch": "resnet50_inception",
+      "arch_label": "ResNet50-Inception MultiLevel MultiScale (Architecture 1, multi-scale)",
+      "split_csv": "/home/pranayp/line_experiment_20260917/splits/line_L31/split.csv",
+      "preprocessing": "raw frame resized to 224x224 bilinear, no crop",
+      "epochs": 50,
+      "batch_size": 4,
+      "seed": 42,
+      "num_classes": 19,
+      "class_names": [
+        "Bubble Cluster",
+        "Bubble Irregular",
+        "Bubble On 123",
+        "Bubble On Edge",
+        "Bubble Scatter",
+        "Cavity Off Center",
+        "Extraneous Polymer",
+        "Fiber",
+        "Foreign Matter",
+        "HEMA Fragment",
+        "HEMA Obstruction",
+        "Lens Off Center",
+        "Low Dose Obstructing Region of Interest",
+        "Missing Lens",
+        "Missing Primary Package",
+        "Multiple Lenses",
+        "Package Misalignment",
+        "View Obstructed",
+        "Wet Package"
+      ],
+      "num_train_images": 1411,
+      "num_test_images": 608,
+      "per_class_support": {
+        "train": {
+          "Bubble Cluster": 1,
+          "Bubble Irregular": 1,
+          "Bubble On 123": 9,
+          "Bubble On Edge": 4,
+          "Bubble Scatter": 1,
+          "Cavity Off Center": 9,
+          "Extraneous Polymer": 11,
+          "Fiber": 84,
+          "Foreign Matter": 137,
+          "HEMA Fragment": 7,
+          "HEMA Obstruction": 1,
+          "Lens Off Center": 14,
+          "Low Dose Obstructing Region of Interest": 915,
+          "Missing Lens": 36,
+          "Missing Primary Package": 50,
+          "Multiple Lenses": 68,
+          "Package Misalignment": 35,
+          "View Obstructed": 27,
+          "Wet Package": 1
+        },
+        "test": {
+          "Bubble Cluster": 1,
+          "Bubble Irregular": 1,
+          "Bubble On 123": 4,
+          "Bubble On Edge": 2,
+          "Bubble Scatter": 1,
+          "Cavity Off Center": 4,
+          "Extraneous Polymer": 5,
+          "Fiber": 36,
+          "Foreign Matter": 59,
+          "HEMA Fragment": 3,
+          "HEMA Obstruction": 1,
+          "Lens Off Center": 6,
+          "Low Dose Obstructing Region of Interest": 392,
+          "Missing Lens": 15,
+          "Missing Primary Package": 22,
+          "Multiple Lenses": 29,
+          "Package Misalignment": 15,
+          "View Obstructed": 11,
+          "Wet Package": 1
+        }
+      },
+      "overall_accuracy": 0.9062,
+      "overall_recall": 0.4562,
+      "training_time_sec": 877.42,
+      "inference_total_sec": 3.2185,
+      "inference_per_image_ms": 5.294,
+      "per_class": {
+        "Bubble Cluster": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Bubble Irregular": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Bubble On 123": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        "Bubble On Edge": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "Bubble Scatter": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Cavity Off Center": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "Extraneous Polymer": {
+          "recall": 0.2,
+          "precision": 1.0,
+          "f1": 0.3333,
+          "support": 5
+        },
+        "Fiber": {
+          "recall": 0.9444,
+          "precision": 0.5397,
+          "f1": 0.6869,
+          "support": 36
+        },
+        "Foreign Matter": {
+          "recall": 0.5932,
+          "precision": 0.7778,
+          "f1": 0.6731,
+          "support": 59
+        },
+        "HEMA Fragment": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        "HEMA Obstruction": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Lens Off Center": {
+          "recall": 0.1667,
+          "precision": 0.3333,
+          "f1": 0.2222,
+          "support": 6
+        },
+        "Low Dose Obstructing Region of Interest": {
+          "recall": 0.9923,
+          "precision": 0.9798,
+          "f1": 0.9861,
+          "support": 392
+        },
+        "Missing Lens": {
+          "recall": 1.0,
+          "precision": 0.8824,
+          "f1": 0.9375,
+          "support": 15
+        },
+        "Missing Primary Package": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 22
+        },
+        "Multiple Lenses": {
+          "recall": 0.8621,
+          "precision": 0.9615,
+          "f1": 0.9091,
+          "support": 29
+        },
+        "Package Misalignment": {
+          "recall": 1.0,
+          "precision": 0.9375,
+          "f1": 0.9677,
+          "support": 15
+        },
+        "View Obstructed": {
+          "recall": 0.9091,
+          "precision": 1.0,
+          "f1": 0.9524,
+          "support": 11
+        },
+        "Wet Package": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        }
+      },
+      "macro": {
+        "precision": 0.4954,
+        "recall": 0.4562,
+        "f1": 0.4562
+      },
+      "weighted": {
+        "precision": 0.9023,
+        "recall": 0.9062,
+        "f1": 0.897
+      }
+    }
+  },
+  "cells": [
+    {
+      "line": "L24",
+      "class": "Bubble",
+      "support": 25,
+      "recall": 0.76,
+      "precision": 0.76,
+      "f1": 0.76
+    },
+    {
+      "line": "L24",
+      "class": "Bubble Cluster",
+      "support": 5,
+      "recall": 0.2,
+      "precision": 0.2,
+      "f1": 0.2
+    },
+    {
+      "line": "L24",
+      "class": "Bubble Irregular",
+      "support": 4,
+      "recall": 0.5,
+      "precision": 1.0,
+      "f1": 0.6667
+    },
+    {
+      "line": "L24",
+      "class": "Bubble On Edge",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L24",
+      "class": "Cavity Off Center",
+      "support": 28,
+      "recall": 0.9643,
+      "precision": 1.0,
+      "f1": 0.9818
+    },
+    {
+      "line": "L24",
+      "class": "Dirty Camera",
+      "support": 8,
+      "recall": 0.875,
+      "precision": 0.7778,
+      "f1": 0.8235
+    },
+    {
+      "line": "L24",
+      "class": "Extraneous Polymer",
+      "support": 18,
+      "recall": 0.1667,
+      "precision": 0.375,
+      "f1": 0.2308
+    },
+    {
+      "line": "L24",
+      "class": "Fiber",
+      "support": 26,
+      "recall": 0.6538,
+      "precision": 0.3778,
+      "f1": 0.4789
+    },
+    {
+      "line": "L24",
+      "class": "Foreign Matter",
+      "support": 86,
+      "recall": 0.7326,
+      "precision": 0.75,
+      "f1": 0.7412
+    },
+    {
+      "line": "L24",
+      "class": "HEMA Fragment",
+      "support": 2,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L24",
+      "class": "HEMA Obstruction",
+      "support": 45,
+      "recall": 0.9333,
+      "precision": 0.8936,
+      "f1": 0.913
+    },
+    {
+      "line": "L24",
+      "class": "Lens Off Center",
+      "support": 59,
+      "recall": 0.9153,
+      "precision": 0.931,
+      "f1": 0.9231
+    },
+    {
+      "line": "L24",
+      "class": "Low Dose Obstructing Region of Interest",
+      "support": 32,
+      "recall": 0.75,
+      "precision": 0.8889,
+      "f1": 0.8136
+    },
+    {
+      "line": "L24",
+      "class": "Missing Lens",
+      "support": 55,
+      "recall": 0.9818,
+      "precision": 1.0,
+      "f1": 0.9908
+    },
+    {
+      "line": "L24",
+      "class": "Missing Primary Package",
+      "support": 344,
+      "recall": 0.9971,
+      "precision": 1.0,
+      "f1": 0.9985
+    },
+    {
+      "line": "L24",
+      "class": "Multiple Lenses",
+      "support": 101,
+      "recall": 0.9406,
+      "precision": 0.8879,
+      "f1": 0.9135
+    },
+    {
+      "line": "L24",
+      "class": "Package Misalignment",
+      "support": 10,
+      "recall": 1.0,
+      "precision": 0.9091,
+      "f1": 0.9524
+    },
+    {
+      "line": "L24",
+      "class": "View Obstructed",
+      "support": 6,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L24",
+      "class": "Wet Package",
+      "support": 3,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L25",
+      "class": "Bubble",
+      "support": 5,
+      "recall": 0.4,
+      "precision": 0.6667,
+      "f1": 0.5
+    },
+    {
+      "line": "L25",
+      "class": "Bubble Cluster",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L25",
+      "class": "Bubble On Edge",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L25",
+      "class": "Cavity Off Center",
+      "support": 12,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L25",
+      "class": "Dirty Strobe",
+      "support": 4,
+      "recall": 1.0,
+      "precision": 0.6667,
+      "f1": 0.8
+    },
+    {
+      "line": "L25",
+      "class": "Extraneous Polymer",
+      "support": 3,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L25",
+      "class": "Fiber",
+      "support": 11,
+      "recall": 0.8182,
+      "precision": 0.5625,
+      "f1": 0.6667
+    },
+    {
+      "line": "L25",
+      "class": "Foreign Matter",
+      "support": 25,
+      "recall": 0.8,
+      "precision": 0.7143,
+      "f1": 0.7547
+    },
+    {
+      "line": "L25",
+      "class": "HEMA Obstruction",
+      "support": 5,
+      "recall": 0.4,
+      "precision": 1.0,
+      "f1": 0.5714
+    },
+    {
+      "line": "L25",
+      "class": "Lens Off Center",
+      "support": 2,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L25",
+      "class": "Low Dose Obstructing Region of Interest",
+      "support": 17,
+      "recall": 0.7647,
+      "precision": 0.9286,
+      "f1": 0.8387
+    },
+    {
+      "line": "L25",
+      "class": "Missing Lens",
+      "support": 2,
+      "recall": 0.5,
+      "precision": 1.0,
+      "f1": 0.6667
+    },
+    {
+      "line": "L25",
+      "class": "Missing Primary Package",
+      "support": 57,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L25",
+      "class": "Multiple Lenses",
+      "support": 83,
+      "recall": 0.9639,
+      "precision": 0.8989,
+      "f1": 0.9302
+    },
+    {
+      "line": "L25",
+      "class": "Package Misalignment",
+      "support": 53,
+      "recall": 1.0,
+      "precision": 0.9815,
+      "f1": 0.9907
+    },
+    {
+      "line": "L25",
+      "class": "View Obstructed",
+      "support": 5,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L25",
+      "class": "Wet Package",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L26",
+      "class": "Bubble",
+      "support": 4,
+      "recall": 0.5,
+      "precision": 1.0,
+      "f1": 0.6667
+    },
+    {
+      "line": "L26",
+      "class": "Bubble Cluster",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L26",
+      "class": "Bubble Irregular",
+      "support": 2,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L26",
+      "class": "Cavity Off Center",
+      "support": 7,
+      "recall": 1.0,
+      "precision": 0.875,
+      "f1": 0.9333
+    },
+    {
+      "line": "L26",
+      "class": "Dirty Strobe",
+      "support": 9,
+      "recall": 1.0,
+      "precision": 0.9,
+      "f1": 0.9474
+    },
+    {
+      "line": "L26",
+      "class": "Extraneous Polymer",
+      "support": 40,
+      "recall": 0.8,
+      "precision": 0.9412,
+      "f1": 0.8649
+    },
+    {
+      "line": "L26",
+      "class": "Fiber",
+      "support": 8,
+      "recall": 0.25,
+      "precision": 0.6667,
+      "f1": 0.3636
+    },
+    {
+      "line": "L26",
+      "class": "Foreign Matter",
+      "support": 49,
+      "recall": 0.9796,
+      "precision": 0.75,
+      "f1": 0.8496
+    },
+    {
+      "line": "L26",
+      "class": "HEMA Obstruction",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L26",
+      "class": "Lens Off Center",
+      "support": 2,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L26",
+      "class": "Low Dose Obstructing Region of Interest",
+      "support": 4,
+      "recall": 0.25,
+      "precision": 1.0,
+      "f1": 0.4
+    },
+    {
+      "line": "L26",
+      "class": "Missing Lens",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L26",
+      "class": "Missing Primary Package",
+      "support": 2,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L26",
+      "class": "Multiple Lenses",
+      "support": 202,
+      "recall": 0.9901,
+      "precision": 0.939,
+      "f1": 0.9639
+    },
+    {
+      "line": "L26",
+      "class": "Package Misalignment",
+      "support": 7,
+      "recall": 0.8571,
+      "precision": 1.0,
+      "f1": 0.9231
+    },
+    {
+      "line": "L26",
+      "class": "View Obstructed",
+      "support": 10,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L26",
+      "class": "Wet Package",
+      "support": 16,
+      "recall": 0.6875,
+      "precision": 0.9167,
+      "f1": 0.7857
+    },
+    {
+      "line": "L27",
+      "class": "Bubble Cluster",
+      "support": 3,
+      "recall": 0.6667,
+      "precision": 0.4,
+      "f1": 0.5
+    },
+    {
+      "line": "L27",
+      "class": "Bubble Irregular",
+      "support": 6,
+      "recall": 0.3333,
+      "precision": 0.5,
+      "f1": 0.4
+    },
+    {
+      "line": "L27",
+      "class": "Bubble Scatter",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L27",
+      "class": "Cavity Off Center",
+      "support": 4,
+      "recall": 1.0,
+      "precision": 0.8,
+      "f1": 0.8889
+    },
+    {
+      "line": "L27",
+      "class": "Extraneous Polymer",
+      "support": 5,
+      "recall": 0.2,
+      "precision": 0.1429,
+      "f1": 0.1667
+    },
+    {
+      "line": "L27",
+      "class": "Fiber",
+      "support": 27,
+      "recall": 0.4815,
+      "precision": 0.619,
+      "f1": 0.5417
+    },
+    {
+      "line": "L27",
+      "class": "Foreign Matter",
+      "support": 165,
+      "recall": 0.9333,
+      "precision": 0.8851,
+      "f1": 0.9086
+    },
+    {
+      "line": "L27",
+      "class": "HEMA Obstruction",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L27",
+      "class": "Lens Off Center",
+      "support": 8,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L27",
+      "class": "Low Dose Obstructing Region of Interest",
+      "support": 139,
+      "recall": 0.9496,
+      "precision": 0.9429,
+      "f1": 0.9462
+    },
+    {
+      "line": "L27",
+      "class": "Missing Lens",
+      "support": 24,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L27",
+      "class": "Missing Primary Package",
+      "support": 4,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L27",
+      "class": "Multiple Lenses",
+      "support": 16,
+      "recall": 0.875,
+      "precision": 0.9333,
+      "f1": 0.9032
+    },
+    {
+      "line": "L27",
+      "class": "Package Misalignment",
+      "support": 3,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L27",
+      "class": "View Obstructed",
+      "support": 3,
+      "recall": 0.6667,
+      "precision": 1.0,
+      "f1": 0.8
+    },
+    {
+      "line": "L31",
+      "class": "Bubble Cluster",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L31",
+      "class": "Bubble Irregular",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L31",
+      "class": "Bubble On 123",
+      "support": 4,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L31",
+      "class": "Bubble On Edge",
+      "support": 2,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L31",
+      "class": "Bubble Scatter",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L31",
+      "class": "Cavity Off Center",
+      "support": 4,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L31",
+      "class": "Extraneous Polymer",
+      "support": 5,
+      "recall": 0.2,
+      "precision": 1.0,
+      "f1": 0.3333
+    },
+    {
+      "line": "L31",
+      "class": "Fiber",
+      "support": 36,
+      "recall": 0.9444,
+      "precision": 0.5397,
+      "f1": 0.6869
+    },
+    {
+      "line": "L31",
+      "class": "Foreign Matter",
+      "support": 59,
+      "recall": 0.5932,
+      "precision": 0.7778,
+      "f1": 0.6731
+    },
+    {
+      "line": "L31",
+      "class": "HEMA Fragment",
+      "support": 3,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L31",
+      "class": "HEMA Obstruction",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L31",
+      "class": "Lens Off Center",
+      "support": 6,
+      "recall": 0.1667,
+      "precision": 0.3333,
+      "f1": 0.2222
+    },
+    {
+      "line": "L31",
+      "class": "Low Dose Obstructing Region of Interest",
+      "support": 392,
+      "recall": 0.9923,
+      "precision": 0.9798,
+      "f1": 0.9861
+    },
+    {
+      "line": "L31",
+      "class": "Missing Lens",
+      "support": 15,
+      "recall": 1.0,
+      "precision": 0.8824,
+      "f1": 0.9375
+    },
+    {
+      "line": "L31",
+      "class": "Missing Primary Package",
+      "support": 22,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L31",
+      "class": "Multiple Lenses",
+      "support": 29,
+      "recall": 0.8621,
+      "precision": 0.9615,
+      "f1": 0.9091
+    },
+    {
+      "line": "L31",
+      "class": "Package Misalignment",
+      "support": 15,
+      "recall": 1.0,
+      "precision": 0.9375,
+      "f1": 0.9677
+    },
+    {
+      "line": "L31",
+      "class": "View Obstructed",
+      "support": 11,
+      "recall": 0.9091,
+      "precision": 1.0,
+      "f1": 0.9524
+    },
+    {
+      "line": "L31",
+      "class": "Wet Package",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    }
+  ],
+  "bands": [
+    {
+      "band": "1 to 4 test pictures",
+      "cells": 35,
+      "mean_f1": 0.2683,
+      "median_f1": 0.0,
+      "zero_f1_cells": 23,
+      "min_f1": 0.0,
+      "max_f1": 1.0
+    },
+    {
+      "band": "5 to 24 test pictures",
+      "cells": 28,
+      "mean_f1": 0.7007,
+      "median_f1": 0.871,
+      "zero_f1_cells": 1,
+      "min_f1": 0.0,
+      "max_f1": 1.0
+    },
+    {
+      "band": "25 or more test pictures",
+      "cells": 24,
+      "mean_f1": 0.855,
+      "median_f1": 0.9111,
+      "zero_f1_cells": 0,
+      "min_f1": 0.4789,
+      "max_f1": 1.0
+    }
+  ],
+  "confusion_directions": [
+    "Foreign Matter -> Fiber: 50",
+    "Fiber -> Foreign Matter: 26",
+    "Extraneous Polymer -> Foreign Matter: 16",
+    "Lens Off Center -> Low Dose Obstructing Region of Interest: 14",
+    "Extraneous Polymer -> Fiber: 10",
+    "Bubble -> Foreign Matter: 7",
+    "Low Dose Obstructing Region of Interest -> Lens Off Center: 7",
+    "Low Dose Obstructing Region of Interest -> Multiple Lenses: 7",
+    "Wet Package -> Multiple Lenses: 7",
+    "Foreign Matter -> Extraneous Polymer: 6",
+    "HEMA Obstruction -> Multiple Lenses: 6",
+    "Multiple Lenses -> Foreign Matter: 6",
+    "Extraneous Polymer -> Multiple Lenses: 4",
+    "Bubble Irregular -> Foreign Matter: 4",
+    "Fiber -> Extraneous Polymer: 3",
+    "Foreign Matter -> Multiple Lenses: 3",
+    "HEMA Fragment -> Foreign Matter: 3",
+    "Bubble -> Fiber: 2",
+    "Bubble Cluster -> Fiber: 2",
+    "Bubble Cluster -> Foreign Matter: 2",
+    "Bubble Irregular -> Fiber: 2",
+    "Bubble On Edge -> Foreign Matter: 2",
+    "Extraneous Polymer -> Lens Off Center: 2",
+    "Fiber -> Bubble Cluster: 2",
+    "Foreign Matter -> Low Dose Obstructing Region of Interest: 2",
+    "HEMA Obstruction -> Foreign Matter: 2",
+    "Lens Off Center -> HEMA Obstruction: 2",
+    "Low Dose Obstructing Region of Interest -> Bubble: 2",
+    "Low Dose Obstructing Region of Interest -> Fiber: 2",
+    "Low Dose Obstructing Region of Interest -> Foreign Matter: 2",
+    "Multiple Lenses -> HEMA Obstruction: 2",
+    "Multiple Lenses -> Low Dose Obstructing Region of Interest: 2",
+    "Lens Off Center -> Foreign Matter: 2",
+    "Multiple Lenses -> Dirty Strobe: 2",
+    "Bubble -> Multiple Lenses: 2",
+    "Bubble On 123 -> Bubble On Edge: 2",
+    "Bubble Cluster -> Bubble: 1",
+    "Bubble Cluster -> Extraneous Polymer: 1",
+    "Cavity Off Center -> Package Misalignment: 1",
+    "Dirty Camera -> Multiple Lenses: 1",
+    "Extraneous Polymer -> Dirty Camera: 1",
+    "Fiber -> Lens Off Center: 1",
+    "Foreign Matter -> Bubble: 1",
+    "Foreign Matter -> Bubble Cluster: 1",
+    "HEMA Fragment -> HEMA Obstruction: 1",
+    "Lens Off Center -> Bubble: 1",
+    "Lens Off Center -> Fiber: 1",
+    "Missing Lens -> Dirty Camera: 1",
+    "Missing Primary Package -> Multiple Lenses: 1",
+    "Multiple Lenses -> Bubble: 1",
+    "Multiple Lenses -> Fiber: 1",
+    "Multiple Lenses -> Lens Off Center: 1",
+    "Wet Package -> Bubble Cluster: 1",
+    "Bubble Cluster -> Multiple Lenses: 1",
+    "Bubble On Edge -> Bubble: 1",
+    "Foreign Matter -> Dirty Strobe: 1",
+    "Low Dose Obstructing Region of Interest -> Package Misalignment: 1",
+    "Missing Lens -> Multiple Lenses: 1",
+    "Bubble Irregular -> Multiple Lenses: 1",
+    "HEMA Obstruction -> Extraneous Polymer: 1",
+    "Lens Off Center -> Multiple Lenses: 1",
+    "Low Dose Obstructing Region of Interest -> Wet Package: 1",
+    "Missing Lens -> Cavity Off Center: 1",
+    "Package Misalignment -> Multiple Lenses: 1",
+    "Wet Package -> Foreign Matter: 1",
+    "Bubble Cluster -> Bubble Irregular: 1",
+    "Bubble Irregular -> Bubble Cluster: 1",
+    "Bubble Irregular -> Extraneous Polymer: 1",
+    "Bubble Scatter -> Bubble Cluster: 1",
+    "Extraneous Polymer -> Low Dose Obstructing Region of Interest: 1",
+    "Lens Off Center -> Bubble Cluster: 1",
+    "Low Dose Obstructing Region of Interest -> Bubble Irregular: 1",
+    "Low Dose Obstructing Region of Interest -> Extraneous Polymer: 1",
+    "View Obstructed -> Cavity Off Center: 1",
+    "Bubble On 123 -> Fiber: 1",
+    "Bubble On 123 -> Foreign Matter: 1",
+    "Bubble On Edge -> Fiber: 1",
+    "Bubble Scatter -> Foreign Matter: 1",
+    "Fiber -> Bubble On 123: 1",
+    "HEMA Fragment -> Fiber: 1",
+    "Low Dose Obstructing Region of Interest -> Missing Lens: 1",
+    "Multiple Lenses -> HEMA Fragment: 1",
+    "Multiple Lenses -> Missing Lens: 1",
+    "View Obstructed -> Package Misalignment: 1",
+    "Wet Package -> Low Dose Obstructing Region of Interest: 1"
+  ],
+  "misclassified_test_pictures": 266,
+  "debris_family_errors": 111,
+  "totals": {
+    "train": 5875,
+    "test": 2527,
+    "cells": 87,
+    "training_time_sec": 3662.85
+  }
+}

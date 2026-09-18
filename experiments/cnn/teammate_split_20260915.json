@@ -1,0 +1,47 @@
+{
+  "source": "Teammate run supplied 2026-09-15 by the user: same six architectures, a different split of the same 22-class combined set, NO warmup.",
+  "notes": [
+    "Per-class recalls are stored in OUR class order (theirs uses different short codes: B, FI, LD, MLS where we use BB, FB, LDO, MUL; the 22 classes are the same and in the same order).",
+    "Inference per image is deliberately NOT stored here: their run had no warmup, so their ms/img carries a one-time process cost and is not comparable. Deferred, see experiments/cnn/README.md.",
+    "Training time IS stored: it depends on architecture, epochs and train-set size, so it is broadly comparable between the two splits."
+  ],
+  "our_test_images": 293,
+  "rows": [
+    {
+      "key": "resnet18",
+      "overall_accuracy": 87.03,
+      "training_time_sec": 228.23,
+      "per_class_recall_pct": [82.61, 57.14, 50.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0, 33.33, 100.0, 92.86, 0.0, 90.48, 50.0, 84.21, 75.0, 100.0, 97.62, 85.71, 60.0, 88.24]
+    },
+    {
+      "key": "resnet50",
+      "overall_accuracy": 86.69,
+      "training_time_sec": 352.06,
+      "per_class_recall_pct": [86.96, 57.14, 37.5, 66.67, 0.0, 100.0, 100.0, 100.0, 100.0, 0.0, 75.0, 85.71, 50.0, 95.24, 33.33, 89.47, 100.0, 100.0, 90.48, 100.0, 60.0, 88.24]
+    },
+    {
+      "key": "resnet50_inception",
+      "overall_accuracy": 90.44,
+      "training_time_sec": 417.55,
+      "per_class_recall_pct": [91.3, 71.43, 75.0, 66.67, 33.33, 100.0, 100.0, 100.0, 100.0, 33.33, 83.33, 100.0, 0.0, 90.48, 33.33, 84.21, 100.0, 100.0, 100.0, 100.0, 60.0, 88.24]
+    },
+    {
+      "key": "resnet50_se",
+      "overall_accuracy": 89.42,
+      "training_time_sec": 389.02,
+      "per_class_recall_pct": [82.61, 71.43, 62.5, 33.33, 0.0, 100.0, 100.0, 100.0, 100.0, 0.0, 100.0, 100.0, 0.0, 95.24, 50.0, 78.95, 100.0, 100.0, 95.24, 100.0, 60.0, 100.0]
+    },
+    {
+      "key": "resnet50_inception_attention",
+      "overall_accuracy": 88.74,
+      "training_time_sec": 455.26,
+      "per_class_recall_pct": [86.96, 85.71, 37.5, 33.33, 0.0, 0.0, 100.0, 100.0, 100.0, 0.0, 100.0, 92.86, 100.0, 95.24, 33.33, 78.95, 100.0, 100.0, 97.62, 100.0, 60.0, 88.24]
+    },
+    {
+      "key": "resnet50_inception_refine",
+      "overall_accuracy": 91.81,
+      "training_time_sec": 2131.2,
+      "per_class_recall_pct": [86.96, 85.71, 100.0, 66.67, 33.33, 100.0, 100.0, 100.0, 100.0, 33.33, 100.0, 92.86, 0.0, 90.48, 50.0, 84.21, 100.0, 100.0, 97.62, 100.0, 60.0, 94.12]
+    }
+  ]
+}

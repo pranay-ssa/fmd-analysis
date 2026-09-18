@@ -1,0 +1,31 @@
+line,class,pictures,train,test
+L24,Missing Primary Package,1147,803,344
+L24,Multiple Lenses,335,234,101
+L24,Foreign Matter,287,201,86
+L24,Lens Off Center,195,136,59
+L24,Missing Lens,183,128,55
+L24,HEMA Obstruction,151,106,45
+L25,Missing Primary Package,189,132,57
+L25,Multiple Lenses,276,193,83
+L25,Foreign Matter,84,59,25
+L25,Lens Off Center,5,3,2
+L25,Missing Lens,6,4,2
+L25,HEMA Obstruction,18,13,5
+L26,Missing Primary Package,7,5,2
+L26,Multiple Lenses,674,472,202
+L26,Foreign Matter,162,113,49
+L26,Lens Off Center,8,6,2
+L26,Missing Lens,3,2,1
+L26,HEMA Obstruction,2,1,1
+L27,Missing Primary Package,12,8,4
+L27,Multiple Lenses,54,38,16
+L27,Foreign Matter,549,384,165
+L27,Lens Off Center,27,19,8
+L27,Missing Lens,81,57,24
+L27,HEMA Obstruction,2,1,1
+L31,Missing Primary Package,72,50,22
+L31,Multiple Lenses,97,68,29
+L31,Foreign Matter,196,137,59
+L31,Lens Off Center,20,14,6
+L31,Missing Lens,51,36,15
+L31,HEMA Obstruction,2,1,1

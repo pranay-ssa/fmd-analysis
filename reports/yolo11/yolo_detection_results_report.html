@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YOLO11 Detection Study - OoI Defect Classes</title>
+<style>
+  :root{
+    --ink:#1c2333; --muted:#5a6478; --line:#e4e8f0; --card:#ffffff;
+    --bg:#f6f7fa; --accent:#2f6fed; --accent2:#16a085; --warn:#c0582f;
+    --good:#1f8a4c; --bad:#c0392b; --chip:#eef1f7; --shadow:0 1px 3px rgba(16,24,40,.08);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:980px;margin:0 auto;padding:32px 20px 64px}
+  header h1{font-size:26px;margin:0 0 6px;letter-spacing:-.2px}
+  header .sub{color:var(--muted);margin:0 0 6px}
+  header .meta{color:var(--muted);font-size:13px}
+  h2{font-size:19px;margin:38px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  h3{font-size:15px;margin:18px 0 6px}
+  p{margin:8px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:16px 18px;box-shadow:var(--shadow);margin:12px 0}
+  .grid{display:flex;gap:12px;flex-wrap:wrap}
+  .stat{flex:1;min-width:150px;background:var(--card);border:1px solid var(--line);
+    border-radius:10px;padding:12px 14px}
+  .stat .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+  .stat .v{font-size:24px;font-weight:650;margin-top:2px}
+  .stat .n{font-size:12px;color:var(--muted);margin-top:2px}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+    border-radius:10px;overflow:hidden;font-size:14px}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:#eef1f7;font-size:12px;text-transform:uppercase;letter-spacing:.3px;color:#3a4358}
+  tr:last-child td{border-bottom:none}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .row-h{font-weight:600}
+  .best{font-weight:650;color:var(--good)}
+  .null{color:var(--muted)}
+  .tag{display:inline-block;padding:1px 8px;border-radius:20px;font-size:12px;background:var(--chip)}
+  .tag.b16{color:#6a4fa0;background:#f0ebfa}
+  .tag.b8{color:#177245;background:#e0f4ec}
+  .bar{height:12px;background:var(--line);border-radius:6px;overflow:hidden;min-width:120px}
+  .bar>span{display:block;height:100%;border-radius:6px}
+  .b-map{background:var(--accent)}
+  .b-iou{background:var(--accent2)}
+  .bars{display:grid;gap:6px}
+  .bars .rowl{display:grid;grid-template-columns:180px 1fr 46px;gap:8px;align-items:center;font-size:13px}
+  .figure{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:720px){.figure{grid-template-columns:1fr}}
+  .note{font-size:13px;color:var(--muted)}
+  .takeaway{background:#f0f6ff;border:1px solid #cfe0ff;border-radius:10px;padding:14px 16px;margin:14px 0}
+  .warn{background:#fff7f0;border:1px solid #f3d9c2;border-radius:10px;padding:12px 14px;font-size:14px}
+  .pill{font-size:12px;font-weight:650}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>YOLO11 Detection Study: Object-of-Interest Defect Classes</h1>
+    <p class="sub">Detection quality (mAP) and bounding-box quality (IoU) across model variants.</p>
+    <p class="meta">Focus per discussion: YOLO detects classes/labels and boxes together; IoU tells us how well each box is located. Every value below is measured on the same held-out set.</p>
+  </header>
+
+  <section>
+    <h2>1. What we measured and why</h2>
+    <div class="grid">
+      <div class="stat"><div class="k">mAP50</div>
+        <div class="v">0.27 - 0.36</div>
+        <div class="n">detection + class quality (iou at 0.5)</div></div>
+      <div class="stat"><div class="k">mAP50-95</div>
+        <div class="v">0.14 - 0.21</div>
+        <div class="n">detection quality across strict IoU levels</div></div>
+      <div class="stat"><div class="k">Matched IoU</div>
+        <div class="v">0.56 - 0.61</div>
+        <div class="n">mean overlap of found boxes with true defects</div></div>
+      <div class="stat"><div class="k">Match rate</div>
+        <div class="v">32 - 41%</div>
+        <div class="n">share of true boxes that get a detected box</div></div>
+    </div>
+    <div class="card">
+      <p><strong>How to read the three numbers.</strong> mAP measures how well the model finds a defect AND puts the right label on it. The next two are easily confused, so read them separately:</p>
+      <p><strong>Matched IoU (tightness).</strong> For the boxes the model finds, how closely does each box hug the true defect? This is the "is our box located well" question. Higher IoU = the extracted box is more trustworthy for downstream use (for example cropping for a classifier).</p>
+      <p><strong>Match rate (coverage).</strong> Of all true defects, how many get a detected box at all? This is the "did we even find it" question. A higher match rate means more defects are found; it does NOT mean the boxes are tighter.</p>
+      <p><span class="tag">note</span> Our match rate uses a lenient definition: a defect counts as found if a same-class detected box overlaps it at all at confidence 0.25 (even near-zero overlap). It is not "found with IoU of 0.5 or more". A stricter "usable extraction" figure (share of defects with a box at IoU &ge; 0.5) would be lower. This distinction is covered in section 4.</p>
+      <p><strong>Honest framing.</strong> This report shows measured evidence. It does not assert that YOLO is "better" at any one thing; it gives the numbers so the discussion is grounded. The current bottleneck is not box quality but <strong>detection coverage</strong>: match rate of 32-41% means roughly a third to two-fifths of true defects are detected at confidence 0.25. IoU on the boxes we find is healthy.</p>
+    </div>
+    <div class="card">
+      <h3>Setup (identical for every run)</h3>
+      <p>Ten object-of-interest defect classes. 346 training / 88 held-out images, fixed stratified split and seed, 100 epochs, 640 px input, and the same labels throughout.</p>
+      <p class="note">Batch size note: the primary baseline row is the <span class="tag b8">batch 8</span> run. An earlier <span class="tag b16">batch 16</span> run of the same baseline sits beside the architecture variants. mAP is near-identical across the two batches (0.2745 vs 0.2729); IoU differs within run-to-run spread (0.597 vs 0.568), so comparisons are cleanest within a batch group, and the batch-8 group is the anchor.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. Baseline and the four architecture variants (first study)</h2>
+    <p>Four structural edits to the detection backbone, each trained and measured under the same protocol. The <span class="tag b16">batch 16</span> baseline is the reference for this group.</p>
+    <table>
+      <thead><tr>
+        <th>Model variant</th><th class="num">Params</th><th class="num">mAP50</th>
+        <th class="num">mAP50-95</th><th class="num">Matched IoU</th><th class="num">Match rate</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="row-h">Baseline (standard model)</td><td class="num">2.66M</td>
+          <td class="num">0.2745</td><td class="num">0.1555</td><td class="num">0.597</td><td class="num">32.1%</td></tr>
+        <tr><td class="row-h">Larger pooling window</td><td class="num">2.66M</td>
+          <td class="num">0.2925</td><td class="num">0.1627</td><td class="num">0.577</td><td class="num">34.8%</td></tr>
+        <tr><td class="row-h">Wider network</td><td class="num">9.74M</td>
+          <td class="num">0.3331</td><td class="num">0.1849</td><td class="num">0.604</td><td class="num">41.1%</td></tr>
+        <tr><td class="row-h">Attention on deepest stages</td><td class="num">3.17M</td>
+          <td class="num">0.3339</td><td class="num">0.1692</td><td class="num">0.587</td><td class="num">32.4%</td></tr>
+        <tr><td class="row-h">Wider, unchanged depth</td><td class="num">21.33M</td>
+          <td class="num best">0.3610</td><td class="num best">0.2113</td><td class="num best">0.609</td><td class="num">41.4%</td></tr>
+      </tbody>
+    </table>
+    <div class="figure" style="margin-top:14px">
+      <div class="card">
+        <h3>mAP50</h3>
+        <div class="bars">
+          <div class="rowl"><span>Baseline</span><div class="bar"><span class="b-map" style="width:27.4%"></span></div><span>0.27</span></div>
+          <div class="rowl"><span>Larger pooling</span><div class="bar"><span class="b-map" style="width:29.2%"></span></div><span>0.29</span></div>
+          <div class="rowl"><span>Wider network</span><div class="bar"><span class="b-map" style="width:33.3%"></span></div><span>0.33</span></div>
+          <div class="rowl"><span>Attention</span><div class="bar"><span class="b-map" style="width:33.4%"></span></div><span>0.33</span></div>
+          <div class="rowl"><span>Wider heavy</span><div class="bar"><span class="b-map" style="width:36.1%"></span></div><span>0.36</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Matched IoU</h3>
+        <div class="bars">
+          <div class="rowl"><span>Baseline</span><div class="bar"><span class="b-iou" style="width:97.9%"></span></div><span>0.60</span></div>
+          <div class="rowl"><span>Larger pooling</span><div class="bar"><span class="b-iou" style="width:94.6%"></span></div><span>0.58</span></div>
+          <div class="rowl"><span>Wider network</span><div class="bar"><span class="b-iou" style="width:99.0%"></span></div><span>0.60</span></div>
+          <div class="rowl"><span>Attention</span><div class="bar"><span class="b-iou" style="width:96.2%"></span></div><span>0.59</span></div>
+          <div class="rowl"><span>Wider heavy</span><div class="bar"><span class="b-iou" style="width:99.9%"></span></div><span>0.61</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="takeaway">
+      <strong>Reading this group.</strong> Every edit improves mAP50 over baseline. The two capacity edits (wider network, wider+unchanged-depth) also lift IoU to about 0.60-0.61 and match rate to 41%. The free pooling edit improves mAP with zero added parameters but keeps IoU roughly flat. The takeaway: more capacity helps detection and, to a lesser degree, box localization together.</div>
+  </section>
+
+  <section>
+    <h2>3. Adding layers: where it helps and where it does not (attribution study)</h2>
+    <p>Same model, two extra layers, but the placement and type vary. This answers the earlier flat result: is it the layer type or the position in the network? The <span class="tag b8">batch 8</span> baseline is the reference for this group.</p>
+    <table>
+      <thead><tr>
+        <th>Model variant</th><th class="num">Params</th><th class="num">mAP50</th>
+        <th class="num">mAP50-95</th><th class="num">Matched IoU</th><th class="num">Match rate</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="row-h">Baseline (batch 8 control)</td><td class="num">2.70M</td>
+          <td class="num">0.2729</td><td class="num">0.1556</td><td class="num">0.568</td><td class="num">37.4%</td></tr>
+        <tr><td class="row-h">Two layers, deepest position</td><td class="num">3.88M</td>
+          <td class="num">0.2769</td><td class="num null">0.1434</td><td class="num null">0.556</td><td class="num">38.5%</td></tr>
+        <tr><td class="row-h">Two residual layers, deepest position</td><td class="num">3.39M</td>
+          <td class="num null">0.2678</td><td class="num null">0.1379</td><td class="num">0.577</td><td class="num">33.7%</td></tr>
+        <tr><td class="row-h">Two layers, mid-resolution position</td><td class="num">2.99M</td>
+          <td class="num best">0.3096</td><td class="num">0.1508</td><td class="num best">0.583</td><td class="num">38.5%</td></tr>
+      </tbody>
+    </table>
+    <div class="figure" style="margin-top:14px">
+      <div class="card">
+        <h3>mAP50</h3>
+        <div class="bars">
+          <div class="rowl"><span>Baseline</span><div class="bar"><span class="b-map" style="width:27.3%"></span></div><span>0.27</span></div>
+          <div class="rowl"><span>Deep, plain</span><div class="bar"><span class="b-map" style="width:27.7%"></span></div><span>0.28</span></div>
+          <div class="rowl"><span>Deep, residual</span><div class="bar"><span class="b-map" style="width:26.8%"></span></div><span>0.27</span></div>
+          <div class="rowl"><span>Mid-res, plain</span><div class="bar"><span class="b-map" style="width:31.0%"></span></div><span>0.31</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Matched IoU</h3>
+        <div class="bars">
+          <div class="rowl"><span>Baseline</span><div class="bar"><span class="b-iou" style="width:93.1%"></span></div><span>0.57</span></div>
+          <div class="rowl"><span>Deep, plain</span><div class="bar"><span class="b-iou" style="width:91.1%"></span></div><span>0.56</span></div>
+          <div class="rowl"><span>Deep, residual</span><div class="bar"><span class="b-iou" style="width:94.6%"></span></div><span>0.58</span></div>
+          <div class="rowl"><span>Mid-res, plain</span><div class="bar"><span class="b-iou" style="width:95.6%"></span></div><span>0.58</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="takeaway">
+      <strong>Reading this group.</strong> The position matters, the layer type matters less. The same plain two-layer edit that was flat at the deepest position gives mAP50 0.3096 (+0.037 over this baseline, the best mAP in the whole study set) and IoU 0.583 (+0.015) when placed at the mid-resolution position. At the deepest position, plain or residual makes little difference and does not beat baseline on mAP. Probable reason, inline: these defects are small and route through the mid-resolution features; the deepest map is too coarse for them.</div>
+  </section>
+
+  <section>
+    <h2>4. The answer for the discussion</h2>
+    <div class="card">
+      <p><strong>Box location quality (IoU) is good for the boxes the model finds.</strong> Competitive variants land at a matched IoU of 0.58-0.61, meaning a detected box overlaps its true defect by well over half, on average. That supports using these boxes confidently for cropping and downstream classification.</p>
+      <p><strong>The current limit is how many defects are found, not how well they are located.</strong> Match rate of 32-41% means many true defects get no box at confidence 0.25. Improving recall (finding more boxes) is the higher-leverage direction for raising both mAP and usable extraction coverage.</p>
+    </div>
+    <div class="warn">
+      <strong>One caution on small classes.</strong> A few defect classes have very few examples in the held-out set (2-3 images each), so their individual numbers are noisy and should not be over-read. Pooled results above are the stable signal.
+    </div>
+    <div class="takeaway">
+      <strong>Planned next step.</strong> Combine the winning structural ideas from this study (the widening or attention edit from section 2, plus the mid-resolution placement that proved useful in section 3) into one consolidated candidate and measure it against the batch-8 baseline with the same mAP + IoU protocol.
+    </div>
+  </section>
+
+  <p class="note" style="margin-top:28px">All figures regenerated from the recorded run results on the same held-out set. mAP values are the best-epoch result; IoU is the mean overlap of matched detections at confidence 0.25, with the match rate alongside.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+ "yolo11n_crop_bbox": {
+  "run": "yolo11n_crop_bbox",
+  "n_gt": 377,
+  "note": "detections from Ultralytics save_txt (conf 0.001), same normalized frame as GT and val",
+  "matched_ious": {
+   "n": 363,
+   "mean": 0.6953,
+   "median": 0.7863
+  },
+  "match_rate": 0.9629,
+  "localization_ceiling": {
+   "mean": 0.7274,
+   "median": 0.7942,
+   "frac>=0.50": 0.878,
+   "frac>=0.75": 0.6286,
+   "frac==0": 0.0371
+  }
+ },
+ "yolo26n_crop_bbox": {
+  "run": "yolo26n_crop_bbox",
+  "n_gt": 377,
+  "note": "detections from Ultralytics save_txt (conf 0.001), same normalized frame as GT and val",
+  "matched_ious": {
+   "n": 361,
+   "mean": 0.7278,
+   "median": 0.8042
+  },
+  "match_rate": 0.9576,
+  "localization_ceiling": {
+   "mean": 0.7382,
+   "median": 0.8112,
+   "frac>=0.50": 0.878,
+   "frac>=0.75": 0.7003,
+   "frac==0": 0.0424
+  }
+ }
+}

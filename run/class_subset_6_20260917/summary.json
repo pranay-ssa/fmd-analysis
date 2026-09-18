@@ -1,0 +1,213 @@
+{
+  "classes": [
+    "Missing Primary Package",
+    "Multiple Lenses",
+    "Foreign Matter",
+    "Lens Off Center",
+    "Missing Lens",
+    "HEMA Obstruction"
+  ],
+  "lines": {
+    "L24": {
+      "classes": {
+        "Missing Primary Package": {
+          "pictures": 1147,
+          "train": 803,
+          "test": 344
+        },
+        "Multiple Lenses": {
+          "pictures": 335,
+          "train": 234,
+          "test": 101
+        },
+        "Foreign Matter": {
+          "pictures": 287,
+          "train": 201,
+          "test": 86
+        },
+        "Lens Off Center": {
+          "pictures": 195,
+          "train": 136,
+          "test": 59
+        },
+        "Missing Lens": {
+          "pictures": 183,
+          "train": 128,
+          "test": 55
+        },
+        "HEMA Obstruction": {
+          "pictures": 151,
+          "train": 106,
+          "test": 45
+        }
+      },
+      "totals": {
+        "pictures": 2298,
+        "train": 1608,
+        "test": 690
+      }
+    },
+    "L25": {
+      "classes": {
+        "Missing Primary Package": {
+          "pictures": 189,
+          "train": 132,
+          "test": 57
+        },
+        "Multiple Lenses": {
+          "pictures": 276,
+          "train": 193,
+          "test": 83
+        },
+        "Foreign Matter": {
+          "pictures": 84,
+          "train": 59,
+          "test": 25
+        },
+        "Lens Off Center": {
+          "pictures": 5,
+          "train": 3,
+          "test": 2
+        },
+        "Missing Lens": {
+          "pictures": 6,
+          "train": 4,
+          "test": 2
+        },
+        "HEMA Obstruction": {
+          "pictures": 18,
+          "train": 13,
+          "test": 5
+        }
+      },
+      "totals": {
+        "pictures": 578,
+        "train": 404,
+        "test": 174
+      }
+    },
+    "L26": {
+      "classes": {
+        "Missing Primary Package": {
+          "pictures": 7,
+          "train": 5,
+          "test": 2
+        },
+        "Multiple Lenses": {
+          "pictures": 674,
+          "train": 472,
+          "test": 202
+        },
+        "Foreign Matter": {
+          "pictures": 162,
+          "train": 113,
+          "test": 49
+        },
+        "Lens Off Center": {
+          "pictures": 8,
+          "train": 6,
+          "test": 2
+        },
+        "Missing Lens": {
+          "pictures": 3,
+          "train": 2,
+          "test": 1
+        },
+        "HEMA Obstruction": {
+          "pictures": 2,
+          "train": 1,
+          "test": 1
+        }
+      },
+      "totals": {
+        "pictures": 856,
+        "train": 599,
+        "test": 257
+      }
+    },
+    "L27": {
+      "classes": {
+        "Missing Primary Package": {
+          "pictures": 12,
+          "train": 8,
+          "test": 4
+        },
+        "Multiple Lenses": {
+          "pictures": 54,
+          "train": 38,
+          "test": 16
+        },
+        "Foreign Matter": {
+          "pictures": 549,
+          "train": 384,
+          "test": 165
+        },
+        "Lens Off Center": {
+          "pictures": 27,
+          "train": 19,
+          "test": 8
+        },
+        "Missing Lens": {
+          "pictures": 81,
+          "train": 57,
+          "test": 24
+        },
+        "HEMA Obstruction": {
+          "pictures": 2,
+          "train": 1,
+          "test": 1
+        }
+      },
+      "totals": {
+        "pictures": 725,
+        "train": 507,
+        "test": 218
+      }
+    },
+    "L31": {
+      "classes": {
+        "Missing Primary Package": {
+          "pictures": 72,
+          "train": 50,
+          "test": 22
+        },
+        "Multiple Lenses": {
+          "pictures": 97,
+          "train": 68,
+          "test": 29
+        },
+        "Foreign Matter": {
+          "pictures": 196,
+          "train": 137,
+          "test": 59
+        },
+        "Lens Off Center": {
+          "pictures": 20,
+          "train": 14,
+          "test": 6
+        },
+        "Missing Lens": {
+          "pictures": 51,
+          "train": 36,
+          "test": 15
+        },
+        "HEMA Obstruction": {
+          "pictures": 2,
+          "train": 1,
+          "test": 1
+        }
+      },
+      "totals": {
+        "pictures": 438,
+        "train": 306,
+        "test": 132
+      }
+    }
+  },
+  "totals": {
+    "pictures": 4895,
+    "train": 3424,
+    "test": 1471
+  },
+  "source": "run/line_splits_20260917"
+}

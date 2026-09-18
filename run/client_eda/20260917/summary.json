@@ -1,0 +1,19 @@
+{
+  "source": "run/line_eda/20260916/image_md5_records.csv",
+  "files_total": 12079,
+  "pictures_total": 10614,
+  "pictures_two_updated_folders": 10437,
+  "old_library_files": 1465,
+  "old_library_only_pictures": 177,
+  "clear_set_aside": 2205,
+  "clear_kept_under_defect_label": 128,
+  "dataset_unique_pictures": 8409,
+  "lines": [
+    "L24",
+    "L25",
+    "L26",
+    "L27",
+    "L31"
+  ],
+  "multi_tag_pictures": 55
+}

@@ -1,0 +1,759 @@
+{
+  "lines": {
+    "L24": {
+      "line": "L24",
+      "arch": "resnet50",
+      "arch_label": "ResNet50 (Architecture 1 baseline)",
+      "split_csv": "/home/pranayp/line_experiment_20260917/subset6/splits/line_L24/split.csv",
+      "preprocessing": "raw frame resized to 224x224 bilinear, no crop",
+      "epochs": 50,
+      "batch_size": 4,
+      "seed": 42,
+      "num_classes": 6,
+      "class_names": [
+        "Foreign Matter",
+        "HEMA Obstruction",
+        "Lens Off Center",
+        "Missing Lens",
+        "Missing Primary Package",
+        "Multiple Lenses"
+      ],
+      "num_train_images": 1608,
+      "num_test_images": 690,
+      "per_class_support": {
+        "train": {
+          "Foreign Matter": 201,
+          "HEMA Obstruction": 106,
+          "Lens Off Center": 136,
+          "Missing Lens": 128,
+          "Missing Primary Package": 803,
+          "Multiple Lenses": 234
+        },
+        "test": {
+          "Foreign Matter": 86,
+          "HEMA Obstruction": 45,
+          "Lens Off Center": 59,
+          "Missing Lens": 55,
+          "Missing Primary Package": 344,
+          "Multiple Lenses": 101
+        }
+      },
+      "overall_accuracy": 0.9783,
+      "overall_recall": 0.9609,
+      "training_time_sec": 828.9,
+      "inference_total_sec": 3.5482,
+      "inference_per_image_ms": 5.142,
+      "per_class": {
+        "Foreign Matter": {
+          "recall": 0.9651,
+          "precision": 0.954,
+          "f1": 0.9595,
+          "support": 86
+        },
+        "HEMA Obstruction": {
+          "recall": 0.9556,
+          "precision": 0.9556,
+          "f1": 0.9556,
+          "support": 45
+        },
+        "Lens Off Center": {
+          "recall": 0.8644,
+          "precision": 1.0,
+          "f1": 0.9273,
+          "support": 59
+        },
+        "Missing Lens": {
+          "recall": 1.0,
+          "precision": 0.9322,
+          "f1": 0.9649,
+          "support": 55
+        },
+        "Missing Primary Package": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 344
+        },
+        "Multiple Lenses": {
+          "recall": 0.9802,
+          "precision": 0.9519,
+          "f1": 0.9659,
+          "support": 101
+        }
+      },
+      "macro": {
+        "precision": 0.9656,
+        "recall": 0.9609,
+        "f1": 0.9622
+      },
+      "weighted": {
+        "precision": 0.9789,
+        "recall": 0.9783,
+        "f1": 0.978
+      }
+    },
+    "L25": {
+      "line": "L25",
+      "arch": "resnet50",
+      "arch_label": "ResNet50 (Architecture 1 baseline)",
+      "split_csv": "/home/pranayp/line_experiment_20260917/subset6/splits/line_L25/split.csv",
+      "preprocessing": "raw frame resized to 224x224 bilinear, no crop",
+      "epochs": 50,
+      "batch_size": 4,
+      "seed": 42,
+      "num_classes": 6,
+      "class_names": [
+        "Foreign Matter",
+        "HEMA Obstruction",
+        "Lens Off Center",
+        "Missing Lens",
+        "Missing Primary Package",
+        "Multiple Lenses"
+      ],
+      "num_train_images": 404,
+      "num_test_images": 174,
+      "per_class_support": {
+        "train": {
+          "Foreign Matter": 59,
+          "HEMA Obstruction": 13,
+          "Lens Off Center": 3,
+          "Missing Lens": 4,
+          "Missing Primary Package": 132,
+          "Multiple Lenses": 193
+        },
+        "test": {
+          "Foreign Matter": 25,
+          "HEMA Obstruction": 5,
+          "Lens Off Center": 2,
+          "Missing Lens": 2,
+          "Missing Primary Package": 57,
+          "Multiple Lenses": 83
+        }
+      },
+      "overall_accuracy": 0.9598,
+      "overall_recall": 0.7106,
+      "training_time_sec": 224.93,
+      "inference_total_sec": 2.6356,
+      "inference_per_image_ms": 15.147,
+      "per_class": {
+        "Foreign Matter": {
+          "recall": 1.0,
+          "precision": 0.9259,
+          "f1": 0.9615,
+          "support": 25
+        },
+        "HEMA Obstruction": {
+          "recall": 0.8,
+          "precision": 0.6667,
+          "f1": 0.7273,
+          "support": 5
+        },
+        "Lens Off Center": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "Missing Lens": {
+          "recall": 0.5,
+          "precision": 1.0,
+          "f1": 0.6667,
+          "support": 2
+        },
+        "Missing Primary Package": {
+          "recall": 1.0,
+          "precision": 0.9828,
+          "f1": 0.9913,
+          "support": 57
+        },
+        "Multiple Lenses": {
+          "recall": 0.9639,
+          "precision": 0.9756,
+          "f1": 0.9697,
+          "support": 83
+        }
+      },
+      "macro": {
+        "precision": 0.7585,
+        "recall": 0.7106,
+        "f1": 0.7194
+      },
+      "weighted": {
+        "precision": 0.951,
+        "recall": 0.9598,
+        "f1": 0.954
+      }
+    },
+    "L26": {
+      "line": "L26",
+      "arch": "resnet50",
+      "arch_label": "ResNet50 (Architecture 1 baseline)",
+      "split_csv": "/home/pranayp/line_experiment_20260917/subset6/splits/line_L26/split.csv",
+      "preprocessing": "raw frame resized to 224x224 bilinear, no crop",
+      "epochs": 50,
+      "batch_size": 4,
+      "seed": 42,
+      "num_classes": 6,
+      "class_names": [
+        "Foreign Matter",
+        "HEMA Obstruction",
+        "Lens Off Center",
+        "Missing Lens",
+        "Missing Primary Package",
+        "Multiple Lenses"
+      ],
+      "num_train_images": 599,
+      "num_test_images": 257,
+      "per_class_support": {
+        "train": {
+          "Foreign Matter": 113,
+          "HEMA Obstruction": 1,
+          "Lens Off Center": 6,
+          "Missing Lens": 2,
+          "Missing Primary Package": 5,
+          "Multiple Lenses": 472
+        },
+        "test": {
+          "Foreign Matter": 49,
+          "HEMA Obstruction": 1,
+          "Lens Off Center": 2,
+          "Missing Lens": 1,
+          "Missing Primary Package": 2,
+          "Multiple Lenses": 202
+        }
+      },
+      "overall_accuracy": 0.9455,
+      "overall_recall": 0.5665,
+      "training_time_sec": 322.31,
+      "inference_total_sec": 2.7574,
+      "inference_per_image_ms": 10.729,
+      "per_class": {
+        "Foreign Matter": {
+          "recall": 0.9388,
+          "precision": 0.8519,
+          "f1": 0.8932,
+          "support": 49
+        },
+        "HEMA Obstruction": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Lens Off Center": {
+          "recall": 0.5,
+          "precision": 0.25,
+          "f1": 0.3333,
+          "support": 2
+        },
+        "Missing Lens": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Missing Primary Package": {
+          "recall": 1.0,
+          "precision": 0.6667,
+          "f1": 0.8,
+          "support": 2
+        },
+        "Multiple Lenses": {
+          "recall": 0.9604,
+          "precision": 0.9949,
+          "f1": 0.9773,
+          "support": 202
+        }
+      },
+      "macro": {
+        "precision": 0.4606,
+        "recall": 0.5665,
+        "f1": 0.5006
+      },
+      "weighted": {
+        "precision": 0.9515,
+        "recall": 0.9455,
+        "f1": 0.9473
+      }
+    },
+    "L27": {
+      "line": "L27",
+      "arch": "resnet50",
+      "arch_label": "ResNet50 (Architecture 1 baseline)",
+      "split_csv": "/home/pranayp/line_experiment_20260917/subset6/splits/line_L27/split.csv",
+      "preprocessing": "raw frame resized to 224x224 bilinear, no crop",
+      "epochs": 50,
+      "batch_size": 4,
+      "seed": 42,
+      "num_classes": 6,
+      "class_names": [
+        "Foreign Matter",
+        "HEMA Obstruction",
+        "Lens Off Center",
+        "Missing Lens",
+        "Missing Primary Package",
+        "Multiple Lenses"
+      ],
+      "num_train_images": 507,
+      "num_test_images": 218,
+      "per_class_support": {
+        "train": {
+          "Foreign Matter": 384,
+          "HEMA Obstruction": 1,
+          "Lens Off Center": 19,
+          "Missing Lens": 57,
+          "Missing Primary Package": 8,
+          "Multiple Lenses": 38
+        },
+        "test": {
+          "Foreign Matter": 165,
+          "HEMA Obstruction": 1,
+          "Lens Off Center": 8,
+          "Missing Lens": 24,
+          "Missing Primary Package": 4,
+          "Multiple Lenses": 16
+        }
+      },
+      "overall_accuracy": 0.9633,
+      "overall_recall": 0.8064,
+      "training_time_sec": 283.4,
+      "inference_total_sec": 2.6521,
+      "inference_per_image_ms": 12.166,
+      "per_class": {
+        "Foreign Matter": {
+          "recall": 0.9636,
+          "precision": 0.9876,
+          "f1": 0.9755,
+          "support": 165
+        },
+        "HEMA Obstruction": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Lens Off Center": {
+          "recall": 0.875,
+          "precision": 0.7778,
+          "f1": 0.8235,
+          "support": 8
+        },
+        "Missing Lens": {
+          "recall": 1.0,
+          "precision": 0.96,
+          "f1": 0.9796,
+          "support": 24
+        },
+        "Missing Primary Package": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "Multiple Lenses": {
+          "recall": 1.0,
+          "precision": 0.8421,
+          "f1": 0.9143,
+          "support": 16
+        }
+      },
+      "macro": {
+        "precision": 0.7612,
+        "recall": 0.8064,
+        "f1": 0.7821
+      },
+      "weighted": {
+        "precision": 0.9619,
+        "recall": 0.9633,
+        "f1": 0.9618
+      }
+    },
+    "L31": {
+      "line": "L31",
+      "arch": "resnet50",
+      "arch_label": "ResNet50 (Architecture 1 baseline)",
+      "split_csv": "/home/pranayp/line_experiment_20260917/subset6/splits/line_L31/split.csv",
+      "preprocessing": "raw frame resized to 224x224 bilinear, no crop",
+      "epochs": 50,
+      "batch_size": 4,
+      "seed": 42,
+      "num_classes": 6,
+      "class_names": [
+        "Foreign Matter",
+        "HEMA Obstruction",
+        "Lens Off Center",
+        "Missing Lens",
+        "Missing Primary Package",
+        "Multiple Lenses"
+      ],
+      "num_train_images": 306,
+      "num_test_images": 132,
+      "per_class_support": {
+        "train": {
+          "Foreign Matter": 137,
+          "HEMA Obstruction": 1,
+          "Lens Off Center": 14,
+          "Missing Lens": 36,
+          "Missing Primary Package": 50,
+          "Multiple Lenses": 68
+        },
+        "test": {
+          "Foreign Matter": 59,
+          "HEMA Obstruction": 1,
+          "Lens Off Center": 6,
+          "Missing Lens": 15,
+          "Missing Primary Package": 22,
+          "Multiple Lenses": 29
+        }
+      },
+      "overall_accuracy": 0.9167,
+      "overall_recall": 0.7538,
+      "training_time_sec": 175.92,
+      "inference_total_sec": 1.4474,
+      "inference_per_image_ms": 10.965,
+      "per_class": {
+        "Foreign Matter": {
+          "recall": 1.0,
+          "precision": 0.9219,
+          "f1": 0.9593,
+          "support": 59
+        },
+        "HEMA Obstruction": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Lens Off Center": {
+          "recall": 0.8333,
+          "precision": 0.5,
+          "f1": 0.625,
+          "support": 6
+        },
+        "Missing Lens": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 15
+        },
+        "Missing Primary Package": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "f1": 1.0,
+          "support": 22
+        },
+        "Multiple Lenses": {
+          "recall": 0.6897,
+          "precision": 0.9524,
+          "f1": 0.8,
+          "support": 29
+        }
+      },
+      "macro": {
+        "precision": 0.729,
+        "recall": 0.7538,
+        "f1": 0.7307
+      },
+      "weighted": {
+        "precision": 0.9243,
+        "recall": 0.9167,
+        "f1": 0.9133
+      }
+    }
+  },
+  "cells": [
+    {
+      "line": "L24",
+      "class": "Foreign Matter",
+      "support": 86,
+      "recall": 0.9651,
+      "precision": 0.954,
+      "f1": 0.9595
+    },
+    {
+      "line": "L24",
+      "class": "HEMA Obstruction",
+      "support": 45,
+      "recall": 0.9556,
+      "precision": 0.9556,
+      "f1": 0.9556
+    },
+    {
+      "line": "L24",
+      "class": "Lens Off Center",
+      "support": 59,
+      "recall": 0.8644,
+      "precision": 1.0,
+      "f1": 0.9273
+    },
+    {
+      "line": "L24",
+      "class": "Missing Lens",
+      "support": 55,
+      "recall": 1.0,
+      "precision": 0.9322,
+      "f1": 0.9649
+    },
+    {
+      "line": "L24",
+      "class": "Missing Primary Package",
+      "support": 344,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L24",
+      "class": "Multiple Lenses",
+      "support": 101,
+      "recall": 0.9802,
+      "precision": 0.9519,
+      "f1": 0.9659
+    },
+    {
+      "line": "L25",
+      "class": "Foreign Matter",
+      "support": 25,
+      "recall": 1.0,
+      "precision": 0.9259,
+      "f1": 0.9615
+    },
+    {
+      "line": "L25",
+      "class": "HEMA Obstruction",
+      "support": 5,
+      "recall": 0.8,
+      "precision": 0.6667,
+      "f1": 0.7273
+    },
+    {
+      "line": "L25",
+      "class": "Lens Off Center",
+      "support": 2,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L25",
+      "class": "Missing Lens",
+      "support": 2,
+      "recall": 0.5,
+      "precision": 1.0,
+      "f1": 0.6667
+    },
+    {
+      "line": "L25",
+      "class": "Missing Primary Package",
+      "support": 57,
+      "recall": 1.0,
+      "precision": 0.9828,
+      "f1": 0.9913
+    },
+    {
+      "line": "L25",
+      "class": "Multiple Lenses",
+      "support": 83,
+      "recall": 0.9639,
+      "precision": 0.9756,
+      "f1": 0.9697
+    },
+    {
+      "line": "L26",
+      "class": "Foreign Matter",
+      "support": 49,
+      "recall": 0.9388,
+      "precision": 0.8519,
+      "f1": 0.8932
+    },
+    {
+      "line": "L26",
+      "class": "HEMA Obstruction",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L26",
+      "class": "Lens Off Center",
+      "support": 2,
+      "recall": 0.5,
+      "precision": 0.25,
+      "f1": 0.3333
+    },
+    {
+      "line": "L26",
+      "class": "Missing Lens",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L26",
+      "class": "Missing Primary Package",
+      "support": 2,
+      "recall": 1.0,
+      "precision": 0.6667,
+      "f1": 0.8
+    },
+    {
+      "line": "L26",
+      "class": "Multiple Lenses",
+      "support": 202,
+      "recall": 0.9604,
+      "precision": 0.9949,
+      "f1": 0.9773
+    },
+    {
+      "line": "L27",
+      "class": "Foreign Matter",
+      "support": 165,
+      "recall": 0.9636,
+      "precision": 0.9876,
+      "f1": 0.9755
+    },
+    {
+      "line": "L27",
+      "class": "HEMA Obstruction",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L27",
+      "class": "Lens Off Center",
+      "support": 8,
+      "recall": 0.875,
+      "precision": 0.7778,
+      "f1": 0.8235
+    },
+    {
+      "line": "L27",
+      "class": "Missing Lens",
+      "support": 24,
+      "recall": 1.0,
+      "precision": 0.96,
+      "f1": 0.9796
+    },
+    {
+      "line": "L27",
+      "class": "Missing Primary Package",
+      "support": 4,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L27",
+      "class": "Multiple Lenses",
+      "support": 16,
+      "recall": 1.0,
+      "precision": 0.8421,
+      "f1": 0.9143
+    },
+    {
+      "line": "L31",
+      "class": "Foreign Matter",
+      "support": 59,
+      "recall": 1.0,
+      "precision": 0.9219,
+      "f1": 0.9593
+    },
+    {
+      "line": "L31",
+      "class": "HEMA Obstruction",
+      "support": 1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    {
+      "line": "L31",
+      "class": "Lens Off Center",
+      "support": 6,
+      "recall": 0.8333,
+      "precision": 0.5,
+      "f1": 0.625
+    },
+    {
+      "line": "L31",
+      "class": "Missing Lens",
+      "support": 15,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L31",
+      "class": "Missing Primary Package",
+      "support": 22,
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0
+    },
+    {
+      "line": "L31",
+      "class": "Multiple Lenses",
+      "support": 29,
+      "recall": 0.6897,
+      "precision": 0.9524,
+      "f1": 0.8
+    }
+  ],
+  "bands": [
+    {
+      "band": "1 to 4 test pictures",
+      "cells": 9,
+      "mean_f1": 0.3111,
+      "median_f1": 0.0,
+      "zero_f1_cells": 5,
+      "min_f1": 0.0,
+      "max_f1": 1.0
+    },
+    {
+      "band": "5 to 24 test pictures",
+      "cells": 7,
+      "mean_f1": 0.8671,
+      "median_f1": 0.9143,
+      "zero_f1_cells": 0,
+      "min_f1": 0.625,
+      "max_f1": 1.0
+    },
+    {
+      "band": "25 or more test pictures",
+      "cells": 14,
+      "mean_f1": 0.9501,
+      "median_f1": 0.9632,
+      "zero_f1_cells": 0,
+      "min_f1": 0.8,
+      "max_f1": 1.0
+    }
+  ],
+  "confusion_directions": [
+    "Multiple Lenses -> Foreign Matter: 12",
+    "Lens Off Center -> Foreign Matter: 7",
+    "Foreign Matter -> Multiple Lenses: 6",
+    "Multiple Lenses -> HEMA Obstruction: 5",
+    "Multiple Lenses -> Lens Off Center: 5",
+    "HEMA Obstruction -> Multiple Lenses: 4",
+    "Lens Off Center -> Missing Lens: 4",
+    "Foreign Matter -> Lens Off Center: 4",
+    "HEMA Obstruction -> Foreign Matter: 2",
+    "Lens Off Center -> Multiple Lenses: 2",
+    "Missing Lens -> Missing Primary Package: 1",
+    "Foreign Matter -> Missing Primary Package: 1",
+    "Missing Lens -> Lens Off Center: 1",
+    "Foreign Matter -> Missing Lens: 1"
+  ],
+  "misclassified_test_pictures": 55,
+  "debris_family_errors": 0,
+  "totals": {
+    "train": 3424,
+    "test": 1471,
+    "cells": 30,
+    "training_time_sec": 1835.46
+  }
+}

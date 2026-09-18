@@ -1,0 +1,36 @@
+{
+ "yolo11n_crop_bbox_fixedlr": {
+  "run": "yolo11n_crop_bbox_fixedlr",
+  "n_gt": 377,
+  "matched_ious": {
+   "n": 363,
+   "mean": 0.7298,
+   "median": 0.7996
+  },
+  "match_rate": 0.9629,
+  "localization_ceiling": {
+   "mean": 0.7425,
+   "median": 0.8057,
+   "frac>=0.50": 0.878,
+   "frac>=0.75": 0.6393,
+   "frac==0": 0.0371
+  }
+ },
+ "yolo26n_crop_bbox_fixedlr": {
+  "run": "yolo26n_crop_bbox_fixedlr",
+  "n_gt": 377,
+  "matched_ious": {
+   "n": 364,
+   "mean": 0.7281,
+   "median": 0.794
+  },
+  "match_rate": 0.9655,
+  "localization_ceiling": {
+   "mean": 0.75,
+   "median": 0.8112,
+   "frac>=0.50": 0.878,
+   "frac>=0.75": 0.695,
+   "frac==0": 0.0345
+  }
+ }
+}

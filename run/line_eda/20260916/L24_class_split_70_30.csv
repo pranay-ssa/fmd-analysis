@@ -1,0 +1,23 @@
+class,pictures,train_70,test_30,note
+Missing Primary Package,1147,803,344,
+Multiple Lenses,335,234,101,
+Foreign Matter,287,201,86,
+Lens Off Center,195,136,59,
+Missing Lens,183,128,55,
+HEMA Obstruction,151,106,45,
+Low Dose Obstructing Region of Interest,108,76,32,
+Cavity Off Center,93,65,28,
+Fiber,86,60,26,
+Bubble,82,57,25,
+Extraneous Polymer,59,41,18,
+Package Misalignment,32,22,10,
+Dirty Camera,25,17,8,
+View Obstructed,19,13,6,
+Bubble Cluster,18,13,5,
+Bubble Irregular,13,9,4,thin test set
+Wet Package,10,7,3,thin test set
+HEMA Fragment,5,3,2,thin test set
+Bubble On Edge,3,2,1,thin test set
+Bubble On 123,1,1,0,one picture only
+Bubble Scatter,1,1,0,one picture only
+TOTAL,2853,1995,858,21 classes

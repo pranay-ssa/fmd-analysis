@@ -1,0 +1,98 @@
+{
+  "line": "L25",
+  "rule": "exact-count stratified: seed 42, test = round-half-up(pictures x 0.30), train = rest",
+  "seed": 42,
+  "classes": {
+    "Bubble": {
+      "pictures": 18,
+      "train": 13,
+      "test": 5
+    },
+    "Bubble Cluster": {
+      "pictures": 2,
+      "train": 1,
+      "test": 1
+    },
+    "Bubble On Edge": {
+      "pictures": 3,
+      "train": 2,
+      "test": 1
+    },
+    "Cavity Off Center": {
+      "pictures": 40,
+      "train": 28,
+      "test": 12
+    },
+    "Dirty Strobe": {
+      "pictures": 12,
+      "train": 8,
+      "test": 4
+    },
+    "Extraneous Polymer": {
+      "pictures": 9,
+      "train": 6,
+      "test": 3
+    },
+    "Fiber": {
+      "pictures": 37,
+      "train": 26,
+      "test": 11
+    },
+    "Foreign Matter": {
+      "pictures": 84,
+      "train": 59,
+      "test": 25
+    },
+    "HEMA Obstruction": {
+      "pictures": 18,
+      "train": 13,
+      "test": 5
+    },
+    "Lens Off Center": {
+      "pictures": 5,
+      "train": 3,
+      "test": 2
+    },
+    "Low Dose Obstructing Region of Interest": {
+      "pictures": 57,
+      "train": 40,
+      "test": 17
+    },
+    "Missing Lens": {
+      "pictures": 6,
+      "train": 4,
+      "test": 2
+    },
+    "Missing Primary Package": {
+      "pictures": 189,
+      "train": 132,
+      "test": 57
+    },
+    "Multiple Lenses": {
+      "pictures": 276,
+      "train": 193,
+      "test": 83
+    },
+    "Package Misalignment": {
+      "pictures": 176,
+      "train": 123,
+      "test": 53
+    },
+    "View Obstructed": {
+      "pictures": 16,
+      "train": 11,
+      "test": 5
+    },
+    "Wet Package": {
+      "pictures": 2,
+      "train": 1,
+      "test": 1
+    }
+  },
+  "totals": {
+    "classes": 17,
+    "pictures": 950,
+    "train": 663,
+    "test": 287
+  }
+}
