@@ -62,14 +62,31 @@ Two ways to close that gap, both one change:
   `runs/cnn/lines`, `runs/cnn/lines_subset6` and `runs/cnn/lines_multiscale`. This adds about 7 MB.
 - Or copy the same files under `run/`, which git already versions.
 
-## 5. The first push
+## 5. The first push, done 2026-09-18
+
+The credential manager held no account, so the first attempt was refused with "Repository not
+found". That answer proves nothing about a repository's existence: GitHub gives the same answer to
+an unauthenticated caller for a repository it hides, and to an authenticated caller for one that is
+absent. Both cases look identical from the outside.
+
+The sign-in was banked first:
 
 ```bash
-git push -u origin master
+git-credential-manager github login     # opens the browser, stores the token
+git-credential-manager github list      # prints: pranay-ssa
 ```
 
-The credential manager opens a browser sign-in on the first push. It must be signed in as
-`pranay-ssa`, not as the personal account, or the push fails against the work repository.
+The repository was then created empty, with no README, and the push sent the initial commit:
+
+| Check | Result |
+|---|---|
+| Push | `master -> master`, a new branch, upstream set to `origin/master` |
+| Remote tip | `3f7c544a48eb29ca8a9c7a18f5fa151dd5287f9e` |
+| Local tip | the same commit, so the two agree |
+| Branch state | in step with `origin/master`, nothing ahead and nothing behind |
+
+A branch that reports neither "ahead" nor "behind" is the evidence that the push completed. The ten
+commits that had never been published are now off a single disk for the first time.
 
 ## 6. The state after the reset, verified
 
