@@ -1,0 +1,14 @@
+kind,file_name,folder_labels,assigned_class,boxes_in_annotation,box_labels,box_coords,frame,older_library_path,newer_folder_path
+two box classes,20241109_213824_L24_C10_9460_0.9988_0.4847.bmp,Bubble|Extraneous Polymer,Bubble,0,,,?x?,ICube Defects Library/Bubble,Updated ICube Objects/Extraneous Polymer
+two box classes,20241107_035652_L24_C13_9774_0.9997.bmp,Bubble|Fiber,Bubble,0,,,?x?,ICube Defects Library/Bubble,Updated ICube Objects/Fiber
+two box classes,20241109_083707_L24_C11_9765_0.9992_0.9159.bmp,Bubble|Fiber,Bubble,0,,,?x?,ICube Defects Library/Bubble,Updated ICube Objects/Fiber
+two box classes,20241106_185031_L24_C15_9521_0.9778_0.5263.bmp,Bubble|Foreign Matter,Bubble,0,,,?x?,ICube Defects Library/Bubble,Updated ICube Objects/Foreign Matter
+two box classes,20241102_140219_L27_PalletGHU1102145322_Cavity5_B01779V_Fail3_Score(0.9182535)_1.0000_0.9911.bmp,Bubble Irregular|Foreign Matter,Bubble Irregular,0,,,?x?,ICube Defects Library/Bubble Irregular,Updated ICube Objects/Foreign Matter
+two box classes,20241106_092943_L24_C10_9567_0.9981_0.7192.bmp,Bubble Irregular|Foreign Matter,Bubble Irregular,0,,,?x?,ICube Defects Library/Bubble Irregular,Updated ICube Objects/Foreign Matter
+two box classes,20260810_203017_L24_PalletGHB0811004554_Cavity15_B01BF2L_Fail7_Score(0.9880998).bmp,Extraneous Polymer|Foreign Matter,Extraneous Polymer,1,Extraneous Polymer,Extraneous Polymer 1135 987 1165 1023,2448.0x2048.0,ICube Defects Library/Extraneous Polymer,Updated ICube Objects/Foreign Matter
+two box classes,20260805_140220_L31_PalletGHB0805183759_Cavity8_B01BGTV_Fail7_Score(0.9999998)_1.0000_0.9856.bmp,Fiber|Foreign Matter,Foreign Matter,0,,,?x?,ICube Defects Library/Foreign Matter,Updated ICube Objects/Fiber
+two box classes,20241108_021953_L24_C5_9887_0.9901_0.5717.bmp,Foreign Matter|Wet Package,Wet Package,0,,,?x?,ICube Defects Library/Wet Package,Updated ICube Objects/Foreign Matter
+HEMA pair,20241104_010614_L24_C7_9784_0.5637.bmp,HEMA Fragment|HEMA Obstruction,HEMA Obstruction,0,,,?x?,ICube Defects Library/HEMA Obstruction,Updated ICube Categorical Classes/HEMA Obstruction
+HEMA pair,20241109_174228_L24_C4_9649_0.9824.bmp,HEMA Fragment|HEMA Obstruction,HEMA Obstruction,0,,,?x?,ICube Defects Library/HEMA Obstruction,Updated ICube Categorical Classes/HEMA Obstruction
+HEMA pair,20241102_004906_L24_C5_9471_0.6629.bmp,HEMA Fragment|HEMA Obstruction,HEMA Obstruction,0,,,?x?,ICube Defects Library/HEMA Obstruction,Updated ICube Categorical Classes/HEMA Obstruction
+HEMA pair,20241110_024940_L24_C13_9997_0.6242.bmp,HEMA Fragment|HEMA Obstruction,HEMA Obstruction,0,,,?x?,ICube Defects Library/HEMA Obstruction,Updated ICube Categorical Classes/HEMA Obstruction

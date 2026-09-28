@@ -1,0 +1,23 @@
+library_class,library_files,library_files_annotated_in_older_file,pictures_shared_with_drop,pictures_annotated_in_new_file,pictures_annotated_only_in_older_file,pictures_annotated_nowhere
+Bubble,114,113,113,1,112,0
+Bubble Cluster,36,36,36,0,36,0
+Bubble Irregular,44,44,44,0,44,0
+Bubble On 123,14,13,14,0,13,1
+Bubble On Edge,14,14,14,0,14,0
+Bubble Scatter,7,0,7,5,0,2
+Cavity Off Center,98,0,97,97,0,0
+Dirty Camera,25,0,25,25,0,0
+Dirty Strobe,43,0,43,42,0,1
+Extraneous Polymer,17,17,17,16,1,0
+Fiber,61,61,61,33,28,0
+Foreign Matter,71,69,70,0,68,2
+HEMA Fragment,8,8,8,0,8,0
+HEMA Obstruction,105,0,102,102,0,0
+Lens Off Center,30,0,30,30,0,0
+Low Dose Obstructing Region of Interest,93,0,92,0,1,91
+Missing Lens,21,0,19,19,0,0
+Missing Primary Package,315,0,314,314,0,0
+Multiple Lenses,207,0,175,175,0,0
+Package Misalignment,37,0,36,0,0,36
+View Obstructed,22,0,20,0,0,20
+Wet Package,83,60,67,5,56,6

@@ -1,0 +1,60 @@
+{
+ "label_count_dist": {
+  "0": 2145,
+  "1": 3285,
+  "2": 493,
+  "3": 162,
+  "4": 12
+ },
+ "multi_all": 667,
+ "combos": {
+  "Lens Off Center+Multiple Lenses": 374,
+  "Folded Lens+Lens Off Center+Multiple Lenses": 89,
+  "Folded Lens+Multiple Lenses": 67,
+  "Dirty Camera+Lens Off Center+Multiple Lenses": 59,
+  "Dirty Camera+Multiple Lenses": 18,
+  "Dirty Camera+Folded Lens+Lens Off Center+Multiple Lenses": 10,
+  "Dirty Camera+Folded Lens+Multiple Lenses": 9,
+  "HEMA Obstruction+Lens Off Center": 7,
+  "HEMA Obstruction+Low Dose": 7,
+  "Lens Off Center+Low Dose": 6,
+  "Low Dose+Multiple Lenses": 5,
+  "Dirty Camera+Lens Off Center": 4,
+  "Lens Off Center+Low Dose+Multiple Lenses": 4,
+  "HEMA Obstruction+Multiple Lenses": 2,
+  "Folded Lens+Lens Off Center+Low Dose+Multiple Lenses": 2,
+  "Dirty Camera+Missing Lens": 1,
+  "Dirty Strobe+Multiple Lenses": 1,
+  "Bubble Scatter+Lens Off Center": 1,
+  "Folded Lens+Low Dose+Multiple Lenses": 1
+ },
+ "lp_multi": 178,
+ "lp_combos": {
+  "Folded Lens+Multiple Lenses": 178
+ },
+ "annotated_images_joined_to_md5": 6095,
+ "images_without_md5_join": [
+  "Updated ICube Objects 20260915/Extraneous Polymer/20241110_042105_L27_PalletGHE1110061248_Cavity10_B0178LB_Fail5_Score(0.9643347)_1.0000_0.9579.bmp",
+  "Updated ICube Objects 20260915/Extraneous Polymer/20241112_121312_L24_C12_9992_0.9935.bmp"
+ ],
+ "content_dup_groups_inside_annotation": 1,
+ "dup_groups_with_identical_tag_sets": 0,
+ "dup_groups_with_different_tag_sets": 1,
+ "dup_diff_examples": {
+  "b85f173d6c44df6258d57866eac3dc56": [
+   [
+    "20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp",
+    []
+   ],
+   [
+    "20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757).bmp",
+    [
+     "Multiple Lenses"
+    ]
+   ]
+  ]
+ },
+ "unions_that_would_create_new_multi": 0,
+ "union_examples": [],
+ "multi_label_images_that_also_have_a_content_copy": 0
+}

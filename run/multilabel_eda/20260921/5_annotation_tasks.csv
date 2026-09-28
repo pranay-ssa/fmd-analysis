@@ -1,0 +1,6 @@
+measure,count
+"annotation tasks, one per box label",10
+task names,Bubble Cluster; Bubble Edge Contact; Bubble Irregular; Bubble On 123; Bubbles; Extraneous Polymer; Fiber; Foreign Matter; HEMA Fragment; Wet Package
+pictures sitting in more than one task,0
+tag-tier labels used as a box label,0
+box label that disagrees with the folder class,0

@@ -1,0 +1,405 @@
+{
+  "source_file": "data/Updated Annotations 20260922.xml",
+  "sha256": "f08a9f34ad13aaec7e115df59c0589b5ecdcb910807785670062c14e15d662c1",
+  "bytes": 1609831,
+  "project": "ICube Data 20260915",
+  "project_id": "3",
+  "project_created": "2026-09-15 19:18:16.642065+00:00",
+  "project_updated": "2026-09-22 11:53:16.113407+00:00",
+  "dumped": "2026-09-22 11:53:56.960521+00:00",
+  "images": 6097,
+  "tasks": 11,
+  "labels_defined": 22,
+  "tag_instances": 4930,
+  "box_instances": 183,
+  "images_with_a_tag": 3952,
+  "images_with_a_box": 137,
+  "images_with_tag_and_box": 13,
+  "images_with_no_annotation": 2021,
+  "images_with_no_tag": 2145,
+  "labels_never_used": [
+    "P1_PPM",
+    "P2_FOV"
+  ],
+  "tag_instances_by_label": {
+    "P1_MPP": 1552,
+    "P1_ML": 1442,
+    "P2_LOC": 803,
+    "P1_NL": 325,
+    "P1_COC": 183,
+    "P1_FL": 178,
+    "P2_HMO": 174,
+    "P2_DC": 125,
+    "P2_LD": 100,
+    "P2_DS": 42,
+    "P2_BSC": 6
+  },
+  "box_instances_by_label": {
+    "P3_EP": 131,
+    "P2_BB": 25,
+    "P3_FM": 9,
+    "P3_FIB": 4,
+    "P2_BST": 4,
+    "P3_HE": 4,
+    "P2_BC": 3,
+    "P2_WP": 2,
+    "P2_BI": 1
+  },
+  "picture_counts_by_label": {
+    "P1_ML": 1442,
+    "P1_MPP": 1427,
+    "P2_LOC": 803,
+    "P1_NL": 325,
+    "P1_COC": 183,
+    "P1_FL": 178,
+    "P2_HMO": 174,
+    "P3_EP": 127,
+    "P2_DC": 125,
+    "P2_LD": 100,
+    "P2_DS": 42,
+    "P2_BSC": 6,
+    "P3_FM": 6,
+    "P2_BB": 4,
+    "P2_BST": 4,
+    "P3_HE": 3,
+    "P3_FIB": 2,
+    "P2_BC": 1,
+    "P2_BI": 1,
+    "P2_WP": 1,
+    "P1_PPM": 0,
+    "P2_FOV": 0
+  },
+  "older_library": {
+    "file": "data/annotations.xml",
+    "sha256": "e9990876e2f4131968f39fd53f408d41517a6b13c796d0bc3db6e13f42e0085f",
+    "images": 435,
+    "boxes": 2020,
+    "rotated_boxes": 2015
+  },
+  "shared_basenames": 46,
+  "reannotation": {
+    "pairs": 46,
+    "pictures": 45,
+    "identical_geometry": 0,
+    "min": 0.241239,
+    "p25": 0.585314,
+    "median": 0.719048,
+    "mean": 0.704675,
+    "p75": 0.849179,
+    "max": 0.966687,
+    "pairs_the_new_file_calls_extraneous_polymer": 46,
+    "pairs_identical_geometry": 0
+  },
+  "drop": {
+    "parents": {
+      "Updated ICube Objects 20260915": 4230,
+      "Updated ICube Categorical Classes 20260915": 6384
+    },
+    "total": 10614,
+    "in_this_export": 6097,
+    "not_in_this_export": 4517
+  },
+  "checks": [
+    {
+      "check": "new_images",
+      "got": 6097,
+      "expected": 6097,
+      "ok": true
+    },
+    {
+      "check": "new_tags",
+      "got": 4930,
+      "expected": 4930,
+      "ok": true
+    },
+    {
+      "check": "new_boxes",
+      "got": 183,
+      "expected": 183,
+      "ok": true
+    },
+    {
+      "check": "new_labels",
+      "got": 22,
+      "expected": 22,
+      "ok": true
+    },
+    {
+      "check": "new_tasks",
+      "got": 11,
+      "expected": 11,
+      "ok": true
+    },
+    {
+      "check": "images_with_a_tag",
+      "got": 3952,
+      "expected": 3952,
+      "ok": true
+    },
+    {
+      "check": "images_with_a_box",
+      "got": 137,
+      "expected": 137,
+      "ok": true
+    },
+    {
+      "check": "images_with_tag_and_box",
+      "got": 13,
+      "expected": 13,
+      "ok": true
+    },
+    {
+      "check": "images_with_no_annotation",
+      "got": 2021,
+      "expected": 2021,
+      "ok": true
+    },
+    {
+      "check": "images_with_no_tag",
+      "got": 2145,
+      "expected": 2145,
+      "ok": true
+    },
+    {
+      "check": "labels_defined_never_used",
+      "got": 2,
+      "expected": 2,
+      "ok": true
+    },
+    {
+      "check": "old_images",
+      "got": 435,
+      "expected": 435,
+      "ok": true
+    },
+    {
+      "check": "old_boxes",
+      "got": 2020,
+      "expected": 2020,
+      "ok": true
+    },
+    {
+      "check": "old_rotated_boxes",
+      "got": 2015,
+      "expected": 2015,
+      "ok": true
+    },
+    {
+      "check": "shared_basenames",
+      "got": 46,
+      "expected": 46,
+      "ok": true
+    },
+    {
+      "check": "shared_pictures_carrying_boxes_in_both",
+      "got": 45,
+      "expected": 45,
+      "ok": true
+    },
+    {
+      "check": "reannotation_pictures",
+      "got": 45,
+      "expected": 45,
+      "ok": true
+    },
+    {
+      "check": "reannotation_pairs",
+      "got": 46,
+      "expected": 46,
+      "ok": true
+    },
+    {
+      "check": "reannotation_pairs_with_identical_geometry",
+      "got": 0,
+      "expected": 0,
+      "ok": true
+    },
+    {
+      "check": "drop_images",
+      "got": 10614,
+      "expected": 10614,
+      "ok": true
+    },
+    {
+      "check": "drop_images_in_this_export",
+      "got": 6097,
+      "expected": 6097,
+      "ok": true
+    },
+    {
+      "check": "every_new_image_is_2448x2048",
+      "got": [
+        [
+          2448,
+          2048
+        ]
+      ],
+      "expected": [
+        [
+          2448,
+          2048
+        ]
+      ],
+      "ok": true
+    },
+    {
+      "check": "every_old_image_is_2448x2048",
+      "got": [
+        [
+          2448,
+          2048
+        ]
+      ],
+      "expected": [
+        [
+          2448,
+          2048
+        ]
+      ],
+      "ok": true
+    },
+    {
+      "check": "every_tag_is_marked_manual",
+      "got": [
+        "manual"
+      ],
+      "expected": [
+        "manual"
+      ],
+      "ok": true
+    },
+    {
+      "check": "no_annotation_is_interpolated_or_tracked",
+      "got": [
+        "manual"
+      ],
+      "expected": [
+        "manual"
+      ],
+      "ok": true
+    },
+    {
+      "check": "codes_without_a_class_name",
+      "got": [],
+      "expected": [],
+      "ok": true
+    },
+    {
+      "check": "codes_without_an_ontology_name",
+      "got": [],
+      "expected": [],
+      "ok": true
+    },
+    {
+      "check": "every_ontology_tag_name_has_a_code",
+      "got": [
+        "Bubble Scatter",
+        "Cavity Off Center",
+        "Dirty Camera",
+        "Dirty Strobe",
+        "Field Of View Obstructed",
+        "Folded Lens",
+        "HEMA Obstruction",
+        "Lens Off Center",
+        "Low Dose Obstructing ROI",
+        "Missing Lens",
+        "Missing Primary Package",
+        "Multiple Lens",
+        "Primary Package Misalignment"
+      ],
+      "expected": [
+        "Bubble Scatter",
+        "Cavity Off Center",
+        "Dirty Camera",
+        "Dirty Strobe",
+        "Field Of View Obstructed",
+        "Folded Lens",
+        "HEMA Obstruction",
+        "Lens Off Center",
+        "Low Dose Obstructing ROI",
+        "Missing Lens",
+        "Missing Primary Package",
+        "Multiple Lens",
+        "Primary Package Misalignment"
+      ],
+      "ok": true
+    },
+    {
+      "check": "ontology_box_names_with_no_code",
+      "got": [
+        "Bubble On Edge",
+        "Bubble Over 123 Mark"
+      ],
+      "expected": [
+        "Bubble On Edge",
+        "Bubble Over 123 Mark"
+      ],
+      "ok": true
+    },
+    {
+      "check": "label_set_is_the_repo_22_less_2_plus_2",
+      "got": [
+        "Bubble",
+        "Bubble Cluster",
+        "Bubble Irregular",
+        "Bubble Scatter",
+        "Cavity Off Center",
+        "Dirty Camera",
+        "Dirty Strobe",
+        "Extraneous Polymer",
+        "Fiber",
+        "Folded Lens",
+        "Foreign Matter",
+        "HEMA Fragment",
+        "HEMA Obstruction",
+        "Lens Off Center",
+        "Low Dose Obstructing Region of Interest",
+        "Missing Lens",
+        "Missing Primary Package",
+        "Multiple Lenses",
+        "Package Misalignment",
+        "Stretched Bubble",
+        "View Obstructed",
+        "Wet Package"
+      ],
+      "expected": [
+        "Bubble",
+        "Bubble Cluster",
+        "Bubble Irregular",
+        "Bubble Scatter",
+        "Cavity Off Center",
+        "Dirty Camera",
+        "Dirty Strobe",
+        "Extraneous Polymer",
+        "Fiber",
+        "Folded Lens",
+        "Foreign Matter",
+        "HEMA Fragment",
+        "HEMA Obstruction",
+        "Lens Off Center",
+        "Low Dose Obstructing Region of Interest",
+        "Missing Lens",
+        "Missing Primary Package",
+        "Multiple Lenses",
+        "Package Misalignment",
+        "Stretched Bubble",
+        "View Obstructed",
+        "Wet Package"
+      ],
+      "ok": true
+    },
+    {
+      "check": "tags_are_never_on_a_box_class",
+      "got": [],
+      "expected": [],
+      "ok": true
+    },
+    {
+      "check": "boxes_are_never_on_a_tag_class",
+      "got": [],
+      "expected": [],
+      "ok": true
+    }
+  ],
+  "checks_failed": 0
+}

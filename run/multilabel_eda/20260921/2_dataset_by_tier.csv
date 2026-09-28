@@ -1,0 +1,10 @@
+measure,pictures
+"dataset, distinct pictures",8409
+  with at least one tag,6243
+  with at least one box label,2179
+  with both tiers,13
+  tag only,6230
+  box only,2166
+  neither (would be a bug),0
+"carrying more than one label, any tier",55
+  ... as a share of the dataset,0.65 percent

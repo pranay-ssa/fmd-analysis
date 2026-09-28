@@ -1,0 +1,1049 @@
+{
+  "source": {
+    "inventory": "run/line_eda/20260916/image_md5_records.csv",
+    "new_annotations": "data/Updated Annotations 20260922.xml",
+    "older_annotations": "data/annotations.xml"
+  },
+  "drop": {
+    "image_files": 12079,
+    "dataset_image_files": 11936,
+    "duplicates_subfolder_files": 143,
+    "distinct_pictures_dataset": 10614,
+    "files_per_folder": {
+      "Updated ICube Objects 20260915": 4230,
+      "Updated ICube Categorical Classes 20260915": 6384,
+      "ICube Defects Library": 1465
+    }
+  },
+  "new_file": {
+    "images": 6097,
+    "tags": 4930,
+    "boxes": 183,
+    "images_with_nothing_in_them": 2021,
+    "name_resolution": {
+      "path": 6095,
+      "folder+base": 2
+    }
+  },
+  "older_file": {
+    "images": 435,
+    "boxes": 2020,
+    "name_resolution": {
+      "path": 435
+    }
+  },
+  "picture_status": {
+    "older_library_only": 380,
+    "none": 6158,
+    "new_tag_only": 3939,
+    "new_box_only": 124,
+    "new_tag_and_box": 13
+  },
+  "annotated_by_new_file": 4076,
+  "covered_only_by_older_file": 380,
+  "annotated_nowhere": 6158,
+  "share_of_pictures_with_an_annotation": 0.4198,
+  "pictures_only_in_duplicates_folder": 0,
+  "folder_x_coverage": [
+    {
+      "folder": "Updated ICube Objects 20260915",
+      "class": "Clear",
+      "image_files": 2333,
+      "pictures": 2333,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 28,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 28,
+      "pictures_covered_by_older_library_only": 99,
+      "pictures_with_no_annotation_anywhere": 2206
+    },
+    {
+      "folder": "Updated ICube Objects 20260915",
+      "class": "Extraneous Polymer",
+      "image_files": 267,
+      "pictures": 267,
+      "has_a_task_in_the_new_file": 269,
+      "pictures_with_new_tag": 3,
+      "pictures_with_new_box": 122,
+      "pictures_with_new_annotation": 123,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 144
+    },
+    {
+      "folder": "Updated ICube Objects 20260915",
+      "class": "Fiber",
+      "image_files": 328,
+      "pictures": 328,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 0,
+      "pictures_covered_by_older_library_only": 30,
+      "pictures_with_no_annotation_anywhere": 298
+    },
+    {
+      "folder": "Updated ICube Objects 20260915",
+      "class": "Foreign Matter",
+      "image_files": 1282,
+      "pictures": 1282,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 2,
+      "pictures_with_new_annotation": 2,
+      "pictures_covered_by_older_library_only": 72,
+      "pictures_with_no_annotation_anywhere": 1208
+    },
+    {
+      "folder": "Updated ICube Objects 20260915",
+      "class": "HEMA",
+      "image_files": 20,
+      "pictures": 20,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 4,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 4,
+      "pictures_covered_by_older_library_only": 8,
+      "pictures_with_no_annotation_anywhere": 8
+    },
+    {
+      "folder": "Updated ICube Categorical Classes 20260915",
+      "class": "Bubble Scatter",
+      "image_files": 6,
+      "pictures": 6,
+      "has_a_task_in_the_new_file": 5,
+      "pictures_with_new_tag": 5,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 5,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 1
+    },
+    {
+      "folder": "Updated ICube Categorical Classes 20260915",
+      "class": "Cavity Off Center",
+      "image_files": 183,
+      "pictures": 183,
+      "has_a_task_in_the_new_file": 183,
+      "pictures_with_new_tag": 183,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 183,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "Updated ICube Categorical Classes 20260915",
+      "class": "Dirty Camera",
+      "image_files": 25,
+      "pictures": 25,
+      "has_a_task_in_the_new_file": 25,
+      "pictures_with_new_tag": 25,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 25,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "Updated ICube Categorical Classes 20260915",
+      "class": "Dirty Strobe",
+      "image_files": 42,
+      "pictures": 42,
+      "has_a_task_in_the_new_file": 42,
+      "pictures_with_new_tag": 42,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 42,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "Updated ICube Categorical Classes 20260915",
+      "class": "HEMA Obstruction",
+      "image_files": 175,
+      "pictures": 175,
+      "has_a_task_in_the_new_file": 175,
+      "pictures_with_new_tag": 175,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 175,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "Updated ICube Categorical Classes 20260915",
+      "class": "Lens Off Center",
+      "image_files": 258,
+      "pictures": 258,
+      "has_a_task_in_the_new_file": 258,
+      "pictures_with_new_tag": 258,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 258,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "Updated ICube Categorical Classes 20260915",
+      "class": "Low Dose",
+      "image_files": 1952,
+      "pictures": 1952,
+      "has_a_task_in_the_new_file": 1952,
+      "pictures_with_new_tag": 76,
+      "pictures_with_new_box": 4,
+      "pictures_with_new_annotation": 76,
+      "pictures_covered_by_older_library_only": 1,
+      "pictures_with_no_annotation_anywhere": 1875
+    },
+    {
+      "folder": "Updated ICube Categorical Classes 20260915",
+      "class": "Missing Lens",
+      "image_files": 324,
+      "pictures": 324,
+      "has_a_task_in_the_new_file": 324,
+      "pictures_with_new_tag": 324,
+      "pictures_with_new_box": 2,
+      "pictures_with_new_annotation": 324,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "Updated ICube Categorical Classes 20260915",
+      "class": "Missing Primary Package",
+      "image_files": 1427,
+      "pictures": 1427,
+      "has_a_task_in_the_new_file": 1427,
+      "pictures_with_new_tag": 1427,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 1427,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "Updated ICube Categorical Classes 20260915",
+      "class": "Multiple Lenses",
+      "image_files": 1439,
+      "pictures": 1439,
+      "has_a_task_in_the_new_file": 1437,
+      "pictures_with_new_tag": 1435,
+      "pictures_with_new_box": 7,
+      "pictures_with_new_annotation": 1437,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 2
+    },
+    {
+      "folder": "Updated ICube Categorical Classes 20260915",
+      "class": "Package Misalignment",
+      "image_files": 293,
+      "pictures": 293,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 0,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 293
+    },
+    {
+      "folder": "Updated ICube Categorical Classes 20260915",
+      "class": "View Obstructed",
+      "image_files": 117,
+      "pictures": 117,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 0,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 117
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Bubble Cluster",
+      "image_files": 36,
+      "pictures": 36,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 0,
+      "pictures_covered_by_older_library_only": 36,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Bubble Irregular",
+      "image_files": 44,
+      "pictures": 44,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 0,
+      "pictures_covered_by_older_library_only": 44,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Bubble On 123",
+      "image_files": 14,
+      "pictures": 14,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 0,
+      "pictures_covered_by_older_library_only": 13,
+      "pictures_with_no_annotation_anywhere": 1
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Bubble On Edge",
+      "image_files": 14,
+      "pictures": 14,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 0,
+      "pictures_covered_by_older_library_only": 14,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Bubble Scatter",
+      "image_files": 7,
+      "pictures": 7,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 5,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 5,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 2
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Bubble",
+      "image_files": 114,
+      "pictures": 113,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 1,
+      "pictures_with_new_annotation": 1,
+      "pictures_covered_by_older_library_only": 112,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Cavity Off Center",
+      "image_files": 98,
+      "pictures": 97,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 97,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 97,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Dirty Camera",
+      "image_files": 25,
+      "pictures": 25,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 25,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 25,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Dirty Strobe",
+      "image_files": 43,
+      "pictures": 43,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 42,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 42,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 1
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Extraneous Polymer",
+      "image_files": 17,
+      "pictures": 17,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 1,
+      "pictures_with_new_box": 16,
+      "pictures_with_new_annotation": 16,
+      "pictures_covered_by_older_library_only": 1,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Fiber",
+      "image_files": 61,
+      "pictures": 61,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 33,
+      "pictures_with_new_annotation": 33,
+      "pictures_covered_by_older_library_only": 28,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Foreign Matter",
+      "image_files": 71,
+      "pictures": 70,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 0,
+      "pictures_covered_by_older_library_only": 68,
+      "pictures_with_no_annotation_anywhere": 2
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "HEMA Fragment",
+      "image_files": 8,
+      "pictures": 8,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 0,
+      "pictures_covered_by_older_library_only": 8,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "HEMA Obstruction",
+      "image_files": 105,
+      "pictures": 102,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 102,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 102,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Lens Off Center",
+      "image_files": 30,
+      "pictures": 30,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 30,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 30,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Low Dose Obstructing Region of Interest",
+      "image_files": 93,
+      "pictures": 92,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 0,
+      "pictures_covered_by_older_library_only": 1,
+      "pictures_with_no_annotation_anywhere": 91
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Missing Lens",
+      "image_files": 21,
+      "pictures": 19,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 19,
+      "pictures_with_new_box": 1,
+      "pictures_with_new_annotation": 19,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Missing Primary Package",
+      "image_files": 315,
+      "pictures": 314,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 314,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 314,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Multiple Lenses",
+      "image_files": 207,
+      "pictures": 175,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 175,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 175,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 0
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Package Misalignment",
+      "image_files": 37,
+      "pictures": 36,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 0,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 36
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "View Obstructed",
+      "image_files": 22,
+      "pictures": 20,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 0,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 0,
+      "pictures_covered_by_older_library_only": 0,
+      "pictures_with_no_annotation_anywhere": 20
+    },
+    {
+      "folder": "ICube Defects Library",
+      "class": "Wet Package",
+      "image_files": 83,
+      "pictures": 67,
+      "has_a_task_in_the_new_file": 0,
+      "pictures_with_new_tag": 5,
+      "pictures_with_new_box": 0,
+      "pictures_with_new_annotation": 5,
+      "pictures_covered_by_older_library_only": 56,
+      "pictures_with_no_annotation_anywhere": 6
+    }
+  ],
+  "library_coverage": [
+    {
+      "library_class": "Bubble",
+      "library_files": 114,
+      "library_files_annotated_in_older_file": 113,
+      "pictures_shared_with_drop": 113,
+      "pictures_annotated_in_new_file": 1,
+      "pictures_annotated_only_in_older_file": 112,
+      "pictures_annotated_nowhere": 0
+    },
+    {
+      "library_class": "Bubble Cluster",
+      "library_files": 36,
+      "library_files_annotated_in_older_file": 36,
+      "pictures_shared_with_drop": 36,
+      "pictures_annotated_in_new_file": 0,
+      "pictures_annotated_only_in_older_file": 36,
+      "pictures_annotated_nowhere": 0
+    },
+    {
+      "library_class": "Bubble Irregular",
+      "library_files": 44,
+      "library_files_annotated_in_older_file": 44,
+      "pictures_shared_with_drop": 44,
+      "pictures_annotated_in_new_file": 0,
+      "pictures_annotated_only_in_older_file": 44,
+      "pictures_annotated_nowhere": 0
+    },
+    {
+      "library_class": "Bubble On 123",
+      "library_files": 14,
+      "library_files_annotated_in_older_file": 13,
+      "pictures_shared_with_drop": 14,
+      "pictures_annotated_in_new_file": 0,
+      "pictures_annotated_only_in_older_file": 13,
+      "pictures_annotated_nowhere": 1
+    },
+    {
+      "library_class": "Bubble On Edge",
+      "library_files": 14,
+      "library_files_annotated_in_older_file": 14,
+      "pictures_shared_with_drop": 14,
+      "pictures_annotated_in_new_file": 0,
+      "pictures_annotated_only_in_older_file": 14,
+      "pictures_annotated_nowhere": 0
+    },
+    {
+      "library_class": "Bubble Scatter",
+      "library_files": 7,
+      "library_files_annotated_in_older_file": 0,
+      "pictures_shared_with_drop": 7,
+      "pictures_annotated_in_new_file": 5,
+      "pictures_annotated_only_in_older_file": 0,
+      "pictures_annotated_nowhere": 2
+    },
+    {
+      "library_class": "Cavity Off Center",
+      "library_files": 98,
+      "library_files_annotated_in_older_file": 0,
+      "pictures_shared_with_drop": 97,
+      "pictures_annotated_in_new_file": 97,
+      "pictures_annotated_only_in_older_file": 0,
+      "pictures_annotated_nowhere": 0
+    },
+    {
+      "library_class": "Dirty Camera",
+      "library_files": 25,
+      "library_files_annotated_in_older_file": 0,
+      "pictures_shared_with_drop": 25,
+      "pictures_annotated_in_new_file": 25,
+      "pictures_annotated_only_in_older_file": 0,
+      "pictures_annotated_nowhere": 0
+    },
+    {
+      "library_class": "Dirty Strobe",
+      "library_files": 43,
+      "library_files_annotated_in_older_file": 0,
+      "pictures_shared_with_drop": 43,
+      "pictures_annotated_in_new_file": 42,
+      "pictures_annotated_only_in_older_file": 0,
+      "pictures_annotated_nowhere": 1
+    },
+    {
+      "library_class": "Extraneous Polymer",
+      "library_files": 17,
+      "library_files_annotated_in_older_file": 17,
+      "pictures_shared_with_drop": 17,
+      "pictures_annotated_in_new_file": 16,
+      "pictures_annotated_only_in_older_file": 1,
+      "pictures_annotated_nowhere": 0
+    },
+    {
+      "library_class": "Fiber",
+      "library_files": 61,
+      "library_files_annotated_in_older_file": 61,
+      "pictures_shared_with_drop": 61,
+      "pictures_annotated_in_new_file": 33,
+      "pictures_annotated_only_in_older_file": 28,
+      "pictures_annotated_nowhere": 0
+    },
+    {
+      "library_class": "Foreign Matter",
+      "library_files": 71,
+      "library_files_annotated_in_older_file": 69,
+      "pictures_shared_with_drop": 70,
+      "pictures_annotated_in_new_file": 0,
+      "pictures_annotated_only_in_older_file": 68,
+      "pictures_annotated_nowhere": 2
+    },
+    {
+      "library_class": "HEMA Fragment",
+      "library_files": 8,
+      "library_files_annotated_in_older_file": 8,
+      "pictures_shared_with_drop": 8,
+      "pictures_annotated_in_new_file": 0,
+      "pictures_annotated_only_in_older_file": 8,
+      "pictures_annotated_nowhere": 0
+    },
+    {
+      "library_class": "HEMA Obstruction",
+      "library_files": 105,
+      "library_files_annotated_in_older_file": 0,
+      "pictures_shared_with_drop": 102,
+      "pictures_annotated_in_new_file": 102,
+      "pictures_annotated_only_in_older_file": 0,
+      "pictures_annotated_nowhere": 0
+    },
+    {
+      "library_class": "Lens Off Center",
+      "library_files": 30,
+      "library_files_annotated_in_older_file": 0,
+      "pictures_shared_with_drop": 30,
+      "pictures_annotated_in_new_file": 30,
+      "pictures_annotated_only_in_older_file": 0,
+      "pictures_annotated_nowhere": 0
+    },
+    {
+      "library_class": "Low Dose Obstructing Region of Interest",
+      "library_files": 93,
+      "library_files_annotated_in_older_file": 0,
+      "pictures_shared_with_drop": 92,
+      "pictures_annotated_in_new_file": 0,
+      "pictures_annotated_only_in_older_file": 1,
+      "pictures_annotated_nowhere": 91
+    },
+    {
+      "library_class": "Missing Lens",
+      "library_files": 21,
+      "library_files_annotated_in_older_file": 0,
+      "pictures_shared_with_drop": 19,
+      "pictures_annotated_in_new_file": 19,
+      "pictures_annotated_only_in_older_file": 0,
+      "pictures_annotated_nowhere": 0
+    },
+    {
+      "library_class": "Missing Primary Package",
+      "library_files": 315,
+      "library_files_annotated_in_older_file": 0,
+      "pictures_shared_with_drop": 314,
+      "pictures_annotated_in_new_file": 314,
+      "pictures_annotated_only_in_older_file": 0,
+      "pictures_annotated_nowhere": 0
+    },
+    {
+      "library_class": "Multiple Lenses",
+      "library_files": 207,
+      "library_files_annotated_in_older_file": 0,
+      "pictures_shared_with_drop": 175,
+      "pictures_annotated_in_new_file": 175,
+      "pictures_annotated_only_in_older_file": 0,
+      "pictures_annotated_nowhere": 0
+    },
+    {
+      "library_class": "Package Misalignment",
+      "library_files": 37,
+      "library_files_annotated_in_older_file": 0,
+      "pictures_shared_with_drop": 36,
+      "pictures_annotated_in_new_file": 0,
+      "pictures_annotated_only_in_older_file": 0,
+      "pictures_annotated_nowhere": 36
+    },
+    {
+      "library_class": "View Obstructed",
+      "library_files": 22,
+      "library_files_annotated_in_older_file": 0,
+      "pictures_shared_with_drop": 20,
+      "pictures_annotated_in_new_file": 0,
+      "pictures_annotated_only_in_older_file": 0,
+      "pictures_annotated_nowhere": 20
+    },
+    {
+      "library_class": "Wet Package",
+      "library_files": 83,
+      "library_files_annotated_in_older_file": 60,
+      "pictures_shared_with_drop": 67,
+      "pictures_annotated_in_new_file": 5,
+      "pictures_annotated_only_in_older_file": 56,
+      "pictures_annotated_nowhere": 6
+    }
+  ],
+  "duplication_axis_same_picture_content": {
+    "repeat of a picture the older library holds": {
+      "pictures": 1402,
+      "annotated_in_the_new_file": 864,
+      "annotated_only_in_the_older_file": 380,
+      "annotated_nowhere": 158
+    },
+    "no copy in the older library": {
+      "pictures": 9212,
+      "annotated_in_the_new_file": 3212,
+      "annotated_only_in_the_older_file": 0,
+      "annotated_nowhere": 6000
+    }
+  },
+  "library_same_picture_different_name": 38,
+  "library_files_with_content_in_a_drop_folder": 1287,
+  "library_files_with_the_same_name_in_a_drop_folder": 1249,
+  "gap_by_folder_task_state": {
+    "folder the new file has no task for": 4136,
+    "folder the new file has a task for": 2022
+  },
+  "library_pictures_found_in_drop_content": 1402,
+  "library_pictures_found_in_drop_by_name": 1402,
+  "checks": [
+    {
+      "check": "duplicates subfolder rows",
+      "got": 143,
+      "want": 143,
+      "ok": true
+    },
+    {
+      "check": "dataset files (duplicates excluded)",
+      "got": 11936,
+      "want": 11936,
+      "ok": true
+    },
+    {
+      "check": "new file images",
+      "got": 6097,
+      "want": 6097,
+      "ok": true
+    },
+    {
+      "check": "new file tags",
+      "got": 4930,
+      "want": 4930,
+      "ok": true
+    },
+    {
+      "check": "new file boxes",
+      "got": 183,
+      "want": 183,
+      "ok": true
+    },
+    {
+      "check": "older file images",
+      "got": 435,
+      "want": 435,
+      "ok": true
+    },
+    {
+      "check": "older file boxes",
+      "got": 2020,
+      "want": 2020,
+      "ok": true
+    },
+    {
+      "check": "every new-file image resolved",
+      "got": 0,
+      "want": 0,
+      "ok": true
+    },
+    {
+      "check": "every older-file image resolved by full path",
+      "got": 435,
+      "want": 435,
+      "ok": true
+    },
+    {
+      "check": "pictures with a new-file annotation",
+      "got": 4076,
+      "want": 4076,
+      "ok": true
+    },
+    {
+      "check": "pictures = annotated in new + older only + none",
+      "got": 10614,
+      "want": 10614,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Objects 20260915/Clear",
+      "got": 2333,
+      "want": 2333,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Objects 20260915/Extraneous Polymer",
+      "got": 267,
+      "want": 267,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Objects 20260915/Fiber",
+      "got": 328,
+      "want": 328,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Objects 20260915/Foreign Matter",
+      "got": 1282,
+      "want": 1282,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Objects 20260915/HEMA",
+      "got": 20,
+      "want": 20,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Categorical Classes 20260915/Bubble Scatter",
+      "got": 6,
+      "want": 6,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Categorical Classes 20260915/Cavity Off Center",
+      "got": 183,
+      "want": 183,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Categorical Classes 20260915/Dirty Camera",
+      "got": 25,
+      "want": 25,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Categorical Classes 20260915/Dirty Strobe",
+      "got": 42,
+      "want": 42,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Categorical Classes 20260915/HEMA Obstruction",
+      "got": 175,
+      "want": 175,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Categorical Classes 20260915/Lens Off Center",
+      "got": 258,
+      "want": 258,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Categorical Classes 20260915/Low Dose",
+      "got": 1952,
+      "want": 1952,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Categorical Classes 20260915/Missing Lens",
+      "got": 324,
+      "want": 324,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Categorical Classes 20260915/Missing Primary Package",
+      "got": 1427,
+      "want": 1427,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Categorical Classes 20260915/Multiple Lenses",
+      "got": 1439,
+      "want": 1439,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Categorical Classes 20260915/Package Misalignment",
+      "got": 293,
+      "want": 293,
+      "ok": true
+    },
+    {
+      "check": "rows add up for Updated ICube Categorical Classes 20260915/View Obstructed",
+      "got": 117,
+      "want": 117,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Bubble Cluster",
+      "got": 36,
+      "want": 36,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Bubble Irregular",
+      "got": 44,
+      "want": 44,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Bubble On 123",
+      "got": 14,
+      "want": 14,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Bubble On Edge",
+      "got": 14,
+      "want": 14,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Bubble Scatter",
+      "got": 7,
+      "want": 7,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Bubble",
+      "got": 113,
+      "want": 113,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Cavity Off Center",
+      "got": 97,
+      "want": 97,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Dirty Camera",
+      "got": 25,
+      "want": 25,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Dirty Strobe",
+      "got": 43,
+      "want": 43,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Extraneous Polymer",
+      "got": 17,
+      "want": 17,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Fiber",
+      "got": 61,
+      "want": 61,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Foreign Matter",
+      "got": 70,
+      "want": 70,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/HEMA Fragment",
+      "got": 8,
+      "want": 8,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/HEMA Obstruction",
+      "got": 102,
+      "want": 102,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Lens Off Center",
+      "got": 30,
+      "want": 30,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Low Dose Obstructing Region of Interest",
+      "got": 92,
+      "want": 92,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Missing Lens",
+      "got": 19,
+      "want": 19,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Missing Primary Package",
+      "got": 314,
+      "want": 314,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Multiple Lenses",
+      "got": 175,
+      "want": 175,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Package Misalignment",
+      "got": 36,
+      "want": 36,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/View Obstructed",
+      "got": 20,
+      "want": 20,
+      "ok": true
+    },
+    {
+      "check": "rows add up for ICube Defects Library/Wet Package",
+      "got": 67,
+      "want": 67,
+      "ok": true
+    },
+    {
+      "check": "gap by folder adds up",
+      "got": 6158,
+      "want": 6158,
+      "ok": true
+    }
+  ],
+  "checks_failed": 0
+}

@@ -1,0 +1,22 @@
+library_class,drop_class_folder,picture_status_in_the_new_file,pictures
+Bubble,Clear,older_library_only,37
+Bubble,Extraneous Polymer,new_box_only,1
+Bubble,Fiber,older_library_only,2
+Bubble,Foreign Matter,older_library_only,1
+Bubble Cluster,Clear,older_library_only,15
+Bubble Irregular,Clear,older_library_only,16
+Bubble Irregular,Foreign Matter,older_library_only,2
+Extraneous Polymer,Extraneous Polymer,new_box_only,15
+Extraneous Polymer,Extraneous Polymer,new_tag_and_box,1
+Extraneous Polymer,Foreign Matter,older_library_only,1
+Fiber,Extraneous Polymer,new_box_only,33
+Fiber,Fiber,older_library_only,27
+Foreign Matter,Fiber,older_library_only,1
+Foreign Matter,Foreign Matter,older_library_only,68
+Foreign Matter,Low Dose,older_library_only,1
+HEMA Fragment,HEMA,older_library_only,8
+Wet Package,Clear,new_tag_only,1
+Wet Package,Clear,older_library_only,31
+Wet Package,Foreign Matter,older_library_only,1
+Wet Package,Lens Off Center,new_tag_only,3
+Wet Package,Multiple Lenses,new_tag_only,1

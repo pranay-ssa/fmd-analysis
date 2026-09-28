@@ -1,0 +1,12 @@
+task_id,task_name,folder,parent,class_of_the_folder,code_of_the_folder,task_size,images_in_export,jobs,images_carrying_the_class_of_the_folder,coverage_pct,images_with_a_tag,images_with_a_box,images_with_no_annotation,created,updated
+15,P3_EP,Extraneous Polymer,Updated ICube Objects 20260915,Extraneous Polymer,P3_EP,270,269,3,121,44.98,2,124,145,2026-09-15 19:20:17,2026-09-17 13:13:09
+16,P1_COC,Cavity Off Center,Updated ICube Categorical Classes 20260915,Cavity Off Center,P1_COC,183,183,2,183,100.0,183,0,0,2026-09-15 20:56:18,2026-09-17 13:13:09
+17,P1_DC,Dirty Camera,Updated ICube Categorical Classes 20260915,Dirty Camera,P2_DC,25,25,1,25,100.0,25,0,0,2026-09-15 20:59:21,2026-09-17 13:13:09
+19,P1_DS,Dirty Strobe,Updated ICube Categorical Classes 20260915,Dirty Strobe,P2_DS,43,42,1,42,100.0,42,0,0,2026-09-15 21:05:46,2026-09-17 13:13:09
+20,P2_LOC,Lens Off Center,Updated ICube Categorical Classes 20260915,Lens Off Center,P2_LOC,259,258,3,258,100.0,258,0,0,2026-09-15 21:09:28,2026-09-17 13:13:09
+22,P2_LD,Low Dose,Updated ICube Categorical Classes 20260915,Low Dose Obstructing Region of Interest,P2_LD,1952,1952,16,76,3.89,76,4,1876,2026-09-17 12:19:46,2026-09-17 13:13:09
+23,P2_BSC,Bubble Scatter,Updated ICube Categorical Classes 20260915,Bubble Scatter,P2_BSC,6,5,1,5,100.0,5,0,0,2026-09-17 12:50:21,2026-09-17 13:13:09
+24,P2_HMO,HEMA Obstruction,Updated ICube Categorical Classes 20260915,HEMA Obstruction,P2_HMO,175,175,2,174,99.43,175,0,0,2026-09-17 13:08:46,2026-09-17 14:00:45
+25,P1_NL,Missing Lens,Updated ICube Categorical Classes 20260915,Missing Lens,P1_NL,324,324,3,324,100.0,324,2,0,2026-09-17 14:06:37,2026-09-17 14:56:33
+26,P1_MPP,Missing Primary Package,Updated ICube Categorical Classes 20260915,Missing Primary Package,P1_MPP,1427,1427,12,1427,100.0,1427,0,0,2026-09-17 14:57:39,2026-09-17 17:28:40
+27,P1_ML,Multiple Lenses,Updated ICube Categorical Classes 20260915,Multiple Lenses,P1_ML,1439,1437,12,1435,99.86,1435,7,0,2026-09-17 18:24:42,2026-09-22 11:53:16

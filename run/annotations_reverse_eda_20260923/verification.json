@@ -1,0 +1,571 @@
+{
+  "checks": [
+    {
+      "check": "new file: images",
+      "got": 6097,
+      "want": 6097,
+      "ok": true
+    },
+    {
+      "check": "new file: tags",
+      "got": 4930,
+      "want": 4930,
+      "ok": true
+    },
+    {
+      "check": "new file: boxes",
+      "got": 183,
+      "want": 183,
+      "ok": true
+    },
+    {
+      "check": "new file: image elements with nothing in them",
+      "got": 2021,
+      "want": 2021,
+      "ok": true
+    },
+    {
+      "check": "older file: images",
+      "got": 435,
+      "want": 435,
+      "ok": true
+    },
+    {
+      "check": "older file: boxes",
+      "got": 2020,
+      "want": 2020,
+      "ok": true
+    },
+    {
+      "check": "drop: files per folder",
+      "got": {
+        "Updated ICube Objects 20260915": 4230,
+        "Updated ICube Categorical Classes 20260915": 6384,
+        "ICube Defects Library": 1465
+      },
+      "want": {
+        "Updated ICube Objects 20260915": 4230,
+        "Updated ICube Categorical Classes 20260915": 6384,
+        "ICube Defects Library": 1465
+      },
+      "ok": true
+    },
+    {
+      "check": "drop: distinct pictures",
+      "got": 10614,
+      "want": 10614,
+      "ok": true
+    },
+    {
+      "check": "pictures annotated in the new file",
+      "got": 4076,
+      "want": 4076,
+      "ok": true
+    },
+    {
+      "check": "pictures annotated only in the older file",
+      "got": 380,
+      "want": 380,
+      "ok": true
+    },
+    {
+      "check": "pictures annotated nowhere",
+      "got": 6158,
+      "want": 6158,
+      "ok": true
+    },
+    {
+      "check": "new-file images = annotated + empty",
+      "got": 6097,
+      "want": 6097,
+      "ok": true
+    },
+    {
+      "check": "pictures = new + older only + none",
+      "got": 10614,
+      "want": 10614,
+      "ok": true
+    },
+    {
+      "check": "gap by folder adds up to the gap",
+      "got": 6158,
+      "want": 6158,
+      "ok": true
+    },
+    {
+      "check": "gap by task state adds up to the gap",
+      "got": 6158,
+      "want": 6158,
+      "ok": true
+    },
+    {
+      "check": "duplication axis adds up to the pictures",
+      "got": 10614,
+      "want": 10614,
+      "ok": true
+    },
+    {
+      "check": "library files whose picture is in a drop folder under a different name",
+      "got": 38,
+      "want": 38,
+      "ok": true
+    },
+    {
+      "check": "library files whose content is in an Updated folder",
+      "got": 1287,
+      "want": 1287,
+      "ok": true
+    },
+    {
+      "check": "library pictures found in the drop, by content",
+      "got": 1402,
+      "want": 1402,
+      "ok": true
+    },
+    {
+      "check": "library files: 1287 match, 178 do not",
+      "got": 1465,
+      "want": 1465,
+      "ok": true
+    },
+    {
+      "check": "older file: task sizes as listed",
+      "got": 462,
+      "want": 462,
+      "ok": true
+    },
+    {
+      "check": "older file: frames listed in tasks less image elements carried",
+      "got": 27,
+      "want": 27,
+      "ok": true
+    },
+    {
+      "check": "older file: Bubble Cluster image elements",
+      "got": 36,
+      "want": 36,
+      "ok": true
+    },
+    {
+      "check": "older file: Bubble image elements",
+      "got": 113,
+      "want": 113,
+      "ok": true
+    },
+    {
+      "check": "older file: Bubble On 123 image elements",
+      "got": 13,
+      "want": 13,
+      "ok": true
+    },
+    {
+      "check": "older file: Bubble Irregular image elements",
+      "got": 44,
+      "want": 44,
+      "ok": true
+    },
+    {
+      "check": "older file: Bubble On Edge image elements",
+      "got": 14,
+      "want": 14,
+      "ok": true
+    },
+    {
+      "check": "older file: Extraneous Polymer image elements",
+      "got": 17,
+      "want": 17,
+      "ok": true
+    },
+    {
+      "check": "older file: Fiber image elements",
+      "got": 61,
+      "want": 61,
+      "ok": true
+    },
+    {
+      "check": "older file: Foreign Matter image elements",
+      "got": 69,
+      "want": 69,
+      "ok": true
+    },
+    {
+      "check": "older file: HEMA Fragment image elements",
+      "got": 8,
+      "want": 8,
+      "ok": true
+    },
+    {
+      "check": "older file: Wet Package image elements",
+      "got": 60,
+      "want": 60,
+      "ok": true
+    },
+    {
+      "check": "client EDA: total distinct pictures",
+      "got": 10614,
+      "want": 10614,
+      "ok": true
+    },
+    {
+      "check": "client EDA: objects folder files",
+      "got": 4230,
+      "want": 4230,
+      "ok": true
+    },
+    {
+      "check": "client EDA: categorical folder files",
+      "got": 6384,
+      "want": 6384,
+      "ok": true
+    },
+    {
+      "check": "client EDA: library files",
+      "got": 1465,
+      "want": 1465,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Bubble Scatter pictures in the Updated folder",
+      "got": 6,
+      "want": 6,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Cavity Off Center pictures in the Updated folder",
+      "got": 183,
+      "want": 183,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Dirty Camera pictures in the Updated folder",
+      "got": 25,
+      "want": 25,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Dirty Strobe pictures in the Updated folder",
+      "got": 42,
+      "want": 42,
+      "ok": true
+    },
+    {
+      "check": "client EDA: HEMA Obstruction pictures in the Updated folder",
+      "got": 175,
+      "want": 175,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Lens Off Center pictures in the Updated folder",
+      "got": 258,
+      "want": 258,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Low Dose Obstructing Region of Interest pictures in the Updated folder",
+      "got": 1952,
+      "want": 1952,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Missing Lens pictures in the Updated folder",
+      "got": 324,
+      "want": 324,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Missing Primary Package pictures in the Updated folder",
+      "got": 1427,
+      "want": 1427,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Multiple Lenses pictures in the Updated folder",
+      "got": 1439,
+      "want": 1439,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Package Misalignment pictures in the Updated folder",
+      "got": 293,
+      "want": 293,
+      "ok": true
+    },
+    {
+      "check": "client EDA: View Obstructed pictures in the Updated folder",
+      "got": 117,
+      "want": 117,
+      "ok": true
+    },
+    {
+      "check": "client EDA: library pictures not covered by the Updated folders",
+      "got": 177,
+      "want": 177,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Bubble files in the older library",
+      "got": 114,
+      "want": 114,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Bubble distinct pictures in the older library",
+      "got": 113,
+      "want": 113,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Bubble Cluster files in the older library",
+      "got": 36,
+      "want": 36,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Bubble Cluster distinct pictures in the older library",
+      "got": 36,
+      "want": 36,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Bubble Irregular files in the older library",
+      "got": 44,
+      "want": 44,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Bubble Irregular distinct pictures in the older library",
+      "got": 44,
+      "want": 44,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Bubble On 123 files in the older library",
+      "got": 14,
+      "want": 14,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Bubble On 123 distinct pictures in the older library",
+      "got": 14,
+      "want": 14,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Bubble On Edge files in the older library",
+      "got": 14,
+      "want": 14,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Bubble On Edge distinct pictures in the older library",
+      "got": 14,
+      "want": 14,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Bubble Scatter files in the older library",
+      "got": 7,
+      "want": 7,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Bubble Scatter distinct pictures in the older library",
+      "got": 7,
+      "want": 7,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Cavity Off Center files in the older library",
+      "got": 98,
+      "want": 98,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Cavity Off Center distinct pictures in the older library",
+      "got": 97,
+      "want": 97,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Dirty Camera files in the older library",
+      "got": 25,
+      "want": 25,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Dirty Camera distinct pictures in the older library",
+      "got": 25,
+      "want": 25,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Dirty Strobe files in the older library",
+      "got": 43,
+      "want": 43,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Dirty Strobe distinct pictures in the older library",
+      "got": 43,
+      "want": 43,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Extraneous Polymer files in the older library",
+      "got": 17,
+      "want": 17,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Extraneous Polymer distinct pictures in the older library",
+      "got": 17,
+      "want": 17,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Fiber files in the older library",
+      "got": 61,
+      "want": 61,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Fiber distinct pictures in the older library",
+      "got": 61,
+      "want": 61,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Foreign Matter files in the older library",
+      "got": 71,
+      "want": 71,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Foreign Matter distinct pictures in the older library",
+      "got": 70,
+      "want": 70,
+      "ok": true
+    },
+    {
+      "check": "client EDA: HEMA Fragment files in the older library",
+      "got": 8,
+      "want": 8,
+      "ok": true
+    },
+    {
+      "check": "client EDA: HEMA Fragment distinct pictures in the older library",
+      "got": 8,
+      "want": 8,
+      "ok": true
+    },
+    {
+      "check": "client EDA: HEMA Obstruction files in the older library",
+      "got": 105,
+      "want": 105,
+      "ok": true
+    },
+    {
+      "check": "client EDA: HEMA Obstruction distinct pictures in the older library",
+      "got": 102,
+      "want": 102,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Lens Off Center files in the older library",
+      "got": 30,
+      "want": 30,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Lens Off Center distinct pictures in the older library",
+      "got": 30,
+      "want": 30,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Low Dose Obstructing Region of Interest files in the older library",
+      "got": 93,
+      "want": 93,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Low Dose Obstructing Region of Interest distinct pictures in the older library",
+      "got": 92,
+      "want": 92,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Missing Lens files in the older library",
+      "got": 21,
+      "want": 21,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Missing Lens distinct pictures in the older library",
+      "got": 19,
+      "want": 19,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Missing Primary Package files in the older library",
+      "got": 315,
+      "want": 315,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Missing Primary Package distinct pictures in the older library",
+      "got": 314,
+      "want": 314,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Multiple Lenses files in the older library",
+      "got": 207,
+      "want": 207,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Multiple Lenses distinct pictures in the older library",
+      "got": 175,
+      "want": 175,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Package Misalignment files in the older library",
+      "got": 37,
+      "want": 37,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Package Misalignment distinct pictures in the older library",
+      "got": 36,
+      "want": 36,
+      "ok": true
+    },
+    {
+      "check": "client EDA: View Obstructed files in the older library",
+      "got": 22,
+      "want": 22,
+      "ok": true
+    },
+    {
+      "check": "client EDA: View Obstructed distinct pictures in the older library",
+      "got": 20,
+      "want": 20,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Wet Package files in the older library",
+      "got": 83,
+      "want": 83,
+      "ok": true
+    },
+    {
+      "check": "client EDA: Wet Package distinct pictures in the older library",
+      "got": 67,
+      "want": 67,
+      "ok": true
+    }
+  ],
+  "checks_failed": 0
+}

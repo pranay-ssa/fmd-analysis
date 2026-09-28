@@ -1,0 +1,277 @@
+[
+  {
+    "test": "test 1 split by picture",
+    "run_dir": "/home/pranayp/yolo_ooi/runs/multilabel_test/test1_split_by_picture",
+    "train_s": 117.3,
+    "epochs_run": 100,
+    "own_test_set": {
+      "pictures": 13,
+      "precision": 0.3383,
+      "recall": 0.6555,
+      "mAP50": 0.4741,
+      "mAP50-95": 0.1991,
+      "per_class": [
+        {
+          "class": "Bubble",
+          "pictures": 1,
+          "defects": 17,
+          "precision": 0.1371,
+          "recall": 0.7647,
+          "mAP50": 0.5509,
+          "mAP50-95": 0.2554
+        },
+        {
+          "class": "Fiber",
+          "pictures": 10,
+          "defects": 10,
+          "precision": 0.1781,
+          "recall": 0.8018,
+          "mAP50": 0.3906,
+          "mAP50-95": 0.1244
+        },
+        {
+          "class": "Wet Package",
+          "pictures": 2,
+          "defects": 5,
+          "precision": 0.6998,
+          "recall": 0.4,
+          "mAP50": 0.4807,
+          "mAP50-95": 0.2175
+        }
+      ]
+    },
+    "full_test_set": {
+      "pictures": 88,
+      "precision": 0.6727,
+      "recall": 0.1449,
+      "mAP50": 0.0863,
+      "mAP50-95": 0.0529,
+      "per_class": [
+        {
+          "class": "Bubble Cluster",
+          "pictures": 7,
+          "defects": 26,
+          "precision": 1.0,
+          "recall": 0.0,
+          "mAP50": 0.0022,
+          "mAP50-95": 0.0009
+        },
+        {
+          "class": "Bubble",
+          "pictures": 23,
+          "defects": 227,
+          "precision": 0.1074,
+          "recall": 0.304,
+          "mAP50": 0.069,
+          "mAP50-95": 0.0348
+        },
+        {
+          "class": "Bubble On 123",
+          "pictures": 3,
+          "defects": 32,
+          "precision": 1.0,
+          "recall": 0.0,
+          "mAP50": 0.0,
+          "mAP50-95": 0.0
+        },
+        {
+          "class": "Bubble Irregular",
+          "pictures": 9,
+          "defects": 9,
+          "precision": 0.273,
+          "recall": 0.5023,
+          "mAP50": 0.4908,
+          "mAP50-95": 0.3645
+        },
+        {
+          "class": "Bubble On Edge",
+          "pictures": 3,
+          "defects": 12,
+          "precision": 1.0,
+          "recall": 0.0,
+          "mAP50": 0.0002,
+          "mAP50-95": 0.0001
+        },
+        {
+          "class": "Extraneous Polymer",
+          "pictures": 3,
+          "defects": 3,
+          "precision": 1.0,
+          "recall": 0.0,
+          "mAP50": 0.0026,
+          "mAP50-95": 0.0005
+        },
+        {
+          "class": "Fiber",
+          "pictures": 12,
+          "defects": 12,
+          "precision": 0.049,
+          "recall": 0.5,
+          "mAP50": 0.0574,
+          "mAP50-95": 0.0283
+        },
+        {
+          "class": "Foreign Matter",
+          "pictures": 14,
+          "defects": 19,
+          "precision": 1.0,
+          "recall": 0.0,
+          "mAP50": 0.0835,
+          "mAP50-95": 0.02
+        },
+        {
+          "class": "HEMA Fragment",
+          "pictures": 2,
+          "defects": 2,
+          "precision": 1.0,
+          "recall": 0.0,
+          "mAP50": 0.0,
+          "mAP50-95": 0.0
+        },
+        {
+          "class": "Wet Package",
+          "pictures": 12,
+          "defects": 35,
+          "precision": 0.2975,
+          "recall": 0.1429,
+          "mAP50": 0.157,
+          "mAP50-95": 0.0794
+        }
+      ]
+    },
+    "params": 2507700
+  },
+  {
+    "test": "test 2 line 25 held out",
+    "run_dir": "/home/pranayp/yolo_ooi/runs/multilabel_test/test2_line_25_held_out",
+    "train_s": 83.5,
+    "epochs_run": 87,
+    "own_test_set": {
+      "pictures": 23,
+      "precision": 0.0103,
+      "recall": 0.3409,
+      "mAP50": 0.0758,
+      "mAP50-95": 0.014,
+      "per_class": [
+        {
+          "class": "Fiber",
+          "pictures": 22,
+          "defects": 22,
+          "precision": 0.0205,
+          "recall": 0.6818,
+          "mAP50": 0.1516,
+          "mAP50-95": 0.0281
+        },
+        {
+          "class": "Wet Package",
+          "pictures": 1,
+          "defects": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "mAP50": 0.0,
+          "mAP50-95": 0.0
+        }
+      ]
+    },
+    "full_test_set": {
+      "pictures": 88,
+      "precision": 0.0038,
+      "recall": 0.2276,
+      "mAP50": 0.0299,
+      "mAP50-95": 0.0115,
+      "per_class": [
+        {
+          "class": "Bubble Cluster",
+          "pictures": 7,
+          "defects": 26,
+          "precision": 0.0013,
+          "recall": 0.0385,
+          "mAP50": 0.0017,
+          "mAP50-95": 0.0003
+        },
+        {
+          "class": "Bubble",
+          "pictures": 23,
+          "defects": 227,
+          "precision": 0.0142,
+          "recall": 0.7445,
+          "mAP50": 0.1327,
+          "mAP50-95": 0.0582
+        },
+        {
+          "class": "Bubble On 123",
+          "pictures": 3,
+          "defects": 32,
+          "precision": 0.0,
+          "recall": 0.0,
+          "mAP50": 0.0,
+          "mAP50-95": 0.0
+        },
+        {
+          "class": "Bubble Irregular",
+          "pictures": 9,
+          "defects": 9,
+          "precision": 0.0037,
+          "recall": 0.3333,
+          "mAP50": 0.0069,
+          "mAP50-95": 0.0044
+        },
+        {
+          "class": "Bubble On Edge",
+          "pictures": 3,
+          "defects": 12,
+          "precision": 0.0,
+          "recall": 0.0,
+          "mAP50": 0.0,
+          "mAP50-95": 0.0
+        },
+        {
+          "class": "Extraneous Polymer",
+          "pictures": 3,
+          "defects": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "mAP50": 0.0,
+          "mAP50-95": 0.0
+        },
+        {
+          "class": "Fiber",
+          "pictures": 12,
+          "defects": 12,
+          "precision": 0.0022,
+          "recall": 0.4167,
+          "mAP50": 0.0039,
+          "mAP50-95": 0.0009
+        },
+        {
+          "class": "Foreign Matter",
+          "pictures": 14,
+          "defects": 19,
+          "precision": 0.0,
+          "recall": 0.0,
+          "mAP50": 0.0,
+          "mAP50-95": 0.0
+        },
+        {
+          "class": "HEMA Fragment",
+          "pictures": 2,
+          "defects": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "mAP50": 0.0,
+          "mAP50-95": 0.0
+        },
+        {
+          "class": "Wet Package",
+          "pictures": 12,
+          "defects": 35,
+          "precision": 0.017,
+          "recall": 0.7429,
+          "mAP50": 0.1537,
+          "mAP50-95": 0.0509
+        }
+      ]
+    },
+    "params": 2507700
+  }
+]

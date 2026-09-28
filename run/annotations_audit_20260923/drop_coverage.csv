@@ -1,0 +1,19 @@
+parent,folder,drop_images,images_in_this_export,not_in_this_export,covered_pct
+Updated ICube Objects 20260915,Clear,2333,0,2333,0.0
+Updated ICube Objects 20260915,Foreign Matter,1282,0,1282,0.0
+Updated ICube Objects 20260915,Fiber,328,0,328,0.0
+Updated ICube Objects 20260915,Extraneous Polymer,267,269,-2,100.7
+Updated ICube Objects 20260915,HEMA,20,0,20,0.0
+Updated ICube Categorical Classes 20260915,Low Dose,1952,1952,0,100.0
+Updated ICube Categorical Classes 20260915,Multiple Lenses,1439,1437,2,99.9
+Updated ICube Categorical Classes 20260915,Missing Primary Package,1427,1427,0,100.0
+Updated ICube Categorical Classes 20260915,Missing Lens,324,324,0,100.0
+Updated ICube Categorical Classes 20260915,Package Misalignment,293,0,293,0.0
+Updated ICube Categorical Classes 20260915,Lens Off Center,258,258,0,100.0
+Updated ICube Categorical Classes 20260915,Cavity Off Center,183,183,0,100.0
+Updated ICube Categorical Classes 20260915,HEMA Obstruction,175,175,0,100.0
+Updated ICube Categorical Classes 20260915,duplicates,143,0,143,0.0
+Updated ICube Categorical Classes 20260915,View Obstructed,117,0,117,0.0
+Updated ICube Categorical Classes 20260915,Dirty Strobe,42,42,0,100.0
+Updated ICube Categorical Classes 20260915,Dirty Camera,25,25,0,100.0
+Updated ICube Categorical Classes 20260915,Bubble Scatter,6,5,1,83.3

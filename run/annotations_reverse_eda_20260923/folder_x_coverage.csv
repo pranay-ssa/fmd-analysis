@@ -1,0 +1,40 @@
+folder,class,image_files,pictures,has_a_task_in_the_new_file,pictures_with_new_tag,pictures_with_new_box,pictures_with_new_annotation,pictures_covered_by_older_library_only,pictures_with_no_annotation_anywhere
+Updated ICube Objects 20260915,Clear,2333,2333,0,28,0,28,99,2206
+Updated ICube Objects 20260915,Extraneous Polymer,267,267,269,3,122,123,0,144
+Updated ICube Objects 20260915,Fiber,328,328,0,0,0,0,30,298
+Updated ICube Objects 20260915,Foreign Matter,1282,1282,0,0,2,2,72,1208
+Updated ICube Objects 20260915,HEMA,20,20,0,4,0,4,8,8
+Updated ICube Categorical Classes 20260915,Bubble Scatter,6,6,5,5,0,5,0,1
+Updated ICube Categorical Classes 20260915,Cavity Off Center,183,183,183,183,0,183,0,0
+Updated ICube Categorical Classes 20260915,Dirty Camera,25,25,25,25,0,25,0,0
+Updated ICube Categorical Classes 20260915,Dirty Strobe,42,42,42,42,0,42,0,0
+Updated ICube Categorical Classes 20260915,HEMA Obstruction,175,175,175,175,0,175,0,0
+Updated ICube Categorical Classes 20260915,Lens Off Center,258,258,258,258,0,258,0,0
+Updated ICube Categorical Classes 20260915,Low Dose,1952,1952,1952,76,4,76,1,1875
+Updated ICube Categorical Classes 20260915,Missing Lens,324,324,324,324,2,324,0,0
+Updated ICube Categorical Classes 20260915,Missing Primary Package,1427,1427,1427,1427,0,1427,0,0
+Updated ICube Categorical Classes 20260915,Multiple Lenses,1439,1439,1437,1435,7,1437,0,2
+Updated ICube Categorical Classes 20260915,Package Misalignment,293,293,0,0,0,0,0,293
+Updated ICube Categorical Classes 20260915,View Obstructed,117,117,0,0,0,0,0,117
+ICube Defects Library,Bubble Cluster,36,36,0,0,0,0,36,0
+ICube Defects Library,Bubble Irregular,44,44,0,0,0,0,44,0
+ICube Defects Library,Bubble On 123,14,14,0,0,0,0,13,1
+ICube Defects Library,Bubble On Edge,14,14,0,0,0,0,14,0
+ICube Defects Library,Bubble Scatter,7,7,0,5,0,5,0,2
+ICube Defects Library,Bubble,114,113,0,0,1,1,112,0
+ICube Defects Library,Cavity Off Center,98,97,0,97,0,97,0,0
+ICube Defects Library,Dirty Camera,25,25,0,25,0,25,0,0
+ICube Defects Library,Dirty Strobe,43,43,0,42,0,42,0,1
+ICube Defects Library,Extraneous Polymer,17,17,0,1,16,16,1,0
+ICube Defects Library,Fiber,61,61,0,0,33,33,28,0
+ICube Defects Library,Foreign Matter,71,70,0,0,0,0,68,2
+ICube Defects Library,HEMA Fragment,8,8,0,0,0,0,8,0
+ICube Defects Library,HEMA Obstruction,105,102,0,102,0,102,0,0
+ICube Defects Library,Lens Off Center,30,30,0,30,0,30,0,0
+ICube Defects Library,Low Dose Obstructing Region of Interest,93,92,0,0,0,0,1,91
+ICube Defects Library,Missing Lens,21,19,0,19,1,19,0,0
+ICube Defects Library,Missing Primary Package,315,314,0,314,0,314,0,0
+ICube Defects Library,Multiple Lenses,207,175,0,175,0,175,0,0
+ICube Defects Library,Package Misalignment,37,36,0,0,0,0,0,36
+ICube Defects Library,View Obstructed,22,20,0,0,0,0,0,20
+ICube Defects Library,Wet Package,83,67,0,5,0,5,56,6

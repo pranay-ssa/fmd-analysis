@@ -1,0 +1,16 @@
+label_a,class_a,label_b,class_b,pictures
+P1_ML,Multiple Lenses,P2_LOC,Lens Off Center,538
+P1_FL,Folded Lens,P1_ML,Multiple Lenses,178
+P1_FL,Folded Lens,P2_LOC,Lens Off Center,101
+P1_ML,Multiple Lenses,P2_DC,Dirty Camera,96
+P2_DC,Dirty Camera,P2_LOC,Lens Off Center,73
+P1_FL,Folded Lens,P2_DC,Dirty Camera,19
+P2_LD,Low Dose Obstructing Region of Interest,P2_LOC,Lens Off Center,12
+P1_ML,Multiple Lenses,P2_LD,Low Dose Obstructing Region of Interest,12
+P2_HMO,HEMA Obstruction,P2_LOC,Lens Off Center,7
+P2_HMO,HEMA Obstruction,P2_LD,Low Dose Obstructing Region of Interest,7
+P1_FL,Folded Lens,P2_LD,Low Dose Obstructing Region of Interest,3
+P1_ML,Multiple Lenses,P2_HMO,HEMA Obstruction,2
+P1_NL,Missing Lens,P2_DC,Dirty Camera,1
+P1_ML,Multiple Lenses,P2_DS,Dirty Strobe,1
+P2_BSC,Bubble Scatter,P2_LOC,Lens Off Center,1

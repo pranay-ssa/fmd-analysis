@@ -1,0 +1,9 @@
+measure,count
+images in the annotation file,435
+boxes,2020
+images with no box,1
+images with one box,218
+images with two or more boxes,216
+most boxes on one image,38
+images carrying two or more DIFFERENT box labels,0
+distinct box labels present,10

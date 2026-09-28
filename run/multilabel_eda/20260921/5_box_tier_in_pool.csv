@@ -1,0 +1,7 @@
+measure,count
+annotated images,435
+annotated distinct pictures,434
+repeat pictures inside the annotation file,1
+in the pooled defect-class dataset,434
+with a tag-tier label in the pooled record,5
+with more than one label in the pooled record,47

@@ -1,0 +1,43 @@
+{
+  "source_record": "run/line_eda/20260916/image_md5_records.csv",
+  "source_annotations": "data/annotations.xml",
+  "ontology": "docs/Manufacturing Condition Ontology V1.docx",
+  "dataset_pictures": 8409,
+  "labels_with_no_picture": [
+    "Folded Lens",
+    "Stretched Bubble"
+  ],
+  "pictures_tag_tier": 6243,
+  "pictures_box_tier": 2179,
+  "pictures_both_tiers": 13,
+  "pictures_tag_only": 6230,
+  "pictures_box_only": 2166,
+  "multi_label_pictures": 55,
+  "multi_label_share_percent": 0.65,
+  "patterns": {
+    "tag=0 box=2": 42,
+    "tag=1 box=1": 13
+  },
+  "labels_dropped_by_single_label_rule": 55,
+  "dropped_labels_by_name": {
+    "Extraneous Polymer": 34,
+    "Foreign Matter": 5,
+    "HEMA Fragment": 4,
+    "Fiber": 3,
+    "Multiple Lenses": 3,
+    "Lens Off Center": 3,
+    "Low Dose Obstructing Region of Interest": 2,
+    "Wet Package": 1
+  },
+  "annotation_images": 435,
+  "annotation_boxes": 2020,
+  "annotation_images_with_two_different_labels": 0,
+  "annotation_boxes_per_image_max": 38,
+  "annotation_tasks": 10,
+  "annotation_pictures_in_two_tasks": 0,
+  "tag_labels_used_as_a_box_label": 0,
+  "box_label_against_folder_class_disagreements": 0,
+  "annotation_pictures_in_pool": 434,
+  "annotation_pictures_with_a_tag_label": 5,
+  "annotation_pictures_with_more_than_one_pooled_label": 47
+}

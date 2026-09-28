@@ -1,0 +1,15 @@
+label_a,label_b,tiers,pictures
+Extraneous Polymer,Fiber,both box,33
+HEMA Fragment,HEMA Obstruction,box + tag,4
+Lens Off Center,Wet Package,tag + box,3
+Bubble,Fiber,both box,2
+Bubble Irregular,Foreign Matter,both box,2
+Low Dose Obstructing Region of Interest,Wet Package,tag + box,2
+Multiple Lenses,Wet Package,tag + box,2
+Bubble,Extraneous Polymer,both box,1
+Bubble,Foreign Matter,both box,1
+Extraneous Polymer,Foreign Matter,both box,1
+Extraneous Polymer,Multiple Lenses,box + tag,1
+Fiber,Foreign Matter,both box,1
+Foreign Matter,Low Dose Obstructing Region of Interest,box + tag,1
+Foreign Matter,Wet Package,both box,1

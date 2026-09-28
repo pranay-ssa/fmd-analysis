@@ -1,0 +1,95 @@
+{
+ "images_total": 6097,
+ "images_with_any_tag": 3952,
+ "images_with_any_LP": 3377,
+ "lp_tags_per_image_dist": {
+  "0": 2720,
+  "1": 3199,
+  "2": 178
+ },
+ "images_with_multi_LP": 178,
+ "multi_LP_combos": {
+  "Folded Lens+Multiple Lenses": 178
+ },
+ "all_tags_per_image_dist": {
+  "0": 2145,
+  "1": 3285,
+  "2": 493,
+  "3": 162,
+  "4": 12
+ },
+ "images_with_multi_label_any": 667,
+ "lp_per_tag": {
+  "Cavity Off Center": 183,
+  "Folded Lens": 178,
+  "Multiple Lenses": 1442,
+  "Missing Primary Package": 1427,
+  "Missing Lens": 325
+ },
+ "top_all_tag_pairs": [
+  [
+   "Multiple Lenses (P1_ML) + Lens Off Center (P2_LOC)",
+   538
+  ],
+  [
+   "Folded Lens (P1_FL) + Multiple Lenses (P1_ML)",
+   178
+  ],
+  [
+   "Folded Lens (P1_FL) + Lens Off Center (P2_LOC)",
+   101
+  ],
+  [
+   "Multiple Lenses (P1_ML) + Dirty Camera (P2_DC)",
+   96
+  ],
+  [
+   "Dirty Camera (P2_DC) + Lens Off Center (P2_LOC)",
+   73
+  ],
+  [
+   "Folded Lens (P1_FL) + Dirty Camera (P2_DC)",
+   19
+  ],
+  [
+   "Low Dose (P2_LD) + Lens Off Center (P2_LOC)",
+   12
+  ],
+  [
+   "Multiple Lenses (P1_ML) + Low Dose (P2_LD)",
+   12
+  ],
+  [
+   "HEMA Obstruction (P2_HMO) + Lens Off Center (P2_LOC)",
+   7
+  ],
+  [
+   "HEMA Obstruction (P2_HMO) + Low Dose (P2_LD)",
+   7
+  ],
+  [
+   "Folded Lens (P1_FL) + Low Dose (P2_LD)",
+   3
+  ],
+  [
+   "Multiple Lenses (P1_ML) + HEMA Obstruction (P2_HMO)",
+   2
+  ],
+  [
+   "Missing Lens (P1_NL) + Dirty Camera (P2_DC)",
+   1
+  ],
+  [
+   "Multiple Lenses (P1_ML) + Dirty Strobe (P2_DS)",
+   1
+  ],
+  [
+   "Bubble Scatter (P2_BSC) + Lens Off Center (P2_LOC)",
+   1
+  ]
+ ],
+ "raw_combo_including_dup_MPP": {
+  "P1_FL+P1_ML": 178,
+  "P1_MPP": 125
+ }
+}

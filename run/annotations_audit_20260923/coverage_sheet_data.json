@@ -1,0 +1,250 @@
+{
+ "rows": [
+  {
+   "parent": "Updated ICube Objects 20260915",
+   "cls": "Clear",
+   "files": 2333,
+   "task": 0,
+   "tag_img": 28,
+   "tags": 29,
+   "box_img": 0,
+   "boxes": 0,
+   "any_img": 28,
+   "path_annot": 0
+  },
+  {
+   "parent": "Updated ICube Categorical Classes 20260915",
+   "cls": "Low Dose",
+   "files": 1952,
+   "task": 1952,
+   "tag_img": 76,
+   "tags": 77,
+   "box_img": 4,
+   "boxes": 4,
+   "any_img": 76,
+   "path_annot": 76
+  },
+  {
+   "parent": "Updated ICube Categorical Classes 20260915",
+   "cls": "Multiple Lenses",
+   "files": 1439,
+   "task": 1437,
+   "tag_img": 1435,
+   "tags": 2257,
+   "box_img": 7,
+   "boxes": 10,
+   "any_img": 1437,
+   "path_annot": 1437
+  },
+  {
+   "parent": "Updated ICube Categorical Classes 20260915",
+   "cls": "Missing Primary Package",
+   "files": 1427,
+   "task": 1427,
+   "tag_img": 1427,
+   "tags": 1552,
+   "box_img": 0,
+   "boxes": 0,
+   "any_img": 1427,
+   "path_annot": 1427
+  },
+  {
+   "parent": "Updated ICube Objects 20260915",
+   "cls": "Foreign Matter",
+   "files": 1282,
+   "task": 0,
+   "tag_img": 0,
+   "tags": 0,
+   "box_img": 2,
+   "boxes": 2,
+   "any_img": 2,
+   "path_annot": 0
+  },
+  {
+   "parent": "Updated ICube Objects 20260915",
+   "cls": "Fiber",
+   "files": 328,
+   "task": 0,
+   "tag_img": 0,
+   "tags": 0,
+   "box_img": 0,
+   "boxes": 0,
+   "any_img": 0,
+   "path_annot": 0
+  },
+  {
+   "parent": "Updated ICube Categorical Classes 20260915",
+   "cls": "Missing Lens",
+   "files": 324,
+   "task": 324,
+   "tag_img": 324,
+   "tags": 324,
+   "box_img": 2,
+   "boxes": 2,
+   "any_img": 324,
+   "path_annot": 324
+  },
+  {
+   "parent": "Updated ICube Categorical Classes 20260915",
+   "cls": "Package Misalignment",
+   "files": 293,
+   "task": 0,
+   "tag_img": 0,
+   "tags": 0,
+   "box_img": 0,
+   "boxes": 0,
+   "any_img": 0,
+   "path_annot": 0
+  },
+  {
+   "parent": "Updated ICube Objects 20260915",
+   "cls": "Extraneous Polymer",
+   "files": 267,
+   "task": 269,
+   "tag_img": 3,
+   "tags": 3,
+   "box_img": 122,
+   "boxes": 165,
+   "any_img": 123,
+   "path_annot": 124
+  },
+  {
+   "parent": "Updated ICube Categorical Classes 20260915",
+   "cls": "Lens Off Center",
+   "files": 258,
+   "task": 258,
+   "tag_img": 258,
+   "tags": 269,
+   "box_img": 0,
+   "boxes": 0,
+   "any_img": 258,
+   "path_annot": 258
+  },
+  {
+   "parent": "Updated ICube Categorical Classes 20260915",
+   "cls": "Cavity Off Center",
+   "files": 183,
+   "task": 183,
+   "tag_img": 183,
+   "tags": 183,
+   "box_img": 0,
+   "boxes": 0,
+   "any_img": 183,
+   "path_annot": 183
+  },
+  {
+   "parent": "Updated ICube Categorical Classes 20260915",
+   "cls": "HEMA Obstruction",
+   "files": 175,
+   "task": 175,
+   "tag_img": 175,
+   "tags": 191,
+   "box_img": 0,
+   "boxes": 0,
+   "any_img": 175,
+   "path_annot": 175
+  },
+  {
+   "parent": "Updated ICube Categorical Classes 20260915",
+   "cls": "View Obstructed",
+   "files": 117,
+   "task": 0,
+   "tag_img": 0,
+   "tags": 0,
+   "box_img": 0,
+   "boxes": 0,
+   "any_img": 0,
+   "path_annot": 0
+  },
+  {
+   "parent": "Updated ICube Categorical Classes 20260915",
+   "cls": "Dirty Strobe",
+   "files": 42,
+   "task": 42,
+   "tag_img": 42,
+   "tags": 43,
+   "box_img": 0,
+   "boxes": 0,
+   "any_img": 42,
+   "path_annot": 42
+  },
+  {
+   "parent": "Updated ICube Categorical Classes 20260915",
+   "cls": "Dirty Camera",
+   "files": 25,
+   "task": 25,
+   "tag_img": 25,
+   "tags": 27,
+   "box_img": 0,
+   "boxes": 0,
+   "any_img": 25,
+   "path_annot": 25
+  },
+  {
+   "parent": "Updated ICube Objects 20260915",
+   "cls": "HEMA",
+   "files": 20,
+   "task": 0,
+   "tag_img": 4,
+   "tags": 4,
+   "box_img": 0,
+   "boxes": 0,
+   "any_img": 4,
+   "path_annot": 0
+  },
+  {
+   "parent": "Updated ICube Categorical Classes 20260915",
+   "cls": "Bubble Scatter",
+   "files": 6,
+   "task": 5,
+   "tag_img": 5,
+   "tags": 5,
+   "box_img": 0,
+   "boxes": 0,
+   "any_img": 5,
+   "path_annot": 5
+  }
+ ],
+ "parent_rows": [
+  {
+   "name": "Updated ICube Categorical Classes 20260915",
+   "files": 6241,
+   "task": 5828,
+   "any_img": 3952,
+   "tags": 4928,
+   "boxes": 16,
+   "path_annot": 3952
+  },
+  {
+   "name": "Updated ICube Objects 20260915",
+   "files": 4230,
+   "task": 269,
+   "any_img": 157,
+   "tags": 36,
+   "boxes": 167,
+   "path_annot": 124
+  }
+ ],
+ "distinct": {
+  "pictures": 10437,
+  "any": 4076,
+  "tags": 4930,
+  "boxes": 183,
+  "task": 6097,
+  "path_annot": 4076
+ },
+ "loc_sums": {
+  "any": 4109,
+  "tags": 4964,
+  "boxes": 183,
+  "multi": 33
+ },
+ "tagdist": {
+  "0": 2145,
+  "1": 3160,
+  "2": 618,
+  "3": 162,
+  "4": 12
+ },
+ "mpp_images_with_two_mpp_tags": 125
+}
