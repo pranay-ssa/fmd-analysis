@@ -1,0 +1,102 @@
+{
+ "best_epoch": 50,
+ "checkpoint": "final_epoch_fixed_schedule",
+ "rows": {
+  "train": 2700,
+  "val": 0,
+  "test": 677
+ },
+ "reliable_only": false,
+ "pos_weight": false,
+ "optimizer": "sgd",
+ "config": {
+  "labels": "/home/pranayp/yolo_ooi/multilabel_lp_20260928/labels.csv",
+  "split": "splits/variant_80_20_two_way.csv",
+  "image_root": "/home/amd100-user/FMD_Data_26082026/fmd_temp_images",
+  "out": "runs/ml_resnet50_base_20260928",
+  "split_column": "split_named",
+  "epochs": 50,
+  "batch": 8,
+  "optimizer": "sgd",
+  "momentum": 0.9,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "imgsz": 224,
+  "workers": 8,
+  "patience": 5,
+  "weights": "IMAGENET1K_V2",
+  "reliable_only": false,
+  "pos_weight": false,
+  "no_amp": false,
+  "seed": 42,
+  "device": "",
+  "smoke": false,
+  "smoke_synthetic": false
+ },
+ "test_metrics": {
+  "threshold": 0.5,
+  "per_class": {
+   "P1_COC": {
+    "support": 37,
+    "tp": 35,
+    "fp": 0,
+    "fn": 2,
+    "tn": 640,
+    "precision": 1.0,
+    "recall": 0.94595,
+    "f1": 0.97222,
+    "auprc": 1.0
+   },
+   "P1_FL": {
+    "support": 36,
+    "tp": 2,
+    "fp": 1,
+    "fn": 34,
+    "tn": 640,
+    "precision": 0.66667,
+    "recall": 0.05556,
+    "f1": 0.10256,
+    "auprc": 0.52271
+   },
+   "P1_ML": {
+    "support": 289,
+    "tp": 289,
+    "fp": 1,
+    "fn": 0,
+    "tn": 387,
+    "precision": 0.99655,
+    "recall": 1.0,
+    "f1": 0.99827,
+    "auprc": 1.0
+   },
+   "P1_MPP": {
+    "support": 286,
+    "tp": 286,
+    "fp": 0,
+    "fn": 0,
+    "tn": 391,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "auprc": 1.0
+   },
+   "P1_NL": {
+    "support": 65,
+    "tp": 61,
+    "fp": 0,
+    "fn": 4,
+    "tn": 612,
+    "precision": 1.0,
+    "recall": 0.93846,
+    "f1": 0.96825,
+    "auprc": 1.0
+   }
+  },
+  "macro_f1": 0.80826,
+  "macro_auprc": 0.90454,
+  "micro_precision": 0.99704,
+  "micro_recall": 0.9439,
+  "hamming_loss": 0.01241,
+  "exact_match_ratio": 0.93944
+ }
+}
