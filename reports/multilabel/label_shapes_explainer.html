@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Four pictures, four situations</title>
+<style>
+  .wrap { font-size: 13.5px; line-height: 1.5; max-width: 920px; }
+  h2 { font-size: 15px; margin: 0 0 4px 0; }
+  h3 { font-size: 13px; margin: 20px 0 8px 0; text-transform: uppercase; letter-spacing: .05em; color: var(--muted-foreground); font-weight: 600; }
+  p { margin: 6px 0; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--muted-foreground); font-weight: 600; font-size: 11.5px; text-transform: uppercase; letter-spacing: .04em; }
+  td:first-child { width: 32%; }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; }
+  pre { border: 1px solid var(--border); border-radius: 6px; padding: 7px 9px; margin: 0 0 6px 0; overflow-x: auto; }
+  .chip { display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted-foreground); white-space: nowrap; }
+  .yes { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+  .note { color: var(--muted-foreground); font-size: 12.5px; }
+  .cols { display: flex; gap: 18px; flex-wrap: wrap; }
+  .cols > div { flex: 1 1 260px; }
+  .lab { font-size: 11.5px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted-foreground); margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h2>Four pictures, four situations</h2>
+<p class="note">Every picture we hold is one of these four. The distinction that decides the model is
+never "how many labels" on its own: it is which tier the labels live in and whether they describe
+one object or several.</p>
+
+<h3>1. Several objects, all one class</h3>
+<table>
+<tr><th>Situation</th><th>What the training file holds</th></tr>
+<tr>
+  <td>
+    A <b>Bubble Cluster</b> frame. Real example from our data: <b>1,298 Bubble boxes sit on 113
+    pictures</b>, and the busiest single picture holds <b>38 boxes</b>.<br><br>
+    <span class="chip">multi-instance, single class</span><br><br>
+    <span class="note">Three objects, one name. This is not multi-label, and YOLO trains on it today.</span>
+  </td>
+  <td><pre>5 0.41 0.52 0.031 0.028
+5 0.44 0.55 0.019 0.017
+5 0.39 0.49 0.022 0.020</pre>
+  <span class="note">One row per object. One class number, three times.</span></td>
+</tr>
+</table>
+
+<h3>2. Two objects, two classes on one picture</h3>
+<table>
+<tr><th>Situation</th><th>What the training file holds</th></tr>
+<tr>
+  <td>
+    A frame holding a <b>Fiber</b> at the top left and a <b>Bubble</b> at the bottom right.<br><br>
+    <span class="chip yes">multi-class detection</span><br><br>
+    <span class="note">This is exactly what "can YOLO take two box labels on one picture" means. It
+    is supported with no code change, and it is the tool's own documented example. Our data holds
+    <b>0</b> such pictures today, only because the annotation ran one job per class.</span>
+  </td>
+  <td><pre>3 0.31 0.22 0.040 0.030
+7 0.72 0.66 0.060 0.050</pre>
+  <span class="note">Class numbers are placeholders for the index in that arena's name list. The
+  point is that the two rows carry two different numbers.</span></td>
+</tr>
+</table>
+
+<h3>3. One object, two folder labels (not two defects)</h3>
+<table>
+<tr><th>Situation</th><th>What the training file holds</th></tr>
+<tr>
+  <td>
+    <b>33 of our 55 multi-label pictures</b> are this. The newer folder files the stringy excess
+    lens material as <b>Extraneous Polymer</b>; the older library files the same picture as
+    <b>Fiber</b>.<br><br>
+    <span class="chip">one defect, two names</span><br><br>
+    <span class="note">The count says "multi-label", reality says "two sources disagree". It needs a
+    taxonomy decision from the client, not a model that predicts two things at once.</span>
+  </td>
+  <td><pre>folder A: .../Extraneous Polymer/20241112_145309_L25_C2_9998.bmp
+folder B: .../Fiber/20241112_145309_L25_C2_9998.bmp
+one object in the frame</pre></td>
+</tr>
+</table>
+
+<h3>4. A frame-level tag plus an object</h3>
+<table>
+<tr><th>Situation</th><th>What the training files hold</th></tr>
+<tr>
+  <td>
+    A frame whose lens has shifted (<b>Lens Off Center</b>, a tag: a property of the whole frame)
+    and which also shows saline under the package edge (<b>Wet Package</b>, an object: something you
+    can point at).<br><br>
+    <span class="chip">two tiers, two models</span><br><br>
+    <span class="note">The picture appears in <b>both</b> inputs: once as a tagged row, once with its
+    boxes. <b>13 of our 8,409 pictures</b> are this shape today, and this is the shape production
+    will have.</span>
+  </td>
+  <td>
+    <div class="lab">the tag list (one row per picture, one column per tag)</div>
+    <pre>md5,line,lens_off_center,wet_package
+8f3c...,L26,1,0</pre>
+    <div class="lab">the detection labels (one row per object)</div>
+    <pre>9 0.55 0.61 0.180 0.140</pre>
+  </td>
+</tr>
+</table>
+
+<h3>Why the loss function decides what is possible</h3>
+<table>
+<tr><th>A picture that really is under-dosed and has a dirty strobe</th><th>Which head can say it</th></tr>
+<tr>
+  <td>
+    <div class="lab">softmax output (one answer, the numbers sum to 1)</div>
+    <pre>low dose     0.91
+dirty strobe 0.04
+multiple lenses 0.03
+(the rest)   0.02  -> sum 1.00</pre>
+    <span class="note">Softmax is built on "exactly one of these is right". Raising one answer must
+    lower the others. It physically cannot report both.</span>
+  </td>
+  <td>
+    <div class="lab">sigmoid output (one yes/no per tag, no sum)</div>
+    <pre>low dose     0.93
+dirty strobe 0.81
+multiple lenses 0.12</pre>
+    <span class="note">Thirteen independent questions. Any number can be high, including all of
+    them. This is the head the tag tier needs.</span>
+  </td>
+</tr>
+</table>
+
+<p class="note" style="margin-top:14px"><b>And a detector has no picture-level class at all.</b> The
+class number belongs to each box, not to the frame. That is why "YOLO cannot do multi-label" is the
+wrong question for boxes: there was never a single class per picture for it to fail at.</p>
+
+</div>
+</body>
+</html>
