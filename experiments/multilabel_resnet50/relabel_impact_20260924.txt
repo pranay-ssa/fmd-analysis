@@ -1,0 +1,12 @@
+lens-presentation rows: 3377
+box list: 68 rows, columns: ['group', 'file_name', 'box_idx', 'box_label', 'xtl', 'ytl', 'xbr', 'ybr', 'img_w', 'img_h']
+distinct pictures in the box list: 46 matched to the label matrix, 21 not found
+  group A: 31 pictures, 0 of them in the 3,377 lens rows
+  group B: 15 pictures, 1 of them in the 3,377 lens rows
+  group C: 0 pictures, 0 of them in the 3,377 lens rows
+of all box-list pictures, in the 3,377 lens rows: 1
+  what they carry: {'P1_COC': 0, 'P1_FL': 0, 'P1_ML': 1, 'P1_MPP': 0, 'P1_NL': 0}
+    20241109_210741_L24_C1_9999.bmp -> ['P1_ML']
+Clear-tag pictures carrying a lens tag in the new drop:
+  9beaab56a1cb... in lens set: False | lens tags: none | task: P2_LOC | other tags: ['n_tags', 'has_any_tag']
+  e02d87833be9... in lens set: True | lens tags: ['P1_ML'] | task: P1_ML | other tags: ['n_tags', 'has_any_tag']

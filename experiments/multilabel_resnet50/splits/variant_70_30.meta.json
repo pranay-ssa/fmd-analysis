@@ -1,0 +1,66 @@
+{
+ "seed": 42,
+ "strategy": "iterstrat",
+ "ratios_three_way": {
+  "train": 0.55,
+  "val": 0.15,
+  "test": 0.3
+ },
+ "split_named_merges_train_and_val": true,
+ "row_set": "labels.csv filtered to images with >=1 LP tag",
+ "source_labels": "labels.csv",
+ "label_positives_total": {
+  "P1_COC": 183,
+  "P1_FL": 178,
+  "P1_ML": 1442,
+  "P1_MPP": 1427,
+  "P1_NL": 325
+ },
+ "rows": 3377,
+ "images_per_split": {
+  "train": 1857,
+  "test": 1014,
+  "val": 506
+ },
+ "images_per_split_named": {
+  "train": 2363,
+  "test": 1014
+ },
+ "fractions": {
+  "train": 0.5499,
+  "val": 0.1498,
+  "test": 0.3003
+ },
+ "positives_per_split": {
+  "train": {
+   "P1_COC": 101,
+   "P1_FL": 98,
+   "P1_ML": 793,
+   "P1_MPP": 785,
+   "P1_NL": 178
+  },
+  "val": {
+   "P1_COC": 27,
+   "P1_FL": 27,
+   "P1_ML": 216,
+   "P1_MPP": 214,
+   "P1_NL": 49
+  },
+  "test": {
+   "P1_COC": 55,
+   "P1_FL": 53,
+   "P1_ML": 433,
+   "P1_MPP": 428,
+   "P1_NL": 98
+  }
+ },
+ "worst_per_class_drift_vs_target": {
+  "train": 0.0042,
+  "val": 0.0164,
+  "test": 0.0075
+ },
+ "group_split_leaks": 0,
+ "groups_total": 3377,
+ "groups_singleton": 3377,
+ "verified": true
+}

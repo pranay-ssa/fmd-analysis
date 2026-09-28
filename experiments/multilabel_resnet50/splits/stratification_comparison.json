@@ -1,0 +1,100 @@
+{
+ "rows": 3377,
+ "tags": [
+  "P1_COC",
+  "P1_FL",
+  "P1_ML",
+  "P1_MPP",
+  "P1_NL"
+ ],
+ "test_size": 677,
+ "positives_total": {
+  "P1_COC": 183,
+  "P1_FL": 178,
+  "P1_ML": 1442,
+  "P1_MPP": 1427,
+  "P1_NL": 325
+ },
+ "test_target": {
+  "P1_COC": 36.686704175303525,
+  "P1_FL": 35.68433520876518,
+  "P1_ML": 289.0832099496595,
+  "P1_MPP": 286.0761030500444,
+  "P1_NL": 65.1539828249926
+ },
+ "reproduces_delivered_test": true,
+ "delivered_test_rows": 677,
+ "reproduction_path": "content-hash grouping, hash-key order, iterstrat seed 42, ratios 65/15/20",
+ "methods": {
+  "random": {
+   "mean_worst_tag_drift": 17.83,
+   "median_worst_tag_drift": 17.21,
+   "p95_worst_tag_drift": 33.56,
+   "max_worst_tag_drift": 54.13,
+   "share_over_5pct": 97.3,
+   "share_over_10pct": 84.3,
+   "folded_lens_test_min": 20,
+   "folded_lens_test_max": 55,
+   "folded_lens_test_target": 35.7,
+   "worst_drift_seen_per_tag": {
+    "P1_COC": 41.74,
+    "P1_FL": 54.13,
+    "P1_ML": 12.42,
+    "P1_MPP": 16.75,
+    "P1_NL": 37.07
+   }
+  },
+  "powerset": {
+   "mean_worst_tag_drift": 0.88,
+   "median_worst_tag_drift": 0.88,
+   "p95_worst_tag_drift": 0.88,
+   "max_worst_tag_drift": 0.88,
+   "share_over_5pct": 0.0,
+   "share_over_10pct": 0.0,
+   "folded_lens_test_min": 36,
+   "folded_lens_test_max": 36,
+   "folded_lens_test_target": 35.7,
+   "worst_drift_seen_per_tag": {
+    "P1_COC": 0.85,
+    "P1_FL": 0.88,
+    "P1_ML": 0.03,
+    "P1_MPP": 0.03,
+    "P1_NL": 0.24
+   }
+  },
+  "iterative": {
+   "mean_worst_tag_drift": 0.88,
+   "median_worst_tag_drift": 0.88,
+   "p95_worst_tag_drift": 0.88,
+   "max_worst_tag_drift": 0.88,
+   "share_over_5pct": 0.0,
+   "share_over_10pct": 0.0,
+   "folded_lens_test_min": 36,
+   "folded_lens_test_max": 36,
+   "folded_lens_test_target": 35.7,
+   "worst_drift_seen_per_tag": {
+    "P1_COC": 0.85,
+    "P1_FL": 0.88,
+    "P1_ML": 0.03,
+    "P1_MPP": 0.03,
+    "P1_NL": 0.24
+   }
+  }
+ },
+ "chosen_split_seed42_worst_drift": 0.88,
+ "chosen_split_seed42_per_tag_drift": {
+  "P1_COC": 0.85,
+  "P1_FL": 0.88,
+  "P1_ML": -0.03,
+  "P1_MPP": -0.03,
+  "P1_NL": -0.24
+ },
+ "patterns_this_matrix": {
+  "rows": 3377,
+  "distinct_patterns": 5,
+  "patterns_occurring_once": 0,
+  "patterns_occurring_twice": 0,
+  "smallest_pattern": 178,
+  "largest_pattern": 1427
+ }
+}

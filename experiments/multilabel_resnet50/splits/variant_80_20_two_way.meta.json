@@ -1,0 +1,54 @@
+{
+ "seed": 42,
+ "strategy": "iterstrat (stage 1 only: single 20% test carve)",
+ "test_fraction": 0.2,
+ "ratios": {
+  "train": 0.8,
+  "test": 0.2
+ },
+ "validation_set": null,
+ "rows": 3377,
+ "images_per_split": {
+  "train": 2700,
+  "test": 677
+ },
+ "fractions": {
+  "train": 0.7995,
+  "test": 0.2005
+ },
+ "label_positives_total": {
+  "P1_COC": 183,
+  "P1_FL": 178,
+  "P1_ML": 1442,
+  "P1_MPP": 1427,
+  "P1_NL": 325
+ },
+ "positives_per_split": {
+  "train": {
+   "P1_COC": 146,
+   "P1_FL": 142,
+   "P1_ML": 1153,
+   "P1_MPP": 1141,
+   "P1_NL": 260
+  },
+  "test": {
+   "P1_COC": 37,
+   "P1_FL": 36,
+   "P1_ML": 289,
+   "P1_MPP": 286,
+   "P1_NL": 65
+  }
+ },
+ "worst_per_class_drift": 0.0112,
+ "group_split_leaks": 0,
+ "groups_total": 3377,
+ "identical_to_variant_80_20": {
+  "test identical to 3-way test": true,
+  "train identical to 3-way split_named=train": true,
+  "test rows": 677,
+  "train rows": 2700
+ },
+ "deterministic_rerun": true,
+ "sha256_16": "38c6833f0a2b2216",
+ "verified": true
+}

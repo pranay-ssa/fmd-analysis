@@ -1,0 +1,127 @@
+{
+ "schema_version": 2,
+ "experiment": "experiments/multilabel_resnet50",
+ "written_before_running": "2026-09-23, this file and README.md + DESIGN.md were created before any pipeline code executed",
+ "owner": "Pranay",
+ "task": "multi-label image classification over 5 lens-presentation tags",
+ "classes": [
+  "P1_COC",
+  "P1_FL",
+  "P1_ML",
+  "P1_MPP",
+  "P1_NL"
+ ],
+ "label_source": "data/Updated Annotations 20260922.xml",
+ "md5_source": "run/line_eda/20260916/image_md5_records.csv",
+ "design_doc": "experiments/multilabel_resnet50/DESIGN.md",
+ "readme": "experiments/multilabel_resnet50/README.md",
+ "data": {
+  "images_total": 6097,
+  "images_with_any_LP": 3377,
+  "untagged_images": 2145,
+  "per_class_positive_images": {
+   "P1_COC": 183,
+   "P1_FL": 178,
+   "P1_ML": 1442,
+   "P1_MPP": 1427,
+   "P1_NL": 325
+  },
+  "images_with_two_LP_tags": 178,
+  "two_LP_tag_combos": {
+   "P1_FL+P1_ML": 178
+  },
+  "duplicate_tag_instances_removed": {
+   "P1_MPP": 125
+  },
+  "negatives_policy": "all 6097 images kept; negatives_reliable = True only if the image carries at least one tag or its task folder is fully finished; Low Dose is 76/1952 done so untagged Low Dose images are unreliable negatives",
+  "expected_unreliable_negatives": 2143
+ },
+ "split": "variant_80_20_two_way.csv (two-way 80/20, no val, seed 42, iterstrat)",
+ "frozen_config": {
+  "base": "torchvision resnet50, ImageNet weights",
+  "head": "Linear(2048, 5)",
+  "loss": "BCEWithLogitsLoss",
+  "imgsz": 224,
+  "epochs": 50,
+  "batch": 8,
+  "optimizer": "sgd_nesterov",
+  "lr": 0.0001,
+  "momentum": 0.9,
+  "nesterov": true,
+  "seed": 42,
+  "augmentation": "none",
+  "patience_unused": 5,
+  "patience_unused_reason": "two-way 80/20, fixed 50 epochs, no validation set (decision 2026-09-24)",
+  "early_stop_metric_unused": "macro_auprc",
+  "early_stop_metric_unused_reason": "two-way 80/20, fixed 50 epochs, no validation set (decision 2026-09-24)"
+ },
+ "metrics_of_record": [
+  "macro_auprc"
+ ],
+ "metrics_diagnostic": [
+  "per_class_auprc",
+  "per_class_precision_at_0.5",
+  "per_class_recall_at_0.5",
+  "reliable_subset_macro_auprc"
+ ],
+ "comparability_note": "rows are comparable only inside this experiment (same label matrix, same splits/seed42.csv). Do not compare against the detection arenas in the top level registry; different task and different label space.",
+ "experiments": [
+  {
+   "id": "ml_resnet50_base",
+   "summary": "ResNet50 multi-label baseline, all images, plain BCE",
+   "axis": "control",
+   "status": "done",
+   "config_overrides": {},
+   "results": {
+    "run_date": "2026-09-28",
+    "machine": "pranayp VM (A100 80GB), /home/pranayp/yolo_ooi/multilabel_lp_20260928",
+    "local_mirror": "run/multilabel_lp_20260928/",
+    "epochs_completed": 50,
+    "train_seconds_per_epoch": 9.8,
+    "test_macro_auprc": 0.90454,
+    "test_macro_f1": 0.80826,
+    "test_hamming_loss": 0.01241,
+    "test_exact_match_ratio": 0.93944,
+    "per_class": {
+     "P1_COC": {"support": 37, "precision": 1.0, "recall": 0.94595, "f1": 0.97222, "auprc": 1.0},
+     "P1_FL": {"support": 36, "precision": 0.66667, "recall": 0.05556, "f1": 0.10256, "auprc": 0.52271},
+     "P1_ML": {"support": 289, "precision": 0.99655, "recall": 1.0, "f1": 0.99827, "auprc": 1.0},
+     "P1_MPP": {"support": 286, "precision": 1.0, "recall": 1.0, "f1": 1.0, "auprc": 1.0},
+     "P1_NL": {"support": 65, "precision": 1.0, "recall": 0.93846, "f1": 0.96825, "auprc": 1.0}
+    },
+    "verification": "15-check split verify (local + VM copy) PASS; 12-check metric recompute from test_predictions.npz PASS; artifact md5 local == VM",
+    "gate_checks": {"smoke_real_images": "PASS (after fixing a smoke-only .to(device) bug)", "gpu_free_at_start": true}
+   }
+  },
+  {
+   "id": "ml_resnet50_reliable",
+   "summary": "baseline config with train rows filtered to negatives_reliable",
+   "axis": "data quality (negatives policy)",
+   "status": "planned",
+   "config_overrides": {
+    "reliable_only": true
+   },
+   "results": null
+  },
+  {
+   "id": "ml_resnet50_posw",
+   "summary": "baseline config with per-class positive weights from the train split",
+   "axis": "imbalance lever",
+   "status": "planned",
+   "config_overrides": {
+    "pos_weight": true
+   },
+   "results": null
+  }
+ ],
+ "blocked": [
+  "image pixels are not on this machine, so the real-image 2-step smoke and any training need an image root supplied later (see docs/reference/vm_and_datasets.md)",
+  "torch and torchvision are not installed in the project environment yet"
+ ],
+ "smoke_20260923": {
+  "label_builder": "OK, 6097 rows, 9/9 cross-checks matched, unreliable negatives 2143, md5 6095 exact + 2 missing + 0 conflicts",
+  "splitter": "OK, both strategies, 0 leakage, ratios 69.99/15.01/15.01",
+  "train_script": "compiles, CLI works, torch-free logic verified (AP vs sklearn diff 1e-16, split join, reliable filter)",
+  "model_2_step": "BLOCKED: no torch/torchvision, no NVIDIA runtime, no image pixels on this machine"
+ }
+}

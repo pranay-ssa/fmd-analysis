@@ -1,0 +1,47 @@
+{
+ "seed": 42,
+ "strategy": "iterstrat",
+ "iterstrat_available": true,
+ "ratios": {
+  "train": 0.7,
+  "val": 0.15,
+  "test": 0.15
+ },
+ "groups_total": 6096,
+ "images_total": 6097,
+ "images_per_split": {
+  "train": 4267,
+  "test": 915,
+  "val": 915
+ },
+ "groups_per_split": {
+  "train": 4266,
+  "test": 915,
+  "val": 915
+ },
+ "label_positives_per_split": {
+  "train": {
+   "P1_COC": 128,
+   "P1_FL": 124,
+   "P1_ML": 1009,
+   "P1_MPP": 999,
+   "P1_NL": 227
+  },
+  "val": {
+   "P1_COC": 28,
+   "P1_FL": 27,
+   "P1_ML": 217,
+   "P1_MPP": 214,
+   "P1_NL": 49
+  },
+  "test": {
+   "P1_COC": 27,
+   "P1_FL": 27,
+   "P1_ML": 216,
+   "P1_MPP": 214,
+   "P1_NL": 49
+  }
+ },
+ "group_split_leaks": 0,
+ "source_labels": "labels.csv"
+}
