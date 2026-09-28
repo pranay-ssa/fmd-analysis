@@ -1,3 +1,11 @@
+---
+title: L24 class by class: pictures and the 70:30 split (2026-09-16)
+date: 2026-09-18
+type: report
+status: active
+where: reports/lines/L24_class_split_70_30.md
+---
+
 # L24 class by class: pictures and the 70:30 split (2026-09-16)
 
 Pooled defect-class dataset from the three folders, one row per unique picture.

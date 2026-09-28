@@ -1,3 +1,11 @@
+---
+title: Class-wise 70:30 split for all five lines (2026-09-16)
+date: 2026-09-18
+type: report
+status: active
+where: reports/lines/all_lines_class_split_70_30.md
+---
+
 # Class-wise 70:30 split for all five lines (2026-09-16)
 
 Pooled defect-class dataset from the three folders, one row per unique picture.

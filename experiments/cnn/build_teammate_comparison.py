@@ -17,7 +17,7 @@ experiments/cnn/README.md.
 USAGE
     python3 experiments/cnn/build_teammate_comparison.py \
         --workbook reports/cnn/ContactLensDefectResults_combined22.xlsx \
-        --metrics  runs/cnn/combined22
+        --metrics  model_runs/cnn/combined22
 """
 import argparse
 import json
@@ -144,7 +144,7 @@ if __name__ == "__main__":
     ap.add_argument("--workbook", type=pathlib.Path,
                     default=pathlib.Path("reports/cnn/ContactLensDefectResults_combined22.xlsx"))
     ap.add_argument("--metrics", type=pathlib.Path,
-                    default=pathlib.Path("runs/cnn/combined22"))
+                    default=pathlib.Path("model_runs/cnn/combined22"))
     a = ap.parse_args()
     d = build(a.workbook, a.metrics)
     print(f"Added sheet '{SHEET_NAME}' to {a.workbook}")

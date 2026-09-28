@@ -1,3 +1,11 @@
+---
+title: YOLO26 Crop Reproduction - Reference Report (OoI Defect Classes)
+date: 2026-09-18
+type: report
+status: active
+where: reports/yolo26/crop_repro_report.md
+---
+
 # YOLO26 Crop Reproduction - Reference Report (OoI Defect Classes)
 
 **Status:** reference baseline for future YOLO26 experiments.

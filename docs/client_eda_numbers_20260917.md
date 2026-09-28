@@ -1,3 +1,11 @@
+---
+title: Client EDA questions: numbers, method and verification (2026-09-17)
+date: 2026-09-17
+type: doc
+status: active
+where: docs/client_eda_numbers_20260917.md
+---
+
 # Client EDA questions: numbers, method and verification (2026-09-17)
 
 The client sent five display requirements for the EDA dashboard on 2026-09-17 and asked for

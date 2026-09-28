@@ -17,8 +17,8 @@ import openpyxl
 
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 XLSX = os.path.join(REPO, "reports", "cnn", "FMD_Line_MultiScale_ResNet50_20260917.xlsx")
-RUNS = os.path.join(REPO, "runs", "cnn", "lines_multiscale")
-BASE = os.path.join(REPO, "runs", "cnn", "lines")
+RUNS = os.path.join(REPO, "model_runs", "cnn", "lines_multiscale")
+BASE = os.path.join(REPO, "model_runs", "cnn", "lines")
 LINES = ["L24", "L25", "L26", "L27", "L31"]
 STANDARD_SHEETS = {"Summary", "Cells by support", "Line summary (CNN format)"}
 

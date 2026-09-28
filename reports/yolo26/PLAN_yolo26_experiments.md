@@ -1,3 +1,11 @@
+---
+title: YOLO26 Experiment Plan (2026-09-10 to 2026-09-15)
+date: 2026-09-18
+type: report
+status: active
+where: reports/yolo26/PLAN_yolo26_experiments.md
+---
+
 # YOLO26 Experiment Plan (2026-09-10 to 2026-09-15)
 
 **Updated 2026-09-11:** after VM verification, two earlier conclusions in this plan were corrected (see `reports/yolo26/DOC_CORRECTIONS_20260911.md`). Phase 1 is closed with a recorded decision; Phase 3 ran but is unattributable; Phase 2 is still open. Re-runs R1/R2 in `experiments/registry.json` take priority over new forks.

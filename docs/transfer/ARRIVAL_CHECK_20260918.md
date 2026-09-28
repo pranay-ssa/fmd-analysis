@@ -1,3 +1,11 @@
+---
+title: Arrival check: the 2026-09-17 work, on this machine (2026-09-18)
+date: 2026-09-18
+type: transfer
+status: active
+where: docs/transfer/ARRIVAL_CHECK_20260918.md
+---
+
 # Arrival check: the 2026-09-17 work, on this machine (2026-09-18)
 
 The work done on the other machine on 15-17 September 2026 now sits in this repository. This
@@ -7,7 +15,7 @@ Every number below comes from a command run against the files on this disk.
 ## 1. What arrived
 
 The copy landed on 2026-09-18 at 08:46 into these folders: `docs/`, `notebooks/`, `reports/`
-(including `reports/cnn`, `reports/lines`, `reports/ops`, `reports/library`), `run/`, `runs/cnn/`,
+(including `reports/cnn`, `reports/lines`, `reports/ops`, `reports/library`), `run/`, `model_runs/cnn/`,
 `src/`, `vm/ops/`, `experiments/cnn/`, `experiments/augmentation/` and `docs/transfer/`.
 
 Git counts it as **7 modified files and 178 untracked files**. The modified ones are `HANDOFF.md`,

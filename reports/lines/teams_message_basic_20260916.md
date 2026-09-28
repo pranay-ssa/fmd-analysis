@@ -1,3 +1,11 @@
+---
+title: Teams message, basic version (2026-09-16)
+date: 2026-09-16
+type: report
+status: active
+where: reports/lines/teams_message_basic_20260916.md
+---
+
 # Teams message, basic version (2026-09-16)
 
 Short, postable version for the lead. Self-contained: no cross-references, every claim carries

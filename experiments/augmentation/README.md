@@ -1,3 +1,11 @@
+---
+title: Augmentation arena - cut-paste defect synthesis (local, pre-VM)
+date: 2026-09-18
+type: experiment
+status: active
+where: experiments/augmentation/README.md
+---
+
 # Augmentation arena - cut-paste defect synthesis (local, pre-VM)
 
 Testing the **cut-paste defect augmentation** idea on the local copy of the defect

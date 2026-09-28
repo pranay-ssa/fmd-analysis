@@ -1,16 +1,16 @@
 """Step 3: Stratified train/val split as CSV path lists (no image copies).
 
 Reads ooi_images.csv, stratifies by class, writes:
-  - runs/yolo11/train.txt   (one image path per line)
-  - runs/yolo11/val.txt     (one image path per line)
-  - runs/yolo11/split.csv   (image -> split label, for reproducibility)
+  - model_runs/yolo11/train.txt   (one image path per line)
+  - model_runs/yolo11/val.txt     (one image path per line)
+  - model_runs/yolo11/split.csv   (image -> split label, for reproducibility)
 
 The .txt lines are RELATIVE image paths (the crop_relpath column), so they are
 portable.  Ultralytics resolves them relative to the dataset.yaml location when
 no `path:` key is present (per yolo-detection-pipeline skill: OMIT path:).
 
 Usage:
-    python src/yolo_ooi/03_split_csv.py --images runs/yolo11/ooi_images.csv \
+    python src/yolo_ooi/03_split_csv.py --images model_runs/yolo11/ooi_images.csv \
         --out-dir run/yolo_ooi --val-frac 0.20 --seed 42
 """
 from __future__ import annotations

@@ -23,7 +23,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 REGISTRY = REPO / "experiments" / "registry.json"
-RUNS = REPO / "run" / "yolo_ooi" / "runs" / "yolo_arch"
+RUNS = REPO / "model_runs" / "yolo11" / "yolo_arch"
 
 
 def run_dir_for(rid):
@@ -112,12 +112,12 @@ def main():
         if not has_meta and "batch" in payload:
             payload.pop("batch", None)  # results.csv has no batch; do not guess
         if has_iou:
-            row["results_source"] = ("runs/yolo11/yolo_arch/%s/metrics.json, iou_metrics.json"
+            row["results_source"] = ("model_runs/yolo11/yolo_arch/%s/metrics.json, iou_metrics.json"
                                      % d.name if has_meta else
-                                     "runs/yolo11/yolo_arch/%s/results.csv, iou_metrics.json" % d.name)
+                                     "model_runs/yolo11/yolo_arch/%s/results.csv, iou_metrics.json" % d.name)
         else:
-            row["results_source"] = ("runs/yolo11/yolo_arch/%s/metrics.json" % d.name if has_meta else
-                                     "runs/yolo11/yolo_arch/%s/results.csv" % d.name)
+            row["results_source"] = ("model_runs/yolo11/yolo_arch/%s/metrics.json" % d.name if has_meta else
+                                     "model_runs/yolo11/yolo_arch/%s/results.csv" % d.name)
         if row.get("status") != "done":
             row["status"] = "done"
         print("  OK    %s -> status=%s mAP50=%s mAP50-95=%s iou=%s"

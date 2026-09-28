@@ -6,9 +6,9 @@ semantics were confirmed visually on 2026-09-07 (base-rect + rotation), so this
 is the final word on "does the box enclose the real defect".
 
 Usage:
-    python src/yolo_ooi/05_preview.py --ooi runs/yolo11/ooi_images.csv \
-        --crop-base run/single-size_fixed_crop --labels runs/yolo11/labels \
-        --out runs/yolo11/preview --per-class 3
+    python src/yolo_ooi/05_preview.py --ooi model_runs/yolo11/ooi_images.csv \
+        --crop-base run/single-size_fixed_crop --labels model_runs/yolo11/labels \
+        --out model_runs/yolo11/preview --per-class 3
 """
 from __future__ import annotations
 

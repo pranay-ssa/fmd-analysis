@@ -1,4 +1,18 @@
+---
+title: Per-line ResNet50 models: five lines, 70:30, batch 4, 50 epochs (2026-09-17)
+date: 2026-09-17
+type: doc
+status: active
+where: docs/line_models_20260917.md
+---
+
 # Per-line ResNet50 models: five lines, 70:30, batch 4, 50 epochs (2026-09-17)
+
+> **Open question, 2026-09-22.** 33 pictures are named Extraneous Polymer in the newer folder and Fiber
+> in the older library. Every model here takes the older library's name, so the Fiber and Extraneous
+> Polymer per-class figures in this document are stated on that naming and are provisional until the
+> client rules which folder is authoritative. The pictures, the boxes and the other classes are not
+> affected. Detail: `docs/naming_open_question_20260922.md`.
 
 Step 4 of the lead's sequence. One ResNet50 per production line, each trained on its own line's train
 half and scored on held-out pictures from the same line. This is the run the line analysis of
@@ -114,10 +128,10 @@ assignment were diffed against the published table.
 | Split assignments | `run/line_splits_20260917/line_<line>/split.csv` and `split_report.json` |
 | Deliverable builder | `src/make_line_results.py` |
 | Workbook | `reports/cnn/FMD_Line_ResNet50_Results_20260917.xlsx` - Summary, one sheet per line, Cells by support, and Line summary (CNN format) |
-| Inference re-measure | `experiments/cnn/measure_line_inference.py`, results in `runs/cnn/lines/inference_warm.json` |
+| Inference re-measure | `experiments/cnn/measure_line_inference.py`, results in `model_runs/cnn/lines/inference_warm.json` |
 | Notebook | `notebooks/FMD_Line_Models_20260917.ipynb` |
 | Verifier | `experiments/cnn/verify_line_results.py` |
-| Local mirror of the runs | `runs/cnn/lines/<line>/epochs_50/` (metrics, history, confusion matrix PNG and CSV, log) |
+| Local mirror of the runs | `model_runs/cnn/lines/<line>/epochs_50/` (metrics, history, confusion matrix PNG and CSV, log) |
 | Trained weights | on the VM only: `~/line_experiment_20260917/runs/<line>/epochs_50/weights.weights.h5` (about 200 MB per line) |
 
 ## Open items

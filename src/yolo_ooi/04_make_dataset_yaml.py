@@ -10,9 +10,9 @@ On the VM we set that to the single-size crop base.  Certified by
 check_det_dataset before training.
 
 Usage:
-    python src/yolo_ooi/04_make_dataset_yaml.py --classes-file runs/yolo11/classes.txt \
-        --train-txt runs/yolo11/train.txt --val-txt runs/yolo11/val.txt \
-        --out runs/yolo11/dataset.yaml
+    python src/yolo_ooi/04_make_dataset_yaml.py --classes-file model_runs/yolo11/classes.txt \
+        --train-txt model_runs/yolo11/train.txt --val-txt model_runs/yolo11/val.txt \
+        --out model_runs/yolo11/dataset.yaml
 """
 from __future__ import annotations
 

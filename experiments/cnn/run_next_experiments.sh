@@ -4,7 +4,7 @@ set -u
 #   A. the six highlighted classes with ResNet50            (~30 min)
 #   B. the complete split with MultiLevelMultiScale (Arch 1) (~75 min)
 #
-# ResNet50 on the complete split already ran on 2026-09-17 (runs/), so it is not repeated.
+# ResNet50 on the complete split already ran on 2026-09-17 (model_runs/), so it is not repeated.
 #
 # Run it when the GPU is free:
 #   bash check_gpu_free.sh && setsid nohup bash run_next_experiments.sh \

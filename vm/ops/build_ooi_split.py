@@ -30,7 +30,7 @@ split.  This is the only divergence from the LP single output contract.
 USAGE
     python3 vm/build_ooi_split.py \
         --crop-base run/single-size_fixed_crop \
-        --ooi-csv   runs/yolo11/ooi_images.csv \
+        --ooi-csv   model_runs/yolo11/ooi_images.csv \
         --out       run/ooi_split_20260907 \
         --date      20260903 --test-ratio 0.2 --seed 42
 
@@ -61,7 +61,7 @@ except Exception:
 
 # OoI classes — derived from the union of <Class>_<date> crop dirs on disk and
 # the unique <box label> values present in data/annotations.xml.  Verified
-# 2026-09-07 against runs/yolo11/classes.txt and runs/yolo11/dataset.yaml:
+# 2026-09-07 against model_runs/yolo11/classes.txt and model_runs/yolo11/dataset.yaml:
 # all three sources agree on this 10-class set (see cross-check notes).
 OOI_CLASSES = [
     "Bubble",

@@ -1,3 +1,11 @@
+---
+title: FMD Preprocess: Fixed-Size Crop Pipeline
+date: 2026-09-18
+type: doc
+status: active
+where: docs/ARCHITECTURE.md
+---
+
 # FMD Preprocess: Fixed-Size Crop Pipeline
 
 **Version:** 2.0.0
@@ -40,6 +48,12 @@ FMD-Preprocess/
 │   ├── eda/                  # EDA scripts + analysis outputs
 │   └── reports/
 │       └── fixed_size_crop_spec.md  # FINALIZED algorithm spec (source of truth)
+├── model_runs/               # Model-training output (weights, per-epoch logs, metrics).
+│   │                         # Ignored by git. Named runs/ before 2026-09-21.
+│   ├── cnn/                  # combined-22 and per-line runs: metrics, histories, confusion matrices
+│   ├── yolo11/               # YOLO11 OBB runs, labels, class list, split CSVs
+│   ├── preprocessing/        # crop-size EDA scratch
+│   └── splits/               # OoI split tables and dataset.yaml
 ├── vm/
 │   ├── build_lens_presentation_split.py       # Train/test split builder (multi mode)
 │   ├── build_lens_presentation_split_single.py # Train/test split builder (single mode)

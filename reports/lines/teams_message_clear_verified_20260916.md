@@ -1,3 +1,11 @@
+---
+title: Teams message: the Clear tag numbers, verified by hash and by name (2026-09-16)
+date: 2026-09-16
+type: report
+status: active
+where: reports/lines/teams_message_clear_verified_20260916.md
+---
+
 # Teams message: the Clear tag numbers, verified by hash and by name (2026-09-16)
 
 Replaces the earlier Clear message. Self-contained: no cross-references, no local paths, no

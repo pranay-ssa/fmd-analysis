@@ -1,6 +1,6 @@
 {
  "schema_version": 2,
- "updated": "2026-09-15 (port program rows: noise floor, attention port, SPPF k7, P4 Conv, consolidated, raw tap control)",
+ "updated": "2026-09-22 (R4 opened: the Fiber and Extraneous Polymer class boundary waits on the client, so those two per-class figures are provisional; Clear 128 list delivered)",
  "owner": "Pranay",
  "source_of_truth": [
   "reports/yolo11/yolo_arch_experiments_spec.md (YOLO11 OBB log, Section 10, timestamped)",
@@ -126,7 +126,7 @@
      }
     }
    },
-   "results_source": "runs/yolo11/yolo_arch/baseline_obb/metrics.json, iou_metrics.json",
+   "results_source": "model_runs/yolo11/yolo_arch/baseline_obb/metrics.json, iou_metrics.json",
    "note": "Control at batch 16. IoU IS measured for this row (iou_mean_matched 0.5969, per-class block present); an earlier note claiming otherwise was wrong.",
    "model_family": "YOLO11",
    "data_arena": "crop_obb_640_multiclass"
@@ -211,7 +211,7 @@
      }
     }
    },
-   "results_source": "runs/yolo11/yolo_arch/sppf_cspc_obb/results.csv, iou_metrics.json",
+   "results_source": "model_runs/yolo11/yolo_arch/sppf_cspc_obb/results.csv, iou_metrics.json",
    "note": "Free win: bigger pooling field on spread/clustered defects. Keep unconditionally.",
    "model_family": "YOLO11",
    "data_arena": "crop_obb_640_multiclass"
@@ -296,7 +296,7 @@
      }
     }
    },
-   "results_source": "runs/yolo11/yolo_arch/yolo11s-obb/results.csv, iou_metrics.json",
+   "results_source": "model_runs/yolo11/yolo_arch/yolo11s-obb/results.csv, iou_metrics.json",
    "note": "Filename carries the scale (ultralytics picks scale from the yaml filename).",
    "model_family": "YOLO11",
    "data_arena": "crop_obb_640_multiclass"
@@ -381,7 +381,7 @@
      }
     }
    },
-   "results_source": "runs/yolo11/yolo_arch/attention_backbone_obb/results.csv, iou_metrics.json",
+   "results_source": "model_runs/yolo11/yolo_arch/attention_backbone_obb/results.csv, iou_metrics.json",
    "note": "Best accuracy-per-param of batch 1 (matches s-scale gain at 1/3 params); lifts Extraneous Polymer and HEMA Fragment.",
    "model_family": "YOLO11",
    "data_arena": "crop_obb_640_multiclass"
@@ -466,7 +466,7 @@
      }
     }
    },
-   "results_source": "runs/yolo11/yolo_arch/scale_wider_only_obb/results.csv, iou_metrics.json",
+   "results_source": "model_runs/yolo11/yolo_arch/scale_wider_only_obb/results.csv, iou_metrics.json",
    "note": "Best raw mAP50/mAP50-95 of batch 1 but ~7x baseline compute (48.7 GFLOPs); deployment question.",
    "model_family": "YOLO11",
    "data_arena": "crop_obb_640_multiclass"
@@ -553,7 +553,7 @@
      }
     }
    },
-   "results_source": "runs/yolo11/yolo_arch/baseline_b8/metrics.json, iou_metrics.json",
+   "results_source": "model_runs/yolo11/yolo_arch/baseline_b8/metrics.json, iou_metrics.json",
    "note": "First IoU-measured run. Matched-IoU 0.568 at conf 0.25, match rate 37.4% (recall is the bottleneck, not box accuracy).",
    "model_family": "YOLO11",
    "data_arena": "crop_obb_640_multiclass"
@@ -641,7 +641,7 @@
      }
     }
    },
-   "results_source": "runs/yolo11/yolo_arch/depth_plus2_deep/metrics.json, iou_metrics.json",
+   "results_source": "model_runs/yolo11/yolo_arch/depth_plus2_deep/metrics.json, iou_metrics.json",
    "note": "NULL on the metrics that matter (mAP50 flat +0.004; mAP50-95 -0.012; IoU -0.012). More precise, less sensitive (P up, R down). Conflated fact/type/location/dose - attribution deferred to batch 3.",
    "model_family": "YOLO11",
    "data_arena": "crop_obb_640_multiclass"
@@ -730,7 +730,7 @@
     }
    },
    "note": "Batch-3 TYPE arm: residual C3k2 at the same deep P5 spot. NULL (mAP50 0.2678 below the 0.2729 baseline, mAP50-95 0.1379 below 0.1556, IoU 0.577 ~ baseline), so the depth-plus2 null was NOT caused by the plain-conv layer type. Structurally validated PASS before training.",
-   "results_source": "runs/yolo11/yolo_arch/armA_residual_deep/metrics.json, iou_metrics.json",
+   "results_source": "model_runs/yolo11/yolo_arch/armA_residual_deep/metrics.json, iou_metrics.json",
    "model_family": "YOLO11",
    "data_arena": "crop_obb_640_multiclass"
   },
@@ -818,7 +818,7 @@
     }
    },
    "note": "Batch-3 LOCATION arm: same plain convs moved to the higher-resolution P4 stage. WIN (mAP50 0.3096, +0.037 over baseline_b8 and best of the batch-2/3 set; matched IoU 0.583, +0.015). Added capacity is worth it only at a resolution the small defects route through. Structurally validated PASS before training.",
-   "results_source": "runs/yolo11/yolo_arch/armB_conv_p4/metrics.json, iou_metrics.json",
+   "results_source": "model_runs/yolo11/yolo_arch/armB_conv_p4/metrics.json, iou_metrics.json",
    "model_family": "YOLO11",
    "data_arena": "crop_obb_640_multiclass"
   },
@@ -1569,6 +1569,161 @@
    "hypothesis": "Both arms negative is the expectation; the open question is which is less bad.",
    "results": null,
    "note": "R1 (raw, single-class crops) cost -0.0560 and H2 (processed, multiclass) cost -0.0992, and those two numbers are NOT comparable because the arenas and baselines differ. This arm is the only clean raw-versus-processed comparison. Control plus fork in one session."
+  },
+  {
+   "id": "tag_manifest_multihot",
+   "model_family": "nil (data preparation)",
+   "data_arena": "two_tier_tags",
+   "file": "experiments/multilabel/build_tag_manifest.py (to write)",
+   "summary": "Build the multi-hot image-level tag manifest: one row per picture, one column per tag, built from the folder record so a picture in two folders keeps both ones.",
+   "axis": "data preparation (label space)",
+   "theoretical_possible": true,
+   "batch": null,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "The tag tier is single-label only because the folder layout is. A multi-hot manifest built from the record holds the real label set for every picture, and it is the input every tag experiment needs. It also removes the silent drop of the 55 second labels from the tag side.",
+   "results": null,
+   "note": "No GPU. Prerequisite for tag_head_multilabel. The 55 multi-label pictures, the 42 two-box pictures and the 13 both-tier pictures are measured in run/multilabel_eda/20260921/ (102 verified checks). Split sides must be copied from the existing per-line assignment, never redrawn, or a picture can sit on both sides across the two tiers."
+  },
+  {
+   "id": "detect_two_class_picture",
+   "model_family": "YOLO26",
+   "data_arena": "multiclass_detect_1280_10cls",
+   "file": "nil (label-file change, short run)",
+   "summary": "Prove on our own data that one picture can carry two boxes of two different classes: write the true two-line label files for the 42 two-box pictures and smoke-train the stock config.",
+   "axis": "data preparation (label file)",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "The tool's format and its label reader both allow a second class on one picture, and the reader has no one-class-per-picture rule. Our arena has never exercised it: 0 of the 434 annotated pictures carries two box labels, because the annotation ran one task per class. A short run turns a format claim into our own measurement.",
+   "results": null,
+   "note": "Answers the lead's direct question (can YOLO take 2 bbox labels on one image at training time). Cost is minutes, not hours, because the run only has to show both instances reaching the loss, not to score well. Label files for the 42 come from the folder record: run/multilabel_eda/20260921/3_multi_label_detail.csv."
+  },
+  {
+   "id": "tag_head_multilabel",
+   "model_family": "ResNet50",
+   "data_arena": "two_tier_tags",
+   "file": "experiments/multilabel/train_tag_head.py (to write)",
+   "summary": "Train the existing ResNet50 with a sigmoid output and a binary cross-entropy loss on the 13 image-level tags, and compare it against the same backbone with a softmax on the current single-tag assignment.",
+   "axis": "head (loss and activation)",
+   "theoretical_possible": true,
+   "batch": 4,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "The tag tier is not mutually exclusive, so a single-answer head is the wrong shape. The delta between the two heads on the same pictures is the measured cost of the single-label assumption. Expected gain concentrated in the thin tags (Dirty Camera 25, Dirty Strobe 43, Bubble Scatter 7).",
+   "results": null,
+   "note": "Read macro F1 over tags and the exact-match ratio, never accuracy: tag support runs from 7 to 1,952 pictures, so a model that predicts no tag scores well on accuracy. Report the decision threshold with every number. This is the fallback the lead called 'multi-level CNN' in the same place: the multi-level architectures already exist in this project (MultiLevel MultiScale 88.05 per cent, MultiLevel Attention 87.37 on the 22-class set), so the option is a head change, not a new architecture. Depends on tag_manifest_multihot."
+  },
+  {
+   "id": "cascade_detector_plus_tags",
+   "model_family": "YOLO26 + ResNet50",
+   "data_arena": "two_tier_production",
+   "file": "nil (integration)",
+   "summary": "Join the two halves the ontology describes: the detector finds the objects, the classifier reads the frame-level tags, and the frame carries both answers.",
+   "axis": "system design (two tiers)",
+   "theoretical_possible": true,
+   "batch": null,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "The client's own annotation specification splits the label space into image level tags and object level boxes, so the model that matches the labels is two heads rather than one. Both halves already run here (YOLO26n 0.535 mAP50 for boxes, ResNet50 87.77 per cent pooled for classes), so the question is only whether the join is useful and what each half contributes.",
+   "results": null,
+   "note": "Recommended near-term answer to the multi-class question, because it needs no new modelling. Report on the 13 pictures that hold both tiers, plus the production set when it arrives. The joint two-head version of this (one backbone, masked losses) is blocked by the data: only 5 of the 434 annotated pictures carry a tag label."
+  },
+  {
+   "id": "debris_family_merge",
+   "model_family": "ResNet50",
+   "data_arena": "line_classifier_224",
+   "file": "experiments/cnn/ (re-score or retrain with a merged class)",
+   "summary": "Re-score a stored classifier model with Foreign Matter, Fiber and Extraneous Polymer merged into one debris class, to split the family's error into naming and recognition.",
+   "axis": "data quality (taxonomy conflict)",
+   "theoretical_possible": true,
+   "batch": null,
+   "params": null,
+   "status": "ideated",
+   "hypothesis": "142 of the 309 misclassified test pictures in the per-line run sit in the Foreign Matter, Fiber and Extraneous Polymer family, and 33 of the 55 multi-label pictures are one Extraneous Polymer against Fiber conflict, which the single-label rule resolves by training 34 of the 36 Extraneous Polymer pictures as Fiber. If the merge removes most of the family's error, the fix is a label rule rather than a model.",
+   "results": null,
+   "note": "Cheapest useful test of the taxonomy question: if a stored confusion matrix can be re-read no training is needed, otherwise one retrain. Merging classes raises accuracy by construction, so the comparison must be stated as merged against unmerged on the same pictures, and the three-class confusion must be reported both ways."
+  },
+  {
+   "id": "data_missing_box_noise",
+   "model_family": "nil (data measurement)",
+   "data_arena": "production_size_and_data_levers",
+   "file": "nil (re-annotation sample)",
+   "summary": "Re-annotate a sample of 30 to 50 boxed pictures marking every class present, and count the boxes the original annotation missed.",
+   "axis": "data quality (missing boxes)",
+   "theoretical_possible": true,
+   "batch": null,
+   "params": 0,
+   "status": "ideated",
+   "hypothesis": "The box annotation ran as 10 tasks, one per box class, and no picture sits in two tasks, so an object of another class in the same frame was never marked. That is missing-box noise, and it caps recall for any class that shares frames with another. The sample puts a number on the size of it.",
+   "results": null,
+   "note": "No GPU. Separately: 47 of the 434 annotated pictures carry a second label in the folder record that the box file does not carry, which is the evidence that the single-label property of the box tier is a workflow artifact rather than a property of the frames."
+  },
+  {
+   "id": "multilabel_test_split_by_picture",
+   "file": "run/multilabel_test_20260921/README.md",
+   "dataset": "dataset_test_picture_split/data.yaml on the a100 box",
+   "summary": "YOLO26n at the usual settings on 34 of the 47 multi-label pictures that carry boxes, tested on the other 13. The test pictures share the production line and the day with the training pictures.",
+   "axis": "data floor",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": 2507700,
+   "status": "done",
+   "results": {
+    "mAP50": 0.4741,
+    "mAP50_95": 0.1991,
+    "precision": 0.3383,
+    "recall": 0.6555,
+    "epochs": 100,
+    "train_s": 117.3,
+    "train_pictures": 34,
+    "train_boxes": 85,
+    "per_class_mAP50": {
+     "Bubble": 0.5509,
+     "Fiber": 0.3906,
+     "Wet Package": 0.4807
+    },
+    "seed": 42,
+    "caveat": "10 of the 13 test pictures come from line 25, the same session as most of the training pictures, so this number measures memory of one session. Read it against multilabel_test_line_25_held_out, not against the 0.5355 baseline.",
+    "test_pictures": 13,
+    "test_boxes": 32,
+    "shared_88_test_set_mAP50": 0.0863,
+    "shared_88_test_set_mAP50_95": 0.0529,
+    "reproduced": "run twice, identical to four decimals"
+   }
+  },
+  {
+   "id": "multilabel_test_line_25_held_out",
+   "file": "run/multilabel_test_20260921/README.md",
+   "dataset": "dataset_test_line_split/data.yaml on the a100 box",
+   "summary": "The same weights, settings and seed as multilabel_test_split_by_picture, with every picture from production line 25 held out: train on 24 pictures from lines 24, 26, 27 and 31, test on 23 pictures from line 25.",
+   "axis": "data floor",
+   "theoretical_possible": true,
+   "batch": 8,
+   "params": 2507700,
+   "status": "done",
+   "results": {
+    "mAP50": 0.0758,
+    "mAP50_95": 0.014,
+    "precision": 0.0103,
+    "recall": 0.3409,
+    "epochs": 87,
+    "early_stopped": true,
+    "train_s": 83.5,
+    "train_pictures": 24,
+    "per_class_mAP50": {
+     "Fiber": 0.1516,
+     "Wet Package": 0.0
+    },
+    "seed": 42,
+    "reading": "6.2 times below the other test on the same pictures with the same settings and seed, so the other number measures memory of one session. Precision 0.0103 against recall 0.3409 means the model draws boxes widely and is almost never right.",
+    "test_pictures": 23,
+    "test_boxes": 23,
+    "shared_88_test_set_mAP50": 0.0299,
+    "shared_88_test_set_mAP50_95": 0.0115,
+    "reproduced": "run twice, identical to four decimals"
+   }
   }
  ],
  "dimensions": [
@@ -1686,6 +1841,17 @@
    "title": "Optional LR control",
    "why": "The two LR arms also differed in early stopping (87 vs 100 epochs on YOLO11) and in the decay tail.",
    "how": "Re-run both arms with lrf held equal to isolate init, early stopping and the tail."
+  },
+  {
+   "id": "R4",
+   "title": "Fiber and Extraneous Polymer relabel, if the client rules for the newer folder",
+   "status": "blocked, waiting on the client (asked 2026-09-22 through the lead)",
+   "why": "33 pictures are named Extraneous Polymer in the newer folder and Fiber in the older library. Both pipelines resolve this by taking the older library name, so the boundary of those two classes rests on a decision we do not own.",
+   "how": "Change one class mapping, keep the pictures and the boxes as they are: in the detector label files move the 30 annotated pictures from Fiber to Extraneous Polymer, and in the pooled classifier set move the 34 pictures the same way, then re-run the detector and the per-line models. The split moves with them, because the per-line split assigns pictures to train and test by class.",
+   "affected": "Fiber and Extraneous Polymer per-class numbers only. Annotated detection set: Fiber 61 pictures to 31, Extraneous Polymer 17 to 47. Pooled classifier set: Fiber 362 to 328, Extraneous Polymer 268 to 302.",
+   "not_affected": "The pictures, the boxes, the tag tier, the other eight detection classes, the dataset totals and the multi-label finding.",
+   "detail": "docs/naming_open_question_20260922.md",
+   "evidence": "run/ep_fiber_check/20260921/, run/ep_fiber_check/20260922/, run/multilabel_eda/20260921/"
   }
  ]
 }

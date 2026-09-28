@@ -1,3 +1,11 @@
+---
+title: Armor blob transfer, 2026-09-16
+date: 2026-09-16
+type: doc
+status: active
+where: docs/armor_blob_transfer_20260916.md
+---
+
 # Armor blob transfer, 2026-09-16
 
 This record holds the provenance of the two image folders that we moved from the

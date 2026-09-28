@@ -22,7 +22,7 @@ only.
 USAGE
     python3 build_ooi_dataset_single.py \
         --crop-base run/single-size_fixed_crop \
-        --ooi-csv   runs/yolo11/ooi_images.csv \
+        --ooi-csv   model_runs/yolo11/ooi_images.csv \
         --out       run/ooi_dataset_single_20260907 \
         --date      20260903 --test-ratio 0.2 --seed 42
 
@@ -51,7 +51,7 @@ except Exception:
 
 
 # The 10 Object-of-Interest (OoI) classes -- only images with bounding boxes.
-# Verified 2026-09-07 against runs/yolo11/classes.txt + runs/yolo11/dataset.yaml
+# Verified 2026-09-07 against model_runs/yolo11/classes.txt + model_runs/yolo11/dataset.yaml
 # + data/annotations.xml (unique <box label> values in OoI subset).
 OOI_CLASSES = [
     "Bubble",

@@ -1,4 +1,18 @@
+---
+title: Class-wise 70:30 split for all five lines, revised 2026-09-17
+date: 2026-09-17
+type: report
+status: active
+where: reports/lines/ALL_LINES_class_split_70_30_20260917.md
+---
+
 # Class-wise 70:30 split for all five lines, revised 2026-09-17
+
+> **Open question, 2026-09-22.** 33 pictures are named Extraneous Polymer in the newer folder and Fiber
+> in the older library. Every model here takes the older library's name, so the Fiber and Extraneous
+> Polymer per-class figures in this document are stated on that naming and are provisional until the
+> client rules which folder is authoritative. The pictures, the boxes and the other classes are not
+> affected. Detail: `docs/naming_open_question_20260922.md`.
 
 Pooled defect-class dataset from the three folders, one row per unique picture, under the
 rules agreed with the client on 2026-09-17: Clear and duplicates are not classes (a picture

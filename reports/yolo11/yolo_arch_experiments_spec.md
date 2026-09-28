@@ -1,3 +1,11 @@
+---
+title: YOLO Architecture Experiments on OoI Tags - Spec
+date: 2026-09-18
+type: report
+status: active
+where: reports/yolo11/yolo_arch_experiments_spec.md
+---
+
 # YOLO Architecture Experiments on OoI Tags — Spec
 
 **Created:** 2026-09-07T09:49:21+05:30
@@ -78,10 +86,10 @@ This is the **first deliverable** of the experiment. Until it is done, no traini
 | # | Step | Where it runs | Input | Output |
 |---|---|---|---|---|
 | 1 | Crop source 2448x2048 BMPs to single-size fixed windows (already exists on VM as `single-size_fixed_crop/<Class>_20260903/`) | VM (`/home/pranayp/fmd_crop_output/single-size_fixed_crop/`) | source BMPs | cropped BMPs + `crop_manifest.csv` |
-| 2 | Filter the OoI subset (every `<image>` with at least one `<box>`) | Local or VM, Python script `src/yolo_ooi/01_filter_ooi.py` | `data/annotations.xml` | `runs/yolo11/ooi_images.csv` (one row per OoI image: image_id, original_relpath, class, n_boxes, src_bmp) |
-| 3 | Apply XML bbox rotation to crop coords -> YOLO-OBB txt format | `src/yolo_ooi/02_xml_to_yolo_obb.py` | `ooi_images.csv` + the fixed crop windows on VM (we need each crop's `(left, top, w, h)` origin; available in `crop_manifest.csv`) | per-image `*.txt` label files in YOLO OBB format (`class x1 y1 x2 y2 x3 y3 x4 y4`, normalized to 0-1, corners clockwise from top-left), placed under `runs/yolo11/labels/<image_stem>.txt` |
-| 4 | Stratified train/val split, written as **CSV path lists** (no symlinks, no copies) | `src/yolo_ooi/03_split_csv.py` | `ooi_images.csv` + class column | `runs/yolo11/train.txt`, `runs/yolo11/val.txt` (one absolute image path per line; same length stem `.txt` resolved via `Path.replace_ext`); split ratios TBD — default 80/20 stratified by class |
-| 5 | Build `dataset.yaml` (paths point at the two `.txt` files, not at directories) | `src/yolo_ooi/04_make_dataset_yaml.py` | train/val CSV paths + class list | `runs/yolo11/dataset.yaml` (no `path:` field; `train:` and `val:` reference the `.txt` files directly — verified supported: `docs.ultralytics.com/datasets/obb`) |
+| 2 | Filter the OoI subset (every `<image>` with at least one `<box>`) | Local or VM, Python script `src/yolo_ooi/01_filter_ooi.py` | `data/annotations.xml` | `model_runs/yolo11/ooi_images.csv` (one row per OoI image: image_id, original_relpath, class, n_boxes, src_bmp) |
+| 3 | Apply XML bbox rotation to crop coords -> YOLO-OBB txt format | `src/yolo_ooi/02_xml_to_yolo_obb.py` | `ooi_images.csv` + the fixed crop windows on VM (we need each crop's `(left, top, w, h)` origin; available in `crop_manifest.csv`) | per-image `*.txt` label files in YOLO OBB format (`class x1 y1 x2 y2 x3 y3 x4 y4`, normalized to 0-1, corners clockwise from top-left), placed under `model_runs/yolo11/labels/<image_stem>.txt` |
+| 4 | Stratified train/val split, written as **CSV path lists** (no symlinks, no copies) | `src/yolo_ooi/03_split_csv.py` | `ooi_images.csv` + class column | `model_runs/yolo11/train.txt`, `model_runs/yolo11/val.txt` (one absolute image path per line; same length stem `.txt` resolved via `Path.replace_ext`); split ratios TBD — default 80/20 stratified by class |
+| 5 | Build `dataset.yaml` (paths point at the two `.txt` files, not at directories) | `src/yolo_ooi/04_make_dataset_yaml.py` | train/val CSV paths + class list | `model_runs/yolo11/dataset.yaml` (no `path:` field; `train:` and `val:` reference the `.txt` files directly — verified supported: `docs.ultralytics.com/datasets/obb`) |
 
 Notes / decisions made:
 - **Single-size only** for this round. Multi-size is parked (per your directive).
@@ -92,7 +100,7 @@ Notes / decisions made:
 You said ~400 OoI images, ~2000 crops total. The "~2000 crops" number is suspicious against `ooi_images.csv` (one image = one row). I read it as: ~2000 **bounding boxes** total across the ~400 images (i.e. ~5 boxes/image on average). The CSV keeps one row per image, but the per-image `.txt` label file will hold ~5 lines on average. **Will verify in step 2 output** (Section 10 entry).
 
 ### 4.4 Object-crop preview (the visual sanity check)
-Before training, we generate one preview image per class showing the rotated boxes drawn over the cropped BMP, save to `runs/yolo11/preview/`. This catches two classes of bug early: (a) rotation sign/convention errors (a -45 deg box visually flipped means we built corners wrong), (b) coordinate-system errors (boxes outside the crop window mean we offset wrong).
+Before training, we generate one preview image per class showing the rotated boxes drawn over the cropped BMP, save to `model_runs/yolo11/preview/`. This catches two classes of bug early: (a) rotation sign/convention errors (a -45 deg box visually flipped means we built corners wrong), (b) coordinate-system errors (boxes outside the crop window mean we offset wrong).
 
 ---
 
@@ -197,7 +205,7 @@ For every run, capture into a JSON (and later into the same `samples/ContactLens
 | Same `nc` across all runs | no class drift |
 | Pretrained weights: `model = YOLO("yolo11n-obb.yaml").load("yolo11n-obb.pt")` for all baseline-shaped runs; explicit `strict=False` and log missing/extra keys | tells us whether the change broke weight loading |
 | Train on VM (A100 80GB); verify `nvidia-smi` shows the process before logging "started" | no false starts |
-| Each run gets its own dated folder `runs/yolo11/runs/<exp_id>_<YYYYMMDD>/` | no overwrites, comparable to the fixed-crop convention |
+| Each run gets its own dated folder `model_runs/yolo11/runs/<exp_id>_<YYYYMMDD>/` | no overwrites, comparable to the fixed-crop convention |
 | A run only counts if `metrics.json` exists AND `model.val()` completes without raising | catches the "no BLAS for stream" transient from the 4-arch CNN matrix (`HANDOFF.md` §3); rerun cold if needed |
 
 **Acceptance to call something a "win":**
@@ -253,7 +261,7 @@ Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce 
 **Entry 1 — 2026-09-07T09:55:00+05:30 — User approval gate (first batch).**
 - Decision: **Green-light `scale-s` only** into the first batch. Other candidates deferred to later batches — *not dropped*.
 - Decision: **Scope = first batch** — data prep + baseline + scale-s + imgsz-1280 = ~3 training runs. This is batch 1 of several, not the entire effort.
-- Decision: **~2000 bounding boxes across ~400 images** (my interpretation; to be verified by step 2 of data prep — output goes to `runs/yolo11/ooi_images.csv`).
+- Decision: **~2000 bounding boxes across ~400 images** (my interpretation; to be verified by step 2 of data prep — output goes to `model_runs/yolo11/ooi_images.csv`).
 - Evidence: user response captured 2026-09-07T09:55 IST via inline form.
 - Next action: **build `src/yolo_ooi/` package, scripts 01→05 (Section 4.2 steps), run on VM, then baseline → scale-s → imgsz-1280 in order. STOP after batch 1 finishes; report results; await user green-light for the next batch (scale-m/l/x, p2, attention, etc.).**
 - Decision: **NOT STARTING UNTIL USER EXPLICITLY SAYS "GO".**
@@ -273,19 +281,19 @@ Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce 
 **Entry 3 — 2026-09-07T11:00:00+05:30 — Data prep code built + verified locally (VM offline).**
 - User directive: prep the code, test scripts locally first (VM not online), keep it light on the local machine. Data as relative-CSV path lists, single-size only, no multi-size, no image copies, no heavy training locally.
 - **Built `src/yolo_ooi/` package (5 scripts):**
-  - `01_filter_ooi.py` -> `runs/yolo11/ooi_images.csv`
-  - `02_xml_to_yolo_obb.py` -> `runs/yolo11/labels/*.txt` (YOLO-OBB) + `convert_report.csv`
-  - `03_split_csv.py` -> `runs/yolo11/{train,val}.txt` + `split.csv` (stratified 80/20, relative paths, seed 42)
-  - `04_make_dataset_yaml.py` -> `runs/yolo11/dataset.yaml` (no `path:` key, per skill rule)
-  - `05_preview.py` -> `runs/yolo11/preview/*.png` (per-class OBB-over-crop sanity images)
+  - `01_filter_ooi.py` -> `model_runs/yolo11/ooi_images.csv`
+  - `02_xml_to_yolo_obb.py` -> `model_runs/yolo11/labels/*.txt` (YOLO-OBB) + `convert_report.csv`
+  - `03_split_csv.py` -> `model_runs/yolo11/{train,val}.txt` + `split.csv` (stratified 80/20, relative paths, seed 42)
+  - `04_make_dataset_yaml.py` -> `model_runs/yolo11/dataset.yaml` (no `path:` key, per skill rule)
+  - `05_preview.py` -> `model_runs/yolo11/preview/*.png` (per-class OBB-over-crop sanity images)
 - **Confirmed your data interpretation:** 434 OoI images, 2020 bounding boxes (~4.65 boxes/image), **10 classes** (not 22). The other 12 tasks are presentation tags with no boxes and are correctly held out. Exactly matches your "~400 images / ~2000 boxes" estimate.
 - **Crop mapping:** all 434 OoI images have a matching single-size fixed crop + manifest row on disk (0 missing). Manifests carry the crop window origin `(left,top)` in the 2448x2048 source space.
-- **CRITICAL conversion finding (corner-semantics):** CVAT `xtl/ytl/xbr/ybr` are the UNROTATED local rectangle, and `rotation` spins it about the center. It is NOT the AABB of the rotated shape. My first two converter attempts assumed the wrong model (AABB-solve produced degenerate corners spanning -1151..2250px). The naive base-rect-rotate model reproduces all 2020 boxes (0 outside-crop, 0 unresolvable out of `total 2020`). **Verified visually** on Fiber + Bubble previews (saved to `runs/yolo11/preview/`): polygons enclose the real defects with correct orientation.
+- **CRITICAL conversion finding (corner-semantics):** CVAT `xtl/ytl/xbr/ybr` are the UNROTATED local rectangle, and `rotation` spins it about the center. It is NOT the AABB of the rotated shape. My first two converter attempts assumed the wrong model (AABB-solve produced degenerate corners spanning -1151..2250px). The naive base-rect-rotate model reproduces all 2020 boxes (0 outside-crop, 0 unresolvable out of `total 2020`). **Verified visually** on Fiber + Bubble previews (saved to `model_runs/yolo11/preview/`): polygons enclose the real defects with correct orientation.
 - **Self-check honesty:** the earlier "AABB-reconstruction self-check" was the wrong invariant (stored box is the unrotated rect, so its AABB legitimately changes after rotation). Replaced with a NaN/degenerate guard + the visual preview as the authoritative check. Logged so we do not re-introduce the bad check.
 - **Label output verified:** 434 label files, 2020 lines, 0 class-index errors, 0 coordinate-out-of-[0,1] errors, every train/val image has a label file.
 - **Split:** 346 train / 88 val (20.28% val), stratified per class (all 10 classes present in both).
-- **Status:** `/runs/yolo11/*` complete and verified locally. All artifacts use RELATIVE image paths (portable local <-> VM). **No training run yet** — VM offline, and per directive no local training. Next on VM: `check_det_dataset` on the yaml, then baseline -> scale-s -> imgsz-1280.
-- Evidence: real outputs in `runs/yolo11/`; previews in `runs/yolo11/preview/`. This is a SEPARATE experiment from prior e05/merged runs (no mixing).
+- **Status:** `model_runs/yolo11/*` complete and verified locally. All artifacts use RELATIVE image paths (portable local <-> VM). **No training run yet** — VM offline, and per directive no local training. Next on VM: `check_det_dataset` on the yaml, then baseline -> scale-s -> imgsz-1280.
+- Evidence: real outputs in `model_runs/yolo11/`; previews in `model_runs/yolo11/preview/`. This is a SEPARATE experiment from prior e05/merged runs (no mixing).
 - One open item to confirm on VM: whether Ultralytics label auto-resolution finds `labels/` next to the txt file (relative-path layout) — validate with `check_det_dataset` before the first train call.
 
 ---
@@ -322,7 +330,7 @@ Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce 
 
 **Entry 6 — 2026-09-07T11:55:00+05:30 — VM online; yaml validation found 2 broken forks, fixed; dataset verified.**
 - VM came back: `vm-amd-a100-westus2`, kernel `6.17.0-1022-azure`, GPU A100 80GB PCIe, `/` 41% used (73 GB free). CUDA matmul on cuda:0 verified before any work.
-- **Bundle push:** 30 MB tarball extracted to `/home/pranayp/yolo_ooi/`. Contents: 5 yaml forks + `src/yolo_ooi/` (5 scripts) + `runs/yolo11/` (CSV + 434 labels + dataset.yaml + 30 preview PNGs) + `vm/crop_coords.py` + `vm/crop_usage_guide.md` + `reports/yolo_arch_experiments_spec.md`.
+- **Bundle push:** 30 MB tarball extracted to `/home/pranayp/yolo_ooi/`. Contents: 5 yaml forks + `src/yolo_ooi/` (5 scripts) + `model_runs/yolo11/` (CSV + 434 labels + dataset.yaml + 30 preview PNGs) + `vm/crop_coords.py` + `vm/crop_usage_guide.md` + `reports/yolo_arch_experiments_spec.md`.
 - **Env install:** `pip3 install --user --break-system-packages "torch==2.6.0+cu124" torchvision==0.21.0+cu124 ultralytics` -> `torch 2.6.0+cu124`, `ultralytics 8.4.142`. Real GPU matmul verified.
 - **Dataset verified on VM:** `check_det_dataset('dataset.yaml')` returns `train.txt` and `val.txt`, both `exists=True`, nc=10, all 10 class names loaded.
 - **CRITICAL yaml validation finding — 2 of 5 forks were silently broken:**
@@ -358,7 +366,7 @@ Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce 
 - **Blocker (from HANDOFF §7.2) confirmed and fixed.** The root cause was the **path-list input layout** (`dataset.yaml` with `train: train.txt` / `val: val.txt`), not the labels or the space in `Bubble Cluster_20260903` per se. Ultralytics' path-list label resolver cannot pair `train.txt` entries with labels stored in a separate `labels/` dir; its dir-scan fallback then chokes on the space in the class dir name (`No labels found in Bubble Cluster_20260903.cache`).
 - **Fix — switched to the canonical Ultralytics directory layout.** Built a symlink tree (no image copies) at `/home/pranayp/yolo_ooi/dataset_obb/`:
   - `images/{train,val}/` → symlinks to the real `single-size_fixed_crop/<Class>_20260903/<stem>_crop.bmp`
-  - `labels/{train,val}/` → symlinks to `runs/yolo11/labels/<stem>.txt` (as `<stem>_crop.txt` so each label sits beside its image with matching stem)
+  - `labels/{train,val}/` → symlinks to `model_runs/yolo11/labels/<stem>.txt` (as `<stem>_crop.txt` so each label sits beside its image with matching stem)
   - `dataset_obb.yaml` sets `path: /home/pranayp/yolo_ooi/dataset_obb`, `train: images/train`, `val: images/val`.
   - Ultralytics does one recursive scan and pairs labels beside images by filename — no path-list, no space-in-dirname fragility. Builder mirrored into repo as `src/yolo_ooi/07_build_dir_layout.py`.
 - **Verified before burning GPU:** `check_det_dataset` on the new yaml resolves cleanly; `build_yolo_dataset` on `val` scanned 88 images, 0 corrupt, 0 background, cache created — the previous `ValueError` is gone. (The one train-side error in my harness was a missing `mosaic` hyp attribute, not the dataset.)
@@ -371,15 +379,15 @@ Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce 
 
   Per-class (best val): Bubble Irregular 0.888 mAP50; Wet Package 0.634; Foreign Matter 0.387; Bubble 0.384; Fiber 0.194; Bubble Cluster 0.144. Bubble On 123 / Bubble On Edge / Extraneous Polymer / HEMA Fragment ≈ 0 (tiny support — 2–3 val images each; not a pipeline failure).
 - **Honest read:** ~0.27 mAP50 on 88 val images with only 346 train crops is expected-low for this dataset size; pipeline correctness is the visual call. **Visual confirmation of `val_batch*_pred.jpg` (boxes aligned to defects) remains a manual step — I could not render the JPEGs in-model.**
-- **Artifacts:** VM `/home/pranayp/yolo_ooi/runs/yolo_arch/baseline_obb/{best,last}.pt`, `results.csv`, `confusion_matrix.png`, `metrics.json`, pred grids; mirrored locally `runs/yolo11/yolo_arch/baseline_obb/` + `runs/yolo11/runs/baseline_dir_train.log`.
-- **Spec note:** the fragile path-list `dataset.yaml` (`train: train.txt`) in `runs/yolo11/` is superseded by the dir-layout `dataset_obb.yaml` — all batch-1 runs must use the dir-tree yaml, not the old path-list one.
+- **Artifacts:** VM `/home/pranayp/yolo_ooi/runs/yolo_arch/baseline_obb/{best,last}.pt`, `results.csv`, `confusion_matrix.png`, `metrics.json`, pred grids; mirrored locally `model_runs/yolo11/yolo_arch/baseline_obb/` + `model_runs/yolo11/runs/baseline_dir_train.log`.
+- **Spec note:** the fragile path-list `dataset.yaml` (`train: train.txt`) in `model_runs/yolo11/` is superseded by the dir-layout `dataset_obb.yaml` — all batch-1 runs must use the dir-tree yaml, not the old path-list one.
 - **Decision:** keep. GPU now free. **Next (batch 1 order, one at a time per user directive): yolo11s → scale_wider_only → attention_backbone → sppf_cspc**, each with a Section 10 entry.
 
 ---
 
 **Entry 9 — 2026-09-07T14:20:00+05:30 — Batch 1 COMPLETE: all 4 backbone variants trained; comparative analysis.**
 
-- **Ran the remaining 4 to completion** sequentially on the A100 via `run_batch1.py` (epochs=100, patience=50, imgsz=640, batch=16, seed=42, lr0=0.01, workers=8). All 4 finished 100 epochs, no early stop. Log: `runs/yolo11/runs/batch1_all.log`.
+- **Ran the remaining 4 to completion** sequentially on the A100 via `run_batch1.py` (epochs=100, patience=50, imgsz=640, batch=16, seed=42, lr0=0.01, workers=8). All 4 finished 100 epochs, no early stop. Log: `model_runs/yolo11/runs/batch1_all.log`.
 - **Final matrix (best epoch from each results.csv; 88 val images / 377 instances, batch 16, seed 42):**
 
   | exp | arch change | params | GFLOPs | best_ep | mAP50 | mAP50-95 | P | R | ΔmAP50 vs base |
@@ -409,8 +417,8 @@ Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce 
   Pattern: Bubble Irregular + Wet Package strong everywhere (the two with largest support per class and big box sizes); Bubble On 123 / Bubble On Edge / Extraneous / HEMA ≈ 0 across most archs because each has only **2–3 val images** (tiny support → recall collapses), not an architecture failure. `attention_backbone` uniquely lifts Extraneous Polymer (0.555) and HEMA (0.124) — consistent with the attention-on-defects thesis; `scale_wider` lifts Foreign Matter (0.570) and Wet Package (0.800).
 - **Inference speed note:** all variants validate at ~1.5–2.5ms/img on A100; the per-model `val_inf_ms` is <2× baseline for all four (acceptance criterion met — the wins are not paid for by latency).
 - **Honest read:** sppf_cspc +0.018 (same params) is a real, free gain — bigger than the spec's "expected ~0" prediction, worth keeping. attention gives near-yolo11s accuracy at 1/3 the params — the best architectural idea tested. scale_wider is the accuracy ceiling but compute-heavy (48.7 GFLOPs); whether that cost is acceptable is a deployment question.
-- **Visual guardrail:** pixel-sanity on all `val_batch*_pred.jpg` confirms boxes are drawn in every arch's grids (non-trivial color fraction). **Genuine box-to-defect alignment still needs a human eyeball — this model cannot render JPEGs.** Recommended before trusting the numbers: open `runs/yolo11/yolo_arch/<exp>/val_batch*_pred.jpg`.
-- **Artifacts (VM + local mirror):** `runs/yolo_arch/{yolo11s,scale_wider_only,attention_backbone,sppf_cspc}_obb/` each with results.csv + confusion_matrix + pred grids (+ best.pt/last.pt on VM; excluded from the 21.6MB local mirror pull). Summary JSON `runs/yolo11/batch1_summary.json`; aggregator `src/yolo_ooi/collect_batch_results.py`.
+- **Visual guardrail:** pixel-sanity on all `val_batch*_pred.jpg` confirms boxes are drawn in every arch's grids (non-trivial color fraction). **Genuine box-to-defect alignment still needs a human eyeball — this model cannot render JPEGs.** Recommended before trusting the numbers: open `model_runs/yolo11/yolo_arch/<exp>/val_batch*_pred.jpg`.
+- **Artifacts (VM + local mirror):** `runs/yolo_arch/{yolo11s,scale_wider_only,attention_backbone,sppf_cspc}_obb/` each with results.csv + confusion_matrix + pred grids (+ best.pt/last.pt on VM; excluded from the 21.6MB local mirror pull). Summary JSON `model_runs/yolo11/batch1_summary.json`; aggregator `src/yolo_ooi/collect_batch_results.py`.
 - **Decision:** keep — all four are genuine, reproducible results. **Next options (ask user):** (a) report/visual-review this batch; (b) since all 4 beat baseline, pull parked Section 5b rows (deeper-only, no-pretrain) for a second round; (c) validate the scale_wider winner is worth its 48.7 GFLOPs before adoption.
 
 ---
@@ -442,7 +450,7 @@ Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce 
 ---
 
 **Entry 12 — completed 2026-09-08 (batch-2 initial test done: baseline_b8 + depth_plus2_deep, batch 8).**
-- Trained sequentially on the A100 (driver vm/run_batch2_b8.py, batch 8, frozen config). baseline_b8 train 413 s, depth_plus2_deep 895 s, ALL RUNS COMPLETE. Artifacts mirrored locally: runs/yolo11/yolo_arch/{baseline_b8,depth_plus2_deep}/{metrics.json, iou_metrics.json, results.csv} (+ best.pt/last.pt on VM).
+- Trained sequentially on the A100 (driver vm/run_batch2_b8.py, batch 8, frozen config). baseline_b8 train 413 s, depth_plus2_deep 895 s, ALL RUNS COMPLETE. Artifacts mirrored locally: model_runs/yolo11/yolo_arch/{baseline_b8,depth_plus2_deep}/{metrics.json, iou_metrics.json, results.csv} (+ best.pt/last.pt on VM).
 - Results (batch 8, seed 42, 88 val / 377 instances):
 
   | exp | params | best_ep | mAP50 | mAP50-95 | P | R | meanIoU | match% |
@@ -467,7 +475,7 @@ Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce 
 ---
 
 **Entry 14 — 2026-09-09T09:51:50+05:30 — Batch 3 done: the depth null was LOCATION, not TYPE.**
-- Ran the ablation on the A100 (batch 8, frozen config). armA_residual_deep train 457 s, armB_conv_p4 423 s, ALL RUNS COMPLETE. Artifacts mirrored locally (runs/yolo11/yolo_arch/armA_residual_deep, armB_conv_p4) and registry refreshed via experiments/update_registry.py all (9 done rows re-derived from disk, never hand-typed).
+- Ran the ablation on the A100 (batch 8, frozen config). armA_residual_deep train 457 s, armB_conv_p4 423 s, ALL RUNS COMPLETE. Artifacts mirrored locally (model_runs/yolo11/yolo_arch/armA_residual_deep, armB_conv_p4) and registry refreshed via experiments/update_registry.py all (9 done rows re-derived from disk, never hand-typed).
 - Results (batch 8, seed 42, 88 val / 377 instances):
 
   | run | params | best_ep | mAP50 | mAP50-95 | P | R | meanIoU | match% |

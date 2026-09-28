@@ -1,3 +1,11 @@
+---
+title: Root cause: how four wrong conclusions entered the record
+date: 2026-09-11
+type: report
+status: active
+where: reports/yolo26/ROOT_CAUSE_20260911.md
+---
+
 # Root cause: how four wrong conclusions entered the record
 
 **Date:** 2026-09-11

@@ -1,3 +1,11 @@
+---
+title: Machine move: old laptop → new laptop (2026-09-17)
+date: 2026-09-17
+type: transfer
+status: active
+where: docs/transfer/MACHINE_MOVE_20260917.md
+---
+
 # Machine move: old laptop → new laptop (2026-09-17)
 
 The project moved from the old laptop (`C:/Users/HP`, repo at `D:/02-SSA/fmd-analysis`) to this
@@ -20,8 +28,8 @@ this machine; nothing about the old laptop's current contents is verified, becau
 | Obsidian knowledge vault | Complete, 44 notes, 209 KB | `.obsidian-vault/` (8 folders: Overview, Defect Taxonomy, Requirements, Glossary, Diagrams) |
 | Augmentation previews | `run/augment/` 448 MB, six preview runs + diagnostics | `du -sh run/augment` |
 | Line/EDA outputs | `run/line_eda/` 3.3 MB, `run/client_eda/` 44 KB | present |
-| YOLO11 run logs and metrics | `runs/yolo11/` 75 MB — 9 arm dirs with `results.csv` and `metrics.json` | `find runs/yolo11/yolo_arch` |
-| CNN results | `runs/cnn/` 3.7 MB, six `epochs_50/metrics.json` + confusion matrices | present |
+| YOLO11 run logs and metrics | `model_runs/yolo11/` 75 MB — 9 arm dirs with `results.csv` and `metrics.json` | `find model_runs/yolo11/yolo_arch` |
+| CNN results | `model_runs/cnn/` 3.7 MB, six `epochs_50/metrics.json` + confusion matrices | present |
 | Python env | **was broken, now repaired** (see §2.7) | `uv sync`, `cv2 5.0.0` |
 
 ## 2. What did NOT travel (the gap)
@@ -30,7 +38,7 @@ this machine; nothing about the old laptop's current contents is verified, becau
 |---|---|---|---|---|---|
 | 1 | **Source image library** — 1,465 BMPs, 22 class folders, all 2448×2048 mode L | `data/incoming/` | ~7 GB | The whole local augmentation workstream (`experiments/augmentation/`). Also required to regenerate crops. Only `New Text Document.txt` is present here. | Copy from the old laptop, or re-download the 10,614-image blob drop and re-derive (§4 route C) |
 | 2 | Crop outputs | `run/single-size_fixed_crop/`, `run/multi-size_fixed_crop/` | ~6.4 GB | Nothing structural — regenerable | `uv run src/fixed_crop.py --all --modes both` (needs item 1, and hours of CPU) |
-| 3 | Model weights | `runs/yolo11/yolo_arch/*/weights/*.pt` | small | Re-evaluating or re-scoring trained YOLO11 arms | Copy, or retrain (GPU on the VM) |
+| 3 | Model weights | `model_runs/yolo11/yolo_arch/*/weights/*.pt` | small | Re-evaluating or re-scoring trained YOLO11 arms | Copy, or retrain (GPU on the VM) |
 | | Only **2** `.pt` files survived: `baseline_obb/weights/best.pt` and `last.pt`. Missing for `attention_backbone_obb` (the +0.059 winner), `sppf_cspc_obb`, `scale_wider_only_obb`, `yolo11s-obb`, `armA_residual_deep`, `armB_conv_p4`, `depth_plus2_deep`, `baseline_b8` | | | | |
 | 4 | **SSH material** — no `~/.ssh` exists on this machine at all | `C:/Users/HP/.ssh/` | tiny | Every VM operation: training, the datasets, the YOLO26 runs, the 10,614-image library | Copy (§4 A), or generate a new keypair and install its public half on the VM via the Azure portal |
 | | Contents needed: `pranayp-vm-amd-a100-keyfile`, `vm-amd-a100-westus2-srv_amd100-user_key`, `config` (the `fmd-vm` and `amd-a100-vm` aliases), `known_hosts` | | | | |
@@ -95,7 +103,7 @@ found* after a successful sign-in, the repo is gone and needs recreating.
    `bash pack_old_laptop.sh` — see `docs/transfer/pack_old_laptop.sh`. It produces one dated folder
    with: a git bundle of every ref, a tar of the untracked working-tree files, the uncommitted diff,
    `~/.ssh`, the blob connection file, the Hermes profile, `data/incoming`, all
-   `runs/**/weights/*.pt`, and a SHA-256 manifest. Override the defaults with
+   `model_runs/**/weights/*.pt`, and a SHA-256 manifest. Override the defaults with
    `REPO=... OUT=... OLDHOME=...`.
 2. **Copy** that folder to this laptop. External drive, LAN share, `scp`, OneDrive — anything. The
    small pieces (git, creds, hermes, weights) are a few MB; `data/incoming` is 7 GB.

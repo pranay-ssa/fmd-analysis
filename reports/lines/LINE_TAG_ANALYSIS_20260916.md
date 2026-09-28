@@ -1,3 +1,11 @@
+---
+title: Production line analysis of the defect image library, 2026-09-16
+date: 2026-09-16
+type: report
+status: active
+where: reports/lines/LINE_TAG_ANALYSIS_20260916.md
+---
+
 # Production line analysis of the defect image library, 2026-09-16
 
 ## 1. Why we did this analysis

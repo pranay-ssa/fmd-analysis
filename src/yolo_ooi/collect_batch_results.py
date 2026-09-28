@@ -6,8 +6,8 @@ run_batch1.py does not write (only Ultralytics' results.csv is produced).
 
 Usage:
     python src/yolo_ooi/collect_batch_results.py \
-        --runs-dir runs/yolo11/yolo_arch \
-        --out runs/yolo11/batch1_summary.json
+        --runs-dir model_runs/yolo11/yolo_arch \
+        --out model_runs/yolo11/batch1_summary.json
 """
 from __future__ import annotations
 

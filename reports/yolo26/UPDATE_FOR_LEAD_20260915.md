@@ -1,3 +1,11 @@
+---
+title: Update: detecting defects on cropped images (YOLO11 and YOLO26)
+date: 2026-09-15
+type: report
+status: active
+where: reports/yolo26/UPDATE_FOR_LEAD_20260915.md
+---
+
 # Update: detecting defects on cropped images (YOLO11 and YOLO26)
 
 **Date:** Tuesday 15 September 2026

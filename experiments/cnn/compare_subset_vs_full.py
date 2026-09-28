@@ -26,8 +26,8 @@ import sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LINES = ["L24", "L25", "L26", "L27", "L31"]
-FULL = os.path.join(REPO, "runs", "cnn", "lines")
-SUBSET = os.path.join(REPO, "runs", "cnn", "lines_subset6")
+FULL = os.path.join(REPO, "model_runs", "cnn", "lines")
+SUBSET = os.path.join(REPO, "model_runs", "cnn", "lines_subset6")
 OUT = os.path.join(REPO, "run", "line_results_subset6_20260917")
 SIX = ["Missing Primary Package", "Multiple Lenses", "Foreign Matter",
        "Lens Off Center", "Missing Lens", "HEMA Obstruction"]

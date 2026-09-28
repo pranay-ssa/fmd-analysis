@@ -1,3 +1,11 @@
+---
+title: Line splits revised under the clarified rules (2026-09-17)
+date: 2026-09-17
+type: doc
+status: active
+where: docs/line_split_revision_20260917.md
+---
+
 # Line splits revised under the clarified rules (2026-09-17)
 
 The class-wise 70:30 splits published on 2026-09-16 were built from a 22-class pool of 8,401

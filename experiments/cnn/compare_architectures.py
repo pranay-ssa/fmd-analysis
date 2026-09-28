@@ -5,8 +5,8 @@ Two architectures on the same full split: ResNet50 against ResNet50-Inception Mu
 Both runs trained on the identical per-line train halves and were scored on the identical test
 halves, so every difference below is the architecture, not the data. Reads
 
-    runs/cnn/lines/<line>/epochs_50/            ResNet50
-    runs/cnn/lines_multiscale/<line>/epochs_50/ ResNet50-Inception MultiLevel MultiScale
+    model_runs/cnn/lines/<line>/epochs_50/            ResNet50
+    model_runs/cnn/lines_multiscale/<line>/epochs_50/ ResNet50-Inception MultiLevel MultiScale
 
 and writes run/line_results_multiscale_20260917/arch_vs_base.{csv,json}.
 
@@ -29,8 +29,8 @@ import sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LINES = ["L24", "L25", "L26", "L27", "L31"]
-BASE = os.path.join(REPO, "runs", "cnn", "lines")
-SCALE = os.path.join(REPO, "runs", "cnn", "lines_multiscale")
+BASE = os.path.join(REPO, "model_runs", "cnn", "lines")
+SCALE = os.path.join(REPO, "model_runs", "cnn", "lines_multiscale")
 OUT = os.path.join(REPO, "run", "line_results_multiscale_20260917")
 
 

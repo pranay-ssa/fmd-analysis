@@ -1,3 +1,11 @@
+---
+title: FM3 Edge Algorithm URS - Open Dilemmas for the Lead Meeting
+date: 2026-09-18
+type: report
+status: active
+where: reports/urs_dilemmas_meeting.md
+---
+
 # FM3 Edge Algorithm URS — Open Dilemmas for the Lead Meeting
 
 **Date:** 2026-09-04

@@ -1,3 +1,11 @@
+---
+title: USB checklist - old laptop → this laptop (2026-09-17)
+date: 2026-09-18
+type: transfer
+status: active
+where: docs/transfer/USB_CHECKLIST.md
+---
+
 # USB checklist — old laptop → this laptop (2026-09-17)
 
 Take this file with you to the old laptop. Everything on it is read-only; nothing on the old laptop
@@ -43,10 +51,10 @@ Expected result: `E:/fmd-transfer/fmd-transfer-<date>/` with a pack size of abou
 
 It collects: a `git bundle` of every branch, the untracked working-tree files, the uncommitted diff,
 `/c/Users/HP/.ssh`, the blob connection file, the Hermes profile, `data/incoming`, all
-`runs/**/weights/*.pt`, and `notes/INVENTORY.txt` with the old laptop's own counts.
+`model_runs/**/weights/*.pt`, and `notes/INVENTORY.txt` with the old laptop's own counts.
 
 Write down two numbers from `notes/INVENTORY.txt` before you leave:
-**`data/incoming BMPs`** and **`runs/**/weights .pt`**. You will compare them on the other side.
+**`data/incoming BMPs`** and **`model_runs/**/weights .pt`**. You will compare them on the other side.
 
 ## C. If Git Bash on the old laptop is a problem — manual copy
 

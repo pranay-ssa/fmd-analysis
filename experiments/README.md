@@ -1,8 +1,16 @@
+---
+title: experiments/ - YOLO Architecture Experiments
+date: 2026-09-18
+type: experiment
+status: active
+where: experiments/README.md
+---
+
 # experiments/ - YOLO Architecture Experiments
 
 **Owner:** Pranay
 **Scope:** structural experiments on YOLO11-OBB and YOLO26 backbones for Object-of-Interest (OoI) contact-lens defect detection.
-**Companion docs:** `registry.json` (every experiment + result in one place, machine-readable, plus `pending_reruns`), `reports/yolo11/yolo_arch_experiments_spec.md` (YOLO11 OBB timestamped Section 10 audit log), `reports/yolo26/yolo26_arch_experiments_spec.md` (YOLO26 detect log), and `reports/yolo26/yolo26_mc_baseline_and_hypotheses.md` (YOLO26 multiclass baseline + hypotheses). This README is the governance layer: the ideology, the dos and don'ts, the pitfalls, the technical debt, and the ADRs.
+**Companion docs:** `registry.json` (every experiment + result in one place, machine-readable, plus `pending_reruns`), `reports/yolo11/yolo_arch_experiments_spec.md` (YOLO11 OBB timestamped Section 10 audit log), `reports/yolo26/yolo26_arch_experiments_spec.md` (YOLO26 detect log), `reports/yolo26/yolo26_mc_baseline_and_hypotheses.md` (YOLO26 multiclass baseline + hypotheses), and `reports/multilabel/MULTILABEL_STRATEGY_20260921.md` with `experiments/multilabel/README.md` (the two label tiers, multi-label preparation, and the rules for reading a multi-label result) and `experiments/ep_fiber_check/README.md` (whether the Fiber against Extraneous Polymer pair is a naming choice or a misfile, judged on the frames). This README is the governance layer: the ideology, the dos and don'ts, the pitfalls, the technical debt, and the ADRs.
 
 ---
 

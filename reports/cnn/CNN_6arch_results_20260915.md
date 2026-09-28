@@ -1,4 +1,18 @@
+---
+title: CNN classifier line: six architectures on the combined 22-class set
+date: 2026-09-15
+type: report
+status: active
+where: reports/cnn/CNN_6arch_results_20260915.md
+---
+
 # CNN classifier line: six architectures on the combined 22-class set
+
+> **Open question, 2026-09-22.** 33 pictures are named Extraneous Polymer in the newer folder and Fiber
+> in the older library. Every model here takes the older library's name, so the Fiber and Extraneous
+> Polymer per-class figures in this document are stated on that naming and are provisional until the
+> client rules which folder is authoritative. The pictures, the boxes and the other classes are not
+> affected. Detail: `docs/naming_open_question_20260922.md`.
 
 **Date:** 2026-09-15
 **Scope:** the six-architecture matrix (ResNet18, ResNet50, MultiLevel MultiScale, MultiLevel Attention,
@@ -175,7 +189,7 @@ ResNet18 and ResNet50 should be quoted only as within-split reference points.
 | Workbook builders | `build_combined22_landing_pad.py` (Sheet1), `build_teammate_comparison.py` (Sheet2) |
 | Verification | `compare_lead_vs_ours.py` (structure diff), `check_split_integrity.py` (leakage check) |
 | Runner for the two new architectures | `run_combined22_two_new.sh` |
-| Confusion matrices and metrics | one per run, on the VM under `combined_22_runs/<arch>/epochs_50/`; local mirrors under `runs/cnn/combined22/` (gitignored) |
+| Confusion matrices and metrics | one per run, on the VM under `combined_22_runs/<arch>/epochs_50/`; local mirrors under `model_runs/cnn/combined22/` (gitignored) |
 
 ---
 

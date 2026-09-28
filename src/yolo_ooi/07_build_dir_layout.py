@@ -19,11 +19,11 @@ because the scan never walks the class dirs.
 
 Usage:
     python src/yolo_ooi/07_build_dir_layout.py \
-        --labels-dir runs/yolo11/labels \
+        --labels-dir model_runs/yolo11/labels \
         --crop-base run/single-size_fixed_crop \
-        --train-txt runs/yolo11/train.txt --val-txt runs/yolo11/val.txt \
-        --classes-file runs/yolo11/classes.txt \
-        --out-dir runs/yolo11/dataset_obb
+        --train-txt model_runs/yolo11/train.txt --val-txt model_runs/yolo11/val.txt \
+        --classes-file model_runs/yolo11/classes.txt \
+        --out-dir model_runs/yolo11/dataset_obb
 """
 from __future__ import annotations
 

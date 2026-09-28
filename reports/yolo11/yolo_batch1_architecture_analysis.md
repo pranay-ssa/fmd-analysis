@@ -1,3 +1,11 @@
+---
+title: YOLO11-OBB Backbone Architecture Experiments - Detailed Analysis
+date: 2026-09-18
+type: report
+status: active
+where: reports/yolo11/yolo_batch1_architecture_analysis.md
+---
+
 # YOLO11-OBB Backbone Architecture Experiments — Detailed Analysis
 
 **Date:** 2026-09-07
@@ -245,7 +253,7 @@ Tests the **"capacity via width alone, at constant depth"** hypothesis — the w
 
 1. **Absolute mAP is low (~0.27–0.36 mAP50).** That is expected on 346 train crops / 88 val images. The comparative *deltas* are the meaningful signal, and they are consistent and reproducible (all variants beat baseline on the same seed/data/hyperparams).
 2. **No pretrained weights** were used — all 5 were trained from scratch (random init), the correct protocol for an architecture comparison. Absolute numbers would be higher with `yolo11n-obb.pt` init, but the *relative* ranking is what this file reports.
-3. **Visual guardrail pending.** Pixel-sanity confirms boxes are rendered in every arch's `val_batch*_pred.jpg` grids, but genuine box-to-defect alignment must be eyeballed by a human (this model cannot render JPEGs). Recommended: open `runs/yolo11/yolo_arch/<exp>/val_batch*_pred.jpg`.
+3. **Visual guardrail pending.** Pixel-sanity confirms boxes are rendered in every arch's `val_batch*_pred.jpg` grids, but genuine box-to-defect alignment must be eyeballed by a human (this model cannot render JPEGs). Recommended: open `model_runs/yolo11/yolo_arch/<exp>/val_batch*_pred.jpg`.
 4. **params/GFLOPs shown are fused** (from each run's `summary (fused)`), i.e. the actual deployed model — they differ slightly from the pre-training CPU `model.info()` values quoted in spec Entry 6.
 5. sppf_cspc's 1.1 ms val_inf_ms is a single-measurement outlier (baseline 2.5 ms, same GFLOPs); treat it as noise, not a real 2× speedup.
 
@@ -253,7 +261,7 @@ Tests the **"capacity via width alone, at constant depth"** hypothesis — the w
 
 ## 8. Artifacts
 - YAMLs: `experiments/{baseline,yolo11s,scale_wider_only,attention_backbone,sppf_cspc}_obb.yaml`
-- Run dirs (VM + local mirror `runs/yolo11/yolo_arch/`): `results.csv`, `confusion_matrix.png`, `val_batch*_pred.jpg`, `weights/best.pt` (VM only)
-- Aggregate summary: `runs/yolo11/batch1_summary.json`
+- Run dirs (VM + local mirror `model_runs/yolo11/yolo_arch/`): `results.csv`, `confusion_matrix.png`, `val_batch*_pred.jpg`, `weights/best.pt` (VM only)
+- Aggregate summary: `model_runs/yolo11/batch1_summary.json`
 - Aggregator script: `src/yolo_ooi/collect_batch_results.py`
 - Spec log: `reports/yolo11/yolo_arch_experiments_spec.md` §10 entries 8–9

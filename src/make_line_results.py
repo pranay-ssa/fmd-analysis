@@ -3,10 +3,10 @@
 Build the step-4 deliverables from the five per-line runs.
 
 Inputs (local mirrors of the VM run directories):
-    runs/cnn/lines/<line>/epochs_50/metrics.json
-    runs/cnn/lines/<line>/epochs_50/confusion_matrix_<line>.csv
-    runs/cnn/lines/<line>/epochs_50/history.json
-    runs/cnn/lines/<line>/epochs_50/confusion_matrix_<line>.png
+    model_runs/cnn/lines/<line>/epochs_50/metrics.json
+    model_runs/cnn/lines/<line>/epochs_50/confusion_matrix_<line>.csv
+    model_runs/cnn/lines/<line>/epochs_50/history.json
+    model_runs/cnn/lines/<line>/epochs_50/confusion_matrix_<line>.png
 
 Outputs:
     reports/cnn/FMD_Line_ResNet50_Results_20260917.xlsx
@@ -31,7 +31,7 @@ from openpyxl.drawing.image import Image as XLImage
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RUNS = os.environ.get("LINE_RESULTS_RUNS") or os.path.join(REPO, "runs", "cnn", "lines")
+RUNS = os.environ.get("LINE_RESULTS_RUNS") or os.path.join(REPO, "model_runs", "cnn", "lines")
 OUT_XLSX = os.environ.get("LINE_RESULTS_XLSX") or os.path.join(
     REPO, "reports", "cnn", "FMD_Line_ResNet50_Results_20260917.xlsx")
 OUT_NB = os.environ.get("LINE_RESULTS_NB") or os.path.join(
@@ -617,7 +617,7 @@ def build_notebook(data, cells, bands):
            "is the mean of the five per-line macro figures; the five class lists differ, so there is no single\n"
            "macro quantity across them."),
         code("import json, os\n"
-             "root = 'runs/cnn/lines'\n"
+             "root = 'model_runs/cnn/lines'\n"
              "for line in ['L24', 'L25', 'L26', 'L27', 'L31']:\n"
              "    m = json.load(open(os.path.join(root, line, 'epochs_50', 'metrics.json')))\n"
              "    print('{0}: acc {1:.2%}  macro F1 {2:.2%}  weighted F1 {3:.2%}  test {4}'.format(\n"
@@ -690,7 +690,7 @@ def build_notebook(data, cells, bands):
                        "| This notebook | `notebooks/FMD_Line_Models_20260917.ipynb` |\n"
                        "| Results workbook | `reports/cnn/FMD_Line_ResNet50_Results_20260917.xlsx` |\n"
                        "| Split assignments | `run/line_splits_20260917/line_<line>/split.csv` |\n"
-                       "| Per-run outputs | `runs/cnn/lines/<line>/epochs_50/` (metrics, confusion matrix, history, log) |\n"
+                       "| Per-run outputs | `model_runs/cnn/lines/<line>/epochs_50/` (metrics, confusion matrix, history, log) |\n"
                        "| Trained weights | on the VM only: `~/line_experiment_20260917/runs/<line>/epochs_50/weights.weights.h5` |\n"
                        "| Trainer | `experiments/cnn/train_line_model.py` |\n"
                        "| Split builder | `src/build_line_split_assignments.py` |\n"))

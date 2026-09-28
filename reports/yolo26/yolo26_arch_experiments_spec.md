@@ -1,3 +1,11 @@
+---
+title: YOLO26 Detect Experiments on OoI Tags - Spec
+date: 2026-09-18
+type: report
+status: active
+where: reports/yolo26/yolo26_arch_experiments_spec.md
+---
+
 # YOLO26 Detect Experiments on OoI Tags - Spec
 
 **Created:** 2026-09-11

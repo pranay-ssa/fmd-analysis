@@ -1,3 +1,11 @@
+---
+title: Data Ingestion
+date: 2026-09-18
+type: doc
+status: active
+where: docs/INGEST.md
+---
+
 # Data Ingestion
 
 This folder holds raw defect-library drops from the VM. The pipeline and EDA

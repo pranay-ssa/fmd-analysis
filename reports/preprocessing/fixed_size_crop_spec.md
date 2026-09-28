@@ -1,3 +1,11 @@
+---
+title: Fixed-Size Crop Spec - FMD Preprocess (v0.1 FINALIZED 2026-09-03)
+date: 2026-09-18
+type: report
+status: active
+where: reports/preprocessing/fixed_size_crop_spec.md
+---
+
 # Fixed-Size Crop Spec — FMD Preprocess (v0.1 FINALIZED 2026-09-03)
 
 Status: FINALIZED. Algorithm validated on full 22-class dataset, both modes, by the user. Per-class/per-mode fixed-size, lens box-centered crop with a no-loss guard as the only size exception. Supersedes variable-size ROI-Crop output as the local production crop.

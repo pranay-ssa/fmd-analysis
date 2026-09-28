@@ -1,3 +1,11 @@
+---
+title: Repo overview and how to start here
+date: 2026-09-11
+type: reference
+status: active
+where: README.md
+---
+
 # FMD Preprocess
 
 Fixed-size per-class crop pipeline for FMD inspection images. Replaces black-border area with a consistent per-class window centered on the detected lens content.

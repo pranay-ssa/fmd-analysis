@@ -1,3 +1,11 @@
+---
+title: Repository reset for the work account (2026-09-18)
+date: 2026-09-18
+type: transfer
+status: active
+where: docs/transfer/REPO_RESET_20260918.md
+---
+
 # Repository reset for the work account (2026-09-18)
 
 The project moved to the work account `pranay-ssa`. This document records the archive taken
@@ -41,13 +49,13 @@ commits, the tip `c12d657`, 198 tracked files, and `git fsck` reported nothing.
 |---|---|
 | Git history | Replaced. The old history lives only in the archive above. |
 | Working tree | Untouched. Every file, including the folders git ignores, stays where it is. |
-| `runs/` (75 MB of YOLO11 logs, 32 MB of CNN runs) | Untouched on disk, still ignored by git. |
+| `model_runs/` (75 MB of YOLO11 logs, 32 MB of CNN runs) | Untouched on disk, still ignored by git. |
 | `.venv/`, `run/augment/`, `data/incoming/` | Untouched on disk, still ignored by git. |
 | `experiments/cnn/model_training 2.py` | Moved out of the tree to `D:/fmd-analysis-backups-20260918/scratch/`. It is a copy collision: an earlier draft of `model_training.py` that matches neither the committed version nor the live one. |
 
 ## 4. A limit worth knowing before the first clone
 
-The `runs/` rule in `.gitignore` keeps the line-run evidence out of git: the confusion matrices,
+The `model_runs/` rule in `.gitignore` keeps the line-run evidence out of git: the confusion matrices,
 `metrics.json` and `history.json` for the five per-line models, the six highlighted classes and the
 multi-scale architecture. Those files are the raw evidence for the published workbooks, and
 `experiments/cnn/verify_line_results.py` reads them directly.
@@ -58,8 +66,8 @@ disk, where the files exist.
 
 Two ways to close that gap, both one change:
 
-- Narrow the rule so the line-run folders travel, for example ignore `runs/*` and then re-include
-  `runs/cnn/lines`, `runs/cnn/lines_subset6` and `runs/cnn/lines_multiscale`. This adds about 7 MB.
+- Narrow the rule so the line-run folders travel, for example ignore `model_runs/*` and then re-include
+  `model_runs/cnn/lines`, `model_runs/cnn/lines_subset6` and `model_runs/cnn/lines_multiscale`. This adds about 7 MB.
 - Or copy the same files under `run/`, which git already versions.
 
 ## 5. The first push, done 2026-09-18
@@ -97,7 +105,7 @@ commits that had never been published are now off a single disk for the first ti
 | Tracked files | 312 |
 | Working tree | clean, no untracked entries outside the ignore rules |
 | Remote | `https://github.com/pranay-ssa/fmd-analysis.git`, both fetch and push |
-| Ignored folders on disk | `runs/` 32 MB of CNN runs, `.venv/` 366 MB, `run/augment/` 448 MB, all untouched |
+| Ignored folders on disk | `model_runs/` 32 MB of CNN runs, `.venv/` 366 MB, `run/augment/` 448 MB, all untouched |
 | Old history | recoverable from the bundle, verified after the removal |
 
 The count moved from 198 tracked files to 312 because the reset committed everything the old

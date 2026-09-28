@@ -22,7 +22,7 @@ import openpyxl
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(HERE))
-RUNS = os.path.join(REPO, "runs", "cnn", "lines")
+RUNS = os.path.join(REPO, "model_runs", "cnn", "lines")
 XLSX = os.environ.get("LINE_RESULTS_XLSX") or os.path.join(
     REPO, "reports", "cnn", "FMD_Line_ResNet50_Results_20260917.xlsx")
 SUMMARY = os.path.join(REPO, "run", "line_results_20260917", "summary.json")

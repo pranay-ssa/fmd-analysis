@@ -1,3 +1,11 @@
+---
+title: Next experiments, the six highlighted classes, and the line comparison panels (2026-09-17)
+date: 2026-09-17
+type: doc
+status: active
+where: docs/next_experiments_20260917.md
+---
+
 # Next experiments, the six highlighted classes, and the line comparison panels (2026-09-17)
 
 Record for the three things the lead asked for on 2026-09-17, as she wrote them:

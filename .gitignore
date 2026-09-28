@@ -40,12 +40,17 @@ Thumbs.db
 
 # === Keep tracked ===
 !data/annotations.xml
+!data/Updated Annotations 20260922.xml
 
 # === Local tool artifacts ===
 .obsidian-vault/
 
-# === Run outputs (crops, weights, per-epoch logs; ~9GB) ===
-runs/
+# === Notion staging file (local only, never pushed) ===
+notiondocs.md
+
+# === Model-training outputs (YOLO/CNN weights, per-epoch logs, metrics; ~110 MB local) ===
+# Called runs/ before 2026-09-21; see docs/decisions/2026-09-21-artifact-folders.md
+model_runs/
 
 # === Python cache ===
 .pytest_cache/

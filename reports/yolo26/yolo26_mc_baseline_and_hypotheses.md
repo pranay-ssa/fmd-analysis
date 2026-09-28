@@ -1,4 +1,18 @@
+---
+title: YOLO26 Multiclass Baseline & Experiment Hypotheses
+date: 2026-09-18
+type: report
+status: active
+where: reports/yolo26/yolo26_mc_baseline_and_hypotheses.md
+---
+
 # YOLO26 Multiclass Baseline & Experiment Hypotheses
+
+> **Open question, 2026-09-22.** 33 pictures are named Extraneous Polymer in the newer folder and Fiber
+> in the older library. Every model here takes the older library's name, so the Fiber and Extraneous
+> Polymer per-class figures in this document are stated on that naming and are provisional until the
+> client rules which folder is authoritative. The pictures, the boxes and the other classes are not
+> affected. Detail: `docs/naming_open_question_20260922.md`.
 
 **Date:** 2026-09-11
 **Dataset:** dataset_multiclass (346 train / 88 val, 10 defect classes, AABB labels from OBB conversion)

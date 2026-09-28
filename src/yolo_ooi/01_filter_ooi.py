@@ -6,7 +6,7 @@ base), so it is portable between the local dev machine and the VM.
 
 Usage:
     python src/yolo_ooi/01_filter_ooi.py --annot data/annotations.xml \
-        --crop-base run/single-size_fixed_crop --out runs/yolo11/ooi_images.csv
+        --crop-base run/single-size_fixed_crop --out model_runs/yolo11/ooi_images.csv
 """
 from __future__ import annotations
 

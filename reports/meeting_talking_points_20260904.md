@@ -1,3 +1,11 @@
+---
+title: FMD Training Results - Meeting Talking Points
+date: 2026-09-04
+type: report
+status: active
+where: reports/meeting_talking_points_20260904.md
+---
+
 # FMD Training Results — Meeting Talking Points
 
 **Date:** 2026-09-04

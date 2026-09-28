@@ -13,8 +13,8 @@ silently dropped.
 
 Usage:
     python src/yolo_ooi/02_xml_to_yolo_obb.py --annot data/annotations.xml \
-        --crop-base run/single-size_fixed_crop --classes-file runs/yolo11/classes.txt \
-        --out-dir runs/yolo11/labels --report runs/yolo11/convert_report.csv
+        --crop-base run/single-size_fixed_crop --classes-file model_runs/yolo11/classes.txt \
+        --out-dir model_runs/yolo11/labels --report model_runs/yolo11/convert_report.csv
 """
 from __future__ import annotations
 

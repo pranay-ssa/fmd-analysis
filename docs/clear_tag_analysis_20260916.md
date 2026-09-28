@@ -1,3 +1,11 @@
+---
+title: The "Clear" tag: numbers, method and verification (2026-09-16)
+date: 2026-09-16
+type: doc
+status: active
+where: docs/clear_tag_analysis_20260916.md
+---
+
 # The "Clear" tag: numbers, method and verification (2026-09-16)
 
 Written after the lead asked for the exact class count inside the "Clear" tag, to forward to the client.
@@ -94,6 +102,29 @@ Do not reuse these. Each was published once and corrected after verification.
 Standing lesson: a number that is wrong because it was transposed is invisible to a "does this number appear on
 the page" check, because it is another correct total from the same page. Diff prose figures against the source
 table, or re-derive the whole set from the data.
+
+## The list of the 128 (2026-09-22)
+
+The lead asked for the list itself, so it exists as data now rather than as a count:
+`run/clear_tag/20260922/clear_with_defect_128.csv`, 128 rows, one per picture, counted by content
+hash, with the file name in the Clear folder, the file name under the defect class, the class and the
+copy situation. The same list ships as a workbook beside it and as a notebook at
+`notebooks/Clear_128_List_20260922.ipynb`. Every figure in this document reproduces from that list
+exactly, so the list can be forwarded without contradicting the 2026-09-16 message.
+
+Three facts the list adds, none of which change a number above:
+
+- **172 defect folder rows stand behind the 128 pictures**, because 44 of them are filed under the
+  defect label more than once. Counting files rather than pictures inflates this set.
+- **16 of the 128 have a second copy inside the same class folder**, under a camera style name rather
+  than the short name (`..._L24_C2_9893.bmp` beside
+  `..._L24_PalletGHT1102042028_Cavity2_B0177C5_Fail7_Score(0.98931).bmp`). Same picture, same class
+  folder, two file names, one content hash. This is also why a name comparison finds 123 of 128 and
+  not fewer: at least one copy of each of the 128 does carry the identical name.
+- **28 pictures sit in three folders once the Clear copy is counted**, but only **2** of those sit in
+  three folders under three different labels. The other 26 are filed as Clear and then under the same
+  defect class in both the categorical folder and the older library. Both figures are labelled on the
+  workbook's summary sheet, so neither can be read as contradicting the sentence above.
 
 ## Open decision
 

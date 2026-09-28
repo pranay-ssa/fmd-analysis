@@ -1,3 +1,11 @@
+---
+title: Shared box disk: full, breakdown and where we can free space (2026-09-17)
+date: 2026-09-17
+type: report
+status: active
+where: reports/ops/disk_breakdown_20260917.md
+---
+
 # Shared box disk: full, breakdown and where we can free space (2026-09-17)
 
 Message prepared for the team group. Plain text, self contained, every claim carries its

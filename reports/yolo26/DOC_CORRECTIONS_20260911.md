@@ -1,3 +1,11 @@
+---
+title: Doc corrections required after VM verification
+date: 2026-09-11
+type: report
+status: active
+where: reports/yolo26/DOC_CORRECTIONS_20260911.md
+---
+
 # Doc corrections required after VM verification
 
 **Status:** APPLIED 2026-09-11 (C1-C41, C43). C42 (git commit) is deliberately left open pending the user's go-ahead. See Part 5 for what was applied, what stayed open, and what the next actions are.

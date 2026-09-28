@@ -1,3 +1,11 @@
+---
+title: Teams message: the pooled class-by-line plan (2026-09-16)
+date: 2026-09-16
+type: report
+status: active
+where: reports/lines/teams_message_20260916.md
+---
+
 # Teams message: the pooled class-by-line plan (2026-09-16)
 
 Copy from below the line. No local paths, no cross-references; every claim carries its

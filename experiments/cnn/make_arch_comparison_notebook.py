@@ -109,7 +109,7 @@ def main():
             "\n"
             "**Source of every number.** `{1}`, written by the comparison script from the two runs' own "
             "confusion matrices. The cells below read that file, so re-running them reproduces these tables. "
-            "The two runs are `runs/cnn/lines/` (ResNet50) and `runs/cnn/lines_multiscale/` "
+            "The two runs are `model_runs/cnn/lines/` (ResNet50) and `model_runs/cnn/lines_multiscale/` "
             "(ResNet50-Inception MultiLevel MultiScale).".format(pooled["test_pictures"], REL)),
         code(TABLE_CODE.replace("{PATH}", REL)),
         md(

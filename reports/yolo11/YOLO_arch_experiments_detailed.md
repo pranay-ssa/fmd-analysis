@@ -1,3 +1,11 @@
+---
+title: YOLO11 Architecture Experiments - Detailed Walkthrough (OoI Defect Classes)
+date: 2026-09-18
+type: report
+status: active
+where: reports/yolo11/YOLO_arch_experiments_detailed.md
+---
+
 # YOLO11 Architecture Experiments - Detailed Walkthrough (OoI Defect Classes)
 
 **Scope.** This document walks through every architecture experiment we ran on the
