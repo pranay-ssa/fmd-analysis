@@ -1,4 +1,158 @@
+---
+title: Handoff (state of the work)
+date: 2026-09-17
+type: state
+status: active
+where: HANDOFF.md
+---
+
 # fmd-analysis - Handoff (formerly FMD-Preprocess)
+
+> **2026-09-28:** the lead asked for one round of execution of the multilabel
+> LP architecture before her review. Done and verified: `ml_resnet50_base` on
+> the pranayp VM (ResNet50, BCE, SGD 1e-4 Nesterov no warmup, batch 8, 50
+> epochs, two-way 80/20 seed 42, all 3,377 LP rows). Test (677): macro AUPRC
+> 0.90454, macro F1 0.80826, exact match 0.93944; four classes at ceiling,
+> Folded Lens weak (F1 0.103, the co-occurrence risk DESIGN.md named, since FL
+> never appears without ML). Split double-verified (15 checks, local and VM
+> copy, zero md5 leaks; test identical to the approved variant). Metrics
+> recomputed from the raw prediction dump (12 checks, all match). Record
+> `reports/multilabel/ml_resnet50_base_run_20260928.md`, mirror
+> `run/multilabel_lp_20260928/`, registry row `ml_resnet50_base` done. Weights
+> on the VM at `~/yolo_ooi/multilabel_lp_20260928/runs/`. Session detail in
+> `docs/sessions/2026-W40.md`.
+>
+> **2026-09-23:** a second CVAT annotation export arrived and was audited before anything trains on
+> it: `docs/annotations_update_20260923.md` (project id 3, 6,097 images, 4,930 tags, 183 boxes, 57.4
+> per cent of the September drop; two box classes have no label in it at all and two tasks are
+> unfinished; 46 shared pictures give a median IoU of 0.719 between two passes by the same
+> annotator). Nothing has been ingested. Seven questions for the client are in section 8 of that doc.
+> Two gaps it leaves in this file and in the registry: `data_iou_ceiling` is still `ideated` although
+> that audit measures it on 46 pairs, and the annotation export appears in neither the state sections
+> above nor `docs/INDEX.md`'s neighbours.
+>
+> **2026-09-23, board:** this week's staged entries are on the Notion board: 6 Work log rows, 9
+> Results rows, 4 Notes rows and one Docs decision row (the artifact folders), 20 in all, every one
+> read back after it was written. `notiondocs.md` shows all 20 as pushed with their page ids, and the
+> entries they overtook as superseded. The FMD inspection page was synced to the registry in the same
+> pass: the Experiments table went from 48 rows to 56 (the 6 new ideated rows plus the 2 multi-label
+> test runs at mAP50 0.4741 and 0.0758), the two stale workstream summaries were recounted, and a
+> fifth workstream row was added, "Two-tier labels and class boundaries", which owns the two-tier
+> arenas and the classifier taxonomy row. Note for the next sync: the REST connection cannot reach
+> that page's tables at all (the restored databases answer 404), so those writes have to go through
+> the MCP connection.
+>
+> **State at stop, 2026-09-22 (the multi-label reading corrected, the Clear list delivered).**
+> - **The 55 was read wrong and is now corrected, with the frames as the evidence.** All 55 pictures
+>   sit in both label sources, and the second label is the other source naming the same picture
+>   differently. 37 of the 55 are one object under two names (33 Extraneous Polymer against Fiber, 4
+>   HEMA), and none of the 55 shows two objects: **0 of the 434 annotated pictures carry two classes
+>   in the box file**, so the two-defect case has no example in our data at all. The nine frames where
+>   the two sources name different classes were pulled with their boxes drawn and read: the second
+>   class is not visible as a separate object in 8 of the 9. Evidence sheets for the lead in
+>   `run/ep_fiber_check/20260922/` (four sheets plus one png per frame, all nine hashes checked),
+>   built by `experiments/ep_fiber_check/`. The corrected message is
+>   `reports/multilabel/teams_message_correction_20260922.md`, which supersedes
+>   `reports/multilabel/teams_message_multilabel_20260921.md` (never sent, now marked superseded).
+> - **The lead took the 33 to the client** on 2026-09-22, so the naming authority question is with
+>   them. She also asked for the list behind the **128 Clear images that also carry a defect class**,
+>   delivered as `run/clear_tag/20260922/clear_with_defect_128.csv` (128 rows) with the same list as
+>   a workbook and a notebook for her at `notebooks/Clear_128_List_20260922.ipynb`. Every published
+>   figure reproduces: 2,333 Clear pictures, 128 also carrying a defect class, 2,205 with no other
+>   label, the six class counts, 123 with the same file name against 5 differing by two score fields,
+>   2 sitting in three folders under three different labels. Three facts the list adds: 172 defect
+>   folder rows stand behind the 128 pictures, 16 have a second copy in the same class folder under a
+>   camera style name, and 28 sit in three folders once the Clear copy is counted.
+> - **One question is open with the client, and it is flagged where it matters.** 33 pictures are named
+>   Extraneous Polymer in the newer folder and Fiber in the older library. Both pipelines already take
+>   the older library's name, so those 33 trained as Fiber and no result is invalidated; what waits is
+>   the class boundary of those two classes, so every Fiber and Extraneous Polymer per-class figure is
+>   provisional until the answer arrives. Written up with the simple table and the reason in
+>   `docs/naming_open_question_20260922.md`, carried in the registry as pending rerun `R4`, staged for
+>   the board as `note-0002`, and printed at the top of the six result documents that quote those
+>   classes. The re-run is one class mapping changed, not a new dataset. 3 of the 33 pictures carry no
+>   boxes at all, so they touch the classifier only.
+> - **The multi-class / multi-label question from today's meeting is measured, documented and
+>   verified.** Everything is in `reports/multilabel/MULTILABEL_STRATEGY_20260921.md` (findings, the
+>   options with costs, the rules for reading results, the conflicts in force, the pitfalls, the
+>   debt, and a 7-step program), with the working protocol in `experiments/multilabel/README.md`
+>   and a self-contained message for the lead in
+>   `reports/multilabel/teams_message_multilabel_20260921.md` (not sent).
+> - The numbers: `run/multilabel_eda/20260921/` (11 files, built by
+>   `experiments/multilabel/two_tier_eda.py`, checked by
+>   `experiments/multilabel/verify_two_tier_eda.py`, **102 checks, 0 failed**). Headlines: **55 of
+>   8,409 pictures carry two labels (0.65 per cent)**, and that count is a count of pictures the two
+>   label sources name differently: 37 are one object under two names (33 Extraneous Polymer against
+>   Fiber, 4 HEMA), and 18 are other cross-source disagreements, 9 of them a box class against a
+>   frame-level tag; **no picture carries two frame-level tags**; the box tier covers 434
+>   pictures against 6,243 for the tag tier, so the detection line is limited by 434 pictures and
+>   88 validation pictures; **47 of the 434 boxed pictures carry a second label the box file does
+>   not carry** (the annotation ran 10 tasks, one per box class); **33 of the 55 conflicts are one
+>   disagreement between two folders**, Extraneous Polymer against Fiber, and the single-label rule
+>   drops the Extraneous Polymer name from 34 of the 268 pictures that carry it; Folded Lens and Stretched Bubble have
+>   no pictures at all.
+> - **The Fiber against Extraneous Polymer question is answered by the pixels, not by a naming
+>   preference.** The object was cropped out of all 33 contested pictures on the VM and judged blind
+>   against two reference groups from the same folders: of 17 agreed Extraneous Polymer objects, 14
+>   are a thick mass of varying width; of 17 agreed Fiber objects, 13 are a thin filament; of the 34
+>   contested objects, 29 are thin filaments. So the older library's Fiber name matches the frames
+>   and the newer folder's name is the odd one, which also means the single-label rule that takes the
+>   older library's class is doing the right thing here. Open risk: 217 of the 267 pictures the newer
+>   folder calls Extraneous Polymer have no older-library counterpart, so their name is unchecked.
+>   Evidence: `run/ep_fiber_check/20260921/` (the two sheets, the cell to group key, the verdicts,
+>   the box list and the file hashes), built by `experiments/ep_fiber_check/`.
+> - **The multi-label subset cannot carry a detector, measured 2026-09-21.** 47 of the 55 pictures
+>   carry boxes and 8 carry none. YOLO26n at the usual settings, trained on 34 of the 47 (a 70/30
+>   split by picture, 85 boxes against 32), scored mAP50 0.4741 on its own test set. The same
+>   pictures, weights, settings and seed with the whole of line 25 held out scored 0.0758, a factor
+>   of 6.2, so a plain split of this subset measures memorisation of one capture session and not
+>   detection. Test 2's precision 0.0103 against its recall 0.3409 is what that looks like.
+>   Separately measured: **0 of the 434 pictures in the existing detection set carry two classes in
+>   the box file**, so every detection number we hold comes from pictures with one class, and the
+>   two-class case has never been exercised end to end. Evidence: `run/multilabel_test_20260921/`.
+> - **The three answers to the lead.** Detection can hold two boxes of two classes on one picture
+>   today with no code change (verified in the pinned ultralytics 8.4.142 source, and in the
+>   documented label format); classification of the frame-level tags cannot, in that build,
+>   because it reads folder-per-class and trains with a single-answer loss, and the upstream
+>   request is still open; therefore the label tier, not the label count, decides the model. No
+>   picture in our data carries two classes in its box file, so the two-box case is proven by the
+>   label format and by a short run, never by an example. The lead's reading is right for the tags
+>   and wrong for the boxes.
+> - **Registry: 54 rows, 6 of them new and ideated** (`tag_manifest_multihot`,
+>   `detect_two_class_picture`, `tag_head_multilabel`, `cascade_detector_plus_tags`,
+>   `debris_family_merge`, `data_missing_box_noise`). The existing 48 rows are unchanged and in
+>   order.
+> - **Next, in order:** the seed-noise floor (still owed and still first, because every other delta
+>   is single-seed), then the multi-hot tag manifest (no GPU), then the two-class-picture proof
+>   run (minutes), then the sigmoid tag head, then the cascade. The detection architecture program
+>   below is unchanged and still waits on the noise floor.
+> - **Owed housekeeping, not done today:** `AGENTS.md` wants this file to be state only, and it
+>   still carries the accumulated W36 to W38 detail in sections 0 to 12. Moving that detail into
+>   `docs/sessions/` is a separate change.
+> - Working tree is uncommitted: 67 files were modified at session start (the artifact-folder
+>   rename and earlier work), plus today's new files.
+>
+> **2026-09-21:** the artifact folders are settled. `runs/` became `model_runs/` (726 files, 110.5 MB,
+> moved and byte-verified against a pre-move manifest, 123 references rewritten); `run/` keeps its
+> name and its 58 tracked evidence files. Decision, the deliberate exceptions and the pending
+> `AGENTS.md` wording: `docs/decisions/2026-09-21-artifact-folders.md`. The VM's own tree still uses
+> `runs/`, so `vm/` scripts and the registry's VM rows are unchanged.
+>
+> **State at stop, 2026-09-19 evening.** Verified by read-back after the Notion restructure.
+> - The board exists: **Work OS** (general: this week, open work, results, plus collapsed notes/archive)
+>   with two child pages, **Tables** (Work log 7 rows, Results 6, Notes 6) and **FMD inspection**
+>   (Workstreams 4, Experiments 48, plus collapsed Sessions 2 and Docs 5).
+> - The four FMD tables were trashed mid-restructure by a page rewrite and **restored from the Notion
+>   trash**. All row counts verified back. Nothing lost.
+> - **Known issue for tomorrow:** the restored FMD databases came back at the workspace root, so the
+>   REST connection (scoped to the Work OS page) gets 404 on them. The MCP connection still sees them.
+>   Either move those four databases back under the Work OS page, or extend the integration's access.
+> - Docs system built today: five line headers on every doc, `tools/index_docs.py` generates
+>   `docs/INDEX.md` (45 files, 0 without a header), `docs/sessions/2026-W38.md`, `AGENTS.md`, and
+>   `notiondocs.md` (local staging for board rows). Nothing committed yet.
+> - Open: how real work enters the board (hand entry vs push from the repo), and the workbook
+>   `reports/cnn/FMD_Line_SixClasses_ResNet50_20260917.xlsx` was replaced from Teams after my
+>   line-ending pass corrupted it; it now reads as a valid zip, 37 entries.
 
 **Date:** 2026-09-15 (YOLO26 H2 executed, then the CNN six-architecture matrix, then the augmentation workstream opened and paused for 2026-09-16; last full verification pass 2026-09-11)
 **Project dir:** `D:/02-SSA/fmd-analysis` (local) → Azure VM (see VM details below)
@@ -254,7 +408,10 @@ Two folders moved from the Armor blob account `stjnjmakearmor`, container `fmd-t
 | `Updated ICube Categorical Classes 20260915` | 6,384 | 29.8 |
 | **Total** | **10,614** | **49.6** |
 
-Every file is a 2,048 x 2,448 8-bit BMP of 5,014,582 bytes, so the byte total is exact. The transfer
+Every file is a 2,448 x 2,048 8-bit BMP of 5,014,582 bytes, so the byte total is exact. That is width
+by height, and it matches the annotation file's record for the older library. A crop job that read
+the header of 67 of these files on 2026-09-21 reported 2448 x 2048 for all of them, which is the
+check that settles the order. The transfer
 ran on 2026-09-16 with 0 failures, about 8.6 minutes at 102.7 MB/s. Verification: every file was read
 from disk again and MD5-checked against the service value, 10,614 of 10,614 OK, and the on-disk byte
 total matches the source listing exactly. Two points need a decision before training: 143 images sit in
@@ -474,33 +631,36 @@ number below depends on them:
    Clear or HEMA fall outside the 22-class set. The `duplicates/` folder adds no picture that is not
    already in a class folder.
 3. A picture carrying two defect classes takes the class the **older library** assigns, which is the
-   canonical taxonomy. That settles 51 pictures (33 of them Extraneous Polymer against Fiber).
+   canonical taxonomy. That settles 51 pictures (33 of them Extraneous Polymer against Fiber). The
+   older library is the right side of that pair on the frames: the object was cropped out of all 33
+   and judged blind, and 29 of the 34 objects read as thin filaments, matching the Fiber name, while
+   the pictures both folders agree are Extraneous Polymer are a thick mass in 14 of 17 cases.
 
 Pool verified: 1,226 pictures sit in more than one folder and **none of them disagree on the line**.
 
 Counts, each confirmed by two independent counts (identical SHA-256 over all 12,079 rows, plus a
 third count of the old library):
 
-- 12,079 images across the three folders; 10,614 unique pictures after content-fingerprint dedupe; **5 lines** (L24, L25, L26, L27, L31); **0 images without a line tag**.
-- **Pooled defect-class dataset: 8,409 unique pictures across the 22 classes** (revised 2026-09-17; the 2026-09-16 revision said 8,401 and the difference is the 8 pictures the Updated Objects folder files under HEMA, which now read as HEMA Fragment). Per line: L24 2,853, L25 952, L26 1,220, L27 1,365, L31 2,019.
+- 12,079 images across the three folders; 10,614 unique pictures after content-fingerprint dedupe; **5 lines** (line 24, line 25, line 26, line 27, line 31); **0 images without a line tag**.
+- **Pooled defect-class dataset: 8,409 unique pictures across the 22 classes** (revised 2026-09-17; the 2026-09-16 revision said 8,401 and the difference is the 8 pictures the Updated Objects folder files under HEMA, which now read as HEMA Fragment). Per line: line 24 2,853, line 25 952, line 26 1,220, line 27 1,365, line 31 2,019.
 - **Comparison set: 13 classes are scorable on all five lines, 2 on four, 2 on three, so 17 of the 22.** 3 classes are scorable on two lines (one line pair each) and 2 on one line only (Dirty Camera, Bubble On 123), which give no comparison at all.
-- **Splits, pooled, at 70:30:** 87 scorable class-line cells, 2,527 test and 5,882 train images (revised 2026-09-17; 2,525 and 5,876 before). At 80:20: 78 cells, 1,677 test and 6,732 train. Nothing is discarded either way, because every non-test image trains. Per line at 70:30: L24 858/1,995, L25 287/665, L26 365/855, L27 409/956, L31 608/1,411. The revision is recorded in `docs/line_split_revision_20260917.md`.
-- **Thin cells:** 35 class-line cells hold fewer than five test images (L24 4, L25 7, L26 8, L27 7, L31 9). Seven classes have a single test image on at least one line (eight before the 2026-09-17 revision, when HEMA Fragment's weakest cell held one).
+- **Splits, pooled, at 70:30:** 87 scorable class-line cells, 2,527 test and 5,882 train images (revised 2026-09-17; 2,525 and 5,876 before). At 80:20: 78 cells, 1,677 test and 6,732 train. Nothing is discarded either way, because every non-test image trains. Per line at 70:30: line 24 858/1,995, line 25 287/665, line 26 365/855, line 27 409/956, line 31 608/1,411. The revision is recorded in `docs/line_split_revision_20260917.md`.
+- **Thin cells:** 35 class-line cells hold fewer than five test images (line 24 4, line 25 7, line 26 8, line 27 7, line 31 9). Seven classes have a single test image on at least one line (eight before the 2026-09-17 revision, when HEMA Fragment's weakest cell held one).
 - **Data traps:** 1,465 repeated files (1,287 of the library's 1,465 images are byte-identical to images in the new drop; 1,249 of those also share the file name, so a name comparison misses 38 of them, and no file name appears in two folders over different content); of the 418 pictures with two labels, 271 involve Clear or duplicates and 10 pair HEMA with a defect class, so only 51 are real defect-against-defect conflicts.
 - **The Updated Objects folder is a source, not a dataset:** it groups by object type (Clear 2,333, Foreign Matter 1,282, Fiber 328, Extraneous Polymer 267, HEMA 20), and Clear and HEMA are not classes. Its value is that it carries Fiber, Foreign Matter and Extraneous Polymer, which the new Categorical folder lacks; pooling lifts Fiber from 61 pictures to 359, Foreign Matter from 71 to 1,278, Extraneous Polymer from 17 to 234.
-- **Three conditions for a conclusive comparison:** match the five training sets (pooled, L24 would train on 1,995 pictures and L25 on 665), compare per-class recall on shared classes rather than overall accuracy (the models carry different class lists), and set a tolerance in advance (35 thin cells; L27 has 7 classes and L31 has 9 with fewer than five test images).
+- **Three conditions for a conclusive comparison:** match the five training sets (pooled, line 24 would train on 1,995 pictures and line 25 on 665), compare per-class recall on shared classes rather than overall accuracy (the models carry different class lists), and set a tolerance in advance (35 thin cells; line 27 has 7 classes and line 31 has 9 with fewer than five test images).
 
 **Independent verification on the VM (2026-09-16):** `vm/ops/verify_clear_on_vm.py` re-read and re-hashed all 12,079 files in the three folders on the VM (`/home/amd100-user/FMD_Data_26082026/fmd_temp_images`), matched them against `manifest.csv` (0 mismatches), rebuilt the pool from the files and diffed 48 numbers against the published ones. Result: every figure reproduced except `pictures_in_two_folders`, where our prose said 1,278 and the data says **1,226** (1,278 is the Foreign Matter class total, transposed by hand); the prose in HANDOFF, the markdown record and the lead message was corrected. The name-versus-content check was added in the same pass: no file name appears in two folders over different content (0 false merges), 1,287 of the library's 1,465 files overlap the new drop by content against 1,249 by name, 122 pictures are filed under more than one name across folders, and of the 128 Clear pictures carrying a defect class 123 share the file name and 5 differ by appended score fields. **The Clear question is recorded in `docs/clear_tag_analysis_20260916.md`, including a superseded-numbers table; treat that doc as the authority for the 2,333 / 128 / 2,205 figures and for the 1,226 correction.**
 
 Artifacts: `reports/lines/line_report_20260916.html` (reader page: sections 2 and 3 are folder-agnostic and class-centric, generated by `src/make_line_report.py` from `run/line_eda/20260916/*.csv`), `reports/lines/LINE_TAG_ANALYSIS_20260916.md` (full record, sections 6 and 7 hold the pooled matrix), `reports/lines/teams_message_clear_20260916.md` (message for the lead), `reports/lines/all_lines_class_split_70_30.md`, `reports/lines/FMD_class_split_70_30.xlsx` and `reports/lines/FMD_class_split_70_30_vs_80_20.xlsx` (class-wise splits, one sheet per line plus a summary, built from `run/line_eda/20260916/all_lines_class_split_70_30.csv` and `..._70_30_and_80_20.csv`), the 2026-09-17 revision of the splits (`src/make_line_splits.py`, `run/line_eda/20260917/*.csv`, `reports/lines/ALL_LINES_class_split_70_30_20260917.md`, `reports/lines/FMD_class_split_70_30_20260917.xlsx`, `reports/lines/FMD_class_split_70_30_vs_80_20_20260917.xlsx`, `experiments/eda_client/verify_line_splits.py`, recorded in `docs/line_split_revision_20260917.md`), the client EDA workbook (`reports/library/FMD_Library_EDA_Counts_20260917.xlsx`, `experiments/eda_client/`, recorded in `docs/client_eda_numbers_20260917.md`), `reports/lines/teams_message_clear_verified_20260916.md` (the Clear answer for the client), `reports/lines/line_heatmap_22x5.png|.pdf|.jpg` (the section 3 heatmap at 400 dpi), and `docs/clear_tag_analysis_20260916.md` (the Clear question: numbers, method, superseded numbers, open decision).
 
-**Per-line models run (2026-09-17, step 4):** five ResNet50 models, one per production line, trained and evaluated. The split assignments were built by `src/build_line_split_assignments.py` from the revised 70:30 table: 8,402 pictures, 5,875 train and 2,527 test over 87 class-line cells, with the 7 single-picture cells that have no test picture dropped from their line. Input is the raw 2448x2048 frame resized to 224x224 (no crop), batch 4, 50 epochs, seed 42, 54.4 minutes on the A100 for all five. Accuracy: L24 87.30, L25 91.29, L26 84.38, L27 84.60, L31 90.95; pooled 87.77 percent, pooled weighted F1 87.33. Two readings that matter before any per-class number is quoted: **the score tracks the test-cell size, not the line** (35 cells hold 1 to 4 test pictures and have a median F1 of zero, while no cell with 25 or more scores zero), and 142 of the 309 misclassified test pictures sit inside the Foreign Matter / Fiber / Extraneous Polymer family, whose labels overlap in the dataset itself. Full record `docs/line_models_20260917.md`, workbook `reports/cnn/FMD_Line_ResNet50_Results_20260917.xlsx`, notebook `notebooks/FMD_Line_Models_20260917.ipynb`, verifier `experiments/cnn/verify_line_results.py` (910 checks, 0 failed), local mirror `runs/cnn/lines/<line>/epochs_50/`. The trained weights stay on the VM at `~/line_experiment_20260917/runs/<line>/epochs_50/`; nothing was copied from the image library, which the runs read by absolute path.
+**Per-line models run (2026-09-17, step 4):** five ResNet50 models, one per production line, trained and evaluated. The split assignments were built by `src/build_line_split_assignments.py` from the revised 70:30 table: 8,402 pictures, 5,875 train and 2,527 test over 87 class-line cells, with the 7 single-picture cells that have no test picture dropped from their line. Input is the raw 2448x2048 frame resized to 224x224 (no crop), batch 4, 50 epochs, seed 42, 54.4 minutes on the A100 for all five. Accuracy: line 24 87.30, line 25 91.29, line 26 84.38, line 27 84.60, line 31 90.95; pooled 87.77 percent, pooled weighted F1 87.33. Two readings that matter before any per-class number is quoted: **the score tracks the test-cell size, not the line** (35 cells hold 1 to 4 test pictures and have a median F1 of zero, while no cell with 25 or more scores zero), and 142 of the 309 misclassified test pictures sit inside the Foreign Matter / Fiber / Extraneous Polymer family, whose labels overlap in the dataset itself. Full record `docs/line_models_20260917.md`, workbook `reports/cnn/FMD_Line_ResNet50_Results_20260917.xlsx`, notebook `notebooks/FMD_Line_Models_20260917.ipynb`, verifier `experiments/cnn/verify_line_results.py` (910 checks, 0 failed), local mirror `model_runs/cnn/lines/<line>/epochs_50/`. The trained weights stay on the VM at `~/line_experiment_20260917/runs/<line>/epochs_50/`; nothing was copied from the image library, which the runs read by absolute path.
 
 **Six-class and multi-scale runs (2026-09-17, step 4 continued):** the two experiments the lead added both ran, A from 09:54Z for 32 minutes and B from 10:46Z for 63 minutes, five lines each, all exit 0, GPU released.
 
-*A, the six highlighted classes on ResNet50* (a smaller set: 4,895 pictures against the full split's 8,402, of which 3,424 train and 1,471 test, built from the existing split so every picture kept its side). Pooled accuracy 96.26 percent against 90.34 percent for the full ResNet50 model restricted to the same six classes on the same pictures, so **+5.92 points from narrowing the classes**, and macro recall +6.84. Best where data is thinnest: L31 +17.43 points on 132 test pictures, L27 +12.84 on 218; L26 level (its macro-recall drop is two classes with 1 or 2 test pictures, not a regression). Workbooks `reports/cnn/FMD_Line_SixClasses_ResNet50_20260917.xlsx` and `reports/cnn/FMD_SixClasses_vs_FullModel_20260917.xlsx`, record `docs/next_experiments_20260917.md` section F.
+*A, the six highlighted classes on ResNet50* (a smaller set: 4,895 pictures against the full split's 8,402, of which 3,424 train and 1,471 test, built from the existing split so every picture kept its side). Pooled accuracy 96.26 percent against 90.34 percent for the full ResNet50 model restricted to the same six classes on the same pictures, so **+5.92 points from narrowing the classes**, and macro recall +6.84. Best where data is thinnest: line 31 +17.43 points on 132 test pictures, line 27 +12.84 on 218; line 26 level (its macro-recall drop is two classes with 1 or 2 test pictures, not a regression). Workbooks `reports/cnn/FMD_Line_SixClasses_ResNet50_20260917.xlsx` and `reports/cnn/FMD_SixClasses_vs_FullModel_20260917.xlsx`, record `docs/next_experiments_20260917.md` section F.
 
-*B, the complete split on ResNet50-Inception MultiLevel MultiScale.* Pooled accuracy 89.47 against ResNet50's 87.77 on the identical 2,527 test pictures, so **+1.70 points**, while **mean macro recall falls 2.67 points** (59.26 to 56.60). The gain is concentrated and the loss is spread: Foreign Matter +24 correct answers (+0.95 points), View Obstructed +13, Extraneous Polymer +12, Multiple Lenses +8, against Bubble -5 and Lens Off Center -4; 20 class-line cells recalled more, 26 fewer, 41 unchanged. The per-class decomposition adds up to the pooled change exactly and the comparison script asserts it. Artifacts: `reports/cnn/FMD_Line_MultiScale_ResNet50_20260917.xlsx` (31 checks against the run's own metrics, 0 failed), `reports/cnn/FMD_Architecture_Comparison_20260917.xlsx`, `notebooks/FMD_Line_MultiScale_20260917.ipynb` and `notebooks/FMD_Architecture_Comparison_20260917.ipynb` (the lead reads notebooks), `run/line_results_multiscale_20260917/arch_vs_base.json`, `experiments/cnn/compare_architectures.py`, `experiments/cnn/make_arch_comparison_workbook.py`, `experiments/cnn/verify_multiscale_workbook.py`. Local mirror of the metrics `runs/cnn/lines_multiscale/<line>/epochs_50/`; weights stayed on the VM.
+*B, the complete split on ResNet50-Inception MultiLevel MultiScale.* Pooled accuracy 89.47 against ResNet50's 87.77 on the identical 2,527 test pictures, so **+1.70 points**, while **mean macro recall falls 2.67 points** (59.26 to 56.60). The gain is concentrated and the loss is spread: Foreign Matter +24 correct answers (+0.95 points), View Obstructed +13, Extraneous Polymer +12, Multiple Lenses +8, against Bubble -5 and Lens Off Center -4; 20 class-line cells recalled more, 26 fewer, 41 unchanged. The per-class decomposition adds up to the pooled change exactly and the comparison script asserts it. Artifacts: `reports/cnn/FMD_Line_MultiScale_ResNet50_20260917.xlsx` (31 checks against the run's own metrics, 0 failed), `reports/cnn/FMD_Architecture_Comparison_20260917.xlsx`, `notebooks/FMD_Line_MultiScale_20260917.ipynb` and `notebooks/FMD_Architecture_Comparison_20260917.ipynb` (the lead reads notebooks), `run/line_results_multiscale_20260917/arch_vs_base.json`, `experiments/cnn/compare_architectures.py`, `experiments/cnn/make_arch_comparison_workbook.py`, `experiments/cnn/verify_multiscale_workbook.py`. Local mirror of the metrics `model_runs/cnn/lines_multiscale/<line>/epochs_50/`; weights stayed on the VM.
 
 Both numbers are single-seed and the seed spread has still not been measured on this data, so the 1.70-point gain should not be treated as settled. The honest summary of both runs together: narrowing the decision (A) helps every line, while widening the model (B) helps the common classes and costs the rare ones, which is a product decision rather than a measurement one.
 
