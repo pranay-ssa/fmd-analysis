@@ -1,0 +1,108 @@
+{
+  "slide_size": "16:9",
+  "slides": [
+    {
+      "layout": "title_content",
+      "title": "Recap: what we promised last Monday, and what we did",
+      "bullets": [
+        "Last week we said three things: test more architectures, re-weight the training so rare tags count more, and tune the Folded Lens cut-off.",
+        "Architectures: done. Five models tested side by side. None finds Folded Lens.",
+        "Weights: done. Folded Lens detections went from 2 of 36 to 17 of 36 on the baseline.",
+        "Cut-off: done. We swept the threshold on saved scores; best cut and the trade are inside.",
+        "Everything below is that work, slide by slide."
+      ]
+    },
+    {
+      "layout": "blank",
+      "title": "Deliverables promised vs delivered",
+      "subtitle": "Each item from last Monday, and where its result sits in this deck",
+      "tables": [
+        {"left": 0.7, "top": 2.1, "width": 11.9,
+         "rows": [
+          ["Promised last week", "Status", "Result", "Slide"],
+          ["Test the other architectures, confirm with repeat runs", "Done", "All five miss Folded Lens; the differences between models sit inside the run-to-run noise", "3"],
+          ["Weigh tags differently so rare tags count more", "Done", "Folded Lens: 2 of 36 caught becomes 17 of 36; other tags hold", "4"],
+          ["Tune the Folded Lens decision level from saved scores", "Done", "Best cut is 0.2 on the weighted model; the trade is measured at every level", "5"]
+         ]}
+      ]
+    },
+    {
+      "layout": "blank",
+      "title": "Five architectures, side by side: none finds Folded Lens",
+      "subtitle": "Same data, same recipe, one model at a time, 677 test pictures",
+      "tables": [
+        {"left": 0.7, "top": 2.0, "width": 11.9,
+         "rows": [
+          ["Model", "Size", "Overall score (AUPRC)", "Balance (macro F1)", "Folded Lens found"],
+          ["ResNet 50 (plain)", "23.5M", "0.916", "0.771", "0 of 36"],
+          ["MultiScale", "58.4M", "0.862", "0.774", "0 of 36"],
+          ["Attention SE", "50.4M", "0.862", "0.772", "0 of 36"],
+          ["Inception + attention", "58.6M", "0.866", "0.774", "0 of 36"],
+          ["Inception + refined decode", "45.9M", "0.888", "0.791", "0 of 36"]
+         ]}
+      ],
+      "bullets": [
+        "Bigger and fancier did not help. The four larger models score lower overall than the plain one, and every one of them misses all 36 Folded Lens test pictures.",
+        "The gap between any two models here is smaller than the gap we measure by simply running the same model twice (0.037 on the balance score). So no architecture difference in this table is a real effect.",
+        "It gets worse under the skin: on the true Folded Lens pictures, the four bigger models give every single one a negative score. No cut-off can recover them. The plain model at least keeps 8 of 36 positive.",
+        "Reading: the model design was never the problem. The data is, and the next slide is the first thing that moved it."
+      ]
+    },
+    {
+      "layout": "blank",
+      "title": "Re-weighting the loss: the model did not learn Folded Lens, we encouraged it",
+      "subtitle": "One change on the plain ResNet 50: a missed Folded Lens now counts 18 times as much in training",
+      "tables": [
+        {"left": 0.7, "top": 2.0, "width": 11.9,
+         "rows": [
+          ["Folded Lens (36 test pictures)", "Before", "After weighting"],
+          ["Caught at the 0.5 cut", "2 of 36 (6%)", "17 of 36 (47%)"],
+          ["Flagged pictures that are right (precision)", "0.67", "0.55"],
+          ["Balance of the two (F1)", "0.10", "0.51"],
+          ["Overall score for the tag (AUPRC)", "0.52", "0.62"],
+          ["Overall score, all five tags (AUPRC)", "0.905", "0.924"]
+         ]}
+      ],
+      "bullets": [
+        "Be clear about what happened: the model still has not learned what a folded lens looks like. We changed the cost of missing one during training, so the model was encouraged to speak up. That is why this is a working patch, and better annotation is still the real fix.",
+        "The rest of the model did not pay for it: Multiple Lenses and Missing Primary Package stayed perfect, Missing Lens and Cavity Off Center held or improved.",
+        "The balance gain (+0.084 macro F1) is more than twice what re-running the same model moves on its own (+0.037), so this is a real effect of the weighting."
+      ]
+    },
+    {
+      "layout": "blank",
+      "title": "Tuning the Folded Lens cut-off: the sweep, run today",
+      "subtitle": "Threshold moved from 0.5 down to 0.05 on saved scores, no retraining",
+      "tables": [
+        {"left": 0.7, "top": 2.0, "width": 11.9,
+         "rows": [
+          ["Cut-off", "Caught (of 36)", "False alarms", "Precision", "Recall", "F1"],
+          ["0.50 (default)", "17", "14", "0.55", "0.47", "0.51"],
+          ["0.30", "17", "15", "0.53", "0.47", "0.50"],
+          ["0.25", "18", "15", "0.55", "0.50", "0.52"],
+          ["0.20 (best balance)", "18", "15", "0.55", "0.50", "0.52"],
+          ["0.10", "18", "16", "0.53", "0.50", "0.51"],
+          ["0.05", "18", "16", "0.53", "0.50", "0.51"]
+         ]}
+      ],
+      "bullets": [
+        "The honest finding: the cut-off barely matters now. The weighted model gives Folded Lens scores that sit in a narrow band, so moving the cut from 0.5 to 0.05 changes little: one more catch, two more false alarms.",
+        "For contrast, the same sweep on the unweighted model does matter: it climbs from 2 caught at 0.5 to 12 caught at 0.05, but with precision at 0.75 and recall stuck at 33%. Weighting beats tuning: best weighted F1 0.52 vs best unweighted 0.46.",
+        "Our pick if we must choose one: keep 0.5. The gain from moving to 0.2 is one picture, and 0.5 keeps the false alarms lowest.",
+        "The limit is still the data: 178 Folded Lens examples, all inside Multiple Lenses. More diverse Folded Lens examples move this tag further than any cut-off or weight."
+      ]
+    },
+    {
+      "layout": "title_content",
+      "title": "Where this leaves us",
+      "bullets": [
+        "Model design: settled. Five architectures tested; the plain ResNet 50 is the right base and the rest is inside noise.",
+        "Training loss: weighted now. Folded Lens recall 6% to 47%, everything else holding. This is the bridge until better annotations arrive.",
+        "Cut-off: swept. 0.5 stays; the sweep shows the weighted model is not threshold-sensitive.",
+        "The tag still cannot be truly learned until Folded Lens appears in the data without Multiple Lenses. The open client question: can it?",
+        "Around 5,000 new annotated images are expected; they are the real fix for the rare tags."
+      ],
+      "notes": "Internal, unconfirmed until the email arrives: client said about 5,000 annotated images are coming. Back office owns multi-class multi-label per the URS; edge only needs pass/fail. Client is consolidating the bubble class. All verbal from the meeting, none confirmed in writing yet."
+    }
+  ]
+}
