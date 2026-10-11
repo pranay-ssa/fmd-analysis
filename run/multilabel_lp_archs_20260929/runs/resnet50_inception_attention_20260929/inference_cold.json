@@ -1,0 +1,25 @@
+{
+ "run": "runs/resnet50_inception_attention_20260929",
+ "arch": "resnet50_inception_attention",
+ "arch_label": "ResNet50 Inception + branch attention (notebook Architecture 3)",
+ "params_total": 58635682,
+ "device": "NVIDIA A100 80GB PCIe",
+ "batch": 8,
+ "test_images": 677,
+ "warmup_used": false,
+ "fresh_process": true,
+ "checkpoint_state_dict": "loaded clean (no missing, no unexpected keys)",
+ "cold_inference_ms_per_image": 3.817,
+ "cold_inference_total_seconds": 2.5844,
+ "cold_first_batch_ms": 513.628,
+ "steady_inference_ms_per_image_median": 3.229,
+ "steady_inference_ms_per_image_repeats": [
+  3.262,
+  3.229,
+  3.214
+ ],
+ "process_start_to_checkpoint_loaded_s": 4.805,
+ "process_start_to_model_on_gpu_s": 5.563,
+ "process_start_to_first_batch_s": 5.59,
+ "process_start_to_cold_pass_done_s": 8.176
+}

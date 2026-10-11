@@ -1,0 +1,25 @@
+{
+ "run": "/home/pranayp/yolo_ooi/multilabel_lp_archs_20260929/runs/resnet50_se_20260929",
+ "arch": "resnet50_se",
+ "arch_label": "ResNet50 MultiLevel Attention SE (notebook Architecture 2)",
+ "params_total": 50435877,
+ "device": "NVIDIA A100 80GB PCIe",
+ "batch": 8,
+ "test_images": 677,
+ "warmup_used": false,
+ "fresh_process": true,
+ "checkpoint_state_dict": "loaded clean (no missing, no unexpected keys)",
+ "cold_inference_ms_per_image": 3.541,
+ "cold_inference_total_seconds": 2.3975,
+ "cold_first_batch_ms": 398.791,
+ "steady_inference_ms_per_image_median": 3.185,
+ "steady_inference_ms_per_image_repeats": [
+  3.178,
+  3.185,
+  3.196
+ ],
+ "process_start_to_checkpoint_loaded_s": 4.603,
+ "process_start_to_model_on_gpu_s": 5.264,
+ "process_start_to_first_batch_s": 5.292,
+ "process_start_to_cold_pass_done_s": 7.69
+}

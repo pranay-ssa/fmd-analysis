@@ -1,0 +1,32 @@
+Stage-folder cleanup on the VM, 2026-09-29
+
+Removed from the shared login home (/home/amd100-user), not from the run tree:
+  ml_archs_stage/           this session's transfer waypoint, 1.8 MB, 7 files
+  multilabel_stage/         the 2026-09-28 session's transfer waypoint, 2.8 MB, 8 files
+  stage_ml_archs.sh         the copy script for the first one
+  launch_ml_archs.sh, smoke_ml_archs.sh, ml_archs_manifest.txt   this session's helper scripts
+
+Why they were safe to remove: every file in both folders was md5-identical to its copy in
+/home/pranayp/yolo_ooi/multilabel_lp_archs_20260929 (or the 2026-09-28 run tree), nothing
+existed only in the staging folders, and the source of truth for all of it is this
+repository. The sweeps read the pranayp tree and the images from /data/FMD_Data_26082026,
+never these folders.
+
+The 15 files below are the recorded md5sums taken immediately before deletion, relative to
+/home/amd100-user.
+
+8c72e464208bbd1734d048dd311acee4  ml_archs_stage/labels.csv
+191d1b9993529803acb26c93ae2bbf7d  ml_archs_stage/measure_inference_cold.py
+cbab8e3cf352880cb2ac599d2df13ce4  ml_archs_stage/run_ml_archs_20260929.sh
+cd0db2f63b0b6fe9cd43031c26fb7cb5  ml_archs_stage/train.py
+44f1ff2683936d3a750d89f907b86814  ml_archs_stage/variant_80_20_two_way.csv
+6451cb9a4d559258c3d9bf2f2bb8510c  ml_archs_stage/variant_80_20_two_way.meta.json
+0ccc0eadf1558c91d31bca9c546a4f5d  ml_archs_stage/verify_archs.py
+b3a2a5afd47a5b28ea589d21a81f7397  multilabel_stage/final_80_20_dataframe.csv
+8c72e464208bbd1734d048dd311acee4  multilabel_stage/labels.csv
+998648629469bca062e602983168a17e  multilabel_stage/measure_inference_mllp.py
+9fba056bd28481f5c65f542230626864  multilabel_stage/train.py
+7d4b5393dc41fcdd7dcc604ea76a1fbe  multilabel_stage/variant_80_20.csv
+44f1ff2683936d3a750d89f907b86814  multilabel_stage/variant_80_20_two_way.csv
+6451cb9a4d559258c3d9bf2f2bb8510c  multilabel_stage/variant_80_20_two_way.meta.json
+1c237e4e9e411ddf2d1ae17ef4e44658  multilabel_stage/verify_split_80_20.py

@@ -1,0 +1,78 @@
+{
+ "run_id": "ml_resnet50_posw",
+ "run_date_utc": "2026-10-05T05:00:09Z",
+ "driver": "run_ml_posw.py",
+ "driver_md5": "2a28fd186a34a7ce5fb41835c024f3a2",
+ "train_py_md5": "cd0db2f63b0b6fe9cd43031c26fb7cb5",
+ "labels_md5": "8c72e464208bbd1734d048dd311acee4",
+ "split_md5": "44f1ff2683936d3a750d89f907b86814",
+ "split_counts": {
+  "train": 2700,
+  "test": 677
+ },
+ "pos_weight_check": {
+  "n_train": 2700,
+  "pos": [
+   146,
+   142,
+   1153,
+   1141,
+   260
+  ],
+  "pos_weight": [
+   17.4932,
+   18.0141,
+   1.3417,
+   1.3663,
+   9.3846
+  ]
+ },
+ "expected_pos_weight": [
+  17.4932,
+  18.0141,
+  1.3417,
+  1.3663,
+  9.3846
+ ],
+ "config_overrides_vs_base": {
+  "pos_weight": true
+ },
+ "command": [
+  "/usr/bin/python3",
+  "-u",
+  "/home/pranayp/yolo_ooi/multilabel_lp_posw_20261005/train.py",
+  "--labels",
+  "/home/pranayp/yolo_ooi/multilabel_lp_posw_20261005/labels.csv",
+  "--split",
+  "/home/pranayp/yolo_ooi/multilabel_lp_posw_20261005/splits/variant_80_20_two_way.csv",
+  "--split-column",
+  "split_named",
+  "--image-root",
+  "/home/amd100-user/FMD_Data_26082026/fmd_temp_images",
+  "--out",
+  "/home/pranayp/yolo_ooi/multilabel_lp_posw_20261005/runs/ml_resnet50_posw_20261005",
+  "--arch",
+  "resnet50",
+  "--epochs",
+  "50",
+  "--batch",
+  "8",
+  "--workers",
+  "8",
+  "--optimizer",
+  "sgd",
+  "--lr",
+  "1e-4",
+  "--momentum",
+  "0.9",
+  "--weight-decay",
+  "1e-4",
+  "--seed",
+  "42",
+  "--pos-weight"
+ ],
+ "smoke": false,
+ "exit_code": 0,
+ "wall_seconds": 516.7,
+ "finished_utc": "2026-10-05T05:08:46Z"
+}

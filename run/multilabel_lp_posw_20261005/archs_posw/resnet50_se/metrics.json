@@ -1,0 +1,128 @@
+{
+ "best_epoch": 50,
+ "checkpoint": "final_epoch_fixed_schedule",
+ "arch": "resnet50_se",
+ "arch_label": "ResNet50 MultiLevel Attention SE (notebook Architecture 2)",
+ "params_total": 50435877,
+ "taps": "pre-activation residual add",
+ "rows": {
+  "train": 2700,
+  "val": 0,
+  "test": 677
+ },
+ "reliable_only": false,
+ "pos_weight": true,
+ "optimizer": "sgd",
+ "config": {
+  "labels": "/home/pranayp/yolo_ooi/multilabel_lp_posw_20261005/labels.csv",
+  "split": "/home/pranayp/yolo_ooi/multilabel_lp_posw_20261005/splits/variant_80_20_two_way.csv",
+  "image_root": "/home/amd100-user/FMD_Data_26082026/fmd_temp_images",
+  "out": "/home/pranayp/yolo_ooi/multilabel_lp_posw_20261005/runs/resnet50_se_posw_20261006",
+  "arch": "resnet50_se",
+  "split_column": "split_named",
+  "epochs": 50,
+  "batch": 8,
+  "optimizer": "sgd",
+  "momentum": 0.9,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "imgsz": 224,
+  "workers": 8,
+  "patience": 5,
+  "weights": "IMAGENET1K_V2",
+  "reliable_only": false,
+  "pos_weight": true,
+  "no_amp": false,
+  "seed": 42,
+  "device": "",
+  "smoke": false,
+  "smoke_synthetic": false
+ },
+ "test_metrics": {
+  "threshold": 0.5,
+  "per_class": {
+   "P1_COC": {
+    "support": 37,
+    "tp": 37,
+    "fp": 0,
+    "fn": 0,
+    "tn": 640,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "auprc": 1.0
+   },
+   "P1_FL": {
+    "support": 36,
+    "tp": 28,
+    "fp": 48,
+    "fn": 8,
+    "tn": 593,
+    "precision": 0.36842,
+    "recall": 0.77778,
+    "f1": 0.5,
+    "auprc": 0.67494
+   },
+   "P1_ML": {
+    "support": 289,
+    "tp": 288,
+    "fp": 0,
+    "fn": 1,
+    "tn": 388,
+    "precision": 1.0,
+    "recall": 0.99654,
+    "f1": 0.99827,
+    "auprc": 1.0
+   },
+   "P1_MPP": {
+    "support": 286,
+    "tp": 285,
+    "fp": 0,
+    "fn": 1,
+    "tn": 391,
+    "precision": 1.0,
+    "recall": 0.9965,
+    "f1": 0.99825,
+    "auprc": 1.0
+   },
+   "P1_NL": {
+    "support": 65,
+    "tp": 65,
+    "fp": 2,
+    "fn": 0,
+    "tn": 610,
+    "precision": 0.97015,
+    "recall": 1.0,
+    "f1": 0.98485,
+    "auprc": 1.0
+   }
+  },
+  "macro_f1": 0.89627,
+  "macro_auprc": 0.93499,
+  "micro_precision": 0.9336,
+  "micro_recall": 0.98597,
+  "hamming_loss": 0.01773,
+  "exact_match_ratio": 0.91285
+ },
+ "timing": {
+  "device": "NVIDIA A100 80GB PCIe",
+  "batch": 8,
+  "amp": true,
+  "warmup_used": false,
+  "eval_pass": "test",
+  "images": 677,
+  "train_seconds_total": 588.4,
+  "train_seconds_per_epoch_mean": 11.768,
+  "note": "the cold numbers are the first pass over the test loader after the best checkpoint was restored: no warmup of any kind, so one-time costs are inside them. The steady numbers are repeats of the same pass afterwards.",
+  "inference_ms_per_image_cold": 3.289,
+  "inference_total_seconds_cold": 2.2269,
+  "inference_first_batch_ms_cold": 27.316,
+  "inference_ms_per_image_steady_median": 3.256,
+  "inference_ms_per_image_steady_repeats": [
+   3.236,
+   3.256,
+   3.27
+  ],
+  "model_only_ms_per_image_warm": 1.027
+ }
+}
