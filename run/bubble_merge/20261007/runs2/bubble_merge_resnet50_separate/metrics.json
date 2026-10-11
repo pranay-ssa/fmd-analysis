@@ -1,0 +1,189 @@
+{
+  "arch": "resnet50",
+  "epochs": 50,
+  "batch_size": 8,
+  "seed": 42,
+  "num_classes": 23,
+  "class_names": [
+    "Bubble",
+    "Bubble Cluster",
+    "Bubble Irregular",
+    "Bubble On 123",
+    "Bubble On Edge",
+    "Bubble Scatter",
+    "Cavity Off Center",
+    "Clear",
+    "Dirty Camera",
+    "Dirty Strobe",
+    "Extraneous Polymer",
+    "Fiber",
+    "Foreign Matter",
+    "HEMA Fragment",
+    "HEMA Obstruction",
+    "Lens Off Center",
+    "Low Dose Obstructing Region of Interest",
+    "Missing Lens",
+    "Missing Primary Package",
+    "Multiple Lenses",
+    "Package Misalignment",
+    "View Obstructed",
+    "Wet Package"
+  ],
+  "num_train_images": 7429,
+  "num_test_images": 3185,
+  "overall_accuracy": 0.8615,
+  "overall_recall": 0.6664,
+  "training_time_sec": 6581.64,
+  "inference_total_sec": 10.8242,
+  "inference_per_image_ms": 3.398,
+  "per_class": {
+    "Bubble": {
+      "recall": 0.5455,
+      "precision": 0.7826,
+      "f1": 0.6429,
+      "support": 33
+    },
+    "Bubble Cluster": {
+      "recall": 0.4545,
+      "precision": 0.7143,
+      "f1": 0.5556,
+      "support": 11
+    },
+    "Bubble Irregular": {
+      "recall": 0.3846,
+      "precision": 0.5,
+      "f1": 0.4348,
+      "support": 13
+    },
+    "Bubble On 123": {
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Bubble On Edge": {
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Bubble Scatter": {
+      "recall": 0.5,
+      "precision": 0.3333,
+      "f1": 0.4,
+      "support": 2
+    },
+    "Cavity Off Center": {
+      "recall": 0.9818,
+      "precision": 0.9818,
+      "f1": 0.9818,
+      "support": 55
+    },
+    "Clear": {
+      "recall": 0.8792,
+      "precision": 0.8006,
+      "f1": 0.838,
+      "support": 662
+    },
+    "Dirty Camera": {
+      "recall": 0.625,
+      "precision": 1.0,
+      "f1": 0.7692,
+      "support": 8
+    },
+    "Dirty Strobe": {
+      "recall": 1.0,
+      "precision": 0.9286,
+      "f1": 0.963,
+      "support": 13
+    },
+    "Extraneous Polymer": {
+      "recall": 0.5375,
+      "precision": 0.5584,
+      "f1": 0.5478,
+      "support": 80
+    },
+    "Fiber": {
+      "recall": 0.4545,
+      "precision": 0.4091,
+      "f1": 0.4306,
+      "support": 99
+    },
+    "Foreign Matter": {
+      "recall": 0.6,
+      "precision": 0.7938,
+      "f1": 0.6834,
+      "support": 385
+    },
+    "HEMA Fragment": {
+      "recall": 0.1667,
+      "precision": 1.0,
+      "f1": 0.2857,
+      "support": 6
+    },
+    "HEMA Obstruction": {
+      "recall": 0.9412,
+      "precision": 0.8727,
+      "f1": 0.9057,
+      "support": 51
+    },
+    "Lens Off Center": {
+      "recall": 0.7143,
+      "precision": 0.9483,
+      "f1": 0.8148,
+      "support": 77
+    },
+    "Low Dose Obstructing Region of Interest": {
+      "recall": 0.959,
+      "precision": 0.9541,
+      "f1": 0.9565,
+      "support": 585
+    },
+    "Missing Lens": {
+      "recall": 0.9897,
+      "precision": 0.9897,
+      "f1": 0.9897,
+      "support": 97
+    },
+    "Missing Primary Package": {
+      "recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0,
+      "support": 428
+    },
+    "Multiple Lenses": {
+      "recall": 0.9791,
+      "precision": 0.8491,
+      "f1": 0.9095,
+      "support": 431
+    },
+    "Package Misalignment": {
+      "recall": 0.9773,
+      "precision": 0.9556,
+      "f1": 0.9663,
+      "support": 88
+    },
+    "View Obstructed": {
+      "recall": 0.9143,
+      "precision": 0.9697,
+      "f1": 0.9412,
+      "support": 35
+    },
+    "Wet Package": {
+      "recall": 0.7222,
+      "precision": 0.8667,
+      "f1": 0.7879,
+      "support": 18
+    }
+  },
+  "macro": {
+    "precision": 0.7482,
+    "recall": 0.6664,
+    "f1": 0.6871
+  },
+  "weighted": {
+    "precision": 0.8606,
+    "recall": 0.8615,
+    "f1": 0.8569
+  }
+}
