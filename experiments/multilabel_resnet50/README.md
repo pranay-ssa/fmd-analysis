@@ -83,9 +83,23 @@ report headline metrics on the reliable subset too.
 
 `train.py` is code-complete: torchvision ResNet50, 224 x 224, `BCEWithLogitsLoss`,
 configurable `--epochs` and `--batch`, AMP on CUDA, early stopping on macro AUPRC,
-best checkpoint plus history written to `--out`. Useful flags: `--reliable-only`,
-`--pos-weight`, `--smoke` (2 optimizer steps over a handful of real images),
-`--smoke-synthetic` (2 steps on random tensors, no image files needed).
+best checkpoint plus history written to `--out`. Useful flags: `--arch` (the
+architecture: `resnet50` the plain control, or one of the four from the architecture
+notebook, see below), `--reliable-only`, `--pos-weight`, `--smoke` (2 optimizer steps
+over a handful of real images), `--smoke-synthetic` (2 steps on random tensors, no
+image files needed).
+
+Architectures behind `--arch`, all built on the same ImageNet-initialised ResNet50
+trunk so any difference between rows is the architecture and not the initialisation:
+`resnet50` (control), `resnet50_inception` (notebook architecture 1, MultiLevel
+MultiScale), `resnet50_se` (architecture 2, MultiLevel Attention with
+squeeze-and-excitation), `resnet50_inception_attention` (architecture 3, Inception
+with attention inside every branch) and `resnet50_inception_refine` (architecture 4,
+Inception with the deepest level decoded by transposed convolution then refined).
+Every filter count, branch tap, fusion width and head layer is the notebook's; the
+only difference is the final layer, which emits 5 independent scores instead of the
+notebook's softmax, because the task is multi-label. `verify_archs.py` proves the
+port against the notebook before anything trains (38 checks).
 
 Image pixels are not stored in this repo. Supply the drop folder root with
 `--image-root` or the `FMD_IMAGE_ROOT` environment variable; image paths inside
@@ -110,6 +124,25 @@ Settled in chat, superseding the open question of row scope:
 - Deliverable for review: `lp_dataframe_80_20.ipynb`. Nothing trains until it is approved.
 
 ## Current status
+
+**Architecture sweep complete, 2026-09-29:** the lead asked whether the MultiScale
+architecture raises Folded Lens recall. It does not. Five runs, one at a time on
+the VM, same recipe and split as `ml_resnet50_base`: the four notebook
+architectures plus plain ResNet50 as the control. Folded Lens recall is 0 in all
+five rows, and the four architectures push all 36 Folded Lens test scores below
+zero where the control keeps 8 above zero. Folded Lens AUPRC 0.582 (control)
+against 0.439 to 0.515 (the four). Macro AUPRC falls 0.028 to 0.054; macro F1
+moves -0.001 to +0.019, inside the run-to-run band the control re-run measured
+(macro F1 0.80826 to 0.77118 on the same config and seed in a new session).
+Inference with no warmup is 3.285 to 3.471 ms per image in process and 3.461 to
+3.817 in a fresh process; training 500.6 to 947.9 s. Record:
+`reports/multilabel/ml_arch_sweep_20260929.md`, workbook for the lead
+`reports/multilabel/FMD_MultiLabel_ArchSweep_20260929.xlsx`, mirror
+`run/multilabel_lp_archs_20260929/`, registry rows `ml_arch_resnet50_control_20260929`,
+`ml_arch_multiscale`, `ml_arch_multilvl_attention`, `ml_arch_inception_attention`,
+`ml_arch_inception_refine` (all done). The port itself is proved by
+`verify_archs.py` (38 checks) and the results by `verify_archs_run_20260929.py`
+(75 checks).
 
 **First real run complete, 2026-09-28:** `ml_resnet50_base` trained on the VM
 (50 epochs, batch 8, SGD lr 1e-4 Nesterov, two-way 80/20) and verified. Test

@@ -119,12 +119,15 @@ Consequences:
 
 ## 7. Planned runs (registry rows, ideated before execution)
 
-1. `ml_resnet50_base`: plain baseline, all images, no pos_weight. Control.
+1. `ml_resnet50_base`: plain baseline, all images, no pos_weight. Control. Run and
+   done 2026-09-28.
 2. `ml_resnet50_reliable`: same config, `--reliable-only`. Measures how much the
    unreliable negatives were dragging the baseline.
 3. `ml_resnet50_posw`: baseline plus `--pos-weight`. Measures the imbalance lever.
+   Run and done 2026-10-05: macro F1 0.892 vs base 0.808, FL recall 0.472 vs 0.056.
 
-Nothing in this list has been run. Rows stay `planned` until metrics artifacts exist.
+Nothing else in this list has been run. Rows stay `planned` until metrics artifacts
+exist.
 
 ## 8. Risks and open questions
 

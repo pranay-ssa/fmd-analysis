@@ -83,15 +83,521 @@
     "test_hamming_loss": 0.01241,
     "test_exact_match_ratio": 0.93944,
     "per_class": {
-     "P1_COC": {"support": 37, "precision": 1.0, "recall": 0.94595, "f1": 0.97222, "auprc": 1.0},
-     "P1_FL": {"support": 36, "precision": 0.66667, "recall": 0.05556, "f1": 0.10256, "auprc": 0.52271},
-     "P1_ML": {"support": 289, "precision": 0.99655, "recall": 1.0, "f1": 0.99827, "auprc": 1.0},
-     "P1_MPP": {"support": 286, "precision": 1.0, "recall": 1.0, "f1": 1.0, "auprc": 1.0},
-     "P1_NL": {"support": 65, "precision": 1.0, "recall": 0.93846, "f1": 0.96825, "auprc": 1.0}
+     "P1_COC": {
+      "support": 37,
+      "precision": 1.0,
+      "recall": 0.94595,
+      "f1": 0.97222,
+      "auprc": 1.0
+     },
+     "P1_FL": {
+      "support": 36,
+      "precision": 0.66667,
+      "recall": 0.05556,
+      "f1": 0.10256,
+      "auprc": 0.52271
+     },
+     "P1_ML": {
+      "support": 289,
+      "precision": 0.99655,
+      "recall": 1.0,
+      "f1": 0.99827,
+      "auprc": 1.0
+     },
+     "P1_MPP": {
+      "support": 286,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auprc": 1.0
+     },
+     "P1_NL": {
+      "support": 65,
+      "precision": 1.0,
+      "recall": 0.93846,
+      "f1": 0.96825,
+      "auprc": 1.0
+     }
     },
     "verification": "15-check split verify (local + VM copy) PASS; 12-check metric recompute from test_predictions.npz PASS; artifact md5 local == VM",
-    "gate_checks": {"smoke_real_images": "PASS (after fixing a smoke-only .to(device) bug)", "gpu_free_at_start": true}
+    "gate_checks": {
+     "smoke_real_images": "PASS (after fixing a smoke-only .to(device) bug)",
+     "gpu_free_at_start": true
+    }
    }
+  },
+  {
+   "id": "ml_arch_resnet50_control_20260929",
+   "summary": "plain ResNet50 re-run in this session so the timing table and every delta are matched inside one session",
+   "axis": "control repeatability (same config, new session)",
+   "status": "done",
+   "config_overrides": {
+    "arch": "resnet50"
+   },
+   "results": {
+    "run_date": "2026-09-29",
+    "machine": "pranayp VM (A100 80GB), /home/pranayp/yolo_ooi/multilabel_lp_archs_20260929",
+    "local_mirror": "run/multilabel_lp_archs_20260929/runs/resnet50_20260929/",
+    "arch": "resnet50",
+    "arch_label": "ResNet50 (baseline)",
+    "params_total": 23518277,
+    "taps": "n/a (baseline has no taps)",
+    "epochs_completed": 50,
+    "train_seconds_total": 500.6,
+    "train_seconds_per_epoch": 10.012,
+    "test_macro_auprc": 0.91569,
+    "test_macro_f1": 0.77118,
+    "test_micro_precision": 0.99849,
+    "test_micro_recall": 0.92567,
+    "test_hamming_loss": 0.01595,
+    "test_exact_match_ratio": 0.92171,
+    "per_class": {
+     "P1_COC": {
+      "support": 37,
+      "precision": 1.0,
+      "recall": 0.94595,
+      "f1": 0.97222,
+      "auprc": 1.0
+     },
+     "P1_FL": {
+      "support": 36,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "auprc": 0.58229
+     },
+     "P1_ML": {
+      "support": 289,
+      "precision": 0.99654,
+      "recall": 0.99654,
+      "f1": 0.99654,
+      "auprc": 0.99999
+     },
+     "P1_MPP": {
+      "support": 286,
+      "precision": 1.0,
+      "recall": 0.9965,
+      "f1": 0.99825,
+      "auprc": 1.0
+     },
+     "P1_NL": {
+      "support": 65,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.88889,
+      "auprc": 0.99617
+     }
+    },
+    "folded_lens_images_caught_by_threshold": {
+     "0.5": 0,
+     "0.4": 0,
+     "0.3": 1,
+     "0.2": 2,
+     "0.1": 5,
+     "0.05": 5,
+     "0.02": 6
+    },
+    "timing": {
+     "warmup_used": false,
+     "inference_ms_per_image_cold": 3.285,
+     "inference_ms_per_image_steady_median": 3.23,
+     "inference_first_batch_ms_cold": 23.523,
+     "inference_ms_per_image_fresh_process_cold": 3.461
+    },
+    "verification": "75-check recompute of every metric and confusion count from test_predictions.npz, metric order and 677-row identity, param count, timing block and epoch-sum consistency: PASS locally; artifacts md5 identical to the VM",
+    "gate_checks": {
+     "smoke_real_images": "PASS (2 steps, real images, exact run args)",
+     "gpu_free_at_start": true,
+     "runs_sequential_one_at_a_time": true
+    },
+    "ports_from": "notebooks/FMD_ResNet50Architectures.ipynb (TF/Keras), rebuilt for the training framework in use; parameter counts reconcile with the Keras 22-class line to the last parameter after BatchNorm accounting",
+    "repeatability_vs_20260928_same_config_same_seed": {
+     "note": "same config, same seed, same split, new session: this is the run-to-run band",
+     "macro_auprc": {
+      "2026-09-28": 0.90454,
+      "2026-09-29": 0.91569,
+      "delta": 0.01115
+     },
+     "macro_f1": {
+      "2026-09-28": 0.80826,
+      "2026-09-29": 0.77118,
+      "delta": -0.03708
+     },
+     "exact_match_ratio": {
+      "2026-09-28": 0.93944,
+      "2026-09-29": 0.92171,
+      "delta": -0.01773
+     },
+     "folded_lens_f1": {
+      "2026-09-28": 0.10256,
+      "2026-09-29": 0.0,
+      "delta": -0.10256
+     }
+    }
+   },
+   "registry_tags": [
+    "control"
+   ]
+  },
+  {
+   "id": "ml_arch_multiscale",
+   "summary": "MultiLevel MultiScale: four-branch Inception filters on three depth levels, fused at 14x14",
+   "axis": "architecture (notebook arch 1)",
+   "status": "done",
+   "config_overrides": {
+    "arch": "resnet50_inception"
+   },
+   "results": {
+    "run_date": "2026-09-29",
+    "machine": "pranayp VM (A100 80GB), /home/pranayp/yolo_ooi/multilabel_lp_archs_20260929",
+    "local_mirror": "run/multilabel_lp_archs_20260929/runs/resnet50_inception_20260929/",
+    "arch": "resnet50_inception",
+    "arch_label": "ResNet50 MultiLevel MultiScale (notebook Architecture 1)",
+    "params_total": 58438725,
+    "taps": "pre-activation residual add",
+    "epochs_completed": 50,
+    "train_seconds_total": 653.0,
+    "train_seconds_per_epoch": 13.06,
+    "test_macro_auprc": 0.86241,
+    "test_macro_f1": 0.77434,
+    "test_micro_precision": 0.99849,
+    "test_micro_recall": 0.92847,
+    "test_hamming_loss": 0.01536,
+    "test_exact_match_ratio": 0.92467,
+    "per_class": {
+     "P1_COC": {
+      "support": 37,
+      "precision": 1.0,
+      "recall": 0.97297,
+      "f1": 0.9863,
+      "auprc": 1.0
+     },
+     "P1_FL": {
+      "support": 36,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "auprc": 0.49647
+     },
+     "P1_ML": {
+      "support": 289,
+      "precision": 0.99655,
+      "recall": 1.0,
+      "f1": 0.99827,
+      "auprc": 0.99999
+     },
+     "P1_MPP": {
+      "support": 286,
+      "precision": 1.0,
+      "recall": 0.9965,
+      "f1": 0.99825,
+      "auprc": 0.99801
+     },
+     "P1_NL": {
+      "support": 65,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.88889,
+      "auprc": 0.81758
+     }
+    },
+    "folded_lens_images_caught_by_threshold": {
+     "0.5": 0,
+     "0.4": 0,
+     "0.3": 0,
+     "0.2": 0,
+     "0.1": 0,
+     "0.05": 0,
+     "0.02": 0
+    },
+    "timing": {
+     "warmup_used": false,
+     "inference_ms_per_image_cold": 3.401,
+     "inference_ms_per_image_steady_median": 3.289,
+     "inference_first_batch_ms_cold": 31.643,
+     "inference_ms_per_image_fresh_process_cold": 3.705
+    },
+    "verification": "75-check recompute of every metric and confusion count from test_predictions.npz, metric order and 677-row identity, param count, timing block and epoch-sum consistency: PASS locally; artifacts md5 identical to the VM",
+    "gate_checks": {
+     "smoke_real_images": "PASS (2 steps, real images, exact run args)",
+     "gpu_free_at_start": true,
+     "runs_sequential_one_at_a_time": true
+    },
+    "ports_from": "notebooks/FMD_ResNet50Architectures.ipynb (TF/Keras), rebuilt for the training framework in use; parameter counts reconcile with the Keras 22-class line to the last parameter after BatchNorm accounting"
+   },
+   "registry_tags": [
+    "arch1_multiscale"
+   ]
+  },
+  {
+   "id": "ml_arch_multilvl_attention",
+   "summary": "MultiLevel Attention: squeeze-and-excitation on the three depth levels, no Inception",
+   "axis": "architecture (notebook arch 2)",
+   "status": "done",
+   "config_overrides": {
+    "arch": "resnet50_se"
+   },
+   "results": {
+    "run_date": "2026-09-29",
+    "machine": "pranayp VM (A100 80GB), /home/pranayp/yolo_ooi/multilabel_lp_archs_20260929",
+    "local_mirror": "run/multilabel_lp_archs_20260929/runs/resnet50_se_20260929/",
+    "arch": "resnet50_se",
+    "arch_label": "ResNet50 MultiLevel Attention SE (notebook Architecture 2)",
+    "params_total": 50435877,
+    "taps": "pre-activation residual add",
+    "epochs_completed": 50,
+    "train_seconds_total": 579.4,
+    "train_seconds_per_epoch": 11.588,
+    "test_macro_auprc": 0.86201,
+    "test_macro_f1": 0.77153,
+    "test_micro_precision": 0.99849,
+    "test_micro_recall": 0.92707,
+    "test_hamming_loss": 0.01566,
+    "test_exact_match_ratio": 0.92319,
+    "per_class": {
+     "P1_COC": {
+      "support": 37,
+      "precision": 1.0,
+      "recall": 0.94595,
+      "f1": 0.97222,
+      "auprc": 1.0
+     },
+     "P1_FL": {
+      "support": 36,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "auprc": 0.49448
+     },
+     "P1_ML": {
+      "support": 289,
+      "precision": 0.99655,
+      "recall": 1.0,
+      "f1": 0.99827,
+      "auprc": 1.0
+     },
+     "P1_MPP": {
+      "support": 286,
+      "precision": 1.0,
+      "recall": 0.9965,
+      "f1": 0.99825,
+      "auprc": 0.99801
+     },
+     "P1_NL": {
+      "support": 65,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.88889,
+      "auprc": 0.81758
+     }
+    },
+    "folded_lens_images_caught_by_threshold": {
+     "0.5": 0,
+     "0.4": 0,
+     "0.3": 0,
+     "0.2": 0,
+     "0.1": 0,
+     "0.05": 0,
+     "0.02": 0
+    },
+    "timing": {
+     "warmup_used": false,
+     "inference_ms_per_image_cold": 3.297,
+     "inference_ms_per_image_steady_median": 3.239,
+     "inference_first_batch_ms_cold": 28.015,
+     "inference_ms_per_image_fresh_process_cold": 3.541
+    },
+    "verification": "75-check recompute of every metric and confusion count from test_predictions.npz, metric order and 677-row identity, param count, timing block and epoch-sum consistency: PASS locally; artifacts md5 identical to the VM",
+    "gate_checks": {
+     "smoke_real_images": "PASS (2 steps, real images, exact run args)",
+     "gpu_free_at_start": true,
+     "runs_sequential_one_at_a_time": true
+    },
+    "ports_from": "notebooks/FMD_ResNet50Architectures.ipynb (TF/Keras), rebuilt for the training framework in use; parameter counts reconcile with the Keras 22-class line to the last parameter after BatchNorm accounting"
+   },
+   "registry_tags": [
+    "arch2_multilevel_se"
+   ]
+  },
+  {
+   "id": "ml_arch_inception_attention",
+   "summary": "Inception with SE attention inside every branch",
+   "axis": "architecture (notebook arch 3)",
+   "status": "done",
+   "config_overrides": {
+    "arch": "resnet50_inception_attention"
+   },
+   "results": {
+    "run_date": "2026-09-29",
+    "machine": "pranayp VM (A100 80GB), /home/pranayp/yolo_ooi/multilabel_lp_archs_20260929",
+    "local_mirror": "run/multilabel_lp_archs_20260929/runs/resnet50_inception_attention_20260929/",
+    "arch": "resnet50_inception_attention",
+    "arch_label": "ResNet50 Inception + branch attention (notebook Architecture 3)",
+    "params_total": 58635682,
+    "taps": "pre-activation residual add",
+    "epochs_completed": 50,
+    "train_seconds_total": 790.0,
+    "train_seconds_per_epoch": 15.8,
+    "test_macro_auprc": 0.86636,
+    "test_macro_f1": 0.77434,
+    "test_micro_precision": 0.99849,
+    "test_micro_recall": 0.92847,
+    "test_hamming_loss": 0.01536,
+    "test_exact_match_ratio": 0.92467,
+    "per_class": {
+     "P1_COC": {
+      "support": 37,
+      "precision": 1.0,
+      "recall": 0.97297,
+      "f1": 0.9863,
+      "auprc": 1.0
+     },
+     "P1_FL": {
+      "support": 36,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "auprc": 0.51463
+     },
+     "P1_ML": {
+      "support": 289,
+      "precision": 0.99655,
+      "recall": 1.0,
+      "f1": 0.99827,
+      "auprc": 1.0
+     },
+     "P1_MPP": {
+      "support": 286,
+      "precision": 1.0,
+      "recall": 0.9965,
+      "f1": 0.99825,
+      "auprc": 0.99959
+     },
+     "P1_NL": {
+      "support": 65,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.88889,
+      "auprc": 0.81758
+     }
+    },
+    "folded_lens_images_caught_by_threshold": {
+     "0.5": 0,
+     "0.4": 0,
+     "0.3": 0,
+     "0.2": 0,
+     "0.1": 0,
+     "0.05": 0,
+     "0.02": 0
+    },
+    "timing": {
+     "warmup_used": false,
+     "inference_ms_per_image_cold": 3.408,
+     "inference_ms_per_image_steady_median": 3.301,
+     "inference_first_batch_ms_cold": 36.008,
+     "inference_ms_per_image_fresh_process_cold": 3.817
+    },
+    "verification": "75-check recompute of every metric and confusion count from test_predictions.npz, metric order and 677-row identity, param count, timing block and epoch-sum consistency: PASS locally; artifacts md5 identical to the VM",
+    "gate_checks": {
+     "smoke_real_images": "PASS (2 steps, real images, exact run args)",
+     "gpu_free_at_start": true,
+     "runs_sequential_one_at_a_time": true
+    },
+    "ports_from": "notebooks/FMD_ResNet50Architectures.ipynb (TF/Keras), rebuilt for the training framework in use; parameter counts reconcile with the Keras 22-class line to the last parameter after BatchNorm accounting"
+   },
+   "registry_tags": [
+    "arch3_inception_attention"
+   ]
+  },
+  {
+   "id": "ml_arch_inception_refine",
+   "summary": "Inception with the deepest level decoded by bicubic upsample plus depthwise refinement",
+   "axis": "architecture (notebook arch 4)",
+   "status": "done",
+   "config_overrides": {
+    "arch": "resnet50_inception_refine"
+   },
+   "results": {
+    "run_date": "2026-09-29",
+    "machine": "pranayp VM (A100 80GB), /home/pranayp/yolo_ooi/multilabel_lp_archs_20260929",
+    "local_mirror": "run/multilabel_lp_archs_20260929/runs/resnet50_inception_refine_20260929/",
+    "arch": "resnet50_inception_refine",
+    "arch_label": "ResNet50 Inception + refined decode (notebook Architecture 4)",
+    "params_total": 45876293,
+    "taps": "pre-activation residual add",
+    "epochs_completed": 50,
+    "train_seconds_total": 947.9,
+    "train_seconds_per_epoch": 18.958,
+    "test_macro_auprc": 0.88778,
+    "test_macro_f1": 0.79051,
+    "test_micro_precision": 0.99704,
+    "test_micro_recall": 0.9439,
+    "test_hamming_loss": 0.01241,
+    "test_exact_match_ratio": 0.94092,
+    "per_class": {
+     "P1_COC": {
+      "support": 37,
+      "precision": 1.0,
+      "recall": 0.91892,
+      "f1": 0.95775,
+      "auprc": 1.0
+     },
+     "P1_FL": {
+      "support": 36,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "auprc": 0.43889
+     },
+     "P1_ML": {
+      "support": 289,
+      "precision": 0.99313,
+      "recall": 1.0,
+      "f1": 0.99655,
+      "auprc": 0.99999
+     },
+     "P1_MPP": {
+      "support": 286,
+      "precision": 1.0,
+      "recall": 0.9965,
+      "f1": 0.99825,
+      "auprc": 1.0
+     },
+     "P1_NL": {
+      "support": 65,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auprc": 1.0
+     }
+    },
+    "folded_lens_images_caught_by_threshold": {
+     "0.5": 0,
+     "0.4": 0,
+     "0.3": 0,
+     "0.2": 0,
+     "0.1": 0,
+     "0.05": 0,
+     "0.02": 0
+    },
+    "timing": {
+     "warmup_used": false,
+     "inference_ms_per_image_cold": 3.471,
+     "inference_ms_per_image_steady_median": 3.333,
+     "inference_first_batch_ms_cold": 36.313,
+     "inference_ms_per_image_fresh_process_cold": 3.762
+    },
+    "verification": "75-check recompute of every metric and confusion count from test_predictions.npz, metric order and 677-row identity, param count, timing block and epoch-sum consistency: PASS locally; artifacts md5 identical to the VM",
+    "gate_checks": {
+     "smoke_real_images": "PASS (2 steps, real images, exact run args)",
+     "gpu_free_at_start": true,
+     "runs_sequential_one_at_a_time": true
+    },
+    "ports_from": "notebooks/FMD_ResNet50Architectures.ipynb (TF/Keras), rebuilt for the training framework in use; parameter counts reconcile with the Keras 22-class line to the last parameter after BatchNorm accounting"
+   },
+   "registry_tags": [
+    "arch4_inception_refine"
+   ]
   },
   {
    "id": "ml_resnet50_reliable",
@@ -107,11 +613,345 @@
    "id": "ml_resnet50_posw",
    "summary": "baseline config with per-class positive weights from the train split",
    "axis": "imbalance lever",
-   "status": "planned",
+   "status": "done",
    "config_overrides": {
     "pos_weight": true
    },
-   "results": null
+   "results": {
+    "run_date": "2026-10-05",
+    "machine": "pranayp VM (A100 80GB), /home/pranayp/yolo_ooi/multilabel_lp_posw_20261005",
+    "local_mirror": "run/multilabel_lp_posw_20261005/",
+    "epochs_completed": 50,
+    "train_seconds_per_epoch": 9.994,
+    "test_macro_auprc": 0.92431,
+    "test_macro_f1": 0.89215,
+    "test_hamming_loss": 0.01093,
+    "test_exact_match_ratio": 0.94535,
+    "test_micro_precision": 0.97606,
+    "test_micro_recall": 0.97195,
+    "per_class": {
+     "P1_COC": {
+      "support": 37,
+      "precision": 0.925,
+      "recall": 1.0,
+      "f1": 0.96104,
+      "auprc": 1.0
+     },
+     "P1_FL": {
+      "support": 36,
+      "precision": 0.54839,
+      "recall": 0.47222,
+      "f1": 0.50746,
+      "auprc": 0.62153
+     },
+     "P1_ML": {
+      "support": 289,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auprc": 1.0
+     },
+     "P1_MPP": {
+      "support": 286,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auprc": 1.0
+     },
+     "P1_NL": {
+      "support": 65,
+      "precision": 1.0,
+      "recall": 0.98462,
+      "f1": 0.99225,
+      "auprc": 1.0
+     }
+    },
+    "verification": "24-check metric recompute from test_predictions.npz PASS (max abs diff 4.62e-06, AP by the train.py step-wise formula); artifact md5 local == VM for metrics.json, history.csv, test_predictions.npz",
+    "gate_checks": {
+     "split_gate": "PASS (2700/677 under split_named)",
+     "pos_weight_gate": "PASS (recomputed vector matches spec within 0.01)",
+     "gpu_free_at_start": true
+    }
+   },
+   "spec": "reports/multilabel/ml_resnet50_posw_spec_20261005.md",
+   "driver": "experiments/multilabel_resnet50/run_ml_posw.py (standalone; train.py untouched)",
+   "planned_config": {
+    "arch": "resnet50",
+    "split": "variant_80_20_two_way (split_named, 2700/677)",
+    "pos_weight": true,
+    "pos_weight_vector": [
+     17.4932,
+     18.0141,
+     1.3417,
+     1.3663,
+     9.3846
+    ],
+    "epochs": 50,
+    "batch": 8,
+    "seed": 42,
+    "optimizer": "sgd lr1e-4 nesterov",
+    "vm_dir": "/home/pranayp/yolo_ooi/multilabel_lp_posw_20261005"
+   }
+  },
+  {
+   "id": "ml_resnet50_posw_inception",
+   "summary": "MultiLevel MultiScale arch with per-class positive weights (pos_weight rerun of ml_arch_multiscale)",
+   "axis": "architecture x imbalance lever",
+   "status": "done",
+   "config_overrides": {
+    "arch": "resnet50_inception",
+    "pos_weight": true
+   },
+   "results": {
+    "run_date": "2026-10-06",
+    "machine": "pranayp VM (A100 80GB), /home/pranayp/yolo_ooi/multilabel_lp_posw_20261005",
+    "local_mirror": "run/multilabel_lp_posw_20261005/archs_posw/resnet50_inception/",
+    "arch": "resnet50_inception",
+    "arch_label": "ResNet50 MultiLevel MultiScale (notebook Architecture 1)",
+    "params_total": 58438725,
+    "epochs_completed": 50,
+    "train_seconds_per_epoch": 13.276,
+    "test_macro_auprc": 0.9164,
+    "test_macro_f1": 0.89786,
+    "test_hamming_loss": 0.01241,
+    "test_exact_match_ratio": 0.93796,
+    "test_micro_precision": 0.96404,
+    "test_micro_recall": 0.97756,
+    "per_class": {
+     "P1_COC": {
+      "support": 37,
+      "precision": 0.94872,
+      "recall": 1.0,
+      "f1": 0.97368,
+      "auprc": 1.0
+     },
+     "P1_FL": {
+      "support": 36,
+      "precision": 0.47727,
+      "recall": 0.58333,
+      "f1": 0.525,
+      "auprc": 0.58198
+     },
+     "P1_ML": {
+      "support": 289,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auprc": 1.0
+     },
+     "P1_MPP": {
+      "support": 286,
+      "precision": 1.0,
+      "recall": 0.9965,
+      "f1": 0.99825,
+      "auprc": 1.0
+     },
+     "P1_NL": {
+      "support": 65,
+      "precision": 0.98485,
+      "recall": 1.0,
+      "f1": 0.99237,
+      "auprc": 1.0
+     }
+    },
+    "verification": "artifact md5 local == VM; metric recompute PENDING"
+   },
+   "driver": "vm/drivers/run_ml_posw_archs_20261006.sh (pushed to the VM as run_ml_posw_archs_20261006.sh)"
+  },
+  {
+   "id": "ml_resnet50_posw_se",
+   "summary": "MultiLevel Attention SE arch with per-class positive weights (pos_weight rerun of ml_arch_multilvl_attention)",
+   "axis": "architecture x imbalance lever",
+   "status": "done",
+   "config_overrides": {
+    "arch": "resnet50_se",
+    "pos_weight": true
+   },
+   "results": {
+    "run_date": "2026-10-06",
+    "machine": "pranayp VM (A100 80GB), /home/pranayp/yolo_ooi/multilabel_lp_posw_20261005",
+    "local_mirror": "run/multilabel_lp_posw_20261005/archs_posw/resnet50_se/",
+    "arch": "resnet50_se",
+    "arch_label": "ResNet50 MultiLevel Attention SE (notebook Architecture 2)",
+    "params_total": 50435877,
+    "epochs_completed": 50,
+    "train_seconds_per_epoch": 11.768,
+    "test_macro_auprc": 0.93499,
+    "test_macro_f1": 0.89627,
+    "test_hamming_loss": 0.01773,
+    "test_exact_match_ratio": 0.91285,
+    "test_micro_precision": 0.9336,
+    "test_micro_recall": 0.98597,
+    "per_class": {
+     "P1_COC": {
+      "support": 37,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auprc": 1.0
+     },
+     "P1_FL": {
+      "support": 36,
+      "precision": 0.36842,
+      "recall": 0.77778,
+      "f1": 0.5,
+      "auprc": 0.67494
+     },
+     "P1_ML": {
+      "support": 289,
+      "precision": 1.0,
+      "recall": 0.99654,
+      "f1": 0.99827,
+      "auprc": 1.0
+     },
+     "P1_MPP": {
+      "support": 286,
+      "precision": 1.0,
+      "recall": 0.9965,
+      "f1": 0.99825,
+      "auprc": 1.0
+     },
+     "P1_NL": {
+      "support": 65,
+      "precision": 0.97015,
+      "recall": 1.0,
+      "f1": 0.98485,
+      "auprc": 1.0
+     }
+    },
+    "verification": "artifact md5 local == VM; metric recompute PENDING"
+   },
+   "driver": "vm/drivers/run_ml_posw_archs_20261006.sh (pushed to the VM as run_ml_posw_archs_20261006.sh)"
+  },
+  {
+   "id": "ml_resnet50_posw_inception_attention",
+   "summary": "Inception + branch attention arch with per-class positive weights (pos_weight rerun of ml_arch_inception_attention)",
+   "axis": "architecture x imbalance lever",
+   "status": "done",
+   "config_overrides": {
+    "arch": "resnet50_inception_attention",
+    "pos_weight": true
+   },
+   "results": {
+    "run_date": "2026-10-06",
+    "machine": "pranayp VM (A100 80GB), /home/pranayp/yolo_ooi/multilabel_lp_posw_20261005",
+    "local_mirror": "run/multilabel_lp_posw_20261005/archs_posw/resnet50_inception_attention/",
+    "arch": "resnet50_inception_attention",
+    "arch_label": "ResNet50 Inception + branch attention (notebook Architecture 3)",
+    "params_total": 58635682,
+    "epochs_completed": 50,
+    "train_seconds_per_epoch": 16.01,
+    "test_macro_auprc": 0.91999,
+    "test_macro_f1": 0.89043,
+    "test_hamming_loss": 0.01507,
+    "test_exact_match_ratio": 0.92467,
+    "test_micro_precision": 0.95219,
+    "test_micro_recall": 0.97756,
+    "per_class": {
+     "P1_COC": {
+      "support": 37,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auprc": 1.0
+     },
+     "P1_FL": {
+      "support": 36,
+      "precision": 0.38182,
+      "recall": 0.58333,
+      "f1": 0.46154,
+      "auprc": 0.59995
+     },
+     "P1_ML": {
+      "support": 289,
+      "precision": 1.0,
+      "recall": 0.99654,
+      "f1": 0.99827,
+      "auprc": 1.0
+     },
+     "P1_MPP": {
+      "support": 286,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auprc": 1.0
+     },
+     "P1_NL": {
+      "support": 65,
+      "precision": 0.98485,
+      "recall": 1.0,
+      "f1": 0.99237,
+      "auprc": 1.0
+     }
+    },
+    "verification": "artifact md5 local == VM; metric recompute PENDING"
+   },
+   "driver": "vm/drivers/run_ml_posw_archs_20261006.sh (pushed to the VM as run_ml_posw_archs_20261006.sh)"
+  },
+  {
+   "id": "ml_resnet50_posw_inception_refine",
+   "summary": "Inception + refined decode arch with per-class positive weights (pos_weight rerun of ml_arch_inception_refine)",
+   "axis": "architecture x imbalance lever",
+   "status": "done",
+   "config_overrides": {
+    "arch": "resnet50_inception_refine",
+    "pos_weight": true
+   },
+   "results": {
+    "run_date": "2026-10-06",
+    "machine": "pranayp VM (A100 80GB), /home/pranayp/yolo_ooi/multilabel_lp_posw_20261005",
+    "local_mirror": "run/multilabel_lp_posw_20261005/archs_posw/resnet50_inception_refine/",
+    "arch": "resnet50_inception_refine",
+    "arch_label": "ResNet50 Inception + refined decode (notebook Architecture 4)",
+    "params_total": 45876293,
+    "epochs_completed": 50,
+    "train_seconds_per_epoch": 19.058,
+    "test_macro_auprc": 0.92336,
+    "test_macro_f1": 0.91429,
+    "test_hamming_loss": 0.00975,
+    "test_exact_match_ratio": 0.95126,
+    "test_micro_precision": 0.97354,
+    "test_micro_recall": 0.98036,
+    "per_class": {
+     "P1_COC": {
+      "support": 37,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auprc": 1.0
+     },
+     "P1_FL": {
+      "support": 36,
+      "precision": 0.53659,
+      "recall": 0.61111,
+      "f1": 0.57143,
+      "auprc": 0.61678
+     },
+     "P1_ML": {
+      "support": 289,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auprc": 1.0
+     },
+     "P1_MPP": {
+      "support": 286,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auprc": 1.0
+     },
+     "P1_NL": {
+      "support": 65,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auprc": 1.0
+     }
+    },
+    "verification": "artifact md5 local == VM; metric recompute PENDING"
+   },
+   "driver": "vm/drivers/run_ml_posw_archs_20261006.sh (pushed to the VM as run_ml_posw_archs_20261006.sh)"
   }
  ],
  "blocked": [
