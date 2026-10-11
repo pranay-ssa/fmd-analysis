@@ -1,0 +1,2031 @@
+{
+ "sheets": [
+  {
+   "name": "Read me",
+   "rows": [
+    [
+     {
+      "value": "Task 1: the four bubble classes merged into one, versus kept separate",
+      "font_size": 16,
+      "bold": true,
+      "fill": "1F4E79",
+      "font_color": "FFFFFF"
+     }
+    ],
+    [
+     {
+      "value": "Does the model get the bubble defects right when Bubble, Bubble On 123, Bubble On Edge and Bubble Irregular are one class, or when they stay four classes? This workbook answers that with four trained models.",
+      "font_size": 12
+     }
+    ],
+    [
+     {
+      "value": "",
+      "font_size": 12
+     }
+    ],
+    [
+     {
+      "value": "The data",
+      "font_size": 14,
+      "bold": true,
+      "fill": "1F4E79",
+      "font_color": "FFFFFF"
+     }
+    ],
+    [
+     {
+      "value": "10,614 pictures: 8,409 with a defect tag and 2,205 with no defect (the Clear class). One tag per picture. When a picture carries two tags, the newer annotation folders win, as the client confirmed on 7 October. The 33 pictures called Fiber in the old library and Extraneous Polymer in the new folders count as Extraneous Polymer.",
+      "font_size": 12
+     }
+    ],
+    [
+     {
+      "value": "Each class was split 70 percent training, 30 percent testing: 7,429 training pictures and 3,185 test pictures. Both readings saw exactly these pictures, so every difference between them comes from the merge alone.",
+      "font_size": 12
+     }
+    ],
+    [
+     {
+      "value": "",
+      "font_size": 12
+     }
+    ],
+    [
+     {
+      "value": "The training setup (identical for all four runs)",
+      "font_size": 14,
+      "bold": true,
+      "fill": "1F4E79",
+      "font_color": "FFFFFF"
+     }
+    ],
+    [
+     {
+      "value": "50 epochs, batch size 8, SGD learning rate 0.0001, pictures resized to 224 by 224 pixels, fixed random seed. Two architectures: ResNet50 and MultiLevel MultiScale. The separate reading has 23 classes, the merged reading has 20 (Bubble Cluster and Bubble Scatter stay separate in both, the client did not ask to merge them).",
+      "font_size": 12
+     }
+    ],
+    [
+     {
+      "value": "",
+      "font_size": 12
+     }
+    ],
+    [
+     {
+      "value": "How to read this workbook",
+      "font_size": 14,
+      "bold": true,
+      "fill": "1F4E79",
+      "font_color": "FFFFFF"
+     }
+    ],
+    [
+     {
+      "value": "Every sheet shows the separate reading and the merged reading side by side. Change = merged minus separate, in points. Positive change favours the merged reading. Small classes swing hard: a class with 4 test pictures moves 25 points when one picture flips.",
+      "font_size": 12
+     }
+    ],
+    [
+     {
+      "value": "sheet",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "what it holds",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     }
+    ],
+    [
+     {
+      "value": "Headline",
+      "bold": true
+     },
+     {
+      "value": "The two readings compared: accuracy on all 3,185 test pictures and the results on the 54 bubble test pictures."
+     }
+    ],
+    [
+     {
+      "value": "What moved",
+      "bold": true,
+      "fill": "F2F7FC"
+     },
+     {
+      "value": "The classes that took the bubble pictures, and the pictures the merged Bubble class took in.",
+      "fill": "F2F7FC"
+     }
+    ],
+    [
+     {
+      "value": "Per class",
+      "bold": true
+     },
+     {
+      "value": "Recall for every class in all four runs, with the change between readings."
+     }
+    ],
+    [
+     {
+      "value": "Count table",
+      "bold": true,
+      "fill": "F2F7FC"
+     },
+     {
+      "value": "The client's count table: pictures with each tag versus pictures in each class.",
+      "fill": "F2F7FC"
+     }
+    ],
+    [
+     {
+      "value": "Image EDA",
+      "bold": true
+     },
+     {
+      "value": "The pool and the split: pictures per class, training and test."
+     }
+    ]
+   ],
+   "merges": [],
+   "column_widths": {
+    "A": 16,
+    "B": 100
+   },
+   "row_heights": {
+    "1": 18,
+    "2": 18,
+    "3": 18,
+    "4": 18,
+    "5": 18,
+    "6": 18,
+    "7": 18,
+    "8": 18,
+    "9": 18,
+    "10": 18,
+    "11": 18,
+    "12": 18
+   },
+   "cells": {}
+  },
+  {
+   "name": "Headline",
+   "rows": [
+    [
+     {
+      "value": "The two readings side by side. Change = merged minus separate, in points. Positive favours the merged reading.",
+      "font_color": "7F7F7F"
+     }
+    ],
+    [
+     {
+      "value": "'Bubble pictures found' counts the 54 test pictures from the four bubble classes. In the separate reading a picture counts only when the model names its exact class; in the merged reading every correct bubble picture counts.",
+      "font_color": "7F7F7F"
+     }
+    ],
+    [
+     {
+      "value": "The last row of each block is the cost side: of all pictures the model called Bubble, the share that really were bubbles. A drop means the merged class pulls in pictures that are not bubbles.",
+      "font_color": "7F7F7F"
+     }
+    ],
+    [
+     {
+      "value": "Macro F1 rises partly by arithmetic: merging removes two classes that scored near zero, so the average climbs without any picture changing. The bubble rows are the real effect.",
+      "font_color": "7F7F7F"
+     }
+    ],
+    [],
+    [
+     {
+      "value": "architecture",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "measure",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "separate reading",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "merged reading",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "change (points)",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     }
+    ],
+    [
+     "ResNet50",
+     "Accuracy on all 3,185 test pictures",
+     86.2,
+     86.2,
+     0.1
+    ],
+    [
+     "ResNet50",
+     "Macro F1 score (average over classes)",
+     68.7,
+     73.4,
+     4.7
+    ],
+    [
+     "ResNet50",
+     "Bubble pictures found (of 54)",
+     23,
+     36,
+     13
+    ],
+    [
+     "ResNet50",
+     "Bubble pictures found, percent",
+     42.6,
+     66.7,
+     24.1
+    ],
+    [
+     "ResNet50",
+     "Bubble pictures found as any bubble class, percent",
+     44.4,
+     66.7,
+     22.2
+    ],
+    [
+     "ResNet50",
+     "Pictures called Bubble that were right, percent",
+     67.6,
+     51.4,
+     -16.2
+    ],
+    [],
+    [
+     "MultiLevel MultiScale",
+     "Accuracy on all 3,185 test pictures",
+     86.2,
+     87.5,
+     1.4
+    ],
+    [
+     "MultiLevel MultiScale",
+     "Macro F1 score (average over classes)",
+     64.5,
+     75.0,
+     10.5
+    ],
+    [
+     "MultiLevel MultiScale",
+     "Bubble pictures found (of 54)",
+     30,
+     35,
+     5
+    ],
+    [
+     "MultiLevel MultiScale",
+     "Bubble pictures found, percent",
+     55.6,
+     64.8,
+     9.3
+    ],
+    [
+     "MultiLevel MultiScale",
+     "Bubble pictures found as any bubble class, percent",
+     61.1,
+     64.8,
+     3.7
+    ],
+    [
+     "MultiLevel MultiScale",
+     "Pictures called Bubble that were right, percent",
+     50.8,
+     64.8,
+     14.0
+    ],
+    []
+   ],
+   "column_widths": {
+    "A": 22,
+    "B": 46,
+    "C": 17,
+    "D": 16,
+    "E": 16
+   },
+   "freeze_panes": "A7",
+   "conditional_formats": [
+    {
+     "range": "E7:E22",
+     "type": "color_scale",
+     "start_color": "FFF8696B",
+     "end_color": "FF63BE7B"
+    }
+   ],
+   "charts": [
+    {
+     "type": "bar",
+     "title": "Bubble pictures found, percent",
+     "anchor": "G7",
+     "data": "C10:D10",
+     "titles_from_data": true,
+     "categories": "B10"
+    }
+   ],
+   "cells": {}
+  },
+  {
+   "name": "What moved",
+   "rows": [
+    [
+     {
+      "value": "Where the bubble test pictures went, and what the merged Bubble class took in. All counts are test pictures from the 3,185.",
+      "font_color": "7F7F7F"
+     }
+    ],
+    [
+     {
+      "value": "'Lost to': a bubble picture the model placed in another class. 'Took in from': a picture from another class the model called Bubble. The take-in list explains the drop in the share of correct Bubble calls on the Headline sheet.",
+      "font_color": "7F7F7F"
+     }
+    ],
+    [],
+    [
+     {
+      "value": "architecture",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "reading",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "direction",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "class",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "test pictures",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "note",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     }
+    ],
+    [
+     {
+      "value": "ResNet50",
+      "bold": true
+     },
+     {
+      "value": "merged"
+     },
+     {
+      "value": "The merged Bubble class lost its test pictures to these classes",
+      "bold": true
+     },
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "merged",
+     "lost to",
+     "Foreign Matter",
+     7,
+     "7 of the 54 bubble test pictures"
+    ],
+    [
+     "",
+     "merged",
+     "lost to",
+     "Low Dose Obstructing Region of Interest",
+     5,
+     "5 of the 54 bubble test pictures"
+    ],
+    [
+     "",
+     "merged",
+     "lost to",
+     "Bubble Cluster",
+     3,
+     "3 of the 54 bubble test pictures"
+    ],
+    [
+     "",
+     "merged",
+     "lost to",
+     "Multiple Lenses",
+     1,
+     "1 of the 54 bubble test pictures"
+    ],
+    [
+     "",
+     "merged",
+     "lost to",
+     "Fiber",
+     1,
+     "1 of the 54 bubble test pictures"
+    ],
+    [
+     "",
+     "merged",
+     "lost to",
+     "Clear",
+     1,
+     "1 of the 54 bubble test pictures"
+    ],
+    [
+     "",
+     "merged",
+     {
+      "value": "The merged Bubble class took in test pictures from these classes",
+      "bold": true
+     },
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "merged",
+     "took in from",
+     "Foreign Matter",
+     9,
+     "not a bubble picture, but called Bubble"
+    ],
+    [
+     "",
+     "merged",
+     "took in from",
+     "Bubble Cluster",
+     6,
+     "not a bubble picture, but called Bubble"
+    ],
+    [
+     "",
+     "merged",
+     "took in from",
+     "Low Dose Obstructing Region of Interest",
+     5,
+     "not a bubble picture, but called Bubble"
+    ],
+    [
+     "",
+     "merged",
+     "took in from",
+     "Clear",
+     5,
+     "not a bubble picture, but called Bubble"
+    ],
+    [
+     "",
+     "merged",
+     "took in from",
+     "Fiber",
+     4,
+     "not a bubble picture, but called Bubble"
+    ],
+    [
+     "",
+     "merged",
+     "took in from",
+     "Extraneous Polymer",
+     3,
+     "not a bubble picture, but called Bubble"
+    ],
+    [
+     "",
+     "merged",
+     "took in from",
+     "Multiple Lenses",
+     1,
+     "not a bubble picture, but called Bubble"
+    ],
+    [
+     "",
+     "merged",
+     "took in from",
+     "HEMA Fragment",
+     1,
+     "not a bubble picture, but called Bubble"
+    ],
+    [
+     "",
+     "separate",
+     {
+      "value": "The separate bubble classes lost their test pictures to these classes",
+      "bold": true
+     },
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble lost to",
+     "Clear",
+     4,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble lost to",
+     "Foreign Matter",
+     3,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble lost to",
+     "Extraneous Polymer",
+     3,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble lost to",
+     "Wet Package",
+     1,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble On 123 lost to",
+     "Clear",
+     2,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble On 123 lost to",
+     "Low Dose Obstructing Region of Interest",
+     1,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble On 123 lost to",
+     "Fiber",
+     1,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble On Edge lost to",
+     "Fiber",
+     2,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble On Edge lost to",
+     "Multiple Lenses",
+     1,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble On Edge lost to",
+     "Bubble",
+     1,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble Irregular lost to",
+     "Low Dose Obstructing Region of Interest",
+     3,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble Irregular lost to",
+     "Extraneous Polymer",
+     2,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble Irregular lost to",
+     "Clear",
+     2,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble Irregular lost to",
+     "Multiple Lenses",
+     1,
+     ""
+    ],
+    [],
+    [
+     {
+      "value": "MultiLevel MultiScale",
+      "bold": true
+     },
+     {
+      "value": "merged"
+     },
+     {
+      "value": "The merged Bubble class lost its test pictures to these classes",
+      "bold": true
+     },
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "merged",
+     "lost to",
+     "Clear",
+     6,
+     "6 of the 54 bubble test pictures"
+    ],
+    [
+     "",
+     "merged",
+     "lost to",
+     "Low Dose Obstructing Region of Interest",
+     4,
+     "4 of the 54 bubble test pictures"
+    ],
+    [
+     "",
+     "merged",
+     "lost to",
+     "Foreign Matter",
+     4,
+     "4 of the 54 bubble test pictures"
+    ],
+    [
+     "",
+     "merged",
+     "lost to",
+     "Multiple Lenses",
+     2,
+     "2 of the 54 bubble test pictures"
+    ],
+    [
+     "",
+     "merged",
+     "lost to",
+     "Bubble Cluster",
+     2,
+     "2 of the 54 bubble test pictures"
+    ],
+    [
+     "",
+     "merged",
+     "lost to",
+     "Wet Package",
+     1,
+     "1 of the 54 bubble test pictures"
+    ],
+    [
+     "",
+     "merged",
+     {
+      "value": "The merged Bubble class took in test pictures from these classes",
+      "bold": true
+     },
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "merged",
+     "took in from",
+     "Foreign Matter",
+     9,
+     "not a bubble picture, but called Bubble"
+    ],
+    [
+     "",
+     "merged",
+     "took in from",
+     "Bubble Cluster",
+     4,
+     "not a bubble picture, but called Bubble"
+    ],
+    [
+     "",
+     "merged",
+     "took in from",
+     "Low Dose Obstructing Region of Interest",
+     2,
+     "not a bubble picture, but called Bubble"
+    ],
+    [
+     "",
+     "merged",
+     "took in from",
+     "Extraneous Polymer",
+     2,
+     "not a bubble picture, but called Bubble"
+    ],
+    [
+     "",
+     "merged",
+     "took in from",
+     "HEMA Fragment",
+     1,
+     "not a bubble picture, but called Bubble"
+    ],
+    [
+     "",
+     "merged",
+     "took in from",
+     "Clear",
+     1,
+     "not a bubble picture, but called Bubble"
+    ],
+    [
+     "",
+     "separate",
+     {
+      "value": "The separate bubble classes lost their test pictures to these classes",
+      "bold": true
+     },
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble lost to",
+     "Foreign Matter",
+     3,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble lost to",
+     "Multiple Lenses",
+     2,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble lost to",
+     "Bubble Cluster",
+     2,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble lost to",
+     "Low Dose Obstructing Region of Interest",
+     1,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble On 123 lost to",
+     "Low Dose Obstructing Region of Interest",
+     1,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble On 123 lost to",
+     "Foreign Matter",
+     1,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble On 123 lost to",
+     "Extraneous Polymer",
+     1,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble On Edge lost to",
+     "Multiple Lenses",
+     1,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble On Edge lost to",
+     "Low Dose Obstructing Region of Interest",
+     1,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble On Edge lost to",
+     "Clear",
+     1,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble On Edge lost to",
+     "Bubble",
+     1,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble Irregular lost to",
+     "Low Dose Obstructing Region of Interest",
+     3,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble Irregular lost to",
+     "Foreign Matter",
+     2,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble Irregular lost to",
+     "Multiple Lenses",
+     1,
+     ""
+    ],
+    [
+     "",
+     "separate",
+     "Bubble Irregular lost to",
+     "Bubble On Edge",
+     1,
+     ""
+    ],
+    []
+   ],
+   "column_widths": {
+    "A": 20,
+    "B": 11,
+    "C": 44,
+    "D": 34,
+    "E": 13,
+    "F": 34
+   },
+   "freeze_panes": "A5",
+   "cells": {}
+  },
+  {
+   "name": "Per class",
+   "rows": [
+    [
+     {
+      "value": "Recall for every class: of that class's test pictures, the share the model named correctly. Four columns: each architecture in each reading. Change = merged minus separate, in points.",
+      "font_color": "7F7F7F"
+     },
+     {
+      "value": "Test pictures = the class's share of the 3,185 test pictures. Classes with fewer than 10 test pictures move many points per picture: Bubble On Edge has 4 test pictures, so one picture moves it 25 points.",
+      "font_color": "7F7F7F"
+     },
+     {
+      "value": "The Bubble row is the fair comparison: the separate column pools the four bubble classes, the merged column is the one Bubble class, both on the same 54 test pictures.",
+      "font_color": "7F7F7F"
+     },
+     {
+      "value": "Clear is the class of pictures with no defect tag. Bubble Cluster and Bubble Scatter stay separate in both readings.",
+      "font_color": "7F7F7F"
+     }
+    ],
+    [],
+    [
+     {
+      "value": "class",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "test pictures",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "ResNet50 separate",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "ResNet50 merged",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "change (points)",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "MultiScale separate",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "MultiScale merged",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "change (points)",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "note",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     }
+    ],
+    [
+     "Bubble",
+     54,
+     42.6,
+     66.7,
+     24.1,
+     55.6,
+     64.8,
+     9.3,
+     "separate column pools the four bubble classes"
+    ],
+    [
+     "Bubble Cluster",
+     11,
+     45.5,
+     18.2,
+     -27.3,
+     18.2,
+     27.3,
+     9.1,
+     ""
+    ],
+    [
+     "Bubble Irregular",
+     13,
+     38.5,
+     "",
+     "",
+     38.5,
+     "",
+     "",
+     "folded into Bubble in the merged reading"
+    ],
+    [
+     "Bubble On 123",
+     4,
+     0.0,
+     "",
+     "",
+     25.0,
+     "",
+     "",
+     "folded into Bubble in the merged reading"
+    ],
+    [
+     "Bubble On Edge",
+     4,
+     0.0,
+     "",
+     "",
+     0.0,
+     "",
+     "",
+     "folded into Bubble in the merged reading"
+    ],
+    [
+     "Bubble Scatter",
+     2,
+     50.0,
+     50.0,
+     0.0,
+     0.0,
+     50.0,
+     50.0,
+     ""
+    ],
+    [
+     "Cavity Off Center",
+     55,
+     98.2,
+     100.0,
+     1.8,
+     94.5,
+     100.0,
+     5.5,
+     ""
+    ],
+    [
+     "Clear",
+     662,
+     87.9,
+     84.0,
+     -3.9,
+     77.8,
+     87.9,
+     10.1,
+     ""
+    ],
+    [
+     "Dirty Camera",
+     8,
+     62.5,
+     87.5,
+     25.0,
+     37.5,
+     87.5,
+     50.0,
+     ""
+    ],
+    [
+     "Dirty Strobe",
+     13,
+     100.0,
+     100.0,
+     0.0,
+     100.0,
+     100.0,
+     0.0,
+     ""
+    ],
+    [
+     "Extraneous Polymer",
+     80,
+     53.8,
+     55.0,
+     1.3,
+     48.8,
+     43.8,
+     -5.0,
+     ""
+    ],
+    [
+     "Fiber",
+     99,
+     45.5,
+     25.3,
+     -20.2,
+     39.4,
+     29.3,
+     -10.1,
+     ""
+    ],
+    [
+     "Foreign Matter",
+     385,
+     60.0,
+     69.4,
+     9.4,
+     78.4,
+     71.7,
+     -6.8,
+     ""
+    ],
+    [
+     "HEMA Fragment",
+     6,
+     16.7,
+     0.0,
+     -16.7,
+     0.0,
+     16.7,
+     16.7,
+     ""
+    ],
+    [
+     "HEMA Obstruction",
+     51,
+     94.1,
+     94.1,
+     0.0,
+     74.5,
+     94.1,
+     19.6,
+     ""
+    ],
+    [
+     "Lens Off Center",
+     77,
+     71.4,
+     76.6,
+     5.2,
+     77.9,
+     79.2,
+     1.3,
+     ""
+    ],
+    [
+     "Low Dose Obstructing Region of Interest",
+     585,
+     95.9,
+     96.4,
+     0.5,
+     97.1,
+     96.8,
+     -0.3,
+     ""
+    ],
+    [
+     "Missing Lens",
+     97,
+     99.0,
+     96.9,
+     -2.1,
+     96.9,
+     97.9,
+     1.0,
+     ""
+    ],
+    [
+     "Missing Primary Package",
+     428,
+     100.0,
+     99.8,
+     -0.2,
+     100.0,
+     100.0,
+     0.0,
+     ""
+    ],
+    [
+     "Multiple Lenses",
+     431,
+     97.9,
+     96.5,
+     -1.4,
+     99.3,
+     97.9,
+     -1.4,
+     ""
+    ],
+    [
+     "Package Misalignment",
+     88,
+     97.7,
+     100.0,
+     2.3,
+     98.9,
+     98.9,
+     0.0,
+     ""
+    ],
+    [
+     "View Obstructed",
+     35,
+     91.4,
+     88.6,
+     -2.9,
+     94.3,
+     88.6,
+     -5.7,
+     ""
+    ],
+    [
+     "Wet Package",
+     18,
+     72.2,
+     72.2,
+     0.0,
+     72.2,
+     72.2,
+     0.0,
+     ""
+    ]
+   ],
+   "column_widths": {
+    "A": 34,
+    "B": 12,
+    "C": 15,
+    "D": 14,
+    "E": 14,
+    "F": 15,
+    "G": 14,
+    "H": 14,
+    "I": 40
+   },
+   "freeze_panes": "A4",
+   "conditional_formats": [
+    {
+     "range": "E4:E26",
+     "type": "color_scale",
+     "start_color": "FFF8696B",
+     "end_color": "FF63BE7B"
+    },
+    {
+     "range": "H4:H26",
+     "type": "color_scale",
+     "start_color": "FFF8696B",
+     "end_color": "FF63BE7B"
+    }
+   ],
+   "cells": {}
+  },
+  {
+   "name": "Count table",
+   "rows": [
+    [
+     {
+      "value": "The client's count table, both readings. Two counts per class, and they answer different questions.",
+      "font_color": "7F7F7F"
+     },
+     {
+      "value": "Tag column: how many pictures carry that tag anywhere, counting every tag a picture has. 55 pictures carry two tags, so the tag columns sum to more than 10,614.",
+      "font_color": "7F7F7F"
+     },
+     {
+      "value": "Dataset column: how many pictures the class holds in the dataset, where each picture sits in exactly one class. The dataset column sums to 8,409 defect pictures plus 2,205 Clear pictures, exactly 10,614.",
+      "font_color": "7F7F7F"
+     },
+     {
+      "value": "LP tags and OOI tags are the client's two annotation tracks. Train and test split every class 70 to 30.",
+      "font_color": "7F7F7F"
+     }
+    ],
+    [],
+    [
+     {
+      "value": "reading",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "class",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "tag family",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "pictures with the tag",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "pictures in the class (dataset)",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "training pictures (70%)",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "test pictures (30%)",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     }
+    ],
+    [
+     "separate",
+     "Clear",
+     "Clear",
+     2333,
+     2205,
+     1543,
+     662
+    ],
+    [
+     "separate",
+     "Bubble Scatter",
+     "LP tag",
+     7,
+     7,
+     5,
+     2
+    ],
+    [
+     "separate",
+     "Cavity Off Center",
+     "LP tag",
+     183,
+     183,
+     128,
+     55
+    ],
+    [
+     "separate",
+     "Dirty Camera",
+     "LP tag",
+     25,
+     25,
+     17,
+     8
+    ],
+    [
+     "separate",
+     "Dirty Strobe",
+     "LP tag",
+     43,
+     43,
+     30,
+     13
+    ],
+    [
+     "separate",
+     "HEMA Obstruction",
+     "LP tag",
+     175,
+     171,
+     120,
+     51
+    ],
+    [
+     "separate",
+     "Lens Off Center",
+     "LP tag",
+     258,
+     258,
+     181,
+     77
+    ],
+    [
+     "separate",
+     "Low Dose Obstructing Region of Interest",
+     "LP tag",
+     1952,
+     1951,
+     1366,
+     585
+    ],
+    [
+     "separate",
+     "Missing Lens",
+     "LP tag",
+     324,
+     324,
+     227,
+     97
+    ],
+    [
+     "separate",
+     "Missing Primary Package",
+     "LP tag",
+     1427,
+     1427,
+     999,
+     428
+    ],
+    [
+     "separate",
+     "Multiple Lenses",
+     "LP tag",
+     1439,
+     1438,
+     1007,
+     431
+    ],
+    [
+     "separate",
+     "Package Misalignment",
+     "LP tag",
+     293,
+     293,
+     205,
+     88
+    ],
+    [
+     "separate",
+     "View Obstructed",
+     "LP tag",
+     117,
+     117,
+     82,
+     35
+    ],
+    [
+     "separate",
+     "Bubble",
+     "OOI tag",
+     113,
+     109,
+     76,
+     33
+    ],
+    [
+     "separate",
+     "Bubble Cluster",
+     "OOI tag",
+     36,
+     36,
+     25,
+     11
+    ],
+    [
+     "separate",
+     "Bubble Irregular",
+     "OOI tag",
+     44,
+     42,
+     29,
+     13
+    ],
+    [
+     "separate",
+     "Bubble On 123",
+     "OOI tag",
+     14,
+     14,
+     10,
+     4
+    ],
+    [
+     "separate",
+     "Bubble On Edge",
+     "OOI tag",
+     14,
+     14,
+     10,
+     4
+    ],
+    [
+     "separate",
+     "Extraneous Polymer",
+     "OOI tag",
+     268,
+     267,
+     187,
+     80
+    ],
+    [
+     "separate",
+     "Fiber",
+     "OOI tag",
+     362,
+     329,
+     230,
+     99
+    ],
+    [
+     "separate",
+     "Foreign Matter",
+     "OOI tag",
+     1283,
+     1282,
+     897,
+     385
+    ],
+    [
+     "separate",
+     "HEMA Fragment",
+     "OOI tag",
+     20,
+     20,
+     14,
+     6
+    ],
+    [
+     "separate",
+     "Wet Package",
+     "OOI tag",
+     67,
+     59,
+     41,
+     18
+    ],
+    [
+     "merged",
+     "Clear",
+     "Clear",
+     2333,
+     2205,
+     1543,
+     662
+    ],
+    [
+     "merged",
+     "Bubble Scatter",
+     "LP tag",
+     7,
+     7,
+     5,
+     2
+    ],
+    [
+     "merged",
+     "Cavity Off Center",
+     "LP tag",
+     183,
+     183,
+     128,
+     55
+    ],
+    [
+     "merged",
+     "Dirty Camera",
+     "LP tag",
+     25,
+     25,
+     17,
+     8
+    ],
+    [
+     "merged",
+     "Dirty Strobe",
+     "LP tag",
+     43,
+     43,
+     30,
+     13
+    ],
+    [
+     "merged",
+     "HEMA Obstruction",
+     "LP tag",
+     175,
+     171,
+     120,
+     51
+    ],
+    [
+     "merged",
+     "Lens Off Center",
+     "LP tag",
+     258,
+     258,
+     181,
+     77
+    ],
+    [
+     "merged",
+     "Low Dose Obstructing Region of Interest",
+     "LP tag",
+     1952,
+     1951,
+     1366,
+     585
+    ],
+    [
+     "merged",
+     "Missing Lens",
+     "LP tag",
+     324,
+     324,
+     227,
+     97
+    ],
+    [
+     "merged",
+     "Missing Primary Package",
+     "LP tag",
+     1427,
+     1427,
+     999,
+     428
+    ],
+    [
+     "merged",
+     "Multiple Lenses",
+     "LP tag",
+     1439,
+     1438,
+     1007,
+     431
+    ],
+    [
+     "merged",
+     "Package Misalignment",
+     "LP tag",
+     293,
+     293,
+     205,
+     88
+    ],
+    [
+     "merged",
+     "View Obstructed",
+     "LP tag",
+     117,
+     117,
+     82,
+     35
+    ],
+    [
+     "merged",
+     "Bubble",
+     "OOI tag",
+     185,
+     179,
+     125,
+     54
+    ],
+    [
+     "merged",
+     "Bubble Cluster",
+     "OOI tag",
+     36,
+     36,
+     25,
+     11
+    ],
+    [
+     "merged",
+     "Extraneous Polymer",
+     "OOI tag",
+     268,
+     267,
+     187,
+     80
+    ],
+    [
+     "merged",
+     "Fiber",
+     "OOI tag",
+     362,
+     329,
+     230,
+     99
+    ],
+    [
+     "merged",
+     "Foreign Matter",
+     "OOI tag",
+     1283,
+     1282,
+     897,
+     385
+    ],
+    [
+     "merged",
+     "HEMA Fragment",
+     "OOI tag",
+     20,
+     20,
+     14,
+     6
+    ],
+    [
+     "merged",
+     "Wet Package",
+     "OOI tag",
+     67,
+     59,
+     41,
+     18
+    ]
+   ],
+   "column_widths": {
+    "A": 11,
+    "B": 36,
+    "C": 10,
+    "D": 19,
+    "E": 24,
+    "F": 19,
+    "G": 18
+   },
+   "freeze_panes": "A4",
+   "autofilter": "A3:G49",
+   "cells": {}
+  },
+  {
+   "name": "Image EDA",
+   "rows": [
+    [
+     {
+      "value": "The pool and the split, one row per class. Pictures in the class = training + test. The split keeps identical pictures (same file content) on one side, so no picture is both trained on and tested on.",
+      "font_color": "7F7F7F"
+     },
+     {
+      "value": "Totals: 10,614 pictures = 8,409 defect pictures + 2,205 Clear pictures; 7,429 training and 3,185 test.",
+      "font_color": "7F7F7F"
+     },
+     {
+      "value": "The merged reading changes only the four bubble rows: their 179 dataset pictures become one Bubble class (125 training, 54 test). Every other row is the same in both readings.",
+      "font_color": "7F7F7F"
+     }
+    ],
+    [],
+    [
+     {
+      "value": "class",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "tag family",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "pictures in the class",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "training (70%)",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "test (30%)",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     },
+     {
+      "value": "pictures with the tag",
+      "bold": true,
+      "fill": "2E75B6",
+      "font_color": "FFFFFF"
+     }
+    ],
+    [
+     "Clear",
+     "Clear",
+     2205,
+     1543,
+     662,
+     2333
+    ],
+    [
+     "Low Dose Obstructing Region of Interest",
+     "LP tag",
+     1951,
+     1366,
+     585,
+     1952
+    ],
+    [
+     "Multiple Lenses",
+     "LP tag",
+     1438,
+     1007,
+     431,
+     1439
+    ],
+    [
+     "Missing Primary Package",
+     "LP tag",
+     1427,
+     999,
+     428,
+     1427
+    ],
+    [
+     "Missing Lens",
+     "LP tag",
+     324,
+     227,
+     97,
+     324
+    ],
+    [
+     "Package Misalignment",
+     "LP tag",
+     293,
+     205,
+     88,
+     293
+    ],
+    [
+     "Lens Off Center",
+     "LP tag",
+     258,
+     181,
+     77,
+     258
+    ],
+    [
+     "Cavity Off Center",
+     "LP tag",
+     183,
+     128,
+     55,
+     183
+    ],
+    [
+     "HEMA Obstruction",
+     "LP tag",
+     171,
+     120,
+     51,
+     175
+    ],
+    [
+     "View Obstructed",
+     "LP tag",
+     117,
+     82,
+     35,
+     117
+    ],
+    [
+     "Dirty Strobe",
+     "LP tag",
+     43,
+     30,
+     13,
+     43
+    ],
+    [
+     "Dirty Camera",
+     "LP tag",
+     25,
+     17,
+     8,
+     25
+    ],
+    [
+     "Bubble Scatter",
+     "LP tag",
+     7,
+     5,
+     2,
+     7
+    ],
+    [
+     "Foreign Matter",
+     "OOI tag",
+     1282,
+     897,
+     385,
+     1283
+    ],
+    [
+     "Fiber",
+     "OOI tag",
+     329,
+     230,
+     99,
+     362
+    ],
+    [
+     "Extraneous Polymer",
+     "OOI tag",
+     267,
+     187,
+     80,
+     268
+    ],
+    [
+     "Bubble",
+     "OOI tag",
+     109,
+     76,
+     33,
+     113
+    ],
+    [
+     "Wet Package",
+     "OOI tag",
+     59,
+     41,
+     18,
+     67
+    ],
+    [
+     "Bubble Irregular",
+     "OOI tag",
+     42,
+     29,
+     13,
+     44
+    ],
+    [
+     "Bubble Cluster",
+     "OOI tag",
+     36,
+     25,
+     11,
+     36
+    ],
+    [
+     "HEMA Fragment",
+     "OOI tag",
+     20,
+     14,
+     6,
+     20
+    ],
+    [
+     "Bubble On 123",
+     "OOI tag",
+     14,
+     10,
+     4,
+     14
+    ],
+    [
+     "Bubble On Edge",
+     "OOI tag",
+     14,
+     10,
+     4,
+     14
+    ]
+   ],
+   "column_widths": {
+    "A": 34,
+    "B": 10,
+    "C": 17,
+    "D": 13,
+    "E": 12,
+    "F": 19
+   },
+   "freeze_panes": "A4",
+   "tables": [
+    {
+     "name": "PoolAndSplit",
+     "range": "A3:F26",
+     "style": "TableStyleMedium9"
+    }
+   ],
+   "charts": [
+    {
+     "type": "bar",
+     "title": "Pictures per class",
+     "anchor": "H4",
+     "data": "C3",
+     "titles_from_data": true,
+     "categories": "A4:A26"
+    }
+   ],
+   "cells": {}
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "experiment": "bubble_merge",
+  "written_before_running": "2026-10-06, before any training: decisions, rows and the readout rule were fixed first. Updated 2026-10-07: the client confirmed the folder order is updated-first, so the label rule, the split and all four rows were rebuilt under the new order (the 20261006 outputs remain as the old-order record); rows re-armed for the rerun.",
+  "owner": "Pranay",
+  "task": "Task 1: merge Bubble, Bubble On 123, Bubble On Edge, Bubble Irregular into one Bubble class, add Clear as a class, one tag per image, then compare the merged reading against the separate reading",
+  "classes": {
+    "separate": 23,
+    "merged": 20,
+    "merge_members": ["Bubble", "Bubble On 123", "Bubble On Edge", "Bubble Irregular"],
+    "not_merged": ["Bubble Cluster", "Bubble Scatter"]
+  },
+  "label_source": "run/bubble_merge/20261007/labels.csv (10,614 pictures, content hash keyed, updated-first order)",
+  "md5_source": "run/line_eda/20260916/image_md5_records.csv",
+  "runs_note": "Two run sets exist on the VM. runs/ (finished 2026-10-07 03:44-04:01 UTC) used the OLD order and the 20261006 labels; runs2/ (launched 2026-10-07 07:01 UTC) uses the NEW client-confirmed order and the 20261007 labels, and is the authoritative set. The old-order results stay quotable as a reference but never as the Task 1 answer.",
+  "split": {
+    "file": "run/bubble_merge/20261007/split_70_30_seed42.csv",
+    "scheme": "70:30 inside each class of the separate variant, seed 42, one row per content hash; rebuilt 2026-10-07 under the client-confirmed updated-first folder order",
+    "train": 7429,
+    "test": 3185,
+    "shared_by": "all four runs, both variants"
+  },
+  "recipe": {
+    "trainer": "experiments/cnn/model_training.py (unchanged recipe)",
+    "epochs": 50,
+    "batch_size": 8,
+    "seed": 42,
+    "optimizer": "SGD lr 1e-4, momentum 0.9, Nesterov",
+    "input": "native 2448x2048 frame resized to 224x224, no crop, no augmentation",
+    "added_flags": ["--dump (predictions.csv + confusion.json)"]
+  },
+  "readout_fixed_before_running": [
+    "Primary: paired comparison of the merged variant against the separate variant on the identical test pictures, per class and macro, for each architecture.",
+    "If the merged Bubble class reads worse than the four separate classes did, name the class responsible from the confusion cells: which class the merged Bubble pictures are predicted as, and which class's pictures are being predicted as Bubble.",
+    "Secondary: overall accuracy and macro F1 per run, with the single-run noise band quoted beside any delta.",
+    "The merged and separate numbers are always reported side by side, never one alone."
+  ],
+  "rows": [
+    {
+      "id": "bubble_merge_resnet50_separate",
+      "summary": "ResNet50, 23 classes as they stand (four bubbles separate), Clear included",
+      "axis": "label merge",
+      "arm": "control",
+      "status": "ideated",
+      "config_overrides": {"arch": "resnet50", "variant": "separate", "dump": true},
+      "results": null
+    },
+    {
+      "id": "bubble_merge_resnet50_merged",
+      "summary": "ResNet50, 20 classes, the four bubbles folded into Bubble",
+      "axis": "label merge",
+      "arm": "variant",
+      "status": "ideated",
+      "config_overrides": {"arch": "resnet50", "variant": "merged", "dump": true},
+      "results": null
+    },
+    {
+      "id": "bubble_merge_multiscale_separate",
+      "summary": "MultiLevel MultiScale (notebook Architecture 1), 23 classes as they stand",
+      "axis": "label merge",
+      "arm": "control",
+      "status": "ideated",
+      "config_overrides": {"arch": "resnet50_inception", "variant": "separate", "dump": true},
+      "results": null
+    },
+    {
+      "id": "bubble_merge_multiscale_merged",
+      "summary": "MultiLevel MultiScale (notebook Architecture 1), 20 classes, the four bubbles folded",
+      "axis": "label merge",
+      "arm": "variant",
+      "status": "ideated",
+      "config_overrides": {"arch": "resnet50_inception", "variant": "merged", "dump": true},
+      "results": null
+    }
+  ]
+}
