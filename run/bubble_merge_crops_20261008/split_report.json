@@ -1,0 +1,134 @@
+{
+  "exp_a": {
+    "Bubble": {
+      "images": 187,
+      "crops": 1539,
+      "images_train": 131,
+      "images_test": 56,
+      "crops_train": 1134,
+      "crops_test": 405,
+      "avg_crops_per_image": 8.23
+    },
+    "Wet Package": {
+      "images": 61,
+      "crops": 191,
+      "images_train": 43,
+      "images_test": 18,
+      "crops_train": 132,
+      "crops_test": 59,
+      "avg_crops_per_image": 3.13
+    },
+    "Bubble Cluster": {
+      "images": 37,
+      "crops": 157,
+      "images_train": 25,
+      "images_test": 12,
+      "crops_train": 76,
+      "crops_test": 81,
+      "avg_crops_per_image": 4.24
+    },
+    "Extraneous Polymer": {
+      "images": 129,
+      "crops": 133,
+      "images_train": 89,
+      "images_test": 40,
+      "crops_train": 91,
+      "crops_test": 42,
+      "avg_crops_per_image": 1.03
+    },
+    "Foreign Matter": {
+      "images": 75,
+      "crops": 86,
+      "images_train": 51,
+      "images_test": 24,
+      "crops_train": 59,
+      "crops_test": 27,
+      "avg_crops_per_image": 1.15
+    },
+    "Fiber": {
+      "images": 33,
+      "crops": 35,
+      "images_train": 22,
+      "images_test": 11,
+      "crops_train": 22,
+      "crops_test": 13,
+      "avg_crops_per_image": 1.06
+    },
+    "HEMA Fragment": {
+      "images": 11,
+      "crops": 12,
+      "images_train": 8,
+      "images_test": 3,
+      "crops_train": 9,
+      "crops_test": 3,
+      "avg_crops_per_image": 1.09
+    }
+  },
+  "exp_b": {
+    "Bubble": {
+      "images": 223,
+      "crops": 1696,
+      "images_train": 156,
+      "images_test": 67,
+      "crops_train": 1210,
+      "crops_test": 486,
+      "avg_crops_per_image": 7.61
+    },
+    "Wet Package": {
+      "images": 61,
+      "crops": 191,
+      "images_train": 43,
+      "images_test": 18,
+      "crops_train": 132,
+      "crops_test": 59,
+      "avg_crops_per_image": 3.13
+    },
+    "Extraneous Polymer": {
+      "images": 129,
+      "crops": 133,
+      "images_train": 89,
+      "images_test": 40,
+      "crops_train": 91,
+      "crops_test": 42,
+      "avg_crops_per_image": 1.03
+    },
+    "Foreign Matter": {
+      "images": 75,
+      "crops": 86,
+      "images_train": 51,
+      "images_test": 24,
+      "crops_train": 59,
+      "crops_test": 27,
+      "avg_crops_per_image": 1.15
+    },
+    "Fiber": {
+      "images": 33,
+      "crops": 35,
+      "images_train": 22,
+      "images_test": 11,
+      "crops_train": 22,
+      "crops_test": 13,
+      "avg_crops_per_image": 1.06
+    },
+    "HEMA Fragment": {
+      "images": 11,
+      "crops": 12,
+      "images_train": 8,
+      "images_test": 3,
+      "crops_train": 9,
+      "crops_test": 3,
+      "avg_crops_per_image": 1.09
+    }
+  },
+  "_meta": {
+    "seed": 42,
+    "test_ratio": 0.3,
+    "images_total": 522,
+    "images_train": 366,
+    "images_test": 156,
+    "crops_total": 2153,
+    "leakage_overlap_images": 0,
+    "stratified_on": "label_a (7 classes, cluster separate)",
+    "shared_split": true
+  }
+}

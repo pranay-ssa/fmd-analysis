@@ -1,0 +1,523 @@
+source_image,split,label_a,label_b,raw_classes
+20241101_105743_L24_C15_9265.bmp,test,Bubble Cluster,Bubble,Bubble Cluster
+20241101_110324_L24_C11_9264.bmp,test,Bubble,Bubble,Bubble
+20241101_111504_L24_C5_9476.bmp,train,Bubble,Bubble,Bubble
+20241101_111942_L24_C6_9296.bmp,test,Bubble,Bubble,Bubble
+20241101_183019_L27_PalletGHT1101192118_Cavity7_B0177BB_Fail7_Score(0.9997374)_1.0000_0.9998.bmp,test,Bubble,Bubble,Bubble;Bubble Irregular;Extraneous Polymer
+20241101_213442_L26_C10_9910.bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241101_222125_L26_C7_9189.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241101_224203_L24_C8_9586.bmp,train,Bubble,Bubble,Bubble
+20241101_230301_L26_PalletGHT1102031454_Cavity11_B0177L0_Fail7_Score(0.9975056).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241101_232312_L24_C9_9558.bmp,test,Bubble,Bubble,Bubble
+20241101_232829_L24_C1_9860.bmp,train,Bubble,Bubble,Bubble
+20241101_233319_L24_C1_9672.bmp,train,Bubble,Bubble,Bubble
+20241101_235953_L24_C2_9893.bmp,train,Bubble,Bubble,Bubble
+20241102_000107_L24_C6_9266.bmp,train,Bubble,Bubble,Bubble
+20241102_004522_L24_C9_9396.bmp,train,Bubble,Bubble,Bubble
+20241102_011128_L24_C2_9587.bmp,train,Bubble,Bubble,Bubble
+20241102_021527_L24_C6_9482.bmp,test,Bubble,Bubble,Bubble
+20241102_030253_L24_C12_9626.bmp,test,Bubble Cluster,Bubble,Bubble Cluster
+20241102_034146_L26_PalletGHI1102075338_Cavity13_B0177KZ_Fail6_Score(0.9819356).bmp,train,Fiber,Fiber,Fiber
+20241102_034931_L24_C14_9062_0.9995_0.7391.bmp,test,Bubble,Bubble,Bubble;Bubble Cluster;Extraneous Polymer
+20241102_043430_L26_PalletGHR1102084624_Cavity2_B0177KZ_Fail6_Score(0.9707981).bmp,train,Fiber,Fiber,Fiber
+20241102_052642_L26_PalletGHD1102093831_Cavity14_B0177KZ_Fail7_Score(0.9987229).bmp,train,Fiber,Fiber,Fiber
+20241102_053717_L26_PalletGHA1102094911_Cavity11_B0177KZ_Fail4_Score(0.944276).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241102_054700_L24_C4_9234.bmp,train,Bubble,Bubble,Bubble
+20241102_060400_L26_C6_9999.bmp,test,Wet Package,Wet Package,Wet Package
+20241102_061939_L26_PalletGHA1102103128_Cavity8_B0177KZ_Fail5_Score(0.9556966).bmp,test,Bubble,Bubble,Bubble
+20241102_063234_L26_C9_9906.bmp,train,Wet Package,Wet Package,Wet Package
+20241102_063451_L26_C11_9857.bmp,train,Wet Package,Wet Package,Wet Package
+20241102_064741_L26_C15_9493.bmp,train,Wet Package,Wet Package,Wet Package
+20241102_073603_L26_PalletGHR1102114800_Cavity5_B0177KZ_Fail7_Score(0.9879337).bmp,test,Bubble,Bubble,Bubble
+20241102_074710_L26_C4_9592.bmp,train,Wet Package,Wet Package,Wet Package
+20241102_082407_L26_PalletGHK1102123553_Cavity13_B0177KZ_Fail7_Score(0.983468).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241102_082612_L26_PalletGHP1102123803_Cavity13_B0177KZ_Fail4_Score(0.9440983).bmp,train,Bubble,Bubble,Bubble
+20241102_083645_L24_C13_9551.bmp,train,Bubble,Bubble,Bubble
+20241102_085045_L26_C14_9697.bmp,test,Wet Package,Wet Package,Wet Package
+20241102_090439_L24_C8_9204.bmp,test,Bubble,Bubble,Bubble
+20241102_092656_L24_C15_9980.bmp,train,HEMA Fragment,HEMA Fragment,HEMA Fragment
+20241102_093419_L26_PalletGHU1102134613_Cavity8_B0177KZ_Fail7_Score(0.9995976).bmp,train,Bubble,Bubble,Bubble
+20241102_105648_L26_PalletGHE1102150846_Cavity6_B0177KZ_Fail7_Score(0.9999561).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241102_110244_L26_PalletGHN1102151447_Cavity11_B0177KZ_Fail4_Score(0.9440042).bmp,test,Wet Package,Wet Package,Wet Package
+20241102_110624_L26_PalletGHN1102151821_Cavity2_B0177KZ_Fail4_Score(0.9413617).bmp,train,Bubble,Bubble,Bubble
+20241102_110914_L26_C9_9872.bmp,train,Wet Package,Wet Package,Wet Package
+20241102_110934_L26_C8_9475.bmp,test,Wet Package,Wet Package,Wet Package
+20241102_123128_L26_PalletGHI1102164326_Cavity9_B0177KZ_Fail5_Score(0.9528883).bmp,test,Wet Package,Wet Package,Wet Package
+20241102_131757_L26_PalletGHT1102172946_Cavity7_B0177KZ_Fail7_Score(0.9952714).bmp,train,Wet Package,Wet Package,Wet Package
+20241102_140219_L27_C5_9182.bmp,train,Bubble,Bubble,Bubble Irregular
+20241102_141640_L27_C8_9246.bmp,train,Bubble,Bubble,Bubble Irregular
+20241102_143656_L27_C15_9231.bmp,train,Bubble,Bubble,Bubble Irregular
+20241102_145307_L26_C12_9738.bmp,train,Wet Package,Wet Package,Wet Package
+20241102_153745_L26_PalletGHF1102194942_Cavity6_B0177KZ_Fail5_Score(0.9515088).bmp,train,Wet Package,Wet Package,Wet Package
+20241102_165852_L26_C10_9332.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241102_170721_L27_C2_9599.bmp,train,Bubble,Bubble,Bubble Irregular
+20241102_173420_L27_C15_9991.bmp,train,Bubble,Bubble,Bubble Irregular
+20241102_174926_L26_C8_9843.bmp,train,Wet Package,Wet Package,Wet Package
+20241102_174956_L26_C4_9333.bmp,train,Wet Package,Wet Package,Wet Package
+20241102_181117_L26_C9_9965.bmp,test,Wet Package,Wet Package,Wet Package
+20241102_191322_L26_C9_9804.bmp,train,Wet Package,Wet Package,Wet Package
+20241102_192117_L26_C12_9998.bmp,train,Wet Package,Wet Package,Wet Package
+20241102_192335_L26_C7_9985.bmp,train,Wet Package,Wet Package,Wet Package
+20241102_192815_L26_PalletGHD1102234009_Cavity5_B0177KX_Fail5_Score(0.9511994).bmp,train,Wet Package,Wet Package,Wet Package
+20241102_202559_L26_C12_9399.bmp,train,Bubble,Bubble,Bubble Irregular
+20241102_204610_L26_PalletGHK1103005812_Cavity2_B0177KX_Fail5_Score(0.9569216).bmp,train,Bubble,Bubble,Bubble
+20241102_231643_L26_C10_9853.bmp,test,Wet Package,Wet Package,Wet Package
+20241103_000010_L24_C11_9429_1.0000.bmp,train,Bubble,Bubble,Bubble;Extraneous Polymer
+20241103_003546_L26_PalletGHK1103044741_Cavity13_B0177L1_Fail4_Score(0.9453292).bmp,train,Wet Package,Wet Package,Wet Package
+20241103_012946_L26_C7_9013.bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241103_015241_L26_PalletGHC1103070447_Cavity14_B0177L1_Fail7_Score(0.9913883).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20241103_023607_L26_C6_9419.bmp,train,Wet Package,Wet Package,Wet Package
+20241103_030957_L26_PalletGHT1103082159_Cavity15_B0177L1_Fail7_Score(0.991147).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241103_034709_L26_C12_9384.bmp,train,Wet Package,Wet Package,Wet Package
+20241103_034856_L26_C9_9978.bmp,test,Wet Package,Wet Package,Wet Package
+20241103_051416_L26_PalletGHG1103102617_Cavity14_B0178LJ_Fail4_Score(0.9348189).bmp,test,Bubble,Bubble,Bubble
+20241103_063558_L27_C12_9633.bmp,train,Bubble,Bubble,Bubble Irregular
+20241103_065114_L26_PalletGHD1103120321_Cavity9_B0178LJ_Fail7_Score(0.9983681).bmp,train,Fiber,Fiber,Fiber
+20241103_073210_L26_PalletGHL1103124407_Cavity10_B0178LJ_Fail3_Score(0.9319589).bmp,train,Wet Package,Wet Package,Wet Package
+20241103_080119_L26_PalletGHG1103131322_Cavity13_B0178LJ_Fail4_Score(0.9480836).bmp,test,Bubble,Bubble,Bubble
+20241103_080431_L26_PalletGHU1103131639_Cavity6_B0178LJ_Fail3_Score(0.9327981).bmp,test,Wet Package,Wet Package,Wet Package
+20241103_091941_L26_PalletGHC1103143143_Cavity7_B0178LJ_Fail4_Score(0.9390025).bmp,test,Wet Package,Wet Package,Wet Package
+20241103_125550_L26_C15_9154.bmp,train,Wet Package,Wet Package,Wet Package
+20241104_023200_L24_PalletGHU1104073049_Cavity3_B01778W_Fail7_Score(0.9999302)_0.9989_0.9991.bmp,train,Bubble,Bubble,Bubble
+20241104_041220_L24_C5_9059.bmp,train,Bubble,Bubble,Bubble
+20241104_060534_L24_C4_9340.bmp,train,HEMA Fragment,HEMA Fragment,HEMA Fragment
+20241104_105211_L24_C2_9753.bmp,train,Bubble,Bubble,Bubble Irregular
+20241104_135359_L26_PalletGHH1104190414_Cavity6_B0178LL_Fail7_Score(0.998804).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241104_151305_L24_C7_9206.bmp,test,Bubble,Bubble,Bubble Irregular
+20241104_154552_L24_C6_1.bmp,test,Bubble,Bubble,Bubble
+20241104_171855_L24_C1_1.bmp,train,Bubble,Bubble,Bubble
+20241104_191742_L24_C5_9513.bmp,train,Bubble,Bubble,Bubble
+20241104_195821_L26_PalletGHI1105011027_Cavity2_B0178LL_Fail5_Score(0.9646114).bmp,train,Wet Package,Wet Package,Wet Package
+20241104_200205_L26_PalletGHK1105011419_Cavity7_B0178LL_Fail3_Score(0.9242069).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241104_201441_L26_PalletGHN1105012656_Cavity10_B0178LL_Fail5_Score(0.95096).bmp,train,Wet Package,Wet Package,Wet Package
+20241104_202839_L26_PalletGHU1105014050_Cavity3_B0178LL_Fail5_Score(0.9586827).bmp,train,Bubble,Bubble,Bubble
+20241104_204234_L26_PalletGHE1105015444_Cavity2_B0178LL_Fail7_Score(0.9897037).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241104_205033_L26_PalletGHQ1105020238_Cavity10_B0178LL_Fail4_Score(0.9344984).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241104_210536_L26_PalletGHC1105021743_Cavity8_B0178LL_Fail6_Score(0.9721047).bmp,test,Wet Package,Wet Package,Wet Package
+20241104_210946_L26_PalletGHP1105022154_Cavity1_B0178LL_Fail3_Score(0.9332645).bmp,train,Fiber,Fiber,Fiber
+20241104_224911_L26_PalletGHS1105040115_Cavity1_B0178LL_Fail7_Score(0.9982086).bmp,train,Wet Package,Wet Package,Wet Package
+20241104_225315_L26_PalletGHH1105040517_Cavity5_B0178LL_Fail7_Score(0.9924626).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241104_225633_L26_PalletGHA1105040833_Cavity7_B0178LL_Fail4_Score(0.9420534).bmp,train,Fiber,Fiber,Fiber
+20241104_235947_L24_PalletGHR1105045838_Cavity1_B0178HV_Fail3_Score(0.9186684)_0.9972_0.9648.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241105_001916_L26_PalletGHC1105053127_Cavity11_B0178LN_Fail3_Score(0.91694).bmp,train,Bubble,Bubble,Bubble
+20241105_010319_L24_PalletGHD1105055852_Cavity15_B0178HX_Fail7_Score(0.9999995)_0.9999_0.9581.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer;Foreign Matter
+20241105_030638_L26_PalletGHL1105081849_Cavity8_B0178LN_Fail5_Score(0.9601004).bmp,train,Wet Package,Wet Package,Wet Package
+20241105_031204_L26_PalletGHL1105082416_Cavity14_B0178LN_Fail7_Score(0.9971284).bmp,train,Wet Package,Wet Package,Wet Package
+20241105_052129_L26_PalletGHQ1105103340_Cavity7_B0178LN_Fail5_Score(0.9524736).bmp,test,Wet Package,Wet Package,Wet Package
+20241105_060414_L26_PalletGHG1105111623_Cavity5_B0178LN_Fail4_Score(0.9410886).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20241105_061824_L26_PalletGHQ1105113025_Cavity6_B0178LN_Fail7_Score(0.9885154).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241105_063516_L26_PalletGHI1105114730_Cavity15_B0178LN_Fail2_Score(0.9056665).bmp,test,Wet Package,Wet Package,Wet Package
+20241105_070115_L26_PalletGHT1105121327_Cavity8_B0178LN_Fail4_Score(0.9363841).bmp,test,Bubble,Bubble,Bubble
+20241105_071146_L26_PalletGHE1105122405_Cavity2_B0178LN_Fail7_Score(0.9980523).bmp,test,Wet Package,Wet Package,Wet Package
+20241105_083449_L26_PalletGHO1105134701_Cavity13_B0178LN_Fail2_Score(0.9084484).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241105_135748_L24_C6_9593.bmp,test,HEMA Fragment,HEMA Fragment,HEMA Fragment
+20241105_191956_L27_C4_9065.bmp,train,Bubble,Bubble,Bubble Irregular
+20241105_204620_L24_C2_9939.bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20241105_222703_L27_C15_9959.bmp,test,Bubble,Bubble,Bubble Irregular
+20241106_001022_L27_C12_9504.bmp,train,Bubble,Bubble,Bubble Irregular
+20241106_054711_L24_C1_1.bmp,train,Bubble,Bubble,Bubble
+20241106_062653_L24_C6_1.bmp,train,Bubble,Bubble,Bubble
+20241106_070037_L24_C6_1.bmp,train,Bubble,Bubble,Bubble
+20241106_071232_L24_C1_1.bmp,train,Bubble,Bubble,Bubble
+20241106_071634_L24_C9_1.bmp,train,Bubble,Bubble,Bubble
+20241106_083307_L24_C11_9201.bmp,train,Bubble,Bubble,Bubble Irregular
+20241106_091559_L24_C8_9440.bmp,test,Bubble,Bubble,Bubble Irregular
+20241106_092421_L27_C11_9149.bmp,test,Bubble,Bubble,Bubble Irregular
+20241106_092701_L24_C11_9148.bmp,train,Bubble,Bubble,Bubble
+20241106_092943_L24_C10_9567.bmp,train,Bubble,Bubble,Bubble Irregular
+20241106_093336_L24_C5_9968.bmp,train,Bubble,Bubble,Bubble
+20241106_093649_L24_C14_9600.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241106_093655_L24_C14_9759.bmp,train,Bubble,Bubble,Bubble
+20241106_095939_L27_C9_9713.bmp,train,Bubble,Bubble,Bubble Irregular
+20241106_102110_L24_C3_9823.bmp,train,Bubble,Bubble,Bubble
+20241106_102644_L24_C10_9873.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241106_110332_L27_C15_9209.bmp,test,Bubble,Bubble,Bubble Irregular
+20241106_114239_L24_C5_9864.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241106_114517_L24_C14_9714.bmp,test,Bubble,Bubble,Bubble
+20241106_115502_L24_C4_9357.bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241106_125840_L24_C3_9756.bmp,train,Bubble,Bubble,Bubble
+20241106_140001_L24_C4_9627.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241106_144058_L24_C11_9141.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241106_144506_L24_C9_9870.bmp,train,Bubble,Bubble,Bubble Irregular
+20241106_145408_L24_C7_9188.bmp,test,Bubble,Bubble,Bubble
+20241106_150559_L27_C1_9556.bmp,train,Bubble,Bubble,Bubble Irregular
+20241106_151608_L24_C5_9971.bmp,test,Bubble Cluster,Bubble,Bubble Cluster
+20241106_165443_L24_C6_9949.bmp,train,Wet Package,Wet Package,Wet Package
+20241106_174048_L27_C13_9752.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241106_174048_L27_PalletGHA1106193211_Cavity13_B0178KV_Fail6_Score(0.9752264).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241106_181317_L24_C6_9662.bmp,test,Bubble,Bubble,Bubble
+20241106_185031_L24_C15_9521.bmp,train,Bubble,Bubble,Bubble
+20241106_194358_L24_C7_9640.bmp,train,Bubble,Bubble,Bubble
+20241106_194725_L27_C14_9308.bmp,test,Bubble,Bubble,Bubble Irregular
+20241106_214737_L24_C15_9890.bmp,train,Fiber,Fiber,Fiber
+20241107_005834_L24_C3_9079.bmp,train,Bubble,Bubble,Bubble
+20241107_025129_L26_C7_9990.bmp,train,Wet Package,Wet Package,Wet Package
+20241107_035652_L24_C13_9774.bmp,train,Bubble,Bubble,Bubble
+20241107_043504_L26_C9_9812.bmp,train,Wet Package,Wet Package,Wet Package
+20241107_045607_L26_C13_9120.bmp,test,Wet Package,Wet Package,Wet Package
+20241107_052316_L24_C3_9396.bmp,train,Bubble,Bubble,Bubble
+20241107_053445_L24_C3_9591.bmp,test,Bubble,Bubble,Bubble
+20241107_054508_L24_C3_9712.bmp,train,Bubble,Bubble,Bubble
+20241107_062323_L24_C2_9878.bmp,train,Bubble,Bubble,Bubble
+20241107_090843_L24_C14_9357.bmp,test,Bubble,Bubble,Bubble
+20241107_095807_L24_C5_9469.bmp,train,Bubble,Bubble,Bubble
+20241107_110254_L24_C13_9107.bmp,train,Bubble,Bubble,Bubble
+20241107_115407_L24_C13_9732.bmp,test,Bubble,Bubble,Bubble
+20241107_130710_L26_C9_9999.bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241107_132904_L24_C13_9064.bmp,test,Bubble,Bubble,Bubble
+20241107_142514_L26_C4_9861.bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241107_155622_L26_C15_9977.bmp,train,Wet Package,Wet Package,Wet Package
+20241107_161214_L27_C11_9962.bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241107_173817_L26_C5_9086.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241107_180043_L24_C7_9365.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241107_184751_L26_C3_9818.bmp,test,Bubble Cluster,Bubble,Bubble Cluster
+20241107_193349_L24_C2_9332.bmp,train,Bubble,Bubble,Bubble
+20241107_200439_L24_C2_9204.bmp,train,Bubble,Bubble,Bubble
+20241107_211152_L24_C15_9808.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241108_002429_L24_C11_9170_0.9997_0.9596.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241108_013651_L24_C4_9669.bmp,train,Bubble,Bubble,Bubble
+20241108_021953_L24_C5_9887.bmp,test,Wet Package,Wet Package,Wet Package
+20241108_032423_L27_C11_9980.bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20241108_042349_L24_C3_9933.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241108_045733_L24_C4_9845.bmp,train,Wet Package,Wet Package,Wet Package
+20241108_071455_L24_C12_9600.bmp,train,Wet Package,Wet Package,Wet Package
+20241108_083847_L24_PalletGHL1108133647_Cavity13_B0178JH_Fail6_Score(0.9802432)_0.9968_0.9816.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241108_105117_L24_C2_9484.bmp,train,HEMA Fragment,HEMA Fragment,HEMA Fragment
+20241108_120803_L26_C7_9482.bmp,train,Bubble,Bubble,Bubble Irregular
+20241108_123719_L24_PalletGHK1108173629_Cavity3_B0178JH_Fail6_Score(0.9757074)_0.9940_0.9708.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241108_130403_L25_C2_9264.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241108_144231_L26_PalletGHQ1108195454_Cavity9_B0178LS_Fail5_Score(0.9572987)_0.8916.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241108_153814_L24_C11_9821.bmp,train,Wet Package,Wet Package,Wet Package
+20241108_171956_L26_C7_9249.bmp,train,Bubble,Bubble,Bubble Irregular
+20241108_184745_L24_C9_9550.bmp,test,Fiber,Fiber,Fiber
+20241108_184745_L24_C9_9550_0.9984_0.3941.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241108_200518_L25_PalletGHH1108225405_Cavity15_B0178KF_Fail2_Score(0.9000862).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241108_205606_L24_PalletGHJ1109015521_Cavity10_B0178JH_Fail7_Score(0.9973226)_0.9961_0.9954.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241109_003645_L26_C11_9340.bmp,train,Bubble,Bubble,Bubble Irregular
+20241109_064802_L24_C6_9771.bmp,train,Bubble,Bubble,Bubble
+20241109_071504_L24_PalletGHJ1109121415_Cavity15_B0178JD_Fail7_Score(0.987294)_0.9993_0.9818.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241109_083707_L24_C11_9765.bmp,train,Bubble,Bubble,Bubble
+20241109_084852_L24_C5_9725.bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20241109_094515_L24_C5_9633.bmp,train,Bubble,Bubble,Bubble
+20241109_095317_L24_C11_9261.bmp,train,Bubble,Bubble,Bubble
+20241109_095458_L24_C5_9786.bmp,train,Bubble,Bubble,Bubble
+20241109_100233_L24_C11_9778.bmp,train,Wet Package,Wet Package,Wet Package
+20241109_111943_L24_C7_9049.bmp,train,Bubble,Bubble,Bubble Irregular
+20241109_113854_L24_C2_9552.bmp,train,Bubble,Bubble,Bubble
+20241109_120727_L24_C14_9602.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241109_121652_L24_C13_9816.bmp,test,Bubble,Bubble,Bubble
+20241109_121757_L24_C13_9986_0.9907_0.4813.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241109_124243_L24_C12_9911.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241109_125007_L24_C1_9062.bmp,test,Bubble,Bubble,Bubble
+20241109_131523_L24_C15_9878.bmp,train,Bubble,Bubble,Bubble Irregular
+20241109_152835_L24_C1_9310.bmp,train,Bubble,Bubble,Bubble
+20241109_153402_L26_C12_9479.bmp,train,Bubble,Bubble,Bubble On Edge
+20241109_161500_L24_C10_9960.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241109_165018_L24_C6_9999.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241109_165254_L24_C8_9169_0.9993_0.3759.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241109_180846_L24_C8_9999.bmp,test,Bubble,Bubble,Bubble
+20241109_201340_L24_C12_9217.bmp,train,Bubble,Bubble,Bubble
+20241109_202018_L24_C15_9730.bmp,train,Bubble,Bubble,Bubble
+20241109_210741_L24_C1_9999.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer;Fiber;Foreign Matter
+20241109_210758_L27_C6_9951.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241109_212741_L24_C2_9249.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241109_212928_L24_C9_9998.bmp,test,Bubble,Bubble,Bubble
+20241109_213752_L27_C10_9996.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241109_213824_L24_C10_9460.bmp,test,Bubble,Bubble,Bubble
+20241109_213824_L24_C10_9460_0.9988_0.4847.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241109_220006_L24_C15_9070_0.9988_0.6889.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241109_225540_L24_C4_9957.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241110_005124_L24_C1_9812.bmp,test,Bubble,Bubble,Bubble
+20241110_012942_L24_C10_9046.bmp,train,Bubble,Bubble,Bubble
+20241110_040620_L24_C1_9761.bmp,train,Bubble,Bubble,Bubble
+20241110_042105_L27_PalletGHE1110061248_Cavity10_B0178LB_Fail5_Score(0.9643347)_1.0000_0.9579.bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20241110_053221_L24_C8_9347.bmp,train,Bubble,Bubble,Bubble
+20241110_054132_L24_C2_9612.bmp,train,Bubble,Bubble,Bubble
+20241110_060953_L24_C6_9354.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241110_061426_L24_C10_9724.bmp,train,Bubble,Bubble,Bubble Irregular
+20241110_070609_L27_C9_9716.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241110_071712_L24_C14_9576.bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241110_093715_L24_PalletGHE1110143641_Cavity8_B0178JK_Fail7_Score(0.9840244)_1.0000_0.9782.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241110_102003_L27_C9_9990.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241110_105145_L24_C8_9923.bmp,train,Bubble,Bubble,Bubble
+20241110_121133_L24_C1_9757.bmp,train,Bubble,Bubble,Bubble
+20241110_121647_L27_C14_9672.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241110_150730_L24_C11_9011.bmp,test,Wet Package,Wet Package,Wet Package
+20241110_152128_L24_C10_9185.bmp,train,Bubble,Bubble,Bubble
+20241110_181320_L24_C5_9123.bmp,train,Bubble,Bubble,Bubble Irregular
+20241110_190603_L25_C15_9243.bmp,train,Bubble,Bubble,Bubble
+20241110_193540_L25_C3_9725.bmp,train,Bubble,Bubble,Bubble Irregular
+20241110_194706_L25_C9_9090.bmp,train,Bubble,Bubble,Bubble On Edge
+20241110_210318_L25_C15_9515.bmp,train,Bubble,Bubble,Bubble
+20241110_221442_L24_PalletGHJ1111031359_Cavity8_B0178JN_Fail7_Score(0.9947081)_1.0000_0.9901.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241110_223949_L27_PalletGHQ1111003130_Cavity4_B0178LD_Fail5_Score(0.9554622)_1.0000_0.9883.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241110_230135_L27_PalletGHP1111005322_Cavity7_B0178LG_Fail7_Score(0.9861149)_1.0000_0.9811.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241110_234333_L25_C1_9922.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241110_235002_L25_C2_9502.bmp,test,Bubble,Bubble,Bubble
+20241111_000607_L25_C10_9689.bmp,test,Bubble,Bubble,Bubble
+20241111_001402_L25_C15_9995.bmp,train,Bubble,Bubble,Bubble
+20241111_001527_L25_PalletGHH1111030423_Cavity8_B017963_Fail3_Score(0.9299055).bmp,train,Wet Package,Wet Package,Wet Package
+20241111_014722_L25_PalletGHU1111043619_Cavity1_B017963_Fail4_Score(0.9414496).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20241111_040338_L27_PalletGHT1111055525_Cavity2_B01796Q_Fail7_Score(0.9983938)_0.5186_0.9525.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241111_051848_L24_C11_1.bmp,train,Bubble,Bubble,Bubble
+20241111_053351_L24_C1_1.bmp,test,Bubble,Bubble,Bubble
+20241111_055029_L24_C1_1.bmp,train,Bubble,Bubble,Bubble
+20241111_055504_L24_C9_1.bmp,train,Bubble,Bubble,Bubble
+20241111_055534_L24_C4_1.bmp,test,Bubble,Bubble,Bubble
+20241111_061612_L25_PalletGHM1111090449_Cavity6_B01795Z_Fail6_Score(0.979553).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241111_063752_L24_C4_9350.bmp,train,Bubble,Bubble,Bubble
+20241111_124549_L24_C13_9905.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241111_130708_L24_C14_9790.bmp,test,Bubble,Bubble,Bubble
+20241111_132823_L24_C9_9272.bmp,test,Bubble Cluster,Bubble,Bubble Cluster
+20241111_141940_L24_C9_9999.bmp,train,HEMA Fragment,HEMA Fragment,HEMA Fragment
+20241111_171642_L24_C6_9520.bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241111_173010_L24_C11_9986.bmp,train,Bubble,Bubble,Bubble Irregular
+20241111_181753_L24_C10_9280.bmp,train,Bubble,Bubble,Bubble
+20241111_182324_L24_C4_9997.bmp,train,Fiber,Fiber,Fiber
+20241111_185144_L24_C7_9787.bmp,test,Bubble,Bubble,Bubble
+20241111_190049_L24_C14_9891.bmp,train,Bubble,Bubble,Bubble
+20241111_203541_L25_C15_9130.bmp,train,Bubble,Bubble,Bubble
+20241111_203813_L25_C14_9168.bmp,train,Bubble,Bubble,Bubble
+20241111_204640_L25_C3_9836.bmp,test,Bubble,Bubble,Bubble On Edge
+20241111_205832_L25_C8_9593.bmp,test,Bubble,Bubble,Bubble
+20241111_205842_L25_C3_9317.bmp,test,Bubble,Bubble,Bubble
+20241111_210557_L25_C15_9319.bmp,train,Bubble,Bubble,Bubble
+20241111_213726_L25_C15_9345.bmp,train,Bubble,Bubble,Bubble On Edge
+20241111_223701_L24_PalletGHR1112033634_Cavity14_B0178JW_Fail7_Score(0.997364)_1.0000_0.9574.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241111_230435_L25_C4_9879.bmp,train,Bubble,Bubble,Bubble
+20241111_230830_L27_PalletGHE1112010018_Cavity11_B01796S_Fail5_Score(0.9521646)_0.9998_0.9954.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241111_231002_L25_C5_9480.bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241111_231002_L25_PalletGHN1112015902_Cavity5_B017960_Fail4_Score(0.9480445).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241112_034424_L24_PalletGHA1112084359_Cavity15_B0178JV_Fail7_Score(0.9999998)_0.9805_0.9821.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_052325_L25_PalletGHK1112081227_Cavity7_B01795X_Fail7_Score(0.9976689)_0.9823_0.9963.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_052543_L24_C4_9204_0.9991.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_095128_L25_PalletGHQ1112124028_Cavity7_B01795X_Fail3_Score(0.9239376)_0.9984_0.9990.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_110859_L26_C6_9857.bmp,train,Wet Package,Wet Package,Wet Package
+20241112_114228_L24_C11_9999_0.9948.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer;Foreign Matter
+20241112_121312_L24_C12_9992_0.9935.bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241112_135215_L25_C5_9254.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_144125_L25_PalletGHK1112173029_Cavity9_B01795X_Fail7_Score(0.9848871).bmp,train,Fiber,Fiber,Fiber
+20241112_145309_L25_C2_9998.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_152701_L25_PalletGHI1112181609_Cavity13_B017961_Fail7_Score(0.9972995)_0.9999_0.9505.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_152811_L25_C7_9966.bmp,train,Fiber,Fiber,Fiber
+20241112_152811_L25_PalletGHM1112181712_Cavity7_B017961_Fail7_Score(0.9966033)_0.9997_0.9983.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_154550_L25_C4_9778.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_154601_L25_C8_9995.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_154940_L25_C8_9950.bmp,test,Fiber,Fiber,Fiber
+20241112_155228_L25_C10_9760.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_155458_L25_PalletGHA1112184401_Cavity9_B017961_Fail7_Score(0.9996179)_0.9993_0.9998.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_162047_L25_C3_9947.bmp,test,Fiber,Fiber,Fiber
+20241112_162047_L25_PalletGHP1112190949_Cavity3_B017961_Fail7_Score(0.9947362)_0.9999_0.9884.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_164834_L25_C9_9664.bmp,train,Fiber,Fiber,Fiber
+20241112_165744_L25_C8_9990.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_165911_L25_C6_9952.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_171134_L25_C5_9714.bmp,train,Fiber,Fiber,Fiber
+20241112_173208_L25_C8_9951.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_174013_L25_C9_9993.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_190158_L26_C9_9629.bmp,train,Wet Package,Wet Package,Wet Package
+20241112_191132_L25_PalletGHN1112220034_Cavity13_B017962_Fail5_Score(0.9633171)_0.9998_0.9915.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_191607_L25_C5_9788.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_192330_L25_C15_9330.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_192440_L25_C12_9994.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_192451_L25_C1_9999.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_193301_L25_PalletGHR1112222144_Cavity6_B017962_Fail7_Score(0.9865564)_0.9999_0.9962.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_193434_L25_C10_9955.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_195003_L25_C11_9986.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_195148_L25_PalletGHK1112224047_Cavity12_B017962_Fail7_Score(0.9949216)_0.9998_0.9792.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_200146_L25_C4_9923.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_201831_L25_C4_9870.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_202049_L26_C13_9450.bmp,train,Wet Package,Wet Package,Wet Package
+20241112_205204_L25_C5_9794.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_205621_L25_C11_9928.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241112_212736_L26_C14_9021.bmp,test,Wet Package,Wet Package,Wet Package
+20241113_025847_L26_C8_9697.bmp,train,Wet Package,Wet Package,Wet Package
+20241113_080405_L26_C12_9564.bmp,train,Wet Package,Wet Package,Wet Package
+20241113_105717_L26_C3_9988.bmp,train,Wet Package,Wet Package,Wet Package
+20241113_113149_L26_C2_9096.bmp,train,Wet Package,Wet Package,Wet Package
+20241113_131628_L26_C1_9329.bmp,train,Bubble,Bubble,Bubble Irregular
+20241113_155322_L26_PalletGHP1113210610_Cavity9_B0179G8_Fail4_Score(0.9390881).bmp,test,Bubble,Bubble,Bubble
+20241113_201602_L26_C15_9852.bmp,train,Bubble,Bubble,Bubble Irregular
+20241113_203303_L27_PalletGHN1114004945_Cavity9_B01796W_Fail6_Score(0.9787874)_0.9850_0.9925.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241113_204205_L25_PalletGHI1113233114_Cavity2_B017B2S_Fail4_Score(0.9337586).bmp,test,Fiber,Fiber,Fiber
+20241114_001422_L25_PalletGHN1114030331_Cavity5_B017969_Fail6_Score(0.9744182).bmp,train,Wet Package,Wet Package,Wet Package
+20241114_002446_L26_PalletGHP1114053742_Cavity4_B0179GB_Fail7_Score(0.9993335).bmp,test,Fiber,Fiber,Fiber
+20241114_012631_L26_PalletGHA1114063920_Cavity10_B0179GB_Fail3_Score(0.9225338).bmp,train,Bubble,Bubble,Bubble
+20241114_015030_L26_C14_9073.bmp,train,Bubble,Bubble,Bubble Irregular
+20241114_025309_L27_PalletGHI1114070951_Cavity6_B01796T_Fail7_Score(0.9997685)_1.0000_1.0000.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241114_052705_L25_PalletGHO1114081611_Cavity4_B017969_Fail3_Score(0.9179311).bmp,train,Fiber,Fiber,Fiber
+20241114_075002_L25_PalletGHJ1114103913_Cavity11_B017969_Fail5_Score(0.9505268).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241114_125100_L24_PalletGHF1114175023_Cavity15_B01795H_Fail7_Score(1).bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241114_125105_L24_PalletGHI1114175031_Cavity15_B01795H_Fail7_Score(1).bmp,test,Bubble Cluster,Bubble,Bubble Cluster
+20241114_134259_L25_C1_1.bmp,train,Bubble,Bubble,Bubble
+20241114_140044_L25_C10_9011.bmp,test,Bubble,Bubble,Bubble
+20241114_141248_L25_C1_1.bmp,train,Bubble,Bubble,Bubble
+20241114_142803_L25_C1_1.bmp,test,Bubble,Bubble,Bubble
+20241114_144710_L25_C1_1.bmp,train,Bubble,Bubble,Bubble
+20241114_144721_L25_C1_1.bmp,train,Bubble,Bubble,Bubble
+20241114_175047_L25_PalletGHT1114203958_Cavity1_B01796B_Fail5_Score(0.964892)_0.9998_0.9743.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241114_191942_L25_C15_9120.bmp,train,Bubble,Bubble,Bubble
+20241115_061555_L24_PalletGHC1115111452_Cavity15_B01795M_Fail7_Score(0.9963451)_1.0000_0.9604.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241115_070847_L25_PalletGHH1115095710_Cavity13_B017968_Fail5_Score(0.9613602).bmp,train,Fiber,Fiber,Fiber
+20241115_165358_L24_C11_9997_1.0000.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241116_175629_L25_C15_9999.bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241117_024641_L27_C12_9867.bmp,test,Bubble,Bubble,Bubble Irregular
+20241117_104827_L27_C6_9167.bmp,test,Bubble Cluster,Bubble,Bubble Cluster
+20241117_125203_L27_C10_9695.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241117_131502_L27_C12_9639.bmp,train,Bubble,Bubble,Bubble Irregular
+20241117_131628_L27_C3_9855.bmp,train,Bubble,Bubble,Bubble Irregular
+20241117_134544_L27_C14_9486.bmp,test,Bubble,Bubble,Bubble Irregular
+20241117_141409_L27_C7_9405.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241117_151658_L27_C10_9558.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241117_161456_L27_C9_9914.bmp,train,Bubble,Bubble,Bubble On Edge
+20241117_173107_L27_C4_9604.bmp,test,Bubble Cluster,Bubble,Bubble Cluster
+20241117_180538_L27_C2_9815.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241117_191050_L27_C5_9850.bmp,test,Bubble Cluster,Bubble,Bubble Cluster
+20241117_205925_L27_C1_9800.bmp,test,Bubble Cluster,Bubble,Bubble Cluster
+20241117_233059_L27_C12_9121.bmp,test,Bubble,Bubble,Bubble Irregular
+20241118_010623_L27_C2_9980.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241118_055435_L27_C5_9033.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241118_114336_L24_C11_9898_0.9999.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241118_200759_L24_C11_9981_1.0000.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241119_015300_L27_C6_9311.bmp,train,Bubble,Bubble,Bubble Irregular
+20241119_022535_L27_C2_9636.bmp,test,Bubble,Bubble,Bubble Irregular
+20241119_142725_L24_C4_9300.bmp,test,Bubble,Bubble,Bubble On Edge
+20241119_180420_L24_C15_9036_0.9985.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241120_004057_L27_C12_9817.bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241120_062141_L24_C8_9987_0.9986.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241121_071215_L27_C12_9999.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241121_072829_L27_C8_9195.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241121_210853_L24_C11_9840_0.9999.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241205_012740_L24_C14_9883_0.9998.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241205_113821_L24_C10_9999_1.0000.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241205_171629_L24_C10_9765_0.9998_0.5373.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241205_183611_L25_C10_9997.bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20241207_005256_L24_C14_9876_1.0000_0.7995.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241208_011820_L24_C5_9972_1.0000_0.5339.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241209_154911_L24_C8_9944_1.0000_0.7906.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241210_035053_L24_C14_9938.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241214_144655_L24_C7_9986_0.9999_0.4205.bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20241215_173616_L24_C6_1.bmp,test,Bubble,Bubble,Bubble On Edge
+20241215_173635_L24_C6_1.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241215_174000_L24_C6_1.bmp,train,Bubble,Bubble,Bubble
+20241215_174157_L24_C6_1.bmp,train,Bubble,Bubble,Bubble Irregular
+20241215_174449_L24_C6_1.bmp,train,Bubble,Bubble,Bubble On Edge
+20241215_174500_L24_C6_1.bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20241215_174734_L24_C12_1.bmp,test,Bubble,Bubble,Bubble Irregular
+20260728_133621_L24_PalletGHI0728175231_Cavity5_D009FTK_Fail6_Score(0.9830682).bmp,train,Wet Package,Wet Package,Wet Package
+20260728_151509_L24_PalletGHA0728193115_Cavity11_D009GNP_Fail7_Score(0.9994212).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260728_222957_L24_PalletGHA0729024604_Cavity3_D009FV7_Fail7_Score(0.9976553).bmp,train,Fiber,Fiber,Fiber
+20260729_064440_L24_PalletGHN0729110037_Cavity10_D009FVT_Fail7_Score(0.9968483).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260729_090447_L24_PalletGHL0729132101_Cavity3_D009FW1_Pass1_Score(0.253889).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260729_151531_L24_PalletGHD0729193149_Cavity13_D009FWL_Fail4_Score(0.9452041).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260729_232812_L24_PalletGHR0730034427_Cavity1_D009FX7_Fail6_Score(0.9736988).bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260730_060954_L24_PalletGHJ0730102611_Cavity1_D009FXT_Fail4_Score(0.9347266).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260731_115736_L24_PalletGHG0731161356_Cavity12_D009G0Q_Pass1_Score(0.3032157).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260731_125719_L24_PalletGHM0731171343_Cavity7_D009G0S_Fail7_Score(0.9903694).bmp,train,Fiber,Fiber,Fiber
+20260731_133931_L24_PalletGHU0731175551_Cavity10_D009G0V_Pass1_Score(0.5302956).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260803_101254_L24_PalletGHA0803142833_Cavity4_D009G6C_Fail7_Score(0.9929036).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260803_113404_L24_PalletGHN0803154940_Cavity7_D009G6H_Pass1_Score(0.8998446).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260803_135038_L24_PalletGHE0803180616_Cavity6_D009G6P_Pass1_Score(0.03327972).bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260804_092320_L24_PalletGHI0804133906_Cavity14_D009G8C_Fail2_Score(0.9058634).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260805_063014_L24_PalletGHQ0805104535_Cavity11_D009G9N_Fail7_Score(0.9915763).bmp,train,Bubble,Bubble,Bubble
+20260805_074448_L24_PalletGHL0805120022_Cavity12_D009G9R_Fail7_Score(0.9906123).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_074727_L24_PalletGHA0805120307_Cavity12_D009G9R_Fail7_Score(0.9999899).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_085607_L31_PalletGHI0805133145_Cavity9_B01BH5J_Fail7_Score(0.9998533).bmp,train,Bubble,Bubble,Bubble On 123
+20260805_085703_L31_PalletGHI0805133242_Cavity4_B01BH5J_Fail7_Score(0.9999605).bmp,train,Bubble,Bubble,Bubble On 123
+20260805_090319_L31_PalletGHB0805133858_Cavity13_B01BH5J_Fail7_Score(0.9999928).bmp,train,Fiber,Fiber,Fiber
+20260805_090800_L31_PalletGHP0805134315_Cavity8_B01BH5J_Fail7_Score(0.9998168).bmp,train,Bubble,Bubble,Bubble On 123
+20260805_091922_L31_PalletGHU0805135500_Cavity14_B01BH5J_Fail7_Score(0.9982708).bmp,test,Fiber,Fiber,Fiber
+20260805_093458_L31_PalletGHC0805141002_Cavity13_B01BH5J_Fail7_Score(0.9999756).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_093752_L31_PalletGHR0805141051_Cavity13_B01BH5J_Fail7_Score(0.995425).bmp,train,Fiber,Fiber,Fiber
+20260805_094920_L31_PalletGHF0805142455_Cavity8_B01BH5J_Fail7_Score(0.9998156).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_095016_L31_PalletGHF0805142558_Cavity15_B01BH5J_Fail7_Score(0.9999207).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_101715_L31_PalletGHA0805145300_Cavity15_B01BGTV_Fail7_Score(0.9948239).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_102227_L31_PalletGHG0805145505_Cavity11_B01BGTV_Fail7_Score(0.9988828).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_103220_L31_PalletGHA0805150751_Cavity4_B01BGTV_Fail7_Score(0.9990243).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_103512_L31_PalletGHF0805151045_Cavity14_B01BGTV_Fail7_Score(0.9972164).bmp,train,Fiber,Fiber,Fiber
+20260805_112552_L31_PalletGHG0805160132_Cavity14_B01BGTV_Fail7_Score(0.9999911).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_113335_L31_PalletGHC0805160910_Cavity10_B01BGTV_Fail7_Score(0.9999363).bmp,test,Fiber,Fiber,Fiber
+20260805_134201_L31_PalletGHR0805181740_Cavity3_B01BGTV_Fail7_Score(0.9997957).bmp,train,Fiber,Fiber,Fiber
+20260805_135933_L31_PalletGHC0805183408_Cavity4_B01BGTV_Fail7_Score(0.9974871).bmp,test,Fiber,Fiber,Fiber
+20260805_140220_L31_PalletGHB0805183759_Cavity8_B01BGTV_Fail7_Score(0.9999998).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_142712_L31_PalletGHD0805190250_Cavity5_B01BGTV_Fail7_Score(0.9936844).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_142729_L31_PalletGHK0805190307_Cavity13_B01BGTV_Fail7_Score(0.9998276).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_142850_L31_PalletGHB0805190430_Cavity12_B01BGTV_Fail7_Score(0.9996862).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_143125_L31_PalletGHF0805190702_Cavity13_B01BGTV_Fail7_Score(0.9999932).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_143130_L31_PalletGHJ0805190711_Cavity6_B01BGTV_Fail7_Score(0.9991458).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_143141_L31_PalletGHM0805190720_Cavity9_B01BGTV_Fail7_Score(0.9999341).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_150453_L31_PalletGHQ0805193852_Cavity14_B01BGTV_Fail7_Score(0.9971046).bmp,train,Fiber,Fiber,Fiber
+20260805_172905_L31_PalletGHA0805220448_Cavity13_B01BGTV_Fail7_Score(0.9999885).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_174450_L31_PalletGHR0805222030_Cavity10_B01BGTV_Fail7_Score(0.9999079).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_180044_L31_PalletGHN0805223620_Cavity4_B01BGTV_Fail7_Score(0.9998782).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_180528_L31_PalletGHA0805224101_Cavity3_B01BGTV_Fail7_Score(0.9986681).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_185641_L31_PalletGHC0805233220_Cavity2_B01BGTV_Fail7_Score(0.9999104).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_185831_L31_PalletGHE0805233413_Cavity5_B01BGTV_Fail7_Score(0.9994507).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_194445_L31_PalletGHM0806002017_Cavity15_B01BGTV_Fail7_Score(0.9938762).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260805_195107_L31_PalletGHO0806002648_Cavity6_B01BGTV_Fail7_Score(0.9998088).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_204540_L31_PalletGHF0806012122_Cavity15_B01BGTS_Fail7_Score(0.9993604).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_205339_L31_PalletGHR0806012919_Cavity10_B01BGTS_Fail7_Score(0.9996818).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_205515_L31_PalletGHM0806013055_Cavity10_B01BGTS_Fail7_Score(0.9997135).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_212849_L31_PalletGHG0806020431_Cavity9_B01BGTS_Fail7_Score(0.9981229).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_222532_L31_PalletGHB0806030114_Cavity3_B01BGTS_Fail7_Score(0.997124).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_225510_L31_PalletGHK0806033046_Cavity15_B01BGTS_Fail7_Score(0.9971098).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20260805_225702_L31_PalletGHN0806033240_Cavity9_B01BGTS_Fail7_Score(0.9999043).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20260806_015835_L31_PalletGHE0806063414_Cavity14_B01BGTS_Fail7_Score(0.9999968).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260806_021501_L31_PalletGHJ0806065040_Cavity6_B01BGTS_Fail7_Score(0.9997464).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20260806_051340_L31_PalletGHH0806094729_Cavity14_B01BGTR_Fail7_Score(0.999975).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260806_060852_L31_PalletGHN0806104441_Cavity10_B01BGTR_Fail7_Score(0.9993573).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260806_081546_L24_PalletGHL0806123113_Cavity13_D009GCR_Fail7_Score(0.9958234).bmp,test,Fiber,Fiber,Fiber
+20260806_121317_L27_PalletGHM0806153850_Cavity11_B01BGMS_Fail7_Score(0.9990594).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260806_153211_L27_PalletGHK0806185735_Cavity3_B01BGMT_Fail7_Score(0.9998726)_0.9999_0.7055.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260806_162412_L31_PalletGHI0806205947_Cavity3_B01BGTT_Fail7_Score(0.9998382).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260806_163026_L31_PalletGHJ0806210610_Cavity6_B01BGTT_Fail7_Score(0.9987792)_0.9999_0.3120.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260806_173124_L31_PalletGHF0806220712_Cavity9_B01BGTT_Fail7_Score(0.9950727).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260806_195715_L31_PalletGHU0807003256_Cavity11_B01BG2J_Fail7_Score(0.99911).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260806_211435_L31_PalletGHN0807015002_Cavity14_B01BGV1_Fail7_Score(0.9953595).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260806_223154_L31_PalletGHL0807030732_Cavity12_B01BGV1_Fail7_Score(0.9915794).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260807_032224_L31_PalletGHB0807075808_Cavity14_B01BGV1_Fail7_Score(0.9982914).bmp,test,Foreign Matter,Foreign Matter,Foreign Matter
+20260807_114321_L31_PalletGHI0807161910_Cavity13_B01BGTW_Fail6_Score(0.9734123).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260807_223901_L24_PalletGHR0808025232_Cavity3_D009GGC_Fail7_Score(0.985067).bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20260808_042813_L31_PalletGHD0808090405_Cavity3_B01BGTX_Fail7_Score(0.9908786).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260808_080915_L31_PalletGHI0808124424_Cavity6_B01BGTX_Fail7_Score(0.9994365).bmp,train,HEMA Fragment,HEMA Fragment,HEMA Fragment
+20260808_093445_L31_PalletGHE0808141038_Cavity7_B01BGTZ_Fail7_Score(0.9999933).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260808_110353_L27_PalletGHJ0808142936_Cavity5_B01BH56_Fail5_Score(0.9622378).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260808_122943_L31_PalletGHI0808170535_Cavity13_B01BGTZ_Fail7_Score(0.9995779).bmp,train,HEMA Fragment,HEMA Fragment,HEMA Fragment
+20260808_145520_L31_PalletGHA0808193114_Cavity14_B01BGTZ_Fail6_Score(0.9804375).bmp,train,Bubble Cluster,Bubble,Bubble Cluster
+20260808_184257_L27_PalletGHF0808220741_Cavity13_B01BH57_Fail6_Score(0.9712428)_0.9998_0.7320.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260810_050141_L31_PalletGHE0810093743_Cavity7_B01BHK3_Fail7_Score(0.9982542).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260810_073025_L31_PalletGHP0810120624_Cavity13_B01BHK3_Fail7_Score(0.9896561).bmp,test,HEMA Fragment,HEMA Fragment,HEMA Fragment
+20260810_101302_L31_PalletGHJ0810144706_Cavity5_B01BHK4_Fail7_Score(0.9999977)_0.9999_0.6514.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260810_202438_L24_PalletGHQ0811004050_Cavity12_B01BF2L_Fail7_Score(0.9987215).bmp,train,Foreign Matter,Foreign Matter,Foreign Matter
+20260810_203017_L24_PalletGHB0811004554_Cavity15_B01BF2L_Fail7_Score(0.9880998).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260810_220053_L24_PalletGHF0811021715_Cavity5_B01BF2L_Fail6_Score(0.9815739).bmp,train,Fiber,Fiber,Fiber
+20260810_221103_L24_PalletGHA0811022725_Cavity6_B01BF2L_Fail6_Score(0.9823089).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260813_075849_L31_PalletGHD0813123502_Cavity3_B01BHKF_Fail7_Score(0.999911).bmp,test,Bubble Cluster,Bubble,Bubble Cluster
+20260814_080027_L24_PalletGHM0814121704_Cavity11_B01BFRL_Fail7_Score(0.9920896).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260815_014306_L26_PalletGHI0815060415_Cavity1_B01BH3F_Fail5_Score(0.9635022).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260815_054244_L26_PalletGHU0815100347_Cavity9_B01BH3F_Fail3_Score(0.931405)_1.0000_0.9902.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260815_133853_L26_PalletGHH0815175145_Cavity14_B01BHZM_Fail7_Score(0.9980153).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer;Foreign Matter;Wet Package
+20260815_163615_L26_PalletGHJ0815205725_Cavity7_B01BH3J_Fail7_Score(0.9898512)_0.9984_0.6514.bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260820_002028_L31_PalletGHM0820045613_Cavity11_B01BK80_Fail7_Score(0.9978441).bmp,train,Bubble,Bubble,Bubble On 123
+20260820_002527_L31_PalletGHE0820050114_Cavity10_B01BK80_Fail7_Score(0.9976335).bmp,train,Bubble,Bubble,Bubble On 123
+20260820_003214_L31_PalletGHP0820050810_Cavity8_B01BK80_Fail7_Score(0.9999973).bmp,train,Bubble,Bubble,Bubble On 123
+20260820_004039_L31_PalletGHF0820051631_Cavity15_B01BK80_Fail7_Score(0.9930503).bmp,train,Bubble,Bubble,Bubble On Edge
+20260820_004355_L31_PalletGHU0820051951_Cavity5_B01BK80_Fail3_Score(0.9256573).bmp,train,Bubble,Bubble,Bubble On 123
+20260820_005110_L31_PalletGHE0820052658_Cavity4_B01BK80_Fail7_Score(0.999971).bmp,test,Bubble,Bubble,Bubble On 123
+20260820_005417_L31_PalletGHI0820053009_Cavity11_B01BK80_Fail6_Score(0.9775637).bmp,test,Bubble,Bubble,Bubble On 123
+20260820_011654_L31_PalletGHN0820055240_Cavity4_B01BK80_Fail7_Score(0.9998396).bmp,train,Bubble,Bubble,Bubble On 123
+20260820_012945_L31_PalletGHU0820060527_Cavity14_B01BK80_Fail6_Score(0.9819713).bmp,train,Bubble,Bubble,Bubble On 123
+20260820_015628_L31_PalletGHL0820063224_Cavity7_B01BK81_Fail7_Score(0.9992353).bmp,train,Bubble,Bubble,Bubble On Edge
+20260820_022349_L31_PalletGHO0820065945_Cavity8_B01BK81_Fail7_Score(0.9996321).bmp,train,Bubble,Bubble,Bubble On 123
+20260820_022929_L31_PalletGHC0820070524_Cavity1_B01BK81_Fail5_Score(0.9564127).bmp,test,Bubble,Bubble,Bubble On 123
+20260820_023328_L31_PalletGHQ0820070909_Cavity12_B01BK81_Fail7_Score(0.9987876).bmp,test,Bubble,Bubble,Bubble On Edge
+20260820_023334_L31_PalletGHR0820070913_Cavity1_B01BK81_Fail7_Score(0.9985447).bmp,test,Bubble,Bubble,Bubble Irregular
+20260820_025001_L31_PalletGHH0820072546_Cavity13_B01BK81_Fail6_Score(0.9826609).bmp,train,Bubble,Bubble,Bubble On Edge
+20260820_032520_L31_PalletGHR0820080109_Cavity4_B01BK81_Fail7_Score(0.9988727).bmp,train,Bubble,Bubble,Bubble On Edge
+20260820_040332_L31_PalletGHK0820083923_Cavity4_B01BK81_Fail5_Score(0.9653919).bmp,train,Bubble,Bubble,Bubble On Edge
+20260820_191329_L24_PalletGHQ0820232946_Cavity7_B01BHWT_Fail7_Score(0.9999622).bmp,train,HEMA Fragment,HEMA Fragment,HEMA Fragment
+20260820_220043_L24_PalletGHF0821021658_Cavity9_B01BHWV_Fail7_Score(0.9938503).bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260822_182818_L31_PalletGHE0822230157_Cavity14_B01BK8P_Fail7_Score(0.9999984).bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer;Fiber
+20260822_224143_L31_PalletGHU0823031750_Cavity5_B01BK8P_Fail7_Score(0.9874093).bmp,test,HEMA Fragment,HEMA Fragment,HEMA Fragment
+20260831_111033_L25_PalletGHJ0831153601_Cavity2_B01BKLH_Fail7_Score(0.9999986).bmp,train,HEMA Fragment,HEMA Fragment,HEMA Fragment
+20260906_065131_L26_PalletGHG0906111318_Cavity6_B01BMP8_Fail6_Score(0.9740337).bmp,test,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer
+20260907_151529_L26_PalletGHF0907193631_Cavity2_B01BMPG_Fail7_Score(0.999732).bmp,train,Extraneous Polymer,Extraneous Polymer,Extraneous Polymer

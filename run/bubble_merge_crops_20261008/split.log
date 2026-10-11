@@ -1,0 +1,20 @@
+crops in manifest: 2153
+shared split: 522 images -> train 366 / test 156 (seed 42)
+
+exp     class                      img   crops   train    test
+exp_a   Bubble                     187    1539    1134     405
+exp_a   Wet Package                 61     191     132      59
+exp_a   Bubble Cluster              37     157      76      81
+exp_a   Extraneous Polymer         129     133      91      42
+exp_a   Foreign Matter              75      86      59      27
+exp_a   Fiber                       33      35      22      13
+exp_a   HEMA Fragment               11      12       9       3
+exp_b   Bubble                     223    1696    1210     486
+exp_b   Wet Package                 61     191     132      59
+exp_b   Extraneous Polymer         129     133      91      42
+exp_b   Foreign Matter              75      86      59      27
+exp_b   Fiber                       33      35      22      13
+exp_b   HEMA Fragment               11      12       9       3
+
+leakage overlap images: 0
+wrote: .

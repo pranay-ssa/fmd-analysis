@@ -1,0 +1,14 @@
+experiment,class,images_train,images_test,images_total,crops_train,crops_test,crops_total,avg_crops_per_image
+exp_a,Bubble,131,56,187,1134,405,1539,8.23
+exp_a,Wet Package,43,18,61,132,59,191,3.13
+exp_a,Bubble Cluster,25,12,37,76,81,157,4.24
+exp_a,Extraneous Polymer,89,40,129,91,42,133,1.03
+exp_a,Foreign Matter,51,24,75,59,27,86,1.15
+exp_a,Fiber,22,11,33,22,13,35,1.06
+exp_a,HEMA Fragment,8,3,11,9,3,12,1.09
+exp_b,Bubble,156,67,223,1210,486,1696,7.61
+exp_b,Wet Package,43,18,61,132,59,191,3.13
+exp_b,Extraneous Polymer,89,40,129,91,42,133,1.03
+exp_b,Foreign Matter,51,24,75,59,27,86,1.15
+exp_b,Fiber,22,11,33,22,13,35,1.06
+exp_b,HEMA Fragment,8,3,11,9,3,12,1.09

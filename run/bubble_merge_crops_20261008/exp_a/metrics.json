@@ -1,0 +1,77 @@
+{
+  "arch": "resnet50_inception",
+  "epochs": 50,
+  "batch_size": 8,
+  "seed": 42,
+  "num_classes": 7,
+  "class_names": [
+    "Bubble",
+    "Bubble Cluster",
+    "Extraneous Polymer",
+    "Fiber",
+    "Foreign Matter",
+    "HEMA Fragment",
+    "Wet Package"
+  ],
+  "num_train_images": 1523,
+  "num_test_images": 630,
+  "overall_accuracy": 0.9127,
+  "overall_recall": 0.6534,
+  "training_time_sec": 869.76,
+  "inference_total_sec": 4.3021,
+  "inference_per_image_ms": 6.829,
+  "per_class": {
+    "Bubble": {
+      "recall": 0.9926,
+      "precision": 0.9571,
+      "f1": 0.9745,
+      "support": 405
+    },
+    "Bubble Cluster": {
+      "recall": 0.8025,
+      "precision": 0.9286,
+      "f1": 0.8609,
+      "support": 81
+    },
+    "Extraneous Polymer": {
+      "recall": 0.7857,
+      "precision": 0.8049,
+      "f1": 0.7952,
+      "support": 42
+    },
+    "Fiber": {
+      "recall": 0.3846,
+      "precision": 0.4545,
+      "f1": 0.4167,
+      "support": 13
+    },
+    "Foreign Matter": {
+      "recall": 0.7778,
+      "precision": 0.7241,
+      "f1": 0.75,
+      "support": 27
+    },
+    "HEMA Fragment": {
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Wet Package": {
+      "recall": 0.8305,
+      "precision": 0.8448,
+      "f1": 0.8376,
+      "support": 59
+    }
+  },
+  "macro": {
+    "precision": 0.6734,
+    "recall": 0.6534,
+    "f1": 0.6621
+  },
+  "weighted": {
+    "precision": 0.9079,
+    "recall": 0.9127,
+    "f1": 0.9094
+  }
+}

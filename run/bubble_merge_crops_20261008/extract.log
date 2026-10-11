@@ -1,0 +1,16 @@
+old: 434 images, 2020 boxes
+new: 137 images, 183 boxes
+union with updated-first: 526 images, 2157 boxes
+
+class                  images  crops  avg/img
+Bubble                    117   1323     11.3
+Wet Package                61    191      3.1
+Bubble Cluster             37    157      4.2
+Extraneous Polymer        129    133      1.0
+Bubble On Edge             14     90      6.4
+Foreign Matter             75     86      1.1
+Bubble On 123              13     79      6.1
+Bubble Irregular           44     47      1.1
+Fiber                      33     35      1.1
+HEMA Fragment              11     12      1.1
+TOTAL crops=2153  excluded=4  crop_errors=0
