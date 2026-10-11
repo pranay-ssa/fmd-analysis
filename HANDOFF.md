@@ -1,13 +1,199 @@
 ---
 title: Handoff (state of the work)
-date: 2026-09-17
+date: 2026-10-06
 type: state
 status: active
 where: HANDOFF.md
 ---
 
-# fmd-analysis - Handoff (formerly FMD-Preprocess)
+# fmd-analysis - Handoff
 
+**Resume here:** wayfinder ticket 004, second leg. The client confirmed on
+2026-10-07 that the folder order is updated-first (Updated Objects >
+Updated Categorical > old ICube Defects Library), so the 33 old-Fiber
+pictures are Extraneous Polymer. Labels, count tables and the shared split
+were rebuilt under the new order into `run/bubble_merge/20261007/`
+(10,614 pictures; 8,409 tagged + 2,205 Clear; 23 -> 20 classes; split
+7,429 / 3,185; merged Bubble 179 = 130 train / 49 test; Fiber 329,
+Extraneous Polymer 267). Verifier reworked flip-aware: **67 checks, 0
+failed**, local and on the VM, rebuild byte-identical. `20261006/` stays as
+the old-order record.
+
+**In flight**
+
+- **Four reruns under the new order are training on the VM**
+  (`/home/pranayp/merge_analysis`, launched 2026-10-07 07:01:51 UTC,
+  `runs2/launch_all2.sh`, log `runs2/launch.log`, growth mode on from the
+  start). Trees rebuilt strictly from the 20261007 labels (`trees2/`,
+  10,614 links each). ETA ~09:05 UTC / ~14:40 IST, based on the first
+  batch's 2h04m under identical four-way contention. When they land:
+  readout via `experiments/bubble_merge/readout.py` (runs2 path), workbook
+  via `make_readout_workbook.py`, then ticket 005/006.
+- **Old-order reference (do not confuse):** the first four runs finished
+  rc=0 at 03:44-04:01 UTC under `runs/` (old order, 20261006 labels):
+  ResNet50 separate 0.8701 / merged 0.8635 accuracy, MultiScale separate
+  0.8653 / merged 0.8632; merged Bubble read worse on both (exact hits
+  33/55 vs 28/55 on ResNet50, 30/55 vs 28/55 on MultiScale), biggest sink
+  Foreign Matter. Quotable as reference, never as the Task 1 answer.
+
+**In flight**
+
+- **Task 1, second leg (the live one): see the resume block above.** The
+  20261006 outputs and the first four VM runs are the old-order reference;
+  the 20261007 rebuild and `runs2/` are authoritative.
+- **The two-tag claim is verified independently**: no earlier run or split
+  counted the 178 Folded Lens pictures as Folded Lens or deducted them from
+  Multiple Lenses; Folded Lens is not a class in any single-label set here
+  (checked locally and read-only on the VM's own splits, 2026-10-07).
+  Evidence `docs/two_tag_rule_verification_20261006.md`. Srikanth checks in
+  parallel.
+- **The CNN trainer carries two new flags** (`--dump`,
+  `--save-model`) with the dump logic in `experiments/cnn/dump_outputs.py`
+  (6 local unit tests); both VM-proven in the 2026-10-07 morning runs and
+  the `runs2` smoke.
+- **The pos-weight architecture sweep (2026-10-06) is done and
+  held out of the weekly deck** until the daily meeting; threshold tuning is
+  in the deck draft (keep 0.5; a production threshold needs a third split).
+  Record `reports/multilabel/ml_posw_arch_sweep_20261006.md`.
+
+**Next, in order**
+
+1. When `runs2` lands (~09:05 UTC / ~14:40 IST): pull metrics.json,
+   confusion.json, predictions.csv and the PNG for all four with md5 pairs,
+   then the ticket 005 readout with `experiments/bubble_merge/readout.py`
+   (point `--runs` at `runs2`), merged versus separate on identical test
+   pictures, responsible class named from the confusion cells.
+2. Ticket 006: the record, the workbook
+   (`make_readout_workbook.py`, counts from `run/bubble_merge/20261007/`)
+   and the lead message; the count table references the NEW dataset counts
+   (Fiber 329, Extraneous Polymer 267) and notes the order change.
+3. Standing: report `ml_resnet50_posw` to the lead (band-aid framing) and
+   decide the architecture-with-weights slide after the daily meeting;
+   third validation split before any production threshold; data-side
+   Folded Lens lever; pull or mount the single-size crop library when a
+   line needs it.
+
+**Rules in force for this task:** one tag per picture by the
+CLIENT-CONFIRMED folder-priority rule (Updated Objects, then Updated
+Categorical, then the older library; changed 2026-10-07); Clear only where
+no tag exists; merged and separate numbers always reported together;
+numbers go to the lead as soon as they are read, verification in parallel,
+explicit correction if it disagrees. Today's session detail:
+`docs/sessions/2026-W41.md`.
+
+---
+
+## Historical record (accumulated; migration to docs/sessions is owed)
+
+> **2026-10-06: the four notebook architectures rerun with the class weight.**
+> All four exit 0 on the pranayp VM: same recipe as the 2026-10-05 weighted
+> baseline, only the architecture changed. The class weight lifts Folded Lens
+> on every architecture (plain recall 0% on all four; weighted 58.3% / 77.8% /
+> 58.3% / 61.1%). Best combined row: Inception + refined decode, FL F1 0.571,
+> recall 61.1%, every other tag perfect, exact match 0.951 (highest on this
+> line). Single-run caveat: line noise band 0.037 macro F1; the FL recall moves
+> are far outside it, the precision deltas between rows are not. Record
+> `reports/multilabel/ml_posw_arch_sweep_20261006.md`, four registry rows
+> `ml_resnet50_posw_<arch>`, mirror `run/multilabel_lp_posw_20261005/archs_posw/`
+> (md5-checked), weights on the VM under `runs/<arch>_posw_20261006/`. The user
+> is holding this data out of the weekly deck until after the daily meeting, so
+> the deck is unchanged. Threshold tuning on the weighted baseline is also done
+> and in the deck draft: the weighted model is stable across cuts (F1 0.50 to
+> 0.52 from 0.5 down to 0.05), keep 0.5; a production-quoted threshold still
+> needs a third validation split. Next, in order: (1) user reviews the deck
+> draft after the daily meeting and decides on the architecture-with-weights
+> slide, (2) R4 Fiber/Extraneous Polymer class-mapping rerun on the detection
+> and defect-classifier lines, (3) third validation split if a production
+> threshold is to be quoted, (4) client answers on FL-without-ML and the 5,000
+> images (verbal only until the email arrives).
+>
+> **2026-10-05: `ml_resnet50_posw` ran and the client settled Fiber vs
+> Extraneous Polymer.** The pos-weight run is done on the pranayp VM (A100
+> 80 GB, exit 0): one switch against the 2026-09-28 base, `--pos-weight`;
+> same plain ResNet50, same 3,377-row labels.csv, same two-way 80/20 split
+> (2700/677, split_named), seed 42, 50 epochs, 499.7 s train, 3.277 ms/img
+> cold inference. Weights applied: P1_COC 17.49, P1_FL 18.01, P1_ML 1.34,
+> P1_MPP 1.37, P1_NL 9.38. Folded Lens moved for the first time on this line:
+> recall 0.056 to 0.472, F1 0.103 to 0.507, AUPRC 0.523 to 0.622, precision
+> 0.667 to 0.548, 14 new false positives all on ML-only rows; ML and MPP
+> stay perfect, COC keeps recall 1.0 with 3 new FPs, NL recall up 0.938 to
+> 0.985. Headlines: macro AUPRC 0.905 to 0.924, macro F1 0.808 to 0.892,
+> exact match 0.939 to 0.945; the measured run-to-run band (2026-09-29
+> control re-run) is macro F1 0.037 / exact match 0.018, so the macro F1 gain
+> is more than double the band and is claimed as a real pos-weight effect.
+> Agreed interpretation: the pos weight is a band-aid that works. The real
+> fix is data: more Folded Lens examples that are NOT also Multiple Lenses
+> (all 178 FL images in the export also carry ML, and the 2026-09-29 sweep
+> proved architecture cannot reach FL). Caveat: no val set exists (frozen
+> two-way 80/20), so tuning the FL threshold on the test set would leak; a
+> tuned threshold needs a third split cut first. Artifacts: local mirror
+> `run/multilabel_lp_posw_20261005/` md5-checked against the VM, weights on
+> the VM only at `/home/pranayp/yolo_ooi/multilabel_lp_posw_20261005/runs/`,
+> spec `reports/multilabel/ml_resnet50_posw_spec_20261005.md`, driver
+> `experiments/multilabel_resnet50/run_ml_posw.py` (train.py untouched).
+> Client ruling, same day, via the lead: the 33 Fiber vs Extraneous Polymer
+> pictures are Extraneous Polymer going forward, and the annotation guide
+> gets a new 2D-structure definition. Scope: decision-stage defect classes
+> only; verified 2026-09-24 that 0 of the 31 contested pictures are in the
+> 3,377 LP rows, so the LP multilabel line is untouched. Pending rerun R4
+> (Fiber/Extraneous Polymer class mapping) is settled in favor of Extraneous
+> Polymer; the affected detection and defect-classifier per-class figures can
+> be re-run and de-provisioned. Next, in order: (1) report
+> `ml_resnet50_posw` to the lead (numbers above, band-aid framing included);
+> (2) threshold tuning only after cutting a third split; (3) re-run R4 on
+> the detection and defect-classifier lines now that the client settled it;
+> (4) data-side Folded Lens lever: collect more FL examples that are not also
+> ML.
+>
+> **2026-09-29 (later session): single-size crops of ALL updated folders done and verified on
+> the VM.** The lead asked for single-size crops of the new data with the previous fixed sizes
+> revalidated first. Size EDA ran on all 12,079 source images across the three roots (header
+> scan: every frame is 2448x2048; content-vs-canonical detection scan: the 2026-09-03 canonical
+> single-size set stays usable). Three decisions taken with the user: (1a) Missing Lens keeps
+> 1544x1524, oversized images expand via the no-loss guard (55 of 324); (2) Clear assigned a
+> new canonical 1680x1644 from its observed max content extent; (3) `duplicates` excluded from
+> the real run (smoke-test only). Production script mirrors `src/fixed_crop.py` exactly
+> (threshold 3, blob >= 500 px and mean >= 15, tier-2 retry at 13, blank -> frame-centered
+> window, no-loss guard = content + 45 px). Smoke test on duplicates: 143/143, pixel-exact
+> spot checks passed. Full run: 11,936 queued, 337 s at 16 workers, all 39 classes parity OK
+> (in = out = manifest rows), exit 0; old-library status counts reproduce the verified
+> 2026-09-02 run exactly. Combined manifests built and count-verified (12,079 rows).
+> **Everything lives on the VM at
+> `/home/amd100-user/FMD_Data_26082026/fmd_temp_images/crops/`** - `README.md` (source of
+> truth: structure, naming, manifest columns, annotation remap rule `x_crop = x_original -
+> left`, cautions for expanded/blank rows, canonical size table, how to run, safeguards),
+> `eda/` (the two EDA scripts + results), `single_size/<root>_crop/<Class>_single_crop/`
+> (crops + per-class `manifest.csv`), `single_size/manifest_ALL.csv` (+ three per-root CSVs),
+> `single_size/scripts/` (`crop_single_size.py`, `build_combined_manifest.py`,
+> `full_run_log.txt`). Must run as `amd100-user` (output dir is theirs; pranayp can read).
+> Sources untouched (write test fails as expected, counts re-checked). 96 crops are `expanded`
+> (larger than canonical by design, no-loss guard) and ~140 are `blank` tier-3 center-crops on
+> dark frames - all logged per-image in the manifests. Next when this line resumes: pull or
+> mount the crop library for training, and regenerate combined manifests after any new crop run.
+>
+> **2026-09-29:** the lead asked whether the MultiScale architecture raises Folded Lens
+> recall. Answered, and the answer is no. Five runs in one session on the pranayp VM, one
+> at a time: the four architectures of `notebooks/FMD_ResNet50Architectures.ipynb` plus
+> plain ResNet50 as the control, same recipe and split as `ml_resnet50_base` (59 minutes,
+> every run exit 0). Folded Lens recall is 0 in all five rows, and the four architectures
+> push all 36 Folded Lens test scores below zero where the control keeps 8 above zero;
+> Folded Lens AUPRC is 0.582 in the control against 0.439 to 0.515 in the four. Macro
+> AUPRC falls 0.028 to 0.054 on all four, macro F1 moves -0.001 to +0.019. The control
+> re-run also measured the run-to-run band for the first time on this line: same config,
+> same seed, new session moves macro F1 by 0.037 and exact match by 0.018, which is wider
+> than every architecture delta, so only the categorical Folded Lens result is claimed.
+> Timing with no warmup: 3.285 to 3.471 ms per image measured in process, 3.461 to 3.817
+> in a fresh process (startup and checkpoint load inside it), first batch 355 to 514 ms,
+> training 500.6 to 947.9 s. The port was proved before anything trained
+> (`verify_archs.py`, 38 checks, 0 failed, Keras counts reconciled row by row) and the
+> results recomputed after (`verify_archs_run_20260929.py`, 75 checks, 0 failed, PASS
+> locally). Record `reports/multilabel/ml_arch_sweep_20260929.md`, workbook for the lead
+> `reports/multilabel/FMD_MultiLabel_ArchSweep_20260929.xlsx`, mirror
+> `run/multilabel_lp_archs_20260929/`, five registry rows added (control re-run plus the
+> four architectures), weights stay on the VM at `~/yolo_ooi/multilabel_lp_archs_20260929/runs/`.
+> Next on the Folded Lens question: `ml_resnet50_posw`, or data-side, because architecture
+> cannot reach it (all 178 Folded Lens images in the export also carry Multiple Lenses).
+>
 > **2026-09-28:** the lead asked for one round of execution of the multilabel
 > LP architecture before her review. Done and verified: `ml_resnet50_base` on
 > the pranayp VM (ResNet50, BCE, SGD 1e-4 Nesterov no warmup, batch 8, 50
