@@ -1,0 +1,372 @@
+{
+  "generated_utc": "2026-09-29T09:31:14.238345+00:00",
+  "limit_per_class": null,
+  "roots": {
+    "categorical": {
+      "Bubble Scatter": {
+        "n": 6,
+        "ok": 6,
+        "expanded": 0,
+        "max_need_w": 1395,
+        "max_need_h": 1365,
+        "canonical": "1548x1516",
+        "verdict": "USABLE as-is"
+      },
+      "Cavity Off Center": {
+        "n": 183,
+        "ok": 167,
+        "expanded": 0,
+        "max_need_w": 1567,
+        "max_need_h": 1414,
+        "canonical": "1704x1564",
+        "verdict": "USABLE as-is"
+      },
+      "Dirty Camera": {
+        "n": 25,
+        "ok": 25,
+        "expanded": 0,
+        "max_need_w": 1730,
+        "max_need_h": 1564,
+        "canonical": "1876x1716",
+        "verdict": "USABLE as-is"
+      },
+      "Dirty Strobe": {
+        "n": 42,
+        "ok": 42,
+        "expanded": 0,
+        "max_need_w": 1419,
+        "max_need_h": 1669,
+        "canonical": "1572x1788",
+        "verdict": "USABLE as-is"
+      },
+      "HEMA Obstruction": {
+        "n": 175,
+        "ok": 175,
+        "expanded": 0,
+        "max_need_w": 1495,
+        "max_need_h": 1492,
+        "canonical": "1584x1532",
+        "verdict": "USABLE as-is"
+      },
+      "Lens Off Center": {
+        "n": 258,
+        "ok": 252,
+        "expanded": 6,
+        "max_need_w": 1671,
+        "max_need_h": 1497,
+        "canonical": "1580x1560",
+        "verdict": "usable, 6 no-loss-guard images (6/258)"
+      },
+      "Low Dose": {
+        "n": 1952,
+        "ok": 1935,
+        "expanded": 17,
+        "max_need_w": 1662,
+        "max_need_h": 1742,
+        "canonical": "1548x1528",
+        "verdict": "usable, 17 no-loss-guard images (17/1952)"
+      },
+      "Missing Lens": {
+        "n": 324,
+        "ok": 268,
+        "expanded": 56,
+        "max_need_w": 1688,
+        "max_need_h": 1791,
+        "canonical": "1544x1524",
+        "verdict": "PROBLEM: 56/324 would trigger no-loss guard"
+      },
+      "Missing Primary Package": {
+        "n": 1427,
+        "ok": 1404,
+        "expanded": 23,
+        "max_need_w": 1777,
+        "max_need_h": 1725,
+        "canonical": "1520x1516",
+        "verdict": "usable, 23 no-loss-guard images (23/1427)"
+      },
+      "Multiple Lenses": {
+        "n": 1439,
+        "ok": 1424,
+        "expanded": 15,
+        "max_need_w": 1724,
+        "max_need_h": 1689,
+        "canonical": "1592x1592",
+        "verdict": "usable, 15 no-loss-guard images (15/1439)"
+      },
+      "Package Misalignment": {
+        "n": 293,
+        "ok": 292,
+        "expanded": 1,
+        "max_need_w": 1993,
+        "max_need_h": 2098,
+        "canonical": "2020x2048",
+        "verdict": "usable, 1 no-loss-guard images (1/293)"
+      },
+      "View Obstructed": {
+        "n": 117,
+        "ok": 7,
+        "expanded": 7,
+        "max_need_w": 2017,
+        "max_need_h": 2138,
+        "canonical": "1496x1296",
+        "verdict": "PROBLEM: 7/117 would trigger no-loss guard"
+      },
+      "duplicates": {
+        "n": 143,
+        "ok": 0,
+        "expanded": 132,
+        "max_need_w": 1732,
+        "max_need_h": 1634,
+        "canonical": "-",
+        "verdict": "no canonical (new class) - skip"
+      }
+    },
+    "objects": {
+      "Clear": {
+        "n": 2333,
+        "ok": 0,
+        "expanded": 2333,
+        "max_need_w": 1677,
+        "max_need_h": 1640,
+        "canonical": "-",
+        "verdict": "no canonical (new class) - skip"
+      },
+      "Extraneous Polymer": {
+        "n": 267,
+        "ok": 265,
+        "expanded": 2,
+        "max_need_w": 1788,
+        "max_need_h": 1646,
+        "canonical": "1576x1524",
+        "verdict": "usable, 2 no-loss-guard images (2/267)"
+      },
+      "Fiber": {
+        "n": 328,
+        "ok": 325,
+        "expanded": 3,
+        "max_need_w": 1610,
+        "max_need_h": 1633,
+        "canonical": "1560x1528",
+        "verdict": "usable, 3 no-loss-guard images (3/328)"
+      },
+      "Foreign Matter": {
+        "n": 1282,
+        "ok": 1270,
+        "expanded": 12,
+        "max_need_w": 1698,
+        "max_need_h": 1665,
+        "canonical": "1556x1784",
+        "verdict": "usable, 12 no-loss-guard images (12/1282)"
+      },
+      "HEMA": {
+        "n": 20,
+        "ok": 20,
+        "expanded": 0,
+        "max_need_w": 1396,
+        "max_need_h": 1378,
+        "canonical": "1544x1520",
+        "verdict": "USABLE as-is"
+      }
+    },
+    "old_library": {
+      "Bubble": {
+        "n": 114,
+        "ok": 114,
+        "expanded": 0,
+        "max_need_w": 1427,
+        "max_need_h": 1385,
+        "canonical": "1560x1532",
+        "verdict": "USABLE as-is"
+      },
+      "Bubble Cluster": {
+        "n": 36,
+        "ok": 36,
+        "expanded": 0,
+        "max_need_w": 1443,
+        "max_need_h": 1431,
+        "canonical": "1596x1584",
+        "verdict": "USABLE as-is"
+      },
+      "Bubble Irregular": {
+        "n": 44,
+        "ok": 44,
+        "expanded": 0,
+        "max_need_w": 1403,
+        "max_need_h": 1372,
+        "canonical": "1556x1524",
+        "verdict": "USABLE as-is"
+      },
+      "Bubble On 123": {
+        "n": 14,
+        "ok": 14,
+        "expanded": 0,
+        "max_need_w": 1390,
+        "max_need_h": 1387,
+        "canonical": "1540x1540",
+        "verdict": "USABLE as-is"
+      },
+      "Bubble On Edge": {
+        "n": 14,
+        "ok": 14,
+        "expanded": 0,
+        "max_need_w": 1412,
+        "max_need_h": 1414,
+        "canonical": "1564x1564",
+        "verdict": "USABLE as-is"
+      },
+      "Bubble Scatter": {
+        "n": 7,
+        "ok": 7,
+        "expanded": 0,
+        "max_need_w": 1395,
+        "max_need_h": 1365,
+        "canonical": "1548x1516",
+        "verdict": "USABLE as-is"
+      },
+      "Cavity Off Center": {
+        "n": 98,
+        "ok": 93,
+        "expanded": 0,
+        "max_need_w": 1556,
+        "max_need_h": 1414,
+        "canonical": "1704x1564",
+        "verdict": "USABLE as-is"
+      },
+      "Dirty Camera": {
+        "n": 25,
+        "ok": 25,
+        "expanded": 0,
+        "max_need_w": 1730,
+        "max_need_h": 1564,
+        "canonical": "1876x1716",
+        "verdict": "USABLE as-is"
+      },
+      "Dirty Strobe": {
+        "n": 43,
+        "ok": 43,
+        "expanded": 0,
+        "max_need_w": 1419,
+        "max_need_h": 1669,
+        "canonical": "1572x1788",
+        "verdict": "USABLE as-is"
+      },
+      "Extraneous Polymer": {
+        "n": 17,
+        "ok": 17,
+        "expanded": 0,
+        "max_need_w": 1423,
+        "max_need_h": 1374,
+        "canonical": "1576x1524",
+        "verdict": "USABLE as-is"
+      },
+      "Fiber": {
+        "n": 61,
+        "ok": 61,
+        "expanded": 0,
+        "max_need_w": 1407,
+        "max_need_h": 1378,
+        "canonical": "1560x1528",
+        "verdict": "USABLE as-is"
+      },
+      "Foreign Matter": {
+        "n": 71,
+        "ok": 71,
+        "expanded": 0,
+        "max_need_w": 1405,
+        "max_need_h": 1665,
+        "canonical": "1556x1784",
+        "verdict": "USABLE as-is"
+      },
+      "HEMA Fragment": {
+        "n": 8,
+        "ok": 8,
+        "expanded": 0,
+        "max_need_w": 1393,
+        "max_need_h": 1370,
+        "canonical": "1544x1520",
+        "verdict": "USABLE as-is"
+      },
+      "HEMA Obstruction": {
+        "n": 105,
+        "ok": 105,
+        "expanded": 0,
+        "max_need_w": 1434,
+        "max_need_h": 1445,
+        "canonical": "1584x1532",
+        "verdict": "USABLE as-is"
+      },
+      "Lens Off Center": {
+        "n": 30,
+        "ok": 30,
+        "expanded": 0,
+        "max_need_w": 1430,
+        "max_need_h": 1408,
+        "canonical": "1580x1560",
+        "verdict": "USABLE as-is"
+      },
+      "Low Dose Obstructing Region of Interest": {
+        "n": 93,
+        "ok": 93,
+        "expanded": 0,
+        "max_need_w": 1398,
+        "max_need_h": 1375,
+        "canonical": "1548x1528",
+        "verdict": "USABLE as-is"
+      },
+      "Missing Lens": {
+        "n": 21,
+        "ok": 21,
+        "expanded": 0,
+        "max_need_w": 1393,
+        "max_need_h": 1373,
+        "canonical": "1544x1524",
+        "verdict": "USABLE as-is"
+      },
+      "Missing Primary Package": {
+        "n": 315,
+        "ok": 314,
+        "expanded": 1,
+        "max_need_w": 1747,
+        "max_need_h": 1548,
+        "canonical": "1520x1516",
+        "verdict": "usable, 1 no-loss-guard images (1/315)"
+      },
+      "Multiple Lenses": {
+        "n": 207,
+        "ok": 205,
+        "expanded": 2,
+        "max_need_w": 1638,
+        "max_need_h": 1498,
+        "canonical": "1592x1592",
+        "verdict": "usable, 2 no-loss-guard images (2/207)"
+      },
+      "Package Misalignment": {
+        "n": 37,
+        "ok": 37,
+        "expanded": 0,
+        "max_need_w": 1869,
+        "max_need_h": 2034,
+        "canonical": "2020x2048",
+        "verdict": "USABLE as-is"
+      },
+      "View Obstructed": {
+        "n": 22,
+        "ok": 6,
+        "expanded": 0,
+        "max_need_w": 1343,
+        "max_need_h": 1143,
+        "canonical": "1496x1296",
+        "verdict": "USABLE as-is"
+      },
+      "Wet Package": {
+        "n": 83,
+        "ok": 83,
+        "expanded": 0,
+        "max_need_w": 1400,
+        "max_need_h": 1390,
+        "canonical": "1552x1540",
+        "verdict": "USABLE as-is"
+      }
+    }
+  }
+}

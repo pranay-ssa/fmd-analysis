@@ -1,0 +1,1045 @@
+{
+  "generated_utc": "2026-09-29T09:26:41.127256+00:00",
+  "roots": {
+    "Updated ICube Categorical Classes 20260915": {
+      "Bubble Scatter": {
+        "canonical_class": "Bubble Scatter",
+        "canonical_size": [
+          1548,
+          1516
+        ],
+        "n": 6,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Cavity Off Center": {
+        "canonical_class": "Cavity Off Center",
+        "canonical_size": [
+          1704,
+          1564
+        ],
+        "n": 183,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Dirty Camera": {
+        "canonical_class": "Dirty Camera",
+        "canonical_size": [
+          1876,
+          1716
+        ],
+        "n": 25,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Dirty Strobe": {
+        "canonical_class": "Dirty Strobe",
+        "canonical_size": [
+          1572,
+          1788
+        ],
+        "n": 42,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "HEMA Obstruction": {
+        "canonical_class": "HEMA Obstruction",
+        "canonical_size": [
+          1584,
+          1532
+        ],
+        "n": 175,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Lens Off Center": {
+        "canonical_class": "Lens Off Center",
+        "canonical_size": [
+          1580,
+          1560
+        ],
+        "n": 258,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Low Dose": {
+        "canonical_class": "Low Dose Obstructing Region of Interest",
+        "canonical_size": [
+          1548,
+          1528
+        ],
+        "n": 1952,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Missing Lens": {
+        "canonical_class": "Missing Lens",
+        "canonical_size": [
+          1544,
+          1524
+        ],
+        "n": 324,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Missing Primary Package": {
+        "canonical_class": "Missing Primary Package",
+        "canonical_size": [
+          1520,
+          1516
+        ],
+        "n": 1427,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Multiple Lenses": {
+        "canonical_class": "Multiple Lenses",
+        "canonical_size": [
+          1592,
+          1592
+        ],
+        "n": 1439,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Package Misalignment": {
+        "canonical_class": "Package Misalignment",
+        "canonical_size": [
+          2020,
+          2048
+        ],
+        "n": 293,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "View Obstructed": {
+        "canonical_class": "View Obstructed",
+        "canonical_size": [
+          1496,
+          1296
+        ],
+        "n": 117,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "duplicates": {
+        "canonical_class": "duplicates",
+        "canonical_size": null,
+        "n": 143,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      }
+    },
+    "Updated ICube Objects 20260915": {
+      "Clear": {
+        "canonical_class": "Clear",
+        "canonical_size": null,
+        "n": 2333,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Extraneous Polymer": {
+        "canonical_class": "Extraneous Polymer",
+        "canonical_size": [
+          1576,
+          1524
+        ],
+        "n": 267,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Fiber": {
+        "canonical_class": "Fiber",
+        "canonical_size": [
+          1560,
+          1528
+        ],
+        "n": 328,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Foreign Matter": {
+        "canonical_class": "Foreign Matter",
+        "canonical_size": [
+          1556,
+          1784
+        ],
+        "n": 1282,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "HEMA": {
+        "canonical_class": "HEMA Fragment",
+        "canonical_size": [
+          1544,
+          1520
+        ],
+        "n": 20,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      }
+    },
+    "ICube Defects Library": {
+      "Bubble": {
+        "canonical_class": "Bubble",
+        "canonical_size": [
+          1560,
+          1532
+        ],
+        "n": 114,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Bubble Cluster": {
+        "canonical_class": "Bubble Cluster",
+        "canonical_size": [
+          1596,
+          1584
+        ],
+        "n": 36,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Bubble Irregular": {
+        "canonical_class": "Bubble Irregular",
+        "canonical_size": [
+          1556,
+          1524
+        ],
+        "n": 44,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Bubble On 123": {
+        "canonical_class": "Bubble On 123",
+        "canonical_size": [
+          1540,
+          1540
+        ],
+        "n": 14,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Bubble On Edge": {
+        "canonical_class": "Bubble On Edge",
+        "canonical_size": [
+          1564,
+          1564
+        ],
+        "n": 14,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Bubble Scatter": {
+        "canonical_class": "Bubble Scatter",
+        "canonical_size": [
+          1548,
+          1516
+        ],
+        "n": 7,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Cavity Off Center": {
+        "canonical_class": "Cavity Off Center",
+        "canonical_size": [
+          1704,
+          1564
+        ],
+        "n": 98,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Dirty Camera": {
+        "canonical_class": "Dirty Camera",
+        "canonical_size": [
+          1876,
+          1716
+        ],
+        "n": 25,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Dirty Strobe": {
+        "canonical_class": "Dirty Strobe",
+        "canonical_size": [
+          1572,
+          1788
+        ],
+        "n": 43,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Extraneous Polymer": {
+        "canonical_class": "Extraneous Polymer",
+        "canonical_size": [
+          1576,
+          1524
+        ],
+        "n": 17,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Fiber": {
+        "canonical_class": "Fiber",
+        "canonical_size": [
+          1560,
+          1528
+        ],
+        "n": 61,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Foreign Matter": {
+        "canonical_class": "Foreign Matter",
+        "canonical_size": [
+          1556,
+          1784
+        ],
+        "n": 71,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "HEMA Fragment": {
+        "canonical_class": "HEMA Fragment",
+        "canonical_size": [
+          1544,
+          1520
+        ],
+        "n": 8,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "HEMA Obstruction": {
+        "canonical_class": "HEMA Obstruction",
+        "canonical_size": [
+          1584,
+          1532
+        ],
+        "n": 105,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Lens Off Center": {
+        "canonical_class": "Lens Off Center",
+        "canonical_size": [
+          1580,
+          1560
+        ],
+        "n": 30,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Low Dose Obstructing Region of Interest": {
+        "canonical_class": "Low Dose Obstructing Region of Interest",
+        "canonical_size": [
+          1548,
+          1528
+        ],
+        "n": 93,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Missing Lens": {
+        "canonical_class": "Missing Lens",
+        "canonical_size": [
+          1544,
+          1524
+        ],
+        "n": 21,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Missing Primary Package": {
+        "canonical_class": "Missing Primary Package",
+        "canonical_size": [
+          1520,
+          1516
+        ],
+        "n": 315,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Multiple Lenses": {
+        "canonical_class": "Multiple Lenses",
+        "canonical_size": [
+          1592,
+          1592
+        ],
+        "n": 207,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Package Misalignment": {
+        "canonical_class": "Package Misalignment",
+        "canonical_size": [
+          2020,
+          2048
+        ],
+        "n": 37,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "View Obstructed": {
+        "canonical_class": "View Obstructed",
+        "canonical_size": [
+          1496,
+          1296
+        ],
+        "n": 22,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      },
+      "Wet Package": {
+        "canonical_class": "Wet Package",
+        "canonical_size": [
+          1552,
+          1540
+        ],
+        "n": 83,
+        "unique_dims": [
+          {
+            "w": 2448,
+            "h": 2048
+          }
+        ],
+        "width": {
+          "min": 2448,
+          "p50": 2448,
+          "p99": 2448,
+          "max": 2448
+        },
+        "height": {
+          "min": 2048,
+          "p50": 2048,
+          "p99": 2048,
+          "max": 2048
+        }
+      }
+    }
+  }
+}

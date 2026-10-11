@@ -1,0 +1,54 @@
+11936 images queued, workers=16
+  1000/11936 (13s)
+  2000/11936 (23s)
+  3000/11936 (73s)
+  4000/11936 (92s)
+  5000/11936 (104s)
+  6000/11936 (119s)
+  7000/11936 (201s)
+  8000/11936 (214s)
+  9000/11936 (224s)
+  10000/11936 (239s)
+  11000/11936 (328s)
+done in 337s - parity check + manifests:
+  Bubble Cluster                             in=36    out=36    OK {'ok': 36}
+  Bubble Irregular                           in=44    out=44    OK {'ok': 44}
+  Bubble On 123                              in=14    out=14    OK {'ok': 14}
+  Bubble On Edge                             in=14    out=14    OK {'ok': 14}
+  Bubble Scatter                             in=7     out=7     OK {'ok': 7}
+  Bubble                                     in=114   out=114   OK {'ok': 114}
+  Cavity Off Center                          in=98    out=98    OK {'ok': 93, 'blank': 5}
+  Dirty Camera                               in=25    out=25    OK {'ok': 25}
+  Dirty Strobe                               in=43    out=43    OK {'ok': 43}
+  Extraneous Polymer                         in=17    out=17    OK {'ok': 17}
+  Fiber                                      in=61    out=61    OK {'ok': 61}
+  Foreign Matter                             in=71    out=71    OK {'ok': 71}
+  HEMA Fragment                              in=8     out=8     OK {'ok': 8}
+  HEMA Obstruction                           in=105   out=105   OK {'ok': 105}
+  Lens Off Center                            in=30    out=30    OK {'ok': 30}
+  Low Dose Obstructing Region of Interest    in=93    out=93    OK {'ok': 93}
+  Missing Lens                               in=21    out=21    OK {'ok': 21}
+  Missing Primary Package                    in=315   out=315   OK {'ok': 314, 'expanded': 1}
+  Multiple Lenses                            in=207   out=207   OK {'ok': 207}
+  Package Misalignment                       in=37    out=37    OK {'ok': 37}
+  View Obstructed                            in=22    out=22    OK {'ok': 6, 'blank': 16}
+  Wet Package                                in=83    out=83    OK {'ok': 83}
+  Bubble Scatter                             in=6     out=6     OK {'ok': 6}
+  Cavity Off Center                          in=183   out=183   OK {'ok': 167, 'blank': 16}
+  Dirty Camera                               in=25    out=25    OK {'ok': 25}
+  Dirty Strobe                               in=42    out=42    OK {'ok': 42}
+  HEMA Obstruction                           in=175   out=175   OK {'ok': 175}
+  Lens Off Center                            in=258   out=258   OK {'ok': 257, 'expanded': 1}
+  Low Dose                                   in=1952  out=1952  OK {'ok': 1942, 'expanded': 10}
+  Missing Lens                               in=324   out=324   OK {'ok': 269, 'expanded': 55}
+  Missing Primary Package                    in=1427  out=1427  OK {'ok': 1416, 'expanded': 11}
+  Multiple Lenses                            in=1439  out=1439  OK {'ok': 1436, 'expanded': 3}
+  Package Misalignment                       in=293   out=293   OK {'ok': 293}
+  View Obstructed                            in=117   out=117   OK {'ok': 8, 'blank': 103, 'expanded': 6}
+  Clear                                      in=2333  out=2333  OK {'ok': 2333}
+  Extraneous Polymer                         in=267   out=267   OK {'ok': 265, 'expanded': 2}
+  Fiber                                      in=328   out=328   OK {'ok': 327, 'expanded': 1}
+  Foreign Matter                             in=1282  out=1282  OK {'ok': 1276, 'expanded': 6}
+  HEMA                                       in=20    out=20    OK {'ok': 20}
+ALL CLASS COUNTS PARITY OK
+EXIT=0
