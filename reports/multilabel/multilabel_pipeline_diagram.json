@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "How the Defect Tag Checker Works",
+    "viewBox": [
+      1080,
+      400
+    ],
+    "quality_profile": "showcase",
+    "animation": "trace"
+  },
+  "stages": [
+    {
+      "label": "Picture"
+    },
+    {
+      "label": "Model"
+    },
+    {
+      "label": "Scores"
+    },
+    {
+      "label": "Answer"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "photo",
+      "type": "external",
+      "label": "Image",
+      "sublabel": "one photo",
+      "stage": 0,
+      "row": 0
+    },
+    {
+      "id": "model",
+      "type": "backend",
+      "label": "ResNet 50 model",
+      "sublabel": "looks at the photo",
+      "stage": 1,
+      "row": 0
+    },
+    {
+      "id": "scores",
+      "type": "backend",
+      "label": "5 tag scores",
+      "sublabel": "one score per tag",
+      "stage": 2,
+      "row": 0
+    },
+    {
+      "id": "answer",
+      "type": "backend",
+      "label": "Answer: yes or no",
+      "sublabel": "Multiple Lenses: yes, Folded Lens: yes",
+      "stage": 3,
+      "row": 0,
+      "width": 230
+    }
+  ],
+  "flows": [
+    {
+      "id": "photo-in",
+      "from": "photo",
+      "to": "model",
+      "label": "one photo at a time",
+      "variant": "emphasis"
+    },
+    {
+      "id": "to-scores",
+      "from": "model",
+      "to": "scores",
+      "label": "a score for each tag",
+      "labelAt": [
+        423,
+        200
+      ]
+    },
+    {
+      "id": "to-answer",
+      "from": "scores",
+      "to": "answer",
+      "label": "yes or no per tag",
+      "labelAt": [
+        608,
+        200
+      ]
+    }
+  ]
+}
