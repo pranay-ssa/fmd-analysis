@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YOLO Multi-Task Architecture for FMD - Research</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #08090a; --panel: #0f1011; --surface: #191a1b; --surface2: #28282c;
+  --text: #f7f8f8; --text2: #d0d6e0; --muted: #8a8f98; --faint: #62666d;
+  --accent: #7170ff; --accent-dim: #5e6ad2; --accent-hover: #828fff;
+  --green: #10b981; --yellow: #f59e0b; --red: #ef4444; --cyan: #22d3ee; --magenta: #ec4899;
+  --border: rgba(255,255,255,0.05); --border-std: rgba(255,255,255,0.08); --border-hi: rgba(255,255,255,0.14);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-feature-settings:"cv01","ss03";
+  background:var(--bg); color:var(--text);
+  line-height:1.6; font-size:15px;
+}
+code,pre,.mono { font-family:'JetBrains Mono',ui-monospace,Menlo,monospace; }
+
+/* ===== progress bar ===== */
+#progress { position:fixed; top:0; left:0; height:2px; width:0%;
+  background:linear-gradient(90deg,var(--accent-dim),var(--accent-hover)); z-index:100; }
+
+/* ===== top bar ===== */
+.topbar {
+  position:fixed; top:0; left:0; right:0; height:48px; z-index:90;
+  background:rgba(8,9,10,0.82); backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  display:flex; align-items:center; justify-content:space-between; padding:0 20px;
+}
+.topbar-title { font-size:13px; font-weight:510; color:var(--text2); }
+.topbar-title .dot { color:var(--accent); margin-right:8px; }
+.topbar-right { display:flex; gap:12px; align-items:center; font-size:12px; color:var(--faint); }
+.topbar .badge { font-size:10px; padding:1px 8px; }
+
+/* ===== layout ===== */
+.layout { display:flex; padding-top:48px; min-height:100vh; }
+.sidebar {
+  /* fluid: 260px floor, ~18% of viewport, 320px ceiling - same visual width at any zoom */
+  width:clamp(260px, 18vw, 320px); min-width:0;
+  background:var(--panel);
+  border-right:1px solid var(--border); padding:24px 14px;
+  position:sticky; top:48px; height:calc(100vh - 48px); overflow-y:auto;
+}
+.main { flex:1; padding:40px clamp(28px, 5vw, 96px) 80px; /* fluid gutter, no max-width cap:
+  content fills the space right of the sidebar at any window size */
+}
+
+/* sidebar */
+.sidebar-logo { font-size:clamp(11px, 0.85vw, 13px); font-weight:510; color:var(--accent);
+  text-transform:uppercase; letter-spacing:1.2px; margin:0 8px 20px; }
+.nav-section { margin-bottom:18px; }
+.nav-section-title { font-size:clamp(10px, 0.75vw, 11.5px); font-weight:510; color:var(--faint);
+  text-transform:uppercase; letter-spacing:0.8px; padding:0 8px; margin-bottom:4px; }
+.nav-item { display:flex; align-items:baseline; gap:8px; padding:clamp(5px, 0.5vw, 7px) 8px;
+  font-size:clamp(12px, 0.9vw, 14px); font-weight:510; color:var(--muted); text-decoration:none;
+  border-radius:4px; border-left:2px solid transparent; transition:all .15s; }
+.nav-item:hover { color:var(--text); background:rgba(255,255,255,0.04); }
+.nav-item.active { color:var(--accent); background:rgba(113,112,255,0.08);
+  border-left-color:var(--accent); }
+.nav-item .n { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--faint); }
+.nav-item.active .n { color:var(--accent); }
+.nav-item .flag { margin-left:auto; font-size:9px; padding:0 5px; border-radius:3px; }
+.flag-warn { background:rgba(245,158,11,0.15); color:var(--yellow); }
+
+/* ===== typography - fluid scale via clamp(): text reacts to window/zoom ===== */
+h1 { font-size:clamp(30px, 3.4vw, 52px); font-weight:510; line-height:1.08; letter-spacing:-1.1px; }
+h2 { font-size:clamp(21px, 2.2vw, 32px); font-weight:510; line-height:1.2; letter-spacing:-0.7px;
+  margin:56px 0 18px; padding-top:28px; border-top:1px solid var(--border); }
+h2 .sn { font-family:'JetBrains Mono',monospace; font-size:clamp(13px, 1.2vw, 17px); color:var(--accent);
+  margin-right:10px; font-weight:400; }
+h3 { font-size:clamp(16px, 1.6vw, 22px); font-weight:590; letter-spacing:-0.24px; margin:32px 0 12px; }
+h4 { font-weight:590; margin:24px 0 8px; color:var(--text2);
+  text-transform:uppercase; letter-spacing:0.6px; font-size:clamp(11.5px, 1vw, 13px); }
+p { margin-bottom:14px; color:var(--text2); font-size:clamp(13.5px, 1.05vw, 16px); }
+a { color:var(--accent); text-decoration:none; }
+a:hover { color:var(--accent-hover); text-decoration:underline; }
+strong { color:var(--text); font-weight:590; }
+ul,ol { margin:0 0 14px 22px; color:var(--text2); font-size:clamp(13.5px, 1.05vw, 16px); }
+li { margin-bottom:6px; }
+
+/* ===== hero ===== */
+.hero { padding:24px 0 8px; }
+.hero-kicker { font-family:'JetBrains Mono',monospace; font-size:clamp(10px, 0.85vw, 12px);
+  text-transform:uppercase; letter-spacing:1.5px; color:var(--accent); margin-bottom:14px; }
+.hero-sub { font-size:clamp(14.5px, 1.3vw, 18px); color:var(--muted); margin-top:14px;
+  max-width:70ch; line-height:1.65; }
+.hero-chips { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+  gap:10px; margin-top:24px; }
+.chip { border:1px solid var(--border-std); background:rgba(255,255,255,0.03);
+  border-radius:6px; padding:10px 14px; }
+.chip .cv { font-family:'JetBrains Mono',monospace; font-size:clamp(15px, 1.4vw, 19px);
+  font-weight:500; color:var(--text); }
+.chip .cv.g { color:var(--green); } .chip .cv.y { color:var(--yellow); }
+.chip .cl { font-size:clamp(10px, 0.8vw, 11.5px); color:var(--faint); text-transform:uppercase;
+  letter-spacing:0.6px; margin-top:2px; }
+
+/* ===== cards & callouts ===== */
+.card { background:rgba(255,255,255,0.02); border:1px solid var(--border-std);
+  border-radius:10px; padding:20px 24px; margin:16px 0; }
+.card-accent { border-color:rgba(113,112,255,0.35);
+  background:rgba(113,112,255,0.04); }
+.card-header { font-size:11px; font-weight:510; text-transform:uppercase;
+  letter-spacing:0.8px; color:var(--muted); margin-bottom:12px; }
+.callout { padding:16px 20px; border-radius:8px; margin:16px 0;
+  font-size:clamp(13px, 1vw, 15.5px);
+  border:1px solid var(--border-std); border-left-width:3px; }
+.callout-info { background:rgba(113,112,255,0.05); border-left-color:var(--accent); }
+.callout-warn { background:rgba(245,158,11,0.05); border-left-color:var(--yellow); }
+.callout-success { background:rgba(16,185,129,0.05); border-left-color:var(--green); }
+.callout-danger { background:rgba(239,68,68,0.05); border-left-color:var(--red); }
+.callout-title { font-weight:590; color:var(--text); margin-bottom:4px; font-size:12px;
+  text-transform:uppercase; letter-spacing:0.6px; }
+
+/* ===== code blocks with window chrome ===== */
+.codeblock { border:1px solid var(--border-std); border-radius:8px; margin:16px 0;
+  overflow:hidden; background:var(--panel); }
+.codeblock-head { display:flex; align-items:center; justify-content:space-between;
+  padding:7px 14px; background:rgba(255,255,255,0.03); border-bottom:1px solid var(--border); }
+.codeblock-head .fn { font-family:'JetBrains Mono',monospace; font-size:11.5px;
+  color:var(--muted); }
+.codeblock-head .fn::before { content:'◆'; color:var(--accent); font-size:8px; margin-right:8px; }
+.copy-btn { font-family:'Inter',sans-serif; font-size:10.5px; font-weight:510;
+  color:var(--muted); background:rgba(255,255,255,0.04); border:1px solid var(--border-std);
+  border-radius:4px; padding:2px 10px; cursor:pointer; transition:all .15s; }
+.copy-btn:hover { color:var(--text); border-color:var(--border-hi); }
+.copy-btn.done { color:var(--green); border-color:rgba(16,185,129,0.4); }
+pre { padding:16px 20px; overflow-x:auto; font-size:clamp(11.5px, 0.9vw, 14px);
+  line-height:1.65; color:var(--text2); }
+code { background:rgba(255,255,255,0.06); padding:2px 6px; border-radius:3px;
+  font-size:clamp(11.5px, 0.9vw, 14px); color:var(--text); }
+pre code, .codeblock code { background:none; padding:0; color:inherit; }
+.kw{color:var(--accent);} .str{color:var(--green);} .num{color:var(--yellow);}
+.com{color:var(--faint);font-style:italic;} .fn{color:var(--cyan);} .cls{color:var(--magenta);}
+
+/* ===== tables ===== */
+.tblwrap { border:1px solid var(--border-std); border-radius:8px; overflow:hidden; margin:16px 0; }
+table { width:100%; border-collapse:collapse; font-size:clamp(12px, 0.95vw, 14.5px); }
+th { text-align:left; padding:9px 14px; font-weight:510; font-size:11px;
+  text-transform:uppercase; letter-spacing:0.6px; color:var(--muted);
+  background:rgba(255,255,255,0.03); border-bottom:1px solid var(--border-std); }
+td { padding:9px 14px; border-bottom:1px solid var(--border); color:var(--text2);
+  vertical-align:top; }
+tr:last-child td { border-bottom:none; }
+tr:hover td { background:rgba(255,255,255,0.015); }
+td strong { color:var(--text); }
+
+/* ===== hairline diagrams ===== */
+.diagram { background:var(--panel); border:1px solid var(--border-std); border-radius:10px;
+  padding:28px 20px 24px; margin:16px 0; overflow-x:auto; }
+.diagram-title { font-family:'JetBrains Mono',monospace; font-size:10.5px;
+  text-transform:uppercase; letter-spacing:1px; color:var(--faint);
+  text-align:center; margin-bottom:20px; }
+.flow { display:flex; flex-direction:column; align-items:center; min-width:420px; }
+.fbox { border:1px solid var(--border-hi); background:rgba(255,255,255,0.03);
+  border-radius:6px; padding:8px 18px; text-align:center; min-width:200px; }
+.fbox .t { font-size:12.5px; font-weight:590; color:var(--text); }
+.fbox .s { font-size:11px; color:var(--muted); margin-top:1px; }
+.fbox.accent { border-color:rgba(113,112,255,0.5); background:rgba(113,112,255,0.07); }
+.fbox.accent .t { color:var(--accent-hover); }
+.fbox.green { border-color:rgba(16,185,129,0.45); background:rgba(16,185,129,0.06); }
+.fbox.green .t { color:var(--green); }
+.fbox.warn { border-color:rgba(245,158,11,0.45); background:rgba(245,158,11,0.05); }
+.fbox.warn .t { color:var(--yellow); }
+.fbox.small { min-width:0; padding:6px 12px; }
+.farrow { color:var(--faint); font-size:11px; line-height:1; padding:6px 0; }
+.farrow::after { content:'\2193'; }
+.fstub { width:1px; height:14px; background:var(--border-hi); }
+.fsplit { display:flex; gap:28px; justify-content:center; width:100%; }
+.fbranch { display:flex; flex-direction:column; align-items:center; flex:1; max-width:300px; }
+.fbranch-label { font-size:10px; text-transform:uppercase; letter-spacing:0.8px;
+  color:var(--faint); margin-bottom:8px; font-family:'JetBrains Mono',monospace; }
+.fjoin { width:56%; height:1px; background:var(--border-hi); margin:0 auto;
+  position:relative; }
+.fjoin::before, .fjoin::after { content:''; position:absolute; top:0; width:1px; height:8px;
+  background:var(--border-hi); }
+.fjoin::before { left:0; } .fjoin::after { right:0; }
+
+/* branch grid (MultiTaskHead) */
+.branchgrid { display:grid; grid-template-columns:1fr 1fr; gap:8px; min-width:480px; }
+.brow { display:flex; align-items:center; gap:10px; border:1px solid var(--border);
+  border-radius:6px; padding:7px 12px; background:rgba(255,255,255,0.02); }
+.brow .bn { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--faint);
+  width:18px; }
+.brow .bt { font-size:12px; font-weight:590; color:var(--text2); }
+.brow .bs { font-size:10.5px; color:var(--faint); margin-left:auto;
+  font-family:'JetBrains Mono',monospace; }
+.brow.ok { border-left:3px solid var(--green); }
+.brow.prev { border-left:3px solid var(--yellow); }
+.brow.no { border-left:3px solid var(--red); opacity:0.75; }
+
+/* badges */
+.badge { display:inline-block; padding:2px 9px; border-radius:999px; font-size:10.5px;
+  font-weight:510; letter-spacing:0.3px; white-space:nowrap; }
+.badge-high { background:rgba(16,185,129,0.13); color:var(--green);
+  border:1px solid rgba(16,185,129,0.35); }
+.badge-med { background:rgba(245,158,11,0.13); color:var(--yellow);
+  border:1px solid rgba(245,158,11,0.35); }
+.badge-low { background:rgba(239,68,68,0.13); color:var(--red);
+  border:1px solid rgba(239,68,68,0.35); }
+
+/* verdict cards */
+.verdict3 { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:14px; margin:16px 0; }
+.vcard { border:1px solid var(--border-std); border-radius:10px; padding:18px;
+  background:rgba(255,255,255,0.02); }
+.vcard.win { border-color:rgba(16,185,129,0.4); background:rgba(16,185,129,0.04); }
+.vcard .vh { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.vcard .vt { font-size:clamp(13px, 1vw, 15px); font-weight:590; }
+.vcard ul { margin:8px 0 0 16px; font-size:clamp(12px, 0.9vw, 14px); color:var(--muted); }
+.vcard li { margin-bottom:3px; }
+
+/* details */
+details { border:1px solid var(--border-std); border-radius:8px; margin:12px 0;
+  background:rgba(255,255,255,0.02); }
+summary { padding:12px 18px; cursor:pointer; font-size:13px; font-weight:510;
+  color:var(--text2); user-select:none; list-style:none; display:flex;
+  justify-content:space-between; align-items:center; }
+summary::after { content:'+'; font-family:'JetBrains Mono',monospace; color:var(--faint); }
+details[open] summary::after { content:'-'; }
+summary:hover { color:var(--text); }
+details .dbody { padding:0 18px 16px; }
+
+/* back to top */
+#totop { position:fixed; right:24px; bottom:24px; width:38px; height:38px;
+  border-radius:50%; border:1px solid var(--border-std);
+  background:rgba(15,16,17,0.9); color:var(--muted); font-size:15px;
+  cursor:pointer; opacity:0; pointer-events:none; transition:all .2s; z-index:95; }
+#totop.show { opacity:1; pointer-events:auto; }
+#totop:hover { color:var(--text); border-color:var(--border-hi); }
+
+.grid2 { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:14px; }
+@media (min-width:1400px) {
+  /* very wide windows: cap line length for readability, keep content centered in the
+     space right of the sidebar instead of hugging the left edge */
+  .main > * { max-width:1100px; }
+}
+@media (max-width:1000px) {
+  .layout { flex-direction:column; }
+  .sidebar { width:100%; min-width:0; height:auto; position:static;
+    border-right:none; border-bottom:1px solid var(--border); }
+  .main { padding:24px 20px 60px; }
+}
+
+@media print {
+  .sidebar, .topbar, #totop, #progress, .copy-btn { display:none !important; }
+  body { background:#fff; color:#111; }
+  .layout { padding:0; display:block; }
+  .main { max-width:none; padding:0; }
+  h1,h2,h3,h4,strong { color:#000; } p,td,li { color:#222; }
+  .codeblock, .diagram, .card, .callout { border-color:#ccc; background:#fafafa; }
+  pre { color:#111; } .com { color:#777; }
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<header class="topbar">
+  <div class="topbar-title"><span class="dot">&#9670;</span>YOLO Multi-Task Architecture for FMD</div>
+  <div class="topbar-right">
+    <span>research / architecture survey</span>
+    <span class="badge badge-med">internal</span>
+  </div>
+</header>
+
+<div class="layout">
+<nav class="sidebar" id="sidenav">
+  <div class="sidebar-logo">Contents</div>
+  <div class="nav-section">
+    <div class="nav-section-title">Overview</div>
+    <a class="nav-item" href="#summary"><span class="n">01</span>Executive summary</a>
+    <a class="nav-item" href="#background"><span class="n">02</span>FMD two-tier labels</a>
+    <a class="nav-item" href="#d1d4"><span class="n">03</span>D1-D4 metrics<span class="flag flag-warn">open</span></a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-title">Survey</div>
+    <a class="nav-item" href="#yolor"><span class="n">04</span>YOLOR (2021)</a>
+    <a class="nav-item" href="#yolor-mtl"><span class="n">05</span>YOLOR-MTL (2023)</a>
+    <a class="nav-item" href="#yolo-p"><span class="n">06</span>YOLO-P - ruled out</a>
+    <a class="nav-item" href="#generalist"><span class="n">07</span>Generalist YOLO</a>
+    <a class="nav-item" href="#yolo26"><span class="n">08</span>YOLO26 native</a>
+    <a class="nav-item" href="#comparison"><span class="n">09</span>Comparison matrix</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-title">YOLO-Master deep dive</div>
+    <a class="nav-item" href="#mt-overview"><span class="n">10</span>Architecture overview</a>
+    <a class="nav-item" href="#mt-head"><span class="n">11</span>MultiTaskHead</a>
+    <a class="nav-item" href="#mt-router"><span class="n">12</span>TaskRouter</a>
+    <a class="nav-item" href="#mt-trainer"><span class="n">13</span>Training contract</a>
+    <a class="nav-item" href="#mt-limitations"><span class="n">14</span>FMD blockers</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-title">Recommendation</div>
+    <a class="nav-item" href="#custom-arch"><span class="n">15</span>Custom dual-head</a>
+    <a class="nav-item" href="#leakage"><span class="n">16</span>Leakage analysis</a>
+    <a class="nav-item" href="#roadmap"><span class="n">17</span>Roadmap</a>
+    <a class="nav-item" href="#risks"><span class="n">18</span>Risks</a>
+    <a class="nav-item" href="#references"><span class="n">19</span>References</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="hero">
+  <div class="hero-kicker">Research Report - 2026-10-09</div>
+  <h1>YOLO Multi-Task<br>Architecture for FMD</h1>
+  <p class="hero-sub">Can one YOLO-based model detect object-level defects (OOI) and classify
+  frame-level lens-presentation tags (LP) at the same time - replacing the separate models on
+  the production line? Every claim below is verified against published papers or, for
+  YOLO-Master, its actual source code.</p>
+  <div class="hero-chips">
+    <div class="chip"><div class="cv">7</div><div class="cl">architectures surveyed</div></div>
+    <div class="chip"><div class="cv g">1</div><div class="cl">verified at source level</div></div>
+    <div class="chip"><div class="cv y">5</div><div class="cl">FMD blockers found</div></div>
+    <div class="chip"><div class="cv y">D1-D4?</div><div class="cl">undefined - ask lead</div></div>
+    <div class="chip"><div class="cv g">custom dual-head</div><div class="cl">recommended path</div></div>
+  </div>
+</div>
+
+<h2 id="summary"><span class="sn">01</span>Executive summary</h2>
+
+<div class="callout callout-success">
+  <div class="callout-title">Bottom line</div>
+  The lead's multi-head idea is technically sound and precedented. YOLOR (2021) proved a
+  single shared representation can serve detection and <strong>multi-label</strong>
+  classification simultaneously, with joint training beating single-task baselines.
+  YOLO-Master (CVPR 2026) implements the modern version of this - but its classification
+  branch is single-label softmax, COCO-format only, and OBB is unsupported, so it cannot
+  be adopted directly. The recommended path is a custom dual-head model on the stable
+  Ultralytics 8.4.142 codebase FMD already runs in production, borrowing YOLO-Master's
+  design principles.
+</div>
+
+<div class="verdict3">
+  <div class="vcard">
+    <div class="vh"><span class="vt">YOLOR / YOLOR-MTL</span><span class="badge badge-high">concept: high</span></div>
+    <ul>
+      <li>Proved detect + multi-label cls in one model</li>
+      <li>Joint training improved all tasks</li>
+      <li>2021-era code, unmaintained / paper-only</li>
+    </ul>
+  </div>
+  <div class="vcard">
+    <div class="vh"><span class="vt">YOLO-Master MT</span><span class="badge badge-med">direct use: medium</span></div>
+    <ul>
+      <li>Modern unified multi-task head + router</li>
+      <li>Preview status; classify is softmax-only</li>
+      <li>COCO format enforced; OBB raises ValueError</li>
+    </ul>
+  </div>
+  <div class="vcard win">
+    <div class="vh"><span class="vt">Custom dual-head</span><span class="badge badge-high">recommended</span></div>
+    <ul>
+      <li>Multi-label sigmoid head for LP tags</li>
+      <li>OBB detection kept; YOLO txt labels kept</li>
+      <li>Built on stable 8.4.142, no preview risk</li>
+    </ul>
+  </div>
+</div>
+
+<h2 id="background"><span class="sn">02</span>The FMD two-tier label problem</h2>
+
+<p>FMD inspection produces two fundamentally different label types that today require two
+separate production models:</p>
+
+<div class="tblwrap"><table>
+  <tr><th>Property</th><th>OOI - object of interest</th><th>LP - lens presentation</th></tr>
+  <tr><td><strong>Label type</strong></td><td>Oriented bounding boxes (OBB)</td><td>Image-level tags, multi-label</td></tr>
+  <tr><td><strong>Classes</strong></td><td>10 defect classes</td><td>5 tags, 0-4 active per image</td></tr>
+  <tr><td><strong>Dataset</strong></td><td>346 train / 88 val images</td><td>3,377+ tagged images</td></tr>
+  <tr><td><strong>Format</strong></td><td>YOLO txt</td><td>Folder-per-class / tag list</td></tr>
+  <tr><td><strong>Production model</strong></td><td>YOLO26n OBB</td><td>ResNet50 (single-label)</td></tr>
+  <tr><td><strong>Role</strong></td><td>Find and box each defect</td><td>Name the frame condition</td></tr>
+</table></div>
+
+<div class="callout callout-warn">
+  <div class="callout-title">The leakage problem</div>
+  Current separate models sometimes classify LP-tag conditions as OOI defects and vice
+  versa. A shared backbone learns one feature space for both tasks, so the classification
+  head (whole-image view) and the detection head (local view) complement rather than
+  compete - but the architecture cannot fix ambiguous label names or annotation noise.
+  See section 16.
+</div>
+
+<h2 id="d1d4"><span class="sn">03</span>D1-D4 metrics - undefined</h2>
+
+<div class="callout callout-danger">
+  <div class="callout-title">Blocking issue</div>
+  D1, D2, D3, D4 appear nowhere in the FMD repository or the knowledge base. All
+  <code>.md</code> files in the analysis repo and every FMD-KB wiki page were searched -
+  zero matches for D1-D4 as defect metrics. The lead's instruction ("classification head
+  focuses on D3/D4, detection head on D1/D2") cannot be mapped to heads until she defines
+  them. This is the only open question blocking architecture finalization.
+</div>
+
+<p>Interpretations and their consequence for head assignment:</p>
+
+<div class="tblwrap"><table>
+  <tr><th>If D1-D4 are...</th><th>Classification head covers</th><th>Detection head covers</th></tr>
+  <tr><td><strong>Severity grades</strong> (D1 minor ... D4 critical)</td>
+      <td>Frame-level severity class (D3/D4 = reject conditions)</td>
+      <td>Localize + grade each defect instance</td></tr>
+  <tr><td><strong>Lens zones</strong> (D1 center ... D4 edge)</td>
+      <td>Which zone condition the frame shows</td>
+      <td>Where in the zone the defect sits</td></tr>
+  <tr><td><strong>Metric families</strong> (e.g. D1/D2 dimensional, D3/D4 cosmetic)</td>
+      <td>Cosmetic / appearance verdicts</td>
+      <td>Dimensional defect localization</td></tr>
+  <tr><td><strong>Pipeline stages</strong> (D1/D2 upstream sensors, D3/D4 final inspection)</td>
+      <td>Final-inspection conditions</td>
+      <td>Upstream-stage defects</td></tr>
+</table></div>
+
+<p><strong>Action:</strong> ask the lead for the D1-D4 definitions before any head is frozen.
+Each interpretation changes what the classification head predicts and which labels feed it.</p>
+
+<h2 id="yolor"><span class="sn">04</span>YOLOR - You Only Learn One Representation (2021)</h2>
+
+<p><strong>Paper:</strong> Wang et al., <a href="https://arxiv.org/abs/2105.13255">arXiv:2105.13255</a>,
+from the YOLOv4 team. The foundational result this whole direction rests on.</p>
+
+<p><strong>Core idea:</strong> one unified representation combining <strong>explicit
+knowledge</strong> (learned directly from data) with <strong>implicit knowledge</strong>
+(learned latent vectors that modulate features and predictions per task).</p>
+
+<div class="diagram">
+  <div class="diagram-title">YOLOR - shared representation with implicit knowledge per head</div>
+  <div class="flow">
+    <div class="fbox small"><div class="t">Input image</div></div>
+    <div class="farrow"></div>
+    <div class="fbox accent"><div class="t">Shared backbone</div><div class="s">CSPDarknet</div></div>
+    <div class="farrow"></div>
+    <div class="fbox accent"><div class="t">FPN + PAN neck</div><div class="s">shared feature pyramid</div></div>
+    <div class="fstub"></div>
+    <div class="fjoin"></div>
+    <div class="fsplit">
+      <div class="fbranch">
+        <div class="fbranch-label">detect</div>
+        <div class="fbox"><div class="t">Detection head</div><div class="s">boxes + classes</div></div>
+        <div class="farrow"></div>
+        <div class="fbox small"><div class="t">+ implicit knowledge</div><div class="s">kernel alignment</div></div>
+      </div>
+      <div class="fbranch">
+        <div class="fbranch-label">embed</div>
+        <div class="fbox"><div class="t">Embedding head</div><div class="s">feature vectors</div></div>
+        <div class="farrow"></div>
+        <div class="fbox small"><div class="t">+ implicit knowledge</div><div class="s">prediction refinement</div></div>
+      </div>
+      <div class="fbranch">
+        <div class="fbranch-label">classify</div>
+        <div class="fbox green"><div class="t">Multi-label head</div><div class="s">sigmoid - independent labels</div></div>
+        <div class="farrow"></div>
+        <div class="fbox small"><div class="t">+ implicit knowledge</div><div class="s">task-adaptive signals</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4>Three mechanisms, and what each would do for FMD</h4>
+<div class="tblwrap"><table>
+  <tr><th>Mechanism</th><th>What it does</th><th>FMD relevance</th></tr>
+  <tr><td><strong>Kernel space alignment</strong></td>
+      <td>Implicit vectors added to / multiplied with feature maps align feature
+      distributions across tasks</td>
+      <td>Aligns OOI and LP feature spaces so one backbone serves both</td></tr>
+  <tr><td><strong>Prediction refinement</strong></td>
+      <td>Implicit vectors adjust outputs - box coordinates, anchor offsets, scores</td>
+      <td>Frame-level LP context could refine per-defect confidence</td></tr>
+  <tr><td><strong>Multi-task training</strong></td>
+      <td>Implicit knowledge in each branch enriches the shared space</td>
+      <td>The mechanism behind "joint training beat every single-task baseline"</td></tr>
+</table></div>
+
+<div class="grid2">
+  <div class="callout callout-success" style="margin:0">
+    <div class="callout-title">Why it matters here</div>
+    Detection plus <strong>multi-label</strong> classification in one network is exactly the
+    FMD pattern - and on COCO test-dev it held 55.4% AP at 30 FPS (V100) while improving
+    every task through joint training.
+  </div>
+  <div class="callout callout-warn" style="margin:0">
+    <div class="callout-title">Why not adopt directly</div>
+    2021-era PyTorch codebase, unmaintained, pre-Ultralytics. Treat it as the design
+    reference for our custom head, not as an implementation source.
+  </div>
+</div>
+
+<h2 id="yolor-mtl"><span class="sn">05</span>YOLOR-Based Multi-Task Learning (2023)</h2>
+
+<p><strong>Paper:</strong> Chang, Wang, Wang, Chou, Liao,
+<a href="https://arxiv.org/html/2309.16921v1">arXiv:2309.16921</a>. Scales the YOLOR idea
+to <strong>four</strong> jointly trained tasks: object detection, instance segmentation,
+semantic segmentation, image captioning - with no pre-training and a low parameter count.</p>
+
+<p><strong>Key finding quoted:</strong> "Features extracted for a specific task are not
+generalized enough to be applied to other tasks." Multi-task learning forces the shared
+representation to generalize; a single convolutional layer with two learnable priors
+replaces YOLOR's heavier implicit-knowledge machinery.</p>
+
+<div class="callout callout-info">
+  <div class="callout-title">FMD relevance: high, as a scaling precedent</div>
+  It demonstrates the growth path: start with two heads (detect + LP classify), add more
+  later (e.g. defect-grade classification) on the same shared representation. Note the
+  code was promised as "released soon" and never fully published - design reference only.
+</div>
+
+<h2 id="yolo-p"><span class="sn">06</span>YOLO-P - ruled out</h2>
+
+<div class="callout callout-danger">
+  <div class="callout-title">Not a multi-task architecture</div>
+  YOLO-P is a modified YOLOv3-tiny with a DenseNet backbone for <strong>palm oil
+  plantation detection</strong> (FFB, grabber, palm tree). "P" is for Palm. Single-task,
+  agriculture domain, no classification head - nothing to borrow. The teammate's mention
+  is almost certainly name confusion with YOLOPv2 (driving perception) or YOLO-R.
+</div>
+
+<h2 id="generalist"><span class="sn">07</span>Generalist YOLO (WACV 2025)</h2>
+
+<p><strong>Architecture:</strong> unified GELAN encoder, primary-secondary co-attention,
+efficient prediction heads. Tasks: detection, instance/semantic/panoptic segmentation,
+captioning.</p>
+
+<p><strong>Key innovation:</strong> <strong>gradient masking</strong> - each task's
+gradients may only update the feature subset assigned to it, directly reducing task
+conflict during joint training.</p>
+
+<div class="callout callout-info">
+  <div class="callout-title">FMD relevance: medium - one borrowable idea</div>
+  If LP gradients destabilize detection (or vice versa) during joint training, masked
+  gradients let each head own its feature subset. That is the same conflict we see as
+  LP/OOI leakage today. The full architecture is far heavier than FMD needs; the training
+  trick is the takeaway.
+</div>
+
+<h2 id="yolo26"><span class="sn">08</span>Native Ultralytics YOLO26 (stable)</h2>
+
+<p>Every task is a <strong>separate model</strong> with its own head; there is no joint
+multi-task training in the stable codebase (confirmed by
+<a href="https://github.com/ultralytics/ultralytics/issues/5073">issue #5073</a> and the
+task registry):</p>
+
+<div class="tblwrap"><table>
+  <tr><th>Task</th><th>Head</th><th>Joint training</th><th>Label type</th></tr>
+  <tr><td>detect</td><td>Detect</td><td>No</td><td>Boxes</td></tr>
+  <tr><td>obb</td><td>OBB</td><td>No</td><td>Rotated boxes</td></tr>
+  <tr><td>segment</td><td>Segment</td><td>No</td><td>Boxes + masks</td></tr>
+  <tr><td>classify</td><td>Classify</td><td>No</td><td><strong>Single-label softmax only</strong></td></tr>
+  <tr><td>pose</td><td>Pose</td><td>No</td><td>Boxes + keypoints</td></tr>
+</table></div>
+
+<div class="callout callout-info">
+  <div class="callout-title">FMD relevance</div>
+  Low as a multi-task solution - but it is the <strong>stable foundation</strong> for the
+  recommended build. FMD already runs YOLO26n OBB on 8.4.142 in production, so pretrained
+  weights and the toolchain carry over.
+</div>
+
+<h2 id="comparison"><span class="sn">09</span>Architecture comparison matrix</h2>
+
+<div class="tblwrap"><table>
+  <tr><th>Architecture</th><th>Year</th><th>Detect</th><th>Multi-label cls</th><th>Joint</th><th>Maturity</th><th>FMD fit</th></tr>
+  <tr><td>YOLOR</td><td>2021</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Unmaintained</td>
+      <td><span class="badge badge-high">high - concept</span></td></tr>
+  <tr><td>YOLOR-MTL</td><td>2023</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Paper only</td>
+      <td><span class="badge badge-high">high - concept</span></td></tr>
+  <tr><td>YOLO-P</td><td>2023</td><td>Yes</td><td>No</td><td>No</td><td>Published</td>
+      <td><span class="badge badge-low">none</span></td></tr>
+  <tr><td>YOLO-Master MT</td><td>2026</td><td>Yes</td><td>No - softmax</td><td>Yes</td><td>Preview</td>
+      <td><span class="badge badge-med">medium</span></td></tr>
+  <tr><td>Generalist YOLO</td><td>2025</td><td>Yes</td><td>No</td><td>Yes</td><td>Research</td>
+      <td><span class="badge badge-med">medium</span></td></tr>
+  <tr><td>YOLO26 native</td><td>2026</td><td>Yes</td><td>No</td><td>No</td><td>Stable</td>
+      <td><span class="badge badge-low">low as-is</span></td></tr>
+  <tr><td>YOLOPv2</td><td>2022</td><td>Yes</td><td>No</td><td>Yes</td><td>Published</td>
+      <td><span class="badge badge-low">low</span></td></tr>
+  <tr><td><strong>Custom dual-head</strong></td><td>-</td><td><strong>Yes, OBB</strong></td>
+      <td><strong>Yes, sigmoid</strong></td><td><strong>Yes</strong></td><td><strong>on stable base</strong></td>
+      <td><span class="badge badge-high">recommended</span></td></tr>
+</table></div>
+
+<h2 id="mt-overview"><span class="sn">10</span>YOLO-Master MultiTask - architecture overview</h2>
+
+<p>The most recent implementation of the lead's idea (Tencent, CVPR 2026, v26.08). All
+findings in sections 10-14 are verified against the actual repository source, not
+documentation. The design goal: one network, many supervised tasks, with routing that
+decides which features serve which head.</p>
+
+<div class="diagram">
+  <div class="diagram-title">YOLO-Master MultiTask - verified end-to-end structure</div>
+  <div class="flow">
+    <div class="fbox small"><div class="t">Input image</div></div>
+    <div class="farrow"></div>
+    <div class="fbox accent"><div class="t">Shared backbone</div><div class="s">YOLO26 stack - Conv / C3k2 / SPPF / C2PSA</div></div>
+    <div class="farrow"></div>
+    <div class="fbox accent"><div class="t">MoT-enhanced neck</div><div class="s">C2fMoT blocks - mixture-of-tasks enters before the head</div></div>
+    <div class="farrow"></div>
+    <div class="fbox"><div class="t">TaskRouter</div><div class="s">per-token affinity - routes features per task + shared path</div></div>
+    <div class="farrow"></div>
+    <div class="fbox green"><div class="t">MultiTaskHead</div><div class="s">detection primary + parallel task branches - section 11</div></div>
+    <div class="farrow"></div>
+    <div class="fbox small"><div class="t">MultiTaskLoss</div><div class="s">unified 9-slot loss vector - learnable task_importance weights</div></div>
+  </div>
+</div>
+
+<div class="codeblock">
+  <div class="codeblock-head"><span class="fn">ultralytics/cfg/models/26/yolo26-master-mt-n.yaml</span>
+  <button class="copy-btn">copy</button></div>
+  <pre><code><span class="com"># MultiTask nano config - key fields (verified)</span>
+<span class="kw">nc</span>: <span class="num">80</span>          <span class="com"># ONE class count shared by ALL tasks</span>
+<span class="kw">end2end</span>: <span class="kw">True</span>   <span class="com"># detection: one2many + one2one branches</span>
+<span class="kw">nm</span>: <span class="num">32</span>          <span class="com"># mask coefficients      npr: 256 (prototypes)</span>
+<span class="kw">tasks</span>: [<span class="str">'detect'</span>, <span class="str">'segment'</span>, <span class="str">'pose'</span>]  <span class="com"># active supervised tasks</span>
+
+<span class="cls">backbone</span>:
+  <span class="com"># standard YOLO26 stack, layers 0-10</span>
+
+<span class="cls">head</span>:
+  <span class="com"># FPN+PAN with C2fMoT (mixture-of-tasks) blocks, layers 11-22</span>
+  - [[<span class="num">16</span>, <span class="num">19</span>, <span class="num">22</span>], <span class="num">1</span>, <span class="cls">MultiTaskHead</span>, [<span class="kw">nc</span>]]  <span class="com"># layer 23: unified head</span></code></pre>
+</div>
+
+<h2 id="mt-head"><span class="sn">11</span>MultiTaskHead - from source</h2>
+
+<p>File: <code>ultralytics/nn/modules/multitask/head.py</code>. MultiTaskHead
+<strong>extends the standard Detect head</strong> - detection is the primary task and all
+other branches attach around it, each consuming its own router-weighted features.</p>
+
+<div class="diagram">
+  <div class="diagram-title">MultiTaskHead - branch status (verified)</div>
+  <div class="flow">
+    <div class="fbox small"><div class="t">[P3, P4, P5] from FPN</div></div>
+    <div class="farrow"></div>
+    <div class="fbox"><div class="t">TaskRouter</div><div class="s">training-time feature routing + shared path</div></div>
+    <div class="farrow"></div>
+    <div class="branchgrid">
+      <div class="brow ok"><span class="bn">1</span><span class="bt">Detect</span><span class="bs">implemented</span></div>
+      <div class="brow ok"><span class="bn">2</span><span class="bt">Segment</span><span class="bs">implemented</span></div>
+      <div class="brow ok"><span class="bn">3</span><span class="bt">Pose</span><span class="bs">implemented</span></div>
+      <div class="brow prev"><span class="bn">4</span><span class="bt">Classify</span><span class="bs">PREVIEW</span></div>
+      <div class="brow prev"><span class="bn">5</span><span class="bt">Depth</span><span class="bs">PREVIEW</span></div>
+      <div class="brow prev"><span class="bn">6</span><span class="bt">Normal</span><span class="bs">PREVIEW</span></div>
+      <div class="brow prev"><span class="bn">7</span><span class="bt">Semantic</span><span class="bs">PREVIEW</span></div>
+      <div class="brow no"><span class="bn">8</span><span class="bt">OBB</span><span class="bs">not trainable</span></div>
+    </div>
+    <div class="farrow"></div>
+    <div class="fbox small"><div class="t">task_importance</div><div class="s">nn.Parameter - learnable per-task loss weights</div></div>
+  </div>
+</div>
+
+<h4>The classification branch - the critical limitation</h4>
+<div class="codeblock">
+  <div class="codeblock-head"><span class="fn">classify branch - single-label by construction</span>
+  <button class="copy-btn">copy</button></div>
+  <pre><code><span class="kw">self</span>.cv4_cls = nn.Sequential(
+    nn.<span class="cls">AdaptiveAvgPool2d</span>(<span class="num">1</span>),              <span class="com"># global average pool from P5</span>
+    nn.<span class="cls">Flatten</span>(),
+    nn.<span class="cls">Linear</span>(cls_in, cls_in // <span class="num">2</span>),
+    nn.<span class="cls">SiLU</span>(),
+    nn.<span class="cls">Linear</span>(cls_in // <span class="num">2</span>, <span class="kw">self</span>.nc),       <span class="com"># SAME nc as detection</span>
+)
+<span class="com"># loss: cls_global_loss = CrossEntropyLoss  -&gt;  softmax  -&gt;  ONE class per image</span>
+<span class="com"># output: class_logits [B, nc]</span></code></pre>
+</div>
+
+<p>Three structural facts follow: one image gets exactly one class (softmax), the class
+count is shared with detection, and labels must arrive in COCO JSON with a
+<code>cls_img</code> field. FMD needs the opposite on all three counts.</p>
+
+<h2 id="mt-router"><span class="sn">12</span>TaskRouter - from source</h2>
+
+<p>File: <code>ultralytics/nn/modules/multitask/router.py</code>. Routes features per
+spatial token so each branch sees features weighted toward its needs while a shared path
+keeps common semantics:</p>
+
+<div class="diagram">
+  <div class="diagram-title">TaskRouter forward path (verified)</div>
+  <div class="flow">
+    <div class="fbox small"><div class="t">features [B, C, H, W]</div></div>
+    <div class="farrow"></div>
+    <div class="fbox accent"><div class="t">affinity router</div><div class="s">Conv(C, C/8, 1) - GroupNorm - SiLU - Conv(C/8, num_tasks, 1)</div></div>
+    <div class="farrow"></div>
+    <div class="fbox"><div class="t">top-K soft blending</div><div class="s">K=2 - softmax with temperature - 0.98 sparse + 0.02 dense exploration</div></div>
+    <div class="farrow"></div>
+    <div class="fbox"><div class="t">task features</div><div class="s">x * affinity -&gt; [B, num_tasks, C, H, W]</div></div>
+    <div class="farrow"></div>
+    <div class="fbox green"><div class="t">+ shared path</div><div class="s">cross_task_proj(x) -&gt; common semantics preserved</div></div>
+  </div>
+</div>
+
+<div class="callout callout-info">
+  <div class="callout-title">Why TaskRouter matters for the leakage problem</div>
+  LP tags are frame-level conditions; OOI defects are local regions. A router can learn to
+  send global context toward the classify branch and local detail toward detection -
+  exactly the separation that splitting the label space by hand tries, and fails, to
+  achieve. This is the single most borrowable YOLO-Master component for FMD.
+</div>
+
+<h2 id="mt-trainer"><span class="sn">13</span>YOLO-Master training contract - from source</h2>
+
+<p>File: <code>ultralytics/models/yolo/multitask/train.py</code>. A strict contract governs
+which task combinations may train:</p>
+
+<div class="codeblock">
+  <div class="codeblock-head"><span class="fn">multitask/train.py - loss kits + validation</span>
+  <button class="copy-btn">copy</button></div>
+  <pre><code><span class="com"># Per-task loss kits (verified)</span>
+<span class="cls">_TASK_LOSS_NAMES</span> = {
+    <span class="str">"detect"</span>:   (<span class="str">"box_loss"</span>, <span class="str">"cls_loss"</span>, <span class="str">"dfl_loss"</span>),
+    <span class="str">"segment"</span>:  (<span class="str">"box_loss"</span>, <span class="str">"cls_loss"</span>, <span class="str">"dfl_loss"</span>, <span class="str">"seg_loss"</span>),
+    <span class="str">"pose"</span>:     (<span class="str">"box_loss"</span>, <span class="str">"pose_loss"</span>, <span class="str">"kobj_loss"</span>, <span class="str">"cls_loss"</span>, <span class="str">"dfl_loss"</span>),
+    <span class="str">"classify"</span>: (<span class="str">"cls_global_loss"</span>,),
+    <span class="str">"depth"</span>:    (<span class="str">"depth_loss"</span>,),  <span class="str">"normal"</span>: (<span class="str">"normal_loss"</span>,),
+    <span class="str">"semantic"</span>: (<span class="str">"semantic_loss"</span>,),
+}
+
+<span class="com"># validate_multitask_contract() enforces for EVERY active task:</span>
+<span class="com">#   1. head branch built in YAML   2. targets present in dataset</span>
+<span class="com">#   3. loss kit registered         4. validation evidence registered</span>
+<span class="com">#</span>
+<span class="com"># classification additionally requires:</span>
+<span class="com">#   multitask_format: "coco"  +  per-label "cls_img" field, "cls_img_valid": True</span>
+<span class="com">#</span>
+<span class="com"># 'obb' in tasks  -&gt;  ValueError("Multi-task 'obb' is not supported")</span></code></pre>
+</div>
+
+<div class="callout callout-success">
+  <div class="callout-title">One genuinely good design decision</div>
+  The unified data path <strong>preserves missing supervision instead of converting it to
+  negative targets</strong>. An image with boxes but no classification label is not treated
+  as "no class present" - its classification loss is masked out for that step. FMD needs
+  exactly this: the OOI set (346 images) and the LP-tagged set (3,377+) only partially
+  overlap. Section 15 copies this pattern.
+</div>
+
+<h2 id="mt-limitations"><span class="sn">14</span>YOLO-Master - verified FMD blockers</h2>
+
+<div class="tblwrap"><table>
+  <tr><th>#</th><th>Blocker</th><th>Evidence (source)</th><th>FMD impact</th></tr>
+  <tr><td>1</td><td><strong>OBB unsupported</strong></td>
+      <td>ValueError raised; OBB branch outputs angles but trains nothing</td>
+      <td>FMD detection is OBB - <strong>hard blocker</strong></td></tr>
+  <tr><td>2</td><td><strong>Single-label classify</strong></td>
+      <td>GAP + Linear + CrossEntropy; <code>[B, nc]</code> softmax</td>
+      <td>LP tags are multi-label (0-4 per image) - incompatible</td></tr>
+  <tr><td>3</td><td><strong>Shared class count</strong></td>
+      <td>Classify branch reuses detection <code>nc</code></td>
+      <td>Detect needs 10 classes, LP needs 5 tags - cannot share</td></tr>
+  <tr><td>4</td><td><strong>COCO format only</strong></td>
+      <td><code>multitask_format: coco</code> + <code>cls_img</code> enforced</td>
+      <td>YOLO txt pipeline would need full conversion</td></tr>
+  <tr><td>5</td><td><strong>Preview status</strong></td>
+      <td>CHANGELOG v26.08: multi-output prediction "remains preview"</td>
+      <td>Not production-ready for the line</td></tr>
+</table></div>
+
+<p><strong>Posture: watch and wait.</strong> Revisit when (a) the classify branch leaves
+preview, (b) it supports per-task class counts, and (c) OBB becomes trainable. Until then
+the architecture ideas - not the code - are the value.</p>
+<h2 id="custom-arch"><span class="sn">15</span>Recommended: custom dual-head YOLO</h2>
+
+<div class="callout callout-success">
+  <div class="callout-title">Recommendation</div>
+  Build a custom dual-head model on stable Ultralytics 8.4.142. Keep the production OBB
+  detection path untouched; attach a multi-label LP head on the P5 level of the neck.
+  Borrow three YOLO-Master principles: shared backbone + neck, optional task routing
+  (phase 3), and masked missing supervision in the loss.
+</div>
+
+<div class="diagram">
+  <div class="diagram-title">FMD custom dual-head - target architecture</div>
+  <div class="flow">
+    <div class="fbox small"><div class="t">Input image</div></div>
+    <div class="farrow"></div>
+    <div class="fbox accent"><div class="t">Shared backbone</div><div class="s">YOLO26n - C3k2 - pretrained OBB weights</div></div>
+    <div class="farrow"></div>
+    <div class="fbox accent"><div class="t">Shared neck</div><div class="s">FPN + PAN</div></div>
+    <div class="fstub"></div>
+    <div class="fjoin"></div>
+    <div class="fsplit">
+      <div class="fbranch">
+        <div class="fbranch-label">global - P5</div>
+        <div class="fbox green"><div class="t">LP head</div><div class="s">GAP - FC - 5 sigmoid logits</div></div>
+        <div class="farrow"></div>
+        <div class="fbox small"><div class="t">LP tag probabilities</div><div class="s">Missing Primary Package - Multiple Lenses - Missing Lens - Cavity Off Center - Folded Lens</div></div>
+      </div>
+      <div class="fbranch">
+        <div class="fbranch-label">local - P3/P4</div>
+        <div class="fbox"><div class="t">OBB detect head</div><div class="s">cv2 box + cv3 cls + angle - end2end</div></div>
+        <div class="farrow"></div>
+        <div class="fbox small"><div class="t">Boxes + 10 OOI classes + angles</div><div class="s">unchanged production task</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4>Head implementation sketch</h4>
+<div class="codeblock">
+  <div class="codeblock-head"><span class="fn">lp_head.py - multi-label LP head + masked loss</span>
+  <button class="copy-btn">copy</button></div>
+  <pre><code>import torch.nn as nn
+
+class LPClassifyHead(nn.Module):
+    # Multi-label LP tag head: GAP on P5 -&gt; FC -&gt; 5 independent logits
+    def __init__(self, c1: int = 1024, n_lp: int = 5):
+        super().__init__()
+        self.pool = nn.AdaptiveAvgPool2d(1)
+        self.fc   = nn.Sequential(
+            nn.Linear(c1, c1 // 4),
+            nn.SiLU(),
+            nn.Dropout(0.1),
+            nn.Linear(c1 // 4, n_lp),   # 5 logits, independent
+        )
+
+    def forward(self, p5):
+        return self.fc(self.pool(p5).flatten(1))   # [B, 5]
+
+# Loss: BCEWithLogitsLoss - NOT CrossEntropy (multi-label, not single-label)
+lp_criterion = nn.BCEWithLogitsLoss(reduction="none")
+# Images with no LP annotation get a validity mask - the pattern borrowed
+# from YOLO-Master's preserve-missing-supervision contract (section 13).
+lp_loss = (lp_criterion(lp_logits, lp_targets) * lp_valid_mask).sum() / lp_valid_mask.sum()
+</code></pre>
+</div>
+
+<h4>Combined loss</h4>
+<div class="codeblock">
+  <div class="codeblock-head"><span class="fn">loss composition</span>
+  <button class="copy-btn">copy</button></div>
+  <pre><code>L_total = L_obb                <span class="com"># standard YOLO26: box + cls + dfl + angle</span>
+        + lambda_lp * L_lp     <span class="com"># masked BCEWithLogits over the 5 LP tags</span>
+
+<span class="com"># lambda_lp starts at 1.0; sweep {0.1, 0.5, 1.0, 2.0}</span>
+<span class="com"># guardrail metric: detection mAP50 must stay within noise of the</span>
+<span class="com"># detection-only production baseline - the LP head must not tax detection</span></code></pre>
+</div>
+
+<h4>How it differs from YOLO-Master MultiTask</h4>
+<div class="tblwrap"><table>
+  <tr><th>Feature</th><th>YOLO-Master MT</th><th>Custom FMD dual-head</th></tr>
+  <tr><td>Classification</td><td>Single-label softmax</td><td><strong>Multi-label sigmoid</strong></td></tr>
+  <tr><td>Class counts</td><td>Shared nc</td><td><strong>Separate: 10 detect / 5 LP</strong></td></tr>
+  <tr><td>Label format</td><td>COCO JSON + cls_img</td><td><strong>YOLO txt + LP tag list (existing)</strong></td></tr>
+  <tr><td>Detection</td><td>AABB only, OBB blocked</td><td><strong>OBB, production path unchanged</strong></td></tr>
+  <tr><td>Base</td><td>Preview v26.08</td><td><strong>Stable 8.4.142</strong></td></tr>
+  <tr><td>Task routing</td><td>TaskRouter in MoT neck</td><td>Optional, phase 3</td></tr>
+  <tr><td>Missing supervision</td><td>Masked (contract-enforced)</td><td><strong>Masked (validity mask in loss)</strong></td></tr>
+</table></div>
+
+<h2 id="leakage"><span class="sn">16</span>The leakage problem - what the architecture can and cannot solve</h2>
+
+<div class="tblwrap"><table>
+  <tr><th>Can</th><th>Cannot</th></tr>
+  <tr>
+    <td>
+    Learn one shared representation for both tasks - YOLOR showed joint training improves
+    every task over single-task baselines
+    <br><br>
+    Give LP a whole-image view (GAP) and OOI a local view (anchors) - structurally
+    different views of the same image compete less
+    <br><br>
+    Route features per task (TaskRouter pattern): global context toward LP, local detail
+    toward detection
+    <br><br>
+    Align feature spaces across tasks (YOLOR kernel alignment) so semantically similar
+    labels stop competing
+    </td>
+    <td>
+    Fix ambiguous names - "Missing Lens" existing as both an LP tag and an OOI class with
+    different meanings keeps confusing any model
+    <br><br>
+    Fix label noise or annotation inconsistency
+    <br><br>
+    Fix the data ceiling: 346 OOI training images, 4-5px annotation noise
+    <br><br>
+    Fix the label-format mismatch (boxes vs image-level tags) - the loader must handle
+    both correctly
+    </td>
+  </tr>
+</table></div>
+
+<div class="callout callout-warn">
+  <div class="callout-title">The real fix is mostly data work</div>
+  (1) Disambiguate label names so no LP tag and OOI class share a name.
+  (2) Keep the frame-level vs object-level distinction explicit in the schema.
+  (3) Add training pairs where LP tags and OOI defects co-occur on one image, so the
+  model learns both signals together. The dual-head architecture then has structure to
+  exploit - it cannot create it.
+</div>
+
+<h2 id="roadmap"><span class="sn">17</span>Implementation roadmap</h2>
+
+<details open>
+  <summary>Phase 1 - Proof of concept (1-2 days)</summary>
+  <div class="dbody">
+  <p>Take the existing YOLO26n OBB model. Attach LPClassifyHead (GAP + FC(5) + sigmoid)
+  to the P5 neck level. Train on 10-20 images carrying both label types for a few
+  epochs.</p>
+  <p><strong>Success criteria:</strong> both heads converge; detection mAP within noise
+  of the detection-only baseline.</p>
+  </div>
+</details>
+<details>
+  <summary>Phase 2 - Full pipeline (3-5 days)</summary>
+  <div class="dbody">
+  <p>Build the dual-format data loader: YOLO txt boxes + LP tag list per image, with a
+  validity mask for images lacking LP annotations. Implement the combined loss with
+  lambda_lp. Train on the full 346/88 detection split plus the LP-tagged set. Evaluate
+  per-class AP for both heads; compare against the separate production models.</p>
+  </div>
+</details>
+<details>
+  <summary>Phase 3 - Optimization (2-3 days)</summary>
+  <div class="dbody">
+  <p>Sweep lambda_lp. Optionally add a TaskRouter-style lightweight affinity branch on
+  the neck. Add per-class loss weighting for imbalanced OOI classes. Measure end-to-end
+  inference latency vs the current two-model pipeline.</p>
+  </div>
+</details>
+<details>
+  <summary>Phase 4 - Production</summary>
+  <div class="dbody">
+  <p>Export to ONNX/TensorRT. Wire both heads into pass/fail logic: the edge algorithm
+  stays binary pass/fail; this back-office model supplies the <em>reason</em> - which OOI
+  defects and which LP tags drove the failure. A/B test against the separate-model
+  pipeline before any switchover.</p>
+  </div>
+</details>
+
+<h2 id="risks"><span class="sn">18</span>Risks and mitigations</h2>
+
+<div class="tblwrap"><table>
+  <tr><th>Risk</th><th>Mitigation</th></tr>
+  <tr><td>LP is multi-label, not single-label</td><td>Sigmoid + BCE head - never softmax</td></tr>
+  <tr><td>Task conflict degrades detection mAP</td><td>Sweep lambda_lp; gradient masking (Generalist YOLO) if conflict appears; mAP50 as guardrail</td></tr>
+  <tr><td>LP and OOI label names overlap</td><td>Rename to distinct names before any training run</td></tr>
+  <tr><td>Small OOI dataset (346 images)</td><td>Pretrained backbone; augmentation; early stopping</td></tr>
+  <tr><td>Preview-code instability if YOLO-Master adopted directly</td><td>Build on stable 8.4.142; revisit YOLO-Master when classify matures</td></tr>
+  <tr><td>D1-D4 undefined</td><td><strong>Blocker:</strong> get the lead's definition before freezing head responsibilities</td></tr>
+</table></div>
+
+<h2 id="references"><span class="sn">19</span>References</h2>
+
+<div class="tblwrap"><table>
+  <tr><th>Source</th><th>Link</th></tr>
+  <tr><td>YOLOR paper (Wang et al. 2021)</td><td><a href="https://arxiv.org/abs/2105.13255">arxiv.org/abs/2105.13255</a></td></tr>
+  <tr><td>YOLOR-Based Multi-Task Learning (2023)</td><td><a href="https://arxiv.org/html/2309.16921v1">arxiv.org/html/2309.16921v1</a></td></tr>
+  <tr><td>YOLO-Master repository</td><td><a href="https://github.com/Tencent/YOLO-Master">github.com/Tencent/YOLO-Master</a></td></tr>
+  <tr><td>YOLO-Master CHANGELOG (v26.08)</td><td><a href="https://github.com/Tencent/YOLO-Master/blob/main/CHANGELOG.md">CHANGELOG.md</a></td></tr>
+  <tr><td>MultiTask model config</td><td><a href="https://raw.githubusercontent.com/Tencent/YOLO-Master/main/ultralytics/cfg/models/26/yolo26-master-mt-n.yaml">yolo26-master-mt-n.yaml</a></td></tr>
+  <tr><td>MultiTaskHead source</td><td><a href="https://github.com/Tencent/YOLO-Master/blob/main/ultralytics/nn/modules/multitask/head.py">nn/modules/multitask/head.py</a></td></tr>
+  <tr><td>TaskRouter source</td><td><a href="https://github.com/Tencent/YOLO-Master/blob/main/ultralytics/nn/modules/multitask/router.py">nn/modules/multitask/router.py</a></td></tr>
+  <tr><td>MultiTask trainer source</td><td><a href="https://github.com/Tencent/YOLO-Master/blob/main/ultralytics/models/yolo/multitask/train.py">models/yolo/multitask/train.py</a></td></tr>
+  <tr><td>YOLO26 paper</td><td><a href="https://arxiv.org/html/2606.03748v1">arxiv.org/html/2606.03748v1</a></td></tr>
+  <tr><td>Generalist YOLO (WACV 2025)</td><td><a href="https://openaccess.thecvf.com/content/WACV2025/papers/Chang_Generalist_You_Only_Look_at_Once_for_Real-Time_End-to-End_Multi-Task_Visual_Language_Models_WACV_2025_paper.pdf">WACV 2025 paper</a></td></tr>
+  <tr><td>Ultralytics joint-training gap</td><td><a href="https://github.com/ultralytics/ultralytics/issues/5073">issue #5073</a></td></tr>
+  <tr><td>FMD two-tier label doc (internal)</td><td>FMD-KB wiki - Pipelines</td></tr>
+</table></div>
+
+</main>
+</div>
+
+<button id="totop" title="Back to top">&#8593;</button>
+
+<script>
+// progress bar + back-to-top + scrollspy + copy buttons
+(function() {
+  var prog = document.getElementById("progress");
+  var totop = document.getElementById("totop");
+  var navItems = [].slice.call(document.querySelectorAll(".nav-item"));
+  var targets = navItems.map(function(a) {
+    return document.querySelector(a.getAttribute("href"));
+  });
+
+  function onScroll() {
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    prog.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + "%";
+    totop.classList.toggle("show", h.scrollTop > 600);
+
+    var current = -1;
+    for (var i = 0; i < targets.length; i++) {
+      if (targets[i] && targets[i].getBoundingClientRect().top <= 90) current = i;
+    }
+    navItems.forEach(function(a, i) {
+      a.classList.toggle("active", i === current);
+    });
+  }
+  document.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  totop.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  document.querySelectorAll(".copy-btn").forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      var pre = btn.closest(".codeblock").querySelector("pre");
+      navigator.clipboard.writeText(pre.innerText).then(function() {
+        btn.textContent = "copied";
+        btn.classList.add("done");
+        setTimeout(function() {
+          btn.textContent = "copy";
+          btn.classList.remove("done");
+        }, 1500);
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
