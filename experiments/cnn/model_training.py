@@ -418,6 +418,11 @@ def main(argv=None) -> int:
     ap.add_argument("--outdir", default=".")
     ap.add_argument("--warmup", action="store_true",
                     help="run warmup predict pass before timing inference")
+    ap.add_argument("--dump", action="store_true",
+                    help="write predictions.csv and confusion.json beside "
+                         "metrics.json (Task 1 readout evidence)")
+    ap.add_argument("--save-model", action="store_true",
+                    help="write model.keras beside metrics.json")
     args = ap.parse_args(argv)
     apply_seed(args.seed)
     os.makedirs(args.outdir, exist_ok=True)
@@ -496,7 +501,10 @@ def main(argv=None) -> int:
     print(f"Inference/image      : {time_per_image*1000:.3f} ms")
 
     # Confusion Matrix
-    cm = confusion_matrix(y_true, y_pred)
+    # labels= pins the matrix to every class, so a test batch that happens to
+    # miss a class still gives a square num_classes matrix: the plot, the
+    # per-class printout and metrics.json all stay aligned with class_names.
+    cm = confusion_matrix(y_true, y_pred, labels=list(range(num_classes)))
     class_accuracy = cm.diagonal() / cm.sum(axis=1)
     print("\nClass-wise Accuracy (Recall):\n")
     for cls, acc in zip(class_names, class_accuracy):
@@ -570,6 +578,28 @@ def main(argv=None) -> int:
     png = os.path.join(args.outdir, f"confusion_matrix_{args.arch}.png")
     plt.savefig(png, dpi=300, bbox_inches="tight")
     print(f"\nSaved confusion matrix: {png}")
+
+    # Task 1 evidence: the matrix as numbers and one row per test picture, so
+    # a finished run answers "which class is eating which" without retraining.
+    if args.dump:
+        from dump_outputs import dump_outputs, test_file_paths
+        fp, derived = test_file_paths(os.path.join(args.data, "test"),
+                                      class_names)
+        order_ok = len(derived) == len(y_true) and all(
+            int(a) == int(b) for a, b in zip(derived, y_true))
+        if not order_ok:
+            print("WARNING: rebuilt test file order does not match the batch "
+                  "labels; predictions will be written index-only")
+            fp = None
+        p_csv, c_json = dump_outputs(args.outdir, class_names, y_true, y_pred,
+                                     y_pred_prob, file_paths=fp)
+        print(f"Saved predictions: {p_csv}")
+        print(f"Saved confusion matrix: {c_json}")
+
+    if args.save_model:
+        mp = os.path.join(args.outdir, "model.keras")
+        model.save(mp)
+        print(f"Saved model: {mp}")
     return 0
 
 
