@@ -1,0 +1,1796 @@
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <job>
+      <id>4521958</id>
+      <size>150</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker/>
+      <created>2026-09-28 12:18:23.961253+00:00</created>
+      <updated>2026-10-23 22:11:13.445653+00:00</updated>
+      <subset>default</subset>
+      <start_frame>2700</start_frame>
+      <stop_frame>2849</stop_frame>
+      <frame_filter/>
+      <segments>
+        <segment>
+          <id>4519254</id>
+          <start>2700</start>
+          <stop>2849</stop>
+          <url>https://app.cvat.ai/api/jobs/4521958/dataset/export/api/jobs/4521958</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>BBarrine</username>
+        <email>bbarrine@its.jnj.com</email>
+      </owner>
+      <assignee/>
+      <labels>
+        <label>
+          <name>P1_MPP</name>
+          <color>#1fff0c</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P1_PPM</name>
+          <color>#af4245</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P1_COC</name>
+          <color>#c74817</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>F2_FOV</name>
+          <color>#d3915a</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P2_LOC</name>
+          <color>#0035cf</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P1_NL</name>
+          <color>#0e98d2</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P1_ML</name>
+          <color>#4fae8a</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P1_FL</name>
+          <color>#29e435</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P2_DS</name>
+          <color>#b9ed7d</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P2_DC</name>
+          <color>#2f8831</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P2_BSC</name>
+          <color>#30376f</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P2_LD</name>
+          <color>#6b718f</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P2_BB</name>
+          <color>#c0ea0f</color>
+          <type>rectangle</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P2_BC</name>
+          <color>#8ac750</color>
+          <type>rectangle</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P2_BI</name>
+          <color>#865dd1</color>
+          <type>rectangle</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P2_BST</name>
+          <color>#bf205a</color>
+          <type>rectangle</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P2_WP</name>
+          <color>#1b1d11</color>
+          <type>rectangle</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P3_FIB</name>
+          <color>#3363b2</color>
+          <type>rectangle</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P3_EP</name>
+          <color>#7b519f</color>
+          <type>rectangle</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P3_HE</name>
+          <color>#19ce99</color>
+          <type>rectangle</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P3_FM</name>
+          <color>#19b24c</color>
+          <type>rectangle</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P3_EP_MICRON_THRESHOLD</name>
+          <color>#1f85d9</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P3_FIB_MICRON_THRESHOLD</name>
+          <color>#e8d788</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>P3_FM_MICRON_THRESHOLD</name>
+          <color>#45fa6f</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+    </job>
+    <dumped>2026-10-26 18:41:12.064011+00:00</dumped>
+  </meta>
+  <image id="2700" name="FMD_PROD/PRODUCTION-20260925/20241204_145522_L24_C12_9996_0.5687.bmp" width="2448" height="2048">
+    <tag label="P2_LOC" source="file">
+    </tag>
+  </image>
+  <image id="2701" name="FMD_PROD/PRODUCTION-20260925/20241204_151730_L24_C15_9230_0.9995.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1081.31" ytl="816.74" xbr="1090.24" ybr="824.46" rotation="274.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1455.90" ytl="1171.55" xbr="1461.33" ybr="1177.82" rotation="135.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1408.06" ytl="555.34" xbr="1441.11" ybr="596.88" rotation="44.80" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1399.97" ytl="1318.17" xbr="1407.17" ybr="1321.93" rotation="194.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1447.55" ytl="1171.14" xbr="1452.52" ybr="1177.38" rotation="135.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1043.74" ytl="1238.00" xbr="1624.24" ybr="1553.48" rotation="170.49" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1453.34" ytl="1240.16" xbr="1457.23" ybr="1246.96" rotation="147.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="878.07" ytl="573.56" xbr="883.98" ybr="579.35" rotation="303.80" z_order="0">
+    </box>
+    <tag label="P1_ML" source="file">
+    </tag>
+    <tag label="P2_LOC" source="file">
+    </tag>
+  </image>
+  <image id="2702" name="FMD_PROD/PRODUCTION-20260925/20241204_155705_L24_C3_9380_0.9999.bmp" width="2448" height="2048">
+    <tag label="P1_MPP" source="file">
+    </tag>
+  </image>
+  <image id="2703" name="FMD_PROD/PRODUCTION-20260925/20241204_155705_L24_C6_9511_0.9999.bmp" width="2448" height="2048">
+    <tag label="P1_MPP" source="file">
+    </tag>
+  </image>
+  <image id="2704" name="FMD_PROD/PRODUCTION-20260925/20241204_164202_L24_C7_9974_0.9998_0.6066.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="969.26" ytl="472.56" xbr="984.98" ybr="485.28" rotation="325.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1138.55" ytl="1118.34" xbr="1144.19" ybr="1124.31" rotation="191.90" z_order="0">
+    </box>
+    <box label="P3_EP" source="file" occluded="0" xtl="1072.61" ytl="887.46" xbr="1126.67" ybr="941.40" rotation="186.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1034.26" ytl="577.20" xbr="1040.39" ybr="582.67" rotation="335.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1612.23" ytl="840.00" xbr="1617.72" ybr="845.48" rotation="80.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1044.09" ytl="999.85" xbr="1050.90" ybr="1006.65" rotation="224.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1434.95" ytl="589.48" xbr="1443.24" ybr="597.00" rotation="31.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1256.53" ytl="1293.04" xbr="1262.02" ybr="1298.52" rotation="176.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1639.61" ytl="918.71" xbr="1644.57" ybr="923.76" rotation="92.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="918.36" ytl="675.14" xbr="924.49" ybr="680.61" rotation="293.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1253.97" ytl="596.15" xbr="1260.10" ybr="601.61" rotation="3.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1724.39" ytl="980.01" xbr="1729.50" ybr="984.90" rotation="89.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1013.61" ytl="1241.27" xbr="1019.10" ybr="1246.74" rotation="216.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1313.12" ytl="534.42" xbr="1320.93" ybr="541.80" rotation="13.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1088.94" ytl="956.05" xbr="1097.54" ybr="964.66" rotation="224.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1627.10" ytl="961.49" xbr="1632.59" ybr="966.97" rotation="96.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1312.53" ytl="871.89" xbr="1317.97" ybr="877.06" rotation="21.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="860.51" ytl="794.23" xbr="865.66" ybr="799.35" rotation="274.70" z_order="0">
+    </box>
+    <tag label="P3_EP_MICRON_THRESHOLD" source="auto">
+    </tag>
+  </image>
+  <image id="2705" name="FMD_PROD/PRODUCTION-20260925/20241204_165633_L24_C8_9744_0.9998.bmp" width="2448" height="2048">
+    <tag label="P1_MPP" source="file">
+    </tag>
+  </image>
+  <image id="2706" name="FMD_PROD/PRODUCTION-20260925/20241204_165751_L24_C10_9795_0.9998.bmp" width="2448" height="2048">
+    <tag label="P1_MPP" source="file">
+    </tag>
+  </image>
+  <image id="2707" name="FMD_PROD/PRODUCTION-20260925/20241204_165751_L24_C11_9342_0.9999.bmp" width="2448" height="2048">
+    <tag label="P1_MPP" source="file">
+    </tag>
+  </image>
+  <image id="2708" name="FMD_PROD/PRODUCTION-20260925/20241204_165751_L24_C12_9865_0.9999.bmp" width="2448" height="2048">
+    <tag label="P1_MPP" source="file">
+    </tag>
+  </image>
+  <image id="2709" name="FMD_PROD/PRODUCTION-20260925/20241204_165751_L24_C13_9876_0.9999.bmp" width="2448" height="2048">
+    <tag label="P1_MPP" source="file">
+    </tag>
+  </image>
+  <image id="2710" name="FMD_PROD/PRODUCTION-20260925/20241204_165751_L24_C14_9905_0.9998.bmp" width="2448" height="2048">
+    <tag label="P1_MPP" source="file">
+    </tag>
+  </image>
+  <image id="2711" name="FMD_PROD/PRODUCTION-20260925/20241204_165751_L24_C7_9590_0.9999.bmp" width="2448" height="2048">
+    <tag label="P1_MPP" source="file">
+    </tag>
+  </image>
+  <image id="2712" name="FMD_PROD/PRODUCTION-20260925/20241204_175904_L27_C15_9916_0.5063.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1651.43" ytl="1068.21" xbr="1657.17" ybr="1073.82" rotation="90.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1279.35" ytl="1446.62" xbr="1284.80" ybr="1451.46" rotation="154.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1476.31" ytl="1416.92" xbr="1483.06" ybr="1423.55" rotation="148.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1308.88" ytl="795.33" xbr="1320.12" ybr="804.89" rotation="18.60" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1292.18" ytl="1446.54" xbr="1303.49" ybr="1454.97" rotation="155.90" z_order="0">
+    </box>
+    <box label="P3_FM" source="file" occluded="0" xtl="828.52" ytl="1072.88" xbr="835.62" ybr="1077.73" rotation="233.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1208.22" ytl="1460.82" xbr="1213.82" ybr="1465.69" rotation="162.20" z_order="0">
+    </box>
+    <box label="P3_FIB" source="file" occluded="0" xtl="1573.79" ytl="1402.47" xbr="1591.06" ybr="1406.53" rotation="167.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1502.02" ytl="1302.48" xbr="1507.25" ybr="1307.55" rotation="131.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1163.73" ytl="1011.70" xbr="1173.67" ybr="1021.48" rotation="90.90" z_order="0">
+    </box>
+    <box label="P3_FM" source="manual" occluded="0" xtl="909.57" ytl="1032.81" xbr="946.46" ybr="1042.92" rotation="340.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="779.82" ytl="1078.16" xbr="785.72" ybr="1084.15" rotation="267.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1351.22" ytl="1437.22" xbr="1358.81" ybr="1444.96" rotation="152.00" z_order="0">
+    </box>
+    <tag label="P2_LOC" source="file">
+    </tag>
+    <tag label="P3_FM_MICRON_THRESHOLD" source="auto">
+    </tag>
+  </image>
+  <image id="2713" name="FMD_PROD/PRODUCTION-20260925/20241204_184729_L25_C6_9469.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1271.26" ytl="620.08" xbr="1276.44" ybr="624.93" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="934.13" ytl="801.34" xbr="948.04" ybr="818.23" rotation="284.60" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="916.23" ytl="860.99" xbr="925.31" ybr="876.59" rotation="291.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="960.58" ytl="810.13" xbr="966.25" ybr="815.20" rotation="295.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="883.08" ytl="1190.91" xbr="895.12" ybr="1202.01" rotation="255.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="892.66" ytl="963.61" xbr="900.16" ybr="971.85" rotation="287.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="914.15" ytl="907.80" xbr="920.85" ybr="920.00" rotation="288.60" z_order="0">
+    </box>
+    <box label="P3_EP" source="file" occluded="0" xtl="1275.59" ytl="1027.60" xbr="1335.12" ybr="1212.54" rotation="258.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1015.73" ytl="950.35" xbr="1021.75" ybr="956.07" rotation="283.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1557.35" ytl="1273.19" xbr="1595.33" ybr="1306.73" rotation="180.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1685.33" ytl="1247.18" xbr="1693.42" ybr="1255.53" rotation="112.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="877.11" ytl="962.42" xbr="887.91" ybr="973.08" rotation="286.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="950.38" ytl="822.13" xbr="956.05" ybr="827.20" rotation="295.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="938.38" ytl="842.01" xbr="944.05" ybr="847.08" rotation="295.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="865.85" ytl="998.15" xbr="878.87" ybr="1009.09" rotation="282.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="919.22" ytl="825.97" xbr="930.51" ybr="836.20" rotation="296.20" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="944.19" ytl="793.06" xbr="958.95" ybr="800.36" rotation="268.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="960.64" ytl="765.86" xbr="966.82" ybr="771.93" rotation="298.60" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1499.60" ytl="678.94" xbr="1510.00" ybr="685.91" rotation="357.30" z_order="0">
+    </box>
+    <tag label="P1_ML" source="file">
+    </tag>
+    <tag label="P2_LOC" source="file">
+    </tag>
+    <tag label="P2_DC" source="manual">
+    </tag>
+    <tag label="P3_EP_MICRON_THRESHOLD" source="auto">
+    </tag>
+  </image>
+  <image id="2714" name="FMD_PROD/PRODUCTION-20260925/20241204_190430_L25_C4_9896.bmp" width="2448" height="2048">
+    <box label="P2_WP" source="file" occluded="0" xtl="1352.61" ytl="818.37" xbr="1373.65" ybr="831.96" rotation="306.40" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1360.48" ytl="741.79" xbr="1379.11" ybr="763.15" rotation="353.20" z_order="0">
+    </box>
+    <box label="P3_FM" source="file" occluded="0" xtl="1659.25" ytl="1051.52" xbr="1665.40" ybr="1055.43" rotation="91.90" z_order="0">
+    </box>
+    <box label="P3_FM" source="file" occluded="0" xtl="1502.10" ytl="1417.91" xbr="1511.73" ybr="1424.80" rotation="168.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1571.63" ytl="1229.19" xbr="1592.26" ybr="1246.30" rotation="159.50" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1377.31" ytl="774.59" xbr="1411.29" ybr="796.11" rotation="50.50" z_order="0">
+    </box>
+    <box label="P2_WP" source="manual" occluded="0" xtl="1300.75" ytl="645.62" xbr="1318.47" ybr="657.91" rotation="324.50" z_order="0">
+    </box>
+    <box label="P2_WP" source="manual" occluded="0" xtl="1271.61" ytl="664.33" xbr="1283.99" ybr="674.12" rotation="324.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1233.07" ytl="680.01" xbr="1242.30" ybr="686.84" rotation="326.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1297.52" ytl="1514.33" xbr="1307.37" ybr="1523.74" rotation="178.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1351.34" ytl="662.90" xbr="1358.78" ybr="670.49" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1480.89" ytl="1232.09" xbr="1499.46" ybr="1247.02" rotation="154.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1239.52" ytl="896.01" xbr="1256.73" ybr="918.82" rotation="328.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1763.63" ytl="1120.48" xbr="1771.31" ybr="1127.45" rotation="87.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1523.82" ytl="1213.15" xbr="1529.25" ybr="1218.49" rotation="144.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1687.04" ytl="1034.39" xbr="1693.06" ybr="1039.89" rotation="87.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1640.71" ytl="812.77" xbr="1656.16" ybr="827.55" rotation="59.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1329.56" ytl="901.20" xbr="1343.99" ybr="919.52" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1453.09" ytl="1360.81" xbr="1461.34" ybr="1368.16" rotation="165.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1454.81" ytl="1076.22" xbr="1460.57" ybr="1082.77" rotation="173.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1511.93" ytl="791.05" xbr="1524.21" ybr="799.30" rotation="24.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1291.25" ytl="640.67" xbr="1302.17" ybr="646.12" rotation="327.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1487.61" ytl="811.88" xbr="1494.16" ybr="818.29" rotation="40.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1466.09" ytl="1048.67" xbr="1476.16" ybr="1058.99" rotation="358.30" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1540.05" ytl="1247.87" xbr="1556.33" ybr="1268.99" rotation="141.40" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1353.10" ytl="1249.76" xbr="1369.30" ybr="1267.04" rotation="172.80" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1053.35" ytl="948.38" xbr="1070.19" ybr="958.17" rotation="278.30" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1344.90" ytl="646.63" xbr="1361.35" ybr="654.11" rotation="328.30" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1359.19" ytl="908.17" xbr="1406.46" ybr="936.00" rotation="326.50" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1317.10" ytl="804.37" xbr="1323.74" ybr="813.25" rotation="349.00" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1209.83" ytl="963.78" xbr="1237.96" ybr="988.04" rotation="331.70" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1108.58" ytl="978.92" xbr="1141.25" ybr="1011.40" rotation="323.30" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1124.66" ytl="921.46" xbr="1151.97" ybr="962.21" rotation="338.10" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1100.42" ytl="841.09" xbr="1111.53" ybr="849.76" rotation="302.20" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1133.48" ytl="758.02" xbr="1162.01" ybr="795.77" rotation="309.10" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1375.41" ytl="664.19" xbr="1390.78" ybr="685.53" rotation="323.20" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1402.39" ytl="704.11" xbr="1425.51" ybr="727.56" rotation="50.50" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1321.62" ytl="746.57" xbr="1352.24" ybr="815.40" rotation="351.30" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1359.38" ytl="695.81" xbr="1374.01" ybr="713.74" rotation="314.50" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1171.76" ytl="1133.01" xbr="1204.49" ybr="1156.34" rotation="214.90" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1277.23" ytl="695.46" xbr="1285.30" ybr="708.70" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1413.83" ytl="831.19" xbr="1432.43" ybr="850.34" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1506.63" ytl="823.61" xbr="1520.53" ybr="838.95" rotation="339.50" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1104.18" ytl="822.48" xbr="1120.96" ybr="834.83" rotation="300.70" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1148.19" ytl="761.45" xbr="1267.83" ybr="827.60" rotation="321.00" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1470.46" ytl="775.88" xbr="1492.92" ybr="788.07" rotation="326.10" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1450.54" ytl="684.76" xbr="1461.79" ybr="693.72" rotation="27.90" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1347.60" ytl="719.11" xbr="1361.07" ybr="731.84" rotation="321.90" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1087.35" ytl="910.32" xbr="1096.85" ybr="923.40" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1275.17" ytl="849.12" xbr="1299.06" ybr="867.97" rotation="318.00" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1459.00" ytl="707.00" xbr="1529.44" ybr="758.77" rotation="40.30" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1354.72" ytl="1025.60" xbr="1394.17" ybr="1060.62" rotation="328.00" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1324.38" ytl="1065.80" xbr="1360.42" ybr="1094.94" rotation="348.20" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1293.08" ytl="699.59" xbr="1311.09" ybr="719.50" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1260.97" ytl="898.40" xbr="1316.64" ybr="952.53" rotation="325.40" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1194.14" ytl="760.07" xbr="1215.09" ybr="778.23" rotation="309.20" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1527.09" ytl="800.66" xbr="1547.62" ybr="829.94" rotation="50.50" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1176.68" ytl="992.33" xbr="1187.88" ybr="1005.19" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1249.76" ytl="1091.63" xbr="1259.69" ybr="1107.24" rotation="267.10" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1527.83" ytl="770.53" xbr="1547.49" ybr="781.06" rotation="50.50" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1311.11" ytl="784.24" xbr="1317.74" ybr="793.12" rotation="349.00" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1076.99" ytl="943.85" xbr="1091.78" ybr="954.83" rotation="305.60" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1394.92" ytl="825.30" xbr="1406.59" ybr="836.65" rotation="335.30" z_order="0">
+    </box>
+    <tag label="P2_DC" source="manual">
+    </tag>
+    <tag label="P1_ML" source="file">
+    </tag>
+    <tag label="P2_LOC" source="file">
+    </tag>
+  </image>
+  <image id="2715" name="FMD_PROD/PRODUCTION-20260925/20241204_202111_L25_C1_9891.bmp" width="2448" height="2048">
+    <tag label="P1_MPP" source="file">
+    </tag>
+    <tag label="P2_DC" source="manual">
+    </tag>
+  </image>
+  <image id="2716" name="FMD_PROD/PRODUCTION-20260925/20241204_213132_L25_C13_9908.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1264.71" ytl="648.76" xbr="1270.61" ybr="654.20" rotation="7.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1077.95" ytl="603.21" xbr="1124.74" ybr="636.71" rotation="293.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1673.92" ytl="1185.71" xbr="1679.68" ybr="1191.60" rotation="111.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1409.10" ytl="1510.94" xbr="1417.70" ybr="1518.77" rotation="161.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1686.05" ytl="1097.38" xbr="1693.11" ybr="1104.45" rotation="91.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="998.92" ytl="716.27" xbr="1004.83" ybr="721.38" rotation="301.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1255.88" ytl="659.82" xbr="1261.78" ybr="665.26" rotation="7.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1249.49" ytl="624.98" xbr="1255.39" ybr="630.42" rotation="7.80" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1251.01" ytl="644.56" xbr="1258.27" ybr="654.31" rotation="9.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1288.25" ytl="627.99" xbr="1294.15" ybr="633.43" rotation="1.50" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1179.64" ytl="1506.28" xbr="1218.49" ybr="1525.21" rotation="188.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1695.84" ytl="1109.13" xbr="1707.04" ybr="1123.65" rotation="92.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="955.54" ytl="747.90" xbr="962.61" ybr="754.30" rotation="307.60" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="987.23" ytl="714.50" xbr="999.29" ybr="720.95" rotation="282.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1675.91" ytl="1201.20" xbr="1684.94" ybr="1214.19" rotation="109.20" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1418.53" ytl="1504.53" xbr="1426.81" ybr="1515.00" rotation="154.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1699.05" ytl="1094.72" xbr="1709.42" ybr="1109.03" rotation="94.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1519.92" ytl="1455.34" xbr="1530.19" ybr="1465.54" rotation="131.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1583.38" ytl="1401.19" xbr="1589.57" ybr="1406.76" rotation="127.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1518.10" ytl="1466.97" xbr="1524.38" ybr="1473.28" rotation="130.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1519.69" ytl="1455.44" xbr="1530.20" ybr="1465.43" rotation="131.80" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1339.26" ytl="782.76" xbr="1510.55" ybr="937.82" rotation="53.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="975.63" ytl="731.59" xbr="981.93" ybr="737.59" rotation="304.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1368.56" ytl="562.97" xbr="1379.83" ybr="573.05" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1127.83" ytl="641.25" xbr="1169.80" ybr="666.71" rotation="286.40" z_order="0">
+    </box>
+    <box label="P2_WP" source="file" occluded="0" xtl="1075.23" ytl="773.60" xbr="1188.60" ybr="849.00" rotation="354.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1384.99" ytl="627.76" xbr="1393.86" ybr="636.86" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1509.47" ytl="1470.17" xbr="1515.30" ybr="1475.66" rotation="132.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1271.01" ytl="629.61" xbr="1276.91" ybr="635.05" rotation="7.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1226.79" ytl="1517.70" xbr="1237.16" ybr="1527.99" rotation="184.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1693.24" ytl="1085.05" xbr="1702.75" ybr="1093.99" rotation="90.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1394.13" ytl="993.00" xbr="1400.56" ybr="999.03" rotation="7.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1351.28" ytl="738.76" xbr="1357.18" ybr="744.20" rotation="2.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1371.13" ytl="1502.15" xbr="1377.96" ybr="1508.79" rotation="179.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1217.00" ytl="677.70" xbr="1325.19" ybr="786.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1578.65" ytl="1412.64" xbr="1584.38" ybr="1417.76" rotation="136.00" z_order="0">
+    </box>
+    <box label="P3_FM" source="file" occluded="0" xtl="1459.00" ytl="769.94" xbr="1464.70" ybr="777.49" rotation="356.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1390.63" ytl="593.20" xbr="1399.50" ybr="602.30" z_order="0">
+    </box>
+    <tag label="P2_LOC" source="file">
+    </tag>
+    <tag label="P1_FL" source="file">
+    </tag>
+    <tag label="P1_ML" source="file">
+    </tag>
+    <tag label="P2_DC" source="manual">
+    </tag>
+  </image>
+  <image id="2717" name="FMD_PROD/PRODUCTION-20260925/20241204_223820_L25_C1_1.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1504.52" ytl="1539.72" xbr="1508.76" ybr="1546.78" rotation="162.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1191.56" ytl="744.54" xbr="1198.02" ybr="751.52" rotation="314.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1144.48" ytl="780.20" xbr="1152.66" ybr="787.56" rotation="312.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1547.79" ytl="1533.37" xbr="1553.36" ybr="1538.90" rotation="160.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1130.07" ytl="811.96" xbr="1135.89" ybr="817.28" rotation="311.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1177.73" ytl="761.96" xbr="1183.79" ybr="767.81" rotation="314.00" z_order="0">
+    </box>
+    <tag label="P2_DC" source="manual">
+    </tag>
+  </image>
+  <image id="2718" name="FMD_PROD/PRODUCTION-20260925/20241204_223820_L25_C2_1.bmp" width="2448" height="2048">
+    <tag label="P1_COC" source="file">
+    </tag>
+  </image>
+  <image id="2719" name="FMD_PROD/PRODUCTION-20260925/20241204_223820_L25_C3_1.bmp" width="2448" height="2048">
+    <tag label="P1_COC" source="file">
+    </tag>
+  </image>
+  <image id="2720" name="FMD_PROD/PRODUCTION-20260925/20241204_223820_L25_C4_1.bmp" width="2448" height="2048">
+    <tag label="P1_COC" source="file">
+    </tag>
+  </image>
+  <image id="2721" name="FMD_PROD/PRODUCTION-20260925/20241204_223820_L25_C5_1.bmp" width="2448" height="2048">
+    <tag label="P1_COC" source="file">
+    </tag>
+  </image>
+  <image id="2722" name="FMD_PROD/PRODUCTION-20260925/20241204_223820_L25_C6_1.bmp" width="2448" height="2048">
+    <tag label="P1_COC" source="file">
+    </tag>
+  </image>
+  <image id="2723" name="FMD_PROD/PRODUCTION-20260925/20241204_223820_L25_C8_1.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="860.70" ytl="636.97" xbr="866.92" ybr="643.05" rotation="18.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="980.87" ytl="653.24" xbr="986.89" ybr="659.40" rotation="24.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="951.92" ytl="643.65" xbr="959.72" ybr="652.05" rotation="29.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1037.62" ytl="674.43" xbr="1042.85" ybr="679.54" rotation="36.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="958.70" ytl="957.30" xbr="968.12" ybr="967.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="869.74" ytl="642.03" xbr="874.92" ybr="647.10" rotation="18.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="900.89" ytl="638.33" xbr="907.11" ybr="644.41" rotation="16.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="944.71" ytl="636.18" xbr="950.52" ybr="641.99" rotation="29.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="885.85" ytl="642.45" xbr="892.07" ybr="648.53" rotation="14.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1073.52" ytl="687.49" xbr="1079.55" ybr="693.65" rotation="24.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1083.72" ytl="689.93" xbr="1089.75" ybr="696.09" rotation="24.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="919.75" ytl="642.97" xbr="925.96" ybr="649.05" rotation="29.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="946.57" ytl="693.49" xbr="952.04" ybr="699.06" rotation="24.50" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1056.24" ytl="661.90" xbr="1070.33" ybr="669.22" rotation="39.20" z_order="0">
+    </box>
+    <tag label="P2_DC" source="manual">
+    </tag>
+    <tag label="P1_COC" source="manual">
+    </tag>
+  </image>
+  <image id="2724" name="FMD_PROD/PRODUCTION-20260925/20241204_225719_L24_C11_9805_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1064.52" ytl="865.56" xbr="1076.01" ybr="876.86" rotation="271.20" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2725" name="FMD_PROD/PRODUCTION-20260925/20241204_225719_L24_C13_9864_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="943.18" ytl="1061.30" xbr="948.24" ybr="1066.12" rotation="266.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1541.01" ytl="1242.12" xbr="1546.31" ybr="1247.22" rotation="126.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="850.19" ytl="747.75" xbr="857.01" ybr="753.83" rotation="350.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1053.72" ytl="743.33" xbr="1065.90" ybr="755.74" rotation="349.90" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2726" name="FMD_PROD/PRODUCTION-20260925/20241204_225719_L24_C14_9859_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1127.98" ytl="785.07" xbr="1138.80" ybr="796.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1179.56" ytl="1110.03" xbr="1184.98" ybr="1115.70" rotation="191.30" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2727" name="FMD_PROD/PRODUCTION-20260925/20241204_225719_L24_C7_9337_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="994.98" ytl="957.77" xbr="1010.65" ybr="970.81" rotation="230.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1388.26" ytl="747.91" xbr="1393.30" ybr="753.08" rotation="21.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1037.74" ytl="866.18" xbr="1042.78" ybr="871.35" rotation="268.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1295.13" ytl="1124.23" xbr="1300.30" ybr="1129.27" rotation="178.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1317.25" ytl="1218.39" xbr="1322.45" ybr="1223.08" rotation="164.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1258.70" ytl="1160.23" xbr="1263.74" ybr="1165.40" rotation="179.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1055.67" ytl="941.36" xbr="1076.58" ybr="960.61" rotation="239.90" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2728" name="FMD_PROD/PRODUCTION-20260925/20241204_225719_L24_C8_9499_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1178.46" ytl="1195.80" xbr="1183.49" ybr="1200.77" rotation="179.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1343.31" ytl="882.58" xbr="1348.34" ybr="887.55" rotation="40.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1314.19" ytl="954.33" xbr="1319.82" ybr="959.76" rotation="125.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1031.79" ytl="702.95" xbr="1036.82" ybr="707.92" rotation="326.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1191.71" ytl="933.97" xbr="1196.74" ybr="938.94" rotation="1.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1026.84" ytl="780.46" xbr="1031.87" ybr="785.43" rotation="308.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1372.71" ytl="1026.93" xbr="1377.74" ybr="1031.89" rotation="135.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1249.08" ytl="617.67" xbr="1254.11" ybr="622.64" rotation="1.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1087.09" ytl="1192.21" xbr="1092.12" ybr="1197.17" rotation="201.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1341.88" ytl="996.82" xbr="1346.91" ybr="1001.79" rotation="143.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1548.40" ytl="863.34" xbr="1553.43" ybr="868.30" rotation="46.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1017.47" ytl="704.69" xbr="1022.50" ybr="709.66" rotation="318.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1125.87" ytl="924.64" xbr="1132.05" ybr="930.45" rotation="276.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1149.53" ytl="834.49" xbr="1154.50" ybr="839.51" rotation="311.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1040.57" ytl="991.29" xbr="1051.88" ybr="1002.94" rotation="260.30" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2729" name="FMD_PROD/PRODUCTION-20260925/20241204_225719_L24_C9_9033_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1312.80" ytl="863.14" xbr="1317.77" ybr="868.17" rotation="58.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1230.63" ytl="1026.67" xbr="1235.60" ybr="1031.69" rotation="142.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1275.48" ytl="990.16" xbr="1280.69" ybr="995.38" rotation="180.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1243.50" ytl="1219.83" xbr="1248.53" ybr="1224.80" rotation="180.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1287.02" ytl="1086.22" xbr="1291.99" ybr="1091.25" rotation="142.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1293.59" ytl="998.31" xbr="1298.56" ybr="1003.34" rotation="142.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1209.53" ytl="1042.84" xbr="1215.24" ybr="1048.60" rotation="180.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="972.34" ytl="818.40" xbr="977.69" ybr="823.75" rotation="270.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="933.43" ytl="978.23" xbr="939.09" ybr="983.38" rotation="271.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1317.50" ytl="876.34" xbr="1322.47" ybr="881.37" rotation="75.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1136.92" ytl="1015.55" xbr="1143.42" ybr="1021.66" rotation="180.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="971.38" ytl="1004.10" xbr="976.40" ybr="1009.07" rotation="232.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1095.74" ytl="1056.22" xbr="1102.23" ybr="1062.34" rotation="180.50" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2730" name="FMD_PROD/PRODUCTION-20260925/20241204_225726_L24_C11_9915_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1084.75" ytl="891.78" xbr="1096.19" ybr="903.67" rotation="326.00" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2731" name="FMD_PROD/PRODUCTION-20260925/20241204_225726_L24_C12_9982_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1160.80" ytl="796.62" xbr="1172.55" ybr="808.73" rotation="358.20" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2732" name="FMD_PROD/PRODUCTION-20260925/20241204_225807_L24_C9_9744_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1009.08" ytl="1016.97" xbr="1020.40" ybr="1027.17" rotation="239.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1431.62" ytl="1024.97" xbr="1437.06" ybr="1030.41" rotation="150.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1065.67" ytl="889.12" xbr="1070.70" ybr="894.09" rotation="276.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1415.48" ytl="1084.91" xbr="1420.45" ybr="1089.94" rotation="133.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1152.77" ytl="769.90" xbr="1157.74" ybr="774.93" rotation="358.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1099.92" ytl="1196.23" xbr="1104.89" ybr="1201.26" rotation="201.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="945.49" ytl="727.23" xbr="950.46" ybr="732.26" rotation="322.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1382.77" ytl="1177.09" xbr="1387.74" ybr="1182.12" rotation="157.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1157.94" ytl="1008.44" xbr="1162.97" ybr="1013.41" rotation="232.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1062.69" ytl="985.84" xbr="1085.19" ybr="1004.33" rotation="238.90" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2733" name="FMD_PROD/PRODUCTION-20260925/20241204_225917_L25_C12_9962.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1064.81" ytl="854.48" xbr="1075.85" ybr="865.63" rotation="326.20" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1071.07" ytl="994.72" xbr="1085.77" ybr="1005.21" rotation="246.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1444.96" ytl="792.79" xbr="1455.61" ybr="805.18" rotation="71.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1034.99" ytl="823.28" xbr="1044.87" ybr="832.91" rotation="324.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1107.79" ytl="1116.32" xbr="1115.62" ybr="1123.86" rotation="246.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="998.63" ytl="759.42" xbr="1011.02" ybr="771.72" rotation="315.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1140.52" ytl="931.50" xbr="1162.69" ybr="954.26" rotation="243.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1401.40" ytl="634.92" xbr="1412.10" ybr="644.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="888.99" ytl="935.53" xbr="897.59" ybr="940.94" rotation="286.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1011.98" ytl="717.28" xbr="1018.02" ybr="723.32" rotation="351.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1219.20" ytl="1493.23" xbr="1228.69" ybr="1502.66" rotation="201.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1482.36" ytl="763.29" xbr="1488.62" ybr="769.44" rotation="63.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="990.94" ytl="778.18" xbr="996.01" ybr="783.47" rotation="317.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1045.95" ytl="800.50" xbr="1053.93" ybr="808.21" rotation="10.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1051.86" ytl="915.71" xbr="1058.49" ybr="922.52" rotation="248.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="895.64" ytl="950.55" xbr="904.24" ybr="958.98" rotation="283.00" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1004.86" ytl="811.22" xbr="1024.88" ybr="841.80" rotation="286.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1409.81" ytl="584.40" xbr="1423.40" ybr="595.23" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1110.31" ytl="988.08" xbr="1428.41" ybr="1215.81" rotation="245.70" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1030.57" ytl="838.43" xbr="1046.68" ybr="847.75" rotation="192.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1543.76" ytl="1033.76" xbr="1550.84" ybr="1040.63" rotation="82.80" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1000.36" ytl="799.02" xbr="1012.63" ybr="806.03" rotation="321.40" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1016.37" ytl="854.37" xbr="1025.92" ybr="859.59" rotation="252.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1090.83" ytl="882.55" xbr="1105.70" ybr="896.97" rotation="329.10" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="980.30" ytl="751.36" xbr="998.57" ybr="768.11" rotation="314.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1288.73" ytl="1545.71" xbr="1304.76" ybr="1559.88" rotation="186.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1077.20" ytl="873.20" xbr="1086.74" ybr="883.36" rotation="330.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1102.32" ytl="983.00" xbr="1110.19" ybr="990.87" rotation="248.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1086.01" ytl="675.27" xbr="1093.64" ybr="681.82" rotation="340.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1172.44" ytl="922.34" xbr="1179.67" ybr="928.63" rotation="338.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="975.53" ytl="772.74" xbr="980.60" ybr="778.03" rotation="313.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1172.81" ytl="1360.43" xbr="1229.14" ybr="1415.56" rotation="227.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1058.29" ytl="680.62" xbr="1066.90" ybr="687.43" rotation="29.20" z_order="0">
+    </box>
+    <tag label="P2_LOC" source="file">
+    </tag>
+    <tag label="P1_ML" source="file">
+    </tag>
+    <tag label="P1_FL" source="file">
+    </tag>
+    <tag label="P2_DC" source="manual">
+    </tag>
+  </image>
+  <image id="2734" name="FMD_PROD/PRODUCTION-20260925/20241204_225950_L24_C13_9762_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1057.64" ytl="805.20" xbr="1071.04" ybr="817.64" rotation="269.10" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2735" name="FMD_PROD/PRODUCTION-20260925/20241204_225950_L24_C9_9534_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1040.15" ytl="996.60" xbr="1046.65" ybr="1002.54" rotation="264.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1029.07" ytl="1005.50" xbr="1034.10" ybr="1010.47" rotation="232.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1336.23" ytl="740.38" xbr="1345.30" ybr="749.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1033.62" ytl="979.88" xbr="1038.95" ybr="985.16" rotation="267.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1512.46" ytl="995.77" xbr="1517.43" ybr="1000.80" rotation="93.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1113.98" ytl="1019.25" xbr="1119.01" ybr="1024.22" rotation="232.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1403.23" ytl="946.77" xbr="1441.31" ybr="984.63" rotation="134.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="967.26" ytl="868.75" xbr="972.23" ybr="873.77" rotation="322.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1043.68" ytl="1121.69" xbr="1048.71" ybr="1126.66" rotation="232.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1359.43" ytl="1120.10" xbr="1364.53" ybr="1125.00" rotation="147.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1302.70" ytl="916.52" xbr="1307.67" ybr="921.55" rotation="72.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1031.27" ytl="1126.24" xbr="1036.30" ybr="1131.21" rotation="232.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1040.42" ytl="983.43" xbr="1051.87" ybr="994.89" rotation="266.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2736" name="FMD_PROD/PRODUCTION-20260925/20241204_225957_L24_C12_9056_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1501.29" ytl="1153.55" xbr="1506.26" ybr="1158.58" rotation="127.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1158.56" ytl="810.04" xbr="1169.10" ybr="822.31" rotation="349.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1083.31" ytl="740.12" xbr="1088.70" ybr="745.80" rotation="347.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1067.94" ytl="1129.74" xbr="1072.94" ybr="1134.96" rotation="213.50" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2737" name="FMD_PROD/PRODUCTION-20260925/20241204_230144_L24_C11_9999_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1078.60" ytl="893.00" xbr="1088.00" ybr="902.10" z_order="0">
+    </box>
+    <box label="P3_FIB" source="file" occluded="0" xtl="1254.80" ytl="624.70" xbr="1335.86" ybr="633.80" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+    <tag label="P3_FIB_MICRON_THRESHOLD" source="auto">
+    </tag>
+  </image>
+  <image id="2738" name="FMD_PROD/PRODUCTION-20260925/20241204_230144_L24_C3_9767_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1064.14" ytl="940.89" xbr="1074.04" ybr="950.53" rotation="266.50" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2739" name="FMD_PROD/PRODUCTION-20260925/20241204_230144_L24_C4_9606_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1264.19" ytl="458.26" xbr="1271.07" ybr="464.61" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2740" name="FMD_PROD/PRODUCTION-20260925/20241204_230144_L24_C5_9671_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1011.58" ytl="894.01" xbr="1019.60" ybr="901.82" rotation="270.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2741" name="FMD_PROD/PRODUCTION-20260925/20241204_230144_L24_C7_9948_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1034.79" ytl="933.98" xbr="1045.04" ybr="943.52" rotation="269.90" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2742" name="FMD_PROD/PRODUCTION-20260925/20241204_230254_L24_C10_9491_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1022.21" ytl="958.70" xbr="1032.96" ybr="969.11" rotation="271.40" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2743" name="FMD_PROD/PRODUCTION-20260925/20241204_230254_L24_C13_9498_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1147.97" ytl="711.60" xbr="1153.10" ybr="716.70" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2744" name="FMD_PROD/PRODUCTION-20260925/20241204_230254_L24_C9_9882_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1076.12" ytl="999.95" xbr="1090.92" ybr="1017.93" rotation="270.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1166.57" ytl="840.73" xbr="1171.54" ybr="845.76" rotation="322.50" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2745" name="FMD_PROD/PRODUCTION-20260925/20241204_230404_L24_C11_9532_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1123.36" ytl="862.18" xbr="1131.46" ybr="870.73" rotation="267.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2746" name="FMD_PROD/PRODUCTION-20260925/20241204_230404_L24_C13_9193_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1081.53" ytl="765.66" xbr="1092.40" ybr="775.35" rotation="325.90" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2747" name="FMD_PROD/PRODUCTION-20260925/20241204_230404_L24_C7_9547_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1094.90" ytl="939.97" xbr="1102.96" ybr="947.58" rotation="233.70" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2748" name="FMD_PROD/PRODUCTION-20260925/20241204_230404_L24_C8_9169_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1084.54" ytl="988.94" xbr="1093.02" ybr="996.76" rotation="217.30" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2749" name="FMD_PROD/PRODUCTION-20260925/20241204_230417_L24_C11_9306_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1071.36" ytl="854.46" xbr="1081.42" ybr="865.00" rotation="331.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1361.55" ytl="969.25" xbr="1366.52" ybr="974.28" rotation="93.20" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2750" name="FMD_PROD/PRODUCTION-20260925/20241204_230417_L24_C13_9985_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1282.84" ytl="712.49" xbr="1287.81" ybr="717.52" rotation="1.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1056.66" ytl="772.16" xbr="1068.55" ybr="784.10" rotation="317.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1101.23" ytl="1226.91" xbr="1106.26" ybr="1231.88" rotation="214.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2751" name="FMD_PROD/PRODUCTION-20260925/20241204_230424_L24_C13_9206_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1172.82" ytl="1082.89" xbr="1177.79" ybr="1087.92" rotation="185.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1060.49" ytl="742.62" xbr="1072.25" ybr="755.00" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2752" name="FMD_PROD/PRODUCTION-20260925/20241204_230424_L24_C5_9988_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1233.71" ytl="812.26" xbr="1238.60" ybr="817.66" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1134.46" ytl="531.00" xbr="1139.43" ybr="536.03" rotation="351.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1103.35" ytl="979.55" xbr="1108.38" ybr="984.52" rotation="232.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1033.43" ytl="858.20" xbr="1047.09" ybr="871.24" rotation="272.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1217.05" ytl="661.09" xbr="1222.02" ybr="666.12" rotation="2.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1368.63" ytl="1102.01" xbr="1373.60" ybr="1107.04" rotation="142.50" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2753" name="FMD_PROD/PRODUCTION-20260925/20241204_231149_L24_C11_9964_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1380.35" ytl="952.84" xbr="1386.19" ybr="958.62" rotation="132.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1109.08" ytl="843.44" xbr="1120.60" ybr="853.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1113.54" ytl="885.64" xbr="1118.63" ybr="890.38" rotation="271.50" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2754" name="FMD_PROD/PRODUCTION-20260925/20241204_231149_L24_C13_9664_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1098.46" ytl="719.70" xbr="1110.80" ybr="732.30" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2755" name="FMD_PROD/PRODUCTION-20260925/20241204_231149_L24_C7_9730_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1253.60" ytl="728.61" xbr="1260.57" ybr="734.96" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1059.36" ytl="922.63" xbr="1070.62" ybr="932.95" rotation="262.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1285.70" ytl="1047.26" xbr="1290.70" ybr="1052.08" rotation="161.20" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2756" name="FMD_PROD/PRODUCTION-20260925/20241204_231149_L24_C9_9734_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1219.08" ytl="1154.82" xbr="1224.28" ybr="1160.22" rotation="180.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1248.78" ytl="945.97" xbr="1258.85" ybr="956.36" rotation="180.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1372.12" ytl="968.78" xbr="1377.82" ybr="974.54" rotation="91.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1249.08" ytl="1065.26" xbr="1253.78" ybr="1070.26" rotation="179.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1246.37" ytl="1116.30" xbr="1251.07" ybr="1121.30" rotation="179.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1081.50" ytl="1000.14" xbr="1093.27" ybr="1012.07" rotation="224.10" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2757" name="FMD_PROD/PRODUCTION-20260925/20241204_231154_L24_C10_9715_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1103.18" ytl="738.98" xbr="1108.54" ybr="743.82" rotation="338.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1038.32" ytl="915.38" xbr="1049.52" ybr="925.94" rotation="269.30" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2758" name="FMD_PROD/PRODUCTION-20260925/20241204_231154_L24_C12_9831_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1172.17" ytl="799.40" xbr="1184.10" ybr="811.40" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2759" name="FMD_PROD/PRODUCTION-20260925/20241204_231154_L24_C7_9363_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1610.20" ytl="838.82" xbr="1615.59" ybr="843.64" rotation="87.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2760" name="FMD_PROD/PRODUCTION-20260925/20241204_231514_L25_C1_9966.bmp" width="2448" height="2048">
+    <tag label="P1_MPP" source="file">
+    </tag>
+    <tag label="P2_DC" source="manual">
+    </tag>
+  </image>
+  <image id="2761" name="FMD_PROD/PRODUCTION-20260925/20241204_231635_L25_C4_9570.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1287.52" ytl="1302.31" xbr="1292.62" ybr="1307.63" rotation="178.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1018.27" ytl="719.80" xbr="1025.18" ybr="726.28" rotation="312.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1388.39" ytl="1351.80" xbr="1395.19" ybr="1357.87" rotation="126.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="924.42" ytl="867.92" xbr="929.43" ybr="872.66" rotation="297.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1458.02" ytl="1095.15" xbr="1469.69" ybr="1106.49" rotation="121.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1243.26" ytl="618.44" xbr="1249.28" ybr="623.92" rotation="359.70" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1395.35" ytl="1344.38" xbr="1401.14" ybr="1352.88" rotation="175.90" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="983.58" ytl="739.83" xbr="994.56" ybr="746.11" rotation="317.40" z_order="0">
+    </box>
+    <tag label="P1_FL" source="file">
+    </tag>
+    <tag label="P2_LOC" source="file">
+    </tag>
+    <tag label="P1_ML" source="file">
+    </tag>
+    <tag label="P2_DC" source="manual">
+    </tag>
+  </image>
+  <image id="2762" name="FMD_PROD/PRODUCTION-20260925/20241204_232348_L24_C10_9905_1.0000.bmp" width="2448" height="2048">
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2763" name="FMD_PROD/PRODUCTION-20260925/20241204_232348_L24_C11_9983_1.0000.bmp" width="2448" height="2048">
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2764" name="FMD_PROD/PRODUCTION-20260925/20241204_232348_L24_C12_9956_1.0000.bmp" width="2448" height="2048">
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2765" name="FMD_PROD/PRODUCTION-20260925/20241204_232348_L24_C13_9941_1.0000.bmp" width="2448" height="2048">
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2766" name="FMD_PROD/PRODUCTION-20260925/20241204_232348_L24_C14_9928_1.0000.bmp" width="2448" height="2048">
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2767" name="FMD_PROD/PRODUCTION-20260925/20241204_232348_L24_C15_9825_1.0000.bmp" width="2448" height="2048">
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2768" name="FMD_PROD/PRODUCTION-20260925/20241204_232348_L24_C3_9350_1.0000.bmp" width="2448" height="2048">
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2769" name="FMD_PROD/PRODUCTION-20260925/20241204_232348_L24_C4_9436_1.0000.bmp" width="2448" height="2048">
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2770" name="FMD_PROD/PRODUCTION-20260925/20241204_232348_L24_C5_9882_1.0000.bmp" width="2448" height="2048">
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2771" name="FMD_PROD/PRODUCTION-20260925/20241204_232348_L24_C6_9621_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1083.47" ytl="921.87" xbr="1090.51" ybr="929.47" rotation="258.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1035.48" ytl="910.68" xbr="1077.78" ybr="951.81" rotation="259.30" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2772" name="FMD_PROD/PRODUCTION-20260925/20241204_232348_L24_C7_9824_1.0000.bmp" width="2448" height="2048">
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2773" name="FMD_PROD/PRODUCTION-20260925/20241204_232348_L24_C8_9622_1.0000.bmp" width="2448" height="2048">
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2774" name="FMD_PROD/PRODUCTION-20260925/20241204_232348_L24_C9_9993_1.0000.bmp" width="2448" height="2048">
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2775" name="FMD_PROD/PRODUCTION-20260925/20241204_232748_L24_C11_9584_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="935.66" ytl="910.25" xbr="941.53" ybr="915.58" rotation="271.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1121.62" ytl="861.33" xbr="1131.92" ybr="871.77" rotation="310.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1432.03" ytl="1126.38" xbr="1437.66" ybr="1131.56" rotation="143.50" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2776" name="FMD_PROD/PRODUCTION-20260925/20241204_232748_L24_C14_9273_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1304.96" ytl="1081.57" xbr="1310.06" ybr="1086.44" rotation="170.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1276.73" ytl="847.00" xbr="1283.00" ybr="853.27" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2777" name="FMD_PROD/PRODUCTION-20260925/20241204_232753_L24_C11_9965_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1109.71" ytl="894.71" xbr="1120.40" ybr="905.26" rotation="272.30" z_order="0">
+    </box>
+    <box label="P3_FM" source="file" occluded="0" xtl="1543.05" ytl="1150.78" xbr="1550.64" ybr="1156.60" rotation="115.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1176.52" ytl="1020.09" xbr="1181.60" ybr="1025.37" rotation="209.50" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2778" name="FMD_PROD/PRODUCTION-20260925/20241204_232753_L24_C13_9844_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1075.97" ytl="709.53" xbr="1088.63" ybr="721.97" rotation="277.40" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2779" name="FMD_PROD/PRODUCTION-20260925/20241204_232753_L24_C14_9518_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1106.65" ytl="720.15" xbr="1111.66" ybr="724.81" rotation="271.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1225.31" ytl="1037.47" xbr="1230.31" ybr="1042.47" rotation="218.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1002.57" ytl="892.11" xbr="1007.57" ybr="897.11" rotation="240.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1166.72" ytl="763.73" xbr="1177.22" ybr="774.65" rotation="269.90" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2780" name="FMD_PROD/PRODUCTION-20260925/20241204_232933_L24_C12_9048_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1214.72" ytl="792.00" xbr="1228.20" ybr="806.00" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2781" name="FMD_PROD/PRODUCTION-20260925/20241204_232933_L24_C7_9160_1.0000.bmp" width="2448" height="2048">
+    <box label="P3_FM" source="manual" occluded="0" xtl="1101.00" ytl="621.04" xbr="1112.35" ybr="627.87" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2782" name="FMD_PROD/PRODUCTION-20260925/20241204_232933_L24_C8_9089_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1171.43" ytl="936.46" xbr="1213.91" ybr="971.40" rotation="268.40" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2783" name="FMD_PROD/PRODUCTION-20260925/20241204_233209_L25_C8_9950.bmp" width="2448" height="2048">
+    <tag label="P1_MPP" source="file">
+    </tag>
+    <tag label="P2_DC" source="manual">
+    </tag>
+  </image>
+  <image id="2784" name="FMD_PROD/PRODUCTION-20260925/20241204_233523_L24_C13_9327_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1068.06" ytl="737.74" xbr="1080.25" ybr="749.07" rotation="270.50" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2785" name="FMD_PROD/PRODUCTION-20260925/20241204_234213_L24_C12_9257_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1206.19" ytl="779.62" xbr="1218.66" ybr="791.68" rotation="274.40" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2786" name="FMD_PROD/PRODUCTION-20260925/20241204_234213_L24_C13_9190_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1121.11" ytl="715.82" xbr="1132.94" ybr="727.10" rotation="272.10" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2787" name="FMD_PROD/PRODUCTION-20260925/20241204_234213_L24_C14_9138_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1181.28" ytl="752.50" xbr="1191.46" ybr="762.95" rotation="274.40" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2788" name="FMD_PROD/PRODUCTION-20260925/20241204_235752_L24_C13_9249_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1101.73" ytl="734.47" xbr="1113.58" ybr="746.01" rotation="274.90" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2789" name="FMD_PROD/PRODUCTION-20260925/20241204_235754_L25_C1_9876.bmp" width="2448" height="2048">
+    <tag label="P2_DC" source="manual">
+    </tag>
+    <tag label="P1_MPP" source="file">
+    </tag>
+  </image>
+  <image id="2790" name="FMD_PROD/PRODUCTION-20260925/20241204_235759_L24_C11_9557_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1110.47" ytl="838.33" xbr="1122.37" ybr="850.39" rotation="274.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1396.04" ytl="846.09" xbr="1401.15" ybr="850.96" rotation="88.80" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2791" name="FMD_PROD/PRODUCTION-20260925/20241204_235759_L24_C14_9200_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1170.27" ytl="731.76" xbr="1182.75" ybr="743.82" rotation="5.80" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2792" name="FMD_PROD/PRODUCTION-20260925/20241204_235759_L24_C3_9963_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1221.79" ytl="1100.98" xbr="1228.92" ybr="1108.27" rotation="181.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1261.23" ytl="983.76" xbr="1268.36" ybr="991.05" rotation="181.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1533.24" ytl="699.21" xbr="1538.48" ybr="703.81" rotation="73.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1233.31" ytl="716.88" xbr="1239.21" ybr="722.48" rotation="352.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1063.29" ytl="888.15" xbr="1076.28" ybr="899.04" rotation="286.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1277.81" ytl="1102.59" xbr="1284.36" ybr="1108.59" rotation="181.70" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2793" name="FMD_PROD/PRODUCTION-20260925/20241204_235759_L24_C7_9054_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="929.43" ytl="1054.35" xbr="934.61" ybr="1059.66" rotation="220.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1468.27" ytl="848.34" xbr="1474.12" ybr="854.03" rotation="89.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1443.80" ytl="978.15" xbr="1449.82" ybr="983.99" rotation="89.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1117.51" ytl="911.28" xbr="1146.26" ybr="935.16" rotation="240.40" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2794" name="FMD_PROD/PRODUCTION-20260925/20241204_235847_L24_C11_9907_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1094.96" ytl="858.69" xbr="1105.59" ybr="869.10" rotation="269.50" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2795" name="FMD_PROD/PRODUCTION-20260925/20241204_235847_L24_C14_9212_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1161.27" ytl="776.70" xbr="1172.62" ybr="787.86" rotation="324.00" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2796" name="FMD_PROD/PRODUCTION-20260925/20241204_235847_L24_C4_9746_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1015.33" ytl="867.92" xbr="1026.10" ybr="877.72" rotation="268.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1021.94" ytl="896.44" xbr="1033.37" ybr="906.88" rotation="268.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="988.63" ytl="889.65" xbr="998.95" ybr="899.45" rotation="268.10" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2797" name="FMD_PROD/PRODUCTION-20260925/20241204_235847_L24_C5_9325_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1045.83" ytl="853.81" xbr="1057.10" ybr="864.48" rotation="281.50" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2798" name="FMD_PROD/PRODUCTION-20260925/20241204_235847_L24_C7_9333_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1174.60" ytl="739.44" xbr="1181.30" ybr="746.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="968.27" ytl="867.98" xbr="977.53" ybr="877.62" rotation="269.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2799" name="FMD_PROD/PRODUCTION-20260925/20241204_235910_L24_C9_9952_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1073.15" ytl="1068.76" xbr="1083.74" ybr="1079.37" rotation="229.80" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2800" name="FMD_PROD/PRODUCTION-20260925/20241204_235911_L24_C13_9181_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1141.35" ytl="828.54" xbr="1153.59" ybr="841.02" rotation="267.10" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2801" name="FMD_PROD/PRODUCTION-20260925/20241204_235911_L24_C14_9143_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1203.00" ytl="751.43" xbr="1215.50" ybr="763.20" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2802" name="FMD_PROD/PRODUCTION-20260925/20241204_235916_L24_C12_9316_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1153.23" ytl="801.12" xbr="1165.98" ybr="813.97" rotation="269.90" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2803" name="FMD_PROD/PRODUCTION-20260925/20241204_235916_L24_C14_9602_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1119.01" ytl="829.06" xbr="1130.14" ybr="839.56" rotation="268.10" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2804" name="FMD_PROD/PRODUCTION-20260925/20241204_235916_L24_C15_9865_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1070.03" ytl="763.56" xbr="1081.65" ybr="773.85" rotation="268.10" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2805" name="FMD_PROD/PRODUCTION-20260925/20241205_000005_L24_C10_9730_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1038.68" ytl="952.62" xbr="1049.04" ybr="962.74" rotation="268.10" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2806" name="FMD_PROD/PRODUCTION-20260925/20241205_000005_L24_C11_9966_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1112.83" ytl="849.24" xbr="1122.92" ybr="859.04" rotation="268.10" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2807" name="FMD_PROD/PRODUCTION-20260925/20241205_000005_L24_C12_9768_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1195.24" ytl="797.18" xbr="1200.40" ybr="802.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1182.68" ytl="783.55" xbr="1194.41" ybr="795.31" rotation="268.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="692.30" ytl="776.27" xbr="700.59" ybr="783.43" rotation="276.20" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2808" name="FMD_PROD/PRODUCTION-20260925/20241205_000005_L24_C13_9465_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1124.40" ytl="760.52" xbr="1135.42" ybr="771.49" rotation="268.10" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2809" name="FMD_PROD/PRODUCTION-20260925/20241205_000005_L24_C4_9084_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1031.88" ytl="907.35" xbr="1042.20" ybr="917.23" rotation="268.10" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2810" name="FMD_PROD/PRODUCTION-20260925/20241205_000005_L24_C7_9126_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1019.28" ytl="882.86" xbr="1024.96" ybr="888.31" rotation="268.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="857.39" ytl="725.18" xbr="863.08" ybr="730.63" rotation="285.00" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2811" name="FMD_PROD/PRODUCTION-20260925/20241205_000005_L24_C8_9504_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1076.44" ytl="1016.78" xbr="1086.64" ybr="1026.30" rotation="200.70" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2812" name="FMD_PROD/PRODUCTION-20260925/20241205_000005_L24_C9_9276_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1084.09" ytl="1091.34" xbr="1093.79" ybr="1101.23" rotation="212.50" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2813" name="FMD_PROD/PRODUCTION-20260925/20241205_001218_L24_C11_9361_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1083.44" ytl="861.83" xbr="1093.13" ybr="871.73" rotation="212.50" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2814" name="FMD_PROD/PRODUCTION-20260925/20241205_001218_L24_C12_9763_1.0000.bmp" width="2448" height="2048">
+    <box label="P3_FM" source="file" occluded="0" xtl="1388.50" ytl="1098.49" xbr="1392.56" ybr="1104.08" rotation="138.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1162.75" ytl="791.84" xbr="1175.67" ybr="804.57" rotation="324.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1565.15" ytl="737.58" xbr="1570.25" ybr="742.70" rotation="48.10" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1276.99" ytl="701.58" xbr="1281.99" ybr="706.58" rotation="7.80" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2815" name="FMD_PROD/PRODUCTION-20260925/20241205_001218_L24_C13_9702_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1731.40" ytl="784.56" xbr="1736.49" ybr="789.66" rotation="90.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1077.95" ytl="747.30" xbr="1091.04" ybr="759.27" rotation="289.00" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2816" name="FMD_PROD/PRODUCTION-20260925/20241205_001218_L24_C14_9994_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1160.49" ytl="756.11" xbr="1171.27" ybr="768.31" rotation="289.00" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2817" name="FMD_PROD/PRODUCTION-20260925/20241205_001218_L24_C1_9292_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1081.35" ytl="827.62" xbr="1086.80" ybr="832.64" rotation="289.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1345.28" ytl="902.51" xbr="1352.51" ybr="909.64" rotation="106.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1395.89" ytl="1096.41" xbr="1402.79" ybr="1103.06" rotation="140.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1189.86" ytl="878.62" xbr="1213.14" ybr="899.21" rotation="289.00" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2818" name="FMD_PROD/PRODUCTION-20260925/20241205_001218_L24_C8_9526_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1441.41" ytl="996.36" xbr="1446.60" ybr="1001.49" rotation="106.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1137.96" ytl="769.55" xbr="1145.19" ybr="776.69" rotation="302.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1075.18" ytl="1008.21" xbr="1085.90" ybr="1018.19" rotation="267.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1501.93" ytl="938.47" xbr="1507.04" ybr="944.12" rotation="88.80" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2819" name="FMD_PROD/PRODUCTION-20260925/20241205_001223_L24_C11_9985_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1139.99" ytl="873.61" xbr="1150.84" ybr="884.30" rotation="347.40" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2820" name="FMD_PROD/PRODUCTION-20260925/20241205_001223_L24_C12_9797_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1218.40" ytl="759.94" xbr="1230.44" ybr="771.90" rotation="359.90" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2821" name="FMD_PROD/PRODUCTION-20260925/20241205_001223_L24_C13_9961_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1132.30" ytl="727.20" xbr="1142.99" ybr="739.80" rotation="359.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1052.47" ytl="946.62" xbr="1058.05" ybr="951.81" rotation="267.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1192.42" ytl="950.13" xbr="1197.52" ybr="955.20" rotation="180.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="981.63" ytl="793.61" xbr="986.78" ybr="798.79" rotation="272.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2822" name="FMD_PROD/PRODUCTION-20260925/20241205_001223_L24_C14_9651_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1478.42" ytl="1023.69" xbr="1483.42" ybr="1028.89" rotation="138.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1224.65" ytl="728.41" xbr="1234.11" ybr="738.50" rotation="358.30" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2823" name="FMD_PROD/PRODUCTION-20260925/20241205_001223_L24_C15_9017_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1094.34" ytl="765.52" xbr="1105.37" ybr="775.86" rotation="267.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2824" name="FMD_PROD/PRODUCTION-20260925/20241205_001227_L24_C10_9879_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1154.26" ytl="935.19" xbr="1183.02" ybr="955.33" rotation="267.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2825" name="FMD_PROD/PRODUCTION-20260925/20241205_001227_L24_C11_9887_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1228.94" ytl="1095.28" xbr="1234.04" ybr="1100.39" rotation="190.50" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1106.09" ytl="856.88" xbr="1117.14" ybr="867.71" rotation="267.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2826" name="FMD_PROD/PRODUCTION-20260925/20241205_001227_L24_C12_9979_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1173.72" ytl="861.66" xbr="1195.44" ybr="889.43" rotation="287.70" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2827" name="FMD_PROD/PRODUCTION-20260925/20241205_001227_L24_C13_9997_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1221.39" ytl="1100.08" xbr="1226.49" ybr="1105.20" rotation="181.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1080.13" ytl="735.68" xbr="1091.91" ybr="747.04" rotation="269.30" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2828" name="FMD_PROD/PRODUCTION-20260925/20241205_001227_L24_C14_9997_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1140.54" ytl="783.42" xbr="1152.38" ybr="795.59" rotation="267.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2829" name="FMD_PROD/PRODUCTION-20260925/20241205_001227_L24_C15_9989_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1065.72" ytl="742.42" xbr="1077.08" ybr="752.15" rotation="288.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1406.82" ytl="809.23" xbr="1411.91" ybr="814.53" rotation="92.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2830" name="FMD_PROD/PRODUCTION-20260925/20241205_001227_L24_C2_9512_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1057.30" ytl="939.12" xbr="1068.45" ybr="949.46" rotation="267.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1239.10" ytl="1077.18" xbr="1244.96" ybr="1082.97" rotation="178.40" z_order="0">
+    </box>
+    <box label="P2_BC" source="file" occluded="0" xtl="1105.23" ytl="594.25" xbr="1109.86" ybr="601.55" rotation="95.70" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2831" name="FMD_PROD/PRODUCTION-20260925/20241205_001227_L24_C6_9954_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1376.44" ytl="965.26" xbr="1382.78" ybr="971.51" rotation="136.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1142.02" ytl="934.12" xbr="1152.73" ybr="946.18" rotation="264.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1090.64" ytl="1101.38" xbr="1096.35" ybr="1106.92" rotation="193.90" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2832" name="FMD_PROD/PRODUCTION-20260925/20241205_001227_L24_C7_9679_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1058.47" ytl="790.92" xbr="1064.43" ybr="796.47" rotation="267.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1450.51" ytl="968.16" xbr="1455.91" ybr="973.60" rotation="88.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1035.12" ytl="948.76" xbr="1040.23" ybr="953.86" rotation="268.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1459.35" ytl="1001.77" xbr="1464.99" ybr="1006.95" rotation="88.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1347.65" ytl="1143.38" xbr="1352.87" ybr="1148.65" rotation="144.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1420.61" ytl="895.04" xbr="1425.72" ybr="900.14" rotation="88.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1002.79" ytl="957.64" xbr="1008.92" ybr="963.33" rotation="268.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1071.30" ytl="939.74" xbr="1085.10" ybr="952.28" rotation="267.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2833" name="FMD_PROD/PRODUCTION-20260925/20241205_001227_L24_C9_9979_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1064.12" ytl="1030.14" xbr="1074.90" ybr="1040.46" rotation="247.80" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1182.05" ytl="898.70" xbr="1190.66" ybr="907.62" rotation="267.60" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1153.66" ytl="905.90" xbr="1163.25" ybr="914.92" rotation="267.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2834" name="FMD_PROD/PRODUCTION-20260925/20241205_001252_L24_C10_9441_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1047.64" ytl="924.76" xbr="1059.74" ybr="936.04" rotation="267.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2835" name="FMD_PROD/PRODUCTION-20260925/20241205_001252_L24_C12_9638_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1188.80" ytl="791.44" xbr="1201.03" ybr="803.12" rotation="270.20" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1137.88" ytl="1062.72" xbr="1143.25" ybr="1067.88" rotation="267.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2836" name="FMD_PROD/PRODUCTION-20260925/20241205_001252_L24_C13_9923_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1111.35" ytl="777.26" xbr="1123.34" ybr="788.54" rotation="267.60" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2837" name="FMD_PROD/PRODUCTION-20260925/20241205_001257_L24_C10_9995_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1052.73" ytl="949.42" xbr="1064.12" ybr="960.45" rotation="269.00" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2838" name="FMD_PROD/PRODUCTION-20260925/20241205_001257_L24_C11_9994_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1101.76" ytl="852.55" xbr="1113.68" ybr="864.08" rotation="269.30" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2839" name="FMD_PROD/PRODUCTION-20260925/20241205_001257_L24_C12_9953_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1196.52" ytl="775.32" xbr="1209.06" ybr="788.05" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2840" name="FMD_PROD/PRODUCTION-20260925/20241205_001257_L24_C13_9991_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1114.73" ytl="801.67" xbr="1127.93" ybr="813.29" rotation="308.30" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2841" name="FMD_PROD/PRODUCTION-20260925/20241205_001257_L24_C14_9987_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1142.27" ytl="770.24" xbr="1154.12" ybr="781.27" rotation="302.90" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2842" name="FMD_PROD/PRODUCTION-20260925/20241205_001257_L24_C15_9974_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1049.00" ytl="826.65" xbr="1062.21" ybr="837.88" rotation="270.30" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2843" name="FMD_PROD/PRODUCTION-20260925/20241205_001257_L24_C1_9372_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1212.58" ytl="886.06" xbr="1234.60" ybr="909.00" rotation="272.90" z_order="0">
+    </box>
+    <box label="P3_FIB" source="file" occluded="0" xtl="1403.63" ytl="1246.88" xbr="1588.52" ybr="1260.04" rotation="137.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1092.94" ytl="989.43" xbr="1098.05" ybr="994.55" rotation="200.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="886.85" ytl="888.98" xbr="892.52" ybr="894.58" rotation="267.70" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1100.08" ytl="934.38" xbr="1105.16" ybr="939.35" rotation="269.50" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+    <tag label="P3_FIB_MICRON_THRESHOLD" source="auto">
+    </tag>
+  </image>
+  <image id="2844" name="FMD_PROD/PRODUCTION-20260925/20241205_001257_L24_C4_9979_1.0000.bmp" width="2448" height="2048">
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2845" name="FMD_PROD/PRODUCTION-20260925/20241205_001257_L24_C6_9959_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BC" source="file" occluded="0" xtl="1523.62" ytl="1238.37" xbr="1526.65" ybr="1244.53" rotation="128.00" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1260.32" ytl="808.04" xbr="1281.42" ybr="828.90" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1096.34" ytl="906.48" xbr="1107.83" ybr="919.32" rotation="268.30" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2846" name="FMD_PROD/PRODUCTION-20260925/20241205_001257_L24_C7_9989_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1043.70" ytl="881.82" xbr="1056.60" ybr="895.01" rotation="268.70" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2847" name="FMD_PROD/PRODUCTION-20260925/20241205_001257_L24_C8_9828_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1174.90" ytl="776.28" xbr="1262.61" ybr="864.78" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1239.51" ytl="1116.72" xbr="1244.61" ybr="1121.95" rotation="181.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1308.46" ytl="790.93" xbr="1313.56" ybr="796.40" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1241.12" ytl="1059.64" xbr="1251.17" ybr="1068.98" rotation="180.80" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2848" name="FMD_PROD/PRODUCTION-20260925/20241205_001257_L24_C9_9881_1.0000.bmp" width="2448" height="2048">
+    <box label="P2_BB" source="file" occluded="0" xtl="1076.74" ytl="1025.90" xbr="1086.61" ybr="1035.83" rotation="228.30" z_order="0">
+    </box>
+    <box label="P2_BB" source="file" occluded="0" xtl="1005.50" ytl="954.01" xbr="1011.17" ybr="959.55" rotation="270.30" z_order="0">
+    </box>
+    <tag label="P1_NL" source="file">
+    </tag>
+  </image>
+  <image id="2849" name="FMD_PROD/PRODUCTION-20260925/20241205_012445_L25_C1_9966.bmp" width="2448" height="2048">
+    <tag label="P2_DC" source="manual">
+    </tag>
+    <tag label="P1_MPP" source="file">
+    </tag>
+  </image>
+</annotations>
