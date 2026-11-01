@@ -1,0 +1,301 @@
+{
+  "version": "v5",
+  "date": "2026-10-26",
+  "decision": "user 2026-10-26: maintain the approved EDA distribution; label space = Draft 2 codes + Clear; legacy classes excluded; gated object classes positive on the micron-gate tag only; the gate rule applies to the four gated classes only, so a picture is dropped only when it has no positive at all; Bubble Cluster 428",
+  "recipe": "iterative stratification (Sechidis 2011), two-way, content-md5 groups, no validation split",
+  "input": {
+    "resolved_labels": "D:/fmd-analysis/run/eda_full_20261029/resolved_labels.csv",
+    "resolved_labels_md5": "f61ea0b90df095ebe52d1332f8bfdb8a"
+  },
+  "rows": 7470,
+  "dropped": {
+    "legacy_only": 62,
+    "debris_without_gate_and_nothing_else": 85
+  },
+  "positives": {
+    "foreign_matter_micron_gate": 454,
+    "fiber_micron_gate": 362,
+    "extraneous_polymer_micron_gate": 135,
+    "hema_micron_gate": 151,
+    "bubble": 2171,
+    "bubble_cluster": 1132,
+    "wet_package": 314,
+    "missing_primary_package": 1428,
+    "multiple_lenses": 1426,
+    "no_lens": 326,
+    "cavity_off_center": 185,
+    "folded_lens": 333,
+    "lens_off_center": 1201,
+    "dirty_camera": 573,
+    "dirty_strobe": 33,
+    "low_dose": 677,
+    "view_obstructed": 63,
+    "package_misalignment": 33,
+    "bubble_scatter": 5,
+    "clear": 2117
+  },
+  "splits": {
+    "70_30": {
+      "r_train": 0.7,
+      "split_counts": {
+        "train": 5235,
+        "test": 2235
+      },
+      "per_class": {
+        "foreign_matter_micron_gate": {
+          "train": 298,
+          "test": 156,
+          "expect_train": 317.8,
+          "expect_test": 136.2
+        },
+        "fiber_micron_gate": {
+          "train": 248,
+          "test": 114,
+          "expect_train": 253.4,
+          "expect_test": 108.6
+        },
+        "extraneous_polymer_micron_gate": {
+          "train": 96,
+          "test": 39,
+          "expect_train": 94.5,
+          "expect_test": 40.5
+        },
+        "hema_micron_gate": {
+          "train": 110,
+          "test": 41,
+          "expect_train": 105.7,
+          "expect_test": 45.3
+        },
+        "bubble": {
+          "train": 1520,
+          "test": 651,
+          "expect_train": 1519.7,
+          "expect_test": 651.3
+        },
+        "bubble_cluster": {
+          "train": 785,
+          "test": 347,
+          "expect_train": 792.4,
+          "expect_test": 339.6
+        },
+        "wet_package": {
+          "train": 220,
+          "test": 94,
+          "expect_train": 219.8,
+          "expect_test": 94.2
+        },
+        "missing_primary_package": {
+          "train": 1000,
+          "test": 428,
+          "expect_train": 999.6,
+          "expect_test": 428.4
+        },
+        "multiple_lenses": {
+          "train": 998,
+          "test": 428,
+          "expect_train": 998.2,
+          "expect_test": 427.8
+        },
+        "no_lens": {
+          "train": 228,
+          "test": 98,
+          "expect_train": 228.2,
+          "expect_test": 97.8
+        },
+        "cavity_off_center": {
+          "train": 129,
+          "test": 56,
+          "expect_train": 129.5,
+          "expect_test": 55.5
+        },
+        "folded_lens": {
+          "train": 238,
+          "test": 95,
+          "expect_train": 233.1,
+          "expect_test": 99.9
+        },
+        "lens_off_center": {
+          "train": 841,
+          "test": 360,
+          "expect_train": 840.7,
+          "expect_test": 360.3
+        },
+        "dirty_camera": {
+          "train": 401,
+          "test": 172,
+          "expect_train": 401.1,
+          "expect_test": 171.9
+        },
+        "dirty_strobe": {
+          "train": 21,
+          "test": 12,
+          "expect_train": 23.1,
+          "expect_test": 9.9
+        },
+        "low_dose": {
+          "train": 474,
+          "test": 203,
+          "expect_train": 473.9,
+          "expect_test": 203.1
+        },
+        "view_obstructed": {
+          "train": 44,
+          "test": 19,
+          "expect_train": 44.1,
+          "expect_test": 18.9
+        },
+        "package_misalignment": {
+          "train": 23,
+          "test": 10,
+          "expect_train": 23.1,
+          "expect_test": 9.9
+        },
+        "bubble_scatter": {
+          "train": 3,
+          "test": 2,
+          "expect_train": 3.5,
+          "expect_test": 1.5
+        },
+        "clear": {
+          "train": 1482,
+          "test": 635,
+          "expect_train": 1481.9,
+          "expect_test": 635.1
+        }
+      },
+      "group_crossings": 0,
+      "split_csv_md5": "5a86b5237c5e806cb99f3be98dc5632f"
+    },
+    "80_20": {
+      "r_train": 0.8,
+      "split_counts": {
+        "train": 5989,
+        "test": 1481
+      },
+      "per_class": {
+        "foreign_matter_micron_gate": {
+          "train": 347,
+          "test": 107,
+          "expect_train": 363.2,
+          "expect_test": 90.8
+        },
+        "fiber_micron_gate": {
+          "train": 289,
+          "test": 73,
+          "expect_train": 289.6,
+          "expect_test": 72.4
+        },
+        "extraneous_polymer_micron_gate": {
+          "train": 108,
+          "test": 27,
+          "expect_train": 108.0,
+          "expect_test": 27.0
+        },
+        "hema_micron_gate": {
+          "train": 125,
+          "test": 26,
+          "expect_train": 120.8,
+          "expect_test": 30.2
+        },
+        "bubble": {
+          "train": 1737,
+          "test": 434,
+          "expect_train": 1736.8,
+          "expect_test": 434.2
+        },
+        "bubble_cluster": {
+          "train": 895,
+          "test": 237,
+          "expect_train": 905.6,
+          "expect_test": 226.4
+        },
+        "wet_package": {
+          "train": 251,
+          "test": 63,
+          "expect_train": 251.2,
+          "expect_test": 62.8
+        },
+        "missing_primary_package": {
+          "train": 1142,
+          "test": 286,
+          "expect_train": 1142.4,
+          "expect_test": 285.6
+        },
+        "multiple_lenses": {
+          "train": 1141,
+          "test": 285,
+          "expect_train": 1140.8,
+          "expect_test": 285.2
+        },
+        "no_lens": {
+          "train": 261,
+          "test": 65,
+          "expect_train": 260.8,
+          "expect_test": 65.2
+        },
+        "cavity_off_center": {
+          "train": 148,
+          "test": 37,
+          "expect_train": 148.0,
+          "expect_test": 37.0
+        },
+        "folded_lens": {
+          "train": 267,
+          "test": 66,
+          "expect_train": 266.4,
+          "expect_test": 66.6
+        },
+        "lens_off_center": {
+          "train": 961,
+          "test": 240,
+          "expect_train": 960.8,
+          "expect_test": 240.2
+        },
+        "dirty_camera": {
+          "train": 458,
+          "test": 115,
+          "expect_train": 458.4,
+          "expect_test": 114.6
+        },
+        "dirty_strobe": {
+          "train": 26,
+          "test": 7,
+          "expect_train": 26.4,
+          "expect_test": 6.6
+        },
+        "low_dose": {
+          "train": 542,
+          "test": 135,
+          "expect_train": 541.6,
+          "expect_test": 135.4
+        },
+        "view_obstructed": {
+          "train": 50,
+          "test": 13,
+          "expect_train": 50.4,
+          "expect_test": 12.6
+        },
+        "package_misalignment": {
+          "train": 26,
+          "test": 7,
+          "expect_train": 26.4,
+          "expect_test": 6.6
+        },
+        "bubble_scatter": {
+          "train": 4,
+          "test": 1,
+          "expect_train": 4.0,
+          "expect_test": 1.0
+        },
+        "clear": {
+          "train": 1694,
+          "test": 423,
+          "expect_train": 1693.6,
+          "expect_test": 423.4
+        }
+      },
+      "group_crossings": 0,
+      "split_csv_md5": "695654208ff37103b15b5c52a49b9911"
+    }
+  }
+}

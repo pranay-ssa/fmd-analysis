@@ -1,0 +1,190 @@
+{
+  "ticket": "021",
+  "date": "2026-10-23",
+  "recipe": "iterative stratification (Sechidis 2011), 70/30 two-way, seed 42, content-md5 groups, no validation split",
+  "seed": 42,
+  "train_ratio": 0.7,
+  "input": {
+    "label_matrix": "D:/fmd-analysis/run/multilabel_edge_20261021/label_matrix.csv",
+    "label_matrix_md5": "9a954f86640dd1a1253169f351e4e421"
+  },
+  "rows": 6679,
+  "split_counts": {
+    "train": 4645,
+    "test": 2034
+  },
+  "per_class": {
+    "foreign_matter_micron_gate": {
+      "train": 123,
+      "test": 48,
+      "expect_train": 119.7,
+      "expect_test": 51.3
+    },
+    "fiber_micron_gate": {
+      "train": 89,
+      "test": 48,
+      "expect_train": 95.9,
+      "expect_test": 41.1
+    },
+    "extraneous_polymer_micron_gate": {
+      "train": 25,
+      "test": 8,
+      "expect_train": 23.1,
+      "expect_test": 9.9
+    },
+    "hema_micron_gate": {
+      "train": 66,
+      "test": 28,
+      "expect_train": 65.8,
+      "expect_test": 28.2
+    },
+    "bubble": {
+      "train": 552,
+      "test": 237,
+      "expect_train": 552.3,
+      "expect_test": 236.7
+    },
+    "bubble_cluster": {
+      "train": 266,
+      "test": 114,
+      "expect_train": 266.0,
+      "expect_test": 114.0
+    },
+    "bubble_on_123": {
+      "train": 9,
+      "test": 4,
+      "expect_train": 9.1,
+      "expect_test": 3.9
+    },
+    "bubble_on_edge": {
+      "train": 10,
+      "test": 4,
+      "expect_train": 9.8,
+      "expect_test": 4.2
+    },
+    "wet_package": {
+      "train": 88,
+      "test": 38,
+      "expect_train": 88.2,
+      "expect_test": 37.8
+    },
+    "bubble_scatter": {
+      "train": 4,
+      "test": 2,
+      "expect_train": 4.2,
+      "expect_test": 1.8
+    },
+    "hema_obstruction": {
+      "train": 60,
+      "test": 26,
+      "expect_train": 60.2,
+      "expect_test": 25.8
+    },
+    "missing_primary_package": {
+      "train": 998,
+      "test": 428,
+      "expect_train": 998.2,
+      "expect_test": 427.8
+    },
+    "multiple_lenses": {
+      "train": 981,
+      "test": 421,
+      "expect_train": 981.4,
+      "expect_test": 420.6
+    },
+    "no_lens": {
+      "train": 225,
+      "test": 97,
+      "expect_train": 225.4,
+      "expect_test": 96.6
+    },
+    "cavity_off_center": {
+      "train": 129,
+      "test": 55,
+      "expect_train": 128.8,
+      "expect_test": 55.2
+    },
+    "folded_lens": {
+      "train": 167,
+      "test": 59,
+      "expect_train": 158.2,
+      "expect_test": 67.8
+    },
+    "lens_off_center": {
+      "train": 645,
+      "test": 277,
+      "expect_train": 645.4,
+      "expect_test": 276.6
+    },
+    "dirty_camera": {
+      "train": 213,
+      "test": 85,
+      "expect_train": 208.6,
+      "expect_test": 89.4
+    },
+    "dirty_strobe": {
+      "train": 29,
+      "test": 12,
+      "expect_train": 28.7,
+      "expect_test": 12.3
+    },
+    "low_dose": {
+      "train": 143,
+      "test": 61,
+      "expect_train": 142.8,
+      "expect_test": 61.2
+    },
+    "view_obstructed": {
+      "train": 17,
+      "test": 7,
+      "expect_train": 16.8,
+      "expect_test": 7.2
+    },
+    "package_misalignment": {
+      "train": 1,
+      "test": 1,
+      "expect_train": 1.4,
+      "expect_test": 0.6
+    },
+    "clear": {
+      "train": 1516,
+      "test": 650,
+      "expect_train": 1516.2,
+      "expect_test": 649.8
+    }
+  },
+  "rare_columns": {
+    "package_misalignment": {
+      "train": 1,
+      "test": 1,
+      "expect_train": 1.4,
+      "expect_test": 0.6
+    },
+    "bubble_scatter": {
+      "train": 4,
+      "test": 2,
+      "expect_train": 4.2,
+      "expect_test": 1.8
+    },
+    "bubble_on_123": {
+      "train": 9,
+      "test": 4,
+      "expect_train": 9.1,
+      "expect_test": 3.9
+    },
+    "bubble_on_edge": {
+      "train": 10,
+      "test": 4,
+      "expect_train": 9.8,
+      "expect_test": 4.2
+    },
+    "view_obstructed": {
+      "train": 17,
+      "test": 7,
+      "expect_train": 16.8,
+      "expect_test": 7.2
+    }
+  },
+  "group_crossings": 0,
+  "split_csv_md5": "a1b1e0d1170055f12c167399d225d9c1"
+}
