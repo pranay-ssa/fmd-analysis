@@ -33,6 +33,30 @@ Working rules for this repository. Read this before starting.
 - `docs/sessions/` holds one file per week. `docs/decisions/` holds one short file per decision
   (create it when the first decision lands). `docs/reference/` holds stable how-tos.
 
+## Reader-facing artifacts (reports, workbooks, decks, messages)
+
+Anything a lead or a client will read is written for them, not for us.
+
+- **No internal names.** No file paths, script or run-folder names, ticket ids,
+  branch names, version tags ("rev2", "v3") or references to our decision log.
+  The reader cannot resolve them, and they make the artifact look unfinished.
+- **If a name must appear, define it where it appears.** Class codes from the
+  annotation guide are fine because the guide defines them; add a one-line
+  meaning in the same sheet or column note. Internal tool names are not fine.
+- **Result first, method last.** The artifact states the number and what it
+  means. How it was obtained gets at most one plain sentence ("counted from
+  the annotated pictures"). The detailed method stays in our internal docs.
+- **Every sheet or page opens with one plain line** saying what it shows, and
+  every count names its population in the header ("pictures examined",
+  "pictures used for training and testing").
+- **Define unavoidable terms once**, on a definitions page or in the first
+  note where they appear (tag, marked object, size flag, Clear).
+- **No role attribution.** See the rule in the `simple-english` skill: never
+  write "the lead said", "the client wants" or "our side" in a shared
+  artifact. Write "the requirement", "the agreed limit", "the open point".
+- The five-line doc header is for repository docs only; a workbook page does
+  not carry it.
+
 ## The Notion Work OS board
 
 - The board shows state; this repository holds the facts. A push writes titles, notes and numbers
@@ -51,3 +75,17 @@ Working rules for this repository. Read this before starting.
 
 `notiondocs.md` and anything under `run/`, `model_runs/`, `.obsidian-vault/` or `data/incoming/`. The
 repository's `.gitignore` is the source of truth.
+
+## graphify
+
+This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships. In this repo `graphify-out/` is gitignored — it is local only, never committed; rebuild it with `graphify extract . --code-only`.
+
+When the user types `/graphify`, use the installed graphify skill or instructions before doing anything else.
+
+Rules:
+- When graphify-out/graph.json exists, run `graphify query "<question>"` before your first grep, search or source-file read for a codebase question, and put this rule in every subagent prompt that explores code. Read raw files only for lines the graph or an earlier read already located. Use `graphify path "<A>" "<B>"` for relationships and `graphify explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
+- Dirty graphify-out/ files are expected after hooks or incremental updates; dirty graph files are not a reason to skip graphify. Only skip graphify if the task is about stale or incorrect graph output, or the user explicitly says not to use it.
+- If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
+- Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
+- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+- A committed graphify-out/graph.json is rewritten whole on every build, so a large diff to it in a pull request is expected. Do not flag it as churn or suggest skipping the graph rebuild or its hooks.

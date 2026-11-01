@@ -105,7 +105,10 @@ def collect():
                 continue
             full = os.path.join(dirpath, fn)
             rel = os.path.relpath(full, ROOT).replace("\\", "/")
-            if rel == "docs/INDEX.md" or rel == "notiondocs.md":
+            # Generated, never hand-edited: the index itself, the local staging file, and the
+            # knowledge graph report (rewritten whole on every graphify build, so a header
+            # there would vanish on the next run).
+            if rel in ("docs/INDEX.md", "notiondocs.md") or rel.startswith("graphify-out/"):
                 continue
             try:
                 text = open(full, encoding="utf-8", errors="replace").read(4000)

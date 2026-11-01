@@ -1,8 +1,9 @@
 ---
-context: default
-task: algo-finalized
-status: finalized
-last_updated: 2026-09-03T07:35:11Z
+title: Continue here, fixed-size crop (archived)
+date: 2026-09-03
+type: state
+status: superseded
+where: docs/archive/continue-here_20260903_fixed_size_crop.md
 ---
 
 # Continue Here — FMD-Preprocess Fixed-Size Crop
