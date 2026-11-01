@@ -48,6 +48,24 @@ Thumbs.db
 # === Notion staging file (local only, never pushed) ===
 notiondocs.md
 
+# === Graphify knowledge graph (regenerable via `graphify extract . --code-only`) ===
+graphify-out/
+.opencode/
+
+# === Raw source images (BMP), never tracked ===
+*.bmp
+
+# === Regenerable archives under run/ ===
+run/*.zip
+run/*.tgz
+
+# === Client deliverable docs (Guides and BRD's), local only ===
+Guides and BRD's/
+
+# === Agent session scratch ===
+session_shakehand.md
+.hermes-tmp.*
+
 # === Model-training outputs (YOLO/CNN weights, per-epoch logs, metrics; ~110 MB local) ===
 # Called runs/ before 2026-09-21; see docs/decisions/2026-09-21-artifact-folders.md
 model_runs/
