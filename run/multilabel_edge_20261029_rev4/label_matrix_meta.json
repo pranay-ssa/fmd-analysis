@@ -1,0 +1,114 @@
+{
+  "ticket": "019",
+  "date": "2026-10-29",
+  "rev": 4,
+  "change": "REV4: 24-file annotation of record; mention glob 40-63; rules verbatim rev3",
+  "frame": "docs/decisions/2026-10-21-multilabel-edge-frame.md",
+  "inputs": {
+    "picture_table": "D:/fmd-analysis/run/eda_full_20261029/picture_table.csv",
+    "resolved_labels": "D:/fmd-analysis/run/eda_full_20261029/resolved_labels.csv",
+    "flip_list": "D:/fmd-analysis/run/multilabel_edge_20261021/fiber_ep_flip_list.csv",
+    "flip_list_md5": "b14215ca1637fe103c1bd1bd8e06ee47"
+  },
+  "label_columns": [
+    "foreign_matter_micron_gate",
+    "fiber_micron_gate",
+    "extraneous_polymer_micron_gate",
+    "hema_micron_gate",
+    "bubble",
+    "bubble_cluster",
+    "bubble_on_123",
+    "bubble_on_edge",
+    "wet_package",
+    "bubble_scatter",
+    "hema_obstruction",
+    "missing_primary_package",
+    "multiple_lenses",
+    "no_lens",
+    "cavity_off_center",
+    "folded_lens",
+    "lens_off_center",
+    "dirty_camera",
+    "dirty_strobe",
+    "low_dose",
+    "view_obstructed",
+    "package_misalignment",
+    "clear"
+  ],
+  "headline": {
+    "universe": 10614,
+    "dropped_unannotated": 2997,
+    "unannotated_composition": {
+      "unmentioned": 1556,
+      "mentioned": 1441
+    },
+    "eda_rows": 7617,
+    "split_eligible_rows": 7299,
+    "flip_rows_in_matrix": 5,
+    "clear_rows": 2117,
+    "clear_rows_negative_unreliable": 0,
+    "clear_folder_pictures": 2333,
+    "rescued_defect_rows": 2,
+    "row_status_counts": {
+      "labeled": 5500,
+      "clear_folder": 2117
+    },
+    "per_column_positives": {
+      "foreign_matter_micron_gate": 454,
+      "fiber_micron_gate": 393,
+      "extraneous_polymer_micron_gate": 135,
+      "hema_micron_gate": 151,
+      "bubble": 2171,
+      "bubble_cluster": 1134,
+      "bubble_on_123": 13,
+      "bubble_on_edge": 14,
+      "wet_package": 314,
+      "bubble_scatter": 5,
+      "hema_obstruction": 36,
+      "missing_primary_package": 1428,
+      "multiple_lenses": 1426,
+      "no_lens": 326,
+      "cavity_off_center": 185,
+      "folded_lens": 333,
+      "lens_off_center": 1201,
+      "dirty_camera": 573,
+      "dirty_strobe": 33,
+      "low_dose": 677,
+      "view_obstructed": 63,
+      "package_misalignment": 33,
+      "clear": 2117
+    },
+    "gated_families": {
+      "foreign_matter_micron_gate": {
+        "pictures_carrying_class": 834,
+        "of_which_micron_gate_tagged": 454
+      },
+      "fiber_micron_gate": {
+        "pictures_carrying_class": 436,
+        "of_which_micron_gate_tagged": 393
+      },
+      "extraneous_polymer_micron_gate": {
+        "pictures_carrying_class": 175,
+        "of_which_micron_gate_tagged": 135
+      },
+      "hema_micron_gate": {
+        "pictures_carrying_class": 157,
+        "of_which_micron_gate_tagged": 151
+      }
+    },
+    "cardinality_distribution": {
+      "0": 80,
+      "1": 4812,
+      "2": 1058,
+      "3": 863,
+      "4": 473,
+      "5": 222,
+      "6": 74,
+      "7": 29,
+      "8": 5,
+      "9": 1
+    },
+    "distinct_label_vectors": 303,
+    "unmapped_mention_names": 0
+  }
+}

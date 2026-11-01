@@ -1,0 +1,147 @@
+/home/pranayp/fmd-analysis/experiments/multilabel_lp_full/train_lp.py:524: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(device.type == "cuda"))
+variant a: 6747 rows, 5403 train / 1344 test
+  P1_MPP   Missing Primary Package     1428
+  P1_ML    Multiple Lens               1426
+  P2_LOC   Lens Off Center             1201
+  P2_DC    Dirty Camera                 573
+  P1_NL    No Lens                      326
+  P1_FL    Folded Lens                  333
+  P2_LD    Low Dose                     677
+  P1_COC   Cavity Off Center            185
+  P2_DS    Dirty Strobe                  33
+  P2_FOV   View Obstructed               63
+  P2_BSC   Bubble Scatter                 5
+  P1_PPM   Package Misalignment          33
+  clear    all-zero rows               2117
+image root ok: 40 sampled pictures found under /data/FMD_Data_26082026/fmd_temp_images
+/home/pranayp/fmd-analysis/experiments/multilabel_lp_full/train_lp.py:535: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+epoch 01/50  train loss 0.5004
+epoch 02/50  train loss 0.2836
+epoch 03/50  train loss 0.2245
+epoch 04/50  train loss 0.1995
+epoch 05/50  train loss 0.1845
+epoch 06/50  train loss 0.1733
+epoch 07/50  train loss 0.1644
+epoch 08/50  train loss 0.1572
+epoch 09/50  train loss 0.1503
+epoch 10/50  train loss 0.1445
+epoch 11/50  train loss 0.1388
+epoch 12/50  train loss 0.1348
+epoch 13/50  train loss 0.1300
+epoch 14/50  train loss 0.1259
+epoch 15/50  train loss 0.1221
+epoch 16/50  train loss 0.1180
+epoch 17/50  train loss 0.1155
+epoch 18/50  train loss 0.1109
+epoch 19/50  train loss 0.1100
+epoch 20/50  train loss 0.1052
+epoch 21/50  train loss 0.1043
+epoch 22/50  train loss 0.1017
+epoch 23/50  train loss 0.0994
+epoch 24/50  train loss 0.0975
+epoch 25/50  train loss 0.0957
+epoch 26/50  train loss 0.0941
+epoch 27/50  train loss 0.0918
+epoch 28/50  train loss 0.0910
+epoch 29/50  train loss 0.0888
+epoch 30/50  train loss 0.0869
+epoch 31/50  train loss 0.0863
+epoch 32/50  train loss 0.0850
+epoch 33/50  train loss 0.0833
+epoch 34/50  train loss 0.0832
+epoch 35/50  train loss 0.0808
+epoch 36/50  train loss 0.0793
+epoch 37/50  train loss 0.0781
+epoch 38/50  train loss 0.0763
+epoch 39/50  train loss 0.0771
+epoch 40/50  train loss 0.0747
+epoch 41/50  train loss 0.0738
+epoch 42/50  train loss 0.0748
+epoch 43/50  train loss 0.0719
+epoch 44/50  train loss 0.0725
+epoch 45/50  train loss 0.0709
+epoch 46/50  train loss 0.0689
+epoch 47/50  train loss 0.0676
+epoch 48/50  train loss 0.0675
+epoch 49/50  train loss 0.0665
+epoch 50/50  train loss 0.0659
+/home/pranayp/fmd-analysis/experiments/multilabel_lp_full/train_lp.py:558: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+metrics written: run/multilabel_lp_full_20261029/a/metrics.json
+timing: train 1499.3s (30.0s/epoch), inference 7.5s = 5.6 ms/image on 1344 test pictures
+/home/pranayp/fmd-analysis/experiments/multilabel_lp_full/train_lp.py:524: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(device.type == "cuda"))
+variant b: 7470 rows, 5989 train / 1481 test
+  P1_MPP   Missing Primary Package     1428
+  P1_ML    Multiple Lens               1426
+  P2_LOC   Lens Off Center             1201
+  P2_DC    Dirty Camera                 573
+  P1_NL    No Lens                      326
+  P1_FL    Folded Lens                  333
+  P2_LD    Low Dose                     677
+  P1_COC   Cavity Off Center            185
+  P2_DS    Dirty Strobe                  33
+  P2_FOV   View Obstructed               63
+  P2_BSC   Bubble Scatter                 5
+  P1_PPM   Package Misalignment          33
+  object   any object present          2247
+  clear    all-zero rows               2117
+image root ok: 40 sampled pictures found under /data/FMD_Data_26082026/fmd_temp_images
+/home/pranayp/fmd-analysis/experiments/multilabel_lp_full/train_lp.py:535: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+epoch 01/50  train loss 0.4977
+epoch 02/50  train loss 0.2847
+epoch 03/50  train loss 0.2345
+epoch 04/50  train loss 0.2140
+epoch 05/50  train loss 0.1995
+epoch 06/50  train loss 0.1876
+epoch 07/50  train loss 0.1789
+epoch 08/50  train loss 0.1711
+epoch 09/50  train loss 0.1637
+epoch 10/50  train loss 0.1576
+epoch 11/50  train loss 0.1511
+epoch 12/50  train loss 0.1450
+epoch 13/50  train loss 0.1393
+epoch 14/50  train loss 0.1346
+epoch 15/50  train loss 0.1297
+epoch 16/50  train loss 0.1249
+epoch 17/50  train loss 0.1204
+epoch 18/50  train loss 0.1170
+epoch 19/50  train loss 0.1131
+epoch 20/50  train loss 0.1107
+epoch 21/50  train loss 0.1073
+epoch 22/50  train loss 0.1050
+epoch 23/50  train loss 0.1025
+epoch 24/50  train loss 0.1002
+epoch 25/50  train loss 0.0981
+epoch 26/50  train loss 0.0963
+epoch 27/50  train loss 0.0952
+epoch 28/50  train loss 0.0934
+epoch 29/50  train loss 0.0903
+epoch 30/50  train loss 0.0895
+epoch 31/50  train loss 0.0878
+epoch 32/50  train loss 0.0876
+epoch 33/50  train loss 0.0850
+epoch 34/50  train loss 0.0836
+epoch 35/50  train loss 0.0825
+epoch 36/50  train loss 0.0822
+epoch 37/50  train loss 0.0805
+epoch 38/50  train loss 0.0797
+epoch 39/50  train loss 0.0783
+epoch 40/50  train loss 0.0770
+epoch 41/50  train loss 0.0766
+epoch 42/50  train loss 0.0744
+epoch 43/50  train loss 0.0733
+epoch 44/50  train loss 0.0728
+epoch 45/50  train loss 0.0726
+epoch 46/50  train loss 0.0711
+epoch 47/50  train loss 0.0701
+epoch 48/50  train loss 0.0691
+epoch 49/50  train loss 0.0692
+epoch 50/50  train loss 0.0681
+/home/pranayp/fmd-analysis/experiments/multilabel_lp_full/train_lp.py:558: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+metrics written: run/multilabel_lp_full_20261029/b/metrics.json
+timing: train 1657.7s (33.2s/epoch), inference 8.4s = 5.65 ms/image on 1481 test pictures

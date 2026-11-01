@@ -1,0 +1,130 @@
+{
+  "ticket": "023",
+  "date": "2026-10-23",
+  "guide_rule": "Draft 2 sections 4.1-4.4: P1_MPP, P1_PPM, P1_COC, P2_FOV are standalone; no additional tags or labels.",
+  "sources": {
+    "resolved": "D:/fmd-analysis/run/eda_full_20261015/resolved_labels.csv",
+    "raw_newer_xmls": [
+      "Updated Annotations 20260922.xml",
+      "annotations_4521940.xml",
+      "annotations_4521941.xml",
+      "annotations_4521942.xml",
+      "annotations_4521943.xml",
+      "annotations_4521944.xml",
+      "annotations_4521945.xml",
+      "annotations_4521946.xml"
+    ],
+    "raw_unmapped_names_with_labels": 0
+  },
+  "resolved_derivation": {
+    "P1_MPP": {
+      "name": "P1_MPP Missing Primary Package",
+      "pictures_tagged": 1426,
+      "pictures_with_extra_labels": 0,
+      "pictures_with_gate_tag_only": 0,
+      "extra_code_counts": {}
+    },
+    "P1_PPM": {
+      "name": "P1_PPM Primary Package Misalignment",
+      "pictures_tagged": 2,
+      "pictures_with_extra_labels": 0,
+      "pictures_with_gate_tag_only": 0,
+      "extra_code_counts": {}
+    },
+    "P1_COC": {
+      "name": "P1_COC Cavity Off Center",
+      "pictures_tagged": 184,
+      "pictures_with_extra_labels": 0,
+      "pictures_with_gate_tag_only": 0,
+      "extra_code_counts": {}
+    },
+    "P2_FOV": {
+      "name": "P2_FOV Field of View Obstructed",
+      "pictures_tagged": 0,
+      "pictures_with_extra_labels": 0,
+      "pictures_with_gate_tag_only": 0,
+      "extra_code_counts": {}
+    },
+    "F2_FOV": {
+      "name": "F2_FOV Field of View Obstructed (production code)",
+      "pictures_tagged": 24,
+      "pictures_with_extra_labels": 0,
+      "pictures_with_gate_tag_only": 0,
+      "extra_code_counts": {}
+    }
+  },
+  "raw_derivation": {
+    "P1_MPP": {
+      "name": "P1_MPP Missing Primary Package",
+      "pictures_tagged": 1427,
+      "pictures_with_extra_labels": 0,
+      "pictures_with_gate_tag_only": 0,
+      "extra_code_counts": {}
+    },
+    "P1_PPM": {
+      "name": "P1_PPM Primary Package Misalignment",
+      "pictures_tagged": 2,
+      "pictures_with_extra_labels": 0,
+      "pictures_with_gate_tag_only": 0,
+      "extra_code_counts": {}
+    },
+    "P1_COC": {
+      "name": "P1_COC Cavity Off Center",
+      "pictures_tagged": 184,
+      "pictures_with_extra_labels": 0,
+      "pictures_with_gate_tag_only": 0,
+      "extra_code_counts": {}
+    },
+    "P2_FOV": {
+      "name": "P2_FOV Field of View Obstructed",
+      "pictures_tagged": 0,
+      "pictures_with_extra_labels": 0,
+      "pictures_with_gate_tag_only": 0,
+      "extra_code_counts": {}
+    },
+    "F2_FOV": {
+      "name": "F2_FOV Field of View Obstructed (production code)",
+      "pictures_tagged": 24,
+      "pictures_with_extra_labels": 0,
+      "pictures_with_gate_tag_only": 0,
+      "extra_code_counts": {}
+    }
+  },
+  "comparison": [
+    {
+      "code": "F2_FOV",
+      "tagged_resolved": 24,
+      "tagged_raw": 24,
+      "extras_resolved": 0,
+      "extras_raw": 0
+    },
+    {
+      "code": "P1_COC",
+      "tagged_resolved": 184,
+      "tagged_raw": 184,
+      "extras_resolved": 0,
+      "extras_raw": 0
+    },
+    {
+      "code": "P1_MPP",
+      "tagged_resolved": 1426,
+      "tagged_raw": 1427,
+      "extras_resolved": 0,
+      "extras_raw": 0
+    },
+    {
+      "code": "P1_PPM",
+      "tagged_resolved": 2,
+      "tagged_raw": 2,
+      "extras_resolved": 0,
+      "extras_raw": 0
+    },
+    {
+      "code": "P2_FOV",
+      "tagged_resolved": 0,
+      "tagged_raw": 0,
+      "extras_resolved": 0,
+      "extras_raw": 0
+    }
+  ]
+}

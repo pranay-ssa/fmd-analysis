@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lens inspection, multi-label results</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{
+  color-scheme: light;
+  --page-plane:#f9f9f7; --surface-1:#fcfcfb; --surface-card:#ffffff;
+  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#898781;
+  --gridline:#e6e5de; --border:rgba(11,11,11,0.10);
+  --series-1:#2a78d6; --series-1-wash:rgba(42,120,214,0.10);
+  --ok:#0ca30c; --bad:#d03b3b;
+  --shadow:0 1px 2px rgba(11,11,11,0.06),0 1px 8px rgba(11,11,11,0.04);
+}
+@media (prefers-color-scheme:dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme:dark;
+    --page-plane:#0d0d0d; --surface-1:#1a1a19; --surface-card:#201f1d;
+    --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#898781;
+    --gridline:#2c2c2a; --border:rgba(255,255,255,0.10);
+    --series-1:#3987e5; --series-1-wash:rgba(57,135,229,0.14);
+    --ok:#3fb950; --bad:#e66767;
+    --shadow:0 1px 2px rgba(0,0,0,0.3),0 1px 10px rgba(0,0,0,0.25);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page-plane:#0d0d0d; --surface-1:#1a1a19; --surface-card:#201f1d;
+  --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#898781;
+  --gridline:#2c2c2a; --border:rgba(255,255,255,0.10);
+  --series-1:#3987e5; --series-1-wash:rgba(57,135,229,0.14);
+  --ok:#3fb950; --bad:#e66767;
+  --shadow:0 1px 2px rgba(0,0,0,0.3),0 1px 10px rgba(0,0,0,0.25);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--page-plane);color:var(--text-primary);
+  font-family:"JetBrains Mono",ui-monospace,monospace;letter-spacing:0;
+  -webkit-font-smoothing:antialiased;line-height:1.55}
+a{color:var(--series-1)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px 90px}
+header.top{position:sticky;top:0;z-index:50;background:var(--surface-1);
+  border-bottom:1px solid var(--border);backdrop-filter:blur(6px)}
+.topbar{max-width:1180px;margin:0 auto;padding:13px 22px;display:flex;
+  align-items:center;gap:14px;flex-wrap:wrap}
+.topbar h1{font-size:15px;font-weight:600;margin:0}
+nav.sections{display:flex;gap:2px;flex-wrap:wrap;font-size:13px;margin-left:auto}
+nav.sections a{color:var(--text-secondary);text-decoration:none;padding:5px 9px;border-radius:6px}
+nav.sections a:hover{background:var(--series-1-wash);color:var(--text-primary)}
+.theme-toggle{border:1px solid var(--border);background:var(--surface-card);
+  color:var(--text-secondary);border-radius:6px;padding:5px 10px;font-size:12.5px;cursor:pointer}
+.hero{padding:30px 0 4px}
+.hero h2{font-size:27px;margin:0 0 8px;letter-spacing:-0.01em}
+.hero .meta{color:var(--text-secondary);font-size:13.5px;line-height:1.7;max-width:900px}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:18px 0}
+.stat-tile{background:var(--surface-card);border:1px solid var(--border);border-radius:12px;
+  padding:15px;box-shadow:var(--shadow)}
+.stat-tile .label{font-size:11.5px;color:var(--text-secondary);margin-bottom:6px}
+.stat-tile .value{font-size:24px;font-weight:600;letter-spacing:-0.01em}
+.stat-tile .value.ok{color:var(--ok)} .stat-tile .value.bad{color:var(--bad)}
+.stat-tile .sub{font-size:11px;color:var(--text-muted);margin-top:5px;line-height:1.45}
+.box{background:var(--surface-card);border:1px solid var(--border);border-radius:12px;
+  padding:16px 18px;box-shadow:var(--shadow);margin:16px 0}
+.box h4{margin:0 0 10px;font-size:14px;color:var(--text-primary)}
+section{margin-top:52px;scroll-margin-top:66px}
+section h3{font-size:20px;margin:0 0 6px;letter-spacing:-0.01em}
+section h4{font-size:15px;margin:26px 0 8px;color:var(--text-secondary);font-weight:600}
+p.desc{color:var(--text-secondary);font-size:13.5px;margin:0 0 12px;max-width:900px}
+p.note{color:var(--text-secondary);font-size:12.5px;margin:8px 0 4px;max-width:900px;
+  padding-left:12px;border-left:2px solid var(--gridline)}
+.chart{width:100%;height:auto;margin:6px 0;overflow:visible}
+.chart .grid{stroke:var(--gridline);stroke-width:1}
+.chart .c-lab{fill:var(--text-secondary);font-size:12px}
+.chart .c-val{fill:var(--text-primary);font-size:12px;font-weight:500}
+.chart .c-tick{fill:var(--text-muted);font-size:10px}
+.twrap{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th,td{padding:6px 10px;border-bottom:1px solid var(--border);white-space:nowrap}
+th{color:var(--text-secondary);font-weight:600;font-size:11.5px;text-transform:uppercase;
+  letter-spacing:0.03em}
+td.ok,span.ok{color:var(--ok);font-weight:600}
+td.bad,span.bad{color:var(--bad);font-weight:600}
+ul.findings,ol.findings{font-size:13px;color:var(--text-secondary);line-height:1.7;
+  max-width:900px;padding-left:22px}
+ul.findings li,ol.findings li{margin:7px 0}
+.hero .foot{margin-top:14px;font-size:12px;color:var(--text-muted)}
+</style>
+</head>
+<body>
+<header class="top"><div class="topbar">
+  <h1>FMD | Multi-label lens inspection</h1>
+  <nav class="sections"><a href="#glance">1</a><a href="#runs">2</a><a href="#earlier">3</a><a href="#classes">4</a><a href="#reasons">5</a><a href="#flag">6</a><a href="#meaning">7</a><a href="#next">8</a><a href="#words">9</a></nav>
+  <button class="theme-toggle" onclick="var r=document.documentElement,d=r.getAttribute('data-theme')==='dark';r.setAttribute('data-theme',d?'light':'dark')">&#9684; theme</button>
+</div></header>
+<div class="wrap">
+  <div class="hero">
+    <h2>Can one model report every lens class at once?</h2>
+    <div class="meta">
+      A single image model was asked to report every LP class visible in a lens picture,
+      including the case where nothing is wrong. <b>1,248</b> pictures were held back
+      and never seen during training. Every figure here is read from the measured results of
+      the two runs, and the same numbers appear in the companion workbook.
+      <div class="foot">Generated 2026-10-28. Two runs of one model on the same pictures:
+      LP classes only, and LP classes plus one OOI flag.</div>
+    </div>
+  </div>
+
+<section id="glance"><h3>1. At a glance</h3>
+<p class="desc">The headline for the run that answers the twelve LP classes. The bar agreed in
+advance was an average precision of 0.85.</p>
+<div class="stat-grid">
+  <div class="stat-tile"><div class="label">Average precision</div>
+    <div class="value bad">0.78</div>
+    <div class="sub">over the eight classes with enough test pictures; target 0.85</div></div>
+  <div class="stat-tile"><div class="label">Pictures fully right</div>
+    <div class="value">77.6%</div>
+    <div class="sub">every one of the twelve answers correct</div></div>
+  <div class="stat-tile"><div class="label">Wrong answers</div>
+    <div class="value">2.3%</div>
+    <div class="sub">share of wrong answers across all picture-class pairs</div></div>
+  <div class="stat-tile"><div class="label">Training time</div>
+    <div class="value">24 min</div>
+    <div class="sub">50 passes over 4,971 training pictures</div></div>
+  <div class="stat-tile"><div class="label">Scoring one picture</div>
+    <div class="value">&lt;20 ms</div>
+    <div class="sub">on the graphics card used; see the note in section 2</div></div>
+</div>
+
+<div class="box">
+  <h4>Train and test split, both runs</h4>
+  <div class="twrap"><table><thead><tr><th style="text-align:left">Run</th>
+  <th style="text-align:right">Pictures for training</th>
+  <th style="text-align:right">Pictures for testing</th>
+  <th style="text-align:right">Total pictures</th>
+  <th style="text-align:right">Split</th></tr></thead><tbody>
+  <tr><td style="text-align:left">Run 1: LP classes only</td><td style="text-align:right">4,971</td><td style="text-align:right">1,248</td><td style="text-align:right">6,219</td><td style="text-align:right">80 / 20</td></tr>
+  <tr><td style="text-align:left">Run 2: LP classes plus OOI flag</td><td style="text-align:right">5,327</td><td style="text-align:right">1,332</td><td style="text-align:right">6,659</td><td style="text-align:right">80 / 20</td></tr>
+  </tbody></table></div>
+  <p class="note">Both runs use the same pictures, split the same way, so the difference
+  between them is the thirteenth answer and nothing else. The population is the revised
+  annotation only: the seventeen newly received files, 2,550 pictures, are not in either run.</p>
+</div>
+
+<p class="note">Four LP classes are effectively solved and carry the average up. Three hold it
+down, and each for a different reason: Folded Lens is a labelling problem, Dirty Camera is
+mostly a cut-off problem, and Lens Off Center overlaps with two other classes.</p></section>
+
+<section id="runs"><h3>2. The two runs side by side</h3>
+<p class="desc">Both runs use the same pictures and the same model. Run 2 adds one coarse
+answer that says at least one OOI class is present, which the routing step needs later.</p>
+<div class="twrap"><table><thead><tr><th style="text-align:left">Measure</th>
+<th style="text-align:right">Run 1, LP classes only</th>
+<th style="text-align:right">Run 2, LP classes plus OOI flag</th></tr></thead><tbody>
+<tr><td style="text-align:left">Answers per picture</td><td style="text-align:right">12</td><td style="text-align:right">13</td></tr>
+<tr><td style="text-align:left">Average precision, eight judgeable classes</td><td style="text-align:right">0.78</td><td style="text-align:right">0.76</td></tr>
+<tr><td style="text-align:left">Pictures fully right</td><td style="text-align:right">77.6%</td><td style="text-align:right">79.8%</td></tr>
+<tr><td style="text-align:left">Wrong answers per picture-class question</td><td style="text-align:right">2.3%</td><td style="text-align:right">2.1%</td></tr>
+<tr><td style="text-align:left">Training time</td><td style="text-align:right">24 min</td><td style="text-align:right">25 min</td></tr>
+<tr><td style="text-align:left">Time per training pass</td><td style="text-align:right">29 s</td><td style="text-align:right">30 s</td></tr>
+<tr><td style="text-align:left">Time to score one picture</td><td style="text-align:right">19.4 ms</td><td style="text-align:right">5.8 ms</td></tr>
+</tbody></table></div>
+<p class="note">The LP answers agree within 0.02 between the runs, except Dirty Camera
+(0.58 to 0.51) and Low Dose (0.77 to 0.69). The per-picture scoring time is indicative only:
+the second run reused a warm cache, so the two figures are not a like-for-like benchmark.</p></section>
+
+<section id="earlier"><h3>3. Earlier runs, kept separate</h3>
+<p class="desc">Two earlier runs answered five LP classes on a smaller test set. They are kept
+in their own record and are not mixed into this run's numbers anywhere on this page.</p>
+<div class="twrap"><table><thead><tr><th style="text-align:left">Run</th>
+<th style="text-align:right">LP classes</th><th style="text-align:right">Training pictures</th>
+<th style="text-align:right">Test pictures</th>
+<th style="text-align:right">Macro, five shared classes</th>
+<th style="text-align:right">Folded Lens</th>
+<th style="text-align:right">Pictures fully right</th></tr></thead><tbody>
+<tr><td style="text-align:left">Earlier run, plain</td><td style="text-align:right">5</td><td style="text-align:right">2,700</td><td style="text-align:right">677</td><td style="text-align:right">0.90</td><td style="text-align:right">0.52</td><td style="text-align:right">93.9%</td></tr><tr><td style="text-align:left">Earlier run, class weighting</td><td style="text-align:right">5</td><td style="text-align:right">2,700</td><td style="text-align:right">677</td><td style="text-align:right">0.92</td><td style="text-align:right">0.62</td><td style="text-align:right">94.5%</td></tr>
+<tr><td style="text-align:left">This run, LP classes only</td><td style="text-align:right">12</td><td style="text-align:right">4,971</td><td style="text-align:right">1,248</td><td style="text-align:right">0.83</td><td style="text-align:right">0.27</td><td style="text-align:right">77.6%</td></tr>
+</tbody></table></div>
+<p class="note">The five shared classes are the only like-for-like line. This run's headline of
+0.78 averages over eight classes, so it must never be set beside the
+earlier 0.90 and 0.92: the label sets differ, five against twelve, and so do the test pictures,
+677 against 1,248.</p>
+<svg viewBox="0 0 760 150" class="chart" role="img" aria-label="Folded Lens across runs"><line x1="260.0" y1="4" x2="260.0" y2="140" class="grid"/><text x="260.0" y="150" text-anchor="middle" class="c-tick">0.00</text><line x1="362.5" y1="4" x2="362.5" y2="140" class="grid"/><text x="362.5" y="150" text-anchor="middle" class="c-tick">0.25</text><line x1="465.0" y1="4" x2="465.0" y2="140" class="grid"/><text x="465.0" y="150" text-anchor="middle" class="c-tick">0.50</text><line x1="567.5" y1="4" x2="567.5" y2="140" class="grid"/><text x="567.5" y="150" text-anchor="middle" class="c-tick">0.75</text><line x1="670.0" y1="4" x2="670.0" y2="140" class="grid"/><text x="670.0" y="150" text-anchor="middle" class="c-tick">1.00</text><text x="248" y="24" text-anchor="end" class="c-lab">Earlier run, plain</text><rect x="260" y="12" width="410.0" height="16" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="260" y="12" width="214.3" height="16" rx="3" fill="var(--series-1)"><title>Earlier run, plain: 0.52</title></rect><text x="680" y="24" class="c-val">0.52</text><text x="248" y="64" text-anchor="end" class="c-lab">Earlier run, class weighting</text><rect x="260" y="52" width="410.0" height="16" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="260" y="52" width="254.8" height="16" rx="3" fill="var(--series-1)"><title>Earlier run, class weighting: 0.62</title></rect><text x="680" y="64" class="c-val">0.62</text><text x="248" y="104" text-anchor="end" class="c-lab">This run</text><rect x="260" y="92" width="410.0" height="16" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="260" y="92" width="111.6" height="16" rx="3" fill="var(--bad)"><title>This run: 0.27</title></rect><text x="680" y="104" class="c-val">0.27</text><line x1="547.0" y1="2" x2="547.0" y2="138" stroke="var(--text-primary)" stroke-width="1.4" stroke-dasharray="3 2"/></svg>
+<p class="note">What the comparison does say: four of the five shared classes sit at or near the
+ceiling in every run, and Folded Lens is the only one that moved, from 0.52 and 0.62 down to
+0.27. Three things changed at once between the earlier runs and
+this one, the label set from five to twelve, the test pictures from 677 to 1,248, and the
+annotation revision, so the drop cannot be pinned on one of them from these numbers. The planned
+weighted run on the current label set is what separates them.</p></section>
+
+<section id="classes"><h3>4. LP class by LP class</h3>
+<p class="desc">Average precision for every LP class in run 1. Green meets its own target, or
+the 0.85 bar where no separate target was set; red is below it; grey means too few test
+pictures to judge. The dashed line marks the target where one exists.</p>
+<svg viewBox="0 0 980 394" class="chart" role="img" aria-label="Average precision by LP class"><line x1="250.0" y1="6" x2="250.0" y2="386" class="grid"/><text x="250.0" y="394" text-anchor="middle" class="c-tick">0.00</text><line x1="405.0" y1="6" x2="405.0" y2="386" class="grid"/><text x="405.0" y="394" text-anchor="middle" class="c-tick">0.25</text><line x1="560.0" y1="6" x2="560.0" y2="386" class="grid"/><text x="560.0" y="394" text-anchor="middle" class="c-tick">0.50</text><line x1="715.0" y1="6" x2="715.0" y2="386" class="grid"/><text x="715.0" y="394" text-anchor="middle" class="c-tick">0.75</text><line x1="870.0" y1="6" x2="870.0" y2="386" class="grid"/><text x="870.0" y="394" text-anchor="middle" class="c-tick">1.00</text><text x="238" y="25" text-anchor="end" class="c-lab">Missing Primary Package</text><rect x="250" y="13" width="620.0" height="15" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="250" y="13" width="620.0" height="15" rx="3" fill="var(--ok)"><title>Missing Primary Package: 1.00</title></rect><text x="880" y="25" class="c-val">1.00</text><text x="238" y="55" text-anchor="end" class="c-lab">No Lens</text><rect x="250" y="43" width="620.0" height="15" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="250" y="43" width="610.5" height="15" rx="3" fill="var(--ok)"><title>No Lens: 0.98</title></rect><text x="880" y="55" class="c-val">0.98</text><text x="238" y="85" text-anchor="end" class="c-lab">Multiple Lens</text><rect x="250" y="73" width="620.0" height="15" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="250" y="73" width="602.9" height="15" rx="3" fill="var(--ok)"><title>Multiple Lens: 0.97</title></rect><text x="880" y="85" class="c-val">0.97</text><text x="238" y="115" text-anchor="end" class="c-lab">Cavity Off Center</text><rect x="250" y="103" width="620.0" height="15" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="250" y="103" width="580.6" height="15" rx="3" fill="var(--ok)"><title>Cavity Off Center: 0.94</title></rect><text x="880" y="115" class="c-val">0.94</text><text x="238" y="145" text-anchor="end" class="c-lab">View Obstructed</text><rect x="250" y="133" width="620.0" height="15" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="250" y="133" width="525.5" height="15" rx="3" fill="var(--text-muted)"><title>View Obstructed: 0.85</title></rect><text x="880" y="145" class="c-val">0.85</text><text x="238" y="175" text-anchor="end" class="c-lab">Low Dose</text><rect x="250" y="163" width="620.0" height="15" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="250" y="163" width="477.3" height="15" rx="3" fill="var(--ok)"><title>Low Dose: 0.77</title></rect><line x1="684.0" y1="160" x2="684.0" y2="181" stroke="var(--text-primary)" stroke-width="1.4" stroke-dasharray="3 2"/><text x="880" y="175" class="c-val">0.77</text><text x="238" y="205" text-anchor="end" class="c-lab">Lens Off Center</text><rect x="250" y="193" width="620.0" height="15" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="250" y="193" width="462.2" height="15" rx="3" fill="var(--bad)"><title>Lens Off Center: 0.75</title></rect><line x1="808.0" y1="190" x2="808.0" y2="211" stroke="var(--text-primary)" stroke-width="1.4" stroke-dasharray="3 2"/><text x="880" y="205" class="c-val">0.75</text><text x="238" y="235" text-anchor="end" class="c-lab">Dirty Camera</text><rect x="250" y="223" width="620.0" height="15" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="250" y="223" width="361.9" height="15" rx="3" fill="var(--bad)"><title>Dirty Camera: 0.58</title></rect><line x1="777.0" y1="220" x2="777.0" y2="241" stroke="var(--text-primary)" stroke-width="1.4" stroke-dasharray="3 2"/><text x="880" y="235" class="c-val">0.58</text><text x="238" y="265" text-anchor="end" class="c-lab">Folded Lens</text><rect x="250" y="253" width="620.0" height="15" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="250" y="253" width="168.8" height="15" rx="3" fill="var(--bad)"><title>Folded Lens: 0.27</title></rect><line x1="684.0" y1="250" x2="684.0" y2="271" stroke="var(--text-primary)" stroke-width="1.4" stroke-dasharray="3 2"/><text x="880" y="265" class="c-val">0.27</text><text x="238" y="295" text-anchor="end" class="c-lab">Dirty Strobe</text><rect x="250" y="283" width="620.0" height="15" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="250" y="283" width="55.4" height="15" rx="3" fill="var(--text-muted)"><title>Dirty Strobe: 0.09</title></rect><text x="880" y="295" class="c-val">0.09</text><text x="238" y="325" text-anchor="end" class="c-lab">Bubble Scatter</text><rect x="250" y="313" width="620.0" height="15" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="250" y="313" width="7.0" height="15" rx="3" fill="var(--text-muted)"><title>Bubble Scatter: 0.01</title></rect><text x="880" y="325" class="c-val">0.01</text><text x="238" y="355" text-anchor="end" class="c-lab">Package Misalignment</text><rect x="250" y="343" width="620.0" height="15" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="250" y="343" width="0.0" height="15" rx="3" fill="var(--text-muted)"><title>Package Misalignment: 0.00</title></rect><text x="880" y="355" class="c-val">no examples</text></svg>
+<div class="twrap"><table><thead><tr><th style="text-align:left">LP class</th><th style="text-align:right">Test pictures</th><th style="text-align:right">Average precision</th><th style="text-align:right">Precision</th><th style="text-align:right">Recall</th><th style="text-align:left">Verdict</th></tr></thead><tbody><tr><td style="text-align:left">Missing Primary Package</td><td style="text-align:right">285</td><td style="text-align:right">1.00</td><td style="text-align:right">1.00</td><td style="text-align:right">0.99</td><td style="text-align:left" class="ok">Meets the 0.85 bar</td></tr><tr><td style="text-align:left">No Lens</td><td style="text-align:right">65</td><td style="text-align:right">0.98</td><td style="text-align:right">1.00</td><td style="text-align:right">0.82</td><td style="text-align:left" class="ok">Meets the 0.85 bar</td></tr><tr><td style="text-align:left">Multiple Lens</td><td style="text-align:right">288</td><td style="text-align:right">0.97</td><td style="text-align:right">0.92</td><td style="text-align:right">0.95</td><td style="text-align:left" class="ok">Meets the 0.85 bar</td></tr><tr><td style="text-align:left">Cavity Off Center</td><td style="text-align:right">37</td><td style="text-align:right">0.94</td><td style="text-align:right">1.00</td><td style="text-align:right">0.78</td><td style="text-align:left" class="ok">Meets the 0.85 bar</td></tr><tr><td style="text-align:left">View Obstructed</td><td style="text-align:right">5</td><td style="text-align:right">0.85</td><td style="text-align:right">0.00</td><td style="text-align:right">0.00</td><td style="text-align:left" class="">Too few pictures to judge</td></tr><tr><td style="text-align:left">Low Dose</td><td style="text-align:right">43</td><td style="text-align:right">0.77</td><td style="text-align:right">1.00</td><td style="text-align:right">0.07</td><td style="text-align:left" class="ok">Meets the target</td></tr><tr><td style="text-align:left">Lens Off Center</td><td style="text-align:right">191</td><td style="text-align:right">0.75</td><td style="text-align:right">0.68</td><td style="text-align:right">0.72</td><td style="text-align:left" class="bad">Below the 0.90 target</td></tr><tr><td style="text-align:left">Dirty Camera</td><td style="text-align:right">67</td><td style="text-align:right">0.58</td><td style="text-align:right">1.00</td><td style="text-align:right">0.03</td><td style="text-align:left" class="bad">Below the 0.85 target</td></tr><tr><td style="text-align:left">Folded Lens</td><td style="text-align:right">37</td><td style="text-align:right">0.27</td><td style="text-align:right">0.33</td><td style="text-align:right">0.03</td><td style="text-align:left" class="bad">Below the 0.70 target</td></tr><tr><td style="text-align:left">Dirty Strobe</td><td style="text-align:right">9</td><td style="text-align:right">0.09</td><td style="text-align:right">0.00</td><td style="text-align:right">0.00</td><td style="text-align:left" class="">Too few pictures to judge</td></tr><tr><td style="text-align:left">Bubble Scatter</td><td style="text-align:right">1</td><td style="text-align:right">0.01</td><td style="text-align:right">0.00</td><td style="text-align:right">0.00</td><td style="text-align:left" class="">Too few pictures to judge</td></tr><tr><td style="text-align:left">Package Misalignment</td><td style="text-align:right">0</td><td style="text-align:right">not measurable</td><td style="text-align:right">0.00</td><td style="text-align:right">0.00</td><td style="text-align:left" class="">No examples in the test set</td></tr></tbody></table></div>
+<p class="note">Average precision asks how well the model ranks pictures: line the pictures up
+by how sure the model is, and are the true ones near the top. It runs from 0 to 1, where 1 is
+perfect and 0.5 is a coin toss. Accuracy is not used, because most pictures are normal and a
+model that always says "nothing wrong" would look excellent and be useless.</p></section>
+
+<section id="reasons"><h3>5. Why each LP class scored as it did</h3>
+<p class="desc">Only the classes with at least twenty test pictures are explained. The four
+rare ones are shown above but cannot support a conclusion either way.</p>
+<ul class="findings"><li><b>Missing Primary Package.</b> The most consistent LP class in the set and the largest test group. The model ranks it almost perfectly and still finds 98.6 percent of the pictures at the default cut-off.</li><li><b>No Lens.</b> An empty cavity looks different from every other case. Ranking is almost perfect; recall at the default cut-off is lower than it could be, and the best balance is reached at a lower one.</li><li><b>Multiple Lens.</b> A large, visually distinct class. Strong ranking and a balanced precision and recall, so the number is trustworthy.</li><li><b>Cavity Off Center.</b> Only 37 test pictures, but the shift of the cavity is a strong visual cue and the model separates it well.</li><li><b>Low Dose.</b> Meets its target, with a caveat: the annotation of this class was left unfinished, so some pictures that carry it may never have been marked. At the default cut-off it finds very few, and its best balance, 0.73, comes at a lower one.</li><li><b>Lens Off Center.</b> Below its target. The lens position also changes with multiple lens and cavity offset, so the three overlap; the model ranks it moderately and its best balance is 0.71.</li><li><b>Dirty Camera.</b> Below its target, and the shape of the error is unusual: when the model says dirty camera it is always right, but at the default cut-off it finds only 3 percent of them. Dirt on the camera is diffuse and low contrast, and the test group is small. The best balance, 0.60, comes at a much lower cut-off, so this is partly a cut-off problem and partly a data problem.</li><li><b>Folded Lens.</b> The weakest of the classes with enough pictures to judge. Almost every folded lens in the data also carries multiple lens, so the model learns the pairing rather than the fold itself and then fails on the few folded lenses that appear alone. Its best balance is 0.36 at a lower cut-off. This is a labelling finding before it is a training one.</li></ul></section>
+
+<section id="flag"><h3>6. The thirteenth class: one OOI flag</h3>
+<p class="desc">Run 2 adds a single answer that covers all eight OOI classes together. It is
+not a new finding and it does not say which OOI class is present; it says that at least one is,
+which is what the routing step needs to decide whether a picture goes on to the object stage.</p>
+<p class="desc">Because it routes rather than describes, it is judged by how often it fires,
+not by average precision.</p>
+<svg viewBox="0 0 980 158" class="chart" role="img" aria-label="How often the OOI flag fired"><line x1="310.0" y1="4" x2="310.0" y2="152" class="grid"/><text x="310.0" y="158" text-anchor="middle" class="c-tick">0%</text><line x1="450.0" y1="4" x2="450.0" y2="152" class="grid"/><text x="450.0" y="158" text-anchor="middle" class="c-tick">25%</text><line x1="590.0" y1="4" x2="590.0" y2="152" class="grid"/><text x="590.0" y="158" text-anchor="middle" class="c-tick">50%</text><line x1="730.0" y1="4" x2="730.0" y2="152" class="grid"/><text x="730.0" y="158" text-anchor="middle" class="c-tick">75%</text><line x1="870.0" y1="4" x2="870.0" y2="152" class="grid"/><text x="870.0" y="158" text-anchor="middle" class="c-tick">100%</text><text x="298" y="22" text-anchor="end" class="c-lab">OOI pictures, no LP class</text><rect x="310" y="11" width="560.0" height="14" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="310" y="11" width="473.3" height="14" rx="3" fill="var(--series-1)"><title>84.5%</title></rect><text x="880" y="22" class="c-val">84.5%</text><text x="310" y="40" class="c-tick">fires on at least 90 percent</text><text x="298" y="66" text-anchor="end" class="c-lab">Pictures with an LP class and an OOI</text><rect x="310" y="55" width="560.0" height="14" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="310" y="55" width="382.9" height="14" rx="3" fill="var(--series-1)"><title>68.4%</title></rect><text x="880" y="66" class="c-val">68.4%</text><text x="310" y="84" class="c-tick">no target; context only</text><text x="298" y="110" text-anchor="end" class="c-lab">Clear pictures</text><rect x="310" y="99" width="560.0" height="14" rx="3" fill="var(--gridline)" opacity="0.55"/><rect x="310" y="99" width="5.2" height="14" rx="3" fill="var(--series-1)"><title>0.9%</title></rect><text x="880" y="110" class="c-val">0.9%</text><text x="310" y="128" class="c-tick">fires on at most 5 percent</text></svg>
+<p class="note">This is the behaviour the routing step needs: it rarely mistakes a clean
+picture for a dirty one. It does miss about one OOI picture in six, which is the safer
+direction, because a missed OOI sends a picture to manual review rather than letting it
+through.</p></section>
+
+<section id="meaning"><h3>7. What this tells us</h3>
+<p class="desc">Four findings, each carrying the number that supports it.</p>
+<ul class="findings">
+<li><b>Four LP classes are effectively solved.</b> Missing Primary Package 1.00, No Lens 0.99,
+Multiple Lens 0.97 and Cavity Off Center 0.94.</li>
+<li><b>Three LP classes hold the average down, for different reasons.</b> Folded Lens 0.27 is a
+labelling problem, Dirty Camera 0.58 is mostly a cut-off problem, and Lens Off Center 0.75
+overlaps with two other classes.</li>
+<li><b>Folded Lens needs a data decision before more training.</b> Almost every folded lens
+also carries multiple lens, so there is little in the pictures to separate the two. Marking
+folded lenses that appear alone, or reporting the pair as one class, would move this number
+more than a longer run.</li>
+<li><b>Dirty Camera is visible to the model but scored too cautiously.</b> Everything it flags
+is right, and at a lower cut-off its balance rises from 0.06 to 0.60.</li>
+</ul></section>
+
+<section id="next"><h3>8. What we would do next</h3>
+<p class="desc">In order, each tied to a finding above.</p>
+<ol class="findings">
+<li><b>Run the planned second experiment with class weighting</b> and compare it with this one,
+to see whether Folded Lens and Dirty Camera move.</li>
+<li><b>Report Folded Lens and Multiple Lens at a lower cut-off, or as one class,</b> and state
+which reading is meant whenever the number is quoted.</li>
+<li><b>Repeat the measurement on the newly annotated pictures,</b> so each class rests on more
+examples before any threshold is fixed for production.</li>
+</ol></section>
+
+<section id="words"><h3>9. Words used here</h3>
+<p class="desc">Every term in the tables and charts, in plain language.</p>
+<div class="twrap"><table><thead><tr><th style="text-align:left">Term</th>
+<th style="text-align:left">Meaning</th></tr></thead><tbody>
+<tr><td style="text-align:left">LP class</td><td style="text-align:left">One of the twelve lens-presentation classes the model answers, built from the LP tags in the annotation.</td></tr>
+<tr><td style="text-align:left">LP tag</td><td style="text-align:left">The annotation tag a picture carries for a lens-presentation class.</td></tr>
+<tr><td style="text-align:left">OOI class</td><td style="text-align:left">One of the eight object-of-interest classes, such as a bubble, a fibre or foreign matter, marked as a region.</td></tr>
+<tr><td style="text-align:left">OOI flag</td><td style="text-align:left">The thirteenth answer in run 2: one flag covering all eight OOI classes together, without naming which.</td></tr>
+<tr><td style="text-align:left">Clear</td><td style="text-align:left">A picture where nothing is marked. A real answer, not a missing one.</td></tr>
+<tr><td style="text-align:left">Test pictures</td><td style="text-align:left">Pictures held back from training and used only to measure.</td></tr>
+<tr><td style="text-align:left">Average precision</td><td style="text-align:left">How well the model ranks pictures for one class. 1 is perfect, 0.5 is a coin toss.</td></tr>
+<tr><td style="text-align:left">Precision</td><td style="text-align:left">Of the pictures flagged, how many were right.</td></tr>
+<tr><td style="text-align:left">Recall</td><td style="text-align:left">Of the pictures that truly carry the class, how many were found.</td></tr>
+<tr><td style="text-align:left">Cut-off</td><td style="text-align:left">The score above which the model says yes. Lowering it finds more and mistakes more.</td></tr>
+</tbody></table></div></section>
+
+</div>
+</body>
+</html>

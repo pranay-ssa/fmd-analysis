@@ -1,0 +1,877 @@
+{
+ "workbook": {
+  "default_header_style": true,
+  "full_calc_on_load": true
+ },
+ "sheets": [
+  {
+   "name": "Summary",
+   "title": "Defect and image-quality analysis - Draft 2 annotation guide, revision 3",
+   "rows": [
+    [
+     "Pictures in the analysed set",
+     6938,
+     "Every picture carrying at least one label under the Draft 2 rules, plus Clear-folder pass pictures. No picture is dropped for lacking a micron-gate tag."
+    ],
+    [],
+    [
+     "Labelled pictures",
+     4782,
+     ""
+    ],
+    [
+     "Clear pass pictures",
+     2156,
+     "Clear-folder pictures with nothing to report; Clear never shares a picture with another label"
+    ],
+    [],
+    [
+     "Main classes (pictures carrying the class)"
+    ],
+    [
+     "Missing Primary Package",
+     1426
+    ],
+    [
+     "Multiple Lens",
+     1439
+    ],
+    [
+     "Lens Off Center",
+     957
+    ],
+    [
+     "Clear",
+     2156
+    ],
+    [
+     "Bubble",
+     862
+    ],
+    [
+     "Bubble Cluster",
+     430
+    ],
+    [
+     "No Lens",
+     325
+    ],
+    [
+     "Dirty Camera",
+     329
+    ],
+    [
+     "Folded Lens",
+     237
+    ],
+    [
+     "Low Dose",
+     215
+    ],
+    [],
+    [
+     "Revision 3 changes against the October 23 draft"
+    ],
+    [
+     "1",
+     "Pictures whose only defect marks are untagged size-gated families are NO LONGER dropped; they return to the analysed set and to their tag columns."
+    ],
+    [
+     "2",
+     "The four size-gated families show two numbers: pictures carrying the class, and the micron-gate-tagged subset that the split uses as positives."
+    ],
+    [
+     "3",
+     "Tag combinations appear as two tables: exact-only pairs and inclusive pairs, each with its definition in the header."
+    ],
+    [
+     "4",
+     "Both split ratios, 70/30 and 80/20, are provided."
+    ],
+    [],
+    [
+     "Rows are not additive: a picture can carry several classes, so the class rows sum to more than the picture totals above."
+    ]
+   ],
+   "column_widths": {
+    "A": 44,
+    "B": 14
+   }
+  },
+  {
+   "name": "LP Tags",
+   "title": "Lens-presentation tags: pictures carrying each tag in the analysed set",
+   "freeze": "A2",
+   "rows": [
+    [
+     "Code",
+     "Tag",
+     "Pictures",
+     "Share of analysed pictures"
+    ],
+    [
+     "P1_MPP",
+     "Missing Primary Package",
+     1426,
+     0.2055
+    ],
+    [
+     "P1_COC",
+     "Cavity Off Center",
+     184,
+     0.0265
+    ],
+    [
+     "F2_FOV/P2_FOV",
+     "Field of View Obstructed",
+     24,
+     0.0035
+    ],
+    [
+     "P2_LOC",
+     "Lens Off Center",
+     957,
+     0.1379
+    ],
+    [
+     "P1_NL",
+     "No Lens",
+     325,
+     0.0468
+    ],
+    [
+     "P1_ML",
+     "Multiple Lens",
+     1439,
+     0.2074
+    ],
+    [
+     "P1_FL",
+     "Folded Lens",
+     237,
+     0.0342
+    ],
+    [
+     "P2_DS",
+     "Dirty Strobe",
+     43,
+     0.0062
+    ],
+    [
+     "P2_DC",
+     "Dirty Camera",
+     329,
+     0.0474
+    ],
+    [
+     "P2_BSC",
+     "Bubble Scatter",
+     6,
+     0.0009
+    ],
+    [
+     "P2_LD",
+     "Low Dose",
+     215,
+     0.031
+    ],
+    [],
+    [
+     "Class rows are not additive: a picture can carry several tags."
+    ]
+   ],
+   "column_widths": {
+    "A": 14,
+    "B": 26,
+    "C": 10,
+    "D": 22
+   }
+  },
+  {
+   "name": "Object Classes",
+   "title": "Object classes: pictures carrying the class; gated families also show the micron-gate-tagged subset",
+   "freeze": "A2",
+   "rows": [
+    [
+     "Code",
+     "Class",
+     "Pictures carrying the class",
+     "Of which micron-gate tagged",
+     "Note"
+    ],
+    [
+     "P2_BB",
+     "Bubble",
+     862,
+     "",
+     ""
+    ],
+    [
+     "P2_BC",
+     "Bubble Cluster",
+     430,
+     "",
+     ""
+    ],
+    [
+     "P2_WP",
+     "Wet Package",
+     146,
+     "",
+     ""
+    ],
+    [
+     "P3_FM",
+     "Foreign Matter",
+     171,
+     171,
+     "Split positives = the gate-tagged subset (they exceed the size threshold and must be failed)"
+    ],
+    [
+     "P3_FIB",
+     "Fiber",
+     168,
+     168,
+     "Split positives = the gate-tagged subset (they exceed the size threshold and must be failed)"
+    ],
+    [
+     "P3_EP",
+     "Extraneous Polymer",
+     33,
+     33,
+     "Split positives = the gate-tagged subset (they exceed the size threshold and must be failed)"
+    ],
+    [
+     "P3_HE",
+     "HEMA",
+     94,
+     94,
+     "Split positives = the gate-tagged subset (they exceed the size threshold and must be failed)"
+    ],
+    [],
+    [
+     "Bubble merges irregular and stretched bubbles per Draft 2. Bubble On 123 (13), Bubble On Edge (14) and HEMA Obstruction (86) stay separate legacy rows."
+    ]
+   ],
+   "column_widths": {
+    "A": 10,
+    "B": 24,
+    "C": 24,
+    "D": 24,
+    "E": 52
+   }
+  },
+  {
+   "name": "Tag Pairs Exact",
+   "title": "Tag combinations - EXACT pairs only: the picture's label set is precisely that pair, nothing else",
+   "freeze": "A2",
+   "rows": [
+    [
+     "Rank",
+     "Tag pair",
+     "Pictures"
+    ],
+    [
+     1,
+     "Lens Off Center + Multiple Lens",
+     374
+    ],
+    [
+     2,
+     "Folded Lens + Multiple Lens",
+     67
+    ],
+    [
+     3,
+     "Bubble + Foreign Matter (micron gate)",
+     39
+    ],
+    [
+     4,
+     "Bubble + Bubble Cluster",
+     36
+    ],
+    [
+     5,
+     "Bubble + HEMA (micron gate)",
+     29
+    ],
+    [
+     6,
+     "Bubble + Wet Package",
+     21
+    ],
+    [
+     7,
+     "Dirty Camera + Multiple Lens",
+     18
+    ],
+    [
+     8,
+     "Bubble + Low Dose",
+     16
+    ],
+    [
+     9,
+     "Bubble + Dirty Camera",
+     13
+    ],
+    [
+     10,
+     "Bubble + Dirty Strobe",
+     8
+    ],
+    [
+     11,
+     "Bubble + Fiber (micron gate)",
+     8
+    ],
+    [
+     12,
+     "Lens Off Center + Low Dose",
+     6
+    ],
+    [
+     13,
+     "Bubble + Multiple Lens",
+     5
+    ],
+    [
+     14,
+     "Low Dose + Multiple Lens",
+     5
+    ],
+    [
+     15,
+     "Dirty Camera + Lens Off Center",
+     4
+    ]
+   ],
+   "column_widths": {
+    "A": 6,
+    "B": 52,
+    "C": 10
+   }
+  },
+  {
+   "name": "Tag Pairs Inclusive",
+   "title": "Tag combinations - INCLUSIVE pairs: the picture carries both tags; other labels in addition are allowed",
+   "freeze": "A2",
+   "rows": [
+    [
+     "Rank",
+     "Tag pair (both present, other labels allowed)",
+     "Pictures"
+    ],
+    [
+     1,
+     "Lens Off Center + Multiple Lens",
+     664
+    ],
+    [
+     2,
+     "Bubble + Bubble Cluster",
+     407
+    ],
+    [
+     3,
+     "Folded Lens + Multiple Lens",
+     236
+    ],
+    [
+     4,
+     "Bubble + Dirty Camera",
+     200
+    ],
+    [
+     5,
+     "Bubble + Lens Off Center",
+     185
+    ],
+    [
+     6,
+     "Bubble + Multiple Lens",
+     168
+    ],
+    [
+     7,
+     "Bubble + Foreign Matter (micron gate)",
+     167
+    ],
+    [
+     8,
+     "Folded Lens + Lens Off Center",
+     148
+    ],
+    [
+     9,
+     "Bubble + Fiber (micron gate)",
+     132
+    ],
+    [
+     10,
+     "Bubble + Low Dose",
+     121
+    ],
+    [
+     11,
+     "Bubble Cluster + Dirty Camera",
+     119
+    ],
+    [
+     12,
+     "Bubble + Wet Package",
+     117
+    ],
+    [
+     13,
+     "Bubble Cluster + Lens Off Center",
+     106
+    ],
+    [
+     14,
+     "Dirty Camera + Multiple Lens",
+     106
+    ],
+    [
+     15,
+     "Bubble Cluster + Multiple Lens",
+     100
+    ],
+    [],
+    [
+     "Read the two tables together: a pair can be rare exactly because most of its pictures carry a third label. Example: Multiple Lens + Lens Off Center."
+    ]
+   ],
+   "column_widths": {
+    "A": 6,
+    "B": 52,
+    "C": 10
+   }
+  },
+  {
+   "name": "Split 70-30",
+   "title": "Train/test split 70/30 - iterative stratification, seed 42, content groups",
+   "freeze": "A2",
+   "rows": [
+    [
+     "Class",
+     "Training",
+     "Test",
+     "Total",
+     "Expected train",
+     "Expected test"
+    ],
+    [
+     "Foreign Matter (micron gate)",
+     124,
+     47,
+     171,
+     119.7,
+     51.3
+    ],
+    [
+     "Fiber (micron gate)",
+     90,
+     47,
+     137,
+     95.9,
+     41.1
+    ],
+    [
+     "Extraneous Polymer (micron gate)",
+     25,
+     8,
+     33,
+     23.1,
+     9.9
+    ],
+    [
+     "HEMA (micron gate)",
+     66,
+     28,
+     94,
+     65.8,
+     28.2
+    ],
+    [
+     "Bubble",
+     552,
+     237,
+     789,
+     552.3,
+     236.7
+    ],
+    [
+     "Bubble Cluster",
+     266,
+     114,
+     380,
+     266.0,
+     114.0
+    ],
+    [
+     "Wet Package",
+     88,
+     38,
+     126,
+     88.2,
+     37.8
+    ],
+    [
+     "Missing Primary Package",
+     998,
+     428,
+     1426,
+     998.2,
+     427.8
+    ],
+    [
+     "Multiple Lens",
+     981,
+     421,
+     1402,
+     981.4,
+     420.6
+    ],
+    [
+     "No Lens",
+     225,
+     97,
+     322,
+     225.4,
+     96.6
+    ],
+    [
+     "Cavity Off Center",
+     129,
+     55,
+     184,
+     128.8,
+     55.2
+    ],
+    [
+     "Folded Lens",
+     167,
+     59,
+     226,
+     158.2,
+     67.8
+    ],
+    [
+     "Lens Off Center",
+     645,
+     277,
+     922,
+     645.4,
+     276.6
+    ],
+    [
+     "Dirty Camera",
+     209,
+     89,
+     298,
+     208.6,
+     89.4
+    ],
+    [
+     "Dirty Strobe",
+     29,
+     12,
+     41,
+     28.7,
+     12.3
+    ],
+    [
+     "Low Dose",
+     143,
+     61,
+     204,
+     142.8,
+     61.2
+    ],
+    [
+     "View Obstructed",
+     17,
+     7,
+     24,
+     16.8,
+     7.2
+    ],
+    [
+     "Package Misalignment",
+     1,
+     1,
+     2,
+     1.4,
+     0.6
+    ],
+    [
+     "Bubble Scatter",
+     4,
+     2,
+     6,
+     4.2,
+     1.8
+    ],
+    [
+     "Clear",
+     1509,
+     647,
+     2156,
+     1509.2,
+     646.8
+    ],
+    [],
+    [
+     "Total",
+     4568,
+     2006,
+     6574
+    ],
+    [
+     "Split positives for the four gated families are the micron-gate-tagged pictures; every picture appears in exactly one side; no separate validation set."
+    ]
+   ],
+   "column_widths": {
+    "A": 30,
+    "B": 10,
+    "C": 10,
+    "D": 10,
+    "E": 14,
+    "F": 14
+   }
+  },
+  {
+   "name": "Split 80-20",
+   "title": "Train/test split 80/20 - iterative stratification, seed 42, content groups",
+   "freeze": "A2",
+   "rows": [
+    [
+     "Class",
+     "Training",
+     "Test",
+     "Total",
+     "Expected train",
+     "Expected test"
+    ],
+    [
+     "Foreign Matter (micron gate)",
+     141,
+     30,
+     171,
+     136.8,
+     34.2
+    ],
+    [
+     "Fiber (micron gate)",
+     98,
+     39,
+     137,
+     109.6,
+     27.4
+    ],
+    [
+     "Extraneous Polymer (micron gate)",
+     29,
+     4,
+     33,
+     26.4,
+     6.6
+    ],
+    [
+     "HEMA (micron gate)",
+     77,
+     17,
+     94,
+     75.2,
+     18.8
+    ],
+    [
+     "Bubble",
+     631,
+     158,
+     789,
+     631.2,
+     157.8
+    ],
+    [
+     "Bubble Cluster",
+     304,
+     76,
+     380,
+     304.0,
+     76.0
+    ],
+    [
+     "Wet Package",
+     101,
+     25,
+     126,
+     100.8,
+     25.2
+    ],
+    [
+     "Missing Primary Package",
+     1141,
+     285,
+     1426,
+     1140.8,
+     285.2
+    ],
+    [
+     "Multiple Lens",
+     1122,
+     280,
+     1402,
+     1121.6,
+     280.4
+    ],
+    [
+     "No Lens",
+     258,
+     64,
+     322,
+     257.6,
+     64.4
+    ],
+    [
+     "Cavity Off Center",
+     147,
+     37,
+     184,
+     147.2,
+     36.8
+    ],
+    [
+     "Folded Lens",
+     178,
+     48,
+     226,
+     180.8,
+     45.2
+    ],
+    [
+     "Lens Off Center",
+     738,
+     184,
+     922,
+     737.6,
+     184.4
+    ],
+    [
+     "Dirty Camera",
+     238,
+     60,
+     298,
+     238.4,
+     59.6
+    ],
+    [
+     "Dirty Strobe",
+     33,
+     8,
+     41,
+     32.8,
+     8.2
+    ],
+    [
+     "Low Dose",
+     163,
+     41,
+     204,
+     163.2,
+     40.8
+    ],
+    [
+     "View Obstructed",
+     19,
+     5,
+     24,
+     19.2,
+     4.8
+    ],
+    [
+     "Package Misalignment",
+     2,
+     0,
+     2,
+     1.6,
+     0.4
+    ],
+    [
+     "Bubble Scatter",
+     5,
+     1,
+     6,
+     4.8,
+     1.2
+    ],
+    [
+     "Clear",
+     1725,
+     431,
+     2156,
+     1724.8,
+     431.2
+    ],
+    [],
+    [
+     "Total",
+     5269,
+     1305,
+     6574
+    ],
+    [
+     "Split positives for the four gated families are the micron-gate-tagged pictures; every picture appears in exactly one side; no separate validation set."
+    ]
+   ],
+   "column_widths": {
+    "A": 30,
+    "B": 10,
+    "C": 10,
+    "D": 10,
+    "E": 14,
+    "F": 14
+   }
+  },
+  {
+   "name": "Definitions",
+   "title": "Definitions",
+   "rows": [
+    [
+     "Term",
+     "Meaning"
+    ],
+    [
+     "Analysed set",
+     "All 6938 pictures carrying at least one label under the Draft 2 rules, plus Clear-folder pass pictures. No picture is excluded for lacking a micron-gate tag."
+    ],
+    [
+     "Micron gate",
+     "A size flag: the defect exceeds the agreed size limit. An EDA concept: the gate-tagged subset is shown beside the class total. A split concept: gate-tagged pictures are the positives the model must fail."
+    ],
+    [
+     "Clear",
+     "A picture with nothing to report; never shares a picture with another label."
+    ],
+    [
+     "Exact pair",
+     "A picture whose complete label set is exactly that pair of labels, nothing else."
+    ],
+    [
+     "Inclusive pair",
+     "A picture that carries both labels of the pair, regardless of what else it carries."
+    ],
+    [
+     "Legacy rows",
+     "Bubble On 123, Bubble On Edge and HEMA Obstruction are kept for reference; they are not Draft 2 classes and do not stratify the split."
+    ]
+   ],
+   "column_widths": {
+    "A": 18,
+    "B": 110
+   }
+  }
+ ]
+}

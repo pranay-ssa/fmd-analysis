@@ -1,0 +1,847 @@
+{
+  "full_calc_on_load": false,
+  "sheets": [
+    {
+      "name": "Legend",
+      "rows": [
+        [
+          "Column in matrix",
+          "Draft 2 code",
+          "Shape kind",
+          "Positives"
+        ],
+        [
+          "foreign_matter_micron_gate",
+          "P3_FM_MICRON_THRESHOLD",
+          "gate",
+          171
+        ],
+        [
+          "fiber_micron_gate",
+          "P3_FIB_MICRON_THRESHOLD",
+          "gate",
+          168
+        ],
+        [
+          "extraneous_polymer_micron_gate",
+          "P3_EP_MICRON_THRESHOLD",
+          "gate",
+          33
+        ],
+        [
+          "hema_micron_gate",
+          "P3_HE_MICRON_THRESHOLD",
+          "gate",
+          94
+        ],
+        [
+          "bubble",
+          "P2_BB (absorbs P2_BI, P2_BST)",
+          "box",
+          862
+        ],
+        [
+          "bubble_cluster",
+          "P2_BC",
+          "box",
+          430
+        ],
+        [
+          "bubble_on_123",
+          "(library name; no newer code)",
+          "box",
+          13
+        ],
+        [
+          "bubble_on_edge",
+          "(library name; no newer code)",
+          "box",
+          14
+        ],
+        [
+          "wet_package",
+          "P2_WP",
+          "box",
+          146
+        ],
+        [
+          "bubble_scatter",
+          "P2_BSC",
+          "tag",
+          6
+        ],
+        [
+          "hema_obstruction",
+          "P2_HMO (retired in Draft 2)",
+          "tag",
+          86
+        ],
+        [
+          "missing_primary_package",
+          "P1_MPP",
+          "tag",
+          1426
+        ],
+        [
+          "multiple_lenses",
+          "P1_ML",
+          "tag",
+          1433
+        ],
+        [
+          "no_lens",
+          "P1_NL",
+          "tag",
+          323
+        ],
+        [
+          "cavity_off_center",
+          "P1_COC",
+          "tag",
+          184
+        ],
+        [
+          "folded_lens",
+          "P1_FL",
+          "tag",
+          237
+        ],
+        [
+          "lens_off_center",
+          "P2_LOC (production alias F2_FOV is view_obstructed)",
+          "tag",
+          953
+        ],
+        [
+          "dirty_camera",
+          "P2_DC",
+          "tag",
+          326
+        ],
+        [
+          "dirty_strobe",
+          "P2_DS",
+          "tag",
+          43
+        ],
+        [
+          "low_dose",
+          "P2_LD",
+          "tag",
+          215
+        ],
+        [
+          "view_obstructed",
+          "P2_FOV / F2_FOV",
+          "tag",
+          24
+        ],
+        [
+          "package_misalignment",
+          "P1_PPM",
+          "tag",
+          2
+        ],
+        [
+          "clear",
+          "(computed, not annotated)",
+          "computed",
+          2166
+        ]
+      ],
+      "column_widths": {
+        "A": 34,
+        "B": 46,
+        "C": 14,
+        "D": 12
+      },
+      "freeze_panes": "A2"
+    },
+    {
+      "name": "Change table",
+      "rows": [
+        [
+          "Previous name",
+          "Draft 2 code",
+          "Draft 2 name",
+          "What changed",
+          "Status in this experiment"
+        ],
+        [
+          "Missing Primary Package",
+          "P1_MPP",
+          "Missing Primary Package",
+          "Code added in Draft 2",
+          "In scope"
+        ],
+        [
+          "Multiple Lenses",
+          "P1_ML",
+          "Multiple Lens",
+          "Renamed singular; fragment-size rule added",
+          "In scope"
+        ],
+        [
+          "Missing Lens",
+          "P1_NL",
+          "No Lens",
+          "Renamed; validity preconditions added",
+          "In scope"
+        ],
+        [
+          "Cavity Off Center",
+          "P1_COC",
+          "Cavity Off Center",
+          "Code added; cause test made explicit",
+          "In scope"
+        ],
+        [
+          "Folded Lens",
+          "P1_FL",
+          "Folded Lens",
+          "Code added; severity and Multiple-Lens co-occurrence rules",
+          "In scope"
+        ],
+        [
+          "Lens Off Center",
+          "P2_LOC",
+          "Lens Off Center",
+          "Code added; LOC-vs-Low-Dose rule now bidirectional",
+          "In scope"
+        ],
+        [
+          "Dirty Camera",
+          "P2_DC",
+          "Dirty Camera",
+          "Code added; one-tag-per-image rule; focal-plane distinction",
+          "In scope"
+        ],
+        [
+          "Dirty Strobe",
+          "P2_DS",
+          "Dirty Strobe",
+          "Code added; focal-plane cause stated",
+          "In scope"
+        ],
+        [
+          "Low Dose",
+          "P2_LD",
+          "Low Dose Obstructing Region of Interest",
+          "Code added; LOC-vs-LD rule bidirectional",
+          "In scope; negatives flagged unreliable"
+        ],
+        [
+          "View Obstructed",
+          "P2_FOV",
+          "Field of View Obstructed",
+          "Code added; quality exclusions; production files use anomalous F2_FOV (collision kept)",
+          "In scope"
+        ],
+        [
+          "Package Misalignment",
+          "P1_PPM",
+          "Primary Package Misalignment",
+          "Renamed; absorbs Multiple Primary Package and Package Off Center",
+          "In scope (2 images)"
+        ],
+        [
+          "Bubble",
+          "P2_BB",
+          "Bubble",
+          "Code added",
+          "In scope"
+        ],
+        [
+          "Bubble Irregular",
+          "P2_BB",
+          "Bubble",
+          "Merged into Bubble (Draft 2 consolidation)",
+          "In scope, inside Bubble"
+        ],
+        [
+          "Stretched Bubble",
+          "P2_BB",
+          "Bubble",
+          "Merged into Bubble (Draft 2 consolidation)",
+          "In scope, inside Bubble"
+        ],
+        [
+          "Bubble Cluster",
+          "P2_BC",
+          "Bubble Cluster",
+          "Stays a box class; grouping criteria expanded (4-5 px separations, favor smaller clusters)",
+          "In scope"
+        ],
+        [
+          "Bubble on Edge",
+          "(none)",
+          "deprecated",
+          "Draft 2 deprecates as a distinct label; location attributes dropped",
+          "KEPT as own column; discrepancy noted in workbook"
+        ],
+        [
+          "Bubble on \"123\" Mark",
+          "(none)",
+          "deprecated",
+          "Draft 2 deprecates as a distinct label; location attributes dropped",
+          "KEPT as own column; discrepancy noted in workbook"
+        ],
+        [
+          "Bubble Scatter",
+          "P2_BSC",
+          "Bubble Scatter",
+          "Explicitly a presentation tag, not an object; application thresholds added",
+          "In scope (6 images)"
+        ],
+        [
+          "Wet Package",
+          "P2_WP",
+          "Wet Package",
+          "Code added",
+          "In scope"
+        ],
+        [
+          "HEMA Fragment",
+          "P3_HE",
+          "HEMA",
+          "Renamed (Fragment dropped); ring fragments now included",
+          "In scope via the HEMA gate class"
+        ],
+        [
+          "HEMA Obstruction",
+          "(removed)",
+          "no successor",
+          "Draft 2 retires the tag; the intact-obstruction case is unassigned",
+          "KEPT as legacy column (86 pictures); discrepancy noted"
+        ],
+        [
+          "Foreign Matter",
+          "P3_FM",
+          "Foreign Matter",
+          "Reworded from catch-all-first to explicit default-last",
+          "In scope via the FM gate class"
+        ],
+        [
+          "Fiber",
+          "P3_FIB",
+          "Fiber",
+          "New tiebreak: uncertain cases default to Fiber",
+          "In scope via the Fiber gate class and the 33-picture flip"
+        ],
+        [
+          "Extraneous Polymer",
+          "P3_EP",
+          "Extraneous Polymer",
+          "Tiebreak and fragment rule added",
+          "In scope via the EP gate class"
+        ],
+        [
+          "(new) micron gates",
+          "P3_FM/FIB/EP/HE_MICRON_THRESHOLD",
+          "four * micron gate tags",
+          "Production-only size-gate tags; in this experiment the gate IS the class",
+          "4 gate columns"
+        ],
+        [
+          "Clear",
+          "(none)",
+          "(none)",
+          "Not an annotation; computed as no defect-class label",
+          "Computed column"
+        ],
+        [
+          "Edge Bottle-Capped",
+          "P1_EBC",
+          "Edge Bottle-Capped",
+          "Draft 2 new class; zero shapes in any annotation file",
+          "SKIPPED (no data)"
+        ],
+        [
+          "Torn Lens",
+          "P1_TL",
+          "Torn Lens",
+          "Draft 2 new class; zero shapes in any annotation file",
+          "SKIPPED (no data)"
+        ],
+        [
+          "Lens Rupture",
+          "P1_LR",
+          "Lens Rupture",
+          "Draft 2 new class; zero shapes in any annotation file",
+          "SKIPPED (no data)"
+        ],
+        [
+          "Surface Groove",
+          "P1_SG",
+          "Surface Groove",
+          "Draft 2 new class; zero shapes in any annotation file",
+          "SKIPPED (no data)"
+        ]
+      ],
+      "column_widths": {
+        "A": 24,
+        "B": 30,
+        "C": 34,
+        "D": 62,
+        "E": 42
+      },
+      "freeze_panes": "A2"
+    },
+    {
+      "name": "Column prevalence",
+      "rows": [
+        [
+          "Column",
+          "Positives",
+          "Negatives",
+          "Prevalence"
+        ],
+        [
+          "foreign_matter_micron_gate",
+          171,
+          6614,
+          0.0252
+        ],
+        [
+          "fiber_micron_gate",
+          168,
+          6617,
+          0.0248
+        ],
+        [
+          "extraneous_polymer_micron_gate",
+          33,
+          6752,
+          0.0049
+        ],
+        [
+          "hema_micron_gate",
+          94,
+          6691,
+          0.0139
+        ],
+        [
+          "bubble",
+          862,
+          5923,
+          0.127
+        ],
+        [
+          "bubble_cluster",
+          430,
+          6355,
+          0.0634
+        ],
+        [
+          "bubble_on_123",
+          13,
+          6772,
+          0.0019
+        ],
+        [
+          "bubble_on_edge",
+          14,
+          6771,
+          0.0021
+        ],
+        [
+          "wet_package",
+          146,
+          6639,
+          0.0215
+        ],
+        [
+          "bubble_scatter",
+          6,
+          6779,
+          0.0009
+        ],
+        [
+          "hema_obstruction",
+          86,
+          6699,
+          0.0127
+        ],
+        [
+          "missing_primary_package",
+          1426,
+          5359,
+          0.2102
+        ],
+        [
+          "multiple_lenses",
+          1433,
+          5352,
+          0.2112
+        ],
+        [
+          "no_lens",
+          323,
+          6462,
+          0.0476
+        ],
+        [
+          "cavity_off_center",
+          184,
+          6601,
+          0.0271
+        ],
+        [
+          "folded_lens",
+          237,
+          6548,
+          0.0349
+        ],
+        [
+          "lens_off_center",
+          953,
+          5832,
+          0.1405
+        ],
+        [
+          "dirty_camera",
+          326,
+          6459,
+          0.048
+        ],
+        [
+          "dirty_strobe",
+          43,
+          6742,
+          0.0063
+        ],
+        [
+          "low_dose",
+          215,
+          6570,
+          0.0317
+        ],
+        [
+          "view_obstructed",
+          24,
+          6761,
+          0.0035
+        ],
+        [
+          "package_misalignment",
+          2,
+          6783,
+          0.0003
+        ],
+        [
+          "clear",
+          2166,
+          4619,
+          0.3192
+        ]
+      ],
+      "column_widths": {
+        "A": 34,
+        "B": 12,
+        "C": 12,
+        "D": 12
+      },
+      "freeze_panes": "A2"
+    },
+    {
+      "name": "Distribution",
+      "rows": [
+        [
+          "Labels per image",
+          "Images"
+        ],
+        [
+          1,
+          5383
+        ],
+        [
+          2,
+          673
+        ],
+        [
+          3,
+          424
+        ],
+        [
+          4,
+          207
+        ],
+        [
+          5,
+          71
+        ],
+        [
+          6,
+          20
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          2
+        ]
+      ],
+      "column_widths": {
+        "A": 18,
+        "B": 12
+      }
+    },
+    {
+      "name": "Co-occurrence",
+      "rows": [
+        [
+          "Class A",
+          "Class B",
+          "Images with both"
+        ],
+        [
+          "lens_off_center",
+          "multiple_lenses",
+          661
+        ],
+        [
+          "bubble",
+          "bubble_cluster",
+          407
+        ],
+        [
+          "folded_lens",
+          "multiple_lenses",
+          236
+        ],
+        [
+          "bubble",
+          "dirty_camera",
+          200
+        ],
+        [
+          "bubble",
+          "lens_off_center",
+          185
+        ],
+        [
+          "bubble",
+          "multiple_lenses",
+          168
+        ],
+        [
+          "bubble",
+          "foreign_matter_micron_gate",
+          167
+        ],
+        [
+          "folded_lens",
+          "lens_off_center",
+          148
+        ],
+        [
+          "bubble",
+          "fiber_micron_gate",
+          132
+        ],
+        [
+          "bubble",
+          "low_dose",
+          121
+        ],
+        [
+          "bubble_cluster",
+          "dirty_camera",
+          119
+        ],
+        [
+          "bubble",
+          "wet_package",
+          117
+        ],
+        [
+          "bubble_cluster",
+          "lens_off_center",
+          106
+        ],
+        [
+          "dirty_camera",
+          "multiple_lenses",
+          104
+        ],
+        [
+          "bubble_cluster",
+          "multiple_lenses",
+          100
+        ],
+        [
+          "bubble_cluster",
+          "foreign_matter_micron_gate",
+          100
+        ],
+        [
+          "bubble",
+          "hema_micron_gate",
+          94
+        ],
+        [
+          "dirty_camera",
+          "lens_off_center",
+          94
+        ],
+        [
+          "bubble_cluster",
+          "fiber_micron_gate",
+          72
+        ],
+        [
+          "dirty_camera",
+          "low_dose",
+          72
+        ]
+      ],
+      "column_widths": {
+        "A": 32,
+        "B": 32,
+        "C": 16
+      },
+      "freeze_panes": "A2"
+    },
+    {
+      "name": "Subset checks",
+      "rows": [
+        [
+          "Column A (never appears without B)",
+          "Column B",
+          "A positives",
+          "B positives",
+          "B without A (reverse count)"
+        ],
+        [
+          "hema_micron_gate",
+          "bubble",
+          94,
+          862,
+          768
+        ]
+      ],
+      "column_widths": {
+        "A": 34,
+        "B": 34,
+        "C": 12,
+        "D": 12,
+        "E": 26
+      },
+      "freeze_panes": "A2"
+    },
+    {
+      "name": "Readings",
+      "rows": [
+        [
+          "Reading",
+          "Pictures"
+        ],
+        [
+          "Universe (distinct pictures, three libraries)",
+          10614
+        ],
+        [
+          "Dropped: only-plain FM/Fiber/EP/HEMA, flip not saving them",
+          -153
+        ],
+        [
+          "EDA matrix rows",
+          6785
+        ],
+        [
+          "Split-ineligible: gate-less plain carriers still in matrix (75 mixed + 31 flipped)",
+          -106
+        ],
+        [
+          "Split universe",
+          6679
+        ],
+        [
+          "Clear folder rule: pictures in the Clear folders",
+          2166
+        ],
+        [
+          "Defect-labeled folder pictures (winning file 167, rescued from older files 84, overlap most)",
+          "-"
+        ],
+        [
+          "Clear class after the folder rule (all reliable by folder membership)",
+          2166
+        ],
+        [
+          "Dropped: unannotated (1,907 name-listed empty + 1,769 never listed)",
+          -3676
+        ],
+        [
+          "Row status: labeled / clear_folder",
+          "labeled 4619 / clear_folder 2166 / unlabeled 0"
+        ],
+        [
+          "Flip pictures kept as Fiber in EDA (31) / with gate (2)",
+          31
+        ]
+      ],
+      "column_widths": {
+        "A": 72,
+        "B": 12
+      }
+    },
+    {
+      "name": "Discrepancy notes",
+      "rows": [
+        [
+          "#",
+          "Discrepancy",
+          "Handling"
+        ],
+        [
+          1,
+          "Draft 2 deprecates Bubble On 123 and Bubble On Edge; this experiment keeps them as own classes (13 + 14 pictures, library-only)",
+          "Kept; flagged; fold-in would move 27 pictures into Bubble"
+        ],
+        [
+          2,
+          "Draft 2 retires HEMA Obstruction with no successor tag",
+          "Kept as legacy column (86 legacy tags only; production P3_HE boxes belong to the HEMA gate column)"
+        ],
+        [
+          3,
+          "The client's 33-image EP/Fiber ruling equals the Fiber-to-EP flip set exactly; the EP gate set is also 33 but overlaps it by only 2 pictures",
+          "Flip applied from the verified md5 list; coincidence documented, never used"
+        ],
+        [
+          4,
+          "31 of the 33 flipped pictures carry no gate, so the split reading excludes them; the EDA reading keeps them as Fiber",
+          "Two readings, one artifact; split_eligible column"
+        ],
+        [
+          5,
+          "Clear is a folder-derived class (winning path in a Clear folder), not a computed absence; older-file defect labels rescue folder pictures into defect classes",
+          "Adopted 2026-10-21; Clear = 2,166, all reliable by folder membership"
+        ],
+        [
+          6,
+          "P3_HE means HEMA Fragment in Sep-22 and boxes in production (collision); F2_FOV production alias for P2_FOV",
+          "Collisions kept unmerged per the frozen crosswalk; client questions remain out"
+        ],
+        [
+          7,
+          "Low Dose task is only partially annotated, so no-tag is not no-defect there",
+          "negatives_reliable flag per picture; trainer switch"
+        ],
+        [
+          8,
+          "3,676 pictures carry no label at all: 1,907 name-listed empty by the Sep-22 export, 1,769 never listed in any annotation file",
+          "RESOLVED 2026-10-21: 0 tags = no tags, dropped from the experiment; VM hash sweep verified the 12,079 library bitmaps byte-identical (10,614 distinct)"
+        ]
+      ],
+      "column_widths": {
+        "A": 5,
+        "B": 72,
+        "C": 62
+      }
+    }
+  ]
+}

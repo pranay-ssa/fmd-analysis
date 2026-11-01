@@ -1,0 +1,93 @@
+{
+  "ticket": "019",
+  "date": "2026-10-21",
+  "frame": "docs/decisions/2026-10-21-multilabel-edge-frame.md",
+  "inputs": {
+    "picture_table": "D:/fmd-analysis/run/eda_full_20261015/picture_table.csv",
+    "resolved_labels": "D:/fmd-analysis/run/eda_full_20261015/resolved_labels.csv",
+    "flip_list": "D:/fmd-analysis/run/multilabel_edge_20261021/fiber_ep_flip_list.csv",
+    "flip_list_md5": "b14215ca1637fe103c1bd1bd8e06ee47"
+  },
+  "label_columns": [
+    "foreign_matter_micron_gate",
+    "fiber_micron_gate",
+    "extraneous_polymer_micron_gate",
+    "hema_micron_gate",
+    "bubble",
+    "bubble_cluster",
+    "bubble_on_123",
+    "bubble_on_edge",
+    "wet_package",
+    "bubble_scatter",
+    "hema_obstruction",
+    "missing_primary_package",
+    "multiple_lenses",
+    "no_lens",
+    "cavity_off_center",
+    "folded_lens",
+    "lens_off_center",
+    "dirty_camera",
+    "dirty_strobe",
+    "low_dose",
+    "view_obstructed",
+    "package_misalignment",
+    "clear"
+  ],
+  "headline": {
+    "universe": 10614,
+    "dropped_only_plain": 153,
+    "dropped_unannotated": 3676,
+    "unannotated_composition": {
+      "mentioned": 1907,
+      "unmentioned": 1769
+    },
+    "eda_rows": 6785,
+    "split_eligible_rows": 6679,
+    "flip_rows_in_matrix": 31,
+    "clear_rows": 2156,
+    "clear_rows_negative_unreliable": 0,
+    "clear_folder_pictures": 2333,
+    "rescued_defect_rows": 2,
+    "row_status_counts": {
+      "labeled": 4629,
+      "clear_folder": 2156
+    },
+    "per_column_positives": {
+      "foreign_matter_micron_gate": 171,
+      "fiber_micron_gate": 168,
+      "extraneous_polymer_micron_gate": 33,
+      "hema_micron_gate": 94,
+      "bubble": 862,
+      "bubble_cluster": 430,
+      "bubble_on_123": 13,
+      "bubble_on_edge": 14,
+      "wet_package": 146,
+      "bubble_scatter": 6,
+      "hema_obstruction": 86,
+      "missing_primary_package": 1426,
+      "multiple_lenses": 1433,
+      "no_lens": 323,
+      "cavity_off_center": 184,
+      "folded_lens": 237,
+      "lens_off_center": 953,
+      "dirty_camera": 326,
+      "dirty_strobe": 43,
+      "low_dose": 215,
+      "view_obstructed": 24,
+      "package_misalignment": 2,
+      "clear": 2156
+    },
+    "cardinality_distribution": {
+      "1": 5393,
+      "2": 663,
+      "3": 424,
+      "4": 207,
+      "5": 71,
+      "6": 20,
+      "7": 5,
+      "8": 2
+    },
+    "distinct_label_vectors": 191,
+    "unmapped_mention_names": 0
+  }
+}

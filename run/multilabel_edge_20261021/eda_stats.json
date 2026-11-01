@@ -1,0 +1,160 @@
+{
+  "universe": 10614,
+  "eda_rows": 6785,
+  "split_eligible": 6679,
+  "flip_rows": 31,
+  "clear": 2166,
+  "clear_unreliable": 0,
+  "clear_folder": 2166,
+  "row_status_str": "labeled 4619 / clear_folder 2166 / unlabeled 0",
+  "per_column": {
+    "foreign_matter_micron_gate": 171,
+    "fiber_micron_gate": 168,
+    "extraneous_polymer_micron_gate": 33,
+    "hema_micron_gate": 94,
+    "bubble": 862,
+    "bubble_cluster": 430,
+    "bubble_on_123": 13,
+    "bubble_on_edge": 14,
+    "wet_package": 146,
+    "bubble_scatter": 6,
+    "hema_obstruction": 86,
+    "missing_primary_package": 1426,
+    "multiple_lenses": 1433,
+    "no_lens": 323,
+    "cavity_off_center": 184,
+    "folded_lens": 237,
+    "lens_off_center": 953,
+    "dirty_camera": 326,
+    "dirty_strobe": 43,
+    "low_dose": 215,
+    "view_obstructed": 24,
+    "package_misalignment": 2,
+    "clear": 2166
+  },
+  "cardinality": {
+    "1": 5383,
+    "2": 673,
+    "3": 424,
+    "4": 207,
+    "5": 71,
+    "6": 20,
+    "7": 5,
+    "8": 2
+  },
+  "distinct_vectors": 192,
+  "defect_rows": 1069,
+  "multi_defect_rows": 637,
+  "lp_rows": 4048,
+  "top_pairs": [
+    [
+      "lens_off_center",
+      "multiple_lenses",
+      661
+    ],
+    [
+      "bubble",
+      "bubble_cluster",
+      407
+    ],
+    [
+      "folded_lens",
+      "multiple_lenses",
+      236
+    ],
+    [
+      "bubble",
+      "dirty_camera",
+      200
+    ],
+    [
+      "bubble",
+      "lens_off_center",
+      185
+    ],
+    [
+      "bubble",
+      "multiple_lenses",
+      168
+    ],
+    [
+      "bubble",
+      "foreign_matter_micron_gate",
+      167
+    ],
+    [
+      "folded_lens",
+      "lens_off_center",
+      148
+    ],
+    [
+      "bubble",
+      "fiber_micron_gate",
+      132
+    ],
+    [
+      "bubble",
+      "low_dose",
+      121
+    ],
+    [
+      "bubble_cluster",
+      "dirty_camera",
+      119
+    ],
+    [
+      "bubble",
+      "wet_package",
+      117
+    ],
+    [
+      "bubble_cluster",
+      "lens_off_center",
+      106
+    ],
+    [
+      "dirty_camera",
+      "multiple_lenses",
+      104
+    ],
+    [
+      "bubble_cluster",
+      "multiple_lenses",
+      100
+    ],
+    [
+      "bubble_cluster",
+      "foreign_matter_micron_gate",
+      100
+    ],
+    [
+      "bubble",
+      "hema_micron_gate",
+      94
+    ],
+    [
+      "dirty_camera",
+      "lens_off_center",
+      94
+    ],
+    [
+      "bubble_cluster",
+      "fiber_micron_gate",
+      72
+    ],
+    [
+      "dirty_camera",
+      "low_dose",
+      72
+    ]
+  ],
+  "subsets": [
+    [
+      "hema_micron_gate",
+      "bubble",
+      94,
+      862,
+      768
+    ]
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "rows": 1332,
+  "macro_auprc_all": 0.6417805053332895,
+  "macro_auprc_judgeable": 0.7636059870765524,
+  "judgeable_classes": [
+    "P1_COC",
+    "P1_FL",
+    "P1_ML",
+    "P1_MPP",
+    "P1_NL",
+    "P2_DC",
+    "P2_LD",
+    "P2_LOC"
+  ],
+  "per_class": {
+    "P1_MPP": {
+      "name": "Missing Primary Package",
+      "support": 285,
+      "auprc": 1.0,
+      "precision_0.5": 1.0,
+      "recall_0.5": 0.9894736842105263,
+      "f1_0.5": 0.9947089947089947,
+      "best_f1": 1.0,
+      "threshold": 0.1
+    },
+    "P1_ML": {
+      "name": "Multiple Lens",
+      "support": 288,
+      "auprc": 0.9802438977921297,
+      "precision_0.5": 0.9283276450511946,
+      "recall_0.5": 0.9444444444444444,
+      "f1_0.5": 0.93631669535284,
+      "best_f1": 0.9442508710801394,
+      "threshold": 0.55
+    },
+    "P2_LOC": {
+      "name": "Lens Off Center",
+      "support": 191,
+      "auprc": 0.7446531836794468,
+      "precision_0.5": 0.7647058823529411,
+      "recall_0.5": 0.5445026178010471,
+      "f1_0.5": 0.6360856269113149,
+      "best_f1": 0.7142857142857143,
+      "threshold": 0.35000000000000003
+    },
+    "P2_DC": {
+      "name": "Dirty Camera",
+      "support": 67,
+      "auprc": 0.509717290332164,
+      "precision_0.5": 1.0,
+      "recall_0.5": 0.014925373134328358,
+      "f1_0.5": 0.029411764705882353,
+      "best_f1": 0.5693430656934307,
+      "threshold": 0.2
+    },
+    "P1_NL": {
+      "name": "No Lens",
+      "support": 65,
+      "auprc": 0.9856128985803784,
+      "precision_0.5": 0.9827586206896551,
+      "recall_0.5": 0.8769230769230769,
+      "f1_0.5": 0.9268292682926829,
+      "best_f1": 0.9448818897637796,
+      "threshold": 0.25
+    },
+    "P1_FL": {
+      "name": "Folded Lens",
+      "support": 37,
+      "auprc": 0.2747013988520259,
+      "precision_0.5": 0.0,
+      "recall_0.5": 0.0,
+      "f1_0.5": 0.0,
+      "best_f1": 0.3529411764705882,
+      "threshold": 0.25
+    },
+    "P2_LD": {
+      "name": "Low Dose",
+      "support": 43,
+      "auprc": 0.6924538943709246,
+      "precision_0.5": 0.6666666666666666,
+      "recall_0.5": 0.046511627906976744,
+      "f1_0.5": 0.08695652173913045,
+      "best_f1": 0.7466666666666667,
+      "threshold": 0.25
+    },
+    "P1_COC": {
+      "name": "Cavity Off Center",
+      "support": 37,
+      "auprc": 0.9214653330053502,
+      "precision_0.5": 1.0,
+      "recall_0.5": 0.7567567567567568,
+      "f1_0.5": 0.8615384615384616,
+      "best_f1": 0.8823529411764706,
+      "threshold": 0.4
+    },
+    "P2_DS": {
+      "name": "Dirty Strobe",
+      "support": 9,
+      "auprc": 0.0800709953870991,
+      "precision_0.5": 0.0,
+      "recall_0.5": 0.0,
+      "f1_0.5": 0.0,
+      "best_f1": 0.10526315789473685,
+      "threshold": 0.05
+    },
+    "P2_FOV": {
+      "name": "View Obstructed",
+      "support": 5,
+      "auprc": 0.8666666666666667,
+      "precision_0.5": 0.0,
+      "recall_0.5": 0.0,
+      "f1_0.5": 0.0,
+      "best_f1": 0.888888888888889,
+      "threshold": 0.1
+    },
+    "P2_BSC": {
+      "name": "Bubble Scatter",
+      "support": 1,
+      "auprc": 0.004,
+      "precision_0.5": 0.0,
+      "recall_0.5": 0.0,
+      "f1_0.5": 0.0,
+      "best_f1": 0.0,
+      "threshold": 0.05
+    },
+    "P1_PPM": {
+      "name": "Package Misalignment",
+      "support": 0,
+      "auprc": NaN,
+      "precision_0.5": 0.0,
+      "recall_0.5": 0.0,
+      "f1_0.5": 0.0,
+      "best_f1": 0.0,
+      "threshold": 0.05
+    }
+  },
+  "exact_match": 0.7980480480480481,
+  "hamming_loss": 0.021083583583583584,
+  "subsets": {
+    "lp_only": {
+      "pictures": 719,
+      "macro_ap": 0.6205213782659169,
+      "per_class": {
+        "P1_MPP": 1.0,
+        "P1_ML": 0.9907177934308905,
+        "P2_LOC": 0.7836020844283801,
+        "P2_DC": 0.06861241444721876,
+        "P1_NL": 0.9856746446081885,
+        "P1_FL": 0.3127110587059303,
+        "P2_LD": 0.8232864124245435,
+        "P1_COC": 0.9242141057888672,
+        "P2_DS": 0.06443602693602693,
+        "P2_FOV": 0.8666666666666667,
+        "P2_BSC": 0.005813953488372093
+      }
+    },
+    "mixed": {
+      "pictures": 98,
+      "macro_ap": 0.6299279309317033,
+      "per_class": {
+        "P1_ML": 0.9168366542268268,
+        "P2_LOC": 0.685519907426805,
+        "P2_DC": 0.8004052845490055,
+        "P1_NL": 1.0,
+        "P1_FL": 0.17992166563595136,
+        "P2_LD": 0.6463611547202879,
+        "P2_DS": 0.18045084996304508
+      }
+    },
+    "clear": {
+      "pictures": 431,
+      "macro_ap": NaN,
+      "per_class": {}
+    }
+  },
+  "object_column": {
+    "note": "fire rates only; not comparable with the LP AUPRC values",
+    "fire_rate_object_only": 0.8452380952380952,
+    "fire_rate_mixed": 0.6836734693877551,
+    "fire_rate_clear": 0.009280742459396751,
+    "pictures_object_only": 84,
+    "pictures_mixed": 98,
+    "pictures_clear": 431
+  },
+  "config": {
+    "variant": "b",
+    "arch": "resnet50",
+    "imgsz": 224,
+    "batch": 8,
+    "epochs": 50,
+    "lr": 0.0001,
+    "pos_weight": false,
+    "seed": 42,
+    "device": "cuda",
+    "columns": [
+      "P1_MPP",
+      "P1_ML",
+      "P2_LOC",
+      "P2_DC",
+      "P1_NL",
+      "P1_FL",
+      "P2_LD",
+      "P1_COC",
+      "P2_DS",
+      "P2_FOV",
+      "P2_BSC",
+      "P1_PPM",
+      "object_present"
+    ]
+  },
+  "timing": {
+    "seconds_total": 1487.7,
+    "seconds_training": 1479.9,
+    "seconds_per_epoch": 29.6,
+    "seconds_inference": 7.7,
+    "inference_images": 1332,
+    "inference_ms_per_image": 5.79
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.49819013319723554
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.2783321878135551
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.21588914520983984
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.19086453283350038
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.17545896168831077
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.16396738561955987
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.15581495499597475
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.148738680974905
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.14306711957700619
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.13737864478910666
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.1332054647010555
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.127710488408955
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.12454407964400376
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.12097354783771498
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.11622658088559927
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.11329366192039818
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.11086436388068291
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.10712081858000479
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.10452520342269936
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.10188646567417216
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.09943169769251438
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.09682036842853642
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.09590079642514787
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.09307945847108481
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.09114736538455212
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.08987970879748645
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.0883061220484445
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.08732943298018558
+    },
+    {
+      "epoch": 29,
+      "train_loss": 0.08543656753267381
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.08250060984111311
+    },
+    {
+      "epoch": 31,
+      "train_loss": 0.08171141450000521
+    },
+    {
+      "epoch": 32,
+      "train_loss": 0.08049532979019078
+    },
+    {
+      "epoch": 33,
+      "train_loss": 0.07979235973510551
+    },
+    {
+      "epoch": 34,
+      "train_loss": 0.07809230433757744
+    },
+    {
+      "epoch": 35,
+      "train_loss": 0.07601732413174513
+    },
+    {
+      "epoch": 36,
+      "train_loss": 0.07603798820513911
+    },
+    {
+      "epoch": 37,
+      "train_loss": 0.07478525700064746
+    },
+    {
+      "epoch": 38,
+      "train_loss": 0.07413367779097818
+    },
+    {
+      "epoch": 39,
+      "train_loss": 0.07284921601481816
+    },
+    {
+      "epoch": 40,
+      "train_loss": 0.07186038557440742
+    },
+    {
+      "epoch": 41,
+      "train_loss": 0.07067660673801013
+    },
+    {
+      "epoch": 42,
+      "train_loss": 0.0705408425933484
+    },
+    {
+      "epoch": 43,
+      "train_loss": 0.06914767322309004
+    },
+    {
+      "epoch": 44,
+      "train_loss": 0.06833190772376825
+    },
+    {
+      "epoch": 45,
+      "train_loss": 0.0671051659538953
+    },
+    {
+      "epoch": 46,
+      "train_loss": 0.06655854184648345
+    },
+    {
+      "epoch": 47,
+      "train_loss": 0.0655107340989248
+    },
+    {
+      "epoch": 48,
+      "train_loss": 0.064494023355144
+    },
+    {
+      "epoch": 49,
+      "train_loss": 0.0643690830606758
+    },
+    {
+      "epoch": 50,
+      "train_loss": 0.06280278410851363
+    }
+  ]
+}
