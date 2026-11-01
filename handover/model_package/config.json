@@ -1,0 +1,22 @@
+{
+  "checkpoint": "final.pt",
+  "image_path": "sample.jpg",
+  "input_size": 224,
+  "mean": [0.485, 0.456, 0.406],
+  "std": [0.229, 0.224, 0.225],
+  "classes": [
+    {"code": "P1_MPP",  "name": "Missing Primary Package", "threshold": 0.2},
+    {"code": "P1_ML",   "name": "Multiple Lens",         "threshold": 0.5},
+    {"code": "P2_LOC",  "name": "Lens Off Center",       "threshold": 0.3},
+    {"code": "P2_DC",   "name": "Dirty Camera",          "threshold": 0.25},
+    {"code": "P1_NL",   "name": "No Lens",               "threshold": 0.25},
+    {"code": "P1_FL",   "name": "Folded Lens",           "threshold": 0.25},
+    {"code": "P2_LD",   "name": "Low Dose",              "threshold": 0.5},
+    {"code": "P1_COC",  "name": "Cavity Off Center",     "threshold": 0.25},
+    {"code": "P2_DS",   "name": "Dirty Strobe",          "threshold": 0.05},
+    {"code": "P2_FOV",  "name": "View Obstructed",       "threshold": 0.1},
+    {"code": "P2_BSC",  "name": "Bubble Scatter",        "threshold": 0.05},
+    {"code": "P1_PPM",  "name": "Package Misalignment",  "threshold": 0.05},
+    {"code": "object_present", "name": "Object Present", "threshold": 0.5}
+  ]
+}
