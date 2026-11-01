@@ -1,0 +1,180 @@
+{
+ "schema_version": 2,
+ "experiment": "experiments/multilabel_lp_full",
+ "written_before_running": "2026-10-27, written before any pipeline code for this experiment existed; kept unchanged as the pre-run record",
+ "owner": "Pranay",
+ "task": "multi-label image classification over every LP tag with pictures, plus Clear, and one coarse object-present output in variant B",
+ "design_doc": "experiments/multilabel_lp_full/DESIGN.md",
+ "label_source": "run/eda_full_20261015/resolved_labels.csv (annotation of record)",
+ "clear_source": "run/multilabel_edge_20261023_rev3/label_matrix.csv, clear column (verified equal to pictures with an empty annotation entry)",
+ "split_source": "run/split_20261026_v5/ (content md5 groups, no leaks)",
+ "classes": [
+  "P1_MPP",
+  "P1_ML",
+  "P2_LOC",
+  "P2_DC",
+  "P1_NL",
+  "P1_FL",
+  "P2_LD",
+  "P1_COC",
+  "P2_DS",
+  "P2_FOV",
+  "P2_BSC",
+  "P1_PPM"
+ ],
+ "not_included_no_examples": [
+  "P1_EBC",
+  "P1_TL",
+  "P1_LR"
+ ],
+ "object_column": {
+  "name": "object_present",
+  "covers": [
+   "Bubble",
+   "Bubble Cluster",
+   "Wet Package",
+   "Foreign Matter",
+   "Fiber",
+   "Extraneous Polymer",
+   "HEMA"
+  ],
+  "pictures_total": 1103,
+  "pictures_in_split_rows": 929,
+  "object_only": 614,
+  "mixed_with_lp": 489
+ },
+ "data": {
+  "images_annotated": 6938,
+  "lp_tagged": 4063,
+  "clear": 2156,
+  "legacy_only_excluded": 105,
+  "object_only_outside_split_rows": 174,
+  "lp_tags_per_picture": {
+   "1": 3186,
+   "2": 646,
+   "3": 216,
+   "4": 14,
+   "5": 1
+  },
+  "per_class_positive_pictures": {
+   "P1_MPP": 1426,
+   "P1_ML": 1439,
+   "P2_LOC": 957,
+   "P2_DC": 329,
+   "P1_NL": 325,
+   "P1_FL": 237,
+   "P2_LD": 215,
+   "P1_COC": 184,
+   "P2_DS": 43,
+   "P2_FOV": 24,
+   "P2_BSC": 6,
+   "P1_PPM": 2
+  }
+ },
+ "variants": {
+  "a_pure_lp": {
+   "rows": 6219,
+   "columns": 12,
+   "train": 4971,
+   "test": 1248,
+   "object_rows": 0,
+   "purpose": "LP learnability with no object interference"
+  },
+  "b_lp_plus_object": {
+   "rows": 6659,
+   "columns": 13,
+   "train": 5326,
+   "test": 1333,
+   "object_rows": 929,
+   "object_only_rows": 440,
+   "purpose": "same LP measurement plus the routing conditional"
+  }
+ },
+ "frozen_config": {
+  "arch": "resnet50",
+  "weights": "imagenet",
+  "head": "linear score per column, sigmoid at inference",
+  "loss": "BCEWithLogitsLoss",
+  "pos_weight": false,
+  "imgsz": 224,
+  "augmentation": "none",
+  "optimizer": "sgd_nesterov",
+  "lr": 0.0001,
+  "momentum": 0.9,
+  "batch": 8,
+  "epochs": 50,
+  "early_stopping": false,
+  "seed": 42,
+  "amp": true,
+  "split_ratio": "80_20"
+ },
+ "metrics": {
+  "of_record": "per-class AUPRC",
+  "macro": "macro AUPRC over the eight judgeable classes",
+  "also": [
+   "precision/recall/F1 at 0.5",
+   "F1 at best per-class threshold",
+   "exact match",
+   "hamming loss"
+  ],
+  "object_column": "fire rates only: object-only, clear, mixed. No AUPRC quoted.",
+  "subsets": [
+   "LP-only",
+   "mixed",
+   "Clear"
+  ]
+ },
+ "success_criteria": {
+  "a": {
+   "macro_auprc_min": 0.85,
+   "P1_FL_min": 0.7,
+   "P2_LOC_min": 0.9,
+   "P2_DC_min": 0.85,
+   "P2_LD_min": 0.7,
+   "no_judgeable_class_below": 0.6
+  },
+  "b": {
+   "lp_within_of_a": 0.03,
+   "object_fire_on_object_only_min": 0.9,
+   "object_fire_on_clear_max": 0.05,
+   "mixed_lp_auprc_within_of_lp_only": 0.05
+  }
+ },
+ "open_decisions": [],
+ "status": "planned",
+ "runs": [],
+ "runs_planned": [
+  {
+   "run": "1",
+   "variant": "a_pure_lp",
+   "pos_weight": false,
+   "note": "first execution, matches the October run's first run"
+  },
+  {
+   "run": "2",
+   "variant": "a_pure_lp",
+   "pos_weight": "global",
+   "note": "only if run 1 shows the rare classes are suppressed"
+  },
+  {
+   "run": "3",
+   "variant": "b_lp_plus_object",
+   "pos_weight": false,
+   "note": "conditional check, LP metrics read on their own"
+  }
+ ],
+ "low_dose_note": {
+  "folder_pictures": 1951,
+  "image_entries_september_export": 1951,
+  "tagged_in_september_export": 76,
+  "tagged_in_production_files": 115,
+  "tagged_in_folder_total": 179,
+  "tagged_anywhere": 215,
+  "empty_entries": 1772,
+  "conclusion": "empty entries are unannotated, not negatives; they never become rows because labels come from the annotation of record and Clear",
+  "package_misalignment": {
+   "folder_pictures": 293,
+   "tagged": 2
+  }
+ }
+}

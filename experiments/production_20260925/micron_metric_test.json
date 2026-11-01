@@ -1,0 +1,157 @@
+{
+ "um_per_px": 18.1165,
+ "threshold_um": 647.0,
+ "threshold_px": 35.713300030359065,
+ "per_code": {
+  "P3_EP": {
+   "diagonal": {
+    "images": 35,
+    "agreement_at_stated_cut": 1.0,
+    "best_threshold_px": 39.427078071509115,
+    "best_threshold_um": 714.2806598824948,
+    "best_agreement": 1.0
+   },
+   "longest side": {
+    "images": 35,
+    "agreement_at_stated_cut": 1.0,
+    "best_threshold_px": 33.96500000000003,
+    "best_threshold_um": 615.3269225000005,
+    "best_agreement": 1.0
+   },
+   "shorter side": {
+    "images": 35,
+    "agreement_at_stated_cut": 0.6571428571428571,
+    "best_threshold_px": 11.909999999999968,
+    "best_threshold_um": 215.7675149999994,
+    "best_agreement": 0.9714285714285714
+   },
+   "same-area circle diameter": {
+    "images": 35,
+    "agreement_at_stated_cut": 0.9714285714285714,
+    "best_threshold_px": 27.98955220880643,
+    "best_threshold_um": 507.07272259084164,
+    "best_agreement": 1.0
+   },
+   "geometric mean of the sides": {
+    "images": 35,
+    "agreement_at_stated_cut": 0.8571428571428571,
+    "best_threshold_px": 24.805094798809975,
+    "best_threshold_um": 449.3814999226409,
+    "best_agreement": 1.0
+   }
+  },
+  "P3_FIB": {
+   "diagonal": {
+    "images": 154,
+    "agreement_at_stated_cut": 0.8831168831168831,
+    "best_threshold_px": 44.05648026370831,
+    "best_threshold_um": 798.1492246974715,
+    "best_agreement": 0.974025974025974
+   },
+   "longest side": {
+    "images": 154,
+    "agreement_at_stated_cut": 0.9090909090909091,
+    "best_threshold_px": 43.12500000000006,
+    "best_threshold_um": 781.2740625000009,
+    "best_agreement": 1.0
+   },
+   "shorter side": {
+    "images": 154,
+    "agreement_at_stated_cut": 0.5974025974025974,
+    "best_threshold_px": 10.36000000000007,
+    "best_threshold_um": 187.68694000000127,
+    "best_agreement": 0.7467532467532467
+   },
+   "same-area circle diameter": {
+    "images": 154,
+    "agreement_at_stated_cut": 0.7597402597402597,
+    "best_threshold_px": 21.08256311458299,
+    "best_threshold_um": 381.94225466534266,
+    "best_agreement": 0.8701298701298701
+   },
+   "geometric mean of the sides": {
+    "images": 154,
+    "agreement_at_stated_cut": 0.7662337662337663,
+    "best_threshold_px": 18.683935089700604,
+    "best_threshold_um": 338.487510052561,
+    "best_agreement": 0.8701298701298701
+   }
+  },
+  "P3_FM": {
+   "diagonal": {
+    "images": 282,
+    "agreement_at_stated_cut": 0.8581560283687943,
+    "best_threshold_px": 47.099037371660785,
+    "best_threshold_um": 853.2697105436926,
+    "best_agreement": 0.9822695035460993
+   },
+   "longest side": {
+    "images": 282,
+    "agreement_at_stated_cut": 0.9042553191489362,
+    "best_threshold_px": 42.28499999999997,
+    "best_threshold_um": 766.0562024999994,
+    "best_agreement": 1.0
+   },
+   "shorter side": {
+    "images": 282,
+    "agreement_at_stated_cut": 0.8546099290780141,
+    "best_threshold_px": 24.875,
+    "best_threshold_um": 450.64793749999995,
+    "best_agreement": 0.900709219858156
+   },
+   "same-area circle diameter": {
+    "images": 282,
+    "agreement_at_stated_cut": 0.9219858156028369,
+    "best_threshold_px": 37.03266580667622,
+    "best_threshold_um": 670.9022900866497,
+    "best_agreement": 0.9290780141843972
+   },
+   "geometric mean of the sides": {
+    "images": 282,
+    "agreement_at_stated_cut": 0.9042553191489362,
+    "best_threshold_px": 32.819345559170145,
+    "best_threshold_um": 594.5716738227059,
+    "best_agreement": 0.9290780141843972
+   }
+  },
+  "P3_HE": {
+   "diagonal": {
+    "images": 95,
+    "agreement_at_stated_cut": 1.0,
+    "best_threshold_px": 399.5958828093575,
+    "best_threshold_um": 7239.2788109157245,
+    "best_agreement": 0.9894736842105263
+   },
+   "longest side": {
+    "images": 95,
+    "agreement_at_stated_cut": 1.0,
+    "best_threshold_px": 383.62,
+    "best_threshold_um": 6949.851729999999,
+    "best_agreement": 0.9894736842105263
+   },
+   "shorter side": {
+    "images": 95,
+    "agreement_at_stated_cut": 1.0,
+    "best_threshold_px": 111.23000000000002,
+    "best_threshold_um": 2015.0982950000002,
+    "best_agreement": 0.9894736842105263
+   },
+   "same-area circle diameter": {
+    "images": 95,
+    "agreement_at_stated_cut": 1.0,
+    "best_threshold_px": 233.42963171405773,
+    "best_threshold_um": 4228.927922947727,
+    "best_agreement": 0.9894736842105263
+   },
+   "geometric mean of the sides": {
+    "images": 95,
+    "agreement_at_stated_cut": 1.0,
+    "best_threshold_px": 206.87162482351897,
+    "best_threshold_um": 3747.7897911152813,
+    "best_agreement": 0.9894736842105263
+   }
+  }
+ },
+ "metrics_reproducing_all_at_stated_cut": [],
+ "metrics_separating_cleanly": []
+}

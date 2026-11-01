@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "experiment": "bubble_full_merge",
+  "written_before_running": "2026-10-15, before any extraction or training. Extends the 20261008 crops wing to the new annotation vintage and the settled 6-class frame (decision: docs/decisions/2026-10-15-exp-b-label-frame.md).",
+  "owner": "Pranay",
+  "task": "Experiment B re-run on OOI crops with the enlarged dataset: six classes with the full bubble family consolidated, fresh 70:30 stratified split, then a misclassification export phase fed by the per-crop prediction dump",
+  "running_name": "bubble full merge",
+  "classes": {
+    "count": 6,
+    "list": ["Bubble", "Wet Package", "Foreign Matter", "Fiber", "Extraneous Polymer", "HEMA Fragment"],
+    "merge_members": ["Bubble", "Bubble Cluster", "Bubble Irregular", "Bubble On Edge", "Bubble On 123", "Bubble Scatter"],
+    "hema_note": "Production P3_HE boxes read as HEMA Fragment (code collision resolved in favour of Fragment; HEMA Obstruction P2_HMO is tags only, zero boxes, and stays out of the defect frame)."
+  },
+  "label_source": {
+    "files": [
+      "data/annotations_4521940..46.xml (production 20260925, 1,047 images, highest precedence)",
+      "data/Updated Annotations 20260922.xml (second)",
+      "data/annotations.xml (old library, lowest)"
+    ],
+    "precedence": "winner-takes-all per image MD5 (content hash), not basename: production beats updated beats old; an image carries boxes from one source only. Basename dedup inflates the union by ~20 because production images use different basenames than the library images they match by content",
+    "excluded_from_classes": [
+      "cavity-state codes in the production files (missing primary package, cavity off-center, view obstructed, package misalignment, missing lens, dirty camera)",
+      "P2_HMO HEMA Obstruction tags",
+      "all micron-threshold tags (tags, not boxes; no size calculation in this experiment)"
+    ]
+  },
+  "expected_universe": {
+    "defect_pictures": 1132,
+    "production_defect_pictures": 758,
+    "note": "from the resolved-labels census; extractor output is held to these picture counts per source",
+    "class_pictures": {"Bubble": 1004, "Wet Package": 146, "Foreign Matter": 331, "Fiber": 178, "Extraneous Polymer": 144, "HEMA Fragment": 102},
+    "class_pictures_note": "single-label picture attributions overlap across classes (multi-class images exist); the 1,132 union is the binding count",
+    "hema_boxes": 103
+  },
+  "split": {
+    "scheme": "image-level 70:30, seed 42, stratified on the merged 6-class label, crops inherit their image's side",
+    "new_split": true,
+    "not_reused_from": "run/bubble_merge_crops_20261008/split_images.csv (old dataset)"
+  },
+  "recipe": {
+    "trainer": "/home/pranayp/model_training.py (unchanged)",
+    "arch": "resnet50_inception",
+    "epochs": 50,
+    "batch_size": 8,
+    "seed": 42,
+    "optimizer": "SGD lr 1e-4, momentum 0.9, Nesterov",
+    "input": "rotate-upright defect crops, resized by the trainer",
+    "added_flags": ["--dump (predictions.csv + confusion.json - REQUIRED, feeds the misclassification phase)", "--save-model"]
+  },
+  "readout_fixed_before_running": [
+    "Primary: overall accuracy, macro P/R/F1, per-class P/R/F1 with test support quoted beside every number.",
+    "The prediction dump is a deliverable, not an option: phase 2 (misclassification folder + manifest) is built from it.",
+    "Phase 2 spec: every misclassified test crop exported to experiments/misclassification/ as PNG or JPEG named <sno>_<true>_<pred>, sno a global unique integer; manifest Excel with sno (primary key), original crop name, source image, crop bbox, true label, predicted label.",
+    "No size/micron calculation anywhere in this experiment.",
+    "Comparability note: numbers are NOT comparable to the 20261008 crops run (dataset and split both changed); the old run is context, not a baseline."
+  ],
+  "pending_control": {
+    "what": "exp_a control on the enlarged dataset: 7 classes, Bubble On Edge, Bubble On 123 and Bubble Irregular merged into Bubble, Bubble Cluster kept as its own class (Bubble Scatter has no boxes and stays absent), rebuilt on the 2026-10-15 universe (1,132 defect pictures).",
+    "why": "The only cluster-separate vs merged comparison that exists today is the 2026-10-08 crops pair; the 2026-10-15 full merge ran as a single arm with no control. This row gives the enlarged dataset the exp_a counterpart.",
+    "status": "requested-but-unconfirmed: user flagged 2026-10-22 that this will be needed at some point, go-ahead not given yet. Write the split and rows properly before running.",
+    "split_note": "Needs a fresh image-level 70:30 split stratified on the 7-class frame (the existing 20261015 split is stratified on the 6-class frame); keep seed 42 and the same recipe for comparability."
+  },
+  "rows": [
+    {
+      "id": "bubble_full_merge_resnet50_inception",
+      "summary": "MultiScale ResNet50 (resnet50_inception), 6 classes, full bubble family consolidated, new 2026-10-15 dataset and split",
+      "axis": "label merge, enlarged dataset",
+      "arm": "single arm (no separate control in this experiment)",
+      "status": "done",
+      "config_overrides": {"arch": "resnet50_inception", "epochs": 50, "batch_size": 8, "seed": 42, "dump": true, "save_model": true},
+      "results": {
+        "run_dir": "/home/pranayp/merge_analysis/bubble_full_merge/runs2/bubble_full_merge (VM); metrics.json + confusion.json + predictions.csv + model.keras",
+        "training_time_sec": 2994.65,
+        "inference_per_image_ms": 2.071,
+        "overall_accuracy": 0.9091,
+        "macro": {"precision": 0.6756, "recall": 0.6923, "f1": 0.6554},
+        "weighted_f1": 0.9047,
+        "test": {"crops": 4389, "images": 340},
+        "train": {"crops": 9795, "images": 792},
+        "per_class": {
+          "Bubble": {"recall": 0.9781, "precision": 0.9604, "f1": 0.9691, "support": 3740},
+          "HEMA Fragment": {"recall": 0.8889, "precision": 0.8649, "f1": 0.8767, "support": 36},
+          "Fiber": {"recall": 0.7412, "precision": 0.4500, "f1": 0.5600, "support": 85},
+          "Foreign Matter": {"recall": 0.6108, "precision": 0.4658, "f1": 0.5285, "support": 167},
+          "Extraneous Polymer": {"recall": 0.5909, "precision": 0.4407, "f1": 0.5049, "support": 44},
+          "Wet Package": {"recall": 0.3438, "precision": 0.8720, "f1": 0.4932, "support": 317}
+        },
+        "misclassified": {"crops": 399, "images": 145, "of_test_crops": 4389},
+        "determinism": "first run (runs/) and rerun (runs2/) produced identical metrics to 4 decimals; the first run's --dump failed on a missing dump_outputs.py on the VM, so runs/ holds metrics only and runs2/ is authoritative",
+        "local_artifacts": ["run/bubble_full_merge_20261015_predictions.csv", "run/bubble_full_merge_20261015_misclassification_manifest.csv", "run/bubble_full_merge_20261015_misclassification_manifest.xlsx"]
+      }
+    }
+  ],
+  "phase_2": {
+    "what": "misclassification export, built after the numbers were read",
+    "location": "/home/pranayp/merge_analysis/bubble_full_merge/misclassification/ (VM)",
+    "contents": "399 PNGs + manifest.csv + manifest.xlsx, 3.7 MB",
+    "naming": "<sno>_<true>_<pred>.png, sno unique per misclassified CROP (not per image), assigned after sorting by (true, pred, crop filename) so the folder groups like errors and the numbering is deterministic",
+    "manifest_columns": ["sno (primary key)", "png", "original_crop", "source_image", "source_md5", "xtl", "ytl", "xbr", "ybr", "rotation", "true_label", "predicted_label"],
+    "safeguard": "source_image + source_md5 + box bbox distinguish two bad crops from the same source image, which happens: 145 images carry the 399 errors, two of them 55 and 69 crops respectively",
+    "gates_passed": ["unique sno (399 of 399)", "sno contiguous 1..399", "png count == manifest rows", "filename set == manifest png column", "error-pair crops sum == 399"],
+    "open_question_for_client": "the 33 contested EP/Fiber pictures (run/ep_fiber_check/20260921): old library says Fiber, updated file says EP, our blind form-judgment said Fiber 29 of 34 boxes. The JnJ email says ambiguous = Fiber, which points to reverting them. Not yet applied; would change EP and Fiber supports and need a retrain."
+  }
+}

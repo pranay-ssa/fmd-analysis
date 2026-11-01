@@ -1,0 +1,45 @@
+{
+ "_what": "Per-code counts as stated in the handover email, kept verbatim so the delivered XML can be reconciled against them.",
+ "source": "Handover email from Bryce Barrineau, 2026-10-13",
+ "written_before_validation": true,
+ "email_says": "I am currently validating them and will upload the annotation files to the Azure Blob Storage. ... I will send an update once validation is complete and the XML files have been uploaded.",
+ "implication": "These counts are the state before the validation pass. The XML files that were actually uploaded are later than this, so differences are expected and the XML is the source of truth.",
+ "stated_rule": "I have also developed a script to tag images containing debris that exceeds the 647-micron size threshold - these images in particular should be fed into the edge algorithm training process.",
+ "threshold_um": 647,
+ "total_images_stated": 1047,
+ "counts": {
+  "P2_BB": 10060,
+  "P2_BC": 1068,
+  "P2_BI": 120,
+  "P2_BST": 13,
+  "P2_WP": 585,
+  "P3_EP": 56,
+  "P3_FIB": 229,
+  "P3_FM": 604,
+  "P3_HE": 93,
+  "P2_FOV": 24,
+  "P1_COC": 37,
+  "P1_FL": 57,
+  "P1_ML": 221,
+  "P1_MPP": 226,
+  "P1_NL": 5,
+  "P1_PPM": 2,
+  "P2_DC": 28,
+  "P2_DS": 22,
+  "P2_LD": 118,
+  "P2_LOC": 216
+ },
+ "micron_counts": {
+  "P3_EP_MICRON_THRESHOLD": 33,
+  "P3_FIB_MICRON_THRESHOLD": 89,
+  "P3_FM_MICRON_THRESHOLD": 65,
+  "P3_HE_MICRON_THRESHOLD": 92
+ },
+ "naming_notes": {
+  "P2_FOV": "The email writes P2_FOV. The delivered XML uses F2_FOV for the same defect, View Obstructed. One of the two is a typo."
+ },
+ "intent": {
+  "P3_FAMILY": "The four gated codes are exactly the four P3 codes, so the 647 micrometre rule was applied to the whole foreign-material family.",
+  "training": "The email says the gated images should be fed into the edge algorithm training process."
+ }
+}
