@@ -1,0 +1,12 @@
+code,class,guide,pictures,gate,tags,median_w,median_h
+P2_BB,Bubble,Yes,2171,0,28741,6.5,6.4
+P2_BC,Bubble Cluster,Yes,1132,0,3419,12.0,10.8
+P2_WP,Wet Package,Yes,314,0,1342,32.7,24.8
+P1_SG,Surface Groove,Yes,0,0,0,0,0
+P3_FIB,Fiber,Yes,405,362,753,22.7,18.7
+P3_EP,Extraneous Polymer,Yes,175,135,188,109.1,133.8
+P3_HE,HEMA,Yes,157,151,164,1046.2,611.4
+P3_FM,Foreign Matter,Yes,834,454,2592,9.6,8.8
+P2_HMO,HEMA Obstruction,Legacy,36,0,36,0,0
+,Bubble On 123,Legacy,13,0,79,0,0
+,Bubble On Edge,Legacy,14,0,90,0,0

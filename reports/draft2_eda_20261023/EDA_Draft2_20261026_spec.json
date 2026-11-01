@@ -1,0 +1,5891 @@
+[
+ {
+  "name": "Summary",
+  "rows": [
+   [
+    {
+     "value": "Defect and image-quality analysis",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Draft 2 annotation guide. Rebuilt from the annotations on 2026-10-26; supersedes the 23 October workbook.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [],
+   [
+    {
+     "value": "Population",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    },
+    {
+     "value": "Pictures",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    "Pictures examined",
+    {
+     "value": 10614,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Pictures in an annotation (the analysed set)",
+    {
+     "value": 6938,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "  of which carry a mark",
+    {
+     "value": 4782,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "  of which have nothing marked (Clear)",
+    {
+     "value": 2156,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [],
+   [
+    {
+     "value": "Training and test split",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    },
+    {
+     "value": "Train / test pictures",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    "70 / 30",
+    "4,568 / 2,006"
+   ],
+   [
+    "80 / 20",
+    "5,269 / 1,305"
+   ],
+   [],
+   [
+    {
+     "value": "Label",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    },
+    {
+     "value": "Kind",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    },
+    {
+     "value": "Pictures carrying it",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    },
+    {
+     "value": "Share of the analysed set",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    "Clear",
+    "Clear",
+    {
+     "value": 2156,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.3107523782069761,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Multiple Lens",
+    "Whole-image tag",
+    {
+     "value": 1439,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.20740847506486018,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Missing Primary Package",
+    "Whole-image tag",
+    {
+     "value": 1426,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.20553473623522628,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Lens Off Center",
+    "Whole-image tag",
+    {
+     "value": 957,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.1379360046122802,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble",
+    "Object class",
+    {
+     "value": 862,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.12424329778034016,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble Cluster",
+    "Object class",
+    {
+     "value": 428,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.06168924762179302,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Foreign Matter",
+    "Object class",
+    {
+     "value": 331,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.04770827327760162,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Dirty Camera",
+    "Whole-image tag",
+    {
+     "value": 329,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.04742000576535024,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "No Lens",
+    "Whole-image tag",
+    {
+     "value": 325,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.046843470740847507,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Folded Lens",
+    "Whole-image tag",
+    {
+     "value": 237,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.03415970020178726,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Low Dose",
+    "Whole-image tag",
+    {
+     "value": 215,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.030988757567022195,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Fiber",
+    "Object class",
+    {
+     "value": 210,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.030268088786393775,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Cavity Off Center",
+    "Whole-image tag",
+    {
+     "value": 184,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.026520611127125972,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Wet Package",
+    "Object class",
+    {
+     "value": 146,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.021043528394349958,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Extraneous Polymer",
+    "Object class",
+    {
+     "value": 112,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.01614298068607668,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "HEMA",
+    "Object class",
+    {
+     "value": 101,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.014557509368694148,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "HEMA Obstruction",
+    "Whole-image tag, reference only",
+    {
+     "value": 86,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.012395503026808878,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Dirty Strobe",
+    "Whole-image tag",
+    {
+     "value": 43,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.006197751513404439,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "View Obstructed",
+    "Whole-image tag",
+    {
+     "value": 24,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.003459210147016431,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble On Edge",
+    "Object class, reference only",
+    {
+     "value": 14,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.002017872585759585,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble On 123",
+    "Object class, reference only",
+    {
+     "value": 13,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0018737388296339002,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble Scatter",
+    "Whole-image tag",
+    {
+     "value": 6,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0008648025367541078,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Package Misalignment",
+    "Whole-image tag",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0002882675122513693,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Edge Bottle-Capped",
+    "Whole-image tag, no examples yet",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Torn Lens",
+    "Whole-image tag, no examples yet",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Lens Rupture",
+    "Whole-image tag, no examples yet",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Surface Groove",
+    "Object class, no examples yet",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": "Rows are not additive: a picture can carry several labels.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "No picture is unlabelled. A picture with nothing marked is Clear, and Clear is a label; the 2,156 Clear pictures are 31 percent of the analysed set.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "Four classes in the guide have no examples yet, so they show zero above: Edge Bottle-Capped, Torn Lens and Lens Rupture are tags, Surface Groove is an object class. They are listed so the guide's full class list is visible.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "A size flag is a subset of its class, not a label: a picture with a large object still carries one class label for it.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A4",
+  "column_widths": {
+   "A": 56,
+   "B": 30,
+   "C": 14,
+   "D": 22
+  }
+ },
+ {
+  "name": "LP Summary",
+  "rows": [
+   [
+    {
+     "value": "Whole-image tags",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Pictures carrying each tag, its share of the analysed set, and how many of those pictures can enter the split.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "Tag",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Guide code",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures carrying it",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Share of the analysed set",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "In the split set (70/30)",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "In the split set (80/20)",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Notes",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Missing Primary Package",
+    "P1_MPP",
+    {
+     "value": 1426,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.20553473623522628,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 1426,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1426,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Standalone: no other label applies"
+   ],
+   [
+    "Package Misalignment",
+    "P1_PPM",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0002882675122513693,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Standalone; rarest class"
+   ],
+   [
+    "Cavity Off Center",
+    "P1_COC",
+    {
+     "value": 184,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.026520611127125972,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 184,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 184,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Standalone"
+   ],
+   [
+    "View Obstructed",
+    "F2_FOV",
+    {
+     "value": 24,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.003459210147016431,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 24,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 24,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Standalone"
+   ],
+   [
+    "No Lens",
+    "P1_NL",
+    {
+     "value": 325,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.046843470740847507,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 322,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 322,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Mostly alone; 4 with Dirty Camera"
+   ],
+   [
+    "Multiple Lens",
+    "P1_ML",
+    {
+     "value": 1439,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.20740847506486018,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 1402,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1402,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Mostly combined"
+   ],
+   [
+    "Folded Lens",
+    "P1_FL",
+    {
+     "value": 237,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.03415970020178726,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 226,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 226,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Never alone; carries Multiple Lens"
+   ],
+   [
+    "Lens Off Center",
+    "P2_LOC",
+    {
+     "value": 957,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.1379360046122802,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 922,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 922,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Mostly combined"
+   ],
+   [
+    "Low Dose",
+    "P2_LD",
+    {
+     "value": 215,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.030988757567022195,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 204,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 204,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Mostly alone"
+   ],
+   [
+    "Dirty Strobe",
+    "P2_DS",
+    {
+     "value": 43,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.006197751513404439,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 41,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 41,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Mostly alone; 2 combined"
+   ],
+   [
+    "Dirty Camera",
+    "P2_DC",
+    {
+     "value": 329,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.04742000576535024,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 298,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 298,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Mostly combined"
+   ],
+   [
+    "Bubble Scatter",
+    "P2_BSC",
+    {
+     "value": 6,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0008648025367541078,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 6,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 6,
+     "format": "#,##0",
+     "bold": true
+    },
+    "5 alone, 1 with Lens Off Center"
+   ],
+   [
+    "HEMA Obstruction",
+    "P2_HMO",
+    {
+     "value": 86,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.012395503026808878,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 86,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 86,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Kept for reference, not in the current class list"
+   ],
+   [
+    "Edge Bottle-Capped",
+    "P1_EBC",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    "No examples yet; the class is defined in the guide"
+   ],
+   [
+    "Torn Lens",
+    "P1_TL",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    "No examples yet; the class is defined in the guide"
+   ],
+   [
+    "Lens Rupture",
+    "P1_LR",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    "No examples yet; the class is defined in the guide"
+   ],
+   [
+    {
+     "value": "Total tag pictures (a picture can carry several tags)",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 5273,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 0.7600172960507351,
+     "format": "0.0%",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "",
+     "bold": true,
+     "fill": "EDF1F8"
+    }
+   ],
+   [
+    {
+     "value": "The split set holds the pictures that can enter the split; the same 6,679 pictures are available to both ratios, which is why the two columns agree.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A4",
+  "column_widths": {
+   "A": 30,
+   "B": 12,
+   "C": 18,
+   "D": 20,
+   "E": 20,
+   "F": 20,
+   "G": 40
+  }
+ },
+ {
+  "name": "Tag Combinations",
+  "rows": [
+   [
+    {
+     "value": "Labels on a picture and their combinations",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Counted from the annotation. A label is an object class, a whole-image tag, or Clear. A size flag is not a label; it is a subset of its class.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [],
+   [
+    {
+     "value": "Table 1 - Exact pairs",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "The picture's complete label set is exactly that pair, nothing else.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "#",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Label pair",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Share of two-label pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    {
+     "value": 1
+    },
+    "Lens Off Center + Multiple Lens",
+    {
+     "value": 371,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.5716486902927581,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 2
+    },
+    "Folded Lens + Multiple Lens",
+    {
+     "value": 67,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.10323574730354391,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 3
+    },
+    "Bubble + Foreign Matter",
+    {
+     "value": 42,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.06471494607087827,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 4
+    },
+    "Bubble + Bubble Cluster",
+    {
+     "value": 28,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.04314329738058552,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 5
+    },
+    "Bubble + Wet Package",
+    {
+     "value": 21,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.032357473035439135,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 6
+    },
+    "Bubble + HEMA",
+    {
+     "value": 21,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.032357473035439135,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 7
+    },
+    "Bubble + Low Dose",
+    {
+     "value": 16,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.02465331278890601,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 8
+    },
+    "Dirty Camera + Multiple Lens",
+    {
+     "value": 16,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.02465331278890601,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 9
+    },
+    "Bubble + Dirty Camera",
+    {
+     "value": 12,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.01848998459167951,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 10
+    },
+    "Bubble + Dirty Strobe",
+    {
+     "value": 7,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.01078582434514638,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 11
+    },
+    "Bubble + Fiber",
+    {
+     "value": 7,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.01078582434514638,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 12
+    },
+    "Lens Off Center + Low Dose",
+    {
+     "value": 6,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.009244992295839754,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 13
+    },
+    "Low Dose + Multiple Lens",
+    {
+     "value": 5,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.007704160246533128,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 14
+    },
+    "Bubble + Multiple Lens",
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0061633281972265025,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 15
+    },
+    "Dirty Camera + Lens Off Center",
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0061633281972265025,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 16
+    },
+    "HEMA Obstruction + Low Dose",
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0061633281972265025,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 17
+    },
+    "Bubble + Extraneous Polymer",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0030816640986132513,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 18
+    },
+    "Bubble + Lens Off Center",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0030816640986132513,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 19
+    },
+    "Dirty Camera + No Lens",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0030816640986132513,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 20
+    },
+    "HEMA Obstruction + Lens Off Center",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0030816640986132513,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 21
+    },
+    "HEMA Obstruction + Multiple Lens",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0030816640986132513,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 22
+    },
+    "Extraneous Polymer + No Lens",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0030816640986132513,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 23
+    },
+    "Foreign Matter + Lens Off Center",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0015408320493066256,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 24
+    },
+    "No Lens + Wet Package",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0015408320493066256,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 25
+    },
+    "Fiber + Wet Package",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0015408320493066256,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 26
+    },
+    "Extraneous Polymer + Foreign Matter",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0015408320493066256,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 27
+    },
+    "Bubble Scatter + Lens Off Center",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0015408320493066256,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 28
+    },
+    "Dirty Camera + Extraneous Polymer",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0015408320493066256,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": "",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "Total two-label pictures",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 649,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 1.0,
+     "format": "0.0%",
+     "bold": true,
+     "fill": "EDF1F8"
+    }
+   ],
+   [],
+   [
+    {
+     "value": "Table 2 - Inclusive pairs",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "The picture carries both labels; any further labels in addition are allowed.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "#",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Label pair",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Share of the smaller class",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    {
+     "value": 1
+    },
+    "Lens Off Center + Multiple Lens",
+    {
+     "value": 664,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.6938349007314525,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 2
+    },
+    "Bubble + Bubble Cluster",
+    {
+     "value": 405,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.9462616822429907,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 3
+    },
+    "Bubble + Foreign Matter",
+    {
+     "value": 276,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.8338368580060423,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 4
+    },
+    "Folded Lens + Multiple Lens",
+    {
+     "value": 236,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.9957805907172996,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 5
+    },
+    "Bubble + Dirty Camera",
+    {
+     "value": 200,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.60790273556231,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 6
+    },
+    "Bubble + Lens Off Center",
+    {
+     "value": 185,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.21461716937354988,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 7
+    },
+    "Bubble + Multiple Lens",
+    {
+     "value": 168,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.19489559164733178,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 8
+    },
+    "Bubble Cluster + Foreign Matter",
+    {
+     "value": 165,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.4984894259818731,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 9
+    },
+    "Bubble + Fiber",
+    {
+     "value": 148,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.7047619047619048,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 10
+    },
+    "Folded Lens + Lens Off Center",
+    {
+     "value": 148,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.6244725738396625,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 11
+    },
+    "Bubble + Low Dose",
+    {
+     "value": 121,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.5627906976744186,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 12
+    },
+    "Bubble Cluster + Dirty Camera",
+    {
+     "value": 118,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.3586626139817629,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 13
+    },
+    "Bubble + Wet Package",
+    {
+     "value": 117,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.8013698630136986,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 14
+    },
+    "Dirty Camera + Multiple Lens",
+    {
+     "value": 106,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.3221884498480243,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 15
+    },
+    "Bubble Cluster + Lens Off Center",
+    {
+     "value": 105,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.24532710280373832,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 16
+    },
+    "Bubble Cluster + Multiple Lens",
+    {
+     "value": 100,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.2336448598130841,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 17
+    },
+    "Bubble + HEMA",
+    {
+     "value": 94,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.9306930693069307,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 18
+    },
+    "Dirty Camera + Lens Off Center",
+    {
+     "value": 94,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.2857142857142857,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 19
+    },
+    "Bubble Cluster + Fiber",
+    {
+     "value": 80,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.38095238095238093,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 20
+    },
+    "Dirty Camera + Foreign Matter",
+    {
+     "value": 78,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.23708206686930092,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 21
+    },
+    "Dirty Camera + Low Dose",
+    {
+     "value": 72,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.33488372093023255,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 22
+    },
+    "Foreign Matter + Multiple Lens",
+    {
+     "value": 63,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.1903323262839879,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 23
+    },
+    "Bubble Cluster + Low Dose",
+    {
+     "value": 61,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.2837209302325581,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 24
+    },
+    "Foreign Matter + Lens Off Center",
+    {
+     "value": 61,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.18429003021148035,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 25
+    },
+    "Bubble Cluster + Wet Package",
+    {
+     "value": 59,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.4041095890410959,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 26
+    },
+    "Bubble + Folded Lens",
+    {
+     "value": 59,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.2489451476793249,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 27
+    },
+    "Fiber + Foreign Matter",
+    {
+     "value": 58,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.2761904761904762,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 28
+    },
+    "Dirty Camera + Fiber",
+    {
+     "value": 54,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.2571428571428571,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 29
+    },
+    "Fiber + Multiple Lens",
+    {
+     "value": 48,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.22857142857142856,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 30
+    },
+    "Lens Off Center + Wet Package",
+    {
+     "value": 47,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.3219178082191781,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 31
+    },
+    "Fiber + Lens Off Center",
+    {
+     "value": 37,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.1761904761904762,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 32
+    },
+    "Multiple Lens + Wet Package",
+    {
+     "value": 35,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.23972602739726026,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 33
+    },
+    "Foreign Matter + Wet Package",
+    {
+     "value": 34,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.2328767123287671,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 34
+    },
+    "Bubble + Extraneous Polymer",
+    {
+     "value": 33,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.29464285714285715,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 35
+    },
+    "Bubble Cluster + Folded Lens",
+    {
+     "value": 33,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.13924050632911392,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 36
+    },
+    "Foreign Matter + Low Dose",
+    {
+     "value": 32,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.14883720930232558,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 37
+    },
+    "Bubble Cluster + HEMA",
+    {
+     "value": 32,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.31683168316831684,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 38
+    },
+    "HEMA + Lens Off Center",
+    {
+     "value": 25,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.24752475247524752,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 39
+    },
+    "Bubble + Dirty Strobe",
+    {
+     "value": 22,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.5116279069767442,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 40
+    },
+    "Fiber + Wet Package",
+    {
+     "value": 21,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.14383561643835616,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 41
+    },
+    "Foreign Matter + HEMA",
+    {
+     "value": 21,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.2079207920792079,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 42
+    },
+    "Dirty Camera + Folded Lens",
+    {
+     "value": 21,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.08860759493670886,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 43
+    },
+    "Bubble Cluster + Extraneous Polymer",
+    {
+     "value": 20,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.17857142857142858,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 44
+    },
+    "Dirty Camera + Wet Package",
+    {
+     "value": 19,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.13013698630136986,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 45
+    },
+    "Folded Lens + Foreign Matter",
+    {
+     "value": 18,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0759493670886076,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 46
+    },
+    "Lens Off Center + Low Dose",
+    {
+     "value": 17,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.07906976744186046,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 47
+    },
+    "Low Dose + Multiple Lens",
+    {
+     "value": 17,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.07906976744186046,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 48
+    },
+    "Dirty Camera + HEMA",
+    {
+     "value": 15,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.1485148514851485,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 49
+    },
+    "Fiber + Low Dose",
+    {
+     "value": 14,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.06666666666666667,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 50
+    },
+    "Low Dose + Wet Package",
+    {
+     "value": 12,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0821917808219178,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 51
+    },
+    "Folded Lens + Wet Package",
+    {
+     "value": 11,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.07534246575342465,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 52
+    },
+    "Fiber + HEMA",
+    {
+     "value": 11,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.10891089108910891,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 53
+    },
+    "Extraneous Polymer + Fiber",
+    {
+     "value": 10,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.08928571428571429,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 54
+    },
+    "Extraneous Polymer + Lens Off Center",
+    {
+     "value": 10,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.08928571428571429,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 55
+    },
+    "Extraneous Polymer + Multiple Lens",
+    {
+     "value": 10,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.08928571428571429,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 56
+    },
+    "Dirty Camera + Extraneous Polymer",
+    {
+     "value": 10,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.08928571428571429,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 57
+    },
+    "Extraneous Polymer + Foreign Matter",
+    {
+     "value": 10,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.08928571428571429,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 58
+    },
+    "Dirty Strobe + Fiber",
+    {
+     "value": 9,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.20930232558139536,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 59
+    },
+    "Fiber + Folded Lens",
+    {
+     "value": 9,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.04285714285714286,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 60
+    },
+    "Extraneous Polymer + HEMA",
+    {
+     "value": 8,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.07920792079207921,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 61
+    },
+    "HEMA + Wet Package",
+    {
+     "value": 8,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.07920792079207921,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 62
+    },
+    "Bubble Cluster + Dirty Strobe",
+    {
+     "value": 7,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.16279069767441862,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 63
+    },
+    "Extraneous Polymer + Wet Package",
+    {
+     "value": 5,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.044642857142857144,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 64
+    },
+    "HEMA + Multiple Lens",
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.039603960396039604,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 65
+    },
+    "Dirty Camera + No Lens",
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.012307692307692308,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 66
+    },
+    "Fiber + No Lens",
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.01904761904761905,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 67
+    },
+    "Foreign Matter + No Lens",
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.012307692307692308,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 68
+    },
+    "Folded Lens + Low Dose",
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.018604651162790697,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 69
+    },
+    "HEMA Obstruction + Low Dose",
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.046511627906976744,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 70
+    },
+    "Extraneous Polymer + Low Dose",
+    {
+     "value": 3,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.026785714285714284,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 71
+    },
+    "Dirty Strobe + Foreign Matter",
+    {
+     "value": 3,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.06976744186046512,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 72
+    },
+    "No Lens + Wet Package",
+    {
+     "value": 3,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.02054794520547945,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 73
+    },
+    "Extraneous Polymer + No Lens",
+    {
+     "value": 3,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.026785714285714284,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 74
+    },
+    "HEMA + Low Dose",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.019801980198019802,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 75
+    },
+    "Bubble + No Lens",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.006153846153846154,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 76
+    },
+    "Dirty Strobe + Lens Off Center",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.046511627906976744,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 77
+    },
+    "Dirty Strobe + Multiple Lens",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.046511627906976744,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 78
+    },
+    "HEMA Obstruction + Lens Off Center",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.023255813953488372,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 79
+    },
+    "HEMA Obstruction + Multiple Lens",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.023255813953488372,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 80
+    },
+    "Dirty Strobe + Wet Package",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.023255813953488372,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 81
+    },
+    "Bubble Cluster + No Lens",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.003076923076923077,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 82
+    },
+    "Extraneous Polymer + Folded Lens",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.008928571428571428,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 83
+    },
+    "Bubble Scatter + Lens Off Center",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.16666666666666666,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": "83 distinct pairs occur at least once. A pair of rare labels can look common in this table because the rest of the picture is free; read it beside Table 1.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [],
+   [
+    {
+     "value": "How many labels one picture carries",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Labels on the picture",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Share of the analysed set",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 5531,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.7972038051311617,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 649,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.09354280772556933,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 3,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 418,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.060247910060536175,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 199,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.028682617469011244,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 5,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 97,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.01398097434419141,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 6,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 29,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.004179878927644855,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 7,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 12,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0017296050735082155,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 8,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 3,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0004324012683770539,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": "Total",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 6938,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 1.0,
+     "format": "0.0%",
+     "bold": true,
+     "fill": "EDF1F8"
+    }
+   ],
+   [
+    {
+     "value": "No picture carries zero labels: the four object classes have their own column here, and a picture whose only mark is such an object carries that class as its label.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "2 or more labels on 1,407 pictures means the tag model must be multi-label.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A4",
+  "column_widths": {
+   "A": 7,
+   "B": 56,
+   "C": 12,
+   "D": 26
+  }
+ },
+ {
+  "name": "OOI Summary",
+  "rows": [
+   [
+    {
+     "value": "Object classes",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Pictures carrying each object class, the share over the size threshold, the objects marked, and the typical object size in pixels. Sizes are the median over every object of the class, including the objects that carry an older plain class name.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "Object class",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Guide code",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures carrying the class",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Of which over the size threshold",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Objects marked",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Typical width (px)",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Typical height (px)",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Notes",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Bubble",
+    "P2_BB",
+    {
+     "value": 862,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "-"
+    },
+    {
+     "value": 11045,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 6.7,
+     "format": "0.0",
+     "bold": true
+    },
+    {
+     "value": 6.5,
+     "format": "0.0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Bubble Cluster",
+    "P2_BC",
+    {
+     "value": 428,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "-"
+    },
+    {
+     "value": 1182,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 12.1,
+     "format": "0.0",
+     "bold": true
+    },
+    {
+     "value": 11.0,
+     "format": "0.0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Wet Package",
+    "P2_WP",
+    {
+     "value": 146,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "-"
+    },
+    {
+     "value": 662,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 36.3,
+     "format": "0.0",
+     "bold": true
+    },
+    {
+     "value": 24.8,
+     "format": "0.0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Foreign Matter",
+    "P3_FM",
+    {
+     "value": 331,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 171,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 626,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 11.4,
+     "format": "0.0",
+     "bold": true
+    },
+    {
+     "value": 10.9,
+     "format": "0.0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Fiber",
+    "P3_FIB",
+    {
+     "value": 210,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 136,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 277,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 32.5,
+     "format": "0.0",
+     "bold": true
+    },
+    {
+     "value": 26.6,
+     "format": "0.0",
+     "bold": true
+    },
+    "32 objects the newer annotation calls Extraneous Polymer keep the earlier Fiber name here"
+   ],
+   [
+    "Extraneous Polymer",
+    "P3_EP",
+    {
+     "value": 112,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 33,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 118,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 118.9,
+     "format": "0.0",
+     "bold": true
+    },
+    {
+     "value": 136.6,
+     "format": "0.0",
+     "bold": true
+    },
+    "The same 32 objects sit under Fiber above"
+   ],
+   [
+    "HEMA",
+    "P3_HE",
+    {
+     "value": 101,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 94,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 103,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1048.8,
+     "format": "0.0",
+     "bold": true
+    },
+    {
+     "value": 594.5,
+     "format": "0.0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Surface Groove",
+    "P1_SG",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "-"
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "-",
+     "format": "0.0",
+     "bold": true
+    },
+    {
+     "value": "-",
+     "format": "0.0",
+     "bold": true
+    },
+    "No examples yet; the class is defined in the guide"
+   ],
+   [
+    {
+     "value": "Total objects, the eight object classes",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 1130,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 14013,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "",
+     "bold": true,
+     "fill": "EDF1F8"
+    }
+   ],
+   [],
+   [
+    {
+     "value": "Older names kept for reference (not in the current class list)",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Name",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Code",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Objects marked",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Typical width (px)",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Typical height (px)",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Note",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Bubble On 123",
+    "",
+    {
+     "value": 13,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 79,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 5.2,
+     "format": "0.0",
+     "bold": true
+    },
+    {
+     "value": 5.5,
+     "format": "0.0",
+     "bold": true
+    },
+    "Library only, no current code",
+    ""
+   ],
+   [
+    "Bubble On Edge",
+    "",
+    {
+     "value": 14,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 90,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 8.6,
+     "format": "0.0",
+     "bold": true
+    },
+    {
+     "value": 10.4,
+     "format": "0.0",
+     "bold": true
+    },
+    "Library only, no current code",
+    ""
+   ],
+   [
+    "HEMA Obstruction",
+    "P2_HMO",
+    {
+     "value": 86,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "-"
+    },
+    {
+     "value": "-"
+    },
+    {
+     "value": "-"
+    },
+    "Whole-image tag, not an object class",
+    ""
+   ],
+   [
+    {
+     "value": "Bubble is one class: Bubble Irregular and Stretched Bubble fold into it, and the older library's plain Bubble name folds in too. Every such picture also carries the Bubble mark.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "HEMA is 103 objects on 101 pictures: 95 production objects, 4 objects in one later file and 4 in the older library under the HEMA Fragment name.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A4",
+  "column_widths": {
+   "A": 26,
+   "B": 10,
+   "C": 22,
+   "D": 24,
+   "E": 14,
+   "F": 16,
+   "G": 16,
+   "H": 62
+  }
+ },
+ {
+  "name": "Standalone Tags",
+  "rows": [
+   [
+    {
+     "value": "Standalone tags",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Tags the guide says cannot share a picture with anything else. Checked against every label, object classes included.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "Standalone tag",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures tagged",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures carrying any other label",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Status",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Missing Primary Package",
+    {
+     "value": 1426,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Follows the guide: no other label on these pictures"
+   ],
+   [
+    "Package Misalignment",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Follows the guide: no other label on these pictures"
+   ],
+   [
+    "Cavity Off Center",
+    {
+     "value": 184,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Follows the guide: no other label on these pictures"
+   ],
+   [
+    "View Obstructed",
+    {
+     "value": 24,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Follows the guide: no other label on these pictures"
+   ],
+   [
+    {
+     "value": "Checked on the annotation, so an object class counts as an extra label. All four tags keep zero violations.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A4",
+  "column_widths": {
+   "A": 34,
+   "B": 16,
+   "C": 30,
+   "D": 54
+  }
+ },
+ {
+  "name": "Confusion Risks",
+  "rows": [
+   [
+    {
+     "value": "Confusion risks",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Class pairs that look alike, how to tell them apart, and how many pictures carry both.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "Class",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Can look like",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "How to tell them apart",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Guide section",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures with both",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Cavity Off Center",
+    "Package Misalignment (2)",
+    "Off-centre image with the package correctly seated = Cavity Off Center",
+    "4.3",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Lens Off Center (957)",
+    "Low Dose (215)",
+    "If the cause is too little solution it is Low Dose; a real shift in a full cavity is Lens Off Center",
+    "4.5, 4.15",
+    {
+     "value": 17,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Wet Package (146)",
+    "Bubble (862)",
+    "Wet package marks look like bubbles but are liquid: gradual brightness, no sharp rim",
+    "5.2",
+    {
+     "value": 117,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Extraneous Polymer",
+    "Fiber",
+    "Mixed shapes (a strand with a clump) are recorded as Fiber; Extraneous Polymer is for a confident polymer sheet or fragment. 32 objects were renamed between the two, and keep the earlier Fiber name in this workbook",
+    "5.4B",
+    {
+     "value": 10,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble Scatter (6)",
+    "Bubble / Bubble Cluster",
+    "Scatter is a whole-picture tag for many small bubbles spread widely; single bubbles are boxed",
+    "4.14, 5.1B",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Dirty Strobe (43)",
+    "Dirty Camera (329)",
+    "Strobe marks are soft and blurred; camera marks are sharp spots",
+    "4.12, 4.13",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "No Lens (325)",
+    "any lens condition",
+    "No Lens needs a valid package and confidence that no lens is present",
+    "4.6",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Multiple Lens (1439)",
+    "Folded Lens (237)",
+    "Not a conflict: a folded lens in a multi-lens picture carries both tags",
+    "4.7, 4.8",
+    {
+     "value": 236,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [],
+   [
+    {
+     "value": "Features that look like defects but are not annotated",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    "Package marks (fiber-like marks that repeat in the same place)",
+    "Fiber, Foreign Matter",
+    "Not annotated. A model will still see them, so they limit achievable precision.",
+    "3.1",
+    ""
+   ],
+   [
+    "Crater-like bubble artifacts (rings from collapsed bubbles)",
+    "Wet Package, Fiber, Extraneous Polymer, Foreign Matter",
+    "Not annotated. They resemble wet-package and debris marks.",
+    "3.2",
+    ""
+   ],
+   [
+    {
+     "value": "The number in brackets after a class is how many pictures carry that class, from the Summary sheet. The last column counts the pictures carrying both classes; a zero means the two never appear on the same picture.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A4",
+  "column_widths": {
+   "A": 30,
+   "B": 30,
+   "C": 76,
+   "D": 14,
+   "E": 16
+  }
+ },
+ {
+  "name": "Earlier vs Current",
+  "rows": [
+   [
+    {
+     "value": "The same label counted at each stage",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Union census counts a picture once if any annotation file marks it, duplicate copies removed. Resolved keeps one annotation of record per picture. The analysed set is that resolution over every picture in an annotation. The split set is the part that can enter the split.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "Label",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Union census",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Resolved",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Analysed set",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "In split set (split positive)",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Clear",
+    {
+     "value": "-"
+    },
+    {
+     "value": "-"
+    },
+    {
+     "value": 2156,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 2156,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Multiple Lens",
+    {
+     "value": 1442,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1439,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1439,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1402,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Missing Primary Package",
+    {
+     "value": 1427,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1426,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1426,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1426,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Lens Off Center",
+    {
+     "value": 965,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 957,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 957,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 922,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble",
+    {
+     "value": 859,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 862,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 862,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 789,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble Cluster",
+    {
+     "value": 427,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 428,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 428,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 378,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Foreign Matter",
+    {
+     "value": 332,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 331,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 331,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 215,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Dirty Camera",
+    {
+     "value": 329,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 329,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 329,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 298,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "No Lens",
+    {
+     "value": 326,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 325,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 325,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 322,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Folded Lens",
+    {
+     "value": 237,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 237,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 237,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 226,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Low Dose",
+    {
+     "value": 216,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 215,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 215,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 204,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Fiber",
+    {
+     "value": 207,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 210,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 210,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 145,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Cavity Off Center",
+    {
+     "value": 184,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 184,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 184,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 184,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Wet Package",
+    {
+     "value": 145,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 146,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 146,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 126,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Extraneous Polymer",
+    {
+     "value": 149,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 112,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 112,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 33,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "HEMA",
+    {
+     "value": 101,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 101,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 101,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 94,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "HEMA Obstruction",
+    {
+     "value": 174,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 86,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 86,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 86,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Dirty Strobe",
+    {
+     "value": 43,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 43,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 43,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 41,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "View Obstructed",
+    {
+     "value": 24,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 24,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 24,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 24,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble On Edge",
+    {
+     "value": 14,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 14,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 14,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 14,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble On 123",
+    {
+     "value": 13,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 13,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 13,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 13,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble Scatter",
+    {
+     "value": 6,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 6,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 6,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 6,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Package Misalignment",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Edge Bottle-Capped",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Torn Lens",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Lens Rupture",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Surface Groove",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [],
+   [
+    {
+     "value": "Size flags (inside their class, not labels)",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Flag",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Union census",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Resolved",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Analysed set",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Split set",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Foreign Matter size flag",
+    {
+     "value": "-"
+    },
+    {
+     "value": 171,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 171,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 171,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Fiber size flag",
+    {
+     "value": "-"
+    },
+    {
+     "value": 136,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 136,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 136,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Extraneous Polymer size flag",
+    {
+     "value": "-"
+    },
+    {
+     "value": 33,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 33,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 33,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "HEMA size flag",
+    {
+     "value": "-"
+    },
+    {
+     "value": 94,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 94,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 94,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": "26 annotation entries, all in the older library file, could not be matched to a picture row, so the union column can read one or two below the resolved column. The resolved and analysed columns are the counts of record.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "The split set for the four object classes holds the pictures carrying the size flag, because the split treats the flag as the positive for those classes. The training label list carries 32 pictures in the Fiber flag that the annotation records as Extraneous Polymer.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A4",
+  "column_widths": {
+   "A": 34,
+   "B": 16,
+   "C": 14,
+   "D": 16,
+   "E": 14
+  }
+ },
+ {
+  "name": "Training and Test Split",
+  "rows": [
+   [
+    {
+     "value": "Training and test split - both ratios, same recipe and seed",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "This sheet reproduces the frozen split. Rows for the four object classes count pictures carrying the size flag, which is the positive the split uses for those classes.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [],
+   [
+    {
+     "value": "70% training / 30% test",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Class",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Training pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Test pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Total",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Note",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Foreign Matter size flag",
+    {
+     "value": 124,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 47,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 171,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Split positives = pictures carrying the size flag"
+   ],
+   [
+    "Fiber size flag",
+    {
+     "value": 90,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 47,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 137,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Split positives = pictures carrying the size flag"
+   ],
+   [
+    "Extraneous Polymer size flag",
+    {
+     "value": 25,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 8,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 33,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Split positives = pictures carrying the size flag"
+   ],
+   [
+    "HEMA size flag",
+    {
+     "value": 66,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 28,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 94,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Split positives = pictures carrying the size flag"
+   ],
+   [
+    "Bubble",
+    {
+     "value": 552,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 237,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 789,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Bubble Cluster",
+    {
+     "value": 266,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 114,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 380,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Wet Package",
+    {
+     "value": 88,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 38,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 126,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Missing Primary Package",
+    {
+     "value": 998,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 428,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1426,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Multiple Lens",
+    {
+     "value": 981,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 421,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1402,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "No Lens",
+    {
+     "value": 225,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 97,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 322,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Cavity Off Center",
+    {
+     "value": 129,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 55,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 184,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Folded Lens",
+    {
+     "value": 167,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 59,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 226,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Lens Off Center",
+    {
+     "value": 645,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 277,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 922,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Dirty Camera",
+    {
+     "value": 209,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 89,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 298,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Dirty Strobe",
+    {
+     "value": 29,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 12,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 41,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Low Dose",
+    {
+     "value": 143,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 61,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 204,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "View Obstructed",
+    {
+     "value": 17,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 7,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 24,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Package Misalignment",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Bubble Scatter",
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 6,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Clear",
+    {
+     "value": 1509,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 647,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 2156,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    {
+     "value": "Total pictures",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 4568,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 2006,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 6574,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "Content groups never cross the split",
+     "bold": true,
+     "fill": "EDF1F8"
+    }
+   ],
+   [],
+   [
+    {
+     "value": "80% training / 20% test",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Class",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Training pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Test pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Total",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Note",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Foreign Matter size flag",
+    {
+     "value": 141,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 30,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 171,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Split positives = pictures carrying the size flag"
+   ],
+   [
+    "Fiber size flag",
+    {
+     "value": 98,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 39,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 137,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Split positives = pictures carrying the size flag"
+   ],
+   [
+    "Extraneous Polymer size flag",
+    {
+     "value": 29,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 33,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Split positives = pictures carrying the size flag"
+   ],
+   [
+    "HEMA size flag",
+    {
+     "value": 77,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 17,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 94,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Split positives = pictures carrying the size flag"
+   ],
+   [
+    "Bubble",
+    {
+     "value": 631,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 158,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 789,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Bubble Cluster",
+    {
+     "value": 304,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 76,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 380,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Wet Package",
+    {
+     "value": 101,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 25,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 126,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Missing Primary Package",
+    {
+     "value": 1141,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 285,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1426,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Multiple Lens",
+    {
+     "value": 1122,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 280,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1402,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "No Lens",
+    {
+     "value": 258,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 64,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 322,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Cavity Off Center",
+    {
+     "value": 147,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 37,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 184,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Folded Lens",
+    {
+     "value": 178,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 48,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 226,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Lens Off Center",
+    {
+     "value": 738,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 184,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 922,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Dirty Camera",
+    {
+     "value": 238,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 60,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 298,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Dirty Strobe",
+    {
+     "value": 33,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 8,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 41,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Low Dose",
+    {
+     "value": 163,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 41,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 204,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "View Obstructed",
+    {
+     "value": 19,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 5,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 24,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Package Misalignment",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Bubble Scatter",
+    {
+     "value": 5,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 6,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    "Clear",
+    {
+     "value": 1725,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 431,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 2156,
+     "format": "#,##0",
+     "bold": true
+    },
+    ""
+   ],
+   [
+    {
+     "value": "Total pictures",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 5269,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 1305,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 6574,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "Content groups never cross the split",
+     "bold": true,
+     "fill": "EDF1F8"
+    }
+   ],
+   [
+    {
+     "value": "Only the Draft 2 codes and Clear are positives. 105 pictures whose only marks are HEMA Obstruction, Bubble On 123 or Bubble On Edge are left out, so the split covers 6,574 pictures out of the 6,679 that can otherwise enter.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A4",
+  "column_widths": {
+   "A": 32,
+   "B": 18,
+   "C": 16,
+   "D": 12,
+   "E": 48
+  }
+ },
+ {
+  "name": "Definitions",
+  "rows": [
+   [
+    {
+     "value": "Definitions",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Term",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Meaning",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Picture examined",
+    "Every distinct image in the library, counted once."
+   ],
+   [
+    "Analysed set",
+    "The 6,938 pictures that carry an annotation entry."
+   ],
+   [
+    "Label",
+    "One class present on a picture: an object class, a whole-image tag, or Clear."
+   ],
+   [
+    "Object class",
+    "The class of a marked object: Bubble, Bubble Cluster, Wet Package, Foreign Matter, Fiber, Extraneous Polymer, HEMA."
+   ],
+   [
+    "Whole-image tag",
+    "One tag on the picture, not on an object."
+   ],
+   [
+    "Size flag",
+    "The micron threshold tag on an object. It marks an object over the size threshold and sits inside its class; it is not a label."
+   ],
+   [
+    "Clear",
+    "A picture with nothing marked. It counts as one label."
+   ],
+   [
+    "Debris group",
+    "The four object classes together: Foreign Matter, Fiber, Extraneous Polymer, HEMA. A group, not a class in the guide."
+   ],
+   [
+    "Union census",
+    "A picture counted once if any annotation file marks it, duplicate copies removed."
+   ],
+   [
+    "Resolved",
+    "One annotation of record per picture; older annotations of the same picture ignored."
+   ],
+   [
+    "Split set",
+    "The pictures that enter the training and test split."
+   ],
+   [
+    "Exact pair",
+    "The picture's complete label set is exactly those two labels."
+   ],
+   [
+    "Inclusive pair",
+    "The picture carries both labels and may carry others."
+   ]
+  ],
+  "freeze_panes": "A4",
+  "column_widths": {
+   "A": 26,
+   "B": 100
+  }
+ }
+]

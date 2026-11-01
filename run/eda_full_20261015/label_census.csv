@@ -1,0 +1,225 @@
+canonical_id,canonical_name,tier,kind_conflict,is_size_gate,library_only,dimension,bucket,picture_count,box_picture_count,tag_picture_count,shape_count,box_shape_count,tag_shape_count
+bubble,Bubble,box,no,no,no,all,all,819,819,0,10869,10869,0
+bubble,Bubble,box,no,no,no,folder_group,Updated,747,747,0,10082,10082,0
+bubble,Bubble,box,no,no,no,folder_group,Library,72,72,0,787,787,0
+bubble,Bubble,box,no,no,no,line,L24,428,428,0,6126,6126,0
+bubble,Bubble,box,no,no,no,line,L25,30,30,0,274,274,0
+bubble,Bubble,box,no,no,no,line,L26,232,232,0,2882,2882,0
+bubble,Bubble,box,no,no,no,line,L27,129,129,0,1587,1587,0
+bubble,Bubble,box,no,no,no,line,L31,0,0,0,0,0,0
+bubble_cluster,Bubble Cluster,box,no,no,no,all,all,428,428,0,1182,1182,0
+bubble_cluster,Bubble Cluster,box,no,no,no,folder_group,Updated,407,407,0,1071,1071,0
+bubble_cluster,Bubble Cluster,box,no,no,no,folder_group,Library,21,21,0,111,111,0
+bubble_cluster,Bubble Cluster,box,no,no,no,line,L24,216,216,0,630,630,0
+bubble_cluster,Bubble Cluster,box,no,no,no,line,L25,6,6,0,14,14,0
+bubble_cluster,Bubble Cluster,box,no,no,no,line,L26,116,116,0,258,258,0
+bubble_cluster,Bubble Cluster,box,no,no,no,line,L27,88,88,0,277,277,0
+bubble_cluster,Bubble Cluster,box,no,no,no,line,L31,2,2,0,3,3,0
+bubble_irregular,Bubble Irregular,box,no,no,no,all,all,147,147,0,169,169,0
+bubble_irregular,Bubble Irregular,box,no,no,no,folder_group,Updated,121,121,0,143,143,0
+bubble_irregular,Bubble Irregular,box,no,no,no,folder_group,Library,26,26,0,26,26,0
+bubble_irregular,Bubble Irregular,box,no,no,no,line,L24,70,70,0,82,82,0
+bubble_irregular,Bubble Irregular,box,no,no,no,line,L25,5,5,0,7,7,0
+bubble_irregular,Bubble Irregular,box,no,no,no,line,L26,37,37,0,45,45,0
+bubble_irregular,Bubble Irregular,box,no,no,no,line,L27,34,34,0,34,34,0
+bubble_irregular,Bubble Irregular,box,no,no,no,line,L31,1,1,0,1,1,0
+bubble_on_123,Bubble On 123,box,no,no,yes,all,all,13,13,0,79,79,0
+bubble_on_123,Bubble On 123,box,no,no,yes,folder_group,Updated,0,0,0,0,0,0
+bubble_on_123,Bubble On 123,box,no,no,yes,folder_group,Library,13,13,0,79,79,0
+bubble_on_123,Bubble On 123,box,no,no,yes,line,L24,0,0,0,0,0,0
+bubble_on_123,Bubble On 123,box,no,no,yes,line,L25,0,0,0,0,0,0
+bubble_on_123,Bubble On 123,box,no,no,yes,line,L26,0,0,0,0,0,0
+bubble_on_123,Bubble On 123,box,no,no,yes,line,L27,0,0,0,0,0,0
+bubble_on_123,Bubble On 123,box,no,no,yes,line,L31,13,13,0,79,79,0
+bubble_on_edge,Bubble On Edge,box,no,no,yes,all,all,14,14,0,90,90,0
+bubble_on_edge,Bubble On Edge,box,no,no,yes,folder_group,Updated,0,0,0,0,0,0
+bubble_on_edge,Bubble On Edge,box,no,no,yes,folder_group,Library,14,14,0,90,90,0
+bubble_on_edge,Bubble On Edge,box,no,no,yes,line,L24,3,3,0,14,14,0
+bubble_on_edge,Bubble On Edge,box,no,no,yes,line,L25,3,3,0,23,23,0
+bubble_on_edge,Bubble On Edge,box,no,no,yes,line,L26,1,1,0,4,4,0
+bubble_on_edge,Bubble On Edge,box,no,no,yes,line,L27,1,1,0,9,9,0
+bubble_on_edge,Bubble On Edge,box,no,no,yes,line,L31,6,6,0,40,40,0
+extraneous_polymer,Extraneous Polymer,box,no,no,no,all,all,144,144,0,150,150,0
+extraneous_polymer,Extraneous Polymer,box,no,no,no,folder_group,Updated,144,144,0,150,150,0
+extraneous_polymer,Extraneous Polymer,box,no,no,no,folder_group,Library,0,0,0,0,0,0
+extraneous_polymer,Extraneous Polymer,box,no,no,no,line,L24,70,70,0,74,74,0
+extraneous_polymer,Extraneous Polymer,box,no,no,no,line,L25,30,30,0,30,30,0
+extraneous_polymer,Extraneous Polymer,box,no,no,no,line,L26,10,10,0,11,11,0
+extraneous_polymer,Extraneous Polymer,box,no,no,no,line,L27,20,20,0,21,21,0
+extraneous_polymer,Extraneous Polymer,box,no,no,no,line,L31,14,14,0,14,14,0
+fiber,Fiber,box,no,no,no,all,all,178,178,0,245,245,0
+fiber,Fiber,box,no,no,no,folder_group,Updated,177,177,0,244,244,0
+fiber,Fiber,box,no,no,no,folder_group,Library,1,1,0,1,1,0
+fiber,Fiber,box,no,no,no,line,L24,97,97,0,128,128,0
+fiber,Fiber,box,no,no,no,line,L25,12,12,0,16,16,0
+fiber,Fiber,box,no,no,no,line,L26,47,47,0,66,66,0
+fiber,Fiber,box,no,no,no,line,L27,13,13,0,25,25,0
+fiber,Fiber,box,no,no,no,line,L31,9,9,0,10,10,0
+foreign_matter,Foreign Matter,box,no,no,no,all,all,331,331,0,626,626,0
+foreign_matter,Foreign Matter,box,no,no,no,folder_group,Updated,331,331,0,626,626,0
+foreign_matter,Foreign Matter,box,no,no,no,folder_group,Library,0,0,0,0,0,0
+foreign_matter,Foreign Matter,box,no,no,no,line,L24,169,169,0,303,303,0
+foreign_matter,Foreign Matter,box,no,no,no,line,L25,14,14,0,18,18,0
+foreign_matter,Foreign Matter,box,no,no,no,line,L26,69,69,0,93,93,0
+foreign_matter,Foreign Matter,box,no,no,no,line,L27,48,48,0,181,181,0
+foreign_matter,Foreign Matter,box,no,no,no,line,L31,31,31,0,31,31,0
+hema_fragment,HEMA Fragment,box,no,no,no,all,all,7,7,0,8,8,0
+hema_fragment,HEMA Fragment,box,no,no,no,folder_group,Updated,7,7,0,8,8,0
+hema_fragment,HEMA Fragment,box,no,no,no,folder_group,Library,0,0,0,0,0,0
+hema_fragment,HEMA Fragment,box,no,no,no,line,L24,2,2,0,3,3,0
+hema_fragment,HEMA Fragment,box,no,no,no,line,L25,1,1,0,1,1,0
+hema_fragment,HEMA Fragment,box,no,no,no,line,L26,0,0,0,0,0,0
+hema_fragment,HEMA Fragment,box,no,no,no,line,L27,0,0,0,0,0,0
+hema_fragment,HEMA Fragment,box,no,no,no,line,L31,4,4,0,4,4,0
+stretched_bubble,Stretched Bubble,box,no,no,no,all,all,6,6,0,7,7,0
+stretched_bubble,Stretched Bubble,box,no,no,no,folder_group,Updated,6,6,0,7,7,0
+stretched_bubble,Stretched Bubble,box,no,no,no,folder_group,Library,0,0,0,0,0,0
+stretched_bubble,Stretched Bubble,box,no,no,no,line,L24,0,0,0,0,0,0
+stretched_bubble,Stretched Bubble,box,no,no,no,line,L25,0,0,0,0,0,0
+stretched_bubble,Stretched Bubble,box,no,no,no,line,L26,1,1,0,1,1,0
+stretched_bubble,Stretched Bubble,box,no,no,no,line,L27,1,1,0,2,2,0
+stretched_bubble,Stretched Bubble,box,no,no,no,line,L31,4,4,0,4,4,0
+wet_package,Wet Package,box,no,no,no,all,all,146,146,0,662,662,0
+wet_package,Wet Package,box,no,no,no,folder_group,Updated,122,122,0,593,593,0
+wet_package,Wet Package,box,no,no,no,folder_group,Library,24,24,0,69,69,0
+wet_package,Wet Package,box,no,no,no,line,L24,46,46,0,157,157,0
+wet_package,Wet Package,box,no,no,no,line,L25,6,6,0,186,186,0
+wet_package,Wet Package,box,no,no,no,line,L26,91,91,0,316,316,0
+wet_package,Wet Package,box,no,no,no,line,L27,3,3,0,3,3,0
+wet_package,Wet Package,box,no,no,no,line,L31,0,0,0,0,0,0
+hema_obstruction,HEMA Obstruction,box|tag,yes,no,no,all,all,180,94,86,181,95,86
+hema_obstruction,HEMA Obstruction,box|tag,yes,no,no,folder_group,Updated,180,94,86,181,95,86
+hema_obstruction,HEMA Obstruction,box|tag,yes,no,no,folder_group,Library,0,0,0,0,0,0
+hema_obstruction,HEMA Obstruction,box|tag,yes,no,no,line,L24,156,93,63,157,94,63
+hema_obstruction,HEMA Obstruction,box|tag,yes,no,no,line,L25,17,0,17,17,0,17
+hema_obstruction,HEMA Obstruction,box|tag,yes,no,no,line,L26,3,1,2,3,1,2
+hema_obstruction,HEMA Obstruction,box|tag,yes,no,no,line,L27,2,0,2,2,0,2
+hema_obstruction,HEMA Obstruction,box|tag,yes,no,no,line,L31,2,0,2,2,0,2
+bubble_scatter,Bubble Scatter,tag,no,no,no,all,all,6,0,6,6,0,6
+bubble_scatter,Bubble Scatter,tag,no,no,no,folder_group,Updated,6,0,6,6,0,6
+bubble_scatter,Bubble Scatter,tag,no,no,no,folder_group,Library,0,0,0,0,0,0
+bubble_scatter,Bubble Scatter,tag,no,no,no,line,L24,2,0,2,2,0,2
+bubble_scatter,Bubble Scatter,tag,no,no,no,line,L25,0,0,0,0,0,0
+bubble_scatter,Bubble Scatter,tag,no,no,no,line,L26,0,0,0,0,0,0
+bubble_scatter,Bubble Scatter,tag,no,no,no,line,L27,3,0,3,3,0,3
+bubble_scatter,Bubble Scatter,tag,no,no,no,line,L31,1,0,1,1,0,1
+cavity_off_center,Cavity Off Center,tag,no,no,no,all,all,184,0,184,184,0,184
+cavity_off_center,Cavity Off Center,tag,no,no,no,folder_group,Updated,184,0,184,184,0,184
+cavity_off_center,Cavity Off Center,tag,no,no,no,folder_group,Library,0,0,0,0,0,0
+cavity_off_center,Cavity Off Center,tag,no,no,no,line,L24,93,0,93,93,0,93
+cavity_off_center,Cavity Off Center,tag,no,no,no,line,L25,40,0,40,40,0,40
+cavity_off_center,Cavity Off Center,tag,no,no,no,line,L26,25,0,25,25,0,25
+cavity_off_center,Cavity Off Center,tag,no,no,no,line,L27,13,0,13,13,0,13
+cavity_off_center,Cavity Off Center,tag,no,no,no,line,L31,13,0,13,13,0,13
+dirty_camera,Dirty Camera,tag,no,no,no,all,all,329,0,329,329,0,329
+dirty_camera,Dirty Camera,tag,no,no,no,folder_group,Updated,329,0,329,329,0,329
+dirty_camera,Dirty Camera,tag,no,no,no,folder_group,Library,0,0,0,0,0,0
+dirty_camera,Dirty Camera,tag,no,no,no,line,L24,170,0,170,170,0,170
+dirty_camera,Dirty Camera,tag,no,no,no,line,L25,17,0,17,17,0,17
+dirty_camera,Dirty Camera,tag,no,no,no,line,L26,53,0,53,53,0,53
+dirty_camera,Dirty Camera,tag,no,no,no,line,L27,85,0,85,85,0,85
+dirty_camera,Dirty Camera,tag,no,no,no,line,L31,4,0,4,4,0,4
+dirty_strobe,Dirty Strobe,tag,no,no,no,all,all,43,0,43,43,0,43
+dirty_strobe,Dirty Strobe,tag,no,no,no,folder_group,Updated,43,0,43,43,0,43
+dirty_strobe,Dirty Strobe,tag,no,no,no,folder_group,Library,0,0,0,0,0,0
+dirty_strobe,Dirty Strobe,tag,no,no,no,line,L24,0,0,0,0,0,0
+dirty_strobe,Dirty Strobe,tag,no,no,no,line,L25,11,0,11,11,0,11
+dirty_strobe,Dirty Strobe,tag,no,no,no,line,L26,32,0,32,32,0,32
+dirty_strobe,Dirty Strobe,tag,no,no,no,line,L27,0,0,0,0,0,0
+dirty_strobe,Dirty Strobe,tag,no,no,no,line,L31,0,0,0,0,0,0
+folded_lens,Folded Lens,tag,no,no,no,all,all,237,0,237,237,0,237
+folded_lens,Folded Lens,tag,no,no,no,folder_group,Updated,237,0,237,237,0,237
+folded_lens,Folded Lens,tag,no,no,no,folder_group,Library,0,0,0,0,0,0
+folded_lens,Folded Lens,tag,no,no,no,line,L24,44,0,44,44,0,44
+folded_lens,Folded Lens,tag,no,no,no,line,L25,3,0,3,3,0,3
+folded_lens,Folded Lens,tag,no,no,no,line,L26,169,0,169,169,0,169
+folded_lens,Folded Lens,tag,no,no,no,line,L27,13,0,13,13,0,13
+folded_lens,Folded Lens,tag,no,no,no,line,L31,8,0,8,8,0,8
+lens_off_center,Lens Off Center,tag,no,no,no,all,all,957,0,957,957,0,957
+lens_off_center,Lens Off Center,tag,no,no,no,folder_group,Updated,957,0,957,957,0,957
+lens_off_center,Lens Off Center,tag,no,no,no,folder_group,Library,0,0,0,0,0,0
+lens_off_center,Lens Off Center,tag,no,no,no,line,L24,316,0,316,316,0,316
+lens_off_center,Lens Off Center,tag,no,no,no,line,L25,76,0,76,76,0,76
+lens_off_center,Lens Off Center,tag,no,no,no,line,L26,433,0,433,433,0,433
+lens_off_center,Lens Off Center,tag,no,no,no,line,L27,63,0,63,63,0,63
+lens_off_center,Lens Off Center,tag,no,no,no,line,L31,69,0,69,69,0,69
+low_dose,Low Dose,tag,no,no,no,all,all,215,0,215,215,0,215
+low_dose,Low Dose,tag,no,no,no,folder_group,Updated,215,0,215,215,0,215
+low_dose,Low Dose,tag,no,no,no,folder_group,Library,0,0,0,0,0,0
+low_dose,Low Dose,tag,no,no,no,line,L24,26,0,26,26,0,26
+low_dose,Low Dose,tag,no,no,no,line,L25,1,0,1,1,0,1
+low_dose,Low Dose,tag,no,no,no,line,L26,19,0,19,19,0,19
+low_dose,Low Dose,tag,no,no,no,line,L27,96,0,96,96,0,96
+low_dose,Low Dose,tag,no,no,no,line,L31,73,0,73,73,0,73
+missing_lens,Missing Lens,tag,no,no,no,all,all,325,0,325,325,0,325
+missing_lens,Missing Lens,tag,no,no,no,folder_group,Updated,325,0,325,325,0,325
+missing_lens,Missing Lens,tag,no,no,no,folder_group,Library,0,0,0,0,0,0
+missing_lens,Missing Lens,tag,no,no,no,line,L24,185,0,185,185,0,185
+missing_lens,Missing Lens,tag,no,no,no,line,L25,5,0,5,5,0,5
+missing_lens,Missing Lens,tag,no,no,no,line,L26,3,0,3,3,0,3
+missing_lens,Missing Lens,tag,no,no,no,line,L27,81,0,81,81,0,81
+missing_lens,Missing Lens,tag,no,no,no,line,L31,51,0,51,51,0,51
+missing_primary_package,Missing Primary Package,tag,no,no,no,all,all,1426,0,1426,1551,0,1551
+missing_primary_package,Missing Primary Package,tag,no,no,no,folder_group,Updated,1426,0,1426,1551,0,1551
+missing_primary_package,Missing Primary Package,tag,no,no,no,folder_group,Library,0,0,0,0,0,0
+missing_primary_package,Missing Primary Package,tag,no,no,no,line,L24,1146,0,1146,1249,0,1249
+missing_primary_package,Missing Primary Package,tag,no,no,no,line,L25,189,0,189,201,0,201
+missing_primary_package,Missing Primary Package,tag,no,no,no,line,L26,7,0,7,12,0,12
+missing_primary_package,Missing Primary Package,tag,no,no,no,line,L27,12,0,12,17,0,17
+missing_primary_package,Missing Primary Package,tag,no,no,no,line,L31,72,0,72,72,0,72
+multiple_lenses,Multiple Lenses,tag,no,no,no,all,all,1439,0,1439,1439,0,1439
+multiple_lenses,Multiple Lenses,tag,no,no,no,folder_group,Updated,1439,0,1439,1439,0,1439
+multiple_lenses,Multiple Lenses,tag,no,no,no,folder_group,Library,0,0,0,0,0,0
+multiple_lenses,Multiple Lenses,tag,no,no,no,line,L24,337,0,337,337,0,337
+multiple_lenses,Multiple Lenses,tag,no,no,no,line,L25,278,0,278,278,0,278
+multiple_lenses,Multiple Lenses,tag,no,no,no,line,L26,672,0,672,672,0,672
+multiple_lenses,Multiple Lenses,tag,no,no,no,line,L27,53,0,53,53,0,53
+multiple_lenses,Multiple Lenses,tag,no,no,no,line,L31,99,0,99,99,0,99
+package_misalignment,Package Misalignment,tag,no,no,no,all,all,2,0,2,2,0,2
+package_misalignment,Package Misalignment,tag,no,no,no,folder_group,Updated,2,0,2,2,0,2
+package_misalignment,Package Misalignment,tag,no,no,no,folder_group,Library,0,0,0,0,0,0
+package_misalignment,Package Misalignment,tag,no,no,no,line,L24,2,0,2,2,0,2
+package_misalignment,Package Misalignment,tag,no,no,no,line,L25,0,0,0,0,0,0
+package_misalignment,Package Misalignment,tag,no,no,no,line,L26,0,0,0,0,0,0
+package_misalignment,Package Misalignment,tag,no,no,no,line,L27,0,0,0,0,0,0
+package_misalignment,Package Misalignment,tag,no,no,no,line,L31,0,0,0,0,0,0
+view_obstructed,View Obstructed,tag,no,no,no,all,all,24,0,24,24,0,24
+view_obstructed,View Obstructed,tag,no,no,no,folder_group,Updated,24,0,24,24,0,24
+view_obstructed,View Obstructed,tag,no,no,no,folder_group,Library,0,0,0,0,0,0
+view_obstructed,View Obstructed,tag,no,no,no,line,L24,19,0,19,19,0,19
+view_obstructed,View Obstructed,tag,no,no,no,line,L25,0,0,0,0,0,0
+view_obstructed,View Obstructed,tag,no,no,no,line,L26,0,0,0,0,0,0
+view_obstructed,View Obstructed,tag,no,no,no,line,L27,5,0,5,5,0,5
+view_obstructed,View Obstructed,tag,no,no,no,line,L31,0,0,0,0,0,0
+extraneous_polymer_micron_gate,Extraneous Polymer micron gate,gate,no,yes,no,all,all,33,0,33,33,0,33
+extraneous_polymer_micron_gate,Extraneous Polymer micron gate,gate,no,yes,no,folder_group,Updated,33,0,33,33,0,33
+extraneous_polymer_micron_gate,Extraneous Polymer micron gate,gate,no,yes,no,folder_group,Library,0,0,0,0,0,0
+extraneous_polymer_micron_gate,Extraneous Polymer micron gate,gate,no,yes,no,line,L24,26,0,26,26,0,26
+extraneous_polymer_micron_gate,Extraneous Polymer micron gate,gate,no,yes,no,line,L25,0,0,0,0,0,0
+extraneous_polymer_micron_gate,Extraneous Polymer micron gate,gate,no,yes,no,line,L26,4,0,4,4,0,4
+extraneous_polymer_micron_gate,Extraneous Polymer micron gate,gate,no,yes,no,line,L27,3,0,3,3,0,3
+extraneous_polymer_micron_gate,Extraneous Polymer micron gate,gate,no,yes,no,line,L31,0,0,0,0,0,0
+fiber_micron_gate,Fiber micron gate,gate,no,yes,no,all,all,136,0,136,136,0,136
+fiber_micron_gate,Fiber micron gate,gate,no,yes,no,folder_group,Updated,136,0,136,136,0,136
+fiber_micron_gate,Fiber micron gate,gate,no,yes,no,folder_group,Library,0,0,0,0,0,0
+fiber_micron_gate,Fiber micron gate,gate,no,yes,no,line,L24,77,0,77,77,0,77
+fiber_micron_gate,Fiber micron gate,gate,no,yes,no,line,L25,4,0,4,4,0,4
+fiber_micron_gate,Fiber micron gate,gate,no,yes,no,line,L26,42,0,42,42,0,42
+fiber_micron_gate,Fiber micron gate,gate,no,yes,no,line,L27,13,0,13,13,0,13
+fiber_micron_gate,Fiber micron gate,gate,no,yes,no,line,L31,0,0,0,0,0,0
+foreign_matter_micron_gate,Foreign Matter micron gate,gate,no,yes,no,all,all,171,0,171,171,0,171
+foreign_matter_micron_gate,Foreign Matter micron gate,gate,no,yes,no,folder_group,Updated,171,0,171,171,0,171
+foreign_matter_micron_gate,Foreign Matter micron gate,gate,no,yes,no,folder_group,Library,0,0,0,0,0,0
+foreign_matter_micron_gate,Foreign Matter micron gate,gate,no,yes,no,line,L24,95,0,95,95,0,95
+foreign_matter_micron_gate,Foreign Matter micron gate,gate,no,yes,no,line,L25,7,0,7,7,0,7
+foreign_matter_micron_gate,Foreign Matter micron gate,gate,no,yes,no,line,L26,36,0,36,36,0,36
+foreign_matter_micron_gate,Foreign Matter micron gate,gate,no,yes,no,line,L27,33,0,33,33,0,33
+foreign_matter_micron_gate,Foreign Matter micron gate,gate,no,yes,no,line,L31,0,0,0,0,0,0
+hema_micron_gate,HEMA micron gate,gate,no,yes,no,all,all,94,0,94,94,0,94
+hema_micron_gate,HEMA micron gate,gate,no,yes,no,folder_group,Updated,94,0,94,94,0,94
+hema_micron_gate,HEMA micron gate,gate,no,yes,no,folder_group,Library,0,0,0,0,0,0
+hema_micron_gate,HEMA micron gate,gate,no,yes,no,line,L24,93,0,93,93,0,93
+hema_micron_gate,HEMA micron gate,gate,no,yes,no,line,L25,0,0,0,0,0,0
+hema_micron_gate,HEMA micron gate,gate,no,yes,no,line,L26,1,0,1,1,0,1
+hema_micron_gate,HEMA micron gate,gate,no,yes,no,line,L27,0,0,0,0,0,0
+hema_micron_gate,HEMA micron gate,gate,no,yes,no,line,L31,0,0,0,0,0,0

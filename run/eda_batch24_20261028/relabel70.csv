@@ -1,0 +1,72 @@
+picture,line,removed_label,old_labels,new_labels,reason
+20241207_052457_L27_C12_9742.bmp,L27,Lens Off Center,Lens Off Center,Bubble; Bubble Cluster; Fiber; Fiber size flag; Low Dose,Relabelled Lens Off Center to Low Dose
+20241211_180816_L25_C14_9997.bmp,L25,Low Dose,Lens Off Center; Low Dose,Bubble; Fiber; Fiber size flag; Lens Off Center,Relabelled Low Dose to Lens Off Center
+20241112_154940_L25_C8_9950.bmp,L25,Fiber,Fiber,Bubble; Extraneous Polymer; Extraneous Polymer size flag; Foreign Matter; Foreign Matter size flag,Fiber / Extraneous Polymer naming (same objects called Extraneous Polymer)
+20241109_165254_L24_C8_9169_0.9993_0.3759.bmp,L24,Extraneous Polymer,Extraneous Polymer,Bubble; Bubble Cluster; Fiber; Fiber size flag,Fiber / Extraneous Polymer naming (same objects called Fiber)
+20241212_104121_L25_C15_9969.bmp,L25,Multiple Lens,Multiple Lens,Bubble; Extraneous Polymer; Extraneous Polymer size flag; Wet Package,Dropped; the newer annotation carries no replacement condition
+20241205_184840_L25_C3_9207.bmp,L25,Dirty Strobe,Dirty Strobe,Bubble; Bubble Cluster; Dirty Camera,Relabelled Dirty Strobe to Dirty Camera
+20241114_192302_L24_C8_9997_0.9997.bmp,L24,Multiple Lens,Multiple Lens,Bubble; Bubble Cluster; Fiber; Fiber size flag,Dropped; the newer annotation carries no replacement condition
+20241212_092914_L24_C11_9999_0.9942.bmp,L24,Multiple Lens,Multiple Lens,Bubble; Extraneous Polymer; Extraneous Polymer size flag; Foreign Matter; Foreign Matter size flag,Dropped; the newer annotation carries no replacement condition
+20241208_203747_L25_C12_9997.bmp,L25,Multiple Lens,Multiple Lens,Bubble; Bubble Cluster; Fiber; Fiber size flag; HEMA Obstruction; HEMA size flag; Low Dose,Dropped; the newer annotation carries no replacement condition
+20241109_220006_L24_C15_9070_0.9988_0.6889.bmp,L24,Extraneous Polymer,Extraneous Polymer,Bubble; Bubble Cluster,Dropped; the newer annotation labels only the objects
+20241111_223701_L24_PalletGHR1112033634_Cavity14_B0178JW_Fail7_Score(0.997364)_1.0000_0.9574.bmp,L24,Extraneous Polymer,Extraneous Polymer,Bubble; Bubble Cluster; Dirty Camera; Fiber; Fiber size flag,Fiber / Extraneous Polymer naming (same objects called Fiber)
+20241112_193301_L25_PalletGHR1112222144_Cavity6_B017962_Fail7_Score(0.9865564)_0.9999_0.9962.bmp,L25,Extraneous Polymer,Extraneous Polymer,Bubble; Bubble Cluster; Fiber; Fiber size flag; Foreign Matter,Fiber / Extraneous Polymer naming (same objects called Fiber)
+20241116_235457_L24_C2_9905_0.5174.bmp,L24,Multiple Lens,Multiple Lens,Bubble; Bubble Cluster,Dropped; the newer annotation carries no replacement condition
+20241110_061426_L24_C10_9724.bmp,L24,Bubble Irregular,Bubble Irregular,Bubble; Bubble Cluster; Foreign Matter; Wet Package,Folded into Bubble (Bubble Irregular is written as Bubble)
+20241119_112140_L27_C2_9317.bmp,L27,Lens Off Center,Lens Off Center,Bubble; Low Dose,Relabelled Lens Off Center to Low Dose
+20241117_134544_L27_C14_9486.bmp,L27,Bubble Irregular,Bubble Irregular,Bubble; Bubble Cluster; Dirty Strobe; Fiber; Fiber size flag; Lens Off Center,Folded into Bubble (Bubble Irregular is written as Bubble)
+20241205_183936_L25_C15_9395.bmp,L25,Dirty Strobe,Dirty Strobe,Bubble; Dirty Camera; Foreign Matter,Relabelled Dirty Strobe to Dirty Camera
+20241207_063428_L25_C5_9904.bmp,L25,Multiple Lens,Multiple Lens,Bubble,Dropped; the newer annotation carries no replacement condition
+20241109_174136_L24_C2_9870.bmp,L24,Low Dose,Lens Off Center; Low Dose,Bubble; Fiber; Fiber size flag; Foreign Matter; Lens Off Center,Relabelled Low Dose to Lens Off Center
+20241119_143922_L27_C14_9307.bmp,L27,Lens Off Center,Lens Off Center; Low Dose,Bubble; Bubble Cluster; Foreign Matter; Foreign Matter size flag; Low Dose,Relabelled Lens Off Center to Low Dose
+20241116_233809_L24_C9_9925_0.9600.bmp,L24,Multiple Lens,Multiple Lens,Bubble; Foreign Matter; Foreign Matter size flag,Dropped; the newer annotation carries no replacement condition
+20241205_183847_L25_C12_9843.bmp,L25,Dirty Strobe,Dirty Strobe,Bubble; Bubble Cluster; Dirty Camera; Foreign Matter; Foreign Matter size flag,Relabelled Dirty Strobe to Dirty Camera
+20241205_185216_L25_C9_9916.bmp,L25,Dirty Strobe,Dirty Strobe,Bubble; Bubble Cluster; Dirty Camera; Foreign Matter,Relabelled Dirty Strobe to Dirty Camera
+20241209_080110_L24_C7_1_0.9998.bmp,L24,Multiple Lens,Multiple Lens,Bubble; Bubble Cluster; Wet Package,Dropped; the newer annotation carries no replacement condition
+20241205_183734_L25_C8_9045.bmp,L25,Dirty Strobe,Dirty Strobe,Bubble; Bubble Cluster; Dirty Camera,Relabelled Dirty Strobe to Dirty Camera
+20241205_200209_L25_C6_9916.bmp,L25,Multiple Lens,Multiple Lens,Bubble; Bubble Cluster; Dirty Camera; Lens Off Center; Missing Primary Package; Wet Package,Dropped; the newer annotation carries no replacement condition
+20241119_015300_L27_C6_9311.bmp,L27,Bubble Irregular,Bubble Irregular,Bubble,Folded into Bubble (Bubble Irregular is written as Bubble)
+20241111_141940_L24_C9_9999.bmp,L24,HEMA Fragment,HEMA Fragment,Bubble; Bubble Cluster; HEMA Obstruction; HEMA size flag,HEMA naming (same boxes; HEMA Fragment is written as HEMA Obstruction)
+20241111_203015_L24_C11_9969_0.9966.bmp,L24,Low Dose,HEMA Obstruction; Low Dose,Bubble; HEMA Obstruction; HEMA size flag,Dropped; the newer annotation labels only the objects
+20241205_190636_L25_C5_9890.bmp,L25,Dirty Strobe,Dirty Strobe,Bubble; Dirty Camera,Relabelled Dirty Strobe to Dirty Camera
+20241110_025639_L25_C8_9981.bmp,L25,Missing Primary Package,Missing Primary Package,missing_lens,Dropped; the newer annotation labels only the objects
+20241119_134906_L27_C14_9239.bmp,L27,Lens Off Center,Lens Off Center; Low Dose,Bubble; Low Dose,Relabelled Lens Off Center to Low Dose
+20241205_184241_L25_C4_9274.bmp,L25,Dirty Strobe,Dirty Strobe,Bubble; Bubble Cluster; Dirty Camera; Foreign Matter,Relabelled Dirty Strobe to Dirty Camera
+20241119_112105_L27_C8_9826.bmp,L27,Lens Off Center,Lens Off Center,Bubble; Bubble Cluster; Low Dose,Relabelled Lens Off Center to Low Dose
+20241119_143531_L27_C15_9134.bmp,L27,Lens Off Center,Lens Off Center,Bubble; Bubble Cluster; Foreign Matter; Low Dose,Relabelled Lens Off Center to Low Dose
+20241110_080727_L26_C12_9730.bmp,L26,Lens Off Center,Lens Off Center; Low Dose,Bubble; Foreign Matter; Foreign Matter size flag; Low Dose,Relabelled Lens Off Center to Low Dose
+20241205_184523_L25_C15_9570.bmp,L25,Dirty Strobe,Dirty Strobe,Bubble; Dirty Camera,Relabelled Dirty Strobe to Dirty Camera
+20241111_040338_L27_PalletGHT1111055525_Cavity2_B01796Q_Fail7_Score(0.9983938)_0.5186_0.9525.bmp,L27,Extraneous Polymer,Extraneous Polymer,Bubble; Bubble Cluster; Dirty Camera; Lens Off Center; Multiple Lens,Dropped; the newer annotation labels only the objects
+20241210_035053_L24_C14_9938.bmp,L24,Extraneous Polymer,Extraneous Polymer,Bubble; Fiber; Fiber size flag,Fiber / Extraneous Polymer naming (same objects called Fiber)
+20241211_212454_L25_C7_9716.bmp,L25,Multiple Lens,Multiple Lens,Bubble; Bubble Cluster; Low Dose; Wet Package,Dropped; the newer annotation carries no replacement condition
+20241110_181320_L24_C5_9123.bmp,L24,Bubble Irregular,Bubble Irregular,Bubble; Bubble Cluster; Wet Package,Folded into Bubble (Bubble Irregular is written as Bubble)
+20241117_211413_L27_C7_9880.bmp,L27,Bubble Scatter,Bubble Scatter,Bubble; Bubble Cluster,Dropped; the newer annotation labels only the objects
+20241119_142602_L27_C11_9962.bmp,L27,Lens Off Center,Lens Off Center,Bubble; Low Dose,Relabelled Lens Off Center to Low Dose
+20241114_160708_L24_C12_9825_0.9997.bmp,L24,Multiple Lens,Multiple Lens,Bubble; Foreign Matter; HEMA Obstruction; HEMA size flag; Wet Package,Dropped; the newer annotation carries no replacement condition
+20241120_091004_L24_C13_9999_0.9986.bmp,L24,Multiple Lens,Multiple Lens,Bubble; Bubble Cluster; Fiber; Fiber size flag; Foreign Matter,Dropped; the newer annotation carries no replacement condition
+20241205_183636_L25_C12_9010.bmp,L25,Dirty Strobe,Dirty Strobe,Bubble; Bubble Cluster; Dirty Camera,Relabelled Dirty Strobe to Dirty Camera
+20241207_111854_L27_C1_9862.bmp,L27,Lens Off Center,Lens Off Center,Bubble; Bubble Cluster; Foreign Matter; Foreign Matter size flag; Low Dose,Relabelled Lens Off Center to Low Dose
+20241115_023042_L24_C2_9999_0.7977.bmp,L24,Lens Off Center,Lens Off Center,Bubble; Bubble Cluster; Fiber; Fiber size flag; Foreign Matter,Dropped; the newer annotation labels only the objects
+20241112_034424_L24_PalletGHA1112084359_Cavity15_B0178JV_Fail7_Score(0.9999998)_0.9805_0.9821.bmp,L24,Extraneous Polymer,Extraneous Polymer,Bubble; Bubble Cluster; Fiber; Fiber size flag; Foreign Matter; Foreign Matter size flag; Wet Package,Fiber / Extraneous Polymer naming (same objects called Fiber)
+20241119_022535_L27_C2_9636.bmp,L27,Bubble Irregular,Bubble Irregular,Bubble,Folded into Bubble (Bubble Irregular is written as Bubble)
+20241117_130031_L27_C3_9380.bmp,L27,Bubble Scatter,Bubble Scatter,Bubble; Bubble Cluster,Dropped; the newer annotation labels only the objects
+20241205_190501_L25_C1_9448.bmp,L25,Dirty Strobe,Dirty Strobe,Bubble; Bubble Cluster; Dirty Camera,Relabelled Dirty Strobe to Dirty Camera
+20241114_140251_L24_C1_9455_0.9989.bmp,L24,Multiple Lens,Multiple Lens,Bubble; Bubble Cluster; Foreign Matter; Low Dose; Wet Package,Dropped; the newer annotation carries no replacement condition
+20241119_112000_L27_C7_9939.bmp,L27,Lens Off Center,Lens Off Center,Bubble; Bubble Cluster; Low Dose,Relabelled Lens Off Center to Low Dose
+20241113_201602_L26_C15_9852.bmp,L26,Bubble Irregular,Bubble Irregular,Bubble; Wet Package,Folded into Bubble (Bubble Irregular is written as Bubble)
+20241111_173010_L24_C11_9986.bmp,L24,Bubble Irregular,Bubble Irregular,Bubble; Fiber; Fiber size flag,Folded into Bubble (Bubble Irregular is written as Bubble)
+20241110_093715_L24_PalletGHE1110143641_Cavity8_B0178JK_Fail7_Score(0.9840244)_1.0000_0.9782.bmp,L24,Extraneous Polymer,Extraneous Polymer,Bubble; Bubble Cluster; Fiber; Fiber size flag,Fiber / Extraneous Polymer naming (same objects called Fiber)
+20241119_023342_L27_C14_9319_0.9741.bmp,L27,Lens Off Center,Lens Off Center,Bubble; Low Dose,Relabelled Lens Off Center to Low Dose
+20241114_135649_L24_C14_9992_0.9970.bmp,L24,Multiple Lens,Multiple Lens,Bubble; Bubble Cluster; Wet Package,Dropped; the newer annotation carries no replacement condition
+20241117_233059_L27_C12_9121.bmp,L27,Bubble Irregular,Bubble Irregular,Bubble; Bubble Cluster,Folded into Bubble (Bubble Irregular is written as Bubble)
+20241113_203303_L27_PalletGHN1114004945_Cavity9_B01796W_Fail6_Score(0.9787874)_0.9850_0.9925.bmp,L27,Extraneous Polymer,Extraneous Polymer,Bubble; Bubble Cluster; Dirty Camera; Foreign Matter; Wet Package,Dropped; the newer annotation labels only the objects
+20241110_193540_L25_C3_9725.bmp,L25,Bubble Irregular,Bubble Irregular,Bubble; Bubble Cluster; Foreign Matter; Foreign Matter size flag,Folded into Bubble (Bubble Irregular is written as Bubble)
+20241208_175805_L25_C5_1.bmp,L25,Cavity Off Center,Cavity Off Center,Bubble; Bubble Cluster; Foreign Matter,Dropped; the newer annotation labels only the objects
+20241205_185838_L25_C4_9202.bmp,L25,Dirty Strobe,Dirty Strobe,Bubble; Dirty Camera; Foreign Matter,Relabelled Dirty Strobe to Dirty Camera
+20241113_131628_L26_C1_9329.bmp,L26,Bubble Irregular,Bubble Irregular,Bubble; Bubble Cluster,Folded into Bubble (Bubble Irregular is written as Bubble)
+20241113_060644_L24_C10_9995_0.9998.bmp,L24,Multiple Lens,Multiple Lens,Bubble; Foreign Matter; Wet Package,Dropped; the newer annotation carries no replacement condition
+20241114_160707_L24_C1_9765_0.9800.bmp,L24,Multiple Lens,Multiple Lens,Bubble; HEMA Obstruction; HEMA size flag; Wet Package,Dropped; the newer annotation carries no replacement condition
+20241115_061555_L24_PalletGHC1115111452_Cavity15_B01795M_Fail7_Score(0.9963451)_1.0000_0.9604.bmp,L24,Extraneous Polymer,Extraneous Polymer,Bubble; Fiber; Fiber size flag,Fiber / Extraneous Polymer naming (same objects called Fiber)
+20241207_005256_L24_C14_9876_1.0000_0.7995.bmp,L24,Extraneous Polymer,Extraneous Polymer,Bubble; Bubble Cluster; Fiber; Fiber size flag,Fiber / Extraneous Polymer naming (same objects called Fiber)
+20241112_144125_L25_PalletGHK1112173029_Cavity9_B01795X_Fail7_Score(0.9848871).bmp,L25,Fiber,Fiber,Bubble; Bubble Cluster; Extraneous Polymer; Extraneous Polymer size flag,Fiber / Extraneous Polymer naming (same objects called Extraneous Polymer)
+20241112_153448_L27_C11_1_0.2771.bmp,L27,Missing Primary Package,Missing Primary Package,(none - listed with no marks),Dropped; the picture is listed in the newer file with no marks (needs the annotation owner)

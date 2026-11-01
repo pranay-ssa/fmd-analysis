@@ -1,0 +1,23 @@
+kind,name,old_pictures,merged_pictures,delta_pictures,old_flagged,merged_flagged,old_shapes,merged_shapes
+box,Bubble,862,2171,1309,0,0,11052,28741
+box,Bubble Cluster,427,1132,705,0,0,1183,3419
+box,Bubble On 123,13,13,0,0,0,79,79
+box,Bubble On Edge,14,14,0,0,0,90,90
+box,Extraneous Polymer,144,175,31,34,135,150,188
+box,Fiber,179,405,226,137,362,249,753
+box,Foreign Matter,326,834,508,166,454,620,2592
+box,HEMA,101,157,56,94,151,103,164
+box,Wet Package,146,314,168,0,0,656,1342
+tag,Bubble Scatter,6,5,-1,0,0,6,5
+tag,Cavity Off Center,184,185,1,0,0,184,185
+tag,Dirty Camera,329,573,244,0,0,329,573
+tag,Dirty Strobe,43,33,-10,0,0,43,33
+tag,Folded Lens,237,333,96,0,0,237,333
+tag,HEMA Obstruction,86,36,-50,0,0,86,36
+tag,Lens Off Center,957,1201,244,0,0,957,1202
+tag,Low Dose,215,677,462,0,0,215,677
+tag,Missing Primary Package,1426,1428,2,0,0,1551,1428
+tag,Multiple Lens,1439,1426,-13,0,0,1439,1427
+tag,No Lens,325,326,1,0,0,325,326
+tag,Package Misalignment,2,33,31,0,0,2,33
+tag,View Obstructed,24,63,39,0,0,24,63

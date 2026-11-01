@@ -1,0 +1,350 @@
+{
+  "ticket": "010-label-resolution",
+  "date": "2026-10-15",
+  "priority_order": {
+    "1": [
+      "annotations_4521940.xml",
+      "annotations_4521941.xml",
+      "annotations_4521942.xml",
+      "annotations_4521943.xml",
+      "annotations_4521944.xml",
+      "annotations_4521945.xml",
+      "annotations_4521946.xml"
+    ],
+    "2": [
+      "Updated Annotations 20260922.xml"
+    ],
+    "3": [
+      "annotations.xml"
+    ]
+  },
+  "files": {
+    "annotations_4521940.xml": {
+      "group": "production_20260925",
+      "priority_level": 1,
+      "images": 150,
+      "shapes": 1844,
+      "distinct_pictures_mentioned": 149,
+      "sha256": "2e99f5ad714c93b515a77c2b4368f9c65178a61506db7c664e64f39692dbfa52"
+    },
+    "annotations_4521941.xml": {
+      "group": "production_20260925",
+      "priority_level": 1,
+      "images": 150,
+      "shapes": 2174,
+      "distinct_pictures_mentioned": 150,
+      "sha256": "e1af4ac9c948bdc76f391ab44a6c4a8385fc231ce9157fa77e3db5e464b380fb"
+    },
+    "annotations_4521942.xml": {
+      "group": "production_20260925",
+      "priority_level": 1,
+      "images": 147,
+      "shapes": 2204,
+      "distinct_pictures_mentioned": 147,
+      "sha256": "75223ec213422f7d29cd42a10c0fa145aa21bafc6ec8a8c2a489f2c95039581c"
+    },
+    "annotations_4521943.xml": {
+      "group": "production_20260925",
+      "priority_level": 1,
+      "images": 150,
+      "shapes": 2668,
+      "distinct_pictures_mentioned": 150,
+      "sha256": "19b647778c77487df842ebc14210072de10f276217773d14a8907b68850a16ff"
+    },
+    "annotations_4521944.xml": {
+      "group": "production_20260925",
+      "priority_level": 1,
+      "images": 150,
+      "shapes": 2040,
+      "distinct_pictures_mentioned": 150,
+      "sha256": "8e1caf892ddfaaf04977b97b7720042d4c544fdcef47457f2e22eb54a0a6f791"
+    },
+    "annotations_4521945.xml": {
+      "group": "production_20260925",
+      "priority_level": 1,
+      "images": 150,
+      "shapes": 1482,
+      "distinct_pictures_mentioned": 150,
+      "sha256": "b878ea4463d9e3033a89263dcc6b6d724ea3a50fad2b0b1f1c32fdb8b3a94659"
+    },
+    "annotations_4521946.xml": {
+      "group": "production_20260925",
+      "priority_level": 1,
+      "images": 150,
+      "shapes": 1868,
+      "distinct_pictures_mentioned": 150,
+      "sha256": "4c7a4e7b8368cba41b9f880eee776a7ac54f3826df6b74c54fb166f4e9d47cdf"
+    },
+    "Updated Annotations 20260922.xml": {
+      "group": "updated_20260922",
+      "priority_level": 2,
+      "images": 6097,
+      "shapes": 5113,
+      "distinct_pictures_mentioned": 6096,
+      "sha256": "f08a9f34ad13aaec7e115df59c0589b5ecdcb910807785670062c14e15d662c1"
+    },
+    "annotations.xml": {
+      "group": "project2",
+      "priority_level": 3,
+      "images": 435,
+      "shapes": 2020,
+      "distinct_pictures_mentioned": 434,
+      "sha256": "e9990876e2f4131968f39fd53f408d41517a6b13c796d0bc3db6e13f42e0085f"
+    }
+  },
+  "win_counts": {
+    "by_priority_level": {
+      "1": 1046,
+      "2": 5387,
+      "3": 257
+    },
+    "by_source_file": {
+      "Updated Annotations 20260922.xml": 5387,
+      "annotations.xml": 257,
+      "annotations_4521940.xml": 149,
+      "annotations_4521941.xml": 150,
+      "annotations_4521942.xml": 147,
+      "annotations_4521943.xml": 150,
+      "annotations_4521944.xml": 150,
+      "annotations_4521945.xml": 150,
+      "annotations_4521946.xml": 150
+    },
+    "resolved_pictures_total": 6690,
+    "per_source_sum": 6690
+  },
+  "resolved_shape_count": 20014,
+  "per_canonical_defect": {
+    "bubble": {
+      "shape_count": 10869,
+      "picture_count": 819
+    },
+    "bubble_cluster": {
+      "shape_count": 1182,
+      "picture_count": 428
+    },
+    "bubble_irregular": {
+      "shape_count": 169,
+      "picture_count": 147
+    },
+    "bubble_on_123": {
+      "shape_count": 79,
+      "picture_count": 13
+    },
+    "bubble_on_edge": {
+      "shape_count": 90,
+      "picture_count": 14
+    },
+    "bubble_scatter": {
+      "shape_count": 6,
+      "picture_count": 6
+    },
+    "cavity_off_center": {
+      "shape_count": 184,
+      "picture_count": 184
+    },
+    "dirty_camera": {
+      "shape_count": 329,
+      "picture_count": 329
+    },
+    "dirty_strobe": {
+      "shape_count": 43,
+      "picture_count": 43
+    },
+    "extraneous_polymer": {
+      "shape_count": 150,
+      "picture_count": 144
+    },
+    "extraneous_polymer_micron_gate": {
+      "shape_count": 33,
+      "picture_count": 33
+    },
+    "fiber": {
+      "shape_count": 245,
+      "picture_count": 178
+    },
+    "fiber_micron_gate": {
+      "shape_count": 136,
+      "picture_count": 136
+    },
+    "folded_lens": {
+      "shape_count": 237,
+      "picture_count": 237
+    },
+    "foreign_matter": {
+      "shape_count": 626,
+      "picture_count": 331
+    },
+    "foreign_matter_micron_gate": {
+      "shape_count": 171,
+      "picture_count": 171
+    },
+    "hema_fragment": {
+      "shape_count": 8,
+      "picture_count": 7
+    },
+    "hema_micron_gate": {
+      "shape_count": 94,
+      "picture_count": 94
+    },
+    "hema_obstruction": {
+      "shape_count": 181,
+      "picture_count": 180
+    },
+    "lens_off_center": {
+      "shape_count": 957,
+      "picture_count": 957
+    },
+    "low_dose": {
+      "shape_count": 215,
+      "picture_count": 215
+    },
+    "missing_lens": {
+      "shape_count": 325,
+      "picture_count": 325
+    },
+    "missing_primary_package": {
+      "shape_count": 1551,
+      "picture_count": 1426
+    },
+    "multiple_lenses": {
+      "shape_count": 1439,
+      "picture_count": 1439
+    },
+    "package_misalignment": {
+      "shape_count": 2,
+      "picture_count": 2
+    },
+    "stretched_bubble": {
+      "shape_count": 7,
+      "picture_count": 6
+    },
+    "view_obstructed": {
+      "shape_count": 24,
+      "picture_count": 24
+    },
+    "wet_package": {
+      "shape_count": 662,
+      "picture_count": 146
+    }
+  },
+  "disagreement": {
+    "rows": 886,
+    "by_lower_file": {
+      "Updated Annotations 20260922.xml": {
+        "mentions": 709,
+        "with_labels": 594
+      },
+      "annotations.xml": {
+        "mentions": 177,
+        "with_labels": 177
+      }
+    },
+    "sep22_mentions": 709,
+    "sep22_with_labels": 594,
+    "old_mentions": 177,
+    "old_with_labels": 177
+  },
+  "unresolved_annotation_images": {},
+  "renamed_aliases": {
+    "basenames_in_more_than_one_name_for_one_content": 187,
+    "basenames_only_visible_via_the_manifest": 187,
+    "examples": [
+      "20241101_235953_L24_PalletGHT1102042028_Cavity2_B0177C5_Fail7_Score(0.98931).bmp",
+      "20241102_000223_L26_PalletGHR1102041417_Cavity10_B0177L0_Fail7_Score(1).bmp",
+      "20241102_001617_L26_PalletGHE1102042811_Cavity1_B0177L0_Fail6_Score(0.9735714).bmp",
+      "20241102_004906_L24_C5_9471.bmp",
+      "20241102_032154_L24_PalletGHM1102074133_Cavity9_B0177C5_Fail7_Score(1).bmp",
+      "20241102_054634_L26_PalletGHA1102095827_Cavity11_B0177KZ_Fail7_Score(0.999998).bmp",
+      "20241102_054634_L26_PalletGHA1102095827_Cavity12_B0177KZ_Fail7_Score(1).bmp",
+      "20241102_055824_L26_PalletGHQ1102100949_Cavity15_B0177KZ_Fail7_Score(0.9998691).bmp",
+      "20241102_063234_L26_PalletGHG1102104429_Cavity9_B0177KZ_Fail7_Score(0.990611).bmp",
+      "20241102_063451_L26_PalletGHQ1102104641_Cavity11_B0177KZ_Fail7_Score(0.9857765).bmp"
+    ]
+  },
+  "picture_table_pictures": 10614,
+  "unannotated_pictures": 3924,
+  "outputs": {
+    "resolved_labels.csv": {
+      "rows": 20014,
+      "md5": "605aaaf75f450a0e8d5d4e94a88e58ee"
+    },
+    "disagreement.csv": {
+      "rows": 886,
+      "md5": "bbc50968126211979d30d6a13fbf3479"
+    }
+  },
+  "checks": [
+    {
+      "name": "every_basename_maps_to_one_md5",
+      "ok": true,
+      "note": "0 basenames collide"
+    },
+    {
+      "name": "manifest_and_picture_table_agree_on_md5s",
+      "ok": true,
+      "note": "manifest 10614, table 10614, symdiff 0"
+    },
+    {
+      "name": "code_to_canonical_injective__production_20260925",
+      "ok": true,
+      "note": "duplicate codes: []"
+    },
+    {
+      "name": "code_to_canonical_injective__updated_20260922",
+      "ok": true,
+      "note": "duplicate codes: []"
+    },
+    {
+      "name": "code_to_canonical_injective__project2",
+      "ok": true,
+      "note": "duplicate codes: []"
+    },
+    {
+      "name": "every_picture_has_at_least_one_mention",
+      "ok": true,
+      "note": "6690 pictures"
+    },
+    {
+      "name": "no_picture_has_two_winning_files",
+      "ok": true,
+      "note": "0 pictures with two winning files"
+    },
+    {
+      "name": "per_source_wins_sum_to_resolved_total",
+      "ok": true,
+      "note": "6690 vs 6690"
+    },
+    {
+      "name": "every_resolved_picture_is_in_picture_table",
+      "ok": true,
+      "note": "0 missing"
+    },
+    {
+      "name": "every_surviving_shape_has_a_canonical_id",
+      "ok": true,
+      "note": "0 un-mapped"
+    },
+    {
+      "name": "resolved_rows_single_source_per_picture",
+      "ok": true,
+      "note": "0 pictures fed by two files"
+    },
+    {
+      "name": "no_lower_priority_shape_survives",
+      "ok": true,
+      "note": "0 leaked rows"
+    },
+    {
+      "name": "annotations_resolve_completely",
+      "ok": true,
+      "note": "unresolved by file: {}"
+    },
+    {
+      "name": "shape_kinds_are_box_or_tag",
+      "ok": true,
+      "note": "0 bad kinds"
+    }
+  ],
+  "check_count": 14,
+  "failed_count": 0
+}

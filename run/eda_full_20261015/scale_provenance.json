@@ -1,0 +1,99 @@
+{
+  "status": "done",
+  "artifacts": [
+    "docs/reference/scale_provenance_20261015.md",
+    "run/eda_full_20261015/scale_provenance.json"
+  ],
+  "blockers": "None. The sweep is complete and read-only. No image was read and no measurement was run. The provenance of 14,200 microns resolves to an assumed product-spec diameter stated in one prior artifact, not to any received document; that artifact's own basis (a 14.0 to 14.3 mm spec range) is uncited, so a written client nominal is still owed before any absolute scale claim can be made.",
+  "fourteen_thousand_two_hundred_origin": "FOUND as an assumption, not a manufacturer spec and not a measurement. It is the hardcoded constant NOMINAL_LENS_DIAMETER_UM = 14_200.0 in /data/FMD_Data_26082026/measure_scale.py line 9, and 14200.0 in eda_size_um.py line 24. The only stated rationale is eda_methodology.html section 21.3 line 393: 'NOMINAL_LENS_DIAMETER_UM = 14 200      (soft daily contact lens; spec range 14.0 to 14.3 mm)'. So the prior EDA records 14,200 as the nominal diameter of a soft daily contact lens whose spec range is claimed to be 14.0 to 14.3 mm. That range is our own assertion with no source document (see lens_spec_origin). No received document states how 14,200 was arrived at; the recorded chain is an assumed 14.2 mm product diameter divided by a measured lens rim of 778 or 783.8 px.",
+  "lens_spec_origin": "FOUND BUT INCONSISTENT. The 14.0 to 14.3 mm range is written only in our own generated artifacts: eda_methodology.html section 21.3 line 393 ('spec range 14.0 to 14.3 mm'), build_size_dashboard.py lines 120 to 121 ('Divide the nominal soft-lens diameter (14.2 mm, spec range 14.0 to 14.3) by that.'), and eda_defect_size_um.html lines 86 to 87 (same prose). It is in no received document, and it is not reflected in the current record: docs/reference/received_docs_nominals.md states the lens diameter 'is written in no received document present here' and that 14,200 'is our own figure'. The prior EDA presents the range as a known product spec and cites no source for it, and it folds the range into the stated 6 percent uncertainty. The user's guess is correct: its only home is the earlier experiment.",
+  "outcomes": {
+    "14200_microns_nominal_lens_diameter": {
+      "outcome": "a_found",
+      "evidence": "measure_scale.py line 9: 'NOMINAL_LENS_DIAMETER_UM = 14_200.0'. eda_size_um.py line 24: 'NOMINAL_LENS_DIAM_UM = 14200.0'. eda_methodology.html section 21.3 line 393: 'NOMINAL_LENS_DIAMETER_UM = 14 200      (soft daily contact lens; spec range 14.0 to 14.3 mm)'. What it says: a hardcoded constant with a stated but uncited product-spec rationale."
+    },
+    "18_1165_microns_per_pixel": {
+      "outcome": "a_found",
+      "evidence": "scale_estimate.json: 'lens_diam_px_trimmed_mean': 783.8 and 'um_per_px': 18.1165. measure_scale.py line 63: 'um_per_px = NOMINAL_LENS_DIAMETER_UM / lens_px' (14,200 / 783.8 = 18.1165). eda_methodology.html section 21.2 line 382 records detector B as '783.8 px (sigma 42, IQR 764 to 804)'. Matches the current record exactly."
+    },
+    "18_25_microns_per_pixel": {
+      "outcome": "a_found",
+      "evidence": "eda_size_um.py lines 22 to 24: 'UM_PER_PX = 18.25', 'LENS_DIAM_PX = 778.0       # measured (two methods: 774 / 786)', 'NOMINAL_LENS_DIAM_UM = 14200.0'. eda_methodology.html section 21.3 line 394: 'UM_PER_PX  =  14 200 / 778   \u2248  18.25 \u00b5m / px'. eda_size_um.json lines 3 and 6: 'um_per_px': 18.25, 'lens_diam_px_measured': 778.0. Arithmetic origin: 14,200 / 778 = 18.2519. The teammate's 778 px note is correct."
+    },
+    "lens_spec_14_0_to_14_3_mm": {
+      "outcome": "c_found_but_inconsistent",
+      "evidence": "eda_methodology.html section 21.3 line 393: '(soft daily contact lens; spec range 14.0 to 14.3 mm)'. build_size_dashboard.py lines 120 to 121: 'Divide the nominal soft-lens diameter (14.2 mm, spec range 14.0 to 14.3) by that.'. eda_defect_size_um.html lines 86 to 87: same. Contradiction: presented as a product spec but cited nowhere, and our current record (docs/reference/received_docs_nominals.md) says the lens diameter is in no received document and 14,200 is our own figure."
+    }
+  },
+  "physical_dimensions_found": [
+    "Nominal lens diameter: 14,200 microns (14.2 mm) - measure_scale.py line 9; eda_size_um.py line 24; eda_methodology.html section 21.3",
+    "Lens spec range: 14.0 to 14.3 mm - eda_methodology.html section 21.3 line 393; build_size_dashboard.py lines 120 to 121; eda_defect_size_um.html lines 86 to 87",
+    "Lens edge measured trimmed mean: 783.8 pixels - scale_estimate.json line 4; eda_methodology.html section 21.2 line 382",
+    "Lens edge median: 786.0 pixels - scale_estimate.json line 5",
+    "Lens edge standard deviation: 41.6 pixels - scale_estimate.json line 6",
+    "Lens edge interquartile range: 764 to 804 pixels - scale_estimate.json line 7",
+    "Lens edge adopted for the um EDA: 778.0 pixels - eda_size_um.py line 23; eda_size_um.json line 6",
+    "Two detector readings: 774 and 786 pixels - eda_size_um.py line 23; eda_defect_size_um.html line 86",
+    "Gradient cross-check: 772.5 pixels (sigma 30, p10 to p90 730 to 810) - eda_methodology.html section 21.2 line 382",
+    "Cavity disc diameter: about 896 pixels (sigma about 13) - eda_methodology.html section 21.2 line 375",
+    "Field of view: 44.7 x 37.4 mm - eda_size_um.json calibration.fov_mm; eda_methodology.html section 21.3 line 396",
+    "Image frame: 2448 x 2048 pixels - eda_report.md line 25; eda_methodology.html section 21.3",
+    "Scale: 18.25 microns per pixel - eda_size_um.py line 22; eda_size_um.json line 3",
+    "Scale: 0.01825 mm per pixel - eda_size_um.json line 4",
+    "Scale: 54.79 pixels per mm - eda_size_um.json line 5",
+    "Scale: 18.1165 microns per pixel - scale_estimate.json line 13",
+    "Defect size bands: under 300; 300 to 500; 500 to 647; 647 and up microns - eda_size_um.py lines 25 to 27",
+    "Band edges in pixels on the major axis: 16.4 / 27.4 / 35.5 pixels - eda_size_um.json calibration.band_edges_px_major; eda_defect_size_um.html line 82",
+    "ABSENT and explicitly stated absent: package size, cavity size in microns, pixel pitch, working distance, magnification - eda_methodology.html section 21.1"
+  ],
+  "files_examined": {
+    "/data/FMD_Data_26082026/measure_scale.py": "INFORMATIVE. Source of 18.1165: hardcodes 14_200.0 and divides by the 783.8 px trimmed mean. Samples 200 random *Pass1* frames from 20260826_T24_Production_Sample/sample folder.",
+    "/data/FMD_Data_26082026/scale_estimate.json": "INFORMATIVE. Holds um_per_px 18.1165, lens_diam_px_trimmed_mean 783.8, median 786.0, std 41.6, IQR [764,804].",
+    "/data/FMD_Data_26082026/eda_size_um.py": "INFORMATIVE, key. Lines 22 to 24 hold UM_PER_PX 18.25, LENS_DIAM_PX 778.0 (note: two methods 774/786), NOMINAL_LENS_DIAM_UM 14200.0, SCALE_UNCERTAINTY_PCT 6.0. Origin of 18.25 and of the 778 px note.",
+    "/data/FMD_Data_26082026/eda_size_um.json": "INFORMATIVE. calibration.um_per_px 18.25, lens_diam_px_measured 778.0, nominal_lens_diameter_um 14200.0, fov_mm [44.7,37.4], band_edges_px_major [16.4,27.4,35.5]. Runs over 434 annotated images, 2,020 boxes.",
+    "/data/FMD_Data_26082026/eda_methodology.html": "INFORMATIVE, key. Section 21 states the whole scale method; line 393 gives the 14,200 rationale and the 14.0 to 14.3 mm spec range; line 394 gives UM_PER_PX = 14 200 / 778 = 18.25; section 21.1 states no calibration datum exists.",
+    "/data/FMD_Data_26082026/eda_defect_size_um.html": "INFORMATIVE. Rendered from eda_size_um.json; repeats 18.25 um/px, 778 px, and the 14.2 mm / 14.0 to 14.3 spec prose.",
+    "/data/FMD_Data_26082026/build_size_dashboard.py": "INFORMATIVE. Generator of the size dashboard; lines 120 to 121 hardcode the '14.2 mm, spec range 14.0 to 14.3' prose.",
+    "/data/FMD_Data_26082026/eda_report.md": "READ, UNINFORMATIVE on scale. Pixel-space EDA: image format 2448 x 2048, class counts; no scale, no micron nominal, no lens diameter.",
+    "/data/FMD_Data_26082026/eda_report.json": "READ, UNINFORMATIVE on scale. No hit for any of the four numbers.",
+    "/data/FMD_Data_26082026/eda_full_report.json": "READ, UNINFORMATIVE on scale. No hit for any of the four numbers.",
+    "/data/FMD_Data_26082026/eda_dashboard.html": "READ, UNINFORMATIVE on scale. No hit for any of the four numbers.",
+    "/data/FMD_Data_26082026/pass_fail_criteria.html": "READ, UNINFORMATIVE on scale. Only matches are 'calibrated' in the sense of a model probability, unrelated to microns per pixel.",
+    "/data/FMD_Data_26082026/run_eda.py": "READ, UNINFORMATIVE on scale. Full pixel-space EDA over the BMP tree and annotations; no scale constant.",
+    "/data/FMD_Data_26082026/build_dashboard.py": "READ, UNINFORMATIVE on scale. Builds eda_dashboard.html from eda_full_report.json; no scale constant.",
+    "/data/FMD_Data_26082026/download_fmd.py": "READ, UNINFORMATIVE. Azure blob download helper; no scale content.",
+    "/data/FMD_Data_26082026/migrate_fmd_to_shield.py": "READ, UNINFORMATIVE. Blob migration helper; no scale content.",
+    "/data/FMD_Data_26082026/blob_migrate_two.py": "READ, UNINFORMATIVE. Blob migration helper; no scale content.",
+    "/data/FMD_Data_26082026/verify_clear_on_vm.py": "READ, UNINFORMATIVE on scale. Clear-image verification; only lens matches are defect class names ('Multiple Lenses', 'Missing Lens', 'Lens Off Center').",
+    "/data/FMD_Data_26082026/requirements.txt": "READ, UNINFORMATIVE. Single line: azure-storage-blob.",
+    "/data/FMD_Data_26082026/verify_clear.log": "LISTED, not read in full. Verification log; not a scale artifact.",
+    "/data/FMD_Data_26082026/.venv": "LISTED, not read. Python environment.",
+    "/data/FMD_Data_26082026/fmd_temp_images": "LISTED only. Image and annotation data tree; directory names used, no data file opened.",
+    "/home/amd100-user/line_eda_vm.py": "READ, UNINFORMATIVE on scale. Counts production-line tags from filenames.",
+    "/home/amd100-user/line_eda_vm.csv": "GREPPED, UNINFORMATIVE on scale. Only coincidental filename substrings (e.g. a pallet id containing '1420').",
+    "/home/amd100-user/q5_check.py": "LISTED, grepped. No scale hits.",
+    "/home/amd100-user/build_path_manifest.py": "LISTED, grepped. No scale hits.",
+    "/home/amd100-user/download_armor_blobs.py": "LISTED, grepped. No scale hits.",
+    "/home/amd100-user/push20261007/": "LISTED, grepped (README.md and *.py). No scale hits; label-counting work only.",
+    "/home/amd100-user/.bash_history": "READ. Records download and migration commands and venv setup; nothing scale related.",
+    "/home/amd100-user/merge_push.tgz, merge_ref.tgz, runs_artifacts.tgz, ooi_samples.tar": "LISTED, not opened."
+  },
+  "earlier_sampling_for_scale": {
+    "measure_scale_script": "200 random frames matching *Pass1*, random.seed(7), from fmd_temp_images/20260826_T24_Production_Sample/sample folder (10,000 images, 7,164 _Pass1). Population: a separate production-sample drop dated 2026-08-26.",
+    "methodology_record": "eda_methodology.html section 21.2 line 374 describes the same '~200 production Pass1 images (centred, unobstructed, single lens)'; detector B 783.8 px, gradient cross-check 772.5 px, over the same sample.",
+    "um_eda_population": "eda_size_um.py adopts 778 px (no fresh lens sample) and runs over the CVAT annotations in fmd_temp_images/ICube Defects Library/annotations.xml: 434 annotated images, 2,020 boxes."
+  },
+  "conflicts_with_current_record": [
+    "eda_methodology.html section 21.3, build_size_dashboard.py lines 120 to 121, and eda_defect_size_um.html lines 86 to 87 assert a lens 'spec range 14.0 to 14.3 mm' as a product spec with no citation, while docs/reference/received_docs_nominals.md states the lens diameter is written in no received document and 14,200 is our own figure.",
+    "eda_size_um.json publishes 18.25 microns per pixel (6 percent uncertainty) while scale_estimate.json publishes 18.1165; the prior EDA adopted a 778 px lens edge (midpoint of 774 and 786) rather than the 783.8 px trimmed mean the published scale uses. The two scales and their two different lens samples sit side by side with no reconciliation. This is the arithmetic root of the 18.1165 versus 18.25 gap."
+  ],
+  "not_examined": [
+    "No image file opened; no .bmp read; no measurement re-run; no scale computed.",
+    "fmd_temp_images/sample metadata.csv, annotations.xml and Box Stats.csv not opened.",
+    "/data/FMD_Data_26082026/.venv not opened.",
+    "Home tarballs merge_push.tgz, merge_ref.tgz, runs_artifacts.tgz, ooi_samples.tar not opened.",
+    "/data/resnet18_fmd not swept.",
+    "Other users' homes listed but not opened (privacy): ksurampudi, pranayp, srikantht, swetap are world-readable; linuxadmin is mode 750 and not readable by us.",
+    "Home .cache, .local, .config, .claude, .vscode-server, .keras, .copilot, .nv, .ipynb not searched."
+  ]
+}

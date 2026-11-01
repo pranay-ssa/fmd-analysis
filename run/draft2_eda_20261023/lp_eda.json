@@ -1,0 +1,123 @@
+{
+  "lp_counts": [
+    {
+      "code": "P1_MPP",
+      "name": "Missing Primary Package",
+      "column": "missing_primary_package",
+      "pictures": 1426
+    },
+    {
+      "code": "P1_PPM",
+      "name": "Primary Package Misalignment",
+      "column": "package_misalignment",
+      "pictures": 2
+    },
+    {
+      "code": "P1_COC",
+      "name": "Cavity Off Center",
+      "column": "cavity_off_center",
+      "pictures": 184
+    },
+    {
+      "code": "P2_FOV",
+      "name": "Field of View Obstructed",
+      "column": "view_obstructed",
+      "pictures": 24
+    },
+    {
+      "code": "P2_LOC",
+      "name": "Lens Off Center",
+      "column": "lens_off_center",
+      "pictures": 953
+    },
+    {
+      "code": "P1_NL",
+      "name": "No Lens",
+      "column": "no_lens",
+      "pictures": 323
+    },
+    {
+      "code": "P1_ML",
+      "name": "Multiple Lens",
+      "column": "multiple_lenses",
+      "pictures": 1433
+    },
+    {
+      "code": "P1_FL",
+      "name": "Folded Lens",
+      "column": "folded_lens",
+      "pictures": 237
+    },
+    {
+      "code": "P1_EBC",
+      "name": "Edge Bottle-Capped",
+      "column": "(none)",
+      "pictures": 0
+    },
+    {
+      "code": "P1_TL",
+      "name": "Torn Lens",
+      "column": "(none)",
+      "pictures": 0
+    },
+    {
+      "code": "P1_LR",
+      "name": "Lens Rupture",
+      "column": "(none)",
+      "pictures": 0
+    },
+    {
+      "code": "P2_DS",
+      "name": "Dirty Strobe",
+      "column": "dirty_strobe",
+      "pictures": 43
+    },
+    {
+      "code": "P2_DC",
+      "name": "Dirty Camera",
+      "column": "dirty_camera",
+      "pictures": 326
+    },
+    {
+      "code": "P2_BSC",
+      "name": "Bubble Scatter",
+      "column": "bubble_scatter",
+      "pictures": 6
+    },
+    {
+      "code": "P2_LD",
+      "name": "Low Dose",
+      "column": "low_dose",
+      "pictures": 215
+    }
+  ],
+  "legacy_hema": 86,
+  "co": {
+    "lens_off_center+multiple_lenses": 661,
+    "lens_off_center+folded_lens": 148,
+    "lens_off_center+dirty_strobe": 2,
+    "lens_off_center+dirty_camera": 94,
+    "lens_off_center+bubble_scatter": 1,
+    "lens_off_center+low_dose": 17,
+    "no_lens+dirty_camera": 4,
+    "multiple_lenses+folded_lens": 236,
+    "multiple_lenses+dirty_strobe": 2,
+    "multiple_lenses+dirty_camera": 104,
+    "multiple_lenses+low_dose": 17,
+    "folded_lens+dirty_camera": 21,
+    "folded_lens+low_dose": 4,
+    "dirty_camera+low_dose": 72
+  },
+  "card": {
+    "0": 2732,
+    "1": 3181,
+    "2": 641,
+    "3": 216,
+    "4": 14,
+    "5": 1
+  },
+  "lp_any": 4053,
+  "matrix_rows": 6785,
+  "clear_rows": 2166,
+  "clear_strict": 2156
+}

@@ -1,0 +1,3016 @@
+[
+ {
+  "name": "How to read",
+  "rows": [
+   [
+    {
+     "value": "Labels on a picture: the questions answered",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "What was asked in the review, and where each answer sits. Every count below is taken from the annotations: one annotation of record per picture, duplicate copies of a picture counted once.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [],
+   [
+    {
+     "value": "What was asked",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    },
+    {
+     "value": "Where it is answered",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    "Pictures carrying 0, 1, 2 ... labels, this report beside the onboarding report",
+    "Sheet: labels per picture"
+   ],
+   [
+    "The full list of labels considered",
+    "Sheet: labels considered"
+   ],
+   [
+    "The most frequent label on one-label pictures",
+    "Sheet: one-label pictures"
+   ],
+   [
+    "The most frequent label pairs on two-label pictures",
+    "Sheet: two-label pictures"
+   ],
+   [
+    "Is the size flag a separate label, and what does the Debris group hold",
+    "Sheets: labels considered, debris group"
+   ],
+   [
+    "Objects marked per class, both reports, and the HEMA names",
+    "Sheet: objects per class"
+   ],
+   [],
+   [
+    {
+     "value": "The pictures behind these counts",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Population",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "What it is",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Images in the archive",
+    {
+     "value": 10614,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Every image delivered, annotated or not"
+   ],
+   [
+    "Pictures in an annotation",
+    {
+     "value": 6938,
+     "format": "#,##0",
+     "bold": true
+    },
+    "At least one annotation entry exists for the picture"
+   ],
+   [
+    "Pictures with a mark",
+    {
+     "value": 4782,
+     "format": "#,##0",
+     "bold": true
+    },
+    "At least one object or tag on the annotation of record"
+   ],
+   [
+    "Pictures with no mark (Clear)",
+    {
+     "value": 2156,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Nothing marked anywhere on the picture"
+   ],
+   [
+    "Pictures in the onboarding report",
+    {
+     "value": 4141,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Pictures carrying a whole-image tag in its data"
+   ],
+   [
+    {
+     "value": "The onboarding report's 4,141 is this report's 6,938 minus 641 pictures that carry only an object and 2,156 Clear pictures. Its tag table covers whole-image tags only, so it cannot be compared with a table that counts object classes too; both populations are named in the labels-per-picture sheet.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "No picture in the annotation is unlabelled. A picture with nothing marked is Clear, and Clear is a label.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A6",
+  "column_widths": {
+   "A": 62,
+   "B": 14,
+   "C": 74
+  }
+ },
+ {
+  "name": "Labels per picture",
+  "rows": [
+   [
+    {
+     "value": "How many labels one picture carries, both reports",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "This report: all 6,938 annotated pictures, every object class, every whole-image tag and Clear. Onboarding report: whole-image tags only, 4,141 pictures.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "1. This report, and the table quoted in the review",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Labels on the picture",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "This report, pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Share",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "As quoted in the review",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Onboarding report (tags only)",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    {
+     "value": 0
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 248,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "-"
+    }
+   ],
+   [
+    {
+     "value": 1
+    },
+    {
+     "value": 5531,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.7972038051311617,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 5301,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 3256,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 2
+    },
+    {
+     "value": 649,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.09354280772556933,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 660,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 654,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 3
+    },
+    {
+     "value": 418,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.060247910060536175,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 424,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 216,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 4
+    },
+    {
+     "value": 199,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.028682617469011244,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 207,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 14,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 5
+    },
+    {
+     "value": 97,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.01398097434419141,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 71,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 6
+    },
+    {
+     "value": 29,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.004179878927644855,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 20,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "-"
+    }
+   ],
+   [
+    {
+     "value": 7
+    },
+    {
+     "value": 12,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0017296050735082155,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 5,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "-"
+    }
+   ],
+   [
+    {
+     "value": 8
+    },
+    {
+     "value": 3,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0004324012683770539,
+     "format": "0.0%",
+     "bold": true
+    },
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "-"
+    }
+   ],
+   [
+    {
+     "value": "Total",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 6938,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 1.0,
+     "format": "0.0%",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 6938,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 4141,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    }
+   ],
+   [],
+   [
+    {
+     "value": "2. Why the two columns differ",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "No picture is unlabelled. The earlier table showed 248 pictures at 0 labels because the four size-flagged object classes (Foreign Matter, Fiber, Extraneous Polymer, HEMA) had no column of their own: a picture whose only mark was such an object had nowhere to appear. All four now have their own column, so the 0 row is empty.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "A size flag is part of its class, not a second label. Counting the flag beside the class would give every large object two labels; it is counted here once, inside its class.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "The onboarding report counts whole-image tags only (4,141 pictures, 15 tags). Object marks and Clear frames sit outside it, which is why its row for one label reads 3,256 and its table stops at 5.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A5",
+  "column_widths": {
+   "A": 26,
+   "B": 20,
+   "C": 10,
+   "D": 22,
+   "E": 24
+  }
+ },
+ {
+  "name": "Labels considered",
+  "rows": [
+   [
+    {
+     "value": "Every label considered, and every name it appears under",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "23 names occur in the annotation: 12 whole-image tags, 7 object classes, the HEMA Obstruction tag, two older box classes kept for reference, and Clear. The guide defines 23 classes: 15 tags and 8 object classes. Four of those have no examples yet, the three lens-damage tags and Surface Groove, so they carry no pictures here. The pictures column counts pictures carrying the label, so the rows overlap and do not sum to a picture total.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "Label",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "What it is",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Code or name in the annotation",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Counted as a label",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Bubble",
+    "Marked object",
+    "P2_BB (also P2_BI, P2_BST)",
+    {
+     "value": 862,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble Cluster",
+    "Marked object",
+    "P2_BC",
+    {
+     "value": 428,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Wet Package",
+    "Marked object",
+    "P2_WP",
+    {
+     "value": 146,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Foreign Matter",
+    "Marked object",
+    "P3_FM",
+    {
+     "value": 331,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Fiber",
+    "Marked object",
+    "P3_FIB",
+    {
+     "value": 210,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Extraneous Polymer",
+    "Marked object",
+    "P3_EP",
+    {
+     "value": 112,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "HEMA",
+    "Marked object",
+    "P3_HE",
+    {
+     "value": 101,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Missing Primary Package",
+    "Whole-image tag",
+    "P1_MPP",
+    {
+     "value": 1426,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Multiple Lens",
+    "Whole-image tag",
+    "P1_ML",
+    {
+     "value": 1439,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "No Lens",
+    "Whole-image tag",
+    "P1_NL",
+    {
+     "value": 325,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Cavity Off Center",
+    "Whole-image tag",
+    "P1_COC",
+    {
+     "value": 184,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Folded Lens",
+    "Whole-image tag",
+    "P1_FL",
+    {
+     "value": 237,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Lens Off Center",
+    "Whole-image tag",
+    "P2_LOC",
+    {
+     "value": 957,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Dirty Camera",
+    "Whole-image tag",
+    "P2_DC",
+    {
+     "value": 329,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Dirty Strobe",
+    "Whole-image tag",
+    "P2_DS",
+    {
+     "value": 43,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Low Dose",
+    "Whole-image tag",
+    "P2_LD",
+    {
+     "value": 215,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "View Obstructed",
+    "Whole-image tag",
+    "F2_FOV",
+    {
+     "value": 24,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Package Misalignment",
+    "Whole-image tag",
+    "P1_PPM",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble Scatter",
+    "Whole-image tag",
+    "P2_BSC",
+    {
+     "value": 6,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [
+    "HEMA Obstruction",
+    "Whole-image tag, kept for reference",
+    "P2_HMO",
+    {
+     "value": 86,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Reference only, not in the split",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble On 123",
+    "Marked object, kept for reference",
+    "no current code",
+    {
+     "value": 13,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Reference only, not in the split",
+     "bold": true
+    }
+   ],
+   [
+    "Bubble On Edge",
+    "Marked object, kept for reference",
+    "no current code",
+    {
+     "value": 14,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Reference only, not in the split",
+     "bold": true
+    }
+   ],
+   [
+    "Clear",
+    "No mark on the picture",
+    "no code",
+    {
+     "value": 2156,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": "Yes",
+     "bold": true
+    }
+   ],
+   [],
+   [
+    {
+     "value": "Not labels: the size flag inside a class",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Size flag",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Inside which class",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures carrying the class",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Of which flagged",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Share flagged",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Foreign Matter size flag",
+    "Foreign Matter",
+    {
+     "value": 331,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 171,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.5166163141993958,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Fiber size flag",
+    "Fiber",
+    {
+     "value": 210,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 136,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.6476190476190476,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Extraneous Polymer size flag",
+    "Extraneous Polymer",
+    {
+     "value": 112,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 33,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.29464285714285715,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "HEMA size flag",
+    "HEMA",
+    {
+     "value": 101,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 94,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.9306930693069307,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": "The flag marks the objects that crossed the size threshold. It never appears without its class object, so it is a subset of the class and is counted inside the class total.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "Flags are counted as annotated. The 32 objects kept under the earlier Fiber name carry the Extraneous Polymer flag, which is why Fiber reads 136 of 210 flagged and Extraneous Polymer 33 of 112.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [],
+   [
+    {
+     "value": "Names that appear in the annotation but are not current labels",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Name",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Belongs to",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Why it is listed",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Bubble Irregular, Stretched Bubble",
+    "Bubble",
+    "147 / 6",
+    "Older names merged into Bubble; those pictures also carry the Bubble mark"
+   ],
+   [
+    "P3_FM_MICRON_THRESHOLD and the three other flag names",
+    "their class",
+    {
+     "value": 388,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Size flag, not a class; 388 pictures carry at least one"
+   ],
+   [],
+   [
+    {
+     "value": "Where the training label list differs from the annotation",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Item",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Training label list",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Annotation",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Explanation",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Fiber size flag, pictures",
+    {
+     "value": 168,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 136,
+     "format": "#,##0",
+     "bold": true
+    },
+    "32 pictures whose objects the newer annotation calls Extraneous Polymer carry the Fiber flag in the training label list, because the guide defaults an unclear object to Fiber. This workbook counts the flag as annotated."
+   ],
+   [
+    "Bubble Cluster, pictures",
+    {
+     "value": 430,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 428,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Two pictures keep an older Bubble Cluster mark although their newer annotation has none. This workbook counts the annotation."
+   ],
+   [
+    {
+     "value": "The training label list is unchanged. It is the basis of the train and test split, not a count of the annotation, and every count in this workbook comes from the annotation.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A4",
+  "column_widths": {
+   "A": 34,
+   "B": 30,
+   "C": 32,
+   "D": 12,
+   "E": 20
+  }
+ },
+ {
+  "name": "One-label pictures",
+  "rows": [
+   [
+    {
+     "value": "The label on one-label pictures",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "5,531 pictures carry exactly one label. Counted from the annotation, size flags folded into their class, Clear included.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "Rank",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Label",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Share of one-label pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    {
+     "value": 1
+    },
+    "Clear",
+    {
+     "value": 2156,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.38980292894594104,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 2
+    },
+    "Missing Primary Package",
+    {
+     "value": 1426,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.25781956246610016,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 3
+    },
+    "Multiple Lens",
+    {
+     "value": 629,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.11372265413126018,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 4
+    },
+    "No Lens",
+    {
+     "value": 316,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.057132525763876334,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 5
+    },
+    "Lens Off Center",
+    {
+     "value": 219,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.03959500994395227,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 6
+    },
+    "Cavity Off Center",
+    {
+     "value": 184,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.03326704031820647,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 7
+    },
+    "Bubble",
+    {
+     "value": 127,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.02296148978484903,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 8
+    },
+    "HEMA Obstruction",
+    {
+     "value": 78,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.014102332308804918,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 9
+    },
+    "Extraneous Polymer",
+    {
+     "value": 71,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.012836738383655759,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 10
+    },
+    "Low Dose",
+    {
+     "value": 71,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.012836738383655759,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 11
+    },
+    "Fiber",
+    {
+     "value": 55,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.009943952269029109,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 12
+    },
+    "Foreign Matter",
+    {
+     "value": 47,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.008497559211715784,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 13
+    },
+    "View Obstructed",
+    {
+     "value": 24,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.004339179171939975,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 14
+    },
+    "Wet Package",
+    {
+     "value": 24,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.004339179171939975,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 15
+    },
+    "Dirty Camera",
+    {
+     "value": 23,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.004158380039775809,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 16
+    },
+    "Bubble Cluster",
+    {
+     "value": 22,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0039775809076116435,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 17
+    },
+    "Dirty Strobe",
+    {
+     "value": 21,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.003796781775447478,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 18
+    },
+    "Bubble On Edge",
+    {
+     "value": 14,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0025311878502983186,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 19
+    },
+    "Bubble On 123",
+    {
+     "value": 13,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.002350388718134153,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 20
+    },
+    "Bubble Scatter",
+    {
+     "value": 5,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0009039956608208281,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 21
+    },
+    "HEMA",
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0007231965286566625,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 22
+    },
+    "Package Misalignment",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0003615982643283312,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": "",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "Total",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 5531,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 1.0,
+     "format": "0.0%",
+     "bold": true,
+     "fill": "EDF1F8"
+    }
+   ],
+   [
+    {
+     "value": "Clear is the largest group: 2,156 pictures show no defect at all. Clear, Missing Primary Package, Cavity Off Center, Package Misalignment and View Obstructed are alone by rule; they carry no co-tag.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A4",
+  "column_widths": {
+   "A": 7,
+   "B": 40,
+   "C": 12,
+   "D": 26
+  }
+ },
+ {
+  "name": "Two-label pictures",
+  "rows": [
+   [
+    {
+     "value": "The two labels on two-label pictures",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "649 pictures carry exactly two labels, in 28 distinct pairs.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "Rank",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "The two labels",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Share of two-label pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    {
+     "value": 1
+    },
+    "Lens Off Center + Multiple Lens",
+    {
+     "value": 371,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.5716486902927581,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 2
+    },
+    "Folded Lens + Multiple Lens",
+    {
+     "value": 67,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.10323574730354391,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 3
+    },
+    "Bubble + Foreign Matter",
+    {
+     "value": 42,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.06471494607087827,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 4
+    },
+    "Bubble + Bubble Cluster",
+    {
+     "value": 28,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.04314329738058552,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 5
+    },
+    "Bubble + Wet Package",
+    {
+     "value": 21,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.032357473035439135,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 6
+    },
+    "Bubble + HEMA",
+    {
+     "value": 21,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.032357473035439135,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 7
+    },
+    "Bubble + Low Dose",
+    {
+     "value": 16,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.02465331278890601,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 8
+    },
+    "Dirty Camera + Multiple Lens",
+    {
+     "value": 16,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.02465331278890601,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 9
+    },
+    "Bubble + Dirty Camera",
+    {
+     "value": 12,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.01848998459167951,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 10
+    },
+    "Bubble + Dirty Strobe",
+    {
+     "value": 7,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.01078582434514638,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 11
+    },
+    "Bubble + Fiber",
+    {
+     "value": 7,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.01078582434514638,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 12
+    },
+    "Lens Off Center + Low Dose",
+    {
+     "value": 6,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.009244992295839754,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 13
+    },
+    "Low Dose + Multiple Lens",
+    {
+     "value": 5,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.007704160246533128,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 14
+    },
+    "Bubble + Multiple Lens",
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0061633281972265025,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 15
+    },
+    "Dirty Camera + Lens Off Center",
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0061633281972265025,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 16
+    },
+    "HEMA Obstruction + Low Dose",
+    {
+     "value": 4,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0061633281972265025,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 17
+    },
+    "Bubble + Extraneous Polymer",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0030816640986132513,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 18
+    },
+    "Bubble + Lens Off Center",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0030816640986132513,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 19
+    },
+    "Dirty Camera + No Lens",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0030816640986132513,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 20
+    },
+    "HEMA Obstruction + Lens Off Center",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0030816640986132513,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 21
+    },
+    "HEMA Obstruction + Multiple Lens",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0030816640986132513,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 22
+    },
+    "Extraneous Polymer + No Lens",
+    {
+     "value": 2,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0030816640986132513,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 23
+    },
+    "Foreign Matter + Lens Off Center",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0015408320493066256,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 24
+    },
+    "No Lens + Wet Package",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0015408320493066256,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 25
+    },
+    "Fiber + Wet Package",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0015408320493066256,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 26
+    },
+    "Extraneous Polymer + Foreign Matter",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0015408320493066256,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 27
+    },
+    "Bubble Scatter + Lens Off Center",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0015408320493066256,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": 28
+    },
+    "Dirty Camera + Extraneous Polymer",
+    {
+     "value": 1,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.0015408320493066256,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": "",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "Total",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 649,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 1.0,
+     "format": "0.0%",
+     "bold": true,
+     "fill": "EDF1F8"
+    }
+   ],
+   [
+    {
+     "value": "A pair is counted once, order ignored. A size flag is not a pair member; a picture with a large Bubble is still Bubble plus whatever else it carries.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A4",
+  "column_widths": {
+   "A": 7,
+   "B": 52,
+   "C": 12,
+   "D": 26
+  }
+ },
+ {
+  "name": "Debris group",
+  "rows": [
+   [
+    {
+     "value": "The Debris group: the four classes that hold debris",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Debris is not a class in the guide. It is the group of four object classes below. A picture can hold more than one of them, so the class rows do not add to the group total.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "Class",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Of which over the size threshold",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Share over threshold",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Foreign Matter",
+    {
+     "value": 331,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 171,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.5166163141993958,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Fiber",
+    {
+     "value": 210,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 136,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.6476190476190476,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "Extraneous Polymer",
+    {
+     "value": 112,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 33,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.29464285714285715,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    "HEMA",
+    {
+     "value": 101,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 94,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0.9306930693069307,
+     "format": "0.0%",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": "Debris group, pictures (each picture once)",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 647,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 388,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 0.5996908809891809,
+     "format": "0.0%",
+     "bold": true,
+     "fill": "EDF1F8"
+    }
+   ],
+   [],
+   [
+    {
+     "value": "How the group overlaps",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Pictures holding",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Count",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Exactly one of the four classes",
+    {
+     "value": 551,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "Two or more of the four classes",
+    {
+     "value": 96,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    "At least one object over the size threshold",
+    {
+     "value": 388,
+     "format": "#,##0",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": "647 pictures carry at least one debris class, and 388 of those carry at least one object over the size threshold. The flag is a subset inside each class; it is not a filter on the group.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A4",
+  "column_widths": {
+   "A": 46,
+   "B": 12,
+   "C": 30,
+   "D": 20
+  }
+ },
+ {
+  "name": "Objects per class",
+  "rows": [
+   [
+    {
+     "value": "Objects marked per class, both reports",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Every marked object in the archive counted once (14,182 objects on 1,130 pictures), with the older plain class names folded into their class.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "Class",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Guide code",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Objects, this report",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures, this report",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Objects, onboarding report",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Pictures, onboarding report",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Why the two differ",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Bubble",
+    "P2_BB",
+    {
+     "value": 11045,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 862,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 11045,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 862,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Same count"
+   ],
+   [
+    "Bubble Cluster",
+    "P2_BC",
+    {
+     "value": 1182,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 428,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 1182,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 428,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Same count"
+   ],
+   [
+    "Wet Package",
+    "P2_WP",
+    {
+     "value": 662,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 146,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 662,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 146,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Same count"
+   ],
+   [
+    "Surface Groove",
+    "P1_SG",
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 0,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Same count"
+   ],
+   [
+    "Fiber",
+    "P3_FIB",
+    {
+     "value": 277,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 210,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 277,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 210,
+     "format": "#,##0",
+     "bold": true
+    },
+    "32 objects that the newer annotation calls Extraneous Polymer keep the earlier name here, so this column agrees with the onboarding report. Under the newer name the class holds 245 objects on 178 pictures. When the class is next annotated the newer name will be used."
+   ],
+   [
+    "Extraneous Polymer",
+    "P3_EP",
+    {
+     "value": 118,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 112,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 118,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 112,
+     "format": "#,##0",
+     "bold": true
+    },
+    "The same 32 objects sit in Fiber above, for the same reason; under the newer name the class holds 150 objects on 144 pictures."
+   ],
+   [
+    "HEMA",
+    "P3_HE",
+    {
+     "value": 103,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 101,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 103,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 101,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Same count"
+   ],
+   [
+    "Foreign Matter",
+    "P3_FM",
+    {
+     "value": 626,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 331,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 626,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 331,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Same count"
+   ],
+   [
+    {
+     "value": "Older classes kept for reference (not in the current class list)",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    "Bubble On 123",
+    "",
+    {
+     "value": 79,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 13,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 79,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 13,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Same count"
+   ],
+   [
+    "Bubble On Edge",
+    "",
+    {
+     "value": 90,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 14,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 90,
+     "format": "#,##0",
+     "bold": true
+    },
+    {
+     "value": 14,
+     "format": "#,##0",
+     "bold": true
+    },
+    "Same count"
+   ],
+   [
+    {
+     "value": "Total objects",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 14182,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 1130,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 14182,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": 1130,
+     "format": "#,##0",
+     "bold": true,
+     "fill": "EDF1F8"
+    },
+    {
+     "value": "Both reports account for every marked object",
+     "bold": true,
+     "fill": "EDF1F8"
+    }
+   ],
+   [
+    {
+     "value": "A picture can carry several classes, so the picture column is the number of pictures with at least one object, not the sum of the rows.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [],
+   [
+    {
+     "value": "HEMA: the two older names, checked",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Name",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "What it is",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Objects or pictures",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Counted as HEMA here",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "HEMA Fragment",
+    "The older library's object class for HEMA",
+    "8 objects on 8 pictures",
+    {
+     "value": "Yes: 4 from the newer production annotation, 4 counted by the older name",
+     "bold": true
+    }
+   ],
+   [
+    "HEMA Obstruction",
+    "A whole-image tag, not an object class",
+    "86 pictures",
+    {
+     "value": "No, kept separate by rule",
+     "bold": true
+    }
+   ],
+   [
+    "Guide code P3_HE",
+    "Names HEMA Obstruction in the production files and HEMA Fragment in one later file",
+    "95 production + 4 later objects",
+    {
+     "value": "Yes, both under one class",
+     "bold": true
+    }
+   ],
+   [
+    {
+     "value": "All eight HEMA Fragment pictures count as HEMA: four also carry a newer production annotation, the other four exist only under the older name and are folded in here. HEMA reads 103 objects on 101 pictures.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [],
+   [
+    {
+     "value": "The table quoted in the review, checked line by line",
+     "bold": true,
+     "fill": "D9E2F2",
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "Class",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Quoted: pictures / objects (flag)",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Our count: pictures / objects (flag)",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "What the quoted figure counts",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Bubble",
+    "862 / 20,831",
+    "862 / 11,045",
+    "The picture count agrees. The object count has no source in the archive: every box of every class in all nine annotation files is 14,996, and the onboarding report also counts 11,045."
+   ],
+   [
+    "Bubble Cluster",
+    "430 / 1,070",
+    "428 / 1,182",
+    "1,070 is the boxes in the seven production files; the other 112 come from the older library, and two pictures keep an older mark the current files no longer carry."
+   ],
+   [
+    "Wet Package",
+    "146 / 593",
+    "146 / 662",
+    "593 counts only boxes carrying the P2_WP code; the other 69 carry the older plain Wet Package name."
+   ],
+   [
+    "Foreign Matter",
+    "37 / 179",
+    "331 / 626",
+    "Neither figure matches the archive or the onboarding report: the production files alone hold 571 boxes, so 37 pictures and 179 objects match no counting basis we hold."
+   ],
+   [
+    "Fiber",
+    "210 / flag 171 / 223",
+    "210 / flag 136 / 277",
+    "171 is the Foreign Matter flag count, not the Fiber one. 223 counts only boxes carrying P3_FIB; adding 22 older Fiber boxes and 32 objects the newer annotation calls Extraneous Polymer gives 277."
+   ],
+   [
+    "Extraneous Polymer",
+    "144 / flag 168 / 149",
+    "112 / flag 33 / 118",
+    "144 is the count before 32 objects moved to Fiber; the flag on those 144 pictures is 33. 168 is the Fiber flag in the training label list, which is why the row reads as more flagged objects than pictures."
+   ],
+   [
+    "HEMA",
+    "101 / flag 94 / 99",
+    "101 / flag 94 / 103",
+    "99 leaves out the 4 boxes from the older library that the onboarding report also counts."
+   ],
+   [
+    "HEMA Obstruction (legacy)",
+    "89 / 89",
+    "86 pictures / no objects",
+    "It is a whole-image tag, so it has no objects. The archive holds it on 86 pictures of record; the other 88 mentions are superseded."
+   ],
+   [
+    {
+     "value": "Read down the two count columns with the note on the right: several figures in the quoted table count a different unit (boxes carrying one code, boxes in one file group, or a count taken before the 32 objects moved), which is what makes the columns look inconsistent.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "One internal check closes the question: a size flag sits inside its class, so a class can never show more flagged objects than pictures. The Extraneous Polymer row shows 168 flagged on 144 pictures, so that row was assembled from two tables.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "The two reports we can test agree line by line in the table above: 14,182 objects on 1,130 pictures, both.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ]
+  ],
+  "freeze_panes": "A5",
+  "column_widths": {
+   "A": 24,
+   "B": 12,
+   "C": 20,
+   "D": 22,
+   "E": 22,
+   "F": 22,
+   "G": 62
+  }
+ },
+ {
+  "name": "Definitions",
+  "rows": [
+   [
+    {
+     "value": "Definitions",
+     "bold": true,
+     "font_size": 14,
+     "font_color": "1F3864"
+    }
+   ],
+   [
+    {
+     "value": "One meaning per term, used the same way on every sheet.",
+     "italic": true,
+     "font_color": "595959",
+     "font_size": 9
+    }
+   ],
+   [
+    {
+     "value": "Term",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    },
+    {
+     "value": "Meaning",
+     "bold": true,
+     "font_color": "FFFFFF",
+     "fill": "1F3864",
+     "valign": "center"
+    }
+   ],
+   [
+    "Picture",
+    "One image, counting duplicate copies of the same image once."
+   ],
+   [
+    "Label",
+    "One class present on a picture: an object class, a whole-image tag, or Clear."
+   ],
+   [
+    "Object",
+    "A box drawn around a defect on a picture. One picture can hold many objects."
+   ],
+   [
+    "Object class",
+    "The class of a marked object: Bubble, Bubble Cluster, Wet Package, Foreign Matter, Fiber, Extraneous Polymer, HEMA."
+   ],
+   [
+    "Whole-image tag",
+    "One tag on the picture, not on an object: lens presentation, image condition, or the reference tag HEMA Obstruction."
+   ],
+   [
+    "Size flag",
+    "The micron threshold tag on an object. It marks an object that crossed the size threshold and sits inside its class; it is not a label of its own."
+   ],
+   [
+    "Clear",
+    "A picture with nothing marked on it. It counts as one label."
+   ],
+   [
+    "Debris group",
+    "The four object classes together: Foreign Matter, Fiber, Extraneous Polymer, HEMA. A group, not a class in the guide."
+   ],
+   [
+    "Annotation of record",
+    "The newest annotation for a picture. Older annotations of the same picture are ignored."
+   ]
+  ],
+  "freeze_panes": "A4",
+  "column_widths": {
+   "A": 26,
+   "B": 96
+  }
+ }
+]

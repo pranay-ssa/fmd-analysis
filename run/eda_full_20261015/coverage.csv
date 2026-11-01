@@ -1,0 +1,39 @@
+stratum_type,stratum_value,population_name,distinct_pictures,pictures_mentioned,pictures_with_shape,pictures_no_shape,pictures_mentioned_nowhere,shape_coverage_ratio,mention_coverage_ratio,defect_pictures_carrying,defect_share_of_population
+folder,Updated ICube Objects 20260915,census pictures assigned to the folder by winning_path (map decision 6),4230,698,551,3679,3532,0.13026,0.165012,,
+folder,Updated ICube Categorical Classes 20260915,census pictures assigned to the folder by winning_path (map decision 6),6207,5821,4060,2147,386,0.6541,0.937812,,
+folder,ICube Defects Library,census pictures assigned to the folder by winning_path (map decision 6),177,171,171,6,6,0.966102,0.966102,,
+folder_group,Updated,census pictures in the folder group (winning_path folder),10437,6519,4611,5826,3918,0.441794,0.624605,,
+folder_group,Library,census pictures in the folder group (winning_path folder),177,171,171,6,6,0.966102,0.966102,,
+production_line,L24,census pictures on the line (from the filename),4348,2621,2519,1829,1727,0.579347,0.602806,,
+production_line,L25,census pictures on the line (from the filename),972,675,617,355,297,0.634774,0.694444,,
+production_line,L26,census pictures on the line (from the filename),1503,1015,881,622,488,0.586161,0.675316,,
+production_line,L27,census pictures on the line (from the filename),1637,731,361,1276,906,0.220525,0.446549,,
+production_line,L31,census pictures on the line (from the filename),2154,1648,404,1750,506,0.187558,0.765088,,
+canonical_defect,bubble,pictures filed in the library class folder(s) named Bubble,113,113,819,,,7.247788,1.0,819,7.247788
+canonical_defect,bubble_cluster,pictures filed in the library class folder(s) named Bubble Cluster,36,36,428,,,11.888889,1.0,428,11.888889
+canonical_defect,bubble_irregular,pictures filed in the library class folder(s) named Bubble Irregular,44,44,147,,,3.340909,1.0,147,3.340909
+canonical_defect,bubble_on_123,pictures filed in the library class folder(s) named Bubble On 123,14,13,13,,,0.928571,0.928571,13,0.928571
+canonical_defect,bubble_on_edge,pictures filed in the library class folder(s) named Bubble On Edge,14,14,14,,,1.0,1.0,14,1.0
+canonical_defect,bubble_scatter,pictures filed in the library class folder(s) named Bubble Scatter,7,5,6,,,0.857143,0.714286,6,0.857143
+canonical_defect,cavity_off_center,pictures filed in the library class folder(s) named Cavity Off Center,183,183,184,,,1.005464,1.0,184,1.005464
+canonical_defect,dirty_camera,pictures filed in the library class folder(s) named Dirty Camera,25,25,329,,,13.16,1.0,329,13.16
+canonical_defect,dirty_strobe,pictures filed in the library class folder(s) named Dirty Strobe,43,42,43,,,1.0,0.976744,43,1.0
+canonical_defect,extraneous_polymer,pictures filed in the library class folder(s) named Extraneous Polymer,268,268,144,,,0.537313,1.0,144,0.537313
+canonical_defect,extraneous_polymer_micron_gate,no library class folder is named for this defect,0,0,33,,,,,33,
+canonical_defect,fiber,pictures filed in the library class folder(s) named Fiber,362,95,178,,,0.491713,0.262431,178,0.491713
+canonical_defect,fiber_micron_gate,no library class folder is named for this defect,0,0,136,,,,,136,
+canonical_defect,folded_lens,no library class folder is named for this defect,0,0,237,,,,,237,
+canonical_defect,foreign_matter,pictures filed in the library class folder(s) named Foreign Matter,1283,181,331,,,0.257989,0.141076,331,0.257989
+canonical_defect,foreign_matter_micron_gate,no library class folder is named for this defect,0,0,171,,,,,171,
+canonical_defect,hema_fragment,pictures filed in the library class folder(s) named HEMA Fragment,8,8,7,,,0.875,1.0,7,0.875
+canonical_defect,hema_micron_gate,no library class folder is named for this defect,0,0,94,,,,,94,
+canonical_defect,hema_obstruction,pictures filed in the library class folder(s) named HEMA Obstruction,175,175,180,,,1.028571,1.0,180,1.028571
+canonical_defect,lens_off_center,pictures filed in the library class folder(s) named Lens Off Center,258,258,957,,,3.709302,1.0,957,3.709302
+canonical_defect,low_dose,"pictures filed in the library class folder(s) named Low Dose, Low Dose Obstructing Region of Interest",1952,1952,215,,,0.110143,1.0,215,0.110143
+canonical_defect,missing_lens,pictures filed in the library class folder(s) named Missing Lens,324,324,325,,,1.003086,1.0,325,1.003086
+canonical_defect,missing_primary_package,pictures filed in the library class folder(s) named Missing Primary Package,1427,1427,1426,,,0.999299,1.0,1426,0.999299
+canonical_defect,multiple_lenses,pictures filed in the library class folder(s) named Multiple Lenses,1439,1437,1439,,,1.0,0.99861,1439,1.0
+canonical_defect,package_misalignment,pictures filed in the library class folder(s) named Package Misalignment,293,2,2,,,0.006826,0.006826,2,0.006826
+canonical_defect,stretched_bubble,no library class folder is named for this defect,0,0,6,,,,,6,
+canonical_defect,view_obstructed,pictures filed in the library class folder(s) named View Obstructed,117,25,24,,,0.205128,0.213675,24,0.205128
+canonical_defect,wet_package,pictures filed in the library class folder(s) named Wet Package,67,64,146,,,2.179104,0.955224,146,2.179104

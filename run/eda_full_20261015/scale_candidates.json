@@ -1,0 +1,170 @@
+{
+ "phase": "2 of the scale plan",
+ "rule": "every candidate is labelled documented or assumed; no assumed nominal is presented as documented",
+ "pixel_side": {
+  "median_diam_px": 789.0,
+  "p25_diam_px": 764.4,
+  "p75_diam_px": 809.5,
+  "rel_spread_pct": 5.71,
+  "p10_diam_px": 720.7,
+  "p90_diam_px": 823.8,
+  "n": 2659,
+  "source": "run/eda_full_20261015/ring_identity.json"
+ },
+ "gate_boundary_used": {
+  "switch_px": [
+   19.41,
+   19.61
+  ],
+  "source": "run/eda_full_20261015/gate_scale_estimate.json",
+  "cut_um": 300.0,
+  "old_cut_um": 647.0
+ },
+ "candidates": [
+  {
+   "id": "lens_diameter_14200_um",
+   "quantity": "nominal soft-lens diameter",
+   "value_um": 14200.0,
+   "class": "assumed",
+   "documented_or_assumed": "working assumption",
+   "is_documented": false,
+   "source": "our own hardcoded constant, not a client document",
+   "where_written": [
+    "/data/FMD_Data_26082026/measure_scale.py line 9 NOMINAL_LENS_DIAMETER_UM = 14_200.0",
+    "/data/FMD_Data_26082026/eda_size_um.py line 24 NOMINAL_LENS_DIAM_UM = 14200.0"
+   ],
+   "rationale_written_at": "/data/FMD_Data_26082026/eda_methodology.html section 21.3 line 393: 'soft daily contact lens; spec range 14.0 to 14.3 mm'",
+   "rationale_class": "assumed product spec with no citation",
+   "verified_against": "docs/reference/scale_provenance_20261015.md (Phase 0) and docs/reference/received_docs_nominals.md, which state the lens diameter is written in no received document",
+   "nominal_uncertainty": "unquantified; the only spread ever attached to it is the uncited 14.0 to 14.3 mm range",
+   "implied_scale": {
+    "central_um_per_px": 17.9975,
+    "interval_um_per_px": [
+     17.5417,
+     18.6842
+    ],
+    "error_budget_um_per_px": {
+     "frame_spread_iqr": [
+      17.5417,
+      18.5767
+     ],
+     "method_range_760_789_px": [
+      17.9975,
+      18.6842
+     ],
+     "population_library_vs_production": [
+      17.5417,
+      18.2684
+     ]
+    },
+    "lens_px_used": {
+     "median": 789.0,
+     "iqr": [
+      764.4,
+      809.5
+     ],
+     "method_range": [
+      760.0,
+      789.0
+     ],
+     "population": [
+      777.3,
+      809.5
+     ]
+    },
+    "with_uncited_spec_range": {
+     "nominal_um_range": [
+      14000.0,
+      14300.0
+     ],
+     "interval_um_per_px": [
+      17.2946,
+      18.8158
+     ],
+     "note": "the 14.0 to 14.3 mm range is our own uncited figure; it is shown only so the reader can see how much it would widen the interval if believed."
+    }
+   }
+  },
+  {
+   "id": "client_cut_300_um_inverted",
+   "quantity": "client stated 300 micron cut, inverted through the annotation gate boundary",
+   "value_um": 300.0,
+   "class": "documented",
+   "documented_or_assumed": "documented",
+   "is_documented": true,
+   "source": "FM3 Edge Algorithm URS Final Draft, received, section 4.2 Nice to Haves item 1b: debris grouped by size range 300 to 500 microns; the annotator handover email of 2026-10-13 states the 300 micron cut",
+   "where_written": [
+    "docs/FM3 Edge Algorithm URS Final Draft .pdf, section 4.2 (bands under 300, 300 to 500, 500 to 647 microns)",
+    "experiments/production_20260925/annotator_email_20261013.json, fields stated_rule and threshold_um"
+   ],
+   "reachable_by": "inverting the gate tag boundary: the flagged versus unflagged switch sits at 19.41 to 19.61 px on the 2026-10-15 files",
+   "nominal_uncertainty": "the declared cut is taken as exact; the interval below carries the boundary width and the inversion assumptions, not a nominal spread",
+   "implied_scale": {
+    "central_um_per_px": 15.3369,
+    "interval_um_per_px": [
+     15.2983,
+     15.3755
+    ],
+    "from_new_cut": [
+     15.2983,
+     15.456
+    ],
+    "from_old_cut": [
+     15.1204,
+     15.3755
+    ],
+    "agreement": "neither"
+   }
+  },
+  {
+   "id": "client_cut_647_um_inverted",
+   "quantity": "client foreign-matter threshold 647 microns, inverted through the older gate boundary",
+   "value_um": 647.0,
+   "class": "documented",
+   "documented_or_assumed": "documented",
+   "is_documented": true,
+   "source": "FM3 Edge Algorithm URS Final Draft, received, section 1.1.1 and Requirement 1: non-lens material at or above 647 microns",
+   "where_written": [
+    "docs/FM3 Edge Algorithm URS Final Draft .pdf, section 1.1.1 p3, section 4.1 item 1 p7, section 6.2 p28"
+   ],
+   "reachable_by": "inverting the 2026-10-13 gate boundary, 42.08 to 42.79 px",
+   "nominal_uncertainty": "as above; the boundary width carries the interval",
+   "implied_scale": {
+    "interval_um_per_px": [
+     15.1204,
+     15.3755
+    ],
+    "central_um_per_px": 15.2479
+   }
+  },
+  {
+   "id": "package_blister_cavity_tray_dimension",
+   "quantity": "package, blister, cavity or tray dimension",
+   "value_um": null,
+   "class": "not_found",
+   "documented_or_assumed": "not available",
+   "is_documented": false,
+   "source": "searched, none exists",
+   "where_written": [],
+   "note": "The JnJ production line specs (docs/reference/jnj_production_line_specs.md) carry camera models, focal lengths, backlight wavelength and PC hardware, but no package, blister, cavity or tray dimension. The received URS and Ontology carry no package dimension either. The prior EDA records only a cavity disc diameter in pixels (about 896 px), never in microns.",
+   "implied_scale": null
+  },
+  {
+   "id": "camera_or_optics_object_space_scale",
+   "quantity": "camera pixel pitch, working distance or magnification",
+   "value_um": null,
+   "class": "not_found",
+   "documented_or_assumed": "not available",
+   "is_documented": false,
+   "source": "searched, none exists",
+   "where_written": [],
+   "note": "docs/reference/scale_provenance_20261015.md records that pixel pitch, working distance and magnification are explicitly absent; eda_methodology.html section 21.1 states no mm/um field, magnification, working distance or fiducial exists. The lens focal lengths (12, 75, 6, 25 mm) are camera parameters, not object-space scale, and no sensor pixel size or working distance is given to convert them.",
+   "implied_scale": null
+  }
+ ],
+ "counts": {
+  "documented_nominals": 2,
+  "assumed_nominals": 1,
+  "not_available": 2
+ }
+}

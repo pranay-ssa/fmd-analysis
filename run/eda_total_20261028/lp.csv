@@ -1,0 +1,16 @@
+code,class,pictures,share,in_70,in_80
+P1_MPP,Missing Primary Package,1428,0.187475,1428,1428
+P1_PPM,Package Misalignment,33,0.004332,33,33
+P1_COC,Cavity Off Center,185,0.024288,185,185
+P2_FOV,View Obstructed,63,0.008271,63,63
+P2_LOC,Lens Off Center,1201,0.157674,1201,1201
+P1_NL,No Lens,326,0.042799,326,326
+P1_ML,Multiple Lens,1426,0.187213,1426,1426
+P1_FL,Folded Lens,333,0.043718,333,333
+P1_EBC,Edge Bottle-Capped,0,0.0,0,0
+P1_TL,Torn Lens,0,0.0,0,0
+P1_LR,Lens Rupture,0,0.0,0,0
+P2_DS,Dirty Strobe,33,0.004332,33,33
+P2_DC,Dirty Camera,573,0.075226,573,573
+P2_BSC,Bubble Scatter,5,0.000656,5,5
+P2_LD,Low Dose,677,0.08888,677,677

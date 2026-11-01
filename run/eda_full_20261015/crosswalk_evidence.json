@@ -1,0 +1,1732 @@
+{
+  "ticket": "009-canonical-crosswalk",
+  "date": "2026-10-15",
+  "files": [
+    {
+      "group": "project2",
+      "file": "annotations.xml",
+      "sha256": "e9990876e2f4131968f39fd53f408d41517a6b13c796d0bc3db6e13f42e0085f",
+      "images": 435,
+      "box_shapes": 2020,
+      "tag_shapes": 0,
+      "box_codes": {
+        "Bubble": 1298,
+        "Bubble Cluster": 154,
+        "Bubble Irregular": 46,
+        "Bubble On 123": 79,
+        "Bubble On Edge": 90,
+        "Extraneous Polymer": 17,
+        "Fiber": 62,
+        "Foreign Matter": 77,
+        "HEMA Fragment": 8,
+        "Wet Package": 189
+      },
+      "tag_codes": {},
+      "defined_labels": [
+        {
+          "name": "Bubble",
+          "type": "rectangle"
+        },
+        {
+          "name": "Bubble Cluster",
+          "type": "rectangle"
+        },
+        {
+          "name": "Bubble Irregular",
+          "type": "rectangle"
+        },
+        {
+          "name": "Bubble On 123",
+          "type": "rectangle"
+        },
+        {
+          "name": "Bubble On Edge",
+          "type": "rectangle"
+        },
+        {
+          "name": "Extraneous Polymer",
+          "type": "rectangle"
+        },
+        {
+          "name": "Fiber",
+          "type": "rectangle"
+        },
+        {
+          "name": "Foreign Matter",
+          "type": "rectangle"
+        },
+        {
+          "name": "HEMA Fragment",
+          "type": "rectangle"
+        },
+        {
+          "name": "Wet Package",
+          "type": "rectangle"
+        }
+      ]
+    },
+    {
+      "group": "updated_20260922",
+      "file": "Updated Annotations 20260922.xml",
+      "sha256": "f08a9f34ad13aaec7e115df59c0589b5ecdcb910807785670062c14e15d662c1",
+      "images": 6097,
+      "box_shapes": 183,
+      "tag_shapes": 4930,
+      "box_codes": {
+        "P2_BB": 25,
+        "P2_BC": 3,
+        "P2_BI": 1,
+        "P2_BST": 4,
+        "P2_WP": 2,
+        "P3_EP": 131,
+        "P3_FIB": 4,
+        "P3_FM": 9,
+        "P3_HE": 4
+      },
+      "tag_codes": {
+        "P1_COC": 183,
+        "P1_FL": 178,
+        "P1_ML": 1442,
+        "P1_MPP": 1552,
+        "P1_NL": 325,
+        "P2_BSC": 6,
+        "P2_DC": 125,
+        "P2_DS": 42,
+        "P2_HMO": 174,
+        "P2_LD": 100,
+        "P2_LOC": 803
+      },
+      "defined_labels": [
+        {
+          "name": "P1_MPP",
+          "type": "tag"
+        },
+        {
+          "name": "P1_PPM",
+          "type": "tag"
+        },
+        {
+          "name": "P1_COC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_FOV",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LOC",
+          "type": "tag"
+        },
+        {
+          "name": "P1_NL",
+          "type": "tag"
+        },
+        {
+          "name": "P1_ML",
+          "type": "tag"
+        },
+        {
+          "name": "P1_FL",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DS",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BSC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BC",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BI",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BST",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_WP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FIB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_HE",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FM",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_LD",
+          "type": "tag"
+        },
+        {
+          "name": "P2_HMO",
+          "type": "tag"
+        }
+      ]
+    },
+    {
+      "group": "production_20260925",
+      "file": "annotations_4521940.xml",
+      "sha256": "2e99f5ad714c93b515a77c2b4368f9c65178a61506db7c664e64f39692dbfa52",
+      "images": 150,
+      "box_shapes": 1695,
+      "tag_shapes": 149,
+      "box_codes": {
+        "P2_BB": 1302,
+        "P2_BC": 192,
+        "P2_BI": 15,
+        "P2_WP": 90,
+        "P3_EP": 4,
+        "P3_FIB": 24,
+        "P3_FM": 58,
+        "P3_HE": 10
+      },
+      "tag_codes": {
+        "F2_FOV": 1,
+        "P1_COC": 3,
+        "P1_FL": 8,
+        "P1_ML": 19,
+        "P1_MPP": 17,
+        "P2_DS": 3,
+        "P2_LD": 7,
+        "P2_LOC": 26,
+        "P3_EP_MICRON_THRESHOLD": 4,
+        "P3_FIB_MICRON_THRESHOLD": 19,
+        "P3_FM_MICRON_THRESHOLD": 32,
+        "P3_HE_MICRON_THRESHOLD": 10
+      },
+      "defined_labels": [
+        {
+          "name": "P1_MPP",
+          "type": "tag"
+        },
+        {
+          "name": "P1_PPM",
+          "type": "tag"
+        },
+        {
+          "name": "P1_COC",
+          "type": "tag"
+        },
+        {
+          "name": "F2_FOV",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LOC",
+          "type": "tag"
+        },
+        {
+          "name": "P1_NL",
+          "type": "tag"
+        },
+        {
+          "name": "P1_ML",
+          "type": "tag"
+        },
+        {
+          "name": "P1_FL",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DS",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BSC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LD",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BC",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BI",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BST",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_WP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FIB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_HE",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FM",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_FIB_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_FM_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_HE_MICRON_THRESHOLD",
+          "type": "tag"
+        }
+      ]
+    },
+    {
+      "group": "production_20260925",
+      "file": "annotations_4521941.xml",
+      "sha256": "e1af4ac9c948bdc76f391ab44a6c4a8385fc231ce9157fa77e3db5e464b380fb",
+      "images": 150,
+      "box_shapes": 1973,
+      "tag_shapes": 201,
+      "box_codes": {
+        "P2_BB": 1572,
+        "P2_BC": 163,
+        "P2_BI": 24,
+        "P2_WP": 108,
+        "P3_EP": 3,
+        "P3_FIB": 31,
+        "P3_FM": 61,
+        "P3_HE": 11
+      },
+      "tag_codes": {
+        "F2_FOV": 5,
+        "P1_FL": 20,
+        "P1_ML": 41,
+        "P1_MPP": 21,
+        "P1_PPM": 1,
+        "P2_DS": 2,
+        "P2_LD": 28,
+        "P2_LOC": 35,
+        "P3_EP_MICRON_THRESHOLD": 2,
+        "P3_FIB_MICRON_THRESHOLD": 13,
+        "P3_FM_MICRON_THRESHOLD": 22,
+        "P3_HE_MICRON_THRESHOLD": 11
+      },
+      "defined_labels": [
+        {
+          "name": "P1_MPP",
+          "type": "tag"
+        },
+        {
+          "name": "P1_PPM",
+          "type": "tag"
+        },
+        {
+          "name": "P1_COC",
+          "type": "tag"
+        },
+        {
+          "name": "F2_FOV",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LOC",
+          "type": "tag"
+        },
+        {
+          "name": "P1_NL",
+          "type": "tag"
+        },
+        {
+          "name": "P1_ML",
+          "type": "tag"
+        },
+        {
+          "name": "P1_FL",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DS",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BSC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LD",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BC",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BI",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BST",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_WP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FIB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_HE",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FM",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_FIB_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_FM_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_HE_MICRON_THRESHOLD",
+          "type": "tag"
+        }
+      ]
+    },
+    {
+      "group": "production_20260925",
+      "file": "annotations_4521942.xml",
+      "sha256": "75223ec213422f7d29cd42a10c0fa145aa21bafc6ec8a8c2a489f2c95039581c",
+      "images": 147,
+      "box_shapes": 1943,
+      "tag_shapes": 261,
+      "box_codes": {
+        "P2_BB": 1559,
+        "P2_BC": 149,
+        "P2_BI": 11,
+        "P2_BST": 3,
+        "P2_WP": 46,
+        "P3_EP": 2,
+        "P3_FIB": 31,
+        "P3_FM": 128,
+        "P3_HE": 14
+      },
+      "tag_codes": {
+        "P1_FL": 14,
+        "P1_ML": 28,
+        "P1_MPP": 24,
+        "P1_NL": 1,
+        "P2_DC": 64,
+        "P2_LD": 50,
+        "P2_LOC": 22,
+        "P3_EP_MICRON_THRESHOLD": 2,
+        "P3_FIB_MICRON_THRESHOLD": 18,
+        "P3_FM_MICRON_THRESHOLD": 24,
+        "P3_HE_MICRON_THRESHOLD": 14
+      },
+      "defined_labels": [
+        {
+          "name": "P1_MPP",
+          "type": "tag"
+        },
+        {
+          "name": "P1_PPM",
+          "type": "tag"
+        },
+        {
+          "name": "P1_COC",
+          "type": "tag"
+        },
+        {
+          "name": "F2_FOV",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LOC",
+          "type": "tag"
+        },
+        {
+          "name": "P1_NL",
+          "type": "tag"
+        },
+        {
+          "name": "P1_ML",
+          "type": "tag"
+        },
+        {
+          "name": "P1_FL",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DS",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BSC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LD",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BC",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BI",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BST",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_WP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FIB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_HE",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FM",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_FIB_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_FM_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_HE_MICRON_THRESHOLD",
+          "type": "tag"
+        }
+      ]
+    },
+    {
+      "group": "production_20260925",
+      "file": "annotations_4521943.xml",
+      "sha256": "19b647778c77487df842ebc14210072de10f276217773d14a8907b68850a16ff",
+      "images": 150,
+      "box_shapes": 2431,
+      "tag_shapes": 237,
+      "box_codes": {
+        "P2_BB": 1960,
+        "P2_BC": 228,
+        "P2_BI": 18,
+        "P2_WP": 37,
+        "P3_EP": 7,
+        "P3_FIB": 54,
+        "P3_FM": 104,
+        "P3_HE": 23
+      },
+      "tag_codes": {
+        "P1_COC": 10,
+        "P1_FL": 5,
+        "P1_ML": 29,
+        "P1_MPP": 8,
+        "P1_NL": 1,
+        "P2_DC": 29,
+        "P2_DS": 1,
+        "P2_LD": 11,
+        "P2_LOC": 45,
+        "P3_EP_MICRON_THRESHOLD": 5,
+        "P3_FIB_MICRON_THRESHOLD": 32,
+        "P3_FM_MICRON_THRESHOLD": 38,
+        "P3_HE_MICRON_THRESHOLD": 23
+      },
+      "defined_labels": [
+        {
+          "name": "P1_MPP",
+          "type": "tag"
+        },
+        {
+          "name": "P1_PPM",
+          "type": "tag"
+        },
+        {
+          "name": "P1_COC",
+          "type": "tag"
+        },
+        {
+          "name": "F2_FOV",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LOC",
+          "type": "tag"
+        },
+        {
+          "name": "P1_NL",
+          "type": "tag"
+        },
+        {
+          "name": "P1_ML",
+          "type": "tag"
+        },
+        {
+          "name": "P1_FL",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DS",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BSC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LD",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BC",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BI",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BST",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_WP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FIB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_HE",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FM",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_FIB_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_FM_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_HE_MICRON_THRESHOLD",
+          "type": "tag"
+        }
+      ]
+    },
+    {
+      "group": "production_20260925",
+      "file": "annotations_4521944.xml",
+      "sha256": "8e1caf892ddfaaf04977b97b7720042d4c544fdcef47457f2e22eb54a0a6f791",
+      "images": 150,
+      "box_shapes": 1816,
+      "tag_shapes": 224,
+      "box_codes": {
+        "P2_BB": 1474,
+        "P2_BC": 129,
+        "P2_BI": 27,
+        "P2_WP": 28,
+        "P3_EP": 8,
+        "P3_FIB": 26,
+        "P3_FM": 107,
+        "P3_HE": 17
+      },
+      "tag_codes": {
+        "F2_FOV": 18,
+        "P1_COC": 2,
+        "P1_FL": 4,
+        "P1_ML": 16,
+        "P1_MPP": 24,
+        "P2_DC": 55,
+        "P2_DS": 4,
+        "P2_LD": 10,
+        "P2_LOC": 23,
+        "P3_EP_MICRON_THRESHOLD": 7,
+        "P3_FIB_MICRON_THRESHOLD": 21,
+        "P3_FM_MICRON_THRESHOLD": 23,
+        "P3_HE_MICRON_THRESHOLD": 17
+      },
+      "defined_labels": [
+        {
+          "name": "P1_MPP",
+          "type": "tag"
+        },
+        {
+          "name": "P1_PPM",
+          "type": "tag"
+        },
+        {
+          "name": "P1_COC",
+          "type": "tag"
+        },
+        {
+          "name": "F2_FOV",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LOC",
+          "type": "tag"
+        },
+        {
+          "name": "P1_NL",
+          "type": "tag"
+        },
+        {
+          "name": "P1_ML",
+          "type": "tag"
+        },
+        {
+          "name": "P1_FL",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DS",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BSC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LD",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BC",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BI",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BST",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_WP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FIB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_HE",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FM",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_FIB_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_FM_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_HE_MICRON_THRESHOLD",
+          "type": "tag"
+        }
+      ]
+    },
+    {
+      "group": "production_20260925",
+      "file": "annotations_4521945.xml",
+      "sha256": "b878ea4463d9e3033a89263dcc6b6d724ea3a50fad2b0b1f1c32fdb8b3a94659",
+      "images": 150,
+      "box_shapes": 1296,
+      "tag_shapes": 186,
+      "box_codes": {
+        "P2_BB": 1064,
+        "P2_BC": 121,
+        "P2_BI": 14,
+        "P2_WP": 16,
+        "P3_EP": 11,
+        "P3_FIB": 4,
+        "P3_FM": 53,
+        "P3_HE": 13
+      },
+      "tag_codes": {
+        "P1_COC": 7,
+        "P1_FL": 5,
+        "P1_ML": 17,
+        "P1_MPP": 80,
+        "P1_NL": 1,
+        "P2_DC": 10,
+        "P2_DS": 8,
+        "P2_LD": 3,
+        "P2_LOC": 15,
+        "P3_EP_MICRON_THRESHOLD": 10,
+        "P3_FIB_MICRON_THRESHOLD": 4,
+        "P3_FM_MICRON_THRESHOLD": 14,
+        "P3_HE_MICRON_THRESHOLD": 12
+      },
+      "defined_labels": [
+        {
+          "name": "P1_MPP",
+          "type": "tag"
+        },
+        {
+          "name": "P1_PPM",
+          "type": "tag"
+        },
+        {
+          "name": "P1_COC",
+          "type": "tag"
+        },
+        {
+          "name": "F2_FOV",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LOC",
+          "type": "tag"
+        },
+        {
+          "name": "P1_NL",
+          "type": "tag"
+        },
+        {
+          "name": "P1_ML",
+          "type": "tag"
+        },
+        {
+          "name": "P1_FL",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DS",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BSC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LD",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BC",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BI",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BST",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_WP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FIB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_HE",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FM",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_FIB_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_FM_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_HE_MICRON_THRESHOLD",
+          "type": "tag"
+        }
+      ]
+    },
+    {
+      "group": "production_20260925",
+      "file": "annotations_4521946.xml",
+      "sha256": "4c7a4e7b8368cba41b9f880eee776a7ac54f3826df6b74c54fb166f4e9d47cdf",
+      "images": 150,
+      "box_shapes": 1639,
+      "tag_shapes": 229,
+      "box_codes": {
+        "P2_BB": 1144,
+        "P2_BC": 89,
+        "P2_BI": 19,
+        "P2_WP": 266,
+        "P3_EP": 4,
+        "P3_FIB": 49,
+        "P3_FM": 60,
+        "P3_HE": 8
+      },
+      "tag_codes": {
+        "P1_COC": 13,
+        "P1_FL": 3,
+        "P1_ML": 19,
+        "P1_MPP": 52,
+        "P1_NL": 3,
+        "P1_PPM": 1,
+        "P2_DC": 46,
+        "P2_DS": 4,
+        "P2_LD": 9,
+        "P2_LOC": 21,
+        "P3_EP_MICRON_THRESHOLD": 3,
+        "P3_FIB_MICRON_THRESHOLD": 29,
+        "P3_FM_MICRON_THRESHOLD": 18,
+        "P3_HE_MICRON_THRESHOLD": 8
+      },
+      "defined_labels": [
+        {
+          "name": "P1_MPP",
+          "type": "tag"
+        },
+        {
+          "name": "P1_PPM",
+          "type": "tag"
+        },
+        {
+          "name": "P1_COC",
+          "type": "tag"
+        },
+        {
+          "name": "F2_FOV",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LOC",
+          "type": "tag"
+        },
+        {
+          "name": "P1_NL",
+          "type": "tag"
+        },
+        {
+          "name": "P1_ML",
+          "type": "tag"
+        },
+        {
+          "name": "P1_FL",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DS",
+          "type": "tag"
+        },
+        {
+          "name": "P2_DC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BSC",
+          "type": "tag"
+        },
+        {
+          "name": "P2_LD",
+          "type": "tag"
+        },
+        {
+          "name": "P2_BB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BC",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BI",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_BST",
+          "type": "rectangle"
+        },
+        {
+          "name": "P2_WP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FIB",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_HE",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_FM",
+          "type": "rectangle"
+        },
+        {
+          "name": "P3_EP_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_FIB_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_FM_MICRON_THRESHOLD",
+          "type": "tag"
+        },
+        {
+          "name": "P3_HE_MICRON_THRESHOLD",
+          "type": "tag"
+        }
+      ]
+    }
+  ],
+  "used_codes_by_group": {
+    "project2": [
+      "Bubble",
+      "Bubble Cluster",
+      "Bubble Irregular",
+      "Bubble On 123",
+      "Bubble On Edge",
+      "Extraneous Polymer",
+      "Fiber",
+      "Foreign Matter",
+      "HEMA Fragment",
+      "Wet Package"
+    ],
+    "updated_20260922": [
+      "P1_COC",
+      "P1_FL",
+      "P1_ML",
+      "P1_MPP",
+      "P1_NL",
+      "P2_BB",
+      "P2_BC",
+      "P2_BI",
+      "P2_BSC",
+      "P2_BST",
+      "P2_DC",
+      "P2_DS",
+      "P2_HMO",
+      "P2_LD",
+      "P2_LOC",
+      "P2_WP",
+      "P3_EP",
+      "P3_FIB",
+      "P3_FM",
+      "P3_HE"
+    ],
+    "production_20260925": [
+      "F2_FOV",
+      "P1_COC",
+      "P1_FL",
+      "P1_ML",
+      "P1_MPP",
+      "P1_NL",
+      "P1_PPM",
+      "P2_BB",
+      "P2_BC",
+      "P2_BI",
+      "P2_BST",
+      "P2_DC",
+      "P2_DS",
+      "P2_LD",
+      "P2_LOC",
+      "P2_WP",
+      "P3_EP",
+      "P3_EP_MICRON_THRESHOLD",
+      "P3_FIB",
+      "P3_FIB_MICRON_THRESHOLD",
+      "P3_FM",
+      "P3_FM_MICRON_THRESHOLD",
+      "P3_HE",
+      "P3_HE_MICRON_THRESHOLD"
+    ]
+  },
+  "coverage": {
+    "project2": {
+      "used_on_shapes": [
+        "Bubble",
+        "Bubble Cluster",
+        "Bubble Irregular",
+        "Bubble On 123",
+        "Bubble On Edge",
+        "Extraneous Polymer",
+        "Fiber",
+        "Foreign Matter",
+        "HEMA Fragment",
+        "Wet Package"
+      ],
+      "used_count": 10,
+      "listed_in_crosswalk": [
+        "Bubble",
+        "Bubble Cluster",
+        "Bubble Irregular",
+        "Bubble On 123",
+        "Bubble On Edge",
+        "Extraneous Polymer",
+        "Fiber",
+        "Foreign Matter",
+        "HEMA Fragment",
+        "Wet Package"
+      ],
+      "missing_from_crosswalk": []
+    },
+    "updated_20260922": {
+      "used_on_shapes": [
+        "P1_COC",
+        "P1_FL",
+        "P1_ML",
+        "P1_MPP",
+        "P1_NL",
+        "P2_BB",
+        "P2_BC",
+        "P2_BI",
+        "P2_BSC",
+        "P2_BST",
+        "P2_DC",
+        "P2_DS",
+        "P2_HMO",
+        "P2_LD",
+        "P2_LOC",
+        "P2_WP",
+        "P3_EP",
+        "P3_FIB",
+        "P3_FM",
+        "P3_HE"
+      ],
+      "used_count": 20,
+      "listed_in_crosswalk": [
+        "P1_COC",
+        "P1_FL",
+        "P1_ML",
+        "P1_MPP",
+        "P1_NL",
+        "P1_PPM",
+        "P2_BB",
+        "P2_BC",
+        "P2_BI",
+        "P2_BSC",
+        "P2_BST",
+        "P2_DC",
+        "P2_DS",
+        "P2_FOV",
+        "P2_HMO",
+        "P2_LD",
+        "P2_LOC",
+        "P2_WP",
+        "P3_EP",
+        "P3_FIB",
+        "P3_FM",
+        "P3_HE"
+      ],
+      "missing_from_crosswalk": []
+    },
+    "production_20260925": {
+      "used_on_shapes": [
+        "F2_FOV",
+        "P1_COC",
+        "P1_FL",
+        "P1_ML",
+        "P1_MPP",
+        "P1_NL",
+        "P1_PPM",
+        "P2_BB",
+        "P2_BC",
+        "P2_BI",
+        "P2_BST",
+        "P2_DC",
+        "P2_DS",
+        "P2_LD",
+        "P2_LOC",
+        "P2_WP",
+        "P3_EP",
+        "P3_EP_MICRON_THRESHOLD",
+        "P3_FIB",
+        "P3_FIB_MICRON_THRESHOLD",
+        "P3_FM",
+        "P3_FM_MICRON_THRESHOLD",
+        "P3_HE",
+        "P3_HE_MICRON_THRESHOLD"
+      ],
+      "used_count": 24,
+      "listed_in_crosswalk": [
+        "F2_FOV",
+        "P1_COC",
+        "P1_FL",
+        "P1_ML",
+        "P1_MPP",
+        "P1_NL",
+        "P1_PPM",
+        "P2_BB",
+        "P2_BC",
+        "P2_BI",
+        "P2_BSC",
+        "P2_BST",
+        "P2_DC",
+        "P2_DS",
+        "P2_LD",
+        "P2_LOC",
+        "P2_WP",
+        "P3_EP",
+        "P3_EP_MICRON_THRESHOLD",
+        "P3_FIB",
+        "P3_FIB_MICRON_THRESHOLD",
+        "P3_FM",
+        "P3_FM_MICRON_THRESHOLD",
+        "P3_HE",
+        "P3_HE_MICRON_THRESHOLD"
+      ],
+      "missing_from_crosswalk": []
+    }
+  },
+  "gate_subset_check": {
+    "gates": {
+      "P3_FM_MICRON_THRESHOLD": {
+        "base_code": "P3_FM",
+        "images_with_gate": 171,
+        "images_with_gate_and_base": 171,
+        "ok": true
+      },
+      "P3_FIB_MICRON_THRESHOLD": {
+        "base_code": "P3_FIB",
+        "images_with_gate": 136,
+        "images_with_gate_and_base": 136,
+        "ok": true
+      },
+      "P3_EP_MICRON_THRESHOLD": {
+        "base_code": "P3_EP",
+        "images_with_gate": 33,
+        "images_with_gate_and_base": 33,
+        "ok": true
+      },
+      "P3_HE_MICRON_THRESHOLD": {
+        "base_code": "P3_HE",
+        "images_with_gate": 95,
+        "images_with_gate_and_base": 95,
+        "ok": true
+      }
+    },
+    "failures": 0
+  },
+  "source_kinds": {
+    "bubble": {
+      "kind_project2": "box",
+      "kind_updated_20260922": "box",
+      "kind_production_20260925": "box",
+      "used_project2": "yes",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "box"
+    },
+    "bubble_cluster": {
+      "kind_project2": "box",
+      "kind_updated_20260922": "box",
+      "kind_production_20260925": "box",
+      "used_project2": "yes",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "box"
+    },
+    "bubble_irregular": {
+      "kind_project2": "box",
+      "kind_updated_20260922": "box",
+      "kind_production_20260925": "box",
+      "used_project2": "yes",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "box"
+    },
+    "stretched_bubble": {
+      "kind_project2": "",
+      "kind_updated_20260922": "box",
+      "kind_production_20260925": "box",
+      "used_project2": "",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "box"
+    },
+    "extraneous_polymer": {
+      "kind_project2": "box",
+      "kind_updated_20260922": "box",
+      "kind_production_20260925": "box",
+      "used_project2": "yes",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "box"
+    },
+    "fiber": {
+      "kind_project2": "box",
+      "kind_updated_20260922": "box",
+      "kind_production_20260925": "box",
+      "used_project2": "yes",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "box"
+    },
+    "foreign_matter": {
+      "kind_project2": "box",
+      "kind_updated_20260922": "box",
+      "kind_production_20260925": "box",
+      "used_project2": "yes",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "box"
+    },
+    "hema_fragment": {
+      "kind_project2": "box",
+      "kind_updated_20260922": "box",
+      "kind_production_20260925": "",
+      "used_project2": "yes",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "",
+      "kind_conflict": "no",
+      "kind": "box"
+    },
+    "hema_obstruction": {
+      "kind_project2": "",
+      "kind_updated_20260922": "tag",
+      "kind_production_20260925": "box",
+      "used_project2": "",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "yes",
+      "kind": "box|tag"
+    },
+    "wet_package": {
+      "kind_project2": "box",
+      "kind_updated_20260922": "box",
+      "kind_production_20260925": "box",
+      "used_project2": "yes",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "box"
+    },
+    "bubble_on_123": {
+      "kind_project2": "box",
+      "kind_updated_20260922": "",
+      "kind_production_20260925": "",
+      "used_project2": "yes",
+      "used_updated_20260922": "",
+      "used_production_20260925": "",
+      "kind_conflict": "no",
+      "kind": "box"
+    },
+    "bubble_on_edge": {
+      "kind_project2": "box",
+      "kind_updated_20260922": "",
+      "kind_production_20260925": "",
+      "used_project2": "yes",
+      "used_updated_20260922": "",
+      "used_production_20260925": "",
+      "kind_conflict": "no",
+      "kind": "box"
+    },
+    "missing_primary_package": {
+      "kind_project2": "",
+      "kind_updated_20260922": "tag",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "tag"
+    },
+    "multiple_lenses": {
+      "kind_project2": "",
+      "kind_updated_20260922": "tag",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "tag"
+    },
+    "lens_off_center": {
+      "kind_project2": "",
+      "kind_updated_20260922": "tag",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "tag"
+    },
+    "missing_lens": {
+      "kind_project2": "",
+      "kind_updated_20260922": "tag",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "tag"
+    },
+    "cavity_off_center": {
+      "kind_project2": "",
+      "kind_updated_20260922": "tag",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "tag"
+    },
+    "folded_lens": {
+      "kind_project2": "",
+      "kind_updated_20260922": "tag",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "tag"
+    },
+    "dirty_camera": {
+      "kind_project2": "",
+      "kind_updated_20260922": "tag",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "tag"
+    },
+    "low_dose": {
+      "kind_project2": "",
+      "kind_updated_20260922": "tag",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "tag"
+    },
+    "dirty_strobe": {
+      "kind_project2": "",
+      "kind_updated_20260922": "tag",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "tag"
+    },
+    "bubble_scatter": {
+      "kind_project2": "",
+      "kind_updated_20260922": "tag",
+      "kind_production_20260925": "defined_only",
+      "used_project2": "",
+      "used_updated_20260922": "yes",
+      "used_production_20260925": "no",
+      "kind_conflict": "no",
+      "kind": "tag"
+    },
+    "package_misalignment": {
+      "kind_project2": "",
+      "kind_updated_20260922": "defined_only",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "no",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "tag"
+    },
+    "view_obstructed": {
+      "kind_project2": "",
+      "kind_updated_20260922": "defined_only",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "no",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "tag"
+    },
+    "foreign_matter_micron_gate": {
+      "kind_project2": "",
+      "kind_updated_20260922": "",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "gate"
+    },
+    "fiber_micron_gate": {
+      "kind_project2": "",
+      "kind_updated_20260922": "",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "gate"
+    },
+    "extraneous_polymer_micron_gate": {
+      "kind_project2": "",
+      "kind_updated_20260922": "",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "gate"
+    },
+    "hema_micron_gate": {
+      "kind_project2": "",
+      "kind_updated_20260922": "",
+      "kind_production_20260925": "tag",
+      "used_project2": "",
+      "used_updated_20260922": "",
+      "used_production_20260925": "yes",
+      "kind_conflict": "no",
+      "kind": "gate"
+    }
+  },
+  "kind_conflict_rows": [
+    "hema_obstruction"
+  ],
+  "crosswalk": {
+    "path": "data/crosswalk.csv",
+    "rows": 28,
+    "md5": "a33b1d96d6fc1ac0021a8d1372f4d875",
+    "sha256": "38fc8ca7bfe671bad8061f958425d2fb240081d6c313fd5c4956326c0c0e5270",
+    "columns": [
+      "canonical_id",
+      "canonical_name",
+      "kind",
+      "kind_conflict",
+      "code_in_project2",
+      "code_in_updated_20260922",
+      "code_in_production_20260925",
+      "kind_project2",
+      "kind_updated_20260922",
+      "kind_production_20260925",
+      "used_project2",
+      "used_updated_20260922",
+      "used_production_20260925",
+      "library_folder_name",
+      "is_size_gate",
+      "gate_base_code",
+      "collision_flag",
+      "mapping_evidence",
+      "open_question"
+    ]
+  },
+  "collision_flags": {
+    "P3_HE_shared_code": "P3_HE is HEMA Fragment (box) in the Sep-22 project and HEMA Obstruction (box) in the 7 production files.",
+    "F2_FOV_naming_anomaly": "View Obstructed is P2_FOV in the Sep-22 project and F2_FOV in the production files."
+  },
+  "checks": [
+    {
+      "name": "every_used_code_in_crosswalk",
+      "ok": true,
+      "note": "all 9 files covered"
+    },
+    {
+      "name": "gate_subset_holds",
+      "ok": true,
+      "note": "0 gate(s) failed"
+    },
+    {
+      "name": "collisions_flagged_and_answered",
+      "ok": true,
+      "note": "collision flags: ['F2_FOV_naming_anomaly', 'P3_HE_shared_code']"
+    },
+    {
+      "name": "unmapped_library_names_carry_a_question",
+      "ok": true,
+      "note": "unmapped library names: ['Bubble On 123', 'Bubble On Edge']"
+    },
+    {
+      "name": "mapped_library_names_carry_evidence",
+      "ok": true,
+      "note": "mapped library names: 8"
+    },
+    {
+      "name": "kinds_valid",
+      "ok": true,
+      "note": "box|tag|gate, pipe-joined where sources disagree"
+    },
+    {
+      "name": "canonical_ids_unique",
+      "ok": true,
+      "note": "28 rows"
+    },
+    {
+      "name": "authored_kind_matches_the_files",
+      "ok": true,
+      "note": "every authored kind matches the shape kinds in the exports"
+    },
+    {
+      "name": "source_dependent_kind_is_flagged_and_questioned",
+      "ok": true,
+      "note": "source-dependent kinds: ['hema_obstruction']"
+    },
+    {
+      "name": "defined_only_cells_are_not_counted_as_shapes",
+      "ok": true,
+      "note": "3 defined-only cells: [('bubble_scatter', 'production_20260925'), ('package_misalignment', 'updated_20260922'), ('view_obstructed', 'updated_20260922')]"
+    }
+  ],
+  "check_count": 10,
+  "failed_count": 0
+}

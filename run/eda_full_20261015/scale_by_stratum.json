@@ -1,0 +1,538 @@
+{
+  "Library|L24": {
+    "capped": false,
+    "cavity_px": {
+      "mean": 829.7,
+      "p25": 814.0,
+      "p50": 825.5,
+      "p75": 873.5
+    },
+    "clean_rim_px": {
+      "band_px": [
+        640.0,
+        900.0
+      ],
+      "mean": 746.3,
+      "n": 110,
+      "p25": 712.5,
+      "p50": 756.0,
+      "p75": 786.0,
+      "rel_spread_pct": 6.4,
+      "sd": 48.1
+    },
+    "contamination_pct": 41.8,
+    "failed_n": 11,
+    "flag_counts": {
+      "no_dip": 3,
+      "no_mask": 8,
+      "ok": 189
+    },
+    "folder_group": "Library",
+    "implied_um_per_px_at_our_14200um_reference": {
+      "from_mean": 22.1831,
+      "from_p50": 20.6395,
+      "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L24",
+    "measured_ok_n": 189,
+    "rim_px": {
+      "max": 838.0,
+      "mean": 640.1,
+      "min": 270.0,
+      "p25": 492.0,
+      "p50": 688.0,
+      "p75": 762.0,
+      "rel_spread_pct": 21.5,
+      "sd": 137.7,
+      "trimmed_mean_15pct": 650.8
+    },
+    "sampled_n": 200,
+    "target_n": 200,
+    "universe_n": 788
+  },
+  "Library|L25": {
+    "capped": true,
+    "cavity_px": {
+      "mean": 787.6,
+      "p25": 772.0,
+      "p50": 864.5,
+      "p75": 881.0
+    },
+    "clean_rim_px": {
+      "band_px": [
+        640.0,
+        900.0
+      ],
+      "mean": 769.2,
+      "n": 104,
+      "p25": 751.0,
+      "p50": 780.0,
+      "p75": 800.0,
+      "rel_spread_pct": 5.5,
+      "sd": 42.1
+    },
+    "contamination_pct": 32.0,
+    "failed_n": 2,
+    "flag_counts": {
+      "no_mask": 2,
+      "ok": 153
+    },
+    "folder_group": "Library",
+    "implied_um_per_px_at_our_14200um_reference": {
+      "from_mean": 21.4811,
+      "from_p50": 18.7831,
+      "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L25",
+    "measured_ok_n": 153,
+    "rim_px": {
+      "max": 862.0,
+      "mean": 661.0,
+      "min": 208.0,
+      "p25": 498.0,
+      "p50": 756.0,
+      "p75": 790.0,
+      "rel_spread_pct": 25.7,
+      "sd": 169.7,
+      "trimmed_mean_15pct": 693.4
+    },
+    "sampled_n": 155,
+    "target_n": 200,
+    "universe_n": 155
+  },
+  "Library|L26": {
+    "capped": false,
+    "cavity_px": {
+      "mean": 866.6,
+      "p25": 861.4,
+      "p50": 878.0,
+      "p75": 891.1
+    },
+    "clean_rim_px": {
+      "band_px": [
+        640.0,
+        900.0
+      ],
+      "mean": 764.1,
+      "n": 177,
+      "p25": 740.0,
+      "p50": 770.0,
+      "p75": 792.0,
+      "rel_spread_pct": 5.3,
+      "sd": 40.3
+    },
+    "contamination_pct": 11.5,
+    "failed_n": 0,
+    "flag_counts": {
+      "ok": 200
+    },
+    "folder_group": "Library",
+    "implied_um_per_px_at_our_14200um_reference": {
+      "from_mean": 19.3791,
+      "from_p50": 18.6107,
+      "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L26",
+    "measured_ok_n": 200,
+    "rim_px": {
+      "max": 870.0,
+      "mean": 732.8,
+      "min": 100.0,
+      "p25": 717.5,
+      "p50": 763.0,
+      "p75": 790.0,
+      "rel_spread_pct": 14.1,
+      "sd": 103.5,
+      "trimmed_mean_15pct": 757.9
+    },
+    "sampled_n": 200,
+    "target_n": 200,
+    "universe_n": 205
+  },
+  "Library|L27": {
+    "capped": true,
+    "cavity_px": {
+      "mean": 838.4,
+      "p25": 848.0,
+      "p50": 866.0,
+      "p75": 881.0
+    },
+    "clean_rim_px": {
+      "band_px": [
+        640.0,
+        900.0
+      ],
+      "mean": 727.3,
+      "n": 73,
+      "p25": 684.0,
+      "p50": 728.0,
+      "p75": 772.0,
+      "rel_spread_pct": 7.1,
+      "sd": 51.7
+    },
+    "contamination_pct": 30.5,
+    "failed_n": 10,
+    "flag_counts": {
+      "no_mask": 10,
+      "ok": 105
+    },
+    "folder_group": "Library",
+    "implied_um_per_px_at_our_14200um_reference": {
+      "from_mean": 21.5668,
+      "from_p50": 20.6395,
+      "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L27",
+    "measured_ok_n": 105,
+    "rim_px": {
+      "max": 926.0,
+      "mean": 658.4,
+      "min": 176.0,
+      "p25": 606.0,
+      "p50": 688.0,
+      "p75": 762.0,
+      "rel_spread_pct": 20.5,
+      "sd": 135.2,
+      "trimmed_mean_15pct": 680.6
+    },
+    "sampled_n": 115,
+    "target_n": 200,
+    "universe_n": 115
+  },
+  "Library|L31": {
+    "capped": true,
+    "cavity_px": {
+      "mean": 873.0,
+      "p25": 854.8,
+      "p50": 873.0,
+      "p75": 885.8
+    },
+    "clean_rim_px": {
+      "band_px": [
+        640.0,
+        900.0
+      ],
+      "mean": 754.6,
+      "n": 115,
+      "p25": 733.0,
+      "p50": 756.0,
+      "p75": 777.0,
+      "rel_spread_pct": 5.1,
+      "sd": 38.3
+    },
+    "contamination_pct": 17.3,
+    "failed_n": 0,
+    "flag_counts": {
+      "ok": 139
+    },
+    "folder_group": "Library",
+    "implied_um_per_px_at_our_14200um_reference": {
+      "from_mean": 19.6927,
+      "from_p50": 18.9333,
+      "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L31",
+    "measured_ok_n": 139,
+    "rim_px": {
+      "max": 934.0,
+      "mean": 721.1,
+      "min": 450.0,
+      "p25": 708.0,
+      "p50": 750.0,
+      "p75": 774.0,
+      "rel_spread_pct": 12.5,
+      "sd": 90.0,
+      "trimmed_mean_15pct": 740.1
+    },
+    "sampled_n": 139,
+    "target_n": 200,
+    "universe_n": 139
+  },
+  "Updated|L24": {
+    "capped": false,
+    "cavity_px": {
+      "mean": 860.5,
+      "p25": 817.8,
+      "p50": 880.5,
+      "p75": 900.0
+    },
+    "clean_rim_px": {
+      "band_px": [
+        640.0,
+        900.0
+      ],
+      "mean": 767.3,
+      "n": 135,
+      "p25": 745.0,
+      "p50": 774.0,
+      "p75": 802.0,
+      "rel_spread_pct": 6.0,
+      "sd": 46.2
+    },
+    "contamination_pct": 32.2,
+    "failed_n": 1,
+    "flag_counts": {
+      "no_dip": 1,
+      "ok": 199
+    },
+    "folder_group": "Updated",
+    "implied_um_per_px_at_our_14200um_reference": {
+      "from_mean": 20.6115,
+      "from_p50": 18.984,
+      "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L24",
+    "measured_ok_n": 199,
+    "rim_px": {
+      "max": 868.0,
+      "mean": 688.9,
+      "min": 392.0,
+      "p25": 595.0,
+      "p50": 748.0,
+      "p75": 786.0,
+      "rel_spread_pct": 18.2,
+      "sd": 125.7,
+      "trimmed_mean_15pct": 707.6
+    },
+    "sampled_n": 200,
+    "target_n": 200,
+    "universe_n": 4272
+  },
+  "Updated|L25": {
+    "capped": false,
+    "cavity_px": {
+      "mean": 832.8,
+      "p25": 824.5,
+      "p50": 858.5,
+      "p75": 886.5
+    },
+    "clean_rim_px": {
+      "band_px": [
+        640.0,
+        900.0
+      ],
+      "mean": 762.5,
+      "n": 129,
+      "p25": 728.0,
+      "p50": 768.0,
+      "p75": 796.0,
+      "rel_spread_pct": 6.1,
+      "sd": 46.1
+    },
+    "contamination_pct": 34.5,
+    "failed_n": 3,
+    "flag_counts": {
+      "no_mask": 3,
+      "ok": 197
+    },
+    "folder_group": "Updated",
+    "implied_um_per_px_at_our_14200um_reference": {
+      "from_mean": 21.0552,
+      "from_p50": 19.6676,
+      "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L25",
+    "measured_ok_n": 197,
+    "rim_px": {
+      "max": 862.0,
+      "mean": 674.4,
+      "min": 224.0,
+      "p25": 572.0,
+      "p50": 722.0,
+      "p75": 778.0,
+      "rel_spread_pct": 20.3,
+      "sd": 136.7,
+      "trimmed_mean_15pct": 694.6
+    },
+    "sampled_n": 200,
+    "target_n": 200,
+    "universe_n": 948
+  },
+  "Updated|L26": {
+    "capped": false,
+    "cavity_px": {
+      "mean": 861.9,
+      "p25": 850.6,
+      "p50": 866.0,
+      "p75": 884.5
+    },
+    "clean_rim_px": {
+      "band_px": [
+        640.0,
+        900.0
+      ],
+      "mean": 763.8,
+      "n": 153,
+      "p25": 742.0,
+      "p50": 770.0,
+      "p75": 792.0,
+      "rel_spread_pct": 5.3,
+      "sd": 40.2
+    },
+    "contamination_pct": 21.1,
+    "failed_n": 6,
+    "flag_counts": {
+      "no_dip": 4,
+      "no_mask": 2,
+      "ok": 194
+    },
+    "folder_group": "Updated",
+    "implied_um_per_px_at_our_14200um_reference": {
+      "from_mean": 19.8427,
+      "from_p50": 18.6842,
+      "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L26",
+    "measured_ok_n": 194,
+    "rim_px": {
+      "max": 846.0,
+      "mean": 715.6,
+      "min": 196.0,
+      "p25": 688.0,
+      "p50": 760.0,
+      "p75": 784.0,
+      "rel_spread_pct": 14.7,
+      "sd": 105.1,
+      "trimmed_mean_15pct": 738.7
+    },
+    "sampled_n": 200,
+    "target_n": 200,
+    "universe_n": 1475
+  },
+  "Updated|L27": {
+    "capped": false,
+    "cavity_px": {
+      "mean": 862.6,
+      "p25": 854.5,
+      "p50": 865.8,
+      "p75": 877.5
+    },
+    "clean_rim_px": {
+      "band_px": [
+        640.0,
+        900.0
+      ],
+      "mean": 738.6,
+      "n": 163,
+      "p25": 709.0,
+      "p50": 744.0,
+      "p75": 769.0,
+      "rel_spread_pct": 5.6,
+      "sd": 41.6
+    },
+    "contamination_pct": 14.2,
+    "failed_n": 10,
+    "flag_counts": {
+      "no_dip": 9,
+      "no_mask": 1,
+      "ok": 190
+    },
+    "folder_group": "Updated",
+    "implied_um_per_px_at_our_14200um_reference": {
+      "from_mean": 19.9367,
+      "from_p50": 19.3197,
+      "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L27",
+    "measured_ok_n": 190,
+    "rim_px": {
+      "max": 840.0,
+      "mean": 712.3,
+      "min": 398.0,
+      "p25": 682.0,
+      "p50": 735.0,
+      "p75": 762.0,
+      "rel_spread_pct": 11.3,
+      "sd": 80.3,
+      "trimmed_mean_15pct": 727.3
+    },
+    "sampled_n": 200,
+    "target_n": 200,
+    "universe_n": 1610
+  },
+  "Updated|L31": {
+    "capped": false,
+    "cavity_px": {
+      "mean": 852.3,
+      "p25": 830.2,
+      "p50": 851.5,
+      "p75": 876.8
+    },
+    "clean_rim_px": {
+      "band_px": [
+        640.0,
+        900.0
+      ],
+      "mean": 750.8,
+      "n": 170,
+      "p25": 732.5,
+      "p50": 758.0,
+      "p75": 772.0,
+      "rel_spread_pct": 4.4,
+      "sd": 32.8
+    },
+    "contamination_pct": 12.8,
+    "failed_n": 5,
+    "flag_counts": {
+      "no_mask": 5,
+      "ok": 195
+    },
+    "folder_group": "Updated",
+    "implied_um_per_px_at_our_14200um_reference": {
+      "from_mean": 19.5,
+      "from_p50": 18.9333,
+      "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L31",
+    "measured_ok_n": 195,
+    "rim_px": {
+      "max": 920.0,
+      "mean": 728.2,
+      "min": 452.0,
+      "p25": 716.0,
+      "p50": 750.0,
+      "p75": 770.0,
+      "rel_spread_pct": 10.0,
+      "sd": 73.0,
+      "trimmed_mean_15pct": 744.8
+    },
+    "sampled_n": 200,
+    "target_n": 200,
+    "universe_n": 2132
+  },
+  "_comparison": {
+    "between_stratum_clean_rim_p50_px": {
+      "max": 780.0,
+      "min": 728.0,
+      "range_pct_of_mean": 6.8,
+      "range_px": 52.0
+    },
+    "between_stratum_rim_p50_px": {
+      "max": 763.0,
+      "min": 688.0,
+      "range_pct_of_mean": 10.2,
+      "range_px": 75.0
+    },
+    "note": "between-stratum spread is compared with the within-stratum spread above; the clean band is 640 to 900 px",
+    "strata": [
+      "Updated|L24",
+      "Updated|L25",
+      "Updated|L26",
+      "Updated|L27",
+      "Updated|L31",
+      "Library|L24",
+      "Library|L25",
+      "Library|L26",
+      "Library|L27",
+      "Library|L31"
+    ],
+    "within_stratum_clean_rim_sd_px": {
+      "max": 51.7,
+      "min": 32.8
+    },
+    "within_stratum_rim_sd_px": {
+      "max": 169.7,
+      "min": 73.0
+    }
+  }
+}

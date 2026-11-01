@@ -1,0 +1,129 @@
+{
+ "population": {
+  "boxes_total": 14182,
+  "pictures_with_a_box": 1130,
+  "unclaimed_codes": {}
+ },
+ "classes": {
+  "Bubble": {
+   "objects": 11045,
+   "pictures": 862,
+   "codes": [
+    "P2_BB",
+    "P2_BI",
+    "P2_BST",
+    "Bubble",
+    "Bubble Irregular"
+   ],
+   "by_code": {
+    "P2_BB": 10070,
+    "P2_BI": 128,
+    "P2_BST": 7,
+    "Bubble": 799,
+    "Bubble Irregular": 41
+   }
+  },
+  "Bubble Cluster": {
+   "objects": 1182,
+   "pictures": 428,
+   "codes": [
+    "P2_BC",
+    "Bubble Cluster"
+   ],
+   "by_code": {
+    "P2_BC": 1070,
+    "Bubble Cluster": 112
+   }
+  },
+  "Wet Package": {
+   "objects": 662,
+   "pictures": 146,
+   "codes": [
+    "P2_WP",
+    "Wet Package"
+   ],
+   "by_code": {
+    "P2_WP": 593,
+    "Wet Package": 69
+   }
+  },
+  "Surface Groove": {
+   "objects": 0,
+   "pictures": 0,
+   "codes": [],
+   "by_code": {}
+  },
+  "Fiber": {
+   "objects": 245,
+   "pictures": 178,
+   "codes": [
+    "P3_FIB",
+    "Fiber"
+   ],
+   "by_code": {
+    "P3_FIB": 223,
+    "Fiber": 22
+   }
+  },
+  "Extraneous Polymer": {
+   "objects": 150,
+   "pictures": 144,
+   "codes": [
+    "P3_EP",
+    "Extraneous Polymer"
+   ],
+   "by_code": {
+    "P3_EP": 149,
+    "Extraneous Polymer": 1
+   }
+  },
+  "HEMA": {
+   "objects": 103,
+   "pictures": 101,
+   "codes": [
+    "P3_HE",
+    "HEMA Fragment"
+   ],
+   "by_code": {
+    "P3_HE": 99,
+    "HEMA Fragment": 4
+   }
+  },
+  "Foreign Matter": {
+   "objects": 626,
+   "pictures": 331,
+   "codes": [
+    "P3_FM",
+    "Foreign Matter"
+   ],
+   "by_code": {
+    "P3_FM": 579,
+    "Foreign Matter": 47
+   }
+  }
+ },
+ "reference": {
+  "Bubble On 123": {
+   "objects": 79,
+   "pictures": 13
+  },
+  "Bubble On Edge": {
+   "objects": 90,
+   "pictures": 14
+  }
+ },
+ "composition": {
+  "Bubble": {
+   "P2_BB": 10070,
+   "P2_BI": 128,
+   "P2_BST": 7,
+   "Bubble": 799,
+   "Bubble Irregular": 41
+  }
+ },
+ "totals": {
+  "classes": 14013,
+  "reference": 169,
+  "all": 14182
+ }
+}

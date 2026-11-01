@@ -1,0 +1,105 @@
+{
+  "content_identity": {
+    "copy_count_distribution": {
+      "1": 8940,
+      "2": 972,
+      "3": 607,
+      "4": 54,
+      "5": 41
+    },
+    "hashes_in_more_than_one_folder": 1609,
+    "hashes_with_more_than_one_copy": 1674
+  },
+  "date_missing_tag": {
+    "distinct_pictures": 0,
+    "files": 0
+  },
+  "distinct_pictures_in_library": 10614,
+  "distinct_pictures_total": 10614,
+  "duplicates_subfolder": {
+    "distinct_hashes": 143,
+    "files": 143,
+    "folder": "Updated ICube Categorical Classes 20260915/duplicates",
+    "repeat_library_pictures": 143,
+    "unique_to_duplicates": 0
+  },
+  "line_missing_tag": {
+    "distinct_pictures": 0,
+    "files": 0
+  },
+  "per_folder": {
+    "ICube Defects Library": {
+      "bytes": 7346362630,
+      "files": 1465
+    },
+    "PRODUCTION_20260925/images": {
+      "bytes": 5250267354,
+      "files": 1047
+    },
+    "Updated ICube Categorical Classes 20260915": {
+      "bytes": 32013091488,
+      "files": 6384
+    },
+    "Updated ICube Objects 20260915": {
+      "bytes": 21211681860,
+      "files": 4230
+    }
+  },
+  "per_folder_group": {
+    "Library": {
+      "bytes": 7346362630,
+      "files": 1465
+    },
+    "Production": {
+      "bytes": 5250267354,
+      "files": 1047
+    },
+    "Updated": {
+      "bytes": 53224773348,
+      "files": 10614
+    }
+  },
+  "per_line": {
+    "L24": {
+      "distinct_pictures": 4348,
+      "files": 5775
+    },
+    "L25": {
+      "distinct_pictures": 972,
+      "files": 1148
+    },
+    "L26": {
+      "distinct_pictures": 1503,
+      "files": 2056
+    },
+    "L27": {
+      "distinct_pictures": 1637,
+      "files": 1860
+    },
+    "L31": {
+      "distinct_pictures": 2154,
+      "files": 2287
+    }
+  },
+  "production_match": {
+    "adds_new_picture": false,
+    "matched_by_basename_only_files": 0,
+    "matched_by_hash_distinct_pictures": 1046,
+    "matched_by_hash_files": 1047,
+    "not_in_library_files": 0,
+    "not_in_library_paths": [],
+    "production_distinct_pictures": 1046,
+    "production_files": 1047
+  },
+  "totals": {
+    "bytes_on_disk": 65821403332,
+    "distinct_pictures": 10614,
+    "files_on_disk": 13126,
+    "library_bytes": 60571135978,
+    "library_files": 12079,
+    "production_bytes": 5250267354,
+    "production_files": 1047,
+    "repeated_content_hashes": 1674
+  },
+  "universe": "three library folders plus the production image folder"
+}

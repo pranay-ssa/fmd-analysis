@@ -1,0 +1,164 @@
+{
+ "phase": "4 of the scale plan",
+ "test_1_lens_spec": {
+  "test": "if the scale were the gate inversion, the 789 px lens would be about 12.1 mm; is that plausible for the product",
+  "searched": [
+   "docs/FM3 Edge Algorithm URS Final Draft .pdf (received)",
+   "docs/Manufacturing Condition Ontology V1.docx (received)",
+   "docs/reference/received_docs_nominals.md",
+   "docs/reference/scale_provenance_20261015.md (Phase 0)"
+  ],
+  "what_exists": [
+   "the URS names the product only as a contact lens and describes it as HEMA based (section 5.2.1, excess lens material); it gives no diameter, no brand and no product name",
+   "the Ontology gives no lens dimension, only annotation-box size statistics in pixels",
+   "the received set carries no lens diameter, no soft or rigid label and no product identifier"
+  ],
+  "what_does_not_exist": [
+   "no received document names the lens product, its size, its material beyond HEMA or its type (soft, rigid, daily, scleral)",
+   "no document names a 14.2 mm diameter either; the 14.2 mm used in our work is our own assumed figure"
+  ],
+  "result": "not available from the received documents. No received document states a lens diameter, so the physical plausibility of 12.1 mm against 14.2 mm cannot be settled from our documents. The general product class does not favour 12.1 mm: a soft hydrogel contact lens is normally about 13.8 to 14.5 mm across, and a 12.1 mm lens would sit below the usual range, so 14.2 mm is the more plausible diameter for a soft lens while neither is documented here."
+ },
+ "test_2_multiple_lenses": {
+  "class": "Multiple Lenses (P1_ML), folder-derived tag on 1,439 pictures",
+  "sample": "ml_sample.txt",
+  "measured": {
+   "multiple_lenses": {
+    "n_ok": 148,
+    "median_lens_diam_px": 791.1,
+    "iqr_lens_diam_px": [
+     772.1,
+     816.4
+    ],
+    "median_within_frame_rim_rms_px": 19.6,
+    "frac_with_interior_ring": 0.385,
+    "frac_with_coherent_interior_ring": 0.385,
+    "median_interior_ring_norm": 0.58,
+    "n_interior_rings": 73,
+    "frac_two_circle_split_improves": 0.0,
+    "median_two_improve_ratio": 0.812,
+    "n_with_two_ratio": 148
+   },
+   "single_lens_control_clear_folder": {
+    "n_ok": 149,
+    "median_lens_diam_px": 808.6,
+    "iqr_lens_diam_px": [
+     789.1,
+     820.2
+    ],
+    "median_within_frame_rim_rms_px": 17.6,
+    "frac_with_interior_ring": 0.114,
+    "frac_with_coherent_interior_ring": 0.114,
+    "median_interior_ring_norm": 0.741,
+    "n_interior_rings": 17,
+    "frac_two_circle_split_improves": 0.0,
+    "median_two_improve_ratio": 0.739,
+    "n_with_two_ratio": 149
+   }
+  },
+  "finding": {
+   "result": "The class does not present two resolvable full lens circles, so it does not give the within-frame lens-diameter repeatability the test sought.",
+   "numbers": [
+    "sample: 148 Multiple Lenses frames and 149 single-lens Clear control frames, all measured ok",
+    "rim circle diameter: Multiple Lenses 791.1 px (IQR 772.1 to 816.4) against control 808.6 px (IQR 789.1 to 820.2)",
+    "a two-circle split of the rim edge points improves the residual on 0.0 percent of Multiple Lenses frames and 0.0 percent of control frames (median ratio rms1/rms2 0.81 against 0.74, always below 1, so the split always fits worse)",
+    "at least one dark ring in the cavity interior (normalised radius below 0.80) appears on 38.5 percent of Multiple Lenses frames against 11.4 percent of control frames, 73 rings against 17",
+    "the interior ring sits at median normalised radius 0.58 on Multiple Lenses against 0.74 on control, so the extra boundary is a smaller partial circle, not a second full lens at the rim",
+    "within-frame rim residual (the repeatability of one rim measurement) is 19.6 px on Multiple Lenses against 17.6 px on control"
+   ],
+   "repeatability": "not available from within-frame lens pairs, because no frame yields two resolved lens circles. The class does contain a second dark boundary on 57 of 148 frames, at median 0.58 of the cavity radius, consistent with the URS description of one lens plus an additional partial lens, but a partial lens at 0.58 R_cav is not a second full lens and yields no diameter pair.",
+   "stability_reference": "not answered by this class either: with no two resolved rims there is no second measure of the same part to compare against the cavity."
+  }
+ },
+ "test_3_second_ruler": {
+  "n_sec_ok": 271,
+  "n_frames_more_than_one_bright_component": 88,
+  "n_frames_second_component_half_or_more_of_largest": 2,
+  "multi_frame_examples": [
+   "Updated ICube Categorical Classes 20260915/Package Misalignment/20260826_234656_L25_PalletGHB0827041200_Cavity15_B01BJVS_Fail7_Score(1).bmp",
+   "Updated ICube Categorical Classes 20260915/Package Misalignment/20260823_064817_L25_PalletGHS0823111306_Cavity3_B01BJVM_Fail7_Score(1).bmp"
+  ],
+  "n_frames_largest_component_touches_frame_border": 0,
+  "median_top2_separation_px": 545.1,
+  "n_frames_with_two_components_reported": 88,
+  "result": "no second ruler available",
+  "reason": "the two frames whose second component reaches half the largest are Package Misalignment frames where the field of view is partly blocked, not a second cavity; no frame has the largest bright component touching the frame border, so no package or tray edge is imaged in frame; the many small second components sit at a near-fixed position above the cavity and are package features of unknown real length, so they give no scale. Every frame is one cavity, matching the CavityNN naming of the production drop."
+ },
+ "test_4_box_margin": {
+  "definition": "at a scale S the gate switches on a longest box side of 19.41 to 19.61 px; a 300 micron debris at scale S spans 300/S px; the gap is the required annotation margin",
+  "rows": {
+   "lens_14200_central_18.0": {
+    "scale_um_per_px": 18.0,
+    "switch_px": [
+     19.41,
+     19.61
+    ],
+    "debris_300um_px": 16.667,
+    "required_margin_px": [
+     2.743,
+     2.943
+    ],
+    "required_margin_pct_of_box": [
+     14.06,
+     15.09
+    ]
+   },
+   "gate_inversion_15.337": {
+    "scale_um_per_px": 15.3369,
+    "switch_px": [
+     19.41,
+     19.61
+    ],
+    "debris_300um_px": 19.561,
+    "required_margin_px": [
+     -0.151,
+     0.049
+    ],
+    "required_margin_pct_of_box": [
+     -0.77,
+     0.25
+    ]
+   },
+   "published_18.1165": {
+    "scale_um_per_px": 18.1165,
+    "switch_px": [
+     19.41,
+     19.61
+    ],
+    "debris_300um_px": 16.559,
+    "required_margin_px": [
+     2.851,
+     3.051
+    ],
+    "required_margin_pct_of_box": [
+     14.61,
+     15.64
+    ]
+   },
+   "spoken_18.25": {
+    "scale_um_per_px": 18.25,
+    "switch_px": [
+     19.41,
+     19.61
+    ],
+    "debris_300um_px": 16.438,
+    "required_margin_px": [
+     2.972,
+     3.172
+    ],
+    "required_margin_pct_of_box": [
+     15.23,
+     16.26
+    ]
+   }
+  },
+  "deciding_number": {
+   "result": "the margin test does not separate the readings, and it makes the 18 micron scale the more comfortable one rather than the less",
+   "deciding_numbers": {
+    "at_18_0_um_per_px": "the box would be 2.743 to 2.943 px larger than a 300 micron debris, that is 14.06 to 15.09 percent of the box, about 1.42 px on each side",
+    "at_15_337_um_per_px": "the box would be -0.151 to 0.049 px larger than a 300 micron debris, that is -0.77 to 0.25 percent of the box, essentially zero"
+   },
+   "reading": "a hand-drawn box around a speck about 17 px across overshooting by about 2.8 px is a normal, small margin, so a 14 to 15 percent overshoot is plausible and does not falsify the lens-implied scale; a zero margin is also plausible, so the margin test is consistent with both readings and decides neither"
+  }
+ }
+}

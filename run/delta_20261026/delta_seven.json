@@ -1,0 +1,1967 @@
+{
+ "pictures": {
+  "old": 1047,
+  "new": 1047,
+  "added": [],
+  "removed": [],
+  "changed": [
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241101_120938_L27_C13_9961_0.8937.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241101_160136_L27_C11_9030_0.6928.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241101_174952_L26_C5_9999.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241101_205645_L27_C2_9888_0.9989.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241101_215050_L24_C11_9995.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241101_235953_L24_C2_9893.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BC": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_000107_L24_C6_9266.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_050553_L24_C1_9798.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_063451_L26_C11_9857.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_063700_L24_C5_9999.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_082612_L26_PalletGHP1102123803_Cavity13_B0177KZ_Fail4_Score(0.9440983).bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_095208_L26_C3_9992.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_101918_L26_C14_9999.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BC": 1
+    },
+    "codes_removed": {
+     "P2_BB": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_102524_L26_C1_9915.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_140219_L27_PalletGHU1102145322_Cavity5_B01779V_Fail3_Score(0.9182535)_1.0000_0.9911.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_155800_L24_C12_9796_0.9999_0.6130.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BC": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_161759_L26_C2_9316.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_174956_L26_C4_9333.bmp",
+    "old_file": "annotations_4521940.xml",
+    "new_file": "annotations_4521940.xml",
+    "codes_added": {
+     "P2_WP": 1
+    },
+    "codes_removed": {
+     "P2_BB": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_185625_L27_PalletGHK1102194724_Cavity15_B01779V_Fail7_Score(0.9909526)_0.9999_0.9544.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_190642_L27_C1_9762_0.9471.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_190838_L24_C4_9937_1.0000_0.2925.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_192117_L26_C12_9998.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_WP": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_201209_L24_C3_9995.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_WP": 1
+    },
+    "codes_removed": {
+     "P3_FM": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {
+     "P3_FM_MICRON_THRESHOLD": 1
+    }
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241102_202502_L24_C3_9999.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_002339_L24_C8_9881.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {},
+    "codes_removed": {},
+    "boxes_moved": 1,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_002519_L26_C8_9944.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_003114_L24_C15_9998.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_020221_L24_C11_9732.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_023607_L26_C6_9419.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_025413_L24_C1_9999.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_050302_L24_C15_9999_0.9687.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P3_FIB": 1
+    },
+    "codes_removed": {
+     "P3_FM": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {
+     "P3_FM_MICRON_THRESHOLD": 1
+    }
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_052812_L24_C4_9987.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_065114_L26_PalletGHD1103120321_Cavity9_B0178LJ_Fail7_Score(0.9983681).bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BC": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_072102_L26_C11_9979.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_WP": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_080119_L26_C2_9171.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_093102_L26_C8_9145.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_095621_L26_C2_9999.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_120346_L26_C1_9999.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_125550_L26_C15_9154.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_133023_L27_C1_1_0.9564.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_140229_L26_C2_9999.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_144856_L26_C11_9925.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_145151_L27_C8_1_0.4602.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_150753_L26_C3_9787.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_155230_L26_C3_9742.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_174819_L26_C4_9998.bmp",
+    "old_file": "annotations_4521941.xml",
+    "new_file": "annotations_4521941.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_204814_L27_C1_1_0.3676.bmp",
+    "old_file": "annotations_4521942.xml",
+    "new_file": "annotations_4521942.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_205211_L26_C5_9999.bmp",
+    "old_file": "annotations_4521942.xml",
+    "new_file": "annotations_4521942.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_WP": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_214612_L27_C12_1_0.5340.bmp",
+    "old_file": "annotations_4521942.xml",
+    "new_file": "annotations_4521942.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_215350_L27_C14_1_0.6581.bmp",
+    "old_file": "annotations_4521942.xml",
+    "new_file": "annotations_4521942.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_224414_L26_C5_9955.bmp",
+    "old_file": "annotations_4521942.xml",
+    "new_file": "annotations_4521942.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241103_234007_L27_C14_1_0.3760.bmp",
+    "old_file": "annotations_4521942.xml",
+    "new_file": "annotations_4521942.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BST": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241104_041045_L24_C2_9971.bmp",
+    "old_file": "annotations_4521942.xml",
+    "new_file": "annotations_4521942.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241104_041220_L24_C5_9059.bmp",
+    "old_file": "annotations_4521942.xml",
+    "new_file": "annotations_4521942.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241104_042609_L24_C11_9968.bmp",
+    "old_file": "annotations_4521942.xml",
+    "new_file": "annotations_4521942.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241104_064932_L26_C10_9846.bmp",
+    "old_file": "annotations_4521942.xml",
+    "new_file": "annotations_4521942.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BST": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241104_072437_L24_PalletGHB1104122313_Cavity3_B01778W_Fail4_Score(0.9408574)_1.0000_0.9602.bmp",
+    "old_file": "annotations_4521942.xml",
+    "new_file": "annotations_4521942.xml",
+    "codes_added": {
+     "P3_FIB": 1
+    },
+    "codes_removed": {
+     "P3_FM": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {
+     "P3_FIB_MICRON_THRESHOLD": 1
+    },
+    "tags_removed": {
+     "P3_FM_MICRON_THRESHOLD": 1
+    }
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241104_114026_L26_C7_9104.bmp",
+    "old_file": "annotations_4521942.xml",
+    "new_file": "annotations_4521942.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241104_163049_L26_C5_9841.bmp",
+    "old_file": "annotations_4521942.xml",
+    "new_file": "annotations_4521942.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241104_194317_L24_C1_9325.bmp",
+    "old_file": "annotations_4521942.xml",
+    "new_file": "annotations_4521942.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241104_225633_L26_PalletGHA1105040833_Cavity7_B0178LL_Fail4_Score(0.9420534).bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241104_234231_L27_PalletGHG1105013351_Cavity10_B0178KN_Fail3_Score(0.9221716)_1.0000_0.9590.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241105_001916_L26_PalletGHC1105053127_Cavity11_B0178LN_Fail3_Score(0.91694).bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241105_005640_L24_C2_9780.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241105_040646_L24_C8_9604.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241105_041551_L24_C5_9999.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 3
+    },
+    "codes_removed": {
+     "P2_BI": 3
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241105_045208_L24_C8_9998.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241105_083143_L26_C9_9927.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241105_095054_L27_PalletGHN1105114158_Cavity11_B0178KP_Fail6_Score(0.9826413)_1.0000_0.9764.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P3_FIB": 1
+    },
+    "codes_removed": {
+     "P3_FM": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {
+     "P3_FM_MICRON_THRESHOLD": 1
+    }
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241105_190835_L24_PalletGHR1106000732_Cavity14_B0178J1_Fail2_Score(0.9075947)_0.9997_0.9978.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_003903_L24_C5_9829.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_005348_L26_C2_9292.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_WP": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_010458_L26_C10_9977.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_020200_L24_PalletGHD1106070055_Cavity14_B0178J3_Fail7_Score(0.9971084)_0.9998_0.9941.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {},
+    "codes_removed": {},
+    "boxes_moved": 1,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_022228_L24_C13_9630.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BC": 1
+    },
+    "codes_removed": {
+     "P3_FM": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_040558_L24_C8_9959.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_054624_L26_C2_9947.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P3_FM": 1
+    },
+    "codes_removed": {
+     "P2_BC": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_062653_L24_C6_1.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P3_FM": 1
+    },
+    "codes_removed": {
+     "P3_EP": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_074328_L24_C3_9035_0.9999_0.7487.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_081332_L24_C7_9094_0.9981_0.6690.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_092943_L24_C10_9567_0.9981_0.7192.bmp",
+    "old_file": "annotations_4521943.xml",
+    "new_file": "annotations_4521943.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_100753_L24_C5_9997.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_102644_L24_C10_9873.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_104850_L27_PalletGHF1106124015_Cavity2_B0178KT_Fail5_Score(0.9619061)_0.9999_0.9590.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_124828_L24_C5_9999.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_132025_L24_C10_9999.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 3
+    },
+    "codes_removed": {
+     "P2_BI": 3
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_143151_L24_C5_9999.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_150032_L24_C9_9993.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_150939_L26_C9_9170.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_151557_L24_C13_9958_0.9997_0.6834.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 1,
+     "P3_FM": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_175135_L26_C14_9836.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241106_194048_L24_PalletGHC1107003951_Cavity6_B0178HW_Fail7_Score(0.9992056)_0.9996_0.9582.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241107_004212_L24_C1_9988.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241107_022115_L24_C2_9974.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241107_035652_L24_C13_9774_0.9997.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241107_043402_L27_PalletGHJ1107062524_Cavity2_B0178KV_Fail4_Score(0.9344704)_1.0000_0.9947.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241107_050520_L24_C10_9999.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BC": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 1,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241107_113145_L24_C13_9997.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241107_114842_L24_PalletGHK1107164752_Cavity15_B0178J8_Fail2_Score(0.9037165)_1.0000_0.9976.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241107_121541_L24_C8_9949.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241107_142714_L24_C1_9887_1.0000_0.7306.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241107_153003_L24_C3_9970.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241107_163449_L24_C9_9738.bmp",
+    "old_file": "annotations_4521944.xml",
+    "new_file": "annotations_4521944.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241107_203759_L26_C11_9768.bmp",
+    "old_file": "annotations_4521945.xml",
+    "new_file": "annotations_4521945.xml",
+    "codes_added": {
+     "P2_BB": 3
+    },
+    "codes_removed": {
+     "P2_BI": 3
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241107_222627_L26_C6_9848.bmp",
+    "old_file": "annotations_4521945.xml",
+    "new_file": "annotations_4521945.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241108_021953_L24_C5_9887_0.9901_0.5717.bmp",
+    "old_file": "annotations_4521945.xml",
+    "new_file": "annotations_4521945.xml",
+    "codes_added": {
+     "P2_BB": 1,
+     "P2_BC": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1,
+     "P3_FM": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241108_025802_L24_C14_9340.bmp",
+    "old_file": "annotations_4521945.xml",
+    "new_file": "annotations_4521945.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241108_031709_L24_PalletGHJ1108081621_Cavity5_B0178JH_Fail7_Score(0.9997452)_0.9736_0.9778.bmp",
+    "old_file": "annotations_4521945.xml",
+    "new_file": "annotations_4521945.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241108_045723_L24_PalletGHP1108095631_Cavity2_B0178JH_Fail7_Score(0.9996234)_0.9996_0.9905.bmp",
+    "old_file": "annotations_4521945.xml",
+    "new_file": "annotations_4521945.xml",
+    "codes_added": {
+     "P3_EP": 1
+    },
+    "codes_removed": {
+     "P3_FM": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {
+     "P3_EP_MICRON_THRESHOLD": 1
+    },
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241108_071455_L24_C12_9600_0.9628_0.6998.bmp",
+    "old_file": "annotations_4521945.xml",
+    "new_file": "annotations_4521945.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241108_094203_L24_PalletGHC1108144112_Cavity5_B0178JH_Fail5_Score(0.9611355)_0.9980_0.9646.bmp",
+    "old_file": "annotations_4521945.xml",
+    "new_file": "annotations_4521945.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241108_125737_L25_PalletGHN1108154540_Cavity6_B0178KF_Fail7_Score(0.9971023)_1.0000_0.9972.bmp",
+    "old_file": "annotations_4521945.xml",
+    "new_file": "annotations_4521945.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241108_164438_L24_C7_9888.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241108_181257_L26_C7_9999.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1,
+     "P2_BC": 1
+    },
+    "codes_removed": {
+     "P2_WP": 1,
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241108_184337_L25_C7_9664.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241108_205606_L24_PalletGHJ1109015521_Cavity10_B0178JH_Fail7_Score(0.9973226)_0.9961_0.9954.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_005117_L24_C15_9446.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_040534_L24_C3_9264_0.9999_0.9010.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_061409_L25_C5_9955.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P3_FIB": 2
+    },
+    "codes_removed": {
+     "P2_WP": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_061414_L25_C11_9559.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_061414_L25_C5_9105.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P3_FM": 1
+    },
+    "codes_removed": {
+     "P3_FIB": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_062259_L24_PalletGHB1109112219_Cavity5_B0178JD_Fail4_Score(0.9345143)_0.9991_0.9904.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_063341_L25_C12_9883.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_064521_L24_C9_9814_0.9996_0.7113.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 2
+    },
+    "codes_removed": {
+     "P2_BI": 2
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_065135_L24_C12_9998.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_WP": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_065541_L24_C7_9973.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 1,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_084225_L24_C7_9627.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_084852_L24_C5_9725.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_093805_L24_C15_9362.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_WP": 1
+    },
+    "codes_removed": {
+     "P3_FM": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {
+     "P3_FM_MICRON_THRESHOLD": 1
+    }
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_111340_L24_C15_9865.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_120048_L24_C12_9481_0.9955_0.9295.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_125155_L24_C2_9796_0.9984_0.6906.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   },
+   {
+    "image": "FMD_PROD/PRODUCTION-20260925/20241109_150122_L24_C5_9988.bmp",
+    "old_file": "annotations_4521946.xml",
+    "new_file": "annotations_4521946.xml",
+    "codes_added": {
+     "P2_BB": 1
+    },
+    "codes_removed": {
+     "P2_BI": 1
+    },
+    "boxes_moved": 0,
+    "tags_added": {},
+    "tags_removed": {}
+   }
+  ]
+ },
+ "class_totals": {
+  "old": {
+   "P2_BB": 10075,
+   "P2_BC": 1071,
+   "P2_BI": 128,
+   "P2_BST": 3,
+   "P2_WP": 591,
+   "P3_EP": 39,
+   "P3_FIB": 219,
+   "P3_FM": 571,
+   "P3_HE": 96,
+   "tag:F2_FOV": 24,
+   "tag:P1_COC": 35,
+   "tag:P1_FL": 59,
+   "tag:P1_ML": 169,
+   "tag:P1_MPP": 226,
+   "tag:P1_NL": 6,
+   "tag:P1_PPM": 2,
+   "tag:P2_DC": 204,
+   "tag:P2_DS": 22,
+   "tag:P2_LD": 118,
+   "tag:P2_LOC": 187,
+   "tag:P3_EP_MICRON_THRESHOLD": 33,
+   "tag:P3_FIB_MICRON_THRESHOLD": 136,
+   "tag:P3_FM_MICRON_THRESHOLD": 171,
+   "tag:P3_HE_MICRON_THRESHOLD": 95
+  },
+  "new": {
+   "P2_BB": 10213,
+   "P2_BC": 1072,
+   "P2_WP": 585,
+   "P3_EP": 39,
+   "P3_FIB": 223,
+   "P3_FM": 565,
+   "P3_HE": 96,
+   "tag:F2_FOV": 24,
+   "tag:P1_COC": 35,
+   "tag:P1_FL": 59,
+   "tag:P1_ML": 169,
+   "tag:P1_MPP": 226,
+   "tag:P1_NL": 6,
+   "tag:P1_PPM": 2,
+   "tag:P2_DC": 204,
+   "tag:P2_DS": 22,
+   "tag:P2_LD": 118,
+   "tag:P2_LOC": 187,
+   "tag:P3_EP_MICRON_THRESHOLD": 34,
+   "tag:P3_FIB_MICRON_THRESHOLD": 137,
+   "tag:P3_FM_MICRON_THRESHOLD": 166,
+   "tag:P3_HE_MICRON_THRESHOLD": 95
+  },
+  "delta": {
+   "P2_BB": 138,
+   "P2_BC": 1,
+   "P2_BI": -128,
+   "P2_BST": -3,
+   "P2_WP": -6,
+   "P3_FIB": 4,
+   "P3_FM": -6,
+   "tag:P3_EP_MICRON_THRESHOLD": 1,
+   "tag:P3_FIB_MICRON_THRESHOLD": 1,
+   "tag:P3_FM_MICRON_THRESHOLD": -5
+  }
+ },
+ "files": {
+  "old": {
+   "annotations_4521940.xml": 150,
+   "annotations_4521941.xml": 150,
+   "annotations_4521942.xml": 147,
+   "annotations_4521943.xml": 150,
+   "annotations_4521944.xml": 150,
+   "annotations_4521945.xml": 150,
+   "annotations_4521946.xml": 150
+  },
+  "new": {
+   "annotations_4521940.xml": 150,
+   "annotations_4521941.xml": 150,
+   "annotations_4521942.xml": 147,
+   "annotations_4521943.xml": 150,
+   "annotations_4521944.xml": 150,
+   "annotations_4521945.xml": 150,
+   "annotations_4521946.xml": 150
+  }
+ }
+}

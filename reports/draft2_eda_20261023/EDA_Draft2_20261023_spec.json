@@ -1,0 +1,1486 @@
+{
+ "workbook": {
+  "default_header_style": true
+ },
+ "sheets": [
+  {
+   "name": "Overview",
+   "column_widths": {
+    "A": 46,
+    "B": 26
+   },
+   "rows": [
+    [
+     "EDA Draft 2 - consolidated analysis workbook",
+     null
+    ],
+    [
+     "Built",
+     "2026-10-23"
+    ],
+    [
+     null,
+     null
+    ],
+    [
+     "Populations",
+     null
+    ],
+    [
+     "Full-coverage EDA census (all sources)",
+     "10,614 distinct picture contents"
+    ],
+    [
+     "Label matrix (frame rules, rev2)",
+     "6,785 rows"
+    ],
+    [
+     "Split universe v3 (Draft 2 codes + Clear only)",
+     "6,574 rows"
+    ],
+    [
+     "Split v3",
+     "4,568 train / 2,006 test (70/30, seed 42)"
+    ],
+    [
+     null,
+     null
+    ],
+    [
+     "Headline counts (label matrix rev2)",
+     null
+    ],
+    [
+     "Clear (exclusive namespace)",
+     "2,156"
+    ],
+    [
+     "Largest LP class: Multiple Lens P1_ML",
+     "1,433"
+    ],
+    [
+     "Largest OOI class: Bubble P2_BB",
+     "10,070 box instances / 746 pictures"
+    ],
+    [
+     "Standalone-tag violations (ticket 023)",
+     "0"
+    ],
+    [
+     null,
+     null
+    ],
+    [
+     "Active artifacts",
+     null
+    ],
+    [
+     "Label matrix",
+     "run/multilabel_edge_20261023/label_matrix.csv"
+    ],
+    [
+     "Split",
+     "run/split_20261023_v3/split.csv + meta.json"
+    ],
+    [
+     "EDA numbers",
+     "run/draft2_eda_20261023/*.json"
+    ],
+    [
+     "Docs",
+     "docs/reference/draft2_eda_lp_20261023.md, draft2_eda_ooi_20261023.md, guide_confusion_table_20261023.md"
+    ],
+    [
+     null,
+     null
+    ],
+    [
+     "Superseded (kept on disk)",
+     "matrix 20261021, split v1 + v2, interim 2-sheet workbook"
+    ]
+   ]
+  },
+  {
+   "name": "LP Tags",
+   "freeze_panes": "A2",
+   "column_widths": {
+    "A": 10,
+    "B": 34,
+    "C": 16,
+    "D": 14,
+    "E": 20,
+    "F": 56
+   },
+   "rows": [
+    [
+     "Code",
+     "Name (Draft 2)",
+     "Pictures (matrix)",
+     "Share of 6,785",
+     "In split v3 universe",
+     "Status / note"
+    ],
+    [
+     "P1_MPP",
+     "Missing Primary Package",
+     1426,
+     0.2102,
+     1426,
+     "live, standalone (0 co-tags)"
+    ],
+    [
+     "P1_PPM",
+     "Primary Package Misalignment",
+     2,
+     0.0003,
+     2,
+     "live, standalone; rarest"
+    ],
+    [
+     "P1_COC",
+     "Cavity Off Center",
+     184,
+     0.0271,
+     184,
+     "live, standalone"
+    ],
+    [
+     "P2_FOV",
+     "Field of View Obstructed",
+     24,
+     0.0035,
+     24,
+     "live, standalone; F2_FOV code question with lead"
+    ],
+    [
+     "P2_LOC",
+     "Lens Off Center",
+     953,
+     0.1405,
+     922,
+     "live"
+    ],
+    [
+     "P1_NL",
+     "No Lens",
+     323,
+     0.0476,
+     322,
+     "live"
+    ],
+    [
+     "P1_ML",
+     "Multiple Lens",
+     1433,
+     0.2112,
+     1402,
+     "live, largest LP class"
+    ],
+    [
+     "P1_FL",
+     "Folded Lens",
+     237,
+     0.0349,
+     226,
+     "live, co-tag rule with ML"
+    ],
+    [
+     "P1_EBC",
+     "Edge Bottle-Capped",
+     0,
+     0.0,
+     0,
+     "no annotated pictures yet"
+    ],
+    [
+     "P1_TL",
+     "Torn Lens",
+     0,
+     0.0,
+     0,
+     "no annotated pictures yet"
+    ],
+    [
+     "P1_LR",
+     "Lens Rupture",
+     0,
+     0.0,
+     0,
+     "no annotated pictures yet"
+    ],
+    [
+     "P2_DS",
+     "Dirty Strobe",
+     43,
+     0.0063,
+     41,
+     "live"
+    ],
+    [
+     "P2_DC",
+     "Dirty Camera",
+     326,
+     0.048,
+     298,
+     "live"
+    ],
+    [
+     "P2_BSC",
+     "Bubble Scatter",
+     6,
+     0.0009,
+     6,
+     "live, rare"
+    ],
+    [
+     "P2_LD",
+     "Low Dose",
+     215,
+     0.0317,
+     204,
+     "live"
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     "(legacy)",
+     "HEMA Obstruction P2_HMO",
+     86,
+     0.0127,
+     0,
+     "excluded as a split class (user decision 2026-10-23)"
+    ],
+    [
+     "(clear)",
+     "Clear",
+     2156,
+     0.3178,
+     2156,
+     "exclusive namespace (Option A): never carries another label"
+    ]
+   ],
+   "cells": {
+    "D2": {
+     "value": 0.2102,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D3": {
+     "value": 0.0003,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D4": {
+     "value": 0.0271,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D5": {
+     "value": 0.0035,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D6": {
+     "value": 0.1405,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D7": {
+     "value": 0.0476,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D8": {
+     "value": 0.2112,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D9": {
+     "value": 0.0349,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D10": {
+     "value": 0.0,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D11": {
+     "value": 0.0,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D12": {
+     "value": 0.0,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D13": {
+     "value": 0.0063,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D14": {
+     "value": 0.048,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D15": {
+     "value": 0.0009,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D16": {
+     "value": 0.0317,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D18": {
+     "value": 0.0127,
+     "type": "number",
+     "number_format": "0.0%"
+    },
+    "D19": {
+     "value": 0.3178,
+     "type": "number",
+     "number_format": "0.0%"
+    }
+   }
+  },
+  {
+   "name": "LP Co-occurrence",
+   "freeze_panes": "A2",
+   "column_widths": {
+    "A": 44,
+    "B": 12,
+    "C": 44
+   },
+   "rows": [
+    [
+     "Pair",
+     "Pictures",
+     "Note"
+    ],
+    [
+     "lens_off_center + multiple_lenses",
+     661,
+     "largest overlap"
+    ],
+    [
+     "multiple_lenses + folded_lens",
+     236,
+     "guide co-tag rule (apply both)"
+    ],
+    [
+     "lens_off_center + folded_lens",
+     148,
+     ""
+    ],
+    [
+     "multiple_lenses + dirty_camera",
+     104,
+     ""
+    ],
+    [
+     "lens_off_center + dirty_camera",
+     94,
+     ""
+    ],
+    [
+     "dirty_camera + low_dose",
+     72,
+     ""
+    ],
+    [
+     "folded_lens + dirty_camera",
+     21,
+     ""
+    ],
+    [
+     "lens_off_center + low_dose",
+     17,
+     "the guide's confused pair"
+    ],
+    [
+     "multiple_lenses + low_dose",
+     17,
+     ""
+    ],
+    [
+     "no_lens + dirty_camera",
+     4,
+     ""
+    ],
+    [
+     "folded_lens + low_dose",
+     4,
+     ""
+    ],
+    [
+     "lens_off_center + dirty_strobe",
+     2,
+     ""
+    ],
+    [
+     "multiple_lenses + dirty_strobe",
+     2,
+     ""
+    ],
+    [
+     "lens_off_center + bubble_scatter",
+     1,
+     ""
+    ],
+    [
+     null,
+     null,
+     null
+    ],
+    [
+     "LP tags on one picture",
+     "Pictures",
+     null
+    ],
+    [
+     "0 LP tag(s)",
+     2732,
+     null
+    ],
+    [
+     "1 LP tag(s)",
+     3181,
+     null
+    ],
+    [
+     "2 LP tag(s)",
+     641,
+     null
+    ],
+    [
+     "3 LP tag(s)",
+     216,
+     null
+    ],
+    [
+     "4 LP tag(s)",
+     14,
+     null
+    ],
+    [
+     "5 LP tag(s)",
+     1,
+     null
+    ],
+    [
+     "Pictures with >= 1 LP tag",
+     4053,
+     "of 6,785"
+    ]
+   ]
+  },
+  {
+   "name": "OOI Boxes",
+   "freeze_panes": "C2",
+   "column_widths": {
+    "A": 10,
+    "B": 34,
+    "C": 12,
+    "D": 12,
+    "E": 12,
+    "F": 12,
+    "G": 12,
+    "H": 12,
+    "I": 12,
+    "J": 12,
+    "K": 12,
+    "L": 60
+   },
+   "rows": [
+    [
+     "Code",
+     "Class",
+     "Pictures (shape line)",
+     "Pictures (matrix)",
+     "Box instances",
+     "Boxes/pic median",
+     "Boxes/pic max",
+     "w median px",
+     "h median px",
+     "w p95 px",
+     "h p95 px",
+     "Note"
+    ],
+    [
+     "P2_BB",
+     "Bubble",
+     746,
+     746,
+     10070,
+     11.0,
+     67,
+     6.6,
+     6.4,
+     18.5,
+     18.0,
+     "strict P2_BB code. Merged Draft-2 Bubble (with BI+BST) = 750 pictures / 10,205 boxes; matrix column 862 (incl. 112 rescues)"
+    ],
+    [
+     "P2_BC",
+     "Bubble Cluster",
+     406,
+     406,
+     1070,
+     2.0,
+     19,
+     11.6,
+     10.6,
+     48.0,
+     37.0,
+     ""
+    ],
+    [
+     "P2_WP",
+     "Wet Package",
+     122,
+     122,
+     593,
+     3.0,
+     91,
+     31.8,
+     21.9,
+     256.1,
+     145.4,
+     ""
+    ],
+    [
+     "P3_FIB",
+     "Fiber",
+     156,
+     154,
+     223,
+     1.0,
+     8,
+     27.4,
+     16.9,
+     227.7,
+     125.3,
+     ""
+    ],
+    [
+     "P3_EP",
+     "Extraneous Polymer",
+     143,
+     67,
+     149,
+     1,
+     2,
+     177.1,
+     183.4,
+     947.6,
+     716.8,
+     "gate column 33 pictures; most thinned by the matrix drop rule"
+    ],
+    [
+     "P3_HE",
+     "HEMA (Draft 2: one class)",
+     97,
+     94,
+     99,
+     1,
+     2,
+     1050.1,
+     608.7,
+     1116.1,
+     1091.5,
+     "held as Sep-22 fragment boxes + production boxes; gate column marks the class"
+    ],
+    [
+     "P3_FM",
+     "Foreign Matter",
+     287,
+     282,
+     579,
+     1,
+     48,
+     10.7,
+     10.3,
+     52.2,
+     45.1,
+     ""
+    ],
+    [
+     "(legacy)",
+     "Bubble Irregular (folds into Bubble)",
+     108,
+     108,
+     128,
+     1.0,
+     3,
+     25.9,
+     23.9,
+     270.1,
+     205.2,
+     "CONTAINED in the 746: every BI picture also carries P2_BB"
+    ],
+    [
+     "(legacy)",
+     "Stretched Bubble (folds into Bubble)",
+     6,
+     6,
+     7,
+     1.0,
+     2,
+     100.9,
+     22.2,
+     763.6,
+     245.6,
+     ""
+    ],
+    [
+     "(legacy)",
+     "Bubble On 123 (library-only)",
+     13,
+     13,
+     79,
+     4,
+     13,
+     5.2,
+     5.5,
+     17.2,
+     19.1,
+     "excluded as a split class (user decision 2026-10-23)"
+    ],
+    [
+     "(legacy)",
+     "Bubble On Edge (library-only)",
+     14,
+     14,
+     90,
+     5.0,
+     17,
+     8.7,
+     10.4,
+     25.2,
+     30.0,
+     "excluded as a split class"
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     "",
+     "TOTAL",
+     1130,
+     977,
+     12783,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "12,783 boxes; 79 percent Bubble; 1,130 shape-line pictures carry >= 1 box"
+    ]
+   ]
+  },
+  {
+   "name": "Standalone Audit",
+   "freeze_panes": "A2",
+   "column_widths": {
+    "A": 34,
+    "B": 16,
+    "C": 16,
+    "D": 18,
+    "E": 52
+   },
+   "rows": [
+    [
+     "Standalone tag",
+     "Pictures tagged",
+     "With extra labels",
+     "With gate tag only",
+     "Verdict"
+    ],
+    [
+     "P1_MPP",
+     1426,
+     0,
+     0,
+     "CLEAN - guide rule holds (both derivations agree)"
+    ],
+    [
+     "P1_PPM",
+     2,
+     0,
+     0,
+     "CLEAN - guide rule holds (both derivations agree)"
+    ],
+    [
+     "P1_COC",
+     184,
+     0,
+     0,
+     "CLEAN - guide rule holds (both derivations agree)"
+    ],
+    [
+     "P2_FOV",
+     0,
+     0,
+     0,
+     "CLEAN - guide rule holds (both derivations agree)"
+    ],
+    [
+     "F2_FOV",
+     24,
+     0,
+     0,
+     "CLEAN - guide rule holds (both derivations agree)"
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     "Guide rule",
+     "Draft 2 sections 4.1-4.4: these four tags are standalone; no additional tags or labels.",
+     null,
+     null,
+     null
+    ],
+    [
+     "Derivations",
+     "resolved line (winning source) + raw parse of all 8 newer files; 0 unmapped label-bearing names",
+     null,
+     null,
+     null
+    ],
+    [
+     "Artifacts",
+     "run/multilabel_edge_20261023/standalone_audit.json + empty violation lists",
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "Guide Confusion Rules",
+   "freeze_panes": "A2",
+   "column_widths": {
+    "A": 5,
+    "B": 30,
+    "C": 28,
+    "D": 66,
+    "E": 24,
+    "F": 12,
+    "G": 10
+   },
+   "rows": [
+    [
+     "#",
+     "Class (n1)",
+     "Confused with (n2)",
+     "Circumstance and reason",
+     "Direction",
+     "Guide section",
+     "Co-occur"
+    ],
+    [
+     1,
+     "Cavity Off Center P1_COC (184)",
+     "Package Misalignment P1_PPM (2)",
+     "Root cause boundary: trigger-timing framing shift vs package not seated. Both standalone.",
+     "two-way",
+     "4.3",
+     0
+    ],
+    [
+     2,
+     "Lens Off Center P2_LOC (953)",
+     "Low Dose P2_LD (215)",
+     "Apparent displacement from low solution = LD; true lens shift in a filled bowl = LOC.",
+     "two-way",
+     "4.5, 4.15",
+     17
+    ],
+    [
+     3,
+     "Wet Package P2_WP (146)",
+     "Bubble P2_BB (862)",
+     "Liquid, not trapped air: gradual intensity gradient, irregular shape, near package perimeter.",
+     "one-way (WP looks like Bubble)",
+     "5.2",
+     117
+    ],
+    [
+     4,
+     "Extraneous Polymer P3_EP",
+     "Fiber P3_FIB",
+     "Mixed strand-plus-clump objects default to FIBER; EP only when confident.",
+     "one-way default to Fiber",
+     "5.4B",
+     "n/a"
+    ],
+    [
+     5,
+     "Surface Groove P1_SG (0)",
+     "Torn Lens P1_TL (0)",
+     "Groove opening into a tear/flap becomes TL; shallow surface defect stays SG.",
+     "two-way",
+     "5.3, 4.10",
+     "no data"
+    ],
+    [
+     6,
+     "Surface Groove P1_SG (0)",
+     "Extraneous Polymer P3_EP",
+     "Raised/additional translucent material is EP; a groove is missing material.",
+     "one-way (SG looks like EP)",
+     "5.3",
+     "no data"
+    ],
+    [
+     7,
+     "Torn Lens P1_TL (0)",
+     "Lens Rupture P1_LR (0)",
+     "TL keeps one connected structure; separation or near-complete division is LR.",
+     "two-way",
+     "4.10, 4.11",
+     "no data"
+    ],
+    [
+     8,
+     "Edge Bottle-Capped P1_EBC (0)",
+     "Torn Lens, Lens Rupture",
+     "EBC keeps a continuous edge; tear into body is TL; separated material is LR.",
+     "one-way (boundary outward)",
+     "4.9",
+     "no data"
+    ],
+    [
+     9,
+     "Bubble Scatter P2_BSC (6)",
+     "Bubble (862) / Cluster (430)",
+     "Tag for a diffuse field vs boxes for discrete bubbles; isolated bubbles never scatter.",
+     "two-way (tag vs box)",
+     "4.14, 5.1B",
+     "0"
+    ],
+    [
+     10,
+     "Dirty Strobe P2_DS (43)",
+     "Dirty Camera P2_DC (326)",
+     "Same cause, different focal plane: diffuse edge-creeping vs sharp defined marks.",
+     "two-way",
+     "4.12, 4.13",
+     "n/a"
+    ],
+    [
+     11,
+     "No Lens P1_NL (323)",
+     "any lens-state class",
+     "NL requires valid package AND confident lens absence; otherwise the specific class.",
+     "one-way (last resort)",
+     "4.6",
+     "0"
+    ],
+    [
+     12,
+     "Multiple Lens P1_ML (1,433)",
+     "Folded Lens P1_FL (237)",
+     "Co-tag rule, not a confusion: folded lens in multi-lens image gets BOTH; rupture sections force ML.",
+     "co-occurrence rule",
+     "4.7, 4.8, 4.11",
+     236
+    ],
+    [
+     13,
+     "Bubble P2_BB",
+     "Foreign Matter family",
+     "Default: anything not confidently a Bubble is annotated as the most appropriate FM class.",
+     "one-way default to FM",
+     "1.3",
+     "n/a"
+    ],
+    [
+     14,
+     "any uncertain defect",
+     "most appropriate class",
+     "Annotate uncertain defects with the most appropriate class; consistency over physical origin.",
+     "blanket rule",
+     "1.3",
+     "n/a"
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     "Non-target look-alikes (do not annotate; false-positive sources)",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     "Primary Package Marks (fiber-like, recur in same position per job)",
+     "resembles Fiber, Foreign Matter",
+     null,
+     null,
+     null,
+     "3.1",
+     null
+    ],
+    [
+     "Crater-Like Bubble Artifacts (rings, depressions, shockwave patterns)",
+     "resembles Wet Package, Fiber, EP, FM",
+     null,
+     null,
+     null,
+     "3.2",
+     null
+    ]
+   ]
+  },
+  {
+   "name": "Full EDA vs Draft 2",
+   "freeze_panes": "A2",
+   "column_widths": {
+    "A": 26,
+    "B": 16,
+    "C": 20,
+    "D": 22,
+    "E": 72
+   },
+   "rows": [
+    [
+     "Tag",
+     "Full EDA: images",
+     "Draft-2 matrix (6,785)",
+     "Split v3 universe (6,574)",
+     "Why the columns differ"
+    ],
+    [
+     "Missing Primary Package",
+     1426,
+     1426,
+     1426,
+     "identical at every stage"
+    ],
+    [
+     "Multiple Lenses",
+     1439,
+     1433,
+     1402,
+     "-6 only-plain drops; -31 ineligible"
+    ],
+    [
+     "Lens Off Center",
+     957,
+     953,
+     922,
+     "-4 only-plain; -31 ineligible"
+    ],
+    [
+     "Dirty Camera",
+     329,
+     326,
+     298,
+     "-3 only-plain; -28 ineligible"
+    ],
+    [
+     "Missing Lens P1_NL",
+     325,
+     323,
+     322,
+     "-2 only-plain; -1 ineligible"
+    ],
+    [
+     "Folded Lens",
+     237,
+     237,
+     226,
+     "-11 ineligible"
+    ],
+    [
+     "Low Dose",
+     215,
+     215,
+     204,
+     "-11 ineligible"
+    ],
+    [
+     "Cavity Off Center",
+     184,
+     184,
+     184,
+     "identical"
+    ],
+    [
+     "Foreign Matter gate",
+     171,
+     171,
+     171,
+     "identical"
+    ],
+    [
+     "Fiber gate",
+     136,
+     168,
+     137,
+     "matrix 168 = 137 true gate-tag pictures + 31 Fiber/EP flip rows; the 136-vs-137 gap is the parked item"
+    ],
+    [
+     "HEMA gate",
+     94,
+     94,
+     94,
+     "identical"
+    ],
+    [
+     "Dirty Strobe",
+     43,
+     43,
+     41,
+     "-2 ineligible"
+    ],
+    [
+     "Extraneous Polymer gate",
+     33,
+     33,
+     33,
+     "identical"
+    ],
+    [
+     "View Obstructed",
+     24,
+     24,
+     24,
+     "identical"
+    ],
+    [
+     "Bubble Scatter",
+     6,
+     6,
+     6,
+     "identical"
+    ],
+    [
+     "Package Misalignment",
+     2,
+     2,
+     2,
+     "identical"
+    ],
+    [
+     "HEMA Obstruction",
+     86,
+     86,
+     0,
+     "excluded as a class (user decision 2026-10-23)"
+    ],
+    [
+     "Bubble On 123",
+     "(box tier)",
+     13,
+     0,
+     "excluded as a class"
+    ],
+    [
+     "Bubble On Edge",
+     "(box tier)",
+     14,
+     0,
+     "excluded as a class"
+    ],
+    [
+     "Clear",
+     "(new)",
+     2156,
+     2156,
+     "exclusive namespace (Option A)"
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     "The three delta mechanisms",
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     "1. Full EDA vs matrix",
+     "the frame's gate rule drops gate-less plain carriers even when they carry an LP tag: 10 pictures (ML 6, LOC 4, DC 3, NL 2)",
+     null,
+     null,
+     null
+    ],
+    [
+     "2. Fiber gate",
+     "matrix column 168 = 137 true gate-tag pictures + 31 rows of the verified Fiber/EP flip (decision 12). The census 136 vs 137 eligible gap is the parked 137-vs-136 item (1 picture, unresolved)",
+     null,
+     null,
+     null
+    ],
+    [
+     "3. Matrix vs split universe (-211)",
+     "106 labeled-but-ineligible gate-less plain carriers + 105 rows carrying only excluded-class labels",
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "Split v3",
+   "freeze_panes": "A2",
+   "column_widths": {
+    "A": 34,
+    "B": 10,
+    "C": 10,
+    "D": 10,
+    "E": 18,
+    "F": 18,
+    "G": 44
+   },
+   "rows": [
+    [
+     "Class",
+     "Train",
+     "Test",
+     "Total",
+     "Expect train (70%)",
+     "Expect test (30%)",
+     "Note"
+    ],
+    [
+     "foreign_matter_micron_gate",
+     124,
+     47,
+     171,
+     119.7,
+     51.3,
+     ""
+    ],
+    [
+     "fiber_micron_gate",
+     90,
+     47,
+     137,
+     95.9,
+     41.1,
+     ""
+    ],
+    [
+     "extraneous_polymer_micron_gate",
+     25,
+     8,
+     33,
+     23.1,
+     9.9,
+     "RARE: one-digit test confidence"
+    ],
+    [
+     "hema_micron_gate",
+     66,
+     28,
+     94,
+     65.8,
+     28.2,
+     ""
+    ],
+    [
+     "bubble",
+     552,
+     237,
+     789,
+     552.3,
+     236.7,
+     ""
+    ],
+    [
+     "bubble_cluster",
+     266,
+     114,
+     380,
+     266.0,
+     114.0,
+     ""
+    ],
+    [
+     "wet_package",
+     88,
+     38,
+     126,
+     88.2,
+     37.8,
+     ""
+    ],
+    [
+     "missing_primary_package",
+     998,
+     428,
+     1426,
+     998.2,
+     427.8,
+     ""
+    ],
+    [
+     "multiple_lenses",
+     981,
+     421,
+     1402,
+     981.4,
+     420.6,
+     ""
+    ],
+    [
+     "no_lens",
+     225,
+     97,
+     322,
+     225.4,
+     96.6,
+     ""
+    ],
+    [
+     "cavity_off_center",
+     129,
+     55,
+     184,
+     128.8,
+     55.2,
+     ""
+    ],
+    [
+     "folded_lens",
+     167,
+     59,
+     226,
+     158.2,
+     67.8,
+     ""
+    ],
+    [
+     "lens_off_center",
+     645,
+     277,
+     922,
+     645.4,
+     276.6,
+     ""
+    ],
+    [
+     "dirty_camera",
+     209,
+     89,
+     298,
+     208.6,
+     89.4,
+     ""
+    ],
+    [
+     "dirty_strobe",
+     29,
+     12,
+     41,
+     28.7,
+     12.3,
+     ""
+    ],
+    [
+     "low_dose",
+     143,
+     61,
+     204,
+     142.8,
+     61.2,
+     ""
+    ],
+    [
+     "view_obstructed",
+     17,
+     7,
+     24,
+     16.8,
+     7.2,
+     "RARE: one-digit test confidence"
+    ],
+    [
+     "package_misalignment",
+     1,
+     1,
+     2,
+     1.4,
+     0.6,
+     "RARE: one-digit test confidence"
+    ],
+    [
+     "bubble_scatter",
+     4,
+     2,
+     6,
+     4.2,
+     1.8,
+     "RARE: one-digit test confidence"
+    ],
+    [
+     "clear",
+     1509,
+     647,
+     2156,
+     1509.2,
+     646.8,
+     ""
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     "TOTAL",
+     4568,
+     2006,
+     6574,
+     4601.8,
+     1972.2,
+     "zero group crossings"
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     "Recipe",
+     "iterative stratification (Sechidis 2011), two-way 70/30, seed 42, content-md5 groups, no validation split",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     "Label space",
+     "Draft 2 guide codes + Clear only (user decision 2026-10-23). On 123, On Edge, HEMA Obstruction excluded; gate tags mark the gated classes",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     "Verification",
+     "hand-typed expected values, independent second derivation, byte-identical rerun, corrupted-input proof - all pass (verify_split_v3.py)",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     "Artifacts",
+     "run/split_20261023_v3/split.csv + meta.json",
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "Decisions",
+   "freeze_panes": "A2",
+   "column_widths": {
+    "A": 12,
+    "B": 90,
+    "C": 46
+   },
+   "rows": [
+    [
+     "Date",
+     "Decision",
+     "Effect"
+    ],
+    [
+     "2026-10-21",
+     "Frame frozen (15 items): gate IS the class; folder-rule Clear; 3,676 unannotated dropped; BI and BST fold into Bubble; 70/30 split, seed 42, md5 groups",
+     "the label matrix"
+    ],
+    [
+     "2026-10-22",
+     "Meeting: Draft 2 = 15 LP tags + 8 OOI classes; MPP/PPM/COC/FOV standalone; Clear as third namespace; dropped classes stay in EDA but separate",
+     "tickets 023-026"
+    ],
+    [
+     "2026-10-23",
+     "Standalone audit: zero violations, rule holds",
+     "no co-tag policy needed"
+    ],
+    [
+     "2026-10-23",
+     "Split label space = Draft 2 codes + Clear ONLY; On 123, On Edge, HEMA Obstruction excluded; gate tags mark gated classes",
+     "universe 6,679 -> 6,574; split v2"
+    ],
+    [
+     "2026-10-23",
+     "Option A: Clear must be clear, carries no other label",
+     "matrix rev2, Clear 2,166 -> 2,156; split v3"
+    ],
+    [
+     "2026-10-23",
+     "Merged Bubble measured: all 108 BI pictures carry P2_BB (containment); merged = 750 shape line / 862 matrix",
+     "Bubble row stated exactly"
+    ],
+    [
+     "open",
+     "P2_FOV vs F2_FOV code, P2_BST code, 300 micron gate cut, Low Dose task completeness",
+     "with the lead"
+    ]
+   ]
+  }
+ ]
+}

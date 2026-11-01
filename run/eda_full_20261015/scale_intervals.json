@@ -1,0 +1,192 @@
+{
+ "phase": "3 of the scale plan",
+ "headline": {
+  "lens_pixel_measurement": {
+   "median_diam_px": 789.0,
+   "iqr_diam_px": [
+    764.4,
+    809.5
+   ],
+   "rel_spread_pct": 5.71,
+   "n": 2659
+  },
+  "lens_implied_scale_um_per_px": [
+   17.5417,
+   18.6842
+  ],
+  "gate_inversion_scale_um_per_px": [
+   15.2983,
+   15.3755
+  ],
+  "lens_central_um_per_px": 17.9975,
+  "gate_central_um_per_px": 15.3369,
+  "tension_pct_lens_above_gate": 17.3,
+  "tension_pct_gate_below_lens": 14.8,
+  "tension_note": "the two central readings are about 15 percent apart measured as the gate value below the lens value (14.8 percent), and about 17 percent measured as the lens value above the gate value (17.3 percent)",
+  "resolution": "NOT resolved; quantified below"
+ },
+ "lens_14200_interval": {
+  "central_um_per_px": 17.9975,
+  "interval_um_per_px": [
+   17.5417,
+   18.6842
+  ],
+  "error_budget_um_per_px": {
+   "frame_spread_iqr": [
+    17.5417,
+    18.5767
+   ],
+   "method_range_760_789_px": [
+    17.9975,
+    18.6842
+   ],
+   "population_library_vs_production": [
+    17.5417,
+    18.2684
+   ]
+  },
+  "lens_px_used": {
+   "median": 789.0,
+   "iqr": [
+    764.4,
+    809.5
+   ],
+   "method_range": [
+    760.0,
+    789.0
+   ],
+   "population": [
+    777.3,
+    809.5
+   ]
+  },
+  "with_uncited_spec_range": {
+   "nominal_um_range": [
+    14000.0,
+    14300.0
+   ],
+   "interval_um_per_px": [
+    17.2946,
+    18.8158
+   ],
+   "note": "the 14.0 to 14.3 mm range is our own uncited figure; it is shown only so the reader can see how much it would widen the interval if believed."
+  }
+ },
+ "gate_inversion_interval": {
+  "central_um_per_px": 15.3369,
+  "interval_um_per_px": [
+   15.2983,
+   15.3755
+  ],
+  "from_new_cut": [
+   15.2983,
+   15.456
+  ],
+  "from_old_cut": [
+   15.1204,
+   15.3755
+  ],
+  "agreement": "neither"
+ },
+ "gate_read_back_at_each_scale": {
+  "lens_measurement_central": {
+   "scale_um_per_px": 17.9975,
+   "cut_um_for_switch_low": 349.3,
+   "cut_um_for_switch_high": 352.9,
+   "debris_300um_in_px": 16.67
+  },
+  "gate_inversion_central": {
+   "scale_um_per_px": 15.3369,
+   "cut_um_for_switch_low": 297.7,
+   "cut_um_for_switch_high": 300.8,
+   "debris_300um_in_px": 19.56
+  },
+  "published_18_1165": {
+   "scale_um_per_px": 18.1165,
+   "cut_um_for_switch_low": 351.6,
+   "cut_um_for_switch_high": 355.3,
+   "debris_300um_in_px": 16.56
+  },
+  "spoken_18_25": {
+   "scale_um_per_px": 18.25,
+   "cut_um_for_switch_low": 354.2,
+   "cut_um_for_switch_high": 357.9,
+   "debris_300um_in_px": 16.44
+  }
+ },
+ "box_margin": {
+  "lens_14200_central_18.0": {
+   "scale_um_per_px": 18.0,
+   "switch_px": [
+    19.41,
+    19.61
+   ],
+   "debris_300um_px": 16.667,
+   "required_margin_px": [
+    2.743,
+    2.943
+   ],
+   "required_margin_pct_of_box": [
+    14.06,
+    15.09
+   ]
+  },
+  "gate_inversion_15.337": {
+   "scale_um_per_px": 15.3369,
+   "switch_px": [
+    19.41,
+    19.61
+   ],
+   "debris_300um_px": 19.561,
+   "required_margin_px": [
+    -0.151,
+    0.049
+   ],
+   "required_margin_pct_of_box": [
+    -0.77,
+    0.25
+   ]
+  },
+  "published_18.1165": {
+   "scale_um_per_px": 18.1165,
+   "switch_px": [
+    19.41,
+    19.61
+   ],
+   "debris_300um_px": 16.559,
+   "required_margin_px": [
+    2.851,
+    3.051
+   ],
+   "required_margin_pct_of_box": [
+    14.61,
+    15.64
+   ]
+  },
+  "spoken_18.25": {
+   "scale_um_per_px": 18.25,
+   "switch_px": [
+    19.41,
+    19.61
+   ],
+   "debris_300um_px": 16.438,
+   "required_margin_px": [
+    2.972,
+    3.172
+   ],
+   "required_margin_pct_of_box": [
+    15.23,
+    16.26
+   ]
+  }
+ },
+ "the_two_readings": [
+  "reading A: the scale is the gate inversion, about 15.34 microns per pixel (interval 15.30 to 15.38). The 789 px lens would then be about 12.1 mm, below the usual soft-lens range, and the client gate is a clean 300 micron cut.",
+  "reading B: the scale is the lens measurement, about 18.00 microns per pixel (interval 17.54 to 18.68) from our assumed 14.2 mm lens. The client gate boundary then reads as about 349 to 353 microns instead of 300, so the annotation boxes overshoot the debris by about 16 percent."
+ ],
+ "evidence_that_would_separate_them": [
+  "a written lens diameter from the client (the FMD Annotation Guide named but not present, or any document naming the real lens size)",
+  "any frame showing two genuine cavities or the package or tray edge, giving a second ruler independent of the lens",
+  "a lens product name or part number that fixes the diameter"
+ ]
+}

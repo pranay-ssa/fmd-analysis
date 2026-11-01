@@ -1,0 +1,28 @@
+# rerun md5 table, ticket 016 (2026-10-15)
+# rerun dir: C:\Users\Abcom\AppData\Local\hermes\cache\scratch\v16\repo
+# reused VM legs: cavity_raw.tsv, census.json, file_manifest.csv, picture_table.csv, rim_raw.tsv
+artifact                           committed_md5                      rerun_md5                          identical  owner
+box_sizes.csv                      1a973be6d5dafdcbda4c65b2a373e823   1a973be6d5dafdcbda4c65b2a373e823   yes        box_geometry.py (012)
+cavity_geometry_library.json       540a1b9b410ed2bf6989563ad9cd5754   540a1b9b410ed2bf6989563ad9cd5754   yes        box_geometry.py (012)
+cavity_raw.tsv                     148021a3e2d84f4a286f3907f875d26e   148021a3e2d84f4a286f3907f875d26e   yes        reused raw input
+census.json                        a99c8724350194c73a7511591dbdffea   a99c8724350194c73a7511591dbdffea   yes        reused raw input
+codes_per_image.csv                ce6087a3ec0f27c00253ceeef9debc8a   ce6087a3ec0f27c00253ceeef9debc8a   yes        label_census.py (011)
+coverage.csv                       02daca54ae128938d77e3ed21aa659a1   02daca54ae128938d77e3ed21aa659a1   yes        coverage.py (015)
+crosswalk.csv                      a33b1d96d6fc1ac0021a8d1372f4d875   a33b1d96d6fc1ac0021a8d1372f4d875   yes        build_crosswalk.py (009)
+crosswalk_evidence.json            67b5cdde2e9cf525018f3e905e546cfe   67b5cdde2e9cf525018f3e905e546cfe   yes        build_crosswalk.py (009)
+disagreement.csv                   bbc50968126211979d30d6a13fbf3479   bbc50968126211979d30d6a13fbf3479   yes        resolve_labels.py (010)
+file_manifest.csv                  97ab4eded84bba28a1c113949d08ce7c   97ab4eded84bba28a1c113949d08ce7c   yes        reused raw input
+folder_disagreement.csv            240f7ad1002d7e063b105c19672cd095   240f7ad1002d7e063b105c19672cd095   yes        coverage.py (015)
+gate_analysis.csv                  c04bca2505f3fb38b64a600877fa6a7d   c04bca2505f3fb38b64a600877fa6a7d   yes        micron_gate.py (014)
+gate_delta.csv                     5b59485051c8c58b55228c8506a2a990   5b59485051c8c58b55228c8506a2a990   yes        micron_gate.py (014)
+gate_scale_estimate.json           62d60c00428dee32f9f3ae20bcc2823a   62d60c00428dee32f9f3ae20bcc2823a   yes        micron_gate.py (014)
+label_census.csv                   1dbcd56f6732409ad715107d11461572   1dbcd56f6732409ad715107d11461572   yes        label_census.py (011)
+pairs.csv                          335fc9f5c7a6ecaa597855a402462ebd   335fc9f5c7a6ecaa597855a402462ebd   yes        label_census.py (011)
+picture_table.csv                  a03ddeead53bae370c17bd8ea15c0df0   a03ddeead53bae370c17bd8ea15c0df0   yes        reused raw input
+resolution.json                    362f22bb9c41550a576133798544b592   362f22bb9c41550a576133798544b592   yes        resolve_labels.py (010)
+resolved_labels.csv                605aaaf75f450a0e8d5d4e94a88e58ee   605aaaf75f450a0e8d5d4e94a88e58ee   yes        resolve_labels.py (010)
+rim_raw.tsv                        f47b3830d3b8cdb6f8f52baad6e1adef   f47b3830d3b8cdb6f8f52baad6e1adef   yes        reused raw input
+scale_by_stratum.json              276168f3b9ce047077537f86792b36c2   276168f3b9ce047077537f86792b36c2   yes        verify_scale.py --aggregate (013a)
+scale_sample.txt                   1f60c5a569a6b093ebbe9c29247472fb   1f60c5a569a6b093ebbe9c29247472fb   yes        verify_scale.py --build-sample (013a)
+scale_samples.csv                  07bf5fac5f4e1f74e0ce0ab7fd056575   07bf5fac5f4e1f74e0ce0ab7fd056575   yes        verify_scale.py --aggregate (013a)
+size_by_stratum.json               747b3dadc0615c7a25bcee72be6ee52b   747b3dadc0615c7a25bcee72be6ee52b   yes        box_geometry.py (012)

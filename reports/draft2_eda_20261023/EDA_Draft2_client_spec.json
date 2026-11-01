@@ -1,0 +1,6275 @@
+{
+ "workbook": {
+  "default_header_style": false
+ },
+ "sheets": [
+  {
+   "name": "Summary",
+   "column_widths": {
+    "A": 34,
+    "B": 14,
+    "C": 3,
+    "D": 38,
+    "E": 16,
+    "F": 16,
+    "G": 16
+   },
+   "row_heights": {
+    "1": 26
+   },
+   "merges": [
+    "A1:G1",
+    "A2:G2"
+   ],
+   "freeze_panes": "A4",
+   "charts": [
+    {
+     "type": "bar",
+     "title": "Pictures per class",
+     "anchor": "D8",
+     "data": "B8:B17",
+     "categories": "A8:A17"
+    }
+   ],
+   "rows": [
+    [
+     {
+      "value": "Defect and image-quality analysis - Draft 2 annotation guide",
+      "bold": true,
+      "font_size": 16,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "align": "left",
+      "valign": "center"
+     },
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Prepared October 2026. This workbook summarises the annotated inspection images for the Draft 2 annotation frame: 15 picture tags and 8 object classes, how many pictures carry each class, what the objects look like, which classes can be confused, and how the pictures are divided for training and testing.",
+      "italic": true,
+      "font_size": 10,
+      "font_color": "595959",
+      "wrap": true,
+      "valign": "top"
+     },
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Pictures examined",
+      "bold": true
+     },
+     10614,
+     null,
+     {
+      "value": "Pictures with usable labels",
+      "bold": true
+     },
+     6785,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Pictures used for training and testing",
+      "bold": true
+     },
+     6574,
+     null,
+     {
+      "value": "Training / test",
+      "bold": true
+     },
+     "4,568 / 2,006",
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Main classes (pictures carrying the class)",
+      "bold": true,
+      "font_size": 11
+     },
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Missing Primary Package",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 1426,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Multiple Lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 1433,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Lens Off Center",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 953,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Clear",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 2156,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Bubble",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 862,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Bubble Cluster",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 430,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "No Lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 323,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Dirty Camera",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 326,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Folded Lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 237,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Low Dose",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 215,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Charts on the right show the same counts as bars. Every sheet opens with one line explaining what it shows. Terms are defined on the 'Definitions' sheet.",
+      "italic": true,
+      "font_size": 10,
+      "font_color": "595959",
+      "wrap": true,
+      "valign": "top"
+     },
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Class rows are not additive: a picture can carry several classes, so the class rows sum to more than the picture totals above.",
+      "italic": true,
+      "font_size": 10,
+      "font_color": "595959",
+      "wrap": true,
+      "valign": "top"
+     },
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "LP Summary",
+   "column_widths": {
+    "A": 34,
+    "B": 12,
+    "C": 22,
+    "D": 16,
+    "E": 24,
+    "F": 46
+   },
+   "row_heights": {
+    "1": 30
+   },
+   "freeze_panes": "A2",
+   "autofilter": "A1:F17",
+   "rows": [
+    [
+     {
+      "value": "Class",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Guide code",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Pictures in analysed set (6,785)",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Share of analysed pictures",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Pictures in training/test set (6,574)",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Notes",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "value": "Missing Primary Package",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "P1_MPP",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 1426,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 0.2102,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "0.0%"
+     },
+     {
+      "value": 1426,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Standalone: no other label applies",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Primary Package Misalignment",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "P1_PPM",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 0.0003,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "0.0%"
+     },
+     {
+      "value": 2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Standalone; rarest class",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Cavity Off Center",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "P1_COC",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 184,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 0.0271,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "0.0%"
+     },
+     {
+      "value": 184,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Standalone",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Field of View Obstructed",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "P2_FOV",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 24,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 0.0035,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "0.0%"
+     },
+     {
+      "value": 24,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Standalone; production files use the code F2_FOV",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Lens Off Center",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "P2_LOC",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 953,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 0.1405,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "0.0%"
+     },
+     {
+      "value": 922,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Largest lens-position class",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "No Lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "P1_NL",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 323,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 0.0476,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "0.0%"
+     },
+     {
+      "value": 322,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Lens absent, package valid",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Multiple Lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "P1_ML",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 1433,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 0.2112,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "0.0%"
+     },
+     {
+      "value": 1402,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Most frequent lens condition",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Folded Lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "P1_FL",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 237,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 0.0349,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "0.0%"
+     },
+     {
+      "value": 226,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Often occurs together with Multiple Lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Edge Bottle-Capped",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "P1_EBC",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 0.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "0.0%"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "No annotated pictures yet",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Torn Lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "P1_TL",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 0.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "0.0%"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "No annotated pictures yet",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Lens Rupture",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "P1_LR",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 0.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "0.0%"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "No annotated pictures yet",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Dirty Strobe",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "P2_DS",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 43,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 0.0063,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "0.0%"
+     },
+     {
+      "value": 41,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Out-of-focus marks from the strobe cover",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Dirty Camera",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "P2_DC",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 326,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 0.048,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "0.0%"
+     },
+     {
+      "value": 298,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Sharp marks from the camera optics",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Bubble Scatter",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "P2_BSC",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 0.0009,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "0.0%"
+     },
+     {
+      "value": 6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Diffuse field of small bubbles; rare",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Low Dose",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "P2_LD",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 215,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 0.0317,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "0.0%"
+     },
+     {
+      "value": 204,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Low solution volume merges the interfaces",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Clear",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "(none)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 2156,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 0.3178,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "0.0%"
+     },
+     {
+      "value": 2156,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Picture is clear; never carries another label",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "HEMA Obstruction (legacy)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "P2_HMO",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 86,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 0.0127,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "0.0%"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Kept for reference only; not part of the current class list",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Class rows are not additive: a picture can carry several tags, so the rows above sum to 7,328 against 6,785 distinct pictures. Clear never shares a picture.",
+      "italic": true,
+      "font_size": 10,
+      "font_color": "595959",
+      "wrap": true,
+      "valign": "top"
+     },
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "Tag Combinations",
+   "column_widths": {
+    "A": 44,
+    "B": 12,
+    "C": 42
+   },
+   "row_heights": {
+    "1": 24
+   },
+   "freeze_panes": "A2",
+   "rows": [
+    [
+     {
+      "value": "Two tags on the same picture",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Pictures",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Note",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "value": "lens_off_center and multiple_lenses",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 661,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Largest overlap",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "multiple_lenses and folded_lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 236,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Guide advises applying both",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "lens_off_center and folded_lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 148,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "multiple_lenses and dirty_camera",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 104,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "lens_off_center and dirty_camera",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 94,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "dirty_camera and low_dose",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 72,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "folded_lens and dirty_camera",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 21,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "lens_off_center and low_dose",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 17,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "The pair the guide warns about",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "multiple_lenses and low_dose",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 17,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "no_lens and dirty_camera",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 4,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "folded_lens and low_dose",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 4,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "lens_off_center and dirty_strobe",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "multiple_lenses and dirty_strobe",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "lens_off_center and bubble_scatter",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "How many tags one picture carries",
+      "bold": true,
+      "font_size": 11
+     },
+     null,
+     null
+    ],
+    [
+     {
+      "value": "0 tag(s)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 2732,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "1 tag(s)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 3181,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "2 tag(s)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 641,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "3 tag(s)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 216,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "4 tag(s)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 14,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "5 tag(s)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "Objects",
+   "column_widths": {
+    "A": 34,
+    "B": 11,
+    "C": 14,
+    "D": 16,
+    "E": 12,
+    "F": 12,
+    "G": 12,
+    "H": 12,
+    "I": 12,
+    "J": 14,
+    "K": 14,
+    "L": 60
+   },
+   "row_heights": {
+    "1": 44
+   },
+   "freeze_panes": "B2",
+   "rows": [
+    [
+     {
+      "value": "Object class",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Guide code",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Pictures with this object",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Pictures in analysed set (6,785)",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Objects marked",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Median objects per picture",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Most objects on one picture",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Typical width (px)",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Typical height (px)",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Width, 95th percentile (px)",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Height, 95th percentile (px)",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Notes",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "value": "Draft 2 object classes (8)",
+      "bold": true,
+      "font_size": 11,
+      "fill": "D6E2F2"
+     },
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Bubble",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "P2_BB",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 746,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 746,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 10070,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 11.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 67,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 6.6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 6.4,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 18.5,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 18.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Most objects are bubbles. The merged bubble class (with irregular and stretched bubbles) has 750 pictures and 10,205 marked objects; the training table counts 862 pictures because pictures rescued by older labels are included",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Bubble Cluster",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "P2_BC",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 406,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 406,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 1070,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 2.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 19,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 11.6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 10.6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 48.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 37.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Wet Package",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "P2_WP",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 122,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 122,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 593,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 3.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 91,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 31.8,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 21.9,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 256.1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 145.4,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Surface Groove",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "P1_SG",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Defined in the guide; no annotated objects yet",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Fiber",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "P3_FIB",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 156,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 154,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 223,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 1.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 8,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 27.4,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 16.9,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 227.7,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 125.3,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Extraneous Polymer",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "P3_EP",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 143,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 67,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 149,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 177.1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 183.4,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 947.6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 716.8,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Fewest pictures kept in the training set",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "HEMA (Draft 2: one class)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "P3_HE",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 97,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 94,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 99,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 1050.1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 608.7,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 1116.1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 1091.5,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Held as two earlier annotations; the size gate marks the class",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Foreign Matter",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "P3_FM",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 287,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 282,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 579,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 48,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 10.7,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 10.3,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 52.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 45.1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Older classes kept for reference (not in the current class list)",
+      "bold": true,
+      "font_size": 11,
+      "fill": "EDEDED"
+     },
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Bubble Irregular (folds into Bubble)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "(legacy)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 108,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 108,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 128,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 1.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 3,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 25.9,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 23.9,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 270.1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 205.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Every picture with an irregular bubble also has a regular bubble",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Stretched Bubble (folds into Bubble)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "(legacy)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 7,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 1.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 100.9,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 22.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 763.6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 245.6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Bubble On 123 (library-only)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "(legacy)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 13,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 13,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 79,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 4,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 13,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 5.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 5.5,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 17.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 19.1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Reference only; not part of the current class list",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Bubble On Edge (library-only)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "(legacy)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 14,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 14,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 90,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 5.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 17,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 8.7,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 10.4,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 25.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 30.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Reference only; not part of the current class list",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Total",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 1130,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 977,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 12783,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "1,130 pictures carry at least one object; 79% of all marked objects are bubbles",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Pictures with this object are not additive: 2,098 placements across 1,130 distinct pictures. Objects marked is additive and equals the total (12,783).",
+      "italic": true,
+      "font_size": 10,
+      "font_color": "595959",
+      "wrap": true,
+      "valign": "top"
+     },
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "Standalone Tags",
+   "column_widths": {
+    "A": 34,
+    "B": 18,
+    "C": 28,
+    "D": 56
+   },
+   "row_heights": {
+    "1": 30
+   },
+   "freeze_panes": "A2",
+   "rows": [
+    [
+     {
+      "value": "Tag",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Pictures carrying it",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Pictures that also carry another label",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Status",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "value": "P1_MPP",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 1426,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Follows the guide: no other label on these pictures",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "P1_PPM",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Follows the guide: no other label on these pictures",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "P1_COC",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 184,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Follows the guide: no other label on these pictures",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "P2_FOV",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Follows the guide: no other label on these pictures",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "F2_FOV",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 24,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Follows the guide: no other label on these pictures",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "The annotation guide defines these four tags as standalone: when one is applied, no other tag or object label applies to that picture. The annotations were checked against this rule and no exceptions were found. The fourth class appears under two spellings in the files (P2_FOV and F2_FOV); both are counted here.",
+      "italic": true,
+      "font_size": 10,
+      "font_color": "595959",
+      "wrap": true,
+      "valign": "top"
+     },
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "Confusion Risks",
+   "column_widths": {
+    "A": 30,
+    "B": 30,
+    "C": 76,
+    "D": 12,
+    "E": 16
+   },
+   "row_heights": {
+    "1": 30
+   },
+   "freeze_panes": "A2",
+   "rows": [
+    [
+     {
+      "value": "Class",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Can look like",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "How to tell them apart",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Guide section",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Pictures with both",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "value": "Cavity Off Center (184)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Primary Package Misalignment (2)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Both show the area of interest cut off. Off-centre image with the package correctly seated = Cavity Off Center; package not seated or out of position = Primary Package Misalignment.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "4.3",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Lens Off Center (953)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Low Dose (215)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Both look like the lens has moved. If the cause is too little solution, it is Low Dose; a real shift in a well-filled bowl is Lens Off Center.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "4.5, 4.15",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 17,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Wet Package (146)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Bubble (862)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Wet package marks look like bubbles but are liquid: gradual brightness change, irregular outline, usually near the package edge.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "5.2",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 117,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Extraneous Polymer",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Fiber",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Mixed shapes (a strand with a clump) are recorded as Fiber; Extraneous Polymer only when the material is clearly polymer.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "5.4B",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "n/a",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Surface Groove (no data)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Torn Lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "A groove that opens into a tear or flap is Torn Lens; a shallow surface channel is Surface Groove.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "5.3, 4.10",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "no data",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Surface Groove (no data)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Extraneous Polymer",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Raised or extra material is Extraneous Polymer; a groove is missing material.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "5.3",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "no data",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Torn Lens (no data)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Lens Rupture",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Torn lens stays in one piece; rupture separates it into pieces.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "4.10, 4.11",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "no data",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Edge Bottle-Capped (no data)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Torn Lens / Lens Rupture",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Edge deformation with a continuous edge is Edge Bottle-Capped; a tear into the lens is Torn Lens; separated material is Lens Rupture.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "4.9",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "no data",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Bubble Scatter (6)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Bubble / Bubble Cluster",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Scatter is a whole-picture tag for many small bubbles spread widely; single bubbles and touching groups are marked objects.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "4.14, 5.1B",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Dirty Strobe (43)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Dirty Camera (326)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Same kind of contamination, different focus: strobe marks are soft and creep in from the edge; camera marks are sharp anywhere in the picture.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "4.12, 4.13",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "n/a",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "No Lens (323)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "any lens condition",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "No Lens requires a valid package and confidence that no lens is present; otherwise the specific condition applies.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "4.6",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Multiple Lens (1,433)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Folded Lens (237)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Not a conflict: a folded lens in a multi-lens picture carries both tags.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "4.7, 4.8, 4.11",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 236,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "Bubble",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Foreign Matter family",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Anything that cannot be confidently called a bubble is recorded as the most appropriate foreign-matter class.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "1.3",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "n/a",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     }
+    ],
+    [
+     {
+      "value": "any uncertain defect",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "most appropriate class",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Uncertain features are recorded under the closest class; consistency is preferred over guessing the physical cause.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "1.3",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "n/a",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     }
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Features that look like defects but are not annotated",
+      "bold": true,
+      "font_size": 11
+     },
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Package marks (fiber-like marks that repeat in the same place)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Fiber, Foreign Matter",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Not annotated. A model will still see them, so they limit achievable precision on these classes.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "3.1",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Crater-like bubble artifacts (rings or depressions from collapsed bubbles)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Wet Package, Fiber, Extraneous Polymer, Foreign Matter",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Not annotated. They resemble wet-package and debris marks.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "3.2",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ]
+   ]
+  },
+  {
+   "name": "Earlier vs Current",
+   "column_widths": {
+    "A": 30,
+    "B": 16,
+    "C": 22,
+    "D": 20,
+    "E": 66
+   },
+   "row_heights": {
+    "1": 30
+   },
+   "freeze_panes": "A2",
+   "rows": [
+    [
+     {
+      "value": "Class",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Earlier full count",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Current analysed set (6,785)",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Training/test set (6,574)",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Why the numbers differ",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "value": "Missing Primary Package",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 1426,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 1426,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 1426,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Same at every stage",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Multiple Lenses",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 1439,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 1433,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 1402,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "A few pictures carry only unlabelled material and are left out of the analysed set",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Lens Off Center",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 957,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 953,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 922,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Same reason; further pictures are outside the training/test set",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Dirty Camera",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 329,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 326,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 298,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Same reason",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Missing Lens (No Lens)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 325,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 323,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 322,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Same reason",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Folded Lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 237,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 237,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 226,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Outside the training/test set",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Low Dose",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 215,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 215,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 204,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Outside the training/test set",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Cavity Off Center",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 184,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 184,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 184,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Same at every stage",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Foreign Matter size flag",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 171,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 171,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 171,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Same at every stage",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Fiber size flag",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 136,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 168,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 137,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "The analysed set also carries older label corrections; the training/test set counts the size flag only",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "HEMA size flag",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 94,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 94,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 94,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Same at every stage",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Dirty Strobe",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 43,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 43,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 41,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Outside the training/test set",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Extraneous Polymer size flag",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 33,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 33,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 33,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Same at every stage",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "View Obstructed",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 24,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 24,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 24,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Same at every stage",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Bubble Scatter",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Same at every stage",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Package Misalignment",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Same at every stage",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "HEMA Obstruction",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 86,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 86,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Kept for reference; not part of the current class list",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Bubble On 123",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "(object list)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 13,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Kept for reference; not part of the current class list",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Bubble On Edge",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "(object list)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 14,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Kept for reference; not part of the current class list",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Clear",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "(new)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 2156,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 2156,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Pictures with nothing to report",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "The three picture sets differ by design. The analysed set keeps only pictures that carry at least one label and a size flag where the guide requires one; the training/test set also leaves out pictures whose only labels are no longer in the class list.",
+      "italic": true,
+      "font_size": 10,
+      "font_color": "595959",
+      "wrap": true,
+      "valign": "top"
+     },
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "Training and Test Split",
+   "column_widths": {
+    "A": 34,
+    "B": 16,
+    "C": 14,
+    "D": 12,
+    "E": 16,
+    "F": 14,
+    "G": 44
+   },
+   "row_heights": {
+    "1": 30
+   },
+   "freeze_panes": "A2",
+   "autofilter": "A1:G22",
+   "rows": [
+    [
+     {
+      "value": "Class",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Training pictures",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Test pictures",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Total",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Expected training",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Expected test",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Note",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "value": "Foreign Matter size flag",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 124,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 47,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 171,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 119.7,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 51.3,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Fiber size flag",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 90,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 47,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 137,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 95.9,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 41.1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Extraneous Polymer size flag",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 25,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 8,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 33,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 23.1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 9.9,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Few pictures: test results will vary widely",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "HEMA size flag",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 66,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 28,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 94,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 65.8,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 28.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Bubble (merged class)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 552,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 237,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 789,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 552.3,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 236.7,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Bubble Cluster",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 266,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 114,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 380,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 266.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 114.0,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Wet Package",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 88,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 38,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 126,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 88.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 37.8,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Missing Primary Package",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 998,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 428,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 1426,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 998.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 427.8,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Multiple Lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 981,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 421,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 1402,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 981.4,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 420.6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "No Lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 225,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 97,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 322,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 225.4,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 96.6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Cavity Off Center",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 129,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 55,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 184,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 128.8,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 55.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Folded Lens",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 167,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 59,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 226,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 158.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 67.8,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Lens Off Center",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 645,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 277,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 922,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 645.4,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 276.6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Dirty Camera",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 209,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 89,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 298,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 208.6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 89.4,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Dirty Strobe",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 29,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 12,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 41,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 28.7,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 12.3,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Low Dose",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 143,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 61,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 204,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 142.8,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 61.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "View Obstructed",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 17,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 7,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 24,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 16.8,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 7.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Few pictures: test results will vary widely",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Package Misalignment",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 1,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 1.4,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 0.6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "Few pictures: test results will vary widely",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Bubble Scatter",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 4,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 6,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 4.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 1.8,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": "Few pictures: test results will vary widely",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Clear",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 1509,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 647,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 2156,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 1509.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 646.8,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Total",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": 4568,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 2006,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 6574,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 4601.8,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": 1972.2,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8",
+      "format": "#,##0"
+     },
+     {
+      "value": "70% training / 30% test",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Sum of the class rows above",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": 6268,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 2675,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": 8943,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "format": "#,##0"
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": null,
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Larger than the total because some pictures carry more than one class",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Pictures were divided 70/30 with the class mix balanced by stratified sampling and a fixed random seed. Every picture appears in exactly one side. There is no separate validation set.",
+      "italic": true,
+      "font_size": 10,
+      "font_color": "595959",
+      "wrap": true,
+      "valign": "top"
+     },
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "name": "Definitions",
+   "column_widths": {
+    "A": 38,
+    "B": 100
+   },
+   "row_heights": {
+    "1": 24
+   },
+   "freeze_panes": "A2",
+   "rows": [
+    [
+     {
+      "value": "Term",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     },
+     {
+      "value": "Meaning",
+      "bold": true,
+      "font_size": 10,
+      "font_color": "FFFFFF",
+      "fill": "2F5597",
+      "wrap": true,
+      "valign": "center",
+      "border": "thin",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "value": "Picture examined",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Every distinct image in the inspection library, counted once even when the same image appears in more than one folder.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Picture with usable labels",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "A picture that carries at least one tag or marked object under the current rules, or that is clear.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Training/test pictures",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "The pictures that feed the model, after leaving out pictures whose only labels are no longer in the class list.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Tag",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "A label that describes the whole picture, for example a lens folded or the image off-centre.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Marked object",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "An outlined object inside a picture, for example a bubble or a fiber.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Clear",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "A picture with nothing to report. Clear never appears together with another label.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Size flag",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "A tag applied to a defect that is above the agreed size limit. For foreign matter, fiber, extraneous polymer and HEMA, only flagged pictures count as that class.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Merged bubble class",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "Bubble, irregular bubble and stretched bubble are one class in the Draft 2 guide. All irregular-bubble pictures also carry a regular bubble, so the merged total is 750 pictures, not the sum of the three.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Legacy classes",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "Classes kept for reference only (Bubble On 123, Bubble On Edge, HEMA Obstruction). They are not part of the current class list or the training/test set.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Standalone tag",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "A tag that the guide says must appear alone: Missing Primary Package, Primary Package Misalignment, Cavity Off Center and Field of View Obstructed.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Object size (px)",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     },
+     {
+      "value": "The width and height of the outlined object in image pixels. Sizes describe the object, not its rotation.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true
+     }
+    ],
+    [
+     {
+      "value": "Why counts differ between sheets",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "The three picture sets in this workbook are nested. The earlier count looked at every annotation file; the analysed set applies the current rules; the training/test set also drops classes that are no longer used.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     {
+      "value": "Why class rows do not add up to the totals",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     },
+     {
+      "value": "A picture can carry more than one tag, or several marked objects. Class rows therefore count class memberships: 4,568 training pictures carry 6,268 class memberships. The training and test totals count each picture once, so they are smaller than the column sums. Marked objects are the exception: each object belongs to one class, so that column does add up to its total.",
+      "border": "thin",
+      "valign": "top",
+      "wrap": true,
+      "fill": "EAF0F8"
+     }
+    ],
+    [
+     null,
+     null
+    ],
+    [
+     {
+      "value": "Open points for confirmation: the code used in production files for Field of View Obstructed; the code for Stretched Bubble; the size limit for the size flags; and whether the Low Dose folder is fully annotated.",
+      "italic": true,
+      "font_size": 10,
+      "font_color": "595959",
+      "wrap": true,
+      "valign": "top"
+     },
+     null
+    ]
+   ]
+  }
+ ]
+}

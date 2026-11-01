@@ -1,0 +1,216 @@
+{
+ "phase": "1 of the scale plan",
+ "question": "which ring in the radial intensity profile is the lens edge, and what is the lens diameter in pixels",
+ "micron_free": "no micron figure appears anywhere in this file or its siblings. Turning pixels into microns needs the client nominal and is Phase 2 and 3 work.",
+ "sample": {
+  "pictures_measured": 2682,
+  "pictures_ok": 2659,
+  "duplicate_md5_measured_twice": 18,
+  "inventory_rows": 3483,
+  "groups": {
+   "other": 2407,
+   "missing_lens": 53,
+   "lens_off_center": 199
+  }
+ },
+ "discriminators": {
+  "discriminator_1_missing_lens": {
+   "label": "P1_NL = missing_lens, 53 sampled pictures with a measured cavity",
+   "reference_group": "'other' = 2407 sampled pictures carrying neither tag",
+   "per_candidate_ring": [
+    {
+     "candidate_index": 0,
+     "norm_centre": 0.89,
+     "detection_rate_other": 0.4819,
+     "detection_rate_missing_lens": 0.0,
+     "median_radius_other_px": 392.0,
+     "median_radius_missing_lens_px": null
+    },
+    {
+     "candidate_index": 1,
+     "norm_centre": 1.01,
+     "detection_rate_other": 0.4616,
+     "detection_rate_missing_lens": 0.0,
+     "median_radius_other_px": 445.0,
+     "median_radius_missing_lens_px": null
+    }
+   ],
+   "rings_per_picture": {
+    "other": 1.351,
+    "missing_lens": 0.019
+   },
+   "shipped_dip_prominence": {
+    "other_median": 4.91,
+    "missing_lens_median": 2.17,
+    "other_n": 2407,
+    "missing_lens_n": 53
+   }
+  },
+  "discriminator_2_lens_off_center": {
+   "label": "P2_LOC = lens_off_center, 199 sampled pictures with a measured cavity",
+   "reference_group": "'other' = 2407 sampled pictures carrying neither tag",
+   "per_candidate_ring": [
+    {
+     "candidate_index": 0,
+     "norm_centre": 0.89,
+     "detection_rate_other": 0.4819,
+     "detection_rate_lens_off_center": 0.3015,
+     "centre_offset_median_other_px": 10.37,
+     "centre_offset_median_lens_off_center_px": 10.55,
+     "median_radius_other_px": 392.0,
+     "median_radius_lens_off_center_px": 396.0
+    },
+    {
+     "candidate_index": 1,
+     "norm_centre": 1.01,
+     "detection_rate_other": 0.4616,
+     "detection_rate_lens_off_center": 0.2412,
+     "centre_offset_median_other_px": 12.03,
+     "centre_offset_median_lens_off_center_px": 11.96,
+     "median_radius_other_px": 445.0,
+     "median_radius_lens_off_center_px": 439.0
+    }
+   ],
+   "note": "the offset is the ring centre less the cavity centre, measured from the 360 ray dips; the cavity centre is the shipped bright-blob centroid, the same origin the radial profile uses"
+  }
+ },
+ "methods": {
+  "identical_images": true,
+  "population": {
+   "measured_ok": 2659,
+   "repro_frames": 200,
+   "repro_accepted_by_dip_gate": 200
+  },
+  "dip_argmax": {
+   "n": 2659,
+   "median_diam_px": 760.0,
+   "trimmed_mean_diam_px": 749.4,
+   "median_radius_px": 380.0,
+   "by_population": {
+    "lib": {
+     "n": 1977,
+     "median_diam_px": 746.0
+    },
+    "prod": {
+     "n": 482,
+     "median_diam_px": 784.0
+    },
+    "repro": {
+     "n": 200,
+     "median_diam_px": 786.0
+    }
+   }
+  },
+  "gradient_annular": {
+   "n": 2659,
+   "median_diam_px": 768.0,
+   "median_radius_px": 384.0,
+   "by_population": {
+    "lib": {
+     "n": 1977,
+     "median_diam_px": 758.0
+    },
+    "prod": {
+     "n": 482,
+     "median_diam_px": 780.0
+    },
+    "repro": {
+     "n": 200,
+     "median_diam_px": 788.0
+    }
+   }
+  },
+  "circle_fit_wide_0.50_1.06": {
+   "n": 2659,
+   "median_diam_px": 841.4,
+   "median_radius_px": 420.72,
+   "median_rms_px": 11.26,
+   "by_population": {
+    "lib": {
+     "n": 1977,
+     "median_diam_px": 826.7
+    },
+    "prod": {
+     "n": 482,
+     "median_diam_px": 870.3
+    },
+    "repro": {
+     "n": 200,
+     "median_diam_px": 870.0
+    }
+   }
+  },
+  "circle_fit_rim_0.80_0.96": {
+   "n": 2659,
+   "median_diam_px": 789.0,
+   "by_population": {
+    "lib": {
+     "n": 1977,
+     "median_diam_px": 777.3
+    },
+    "prod": {
+     "n": 482,
+     "median_diam_px": 809.5
+    },
+    "repro": {
+     "n": 200,
+     "median_diam_px": 811.6
+    }
+   },
+   "p25_diam_px": 764.4,
+   "p75_diam_px": 809.5,
+   "iqr_diam_px": 45.1,
+   "rel_spread_pct": 5.71,
+   "p10_diam_px": 720.7,
+   "p90_diam_px": 823.8,
+   "sd_diam_px": 61.8
+  },
+  "prior_run_reproduction": {
+   "repro_frames": 200,
+   "accepted_frames": 200,
+   "trimmed_mean_lens_diam_px": 784.7,
+   "target_px": 783.8,
+   "delta_px": 0.9,
+   "within_one_px": true
+  }
+ },
+ "verdict": {
+  "lens_edge_ring": {
+   "candidate_index": 0,
+   "normalised_radius": 0.89,
+   "median_radius_px": 393.0,
+   "detection_rate_other": 0.4819,
+   "detection_rate_missing_lens": 0.0,
+   "median_depth": 3.027
+  },
+  "lens_diameter_px": {
+   "headline_method": "least-squares circle fit to 360 radial edge points restricted to 0.80-0.96 of the cavity radius, outlier-rejected",
+   "median_diam_px": 789.0,
+   "p25_diam_px": 764.4,
+   "p75_diam_px": 809.5,
+   "iqr_diam_px": 45.1,
+   "rel_spread_pct": 5.71,
+   "p10_diam_px": 720.7,
+   "p90_diam_px": 823.8,
+   "sd_diam_px": 61.8,
+   "n": 2659,
+   "cross_check_ring_inventory_diam_px": 786.0
+  },
+  "other_rings": {
+   "outer_ring_at_~1.01_Rcav": {
+    "candidate_index": 1,
+    "median_radius_px": 445.0,
+    "median_diam_px": 890.0,
+    "detection_rate_other": 0.4616,
+    "median_depth": 4.923,
+    "median_sharpness": 0.4805
+   },
+   "median_cavity_radius_px": 438.5,
+   "cavity_diameter_px": 877.0
+  },
+  "structural_argument": "the cavity wall is where the bright disc ends, and the shipped mask already puts that boundary at R_cav (median 438.5 px radius, 877.0 px diameter). A dark feature at 1.01 R_cav is therefore at the wall, not inside the cavity, and cannot be a free-floating lens rim; a lens whose rim sat on the wall would fill the cavity exactly, which the existence of a Lens Off Center class contradicts. The only ring clear of the wall is the one at 0.89 R_cav, and that is the lens edge.",
+  "discriminator_1_outcome": "DECISIVE for the ring family, not for a single ring. Every outer dark ring, both candidates, is present only when a lens is present.",
+  "discriminator_2_outcome": "INCONCLUSIVE. The P2_LOC tag does not move either ring's centre relative to the cavity centre, so no ring can be assigned by motion.",
+  "the_848_px_figure": "REPRODUCED. The wide-band least-squares circle fit, 0.50 to 1.06 of R_cav, gives a median 841.4 px over the same library population (the earlier figure was 848). It is a blend of the two modes, not a single physical ring: restricted to the rim band the same fit gives 789.0 px."
+ }
+}

@@ -1,0 +1,3270 @@
+{
+ "workbook": {
+  "default_header_style": true,
+  "full_calc_on_load": true
+ },
+ "sheets": [
+  {
+   "name": "Summary",
+   "rows": [
+    [
+     {
+      "value": "Defect and image-quality analysis",
+      "bold": true,
+      "font_size": 14,
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     {
+      "value": "Draft 2 annotation guide - revision 3",
+      "italic": true,
+      "font_color": "595959"
+     }
+    ],
+    [],
+    [
+     {
+      "value": "Population",
+      "bold": true,
+      "fill": "D9E2F2",
+      "font_color": "1F3864"
+     },
+     {
+      "value": "Pictures",
+      "bold": true,
+      "fill": "D9E2F2",
+      "font_color": "1F3864"
+     },
+     {
+      "value": "",
+      "bold": true,
+      "fill": "D9E2F2",
+      "font_color": "1F3864"
+     },
+     {
+      "value": "Splits",
+      "bold": true,
+      "fill": "D9E2F2",
+      "font_color": "1F3864"
+     },
+     {
+      "value": "",
+      "bold": true,
+      "fill": "D9E2F2",
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     "Pictures examined",
+     {
+      "value": 10614,
+      "format": "#,##0",
+      "bold": true
+     },
+     "",
+     "Analysed set",
+     {
+      "value": 6938,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "",
+     "",
+     "",
+     "70/30 train / test",
+     {
+      "value": "4,568 / 2,006"
+     }
+    ],
+    [
+     "",
+     "",
+     "",
+     "80/20 train / test",
+     {
+      "value": "5,269 / 1,305"
+     }
+    ],
+    [],
+    [
+     {
+      "value": "Main classes (pictures carrying the class)",
+      "bold": true,
+      "fill": "D9E2F2",
+      "font_color": "1F3864"
+     },
+     {
+      "value": "Pictures",
+      "bold": true,
+      "fill": "D9E2F2",
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     "Missing Primary Package",
+     {
+      "value": 1426,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "Multiple Lens",
+     {
+      "value": 1439,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "Lens Off Center",
+     {
+      "value": 957,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "Clear",
+     {
+      "value": 2156,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "Bubble",
+     {
+      "value": 862,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "Bubble Cluster",
+     {
+      "value": 430,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "No Lens",
+     {
+      "value": 325,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "Dirty Camera",
+     {
+      "value": 329,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "Folded Lens",
+     {
+      "value": 237,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "Low Dose",
+     {
+      "value": 215,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [],
+    [
+     {
+      "value": "Revision 3: no picture is dropped for lacking a micron-gate tag. Size-gated families show the pictures carrying the class and, beside them, the gate-tagged subset used as split positives. Tag combinations are given as exact-only and inclusive tables. Both split ratios are provided.",
+      "italic": true,
+      "font_color": "595959",
+      "font_size": 9
+     }
+    ],
+    [
+     {
+      "value": "Rows are not additive: a picture can carry several classes, so the class rows sum to more than the picture totals above.",
+      "italic": true,
+      "font_color": "595959",
+      "font_size": 9
+     }
+    ]
+   ],
+   "freeze_panes": "A4",
+   "charts": [
+    {
+     "type": "bar",
+     "title": "Pictures per class",
+     "anchor": "D10",
+     "data": "B10:B19",
+     "categories": "A10:A19"
+    }
+   ],
+   "column_widths": {
+    "A": 32,
+    "B": 13,
+    "C": 3,
+    "D": 22,
+    "E": 18
+   }
+  },
+  {
+   "name": "LP Summary",
+   "rows": [
+    [
+     {
+      "value": "Lens-presentation tags",
+      "bold": true,
+      "font_size": 14,
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     {
+      "value": "Class",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Guide code",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Pictures in analysed set (6,938)",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Share of analysed pictures",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "In 70/30 split",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "In 80/20 split",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Notes",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     }
+    ],
+    [
+     "Missing Primary Package",
+     "P1_MPP",
+     {
+      "value": 1426,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0.2055,
+      "format": "0.0%",
+      "bold": true
+     },
+     1426,
+     1426,
+     "Standalone: no other label applies"
+    ],
+    [
+     "Primary Package Misalignment",
+     "P1_PPM",
+     {
+      "value": 2,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0.0003,
+      "format": "0.0%",
+      "bold": true
+     },
+     2,
+     2,
+     "Standalone; rarest class"
+    ],
+    [
+     "Cavity Off Center",
+     "P1_COC",
+     {
+      "value": 184,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0.0265,
+      "format": "0.0%",
+      "bold": true
+     },
+     184,
+     184,
+     "Standalone"
+    ],
+    [
+     "Field of View Obstructed",
+     "F2_FOV/P2_FOV",
+     {
+      "value": 24,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0.0035,
+      "format": "0.0%",
+      "bold": true
+     },
+     24,
+     24,
+     "Standalone; production files use the code F2_FOV"
+    ],
+    [
+     "Lens Off Center",
+     "P2_LOC",
+     {
+      "value": 957,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0.1379,
+      "format": "0.0%",
+      "bold": true
+     },
+     922,
+     922,
+     "Largest lens-position class"
+    ],
+    [
+     "No Lens",
+     "P1_NL",
+     {
+      "value": 325,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0.0468,
+      "format": "0.0%",
+      "bold": true
+     },
+     322,
+     322,
+     "Lens absent, package valid"
+    ],
+    [
+     "Multiple Lens",
+     "P1_ML",
+     {
+      "value": 1439,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0.2074,
+      "format": "0.0%",
+      "bold": true
+     },
+     1402,
+     1402,
+     "Most frequent lens condition"
+    ],
+    [
+     "Folded Lens",
+     "P1_FL",
+     {
+      "value": 237,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0.0342,
+      "format": "0.0%",
+      "bold": true
+     },
+     226,
+     226,
+     "Always carries Multiple Lens with it"
+    ],
+    [
+     "Dirty Strobe",
+     "P2_DS",
+     {
+      "value": 43,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0.0062,
+      "format": "0.0%",
+      "bold": true
+     },
+     41,
+     41,
+     "Out-of-focus marks from the strobe cover"
+    ],
+    [
+     "Dirty Camera",
+     "P2_DC",
+     {
+      "value": 329,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0.0474,
+      "format": "0.0%",
+      "bold": true
+     },
+     298,
+     298,
+     "Sharp marks from the camera optics"
+    ],
+    [
+     "Bubble Scatter",
+     "P2_BSC",
+     {
+      "value": 6,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0.0009,
+      "format": "0.0%",
+      "bold": true
+     },
+     6,
+     6,
+     "Diffuse field of small bubbles; rare"
+    ],
+    [
+     "Low Dose",
+     "P2_LD",
+     {
+      "value": 215,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0.031,
+      "format": "0.0%",
+      "bold": true
+     },
+     204,
+     204,
+     "Low solution volume merges the interfaces"
+    ],
+    [
+     "Edge Bottle-Capped / Torn Lens / Lens Rupture",
+     "P1_EBC/P1_TL/P1_LR",
+     {
+      "value": 0,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0,
+      "format": "0.0%",
+      "bold": true
+     },
+     0,
+     0,
+     "Defined in the guide; no annotated pictures yet"
+    ],
+    [
+     "HEMA Obstruction (legacy)",
+     "P2_HMO",
+     {
+      "value": 86,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0.0124,
+      "format": "0.0%",
+      "bold": true
+     },
+     0,
+     0,
+     "Kept for reference only; not part of the current class list"
+    ],
+    [
+     "Clear",
+     "(none)",
+     {
+      "value": 2156,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0.3108,
+      "format": "0.0%",
+      "bold": true
+     },
+     2156,
+     2156,
+     "Picture is clear; never carries another label"
+    ],
+    [],
+    [
+     {
+      "value": "Class rows are not additive: a picture can carry several tags. The split columns count only the split-eligible pictures (Draft 2 codes + Clear).",
+      "italic": true,
+      "font_color": "595959",
+      "font_size": 9
+     }
+    ]
+   ],
+   "freeze_panes": "A3",
+   "column_widths": {
+    "A": 32,
+    "B": 15,
+    "C": 24,
+    "D": 20,
+    "E": 13,
+    "F": 13,
+    "G": 48
+   }
+  },
+  {
+   "name": "Tag Combinations",
+   "rows": [
+    [
+     {
+      "value": "Tag combinations",
+      "bold": true,
+      "font_size": 14,
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     {
+      "value": "Two definitions, two tables. Read them together: a pair can look rare in the exact table only because most of its pictures carry a third label.",
+      "italic": true,
+      "font_color": "595959",
+      "font_size": 9
+     }
+    ],
+    [],
+    [
+     {
+      "value": "Table 1 - Exact pairs",
+      "bold": true,
+      "fill": "D9E2F2",
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     {
+      "value": "The picture's complete label set is precisely that pair, nothing else.",
+      "italic": true,
+      "font_color": "595959",
+      "font_size": 9
+     }
+    ],
+    [
+     {
+      "value": "#",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Tag pair",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Pictures",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     }
+    ],
+    [
+     1,
+     "Lens Off Center + Multiple Lens",
+     {
+      "value": 374,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     2,
+     "Folded Lens + Multiple Lens",
+     {
+      "value": 67,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     3,
+     "Bubble + Foreign Matter gate",
+     {
+      "value": 39,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     4,
+     "Bubble + Bubble Cluster",
+     {
+      "value": 36,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     5,
+     "Bubble + HEMA gate",
+     {
+      "value": 29,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     6,
+     "Bubble + Wet Package",
+     {
+      "value": 21,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     7,
+     "Dirty Camera + Multiple Lens",
+     {
+      "value": 18,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     8,
+     "Bubble + Low Dose",
+     {
+      "value": 16,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     9,
+     "Bubble + Dirty Camera",
+     {
+      "value": 13,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     10,
+     "Bubble + Dirty Strobe",
+     {
+      "value": 8,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     11,
+     "Bubble + Fiber gate",
+     {
+      "value": 8,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     12,
+     "Lens Off Center + Low Dose",
+     {
+      "value": 6,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     13,
+     "Bubble + Multiple Lens",
+     {
+      "value": 5,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     14,
+     "Low Dose + Multiple Lens",
+     {
+      "value": 5,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     15,
+     "Dirty Camera + Lens Off Center",
+     {
+      "value": 4,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [],
+    [
+     {
+      "value": "Table 2 - Inclusive pairs",
+      "bold": true,
+      "fill": "D9E2F2",
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     {
+      "value": "The picture carries both tags; any further labels in addition are allowed.",
+      "italic": true,
+      "font_color": "595959",
+      "font_size": 9
+     }
+    ],
+    [
+     {
+      "value": "#",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Tag pair",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Pictures",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     }
+    ],
+    [
+     1,
+     "Lens Off Center + Multiple Lens",
+     {
+      "value": 664,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     2,
+     "Bubble + Bubble Cluster",
+     {
+      "value": 407,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     3,
+     "Folded Lens + Multiple Lens",
+     {
+      "value": 236,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     4,
+     "Bubble + Dirty Camera",
+     {
+      "value": 200,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     5,
+     "Bubble + Lens Off Center",
+     {
+      "value": 185,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     6,
+     "Bubble + Multiple Lens",
+     {
+      "value": 168,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     7,
+     "Bubble + Foreign Matter gate",
+     {
+      "value": 167,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     8,
+     "Folded Lens + Lens Off Center",
+     {
+      "value": 148,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     9,
+     "Bubble + Fiber gate",
+     {
+      "value": 132,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     10,
+     "Bubble + Low Dose",
+     {
+      "value": 121,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     11,
+     "Bubble Cluster + Dirty Camera",
+     {
+      "value": 119,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     12,
+     "Bubble + Wet Package",
+     {
+      "value": 117,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     13,
+     "Bubble Cluster + Lens Off Center",
+     {
+      "value": 106,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     14,
+     "Dirty Camera + Multiple Lens",
+     {
+      "value": 106,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     15,
+     "Bubble Cluster + Multiple Lens",
+     {
+      "value": 100,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [],
+    [
+     {
+      "value": "How many labels one picture carries (Draft 2 codes + Clear)",
+      "bold": true,
+      "fill": "D9E2F2",
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     {
+      "value": "Labels on the picture",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Pictures",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     }
+    ],
+    [
+     "0 label(s)",
+     {
+      "value": 248,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "1 label(s)",
+     {
+      "value": 5301,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "2 label(s)",
+     {
+      "value": 660,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "3 label(s)",
+     {
+      "value": 424,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "4 label(s)",
+     {
+      "value": 207,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "5 label(s)",
+     {
+      "value": 71,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "6 label(s)",
+     {
+      "value": 20,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "7 label(s)",
+     {
+      "value": 5,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "8 label(s)",
+     {
+      "value": 2,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [],
+    [
+     {
+      "value": "A picture with 2 or more labels means the tag model must be multi-label. Example: Multiple Lens + Lens Off Center is rare as an exact pair but is by far the largest inclusive overlap.",
+      "italic": true,
+      "font_color": "595959",
+      "font_size": 9
+     }
+    ]
+   ],
+   "column_widths": {
+    "A": 24,
+    "B": 48,
+    "C": 11
+   }
+  },
+  {
+   "name": "OOI Summary",
+   "rows": [
+    [
+     {
+      "value": "Object classes",
+      "bold": true,
+      "font_size": 14,
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     {
+      "value": "Object class",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Guide code",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Pictures carrying the class",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Of which micron-gate tagged",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Objects marked",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Typical width (px)",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Typical height (px)",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Notes",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     }
+    ],
+    [
+     "Bubble",
+     "P2_BB",
+     {
+      "value": 862,
+      "format": "#,##0",
+      "bold": true
+     },
+     "",
+     {
+      "value": 10070,
+      "format": "#,##0",
+      "bold": true
+     },
+     6.6,
+     6.4,
+     ""
+    ],
+    [
+     "Bubble Cluster",
+     "P2_BC",
+     {
+      "value": 430,
+      "format": "#,##0",
+      "bold": true
+     },
+     "",
+     {
+      "value": 1070,
+      "format": "#,##0",
+      "bold": true
+     },
+     11.6,
+     10.6,
+     ""
+    ],
+    [
+     "Wet Package",
+     "P2_WP",
+     {
+      "value": 146,
+      "format": "#,##0",
+      "bold": true
+     },
+     "",
+     {
+      "value": 593,
+      "format": "#,##0",
+      "bold": true
+     },
+     31.8,
+     21.9,
+     ""
+    ],
+    [
+     "Foreign Matter",
+     "P3_FM",
+     {
+      "value": 331,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 171,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 579,
+      "format": "#,##0",
+      "bold": true
+     },
+     10.7,
+     10.3,
+     "Split positives = the gate-tagged subset"
+    ],
+    [
+     "Fiber",
+     "P3_FIB",
+     {
+      "value": 210,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 168,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 223,
+      "format": "#,##0",
+      "bold": true
+     },
+     27.4,
+     16.9,
+     "Split positives = the gate-tagged subset"
+    ],
+    [
+     "Extraneous Polymer",
+     "P3_EP",
+     {
+      "value": 144,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 33,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 149,
+      "format": "#,##0",
+      "bold": true
+     },
+     177.1,
+     183.4,
+     "Split positives = the gate-tagged subset"
+    ],
+    [
+     "HEMA",
+     "P3_HE",
+     {
+      "value": 101,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 94,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 99,
+      "format": "#,##0",
+      "bold": true
+     },
+     1050.1,
+     608.7,
+     "Split positives = the gate-tagged subset"
+    ],
+    [
+     {
+      "value": "Older classes kept for reference (not in the current class list)",
+      "bold": true,
+      "fill": "D9E2F2",
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     "Bubble Irregular (folds into Bubble)",
+     "(legacy)",
+     {
+      "value": 108,
+      "format": "#,##0",
+      "bold": true
+     },
+     "",
+     {
+      "value": 128,
+      "format": "#,##0",
+      "bold": true
+     },
+     25.9,
+     23.9,
+     ""
+    ],
+    [
+     "Stretched Bubble (folds into Bubble)",
+     "(legacy)",
+     {
+      "value": 6,
+      "format": "#,##0",
+      "bold": true
+     },
+     "",
+     {
+      "value": 7,
+      "format": "#,##0",
+      "bold": true
+     },
+     100.9,
+     22.2,
+     ""
+    ],
+    [
+     "Bubble On 123 (library-only)",
+     "(legacy)",
+     {
+      "value": 13,
+      "format": "#,##0",
+      "bold": true
+     },
+     "",
+     {
+      "value": 79,
+      "format": "#,##0",
+      "bold": true
+     },
+     5.2,
+     5.5,
+     ""
+    ],
+    [
+     "Bubble On Edge (library-only)",
+     "(legacy)",
+     {
+      "value": 14,
+      "format": "#,##0",
+      "bold": true
+     },
+     "",
+     {
+      "value": 90,
+      "format": "#,##0",
+      "bold": true
+     },
+     8.7,
+     10.4,
+     ""
+    ],
+    [
+     "HEMA Obstruction (legacy tag)",
+     "P2_HMO",
+     {
+      "value": 86,
+      "format": "#,##0",
+      "bold": true
+     },
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [],
+    [
+     {
+      "value": "Pictures carrying the class counts every annotation of the family (coded boxes, plain-name boxes and the gate tag). The micron-gate column is the subset above the size limit; the split uses it as the class positives. The two numbers answer different questions and are not meant to be equal.",
+      "italic": true,
+      "font_color": "595959",
+      "font_size": 9
+     }
+    ],
+    [
+     {
+      "value": "The merged Bubble class (Bubble + irregular + stretched) is one Draft 2 class; the legacy rows above show its composition. Bubble On 123 and Bubble On Edge stay separate.",
+      "italic": true,
+      "font_color": "595959",
+      "font_size": 9
+     }
+    ]
+   ],
+   "freeze_panes": "A3",
+   "column_widths": {
+    "A": 32,
+    "B": 10,
+    "C": 24,
+    "D": 22,
+    "E": 13,
+    "F": 15,
+    "G": 15,
+    "H": 44
+   }
+  },
+  {
+   "name": "Standalone Tags",
+   "rows": [
+    [
+     {
+      "value": "Standalone tags",
+      "bold": true,
+      "font_size": 14,
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     {
+      "value": "Standalone tag",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Pictures tagged",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Pictures carrying ANY extra tag or box",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Status",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     }
+    ],
+    [
+     "P1_MPP Missing Primary Package",
+     {
+      "value": 1426,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": "Follows the guide: no other label on these pictures",
+      "font_color": "2E7D32"
+     }
+    ],
+    [
+     "P1_PPM Primary Package Misalignment",
+     {
+      "value": 2,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": "Follows the guide: no other label on these pictures",
+      "font_color": "2E7D32"
+     }
+    ],
+    [
+     "P1_COC Cavity Off Center",
+     {
+      "value": 184,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": "Follows the guide: no other label on these pictures",
+      "font_color": "2E7D32"
+     }
+    ],
+    [
+     "P2_FOV / F2_FOV Field of View Obstructed",
+     {
+      "value": 24,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": "Follows the guide. The data uses the production code F2_FOV; both spellings counted here",
+      "font_color": "2E7D32"
+     }
+    ],
+    [],
+    [
+     {
+      "value": "The guide defines these four tags as standalone: when one is applied, no other tag or object label applies to that picture. The annotations were checked against this rule and no exceptions were found.",
+      "italic": true,
+      "font_color": "595959",
+      "font_size": 9
+     }
+    ]
+   ],
+   "column_widths": {
+    "A": 40,
+    "B": 16,
+    "C": 34,
+    "D": 56
+   }
+  },
+  {
+   "name": "Confusion Risks",
+   "rows": [
+    [
+     {
+      "value": "Confusion risks",
+      "bold": true,
+      "font_size": 14,
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     {
+      "value": "Class",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Can look like",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "How to tell them apart",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Guide section",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Pictures with both",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     }
+    ],
+    [
+     "Cavity Off Center",
+     "Primary Package Misalignment (2)",
+     "Off-centre image with the package correctly seated = Cavity Off Center; package not seated or out of position = Primary Package Misalignment.",
+     "4.3",
+     {
+      "value": 0,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "Lens Off Center (957)",
+     "Low Dose (215)",
+     "If the cause is too little solution, it is Low Dose; a real shift in a well-filled bowl is Lens Off Center.",
+     "4.5, 4.15",
+     {
+      "value": 17,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "Wet Package (146)",
+     "Bubble (862)",
+     "Wet package marks look like bubbles but are liquid: gradual brightness change, irregular outline, usually near the package edge.",
+     "5.2",
+     {
+      "value": 117,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "Extraneous Polymer",
+     "Fiber",
+     "Mixed shapes (a strand with a clump) are recorded as Fiber; Extraneous Polymer only when the material is clearly polymer.",
+     "5.4B",
+     "n/a"
+    ],
+    [
+     "Bubble Scatter (6)",
+     "Bubble / Bubble Cluster",
+     "Scatter is a whole-picture tag for many small bubbles spread widely; single bubbles and touching groups are marked objects.",
+     "4.14, 5.1B",
+     {
+      "value": 0,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "Dirty Strobe (43)",
+     "Dirty Camera (329)",
+     "Same kind of contamination, different focus: strobe marks are soft and creep in from the edge; camera marks are sharp anywhere in the picture.",
+     "4.12, 4.13",
+     "n/a"
+    ],
+    [
+     "No Lens (325)",
+     "any lens condition",
+     "No Lens requires a valid package and confidence that no lens is present; otherwise the specific condition applies.",
+     "4.6",
+     {
+      "value": 0,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [
+     "Multiple Lens (1439)",
+     "Folded Lens (237)",
+     "Not a conflict: a folded lens in a multi-lens picture carries both tags.",
+     "4.7, 4.8, 4.11",
+     {
+      "value": 236,
+      "format": "#,##0",
+      "bold": true
+     }
+    ],
+    [],
+    [
+     {
+      "value": "Features that look like defects but are not annotated",
+      "bold": true,
+      "fill": "D9E2F2",
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     "Package marks (fiber-like marks that repeat in the same place)",
+     "Fiber, Foreign Matter",
+     "Not annotated. A model will still see them, so they limit achievable precision on these classes.",
+     "3.1",
+     ""
+    ],
+    [
+     "Crater-like bubble artifacts (rings or depressions from collapsed bubbles)",
+     "Wet Package, Fiber, Extraneous Polymer, Foreign Matter",
+     "Not annotated. They resemble wet-package and debris marks.",
+     "3.2",
+     ""
+    ]
+   ],
+   "freeze_panes": "A3",
+   "column_widths": {
+    "A": 34,
+    "B": 30,
+    "C": 82,
+    "D": 12,
+    "E": 15
+   }
+  },
+  {
+   "name": "Earlier vs Current",
+   "rows": [
+    [
+     {
+      "value": "The same tag counted at each stage",
+      "bold": true,
+      "font_size": 14,
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     {
+      "value": "Tag",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Union census (all files, duplicates removed)",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Resolved (one winner per picture)",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Rev3 analysed set (6,938)",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Split-eligible 70/30",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Split-eligible 80/20",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     }
+    ],
+    [
+     "Missing Primary Package",
+     {
+      "value": 1427,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 1426,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 1426,
+      "format": "#,##0",
+      "bold": true
+     },
+     1426,
+     1426
+    ],
+    [
+     "Multiple Lens",
+     {
+      "value": 1444,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 1439,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 1439,
+      "format": "#,##0",
+      "bold": true
+     },
+     1402,
+     1402
+    ],
+    [
+     "Lens Off Center",
+     {
+      "value": 967,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 957,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 957,
+      "format": "#,##0",
+      "bold": true
+     },
+     922,
+     922
+    ],
+    [
+     "No Lens",
+     {
+      "value": 326,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 325,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 325,
+      "format": "#,##0",
+      "bold": true
+     },
+     322,
+     322
+    ],
+    [
+     "Folded Lens",
+     {
+      "value": 237,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 237,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 237,
+      "format": "#,##0",
+      "bold": true
+     },
+     226,
+     226
+    ],
+    [
+     "Low Dose",
+     {
+      "value": 216,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 215,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 215,
+      "format": "#,##0",
+      "bold": true
+     },
+     204,
+     204
+    ],
+    [
+     "Cavity Off Center",
+     {
+      "value": 184,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 184,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 184,
+      "format": "#,##0",
+      "bold": true
+     },
+     184,
+     184
+    ],
+    [
+     "Dirty Camera",
+     {
+      "value": 329,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 329,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 329,
+      "format": "#,##0",
+      "bold": true
+     },
+     298,
+     298
+    ],
+    [
+     "Dirty Strobe",
+     {
+      "value": 43,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 43,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 43,
+      "format": "#,##0",
+      "bold": true
+     },
+     41,
+     41
+    ],
+    [
+     "View Obstructed",
+     {
+      "value": 24,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 24,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 24,
+      "format": "#,##0",
+      "bold": true
+     },
+     24,
+     24
+    ],
+    [
+     "Bubble Scatter",
+     {
+      "value": 6,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 6,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 6,
+      "format": "#,##0",
+      "bold": true
+     },
+     6,
+     6
+    ],
+    [
+     "Package Misalignment",
+     {
+      "value": 2,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 2,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 2,
+      "format": "#,##0",
+      "bold": true
+     },
+     2,
+     2
+    ],
+    [
+     "HEMA Obstruction (legacy)",
+     {
+      "value": 174,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 86,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 86,
+      "format": "#,##0",
+      "bold": true
+     },
+     0,
+     0
+    ],
+    [
+     "Foreign Matter gate",
+     "",
+     {
+      "value": 171,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 171,
+      "format": "#,##0",
+      "bold": true
+     },
+     171,
+     171
+    ],
+    [
+     "Fiber gate",
+     "",
+     {
+      "value": 136,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 168,
+      "format": "#,##0",
+      "bold": true
+     },
+     137,
+     137
+    ],
+    [
+     "Extraneous Polymer gate",
+     "",
+     {
+      "value": 33,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 33,
+      "format": "#,##0",
+      "bold": true
+     },
+     33,
+     33
+    ],
+    [
+     "HEMA gate",
+     "",
+     {
+      "value": 94,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 94,
+      "format": "#,##0",
+      "bold": true
+     },
+     94,
+     94
+    ],
+    [
+     "Clear",
+     "",
+     "",
+     {
+      "value": 2156,
+      "format": "#,##0",
+      "bold": true
+     },
+     2156,
+     2156
+    ],
+    [],
+    [
+     {
+      "value": "Why the columns differ: union census counts every annotation in any file after removing duplicate picture copies; resolved keeps one winning annotation per picture (newest file wins); the rev3 analysed set keeps every picture with at least one Draft 2 label plus Clear - nothing is dropped for lacking a micron gate; split-eligible counts only Draft 2 codes + Clear, with gate tags marking the gated classes.",
+      "italic": true,
+      "font_color": "595959",
+      "font_size": 9
+     }
+    ]
+   ],
+   "freeze_panes": "A3",
+   "column_widths": {
+    "A": 28,
+    "B": 30,
+    "C": 26,
+    "D": 22,
+    "E": 18,
+    "F": 18
+   }
+  },
+  {
+   "name": "Training and Test Split",
+   "rows": [
+    [
+     {
+      "value": "Training and test split - both ratios, same recipe and seed",
+      "bold": true,
+      "font_size": 14,
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     {
+      "value": "Training and test split, 70% training / 30% test",
+      "bold": true,
+      "fill": "D9E2F2",
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     {
+      "value": "Class",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Training pictures",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Test pictures",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Total",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Expected training",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Expected test",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Note",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     }
+    ],
+    [
+     "Foreign Matter gate",
+     {
+      "value": 124,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 47,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 171,
+      "format": "#,##0",
+      "bold": true
+     },
+     119.7,
+     51.3,
+     "Split positives = micron-gate-tagged pictures"
+    ],
+    [
+     "Fiber gate",
+     {
+      "value": 90,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 47,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 137,
+      "format": "#,##0",
+      "bold": true
+     },
+     95.9,
+     41.1,
+     "Split positives = micron-gate-tagged pictures"
+    ],
+    [
+     "Extraneous Polymer gate",
+     {
+      "value": 25,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 8,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 33,
+      "format": "#,##0",
+      "bold": true
+     },
+     23.1,
+     9.9,
+     "Few pictures: test results will vary widely"
+    ],
+    [
+     "HEMA gate",
+     {
+      "value": 66,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 28,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 94,
+      "format": "#,##0",
+      "bold": true
+     },
+     65.8,
+     28.2,
+     "Split positives = micron-gate-tagged pictures"
+    ],
+    [
+     "Bubble",
+     {
+      "value": 552,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 237,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 789,
+      "format": "#,##0",
+      "bold": true
+     },
+     552.3,
+     236.7,
+     ""
+    ],
+    [
+     "Bubble Cluster",
+     {
+      "value": 266,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 114,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 380,
+      "format": "#,##0",
+      "bold": true
+     },
+     266.0,
+     114.0,
+     ""
+    ],
+    [
+     "Wet Package",
+     {
+      "value": 88,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 38,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 126,
+      "format": "#,##0",
+      "bold": true
+     },
+     88.2,
+     37.8,
+     ""
+    ],
+    [
+     "Missing Primary Package",
+     {
+      "value": 998,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 428,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 1426,
+      "format": "#,##0",
+      "bold": true
+     },
+     998.2,
+     427.8,
+     ""
+    ],
+    [
+     "Multiple Lens",
+     {
+      "value": 981,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 421,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 1402,
+      "format": "#,##0",
+      "bold": true
+     },
+     981.4,
+     420.6,
+     ""
+    ],
+    [
+     "No Lens",
+     {
+      "value": 225,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 97,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 322,
+      "format": "#,##0",
+      "bold": true
+     },
+     225.4,
+     96.6,
+     ""
+    ],
+    [
+     "Cavity Off Center",
+     {
+      "value": 129,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 55,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 184,
+      "format": "#,##0",
+      "bold": true
+     },
+     128.8,
+     55.2,
+     ""
+    ],
+    [
+     "Folded Lens",
+     {
+      "value": 167,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 59,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 226,
+      "format": "#,##0",
+      "bold": true
+     },
+     158.2,
+     67.8,
+     ""
+    ],
+    [
+     "Lens Off Center",
+     {
+      "value": 645,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 277,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 922,
+      "format": "#,##0",
+      "bold": true
+     },
+     645.4,
+     276.6,
+     ""
+    ],
+    [
+     "Dirty Camera",
+     {
+      "value": 209,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 89,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 298,
+      "format": "#,##0",
+      "bold": true
+     },
+     208.6,
+     89.4,
+     ""
+    ],
+    [
+     "Dirty Strobe",
+     {
+      "value": 29,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 12,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 41,
+      "format": "#,##0",
+      "bold": true
+     },
+     28.7,
+     12.3,
+     ""
+    ],
+    [
+     "Low Dose",
+     {
+      "value": 143,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 61,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 204,
+      "format": "#,##0",
+      "bold": true
+     },
+     142.8,
+     61.2,
+     ""
+    ],
+    [
+     "View Obstructed",
+     {
+      "value": 17,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 7,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 24,
+      "format": "#,##0",
+      "bold": true
+     },
+     16.8,
+     7.2,
+     "Few pictures: test results will vary widely"
+    ],
+    [
+     "Package Misalignment",
+     {
+      "value": 1,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 1,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 2,
+      "format": "#,##0",
+      "bold": true
+     },
+     1.4,
+     0.6,
+     "Few pictures: test results will vary widely"
+    ],
+    [
+     "Bubble Scatter",
+     {
+      "value": 4,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 2,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 6,
+      "format": "#,##0",
+      "bold": true
+     },
+     4.2,
+     1.8,
+     "Few pictures: test results will vary widely"
+    ],
+    [
+     "Clear",
+     {
+      "value": 1509,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 647,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 2156,
+      "format": "#,##0",
+      "bold": true
+     },
+     1509.2,
+     646.8,
+     ""
+    ],
+    [
+     {
+      "value": "Total",
+      "bold": true,
+      "fill": "EDF1F8"
+     },
+     {
+      "value": 4568,
+      "format": "#,##0",
+      "bold": true,
+      "fill": "EDF1F8"
+     },
+     {
+      "value": 2006,
+      "format": "#,##0",
+      "bold": true,
+      "fill": "EDF1F8"
+     },
+     {
+      "value": 6574,
+      "format": "#,##0",
+      "bold": true,
+      "fill": "EDF1F8"
+     },
+     {
+      "value": "",
+      "bold": true,
+      "fill": "EDF1F8"
+     },
+     {
+      "value": "",
+      "bold": true,
+      "fill": "EDF1F8"
+     },
+     {
+      "value": "Iterative stratification, seed 42, content-md5 groups; no validation set",
+      "bold": true,
+      "fill": "EDF1F8"
+     }
+    ],
+    [],
+    [
+     {
+      "value": "Training and test split, 80% training / 20% test",
+      "bold": true,
+      "fill": "D9E2F2",
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     {
+      "value": "Class",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Training pictures",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Test pictures",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Total",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Expected training",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Expected test",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Note",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     }
+    ],
+    [
+     "Foreign Matter gate",
+     {
+      "value": 141,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 30,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 171,
+      "format": "#,##0",
+      "bold": true
+     },
+     136.8,
+     34.2,
+     "Split positives = micron-gate-tagged pictures"
+    ],
+    [
+     "Fiber gate",
+     {
+      "value": 98,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 39,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 137,
+      "format": "#,##0",
+      "bold": true
+     },
+     109.6,
+     27.4,
+     "Split positives = micron-gate-tagged pictures"
+    ],
+    [
+     "Extraneous Polymer gate",
+     {
+      "value": 29,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 4,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 33,
+      "format": "#,##0",
+      "bold": true
+     },
+     26.4,
+     6.6,
+     "Few pictures: test results will vary widely"
+    ],
+    [
+     "HEMA gate",
+     {
+      "value": 77,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 17,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 94,
+      "format": "#,##0",
+      "bold": true
+     },
+     75.2,
+     18.8,
+     "Split positives = micron-gate-tagged pictures"
+    ],
+    [
+     "Bubble",
+     {
+      "value": 631,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 158,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 789,
+      "format": "#,##0",
+      "bold": true
+     },
+     631.2,
+     157.8,
+     ""
+    ],
+    [
+     "Bubble Cluster",
+     {
+      "value": 304,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 76,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 380,
+      "format": "#,##0",
+      "bold": true
+     },
+     304.0,
+     76.0,
+     ""
+    ],
+    [
+     "Wet Package",
+     {
+      "value": 101,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 25,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 126,
+      "format": "#,##0",
+      "bold": true
+     },
+     100.8,
+     25.2,
+     ""
+    ],
+    [
+     "Missing Primary Package",
+     {
+      "value": 1141,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 285,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 1426,
+      "format": "#,##0",
+      "bold": true
+     },
+     1140.8,
+     285.2,
+     ""
+    ],
+    [
+     "Multiple Lens",
+     {
+      "value": 1122,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 280,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 1402,
+      "format": "#,##0",
+      "bold": true
+     },
+     1121.6,
+     280.4,
+     ""
+    ],
+    [
+     "No Lens",
+     {
+      "value": 258,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 64,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 322,
+      "format": "#,##0",
+      "bold": true
+     },
+     257.6,
+     64.4,
+     ""
+    ],
+    [
+     "Cavity Off Center",
+     {
+      "value": 147,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 37,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 184,
+      "format": "#,##0",
+      "bold": true
+     },
+     147.2,
+     36.8,
+     ""
+    ],
+    [
+     "Folded Lens",
+     {
+      "value": 178,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 48,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 226,
+      "format": "#,##0",
+      "bold": true
+     },
+     180.8,
+     45.2,
+     ""
+    ],
+    [
+     "Lens Off Center",
+     {
+      "value": 738,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 184,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 922,
+      "format": "#,##0",
+      "bold": true
+     },
+     737.6,
+     184.4,
+     ""
+    ],
+    [
+     "Dirty Camera",
+     {
+      "value": 238,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 60,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 298,
+      "format": "#,##0",
+      "bold": true
+     },
+     238.4,
+     59.6,
+     ""
+    ],
+    [
+     "Dirty Strobe",
+     {
+      "value": 33,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 8,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 41,
+      "format": "#,##0",
+      "bold": true
+     },
+     32.8,
+     8.2,
+     ""
+    ],
+    [
+     "Low Dose",
+     {
+      "value": 163,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 41,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 204,
+      "format": "#,##0",
+      "bold": true
+     },
+     163.2,
+     40.8,
+     ""
+    ],
+    [
+     "View Obstructed",
+     {
+      "value": 19,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 5,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 24,
+      "format": "#,##0",
+      "bold": true
+     },
+     19.2,
+     4.8,
+     "Few pictures: test results will vary widely"
+    ],
+    [
+     "Package Misalignment",
+     {
+      "value": 2,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 0,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 2,
+      "format": "#,##0",
+      "bold": true
+     },
+     1.6,
+     0.4,
+     "Few pictures: test results will vary widely"
+    ],
+    [
+     "Bubble Scatter",
+     {
+      "value": 5,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 1,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 6,
+      "format": "#,##0",
+      "bold": true
+     },
+     4.8,
+     1.2,
+     "Few pictures: test results will vary widely"
+    ],
+    [
+     "Clear",
+     {
+      "value": 1725,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 431,
+      "format": "#,##0",
+      "bold": true
+     },
+     {
+      "value": 2156,
+      "format": "#,##0",
+      "bold": true
+     },
+     1724.8,
+     431.2,
+     ""
+    ],
+    [
+     {
+      "value": "Total",
+      "bold": true,
+      "fill": "EDF1F8"
+     },
+     {
+      "value": 5269,
+      "format": "#,##0",
+      "bold": true,
+      "fill": "EDF1F8"
+     },
+     {
+      "value": 1305,
+      "format": "#,##0",
+      "bold": true,
+      "fill": "EDF1F8"
+     },
+     {
+      "value": 6574,
+      "format": "#,##0",
+      "bold": true,
+      "fill": "EDF1F8"
+     },
+     {
+      "value": "",
+      "bold": true,
+      "fill": "EDF1F8"
+     },
+     {
+      "value": "",
+      "bold": true,
+      "fill": "EDF1F8"
+     },
+     {
+      "value": "Iterative stratification, seed 42, content-md5 groups; no validation set",
+      "bold": true,
+      "fill": "EDF1F8"
+     }
+    ],
+    [],
+    [
+     {
+      "value": "The split label space is Draft 2 codes + Clear. Bubble On 123, Bubble On Edge and HEMA Obstruction do not stratify the split; for the four size-gated families the micron-gate-tagged pictures are the class positives (the model must fail them).",
+      "italic": true,
+      "font_color": "595959",
+      "font_size": 9
+     }
+    ]
+   ],
+   "column_widths": {
+    "A": 30,
+    "B": 16,
+    "C": 14,
+    "D": 10,
+    "E": 16,
+    "F": 16,
+    "G": 46
+   }
+  },
+  {
+   "name": "Definitions",
+   "rows": [
+    [
+     {
+      "value": "Definitions",
+      "bold": true,
+      "font_size": 14,
+      "font_color": "1F3864"
+     }
+    ],
+    [
+     {
+      "value": "Term",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     },
+     {
+      "value": "Meaning",
+      "bold": true,
+      "font_color": "FFFFFF",
+      "fill": "1F3864",
+      "valign": "center"
+     }
+    ],
+    [
+     {
+      "value": "Picture examined",
+      "bold": true
+     },
+     "Every distinct image in the inspection library, counted once even when the same image appears in more than one folder."
+    ],
+    [
+     {
+      "value": "Analysed set",
+      "bold": true
+     },
+     "The 6938 pictures carrying at least one label under the Draft 2 rules, plus Clear-folder pass pictures. No picture is excluded for lacking a micron-gate tag."
+    ],
+    [
+     {
+      "value": "Micron gate",
+      "bold": true
+     },
+     "A size flag: the marked object exceeds the agreed size limit. In the EDA it is shown beside the class total. In the split it decides the class positives: gate-tagged pictures are the ones the model must fail."
+    ],
+    [
+     {
+      "value": "Tag",
+      "bold": true
+     },
+     "A label that describes the whole picture, for example a lens folded or the image off-centre."
+    ],
+    [
+     {
+      "value": "Marked object",
+      "bold": true
+     },
+     "An outlined object inside a picture, for example a bubble or a fiber."
+    ],
+    [
+     {
+      "value": "Clear",
+      "bold": true
+     },
+     "A picture with nothing to report. Clear never appears together with another label."
+    ],
+    [
+     {
+      "value": "Exact pair",
+      "bold": true
+     },
+     "A picture whose complete label set is exactly that pair of labels, nothing else."
+    ],
+    [
+     {
+      "value": "Inclusive pair",
+      "bold": true
+     },
+     "A picture that carries both labels of the pair, regardless of what else it carries."
+    ],
+    [
+     {
+      "value": "Split label space",
+      "bold": true
+     },
+     "Draft 2 guide codes + Clear only. Bubble On 123, Bubble On Edge and HEMA Obstruction stay in the EDA as legacy rows but do not stratify the split."
+    ],
+    [
+     {
+      "value": "Legacy classes",
+      "bold": true
+     },
+     "Classes kept for reference only (Bubble On 123, Bubble On Edge, HEMA Obstruction)."
+    ],
+    [
+     {
+      "value": "Merged bubble class",
+      "bold": true
+     },
+     "Bubble, irregular bubble and stretched bubble are one Draft 2 class; all irregular-bubble pictures also carry a regular bubble."
+    ],
+    [
+     {
+      "value": "Why class rows do not add up",
+      "bold": true
+     },
+     "A picture can carry more than one tag or several marked objects. Class rows count memberships; picture totals count each picture once."
+    ],
+    [
+     {
+      "value": "Open points",
+      "bold": true
+     },
+     "The production code for Field of View Obstructed; the code for Stretched Bubble; the size limit for the size flags; whether the Low Dose folder is fully annotated."
+    ]
+   ],
+   "column_widths": {
+    "A": 24,
+    "B": 112
+   }
+  }
+ ]
+}

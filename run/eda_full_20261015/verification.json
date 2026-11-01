@@ -1,0 +1,1651 @@
+{
+  "ticket": "016-verification-gate",
+  "date": "2026-10-15",
+  "source": "experiments/eda_full/verify_whole_eda.py",
+  "gate1_independent_rerivation": {
+    "figures": [
+      {
+        "figure": "files_on_disk",
+        "published_in": "census.json / ticket 007",
+        "published_value": 13126,
+        "my_value": 13126,
+        "agree": true,
+        "route": "count raw manifest rows"
+      },
+      {
+        "figure": "bytes_on_disk",
+        "published_in": "census.json / ticket 007",
+        "published_value": 65821403332,
+        "my_value": 65821403332,
+        "agree": true,
+        "route": "sum raw manifest bytes"
+      },
+      {
+        "figure": "distinct_pictures",
+        "published_in": "census.json / ticket 007",
+        "published_value": 10614,
+        "my_value": 10614,
+        "agree": true,
+        "route": "distinct md5 in raw manifest"
+      },
+      {
+        "figure": "files__Updated ICube Objects 20260915",
+        "published_in": "census.json per_folder",
+        "published_value": 4230,
+        "my_value": 4230,
+        "agree": true,
+        "route": "count raw manifest rows per folder"
+      },
+      {
+        "figure": "files__Updated ICube Categorical Classes 20260915",
+        "published_in": "census.json per_folder",
+        "published_value": 6384,
+        "my_value": 6384,
+        "agree": true,
+        "route": "count raw manifest rows per folder"
+      },
+      {
+        "figure": "files__ICube Defects Library",
+        "published_in": "census.json per_folder",
+        "published_value": 1465,
+        "my_value": 1465,
+        "agree": true,
+        "route": "count raw manifest rows per folder"
+      },
+      {
+        "figure": "files__PRODUCTION_20260925/images",
+        "published_in": "census.json per_folder",
+        "published_value": 1047,
+        "my_value": 1047,
+        "agree": true,
+        "route": "count raw manifest rows per folder"
+      },
+      {
+        "figure": "copies_1",
+        "published_in": "census.json copy_count_distribution",
+        "published_value": 8940,
+        "my_value": 8940,
+        "agree": true,
+        "route": "rows per md5 == 1"
+      },
+      {
+        "figure": "copies_2",
+        "published_in": "census.json copy_count_distribution",
+        "published_value": 972,
+        "my_value": 972,
+        "agree": true,
+        "route": "rows per md5 == 2"
+      },
+      {
+        "figure": "copies_3",
+        "published_in": "census.json copy_count_distribution",
+        "published_value": 607,
+        "my_value": 607,
+        "agree": true,
+        "route": "rows per md5 == 3"
+      },
+      {
+        "figure": "copies_4",
+        "published_in": "census.json copy_count_distribution",
+        "published_value": 54,
+        "my_value": 54,
+        "agree": true,
+        "route": "rows per md5 == 4"
+      },
+      {
+        "figure": "copies_5",
+        "published_in": "census.json copy_count_distribution",
+        "published_value": 41,
+        "my_value": 41,
+        "agree": true,
+        "route": "rows per md5 == 5"
+      },
+      {
+        "figure": "hashes_more_than_one_copy",
+        "published_in": "census.json content_identity",
+        "published_value": 1674,
+        "my_value": 1674,
+        "agree": true,
+        "route": "md5 with >1 manifest row"
+      },
+      {
+        "figure": "hashes_in_more_than_one_folder",
+        "published_in": "census.json content_identity",
+        "published_value": 1609,
+        "my_value": 1609,
+        "agree": true,
+        "route": "md5 in >1 folder"
+      },
+      {
+        "figure": "production_files",
+        "published_in": "census.json production_match",
+        "published_value": 1047,
+        "my_value": 1047,
+        "agree": true,
+        "route": "manifest rows in production folder"
+      },
+      {
+        "figure": "production_distinct_contents",
+        "published_in": "census.json production_match",
+        "published_value": 1046,
+        "my_value": 1046,
+        "agree": true,
+        "route": "distinct md5 in production folder"
+      },
+      {
+        "figure": "line_files__L24",
+        "published_in": "census.json per_line",
+        "published_value": 5775,
+        "my_value": 5775,
+        "agree": true,
+        "route": "manifest rows by filename line"
+      },
+      {
+        "figure": "line_pictures__L24",
+        "published_in": "census.json per_line",
+        "published_value": 4348,
+        "my_value": 4348,
+        "agree": true,
+        "route": "distinct md5 by filename line"
+      },
+      {
+        "figure": "line_files__L25",
+        "published_in": "census.json per_line",
+        "published_value": 1148,
+        "my_value": 1148,
+        "agree": true,
+        "route": "manifest rows by filename line"
+      },
+      {
+        "figure": "line_pictures__L25",
+        "published_in": "census.json per_line",
+        "published_value": 972,
+        "my_value": 972,
+        "agree": true,
+        "route": "distinct md5 by filename line"
+      },
+      {
+        "figure": "line_files__L26",
+        "published_in": "census.json per_line",
+        "published_value": 2056,
+        "my_value": 2056,
+        "agree": true,
+        "route": "manifest rows by filename line"
+      },
+      {
+        "figure": "line_pictures__L26",
+        "published_in": "census.json per_line",
+        "published_value": 1503,
+        "my_value": 1503,
+        "agree": true,
+        "route": "distinct md5 by filename line"
+      },
+      {
+        "figure": "line_files__L27",
+        "published_in": "census.json per_line",
+        "published_value": 1860,
+        "my_value": 1860,
+        "agree": true,
+        "route": "manifest rows by filename line"
+      },
+      {
+        "figure": "line_pictures__L27",
+        "published_in": "census.json per_line",
+        "published_value": 1637,
+        "my_value": 1637,
+        "agree": true,
+        "route": "distinct md5 by filename line"
+      },
+      {
+        "figure": "line_files__L31",
+        "published_in": "census.json per_line",
+        "published_value": 2287,
+        "my_value": 2287,
+        "agree": true,
+        "route": "manifest rows by filename line"
+      },
+      {
+        "figure": "line_pictures__L31",
+        "published_in": "census.json per_line",
+        "published_value": 2154,
+        "my_value": 2154,
+        "agree": true,
+        "route": "distinct md5 by filename line"
+      },
+      {
+        "figure": "resolved_pictures_mentioned",
+        "published_in": "resolution.json",
+        "published_value": 6690,
+        "my_value": 6690,
+        "agree": true,
+        "route": "XML images resolved by basename->md5"
+      },
+      {
+        "figure": "resolved_shapes",
+        "published_in": "resolution.json / resolved_labels.csv",
+        "published_value": 20014,
+        "my_value": 20014,
+        "agree": true,
+        "route": "surviving shapes, winner-takes-all"
+      },
+      {
+        "figure": "carry_a_shape",
+        "published_in": "coverage record / label_census record",
+        "published_value": 4782,
+        "my_value": 4782,
+        "agree": true,
+        "route": "resolved md5 with >=1 shape"
+      },
+      {
+        "figure": "no_shape",
+        "published_in": "coverage record",
+        "published_value": 5832,
+        "my_value": 5832,
+        "agree": true,
+        "route": "census minus carry-a-shape"
+      },
+      {
+        "figure": "mentioned_nowhere",
+        "published_in": "coverage record",
+        "published_value": 3924,
+        "my_value": 3924,
+        "agree": true,
+        "route": "census minus mentioned"
+      },
+      {
+        "figure": "box_shape_count",
+        "published_in": "label_census record",
+        "published_value": 14182,
+        "my_value": 14182,
+        "agree": true,
+        "route": "winner shapes with kind box"
+      },
+      {
+        "figure": "tag_shape_count",
+        "published_in": "label_census record",
+        "published_value": 5832,
+        "my_value": 5832,
+        "agree": true,
+        "route": "winner shapes with kind tag"
+      },
+      {
+        "figure": "wins_level1",
+        "published_in": "resolution.json",
+        "published_value": 1046,
+        "my_value": 1046,
+        "agree": true,
+        "route": "resolved pictures by winner level"
+      },
+      {
+        "figure": "wins_level2",
+        "published_in": "resolution.json",
+        "published_value": 5387,
+        "my_value": 5387,
+        "agree": true,
+        "route": "resolved pictures by winner level"
+      },
+      {
+        "figure": "wins_level3",
+        "published_in": "resolution.json",
+        "published_value": 257,
+        "my_value": 257,
+        "agree": true,
+        "route": "resolved pictures by winner level"
+      },
+      {
+        "figure": "wins_file__annotations_4521940.xml",
+        "published_in": "resolution.json",
+        "published_value": 149,
+        "my_value": 149,
+        "agree": true,
+        "route": "resolved pictures by winner file"
+      },
+      {
+        "figure": "wins_file__annotations_4521941.xml",
+        "published_in": "resolution.json",
+        "published_value": 150,
+        "my_value": 150,
+        "agree": true,
+        "route": "resolved pictures by winner file"
+      },
+      {
+        "figure": "wins_file__annotations_4521942.xml",
+        "published_in": "resolution.json",
+        "published_value": 147,
+        "my_value": 147,
+        "agree": true,
+        "route": "resolved pictures by winner file"
+      },
+      {
+        "figure": "wins_file__annotations_4521943.xml",
+        "published_in": "resolution.json",
+        "published_value": 150,
+        "my_value": 150,
+        "agree": true,
+        "route": "resolved pictures by winner file"
+      },
+      {
+        "figure": "wins_file__annotations_4521944.xml",
+        "published_in": "resolution.json",
+        "published_value": 150,
+        "my_value": 150,
+        "agree": true,
+        "route": "resolved pictures by winner file"
+      },
+      {
+        "figure": "wins_file__annotations_4521945.xml",
+        "published_in": "resolution.json",
+        "published_value": 150,
+        "my_value": 150,
+        "agree": true,
+        "route": "resolved pictures by winner file"
+      },
+      {
+        "figure": "wins_file__annotations_4521946.xml",
+        "published_in": "resolution.json",
+        "published_value": 150,
+        "my_value": 150,
+        "agree": true,
+        "route": "resolved pictures by winner file"
+      },
+      {
+        "figure": "wins_file__Updated Annotations 20260922.xml",
+        "published_in": "resolution.json",
+        "published_value": 5387,
+        "my_value": 5387,
+        "agree": true,
+        "route": "resolved pictures by winner file"
+      },
+      {
+        "figure": "wins_file__annotations.xml",
+        "published_in": "resolution.json",
+        "published_value": 257,
+        "my_value": 257,
+        "agree": true,
+        "route": "resolved pictures by winner file"
+      },
+      {
+        "figure": "disagreement_rows",
+        "published_in": "disagreement.csv / resolution.json",
+        "published_value": 886,
+        "my_value": 886,
+        "agree": true,
+        "route": "lower-priority mentions of won pictures"
+      },
+      {
+        "figure": "sep22_mentions",
+        "published_in": "resolution.json",
+        "published_value": 709,
+        "my_value": 709,
+        "agree": true,
+        "route": "disagreement rows by lower file"
+      },
+      {
+        "figure": "sep22_with_labels",
+        "published_in": "resolution.json",
+        "published_value": 594,
+        "my_value": 594,
+        "agree": true,
+        "route": "disagreement rows with labels"
+      },
+      {
+        "figure": "old_mentions",
+        "published_in": "resolution.json",
+        "published_value": 177,
+        "my_value": 177,
+        "agree": true,
+        "route": "disagreement rows by lower file"
+      },
+      {
+        "figure": "old_with_labels",
+        "published_in": "resolution.json",
+        "published_value": 177,
+        "my_value": 177,
+        "agree": true,
+        "route": "disagreement rows with labels"
+      },
+      {
+        "figure": "per_canonical_picture_and_shape_counts",
+        "published_in": "tickets 010/011 records",
+        "published_value": "28 defects",
+        "my_value": "all agree",
+        "agree": true,
+        "route": "winner shapes mapped through the crosswalk"
+      },
+      {
+        "figure": "gate_pictures__foreign_matter_micron_gate",
+        "published_in": "label_census / crosswalk record",
+        "published_value": 171,
+        "my_value": 171,
+        "agree": true,
+        "route": "production images carrying the gate tag"
+      },
+      {
+        "figure": "gate_pictures__fiber_micron_gate",
+        "published_in": "label_census / crosswalk record",
+        "published_value": 136,
+        "my_value": 136,
+        "agree": true,
+        "route": "production images carrying the gate tag"
+      },
+      {
+        "figure": "gate_pictures__extraneous_polymer_micron_gate",
+        "published_in": "label_census / crosswalk record",
+        "published_value": 33,
+        "my_value": 33,
+        "agree": true,
+        "route": "production images carrying the gate tag"
+      },
+      {
+        "figure": "gate_pictures__hema_micron_gate",
+        "published_in": "label_census / crosswalk record",
+        "published_value": 94,
+        "my_value": 94,
+        "agree": true,
+        "route": "production images carrying the gate tag"
+      },
+      {
+        "figure": "basenames_only_visible_via_the_manifest",
+        "published_in": "resolution.json renamed_aliases",
+        "published_value": 187,
+        "my_value": 187,
+        "agree": true,
+        "route": "manifest basenames absent from winning_path"
+      },
+      {
+        "figure": "delta_changed_pictures",
+        "published_in": "gate_delta.csv / ticket 014",
+        "published_value": 170,
+        "my_value": 170,
+        "agree": true,
+        "route": "shape multiset differs, old vs new production XML"
+      },
+      {
+        "figure": "delta_added_tags",
+        "published_in": "ticket 014 record",
+        "published_value": {
+          "P3_FM_MICRON_THRESHOLD": 118,
+          "P3_FIB_MICRON_THRESHOLD": 51,
+          "P3_EP_MICRON_THRESHOLD": 1
+        },
+        "my_value": {
+          "P3_FM_MICRON_THRESHOLD": 118,
+          "P3_FIB_MICRON_THRESHOLD": 51,
+          "P3_EP_MICRON_THRESHOLD": 1
+        },
+        "agree": true,
+        "route": "tags present in new not old, summed over changed pictures"
+      },
+      {
+        "figure": "delta_removed_tags",
+        "published_in": "ticket 014 record",
+        "published_value": {
+          "P1_ML": 1
+        },
+        "my_value": {
+          "P1_ML": 1
+        },
+        "agree": true,
+        "route": "tags present in old not new"
+      },
+      {
+        "figure": "delta_geometry_untouched",
+        "published_in": "ticket 014 record",
+        "published_value": 0,
+        "my_value": 0,
+        "agree": true,
+        "route": "box geometry differs between dates"
+      },
+      {
+        "figure": "delta_added_gate__P3_FM",
+        "published_in": "gate_delta.csv per base",
+        "published_value": 118,
+        "my_value": 118,
+        "agree": true,
+        "route": "added gate tag on changed pictures"
+      },
+      {
+        "figure": "delta_added_gate__P3_FIB",
+        "published_in": "gate_delta.csv per base",
+        "published_value": 51,
+        "my_value": 51,
+        "agree": true,
+        "route": "added gate tag on changed pictures"
+      },
+      {
+        "figure": "delta_added_gate__P3_EP",
+        "published_in": "gate_delta.csv per base",
+        "published_value": 1,
+        "my_value": 1,
+        "agree": true,
+        "route": "added gate tag on changed pictures"
+      },
+      {
+        "figure": "boundary_new_FM_px",
+        "published_in": "micron_gate record",
+        "published_value": [
+          19.25,
+          19.61
+        ],
+        "my_value": [
+          19.25,
+          19.610000000000127
+        ],
+        "agree": true,
+        "route": "largest base-code box side, production, flagged vs unflagged"
+      },
+      {
+        "figure": "boundary_new_FIB_px",
+        "published_in": "micron_gate record",
+        "published_value": [
+          19.41,
+          19.9
+        ],
+        "my_value": [
+          19.410000000000082,
+          19.90000000000009
+        ],
+        "agree": true,
+        "route": "largest base-code box side, production, flagged vs unflagged"
+      },
+      {
+        "figure": "boundary_old_FM_px",
+        "published_in": "micron_gate record",
+        "published_value": [
+          41.78,
+          42.79
+        ],
+        "my_value": [
+          41.77999999999997,
+          42.789999999999964
+        ],
+        "agree": true,
+        "route": "largest base-code box side, 2026-10-13, flagged vs unflagged"
+      },
+      {
+        "figure": "boundary_old_FIB_px",
+        "published_in": "micron_gate record",
+        "published_value": [
+          42.08,
+          44.17
+        ],
+        "my_value": [
+          42.08000000000004,
+          44.17000000000007
+        ],
+        "agree": true,
+        "route": "largest base-code box side, 2026-10-13, flagged vs unflagged"
+      },
+      {
+        "figure": "implied_scale_new_um_per_px",
+        "published_in": "gate_scale_estimate.json",
+        "published_value": [
+          15.2983,
+          15.456
+        ],
+        "my_value": [
+          15.2983,
+          15.456
+        ],
+        "agree": true,
+        "route": "300 / new boundary px"
+      },
+      {
+        "figure": "implied_scale_old_um_per_px",
+        "published_in": "gate_scale_estimate.json",
+        "published_value": [
+          15.1204,
+          15.3755
+        ],
+        "my_value": [
+          15.1204,
+          15.3755
+        ],
+        "agree": true,
+        "route": "647 / old boundary px"
+      },
+      {
+        "figure": "implied_scale_combined_mid",
+        "published_in": "micron_gate record",
+        "published_value": 15.337,
+        "my_value": 15.337,
+        "agree": true,
+        "route": "intersection of the two intervals"
+      },
+      {
+        "figure": "resolved_labels_box_shapes",
+        "published_in": "resolved_labels.csv",
+        "published_value": 14182,
+        "my_value": 14182,
+        "agree": true,
+        "route": "shape_kind==box rows"
+      },
+      {
+        "figure": "resolved_labels_tag_shapes",
+        "published_in": "resolved_labels.csv",
+        "published_value": 5832,
+        "my_value": 5832,
+        "agree": true,
+        "route": "shape_kind==tag rows"
+      },
+      {
+        "figure": "resolved_labels_total_shapes",
+        "published_in": "resolved_labels.csv",
+        "published_value": 20014,
+        "my_value": 20014,
+        "agree": true,
+        "route": "all rows"
+      },
+      {
+        "figure": "resolved_labels_distinct_pictures",
+        "published_in": "resolved_labels.csv",
+        "published_value": 4782,
+        "my_value": 4782,
+        "agree": true,
+        "route": "distinct picture_md5 in resolved_labels.csv"
+      },
+      {
+        "figure": "label_census_box_shapes",
+        "published_in": "label_census.csv",
+        "published_value": 14182,
+        "my_value": 14182,
+        "agree": true,
+        "route": "sum of all-row box_shape_count"
+      },
+      {
+        "figure": "label_census_tag_shapes",
+        "published_in": "label_census.csv",
+        "published_value": 5832,
+        "my_value": 5832,
+        "agree": true,
+        "route": "sum of all-row tag_shape_count"
+      },
+      {
+        "figure": "label_census_gate__P3_FM",
+        "published_in": "label_census.csv",
+        "published_value": 171,
+        "my_value": 171,
+        "agree": true,
+        "route": "gate canonical all-row picture_count"
+      },
+      {
+        "figure": "label_census_gate__P3_FIB",
+        "published_in": "label_census.csv",
+        "published_value": 136,
+        "my_value": 136,
+        "agree": true,
+        "route": "gate canonical all-row picture_count"
+      },
+      {
+        "figure": "label_census_gate__P3_EP",
+        "published_in": "label_census.csv",
+        "published_value": 33,
+        "my_value": 33,
+        "agree": true,
+        "route": "gate canonical all-row picture_count"
+      },
+      {
+        "figure": "label_census_gate__P3_HE",
+        "published_in": "label_census.csv",
+        "published_value": 94,
+        "my_value": 94,
+        "agree": true,
+        "route": "gate canonical all-row picture_count"
+      },
+      {
+        "figure": "box_sizes_rows",
+        "published_in": "box_sizes.csv",
+        "published_value": 14182,
+        "my_value": 14182,
+        "agree": true,
+        "route": "one row per box shape"
+      },
+      {
+        "figure": "coverage_distinct",
+        "published_in": "coverage.csv",
+        "published_value": 10614,
+        "my_value": 10614,
+        "agree": true,
+        "route": "sum of folder rows"
+      },
+      {
+        "figure": "coverage_mentioned",
+        "published_in": "coverage.csv",
+        "published_value": 6690,
+        "my_value": 6690,
+        "agree": true,
+        "route": "sum of folder rows"
+      },
+      {
+        "figure": "coverage_with_shape",
+        "published_in": "coverage.csv",
+        "published_value": 4782,
+        "my_value": 4782,
+        "agree": true,
+        "route": "sum of folder rows"
+      },
+      {
+        "figure": "coverage_no_shape",
+        "published_in": "coverage.csv",
+        "published_value": 5832,
+        "my_value": 5832,
+        "agree": true,
+        "route": "sum of folder rows"
+      },
+      {
+        "figure": "coverage_mentioned_nowhere",
+        "published_in": "coverage.csv",
+        "published_value": 3924,
+        "my_value": 3924,
+        "agree": true,
+        "route": "sum of folder rows"
+      },
+      {
+        "figure": "coverage_folder__Updated ICube Objects 20260915",
+        "published_in": "coverage record",
+        "published_value": [
+          4230,
+          698,
+          551
+        ],
+        "my_value": [
+          4230,
+          698,
+          551
+        ],
+        "agree": true,
+        "route": "coverage.csv folder row"
+      },
+      {
+        "figure": "coverage_folder__Updated ICube Categorical Classes 20260915",
+        "published_in": "coverage record",
+        "published_value": [
+          6207,
+          5821,
+          4060
+        ],
+        "my_value": [
+          6207,
+          5821,
+          4060
+        ],
+        "agree": true,
+        "route": "coverage.csv folder row"
+      },
+      {
+        "figure": "coverage_folder__ICube Defects Library",
+        "published_in": "coverage record",
+        "published_value": [
+          177,
+          171,
+          171
+        ],
+        "my_value": [
+          177,
+          171,
+          171
+        ],
+        "agree": true,
+        "route": "coverage.csv folder row"
+      },
+      {
+        "figure": "coverage_group__Updated",
+        "published_in": "coverage record",
+        "published_value": [
+          10437,
+          6519,
+          4611
+        ],
+        "my_value": [
+          10437,
+          6519,
+          4611
+        ],
+        "agree": true,
+        "route": "coverage.csv folder_group row"
+      },
+      {
+        "figure": "coverage_group__Library",
+        "published_in": "coverage record",
+        "published_value": [
+          177,
+          171,
+          171
+        ],
+        "my_value": [
+          177,
+          171,
+          171
+        ],
+        "agree": true,
+        "route": "coverage.csv folder_group row"
+      },
+      {
+        "figure": "coverage_line__L24",
+        "published_in": "coverage record",
+        "published_value": [
+          4348,
+          2621,
+          2519
+        ],
+        "my_value": [
+          4348,
+          2621,
+          2519
+        ],
+        "agree": true,
+        "route": "coverage.csv production_line row"
+      },
+      {
+        "figure": "coverage_line__L25",
+        "published_in": "coverage record",
+        "published_value": [
+          972,
+          675,
+          617
+        ],
+        "my_value": [
+          972,
+          675,
+          617
+        ],
+        "agree": true,
+        "route": "coverage.csv production_line row"
+      },
+      {
+        "figure": "coverage_line__L26",
+        "published_in": "coverage record",
+        "published_value": [
+          1503,
+          1015,
+          881
+        ],
+        "my_value": [
+          1503,
+          1015,
+          881
+        ],
+        "agree": true,
+        "route": "coverage.csv production_line row"
+      },
+      {
+        "figure": "coverage_line__L27",
+        "published_in": "coverage record",
+        "published_value": [
+          1637,
+          731,
+          361
+        ],
+        "my_value": [
+          1637,
+          731,
+          361
+        ],
+        "agree": true,
+        "route": "coverage.csv production_line row"
+      },
+      {
+        "figure": "coverage_line__L31",
+        "published_in": "coverage record",
+        "published_value": [
+          2154,
+          1648,
+          404
+        ],
+        "my_value": [
+          2154,
+          1648,
+          404
+        ],
+        "agree": true,
+        "route": "coverage.csv production_line row"
+      },
+      {
+        "figure": "library_only_pictures",
+        "published_in": "coverage record / ticket 007",
+        "published_value": 177,
+        "my_value": 177,
+        "agree": true,
+        "route": "md5 whose every manifest row sits only in the old library folder"
+      },
+      {
+        "figure": "resolution_json_pictures",
+        "published_in": "resolution.json",
+        "published_value": 10614,
+        "my_value": 10614,
+        "agree": true,
+        "route": "picture_table_pictures"
+      },
+      {
+        "figure": "resolution_json_mentioned",
+        "published_in": "resolution.json",
+        "published_value": 6690,
+        "my_value": 6690,
+        "agree": true,
+        "route": "resolved_pictures_total"
+      },
+      {
+        "figure": "resolution_json_unannotated",
+        "published_in": "resolution.json",
+        "published_value": 3924,
+        "my_value": 3924,
+        "agree": true,
+        "route": "unannotated_pictures"
+      },
+      {
+        "figure": "resolution_json_shapes",
+        "published_in": "resolution.json",
+        "published_value": 20014,
+        "my_value": 20014,
+        "agree": true,
+        "route": "resolved_shape_count"
+      },
+      {
+        "figure": "box_shapes_total",
+        "published_in": "box_geometry record",
+        "published_value": 14182,
+        "my_value": 14182,
+        "agree": true,
+        "route": "winner shapes of kind box"
+      },
+      {
+        "figure": "axis_aligned_boxes",
+        "published_in": "box_geometry record",
+        "published_value": 660,
+        "my_value": 660,
+        "agree": true,
+        "route": "winner box shapes with rotation absent or exactly 0"
+      },
+      {
+        "figure": "diag_p50__bubble",
+        "published_in": "box_geometry record",
+        "published_value": 9.3,
+        "my_value": 9.3,
+        "agree": true,
+        "route": "median rectangle diagonal of the winner boxes, px"
+      },
+      {
+        "figure": "diag_p50__bubble_cluster",
+        "published_in": "box_geometry record",
+        "published_value": 16.77,
+        "my_value": 16.77,
+        "agree": true,
+        "route": "median rectangle diagonal of the winner boxes, px"
+      },
+      {
+        "figure": "diag_p50__wet_package",
+        "published_in": "box_geometry record",
+        "published_value": 51.99,
+        "my_value": 51.99,
+        "agree": true,
+        "route": "median rectangle diagonal of the winner boxes, px"
+      },
+      {
+        "figure": "diag_p50__foreign_matter",
+        "published_in": "box_geometry record",
+        "published_value": 19.03,
+        "my_value": 19.03,
+        "agree": true,
+        "route": "median rectangle diagonal of the winner boxes, px"
+      },
+      {
+        "figure": "diag_p50__fiber",
+        "published_in": "box_geometry record",
+        "published_value": 46.03,
+        "my_value": 46.03,
+        "agree": true,
+        "route": "median rectangle diagonal of the winner boxes, px"
+      },
+      {
+        "figure": "diag_p50__bubble_irregular",
+        "published_in": "box_geometry record",
+        "published_value": 58.11,
+        "my_value": 58.11,
+        "agree": true,
+        "route": "median rectangle diagonal of the winner boxes, px"
+      },
+      {
+        "figure": "diag_p50__extraneous_polymer",
+        "published_in": "box_geometry record",
+        "published_value": 279.89,
+        "my_value": 279.89,
+        "agree": true,
+        "route": "median rectangle diagonal of the winner boxes, px"
+      },
+      {
+        "figure": "diag_p50__hema_obstruction",
+        "published_in": "box_geometry record",
+        "published_value": 1224.48,
+        "my_value": 1224.48,
+        "agree": true,
+        "route": "median rectangle diagonal of the winner boxes, px"
+      },
+      {
+        "figure": "diag_p50__bubble_on_edge",
+        "published_in": "box_geometry record",
+        "published_value": 13.97,
+        "my_value": 13.97,
+        "agree": true,
+        "route": "median rectangle diagonal of the winner boxes, px"
+      },
+      {
+        "figure": "diag_p50__bubble_on_123",
+        "published_in": "box_geometry record",
+        "published_value": 7.57,
+        "my_value": 7.57,
+        "agree": true,
+        "route": "median rectangle diagonal of the winner boxes, px"
+      },
+      {
+        "figure": "diag_p50__hema_fragment",
+        "published_in": "box_geometry record",
+        "published_value": 617.77,
+        "my_value": 617.77,
+        "agree": true,
+        "route": "median rectangle diagonal of the winner boxes, px"
+      },
+      {
+        "figure": "diag_p50__stretched_bubble",
+        "published_in": "box_geometry record",
+        "published_value": 101.62,
+        "my_value": 101.62,
+        "agree": true,
+        "route": "median rectangle diagonal of the winner boxes, px"
+      },
+      {
+        "figure": "diag_p50_group__Updated",
+        "published_in": "box_geometry record",
+        "published_value": 10.26,
+        "my_value": 10.26,
+        "agree": true,
+        "route": "median diagonal by folder group, px"
+      },
+      {
+        "figure": "diag_p50_group__Library",
+        "published_in": "box_geometry record",
+        "published_value": 12.2,
+        "my_value": 12.2,
+        "agree": true,
+        "route": "median diagonal by folder group, px"
+      },
+      {
+        "figure": "diag_p50_line__L24",
+        "published_in": "box_geometry record",
+        "published_value": 10.12,
+        "my_value": 10.12,
+        "agree": true,
+        "route": "median diagonal by line, px"
+      },
+      {
+        "figure": "diag_p50_line__L25",
+        "published_in": "box_geometry record",
+        "published_value": 14.76,
+        "my_value": 14.76,
+        "agree": true,
+        "route": "median diagonal by line, px"
+      },
+      {
+        "figure": "diag_p50_line__L26",
+        "published_in": "box_geometry record",
+        "published_value": 10.51,
+        "my_value": 10.51,
+        "agree": true,
+        "route": "median diagonal by line, px"
+      },
+      {
+        "figure": "diag_p50_line__L27",
+        "published_in": "box_geometry record",
+        "published_value": 10.47,
+        "my_value": 10.47,
+        "agree": true,
+        "route": "median diagonal by line, px"
+      },
+      {
+        "figure": "diag_p50_line__L31",
+        "published_in": "box_geometry record",
+        "published_value": 15.16,
+        "my_value": 15.16,
+        "agree": true,
+        "route": "median diagonal by line, px"
+      },
+      {
+        "figure": "pictures_with_a_box",
+        "published_in": "label_census record",
+        "published_value": 1130,
+        "my_value": 1130,
+        "agree": true,
+        "route": "pictures with >=1 box shape"
+      },
+      {
+        "figure": "pictures_with_a_tag",
+        "published_in": "label_census record",
+        "published_value": 4329,
+        "my_value": 4329,
+        "agree": true,
+        "route": "pictures with >=1 tag shape"
+      },
+      {
+        "figure": "box_only_pictures",
+        "published_in": "label_census record",
+        "published_value": 453,
+        "my_value": 453,
+        "agree": true,
+        "route": "box and no tag"
+      },
+      {
+        "figure": "tag_only_pictures",
+        "published_in": "label_census record",
+        "published_value": 3652,
+        "my_value": 3652,
+        "agree": true,
+        "route": "tag and no box"
+      },
+      {
+        "figure": "both_tiers_pictures",
+        "published_in": "label_census record",
+        "published_value": 677,
+        "my_value": 677,
+        "agree": true,
+        "route": "box and tag"
+      },
+      {
+        "figure": "codes_per_picture_median",
+        "published_in": "label_census record",
+        "published_value": 1,
+        "my_value": 1.0,
+        "agree": true,
+        "route": "median distinct canonical codes per shape-bearing picture"
+      },
+      {
+        "figure": "codes_per_picture_mean",
+        "published_in": "label_census record",
+        "published_value": 1.68005,
+        "my_value": 1.68005,
+        "agree": true,
+        "route": "mean distinct canonical codes per shape-bearing picture"
+      },
+      {
+        "figure": "codes_per_picture_p90",
+        "published_in": "label_census record",
+        "published_value": 4.0,
+        "my_value": 4.0,
+        "agree": true,
+        "route": "90th percentile distinct canonical codes"
+      },
+      {
+        "figure": "codes_per_picture_max",
+        "published_in": "label_census record",
+        "published_value": 11,
+        "my_value": 11,
+        "agree": true,
+        "route": "max distinct canonical codes"
+      },
+      {
+        "figure": "pair_lens_off_center__multiple_lenses",
+        "published_in": "label_census record",
+        "published_value": 664,
+        "my_value": 664,
+        "agree": true,
+        "route": "pictures carrying both codes"
+      },
+      {
+        "figure": "triple_bubble__foreign_matter__fm_gate",
+        "published_in": "label_census record",
+        "published_value": 167,
+        "my_value": 167,
+        "agree": true,
+        "route": "pictures carrying all three"
+      },
+      {
+        "figure": "triple_bubble__bubble_cluster__foreign_matter",
+        "published_in": "label_census record",
+        "published_value": 164,
+        "my_value": 164,
+        "agree": true,
+        "route": "pictures carrying all three"
+      },
+      {
+        "figure": "library_only_class_breakdown",
+        "published_in": "coverage record",
+        "published_value": {
+          "Bubble": 72,
+          "Bubble Irregular": 26,
+          "Wet Package": 27,
+          "Bubble On 123": 14,
+          "Bubble Cluster": 21,
+          "Bubble On Edge": 14,
+          "Dirty Strobe": 1,
+          "Fiber": 1,
+          "Bubble Scatter": 1
+        },
+        "my_value": {
+          "Bubble": 72,
+          "Bubble Cluster": 21,
+          "Bubble Irregular": 26,
+          "Bubble On 123": 14,
+          "Bubble On Edge": 14,
+          "Bubble Scatter": 1,
+          "Dirty Strobe": 1,
+          "Fiber": 1,
+          "Wet Package": 27
+        },
+        "agree": true,
+        "route": "old-library class folder of each library-only picture"
+      },
+      {
+        "figure": "folder_disagreement_content_all",
+        "published_in": "coverage record",
+        "published_value": 279,
+        "my_value": 279,
+        "agree": true,
+        "route": "md5 whose class differs across library folders, duplicates dropped"
+      },
+      {
+        "figure": "folder_disagreement_content_batch",
+        "published_in": "coverage record",
+        "published_value": 129,
+        "my_value": 129,
+        "agree": true,
+        "route": "same, restricted to the production batch"
+      },
+      {
+        "figure": "folder_disagreement_name_batch",
+        "published_in": "coverage record",
+        "published_value": 114,
+        "my_value": 114,
+        "agree": true,
+        "route": "basename route over the batch (the published 113 method)"
+      },
+      {
+        "figure": "crosswalk_canonical_rows",
+        "published_in": "defect_crosswalk record",
+        "published_value": 28,
+        "my_value": 28,
+        "agree": true,
+        "route": "rows in the frozen data/crosswalk.csv"
+      },
+      {
+        "figure": "crosswalk_defined_only_cells",
+        "published_in": "defect_crosswalk record",
+        "published_value": 3,
+        "my_value": 3,
+        "agree": true,
+        "route": "cells a vocabulary defines but no shape carries"
+      },
+      {
+        "figure": "crosswalk_size_gates",
+        "published_in": "defect_crosswalk record",
+        "published_value": 4,
+        "my_value": 4,
+        "agree": true,
+        "route": "gate rows"
+      },
+      {
+        "figure": "crosswalk_collision_flags",
+        "published_in": "defect_crosswalk record",
+        "published_value": 2,
+        "my_value": 2,
+        "agree": true,
+        "route": "distinct collision flags kept unmerged (3 rows carry them)"
+      }
+    ],
+    "figure_count": 142,
+    "agree_count": 142,
+    "disagree_count": 0,
+    "route": "reads the 9 annotation XMLs and file_manifest.csv (and the frozen crosswalk), never the per-ticket verifier routes"
+  },
+  "cross_artifact_consistency": [
+    {
+      "check": "no_picture_two_winning_files",
+      "ok": true,
+      "note": "0 pictures"
+    },
+    {
+      "check": "gate_strict_subset__foreign_matter_micron_gate",
+      "ok": true,
+      "note": "171 of 171 gate images also carry P3_FM"
+    },
+    {
+      "check": "gate_strict_subset__fiber_micron_gate",
+      "ok": true,
+      "note": "136 of 136 gate images also carry P3_FIB"
+    },
+    {
+      "check": "gate_strict_subset__extraneous_polymer_micron_gate",
+      "ok": true,
+      "note": "33 of 33 gate images also carry P3_EP"
+    },
+    {
+      "check": "gate_strict_subset__hema_micron_gate",
+      "ok": true,
+      "note": "94 of 94 gate images also carry P3_HE"
+    },
+    {
+      "check": "inversion_excludes_both_candidates",
+      "ok": true,
+      "note": "combined high 15.3755 < 18.1165 and < 18.25"
+    },
+    {
+      "check": "resolved_single_source_per_picture",
+      "ok": true,
+      "note": "0 pictures carry labels from two sources"
+    },
+    {
+      "check": "no_picture_two_sources_in_disagreement_or_csv",
+      "ok": true,
+      "note": "resolved_labels.csv single source per picture; verified above"
+    },
+    {
+      "check": "rerun_byte_identical",
+      "ok": true,
+      "note": "0 non-identical: []"
+    },
+    {
+      "check": "corrupt_copy_bites__verify_crosswalk.py",
+      "ok": true,
+      "note": "clean exit 0, corrupted exit 1"
+    },
+    {
+      "check": "corrupt_copy_bites__verify_resolution.py",
+      "ok": true,
+      "note": "clean exit 0, corrupted exit 1"
+    },
+    {
+      "check": "corrupt_copy_bites__verify_label_census.py",
+      "ok": true,
+      "note": "clean exit 0, corrupted exit 1"
+    },
+    {
+      "check": "corrupt_copy_bites__verify_coverage.py",
+      "ok": true,
+      "note": "clean exit 0, corrupted exit 1"
+    },
+    {
+      "check": "corrupt_copy_bites__verify_micron_gate.py",
+      "ok": true,
+      "note": "clean exit 0, corrupted exit 1"
+    },
+    {
+      "check": "gate1_every_figure_agrees",
+      "ok": true,
+      "note": "0 of 142 figures disagree"
+    }
+  ],
+  "gate2_rerun": {
+    "rerun_dir": "C:\\Users\\Abcom\\AppData\\Local\\hermes\\cache\\scratch\\v16\\repo",
+    "reused_vm_legs": {
+      "file_manifest.csv": "ticket 007 VM hash of the 65 GB picture set (raw input)",
+      "picture_table.csv": "ticket 007 VM aggregate step (raw input)",
+      "census.json": "ticket 007 VM aggregate step (raw input)",
+      "rim_raw.tsv": "ticket 013a VM rim measurement (raw input)",
+      "cavity_raw.tsv": "ticket 012 VM cavity measurement (raw input)"
+    },
+    "reused_legs": [
+      "cavity_raw.tsv",
+      "census.json",
+      "file_manifest.csv",
+      "picture_table.csv",
+      "rim_raw.tsv"
+    ],
+    "artifacts": [
+      {
+        "artifact": "box_sizes.csv",
+        "owner": "box_geometry.py (012)",
+        "committed_md5": "1a973be6d5dafdcbda4c65b2a373e823",
+        "rerun_md5": "1a973be6d5dafdcbda4c65b2a373e823",
+        "identical": true
+      },
+      {
+        "artifact": "cavity_geometry_library.json",
+        "owner": "box_geometry.py (012)",
+        "committed_md5": "540a1b9b410ed2bf6989563ad9cd5754",
+        "rerun_md5": "540a1b9b410ed2bf6989563ad9cd5754",
+        "identical": true
+      },
+      {
+        "artifact": "codes_per_image.csv",
+        "owner": "label_census.py (011)",
+        "committed_md5": "ce6087a3ec0f27c00253ceeef9debc8a",
+        "rerun_md5": "ce6087a3ec0f27c00253ceeef9debc8a",
+        "identical": true
+      },
+      {
+        "artifact": "coverage.csv",
+        "owner": "coverage.py (015)",
+        "committed_md5": "02daca54ae128938d77e3ed21aa659a1",
+        "rerun_md5": "02daca54ae128938d77e3ed21aa659a1",
+        "identical": true
+      },
+      {
+        "artifact": "crosswalk.csv",
+        "owner": "build_crosswalk.py (009)",
+        "committed_md5": "a33b1d96d6fc1ac0021a8d1372f4d875",
+        "rerun_md5": "a33b1d96d6fc1ac0021a8d1372f4d875",
+        "identical": true
+      },
+      {
+        "artifact": "crosswalk_evidence.json",
+        "owner": "build_crosswalk.py (009)",
+        "committed_md5": "67b5cdde2e9cf525018f3e905e546cfe",
+        "rerun_md5": "67b5cdde2e9cf525018f3e905e546cfe",
+        "identical": true
+      },
+      {
+        "artifact": "disagreement.csv",
+        "owner": "resolve_labels.py (010)",
+        "committed_md5": "bbc50968126211979d30d6a13fbf3479",
+        "rerun_md5": "bbc50968126211979d30d6a13fbf3479",
+        "identical": true
+      },
+      {
+        "artifact": "folder_disagreement.csv",
+        "owner": "coverage.py (015)",
+        "committed_md5": "240f7ad1002d7e063b105c19672cd095",
+        "rerun_md5": "240f7ad1002d7e063b105c19672cd095",
+        "identical": true
+      },
+      {
+        "artifact": "gate_analysis.csv",
+        "owner": "micron_gate.py (014)",
+        "committed_md5": "c04bca2505f3fb38b64a600877fa6a7d",
+        "rerun_md5": "c04bca2505f3fb38b64a600877fa6a7d",
+        "identical": true
+      },
+      {
+        "artifact": "gate_delta.csv",
+        "owner": "micron_gate.py (014)",
+        "committed_md5": "5b59485051c8c58b55228c8506a2a990",
+        "rerun_md5": "5b59485051c8c58b55228c8506a2a990",
+        "identical": true
+      },
+      {
+        "artifact": "gate_scale_estimate.json",
+        "owner": "micron_gate.py (014)",
+        "committed_md5": "62d60c00428dee32f9f3ae20bcc2823a",
+        "rerun_md5": "62d60c00428dee32f9f3ae20bcc2823a",
+        "identical": true
+      },
+      {
+        "artifact": "label_census.csv",
+        "owner": "label_census.py (011)",
+        "committed_md5": "1dbcd56f6732409ad715107d11461572",
+        "rerun_md5": "1dbcd56f6732409ad715107d11461572",
+        "identical": true
+      },
+      {
+        "artifact": "pairs.csv",
+        "owner": "label_census.py (011)",
+        "committed_md5": "335fc9f5c7a6ecaa597855a402462ebd",
+        "rerun_md5": "335fc9f5c7a6ecaa597855a402462ebd",
+        "identical": true
+      },
+      {
+        "artifact": "resolution.json",
+        "owner": "resolve_labels.py (010)",
+        "committed_md5": "362f22bb9c41550a576133798544b592",
+        "rerun_md5": "362f22bb9c41550a576133798544b592",
+        "identical": true
+      },
+      {
+        "artifact": "resolved_labels.csv",
+        "owner": "resolve_labels.py (010)",
+        "committed_md5": "605aaaf75f450a0e8d5d4e94a88e58ee",
+        "rerun_md5": "605aaaf75f450a0e8d5d4e94a88e58ee",
+        "identical": true
+      },
+      {
+        "artifact": "scale_by_stratum.json",
+        "owner": "verify_scale.py --aggregate (013a)",
+        "committed_md5": "276168f3b9ce047077537f86792b36c2",
+        "rerun_md5": "276168f3b9ce047077537f86792b36c2",
+        "identical": true
+      },
+      {
+        "artifact": "scale_sample.txt",
+        "owner": "verify_scale.py --build-sample (013a)",
+        "committed_md5": "1f60c5a569a6b093ebbe9c29247472fb",
+        "rerun_md5": "1f60c5a569a6b093ebbe9c29247472fb",
+        "identical": true
+      },
+      {
+        "artifact": "scale_samples.csv",
+        "owner": "verify_scale.py --aggregate (013a)",
+        "committed_md5": "07bf5fac5f4e1f74e0ce0ab7fd056575",
+        "rerun_md5": "07bf5fac5f4e1f74e0ce0ab7fd056575",
+        "identical": true
+      },
+      {
+        "artifact": "size_by_stratum.json",
+        "owner": "box_geometry.py (012)",
+        "committed_md5": "747b3dadc0615c7a25bcee72be6ee52b",
+        "rerun_md5": "747b3dadc0615c7a25bcee72be6ee52b",
+        "identical": true
+      },
+      {
+        "artifact": "cavity_raw.tsv",
+        "owner": "reused raw input",
+        "committed_md5": "148021a3e2d84f4a286f3907f875d26e",
+        "rerun_md5": "148021a3e2d84f4a286f3907f875d26e",
+        "identical": true,
+        "leg": "ticket 012 VM cavity measurement (raw input)"
+      },
+      {
+        "artifact": "census.json",
+        "owner": "reused raw input",
+        "committed_md5": "a99c8724350194c73a7511591dbdffea",
+        "rerun_md5": "a99c8724350194c73a7511591dbdffea",
+        "identical": true,
+        "leg": "ticket 007 VM aggregate step (raw input)"
+      },
+      {
+        "artifact": "file_manifest.csv",
+        "owner": "reused raw input",
+        "committed_md5": "97ab4eded84bba28a1c113949d08ce7c",
+        "rerun_md5": "97ab4eded84bba28a1c113949d08ce7c",
+        "identical": true,
+        "leg": "ticket 007 VM hash of the 65 GB picture set (raw input)"
+      },
+      {
+        "artifact": "picture_table.csv",
+        "owner": "reused raw input",
+        "committed_md5": "a03ddeead53bae370c17bd8ea15c0df0",
+        "rerun_md5": "a03ddeead53bae370c17bd8ea15c0df0",
+        "identical": true,
+        "leg": "ticket 007 VM aggregate step (raw input)"
+      },
+      {
+        "artifact": "rim_raw.tsv",
+        "owner": "reused raw input",
+        "committed_md5": "f47b3830d3b8cdb6f8f52baad6e1adef",
+        "rerun_md5": "f47b3830d3b8cdb6f8f52baad6e1adef",
+        "identical": true,
+        "leg": "ticket 013a VM rim measurement (raw input)"
+      }
+    ],
+    "non_identical": []
+  },
+  "gate3_corrupt_copy": [
+    {
+      "verifier": "verify_crosswalk.py",
+      "artifact": "data/crosswalk.csv",
+      "clean_exit": 0,
+      "corrupt_exit": 1
+    },
+    {
+      "verifier": "verify_resolution.py",
+      "artifact": "run/eda_full_20261015/resolution.json",
+      "clean_exit": 0,
+      "corrupt_exit": 1
+    },
+    {
+      "verifier": "verify_label_census.py",
+      "artifact": "run/eda_full_20261015/label_census.csv",
+      "clean_exit": 0,
+      "corrupt_exit": 1
+    },
+    {
+      "verifier": "verify_coverage.py",
+      "artifact": "run/eda_full_20261015/coverage.csv",
+      "clean_exit": 0,
+      "corrupt_exit": 1
+    },
+    {
+      "verifier": "verify_micron_gate.py",
+      "artifact": "run/eda_full_20261015/gate_analysis.csv",
+      "clean_exit": 0,
+      "corrupt_exit": 1
+    }
+  ],
+  "inversion_15_337": {
+    "new": {
+      "low": 15.2983,
+      "high": 15.456,
+      "mid": 15.3767,
+      "lo_px": 19.410000000000082,
+      "hi_px": 19.610000000000127
+    },
+    "old": {
+      "low": 15.1204,
+      "high": 15.3755,
+      "mid": 15.2468,
+      "lo_px": 42.08000000000004,
+      "hi_px": 42.789999999999964
+    },
+    "combined_low": 15.2983,
+    "combined_high": 15.3755,
+    "combined_mid": 15.337,
+    "agrees_with_18_1165": false,
+    "agrees_with_18_25": false
+  },
+  "not_independently_reached": [
+    {
+      "figure": "ticket 008 documented nominals: zero usable blind nominals, 18.25 written nowhere",
+      "published_in": "docs/reference/received_docs_nominals.md",
+      "reason": "a documentary finding about the received PDF, DOCX and email, not a number in a data artifact; it has no local numeric route to re-derive and is carried as stated."
+    },
+    {
+      "figure": "cavity measured 10470 / low_bright 144, cavity radius and centre stats",
+      "published_in": "reports/eda_full/box_geometry_20261015.md",
+      "reason": "requires re-reading and re-thresholding 10,614 images on the shared VM; the raw cavity_raw.tsv from ticket 012 is reused as an input, and the shares are re-derived by verify_box_geometry.py, not by this route."
+    },
+    {
+      "figure": "blind-scale per-stratum rim medians and um/px table (10 strata)",
+      "published_in": "reports/eda_full/blind_scale_20261015.md",
+      "reason": "requires the VM rim measurement; rim_raw.tsv from ticket 013a is reused, and the per-stratum medians are re-derived by verify_scale.py, not here."
+    },
+    {
+      "figure": "coverage per-canonical-defect share table (28 rows)",
+      "published_in": "reports/eda_full/coverage_20261015.md",
+      "reason": "needs the join of each canonical defect to its nominal library class folder population, which ticket 015 owns and verify_coverage.py second-routes; this route only re-derives the partitioning (folder/group/line) figures."
+    },
+    {
+      "figure": "every published code pair and triple in pairs.csv",
+      "published_in": "run/eda_full_20261015/pairs.csv",
+      "reason": "the full combinatorial table is reproduced by verify_label_census.py's second route; this gate re-derives only the three headline combinations above."
+    }
+  ],
+  "check_count": 15,
+  "figure_count": 142,
+  "total_assertions": 157,
+  "failure_count": 0
+}

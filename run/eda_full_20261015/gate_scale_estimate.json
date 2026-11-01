@@ -1,0 +1,142 @@
+{
+  "ticket": "014-micron-gate",
+  "date": "2026-10-15",
+  "gate_codes_are_client_authority": true,
+  "base_codes": [
+    "P3_FM",
+    "P3_FIB",
+    "P3_EP",
+    "P3_HE"
+  ],
+  "scales_candidate": {
+    "18.1165": 18.1165,
+    "18.25": 18.25
+  },
+  "size_proxies": {
+    "diag": "sqrt(w^2 + h^2), the rectangle diagonal",
+    "side": "max(w, h), the longer side of the rectangle"
+  },
+  "declared_cuts_um": {
+    "new": 300.0,
+    "old": 647.0
+  },
+  "boundaries_new_side_px": {
+    "P3_FM": {
+      "lower_px": 19.25,
+      "upper_px": 19.61,
+      "mid_px": 19.43
+    },
+    "P3_FIB": {
+      "lower_px": 19.41,
+      "upper_px": 19.9,
+      "mid_px": 19.655
+    },
+    "P3_EP": {
+      "lower_px": 15.8,
+      "upper_px": 25.19,
+      "mid_px": 20.495
+    },
+    "P3_HE": {
+      "lower_px": null,
+      "upper_px": 296.52,
+      "mid_px": null
+    }
+  },
+  "delta_available": true,
+  "old_prod_dir": "C:/Users/Abcom/AppData/Local/hermes/cache/scratch/old_prod",
+  "delta": {
+    "changed_pictures": 170,
+    "added_tags": {
+      "P3_EP_MICRON_THRESHOLD": 1,
+      "P3_FIB_MICRON_THRESHOLD": 51,
+      "P3_FM_MICRON_THRESHOLD": 118
+    },
+    "removed_tags": {
+      "P1_ML": 1
+    },
+    "geometry_changed_pictures": 0,
+    "unresolved_names": [],
+    "delta_rows": 170
+  },
+  "counts": {
+    "base_defect_boxes": {
+      "P3_EP": 150,
+      "P3_FIB": 245,
+      "P3_FM": 626,
+      "P3_HE": 95
+    }
+  },
+  "scale_estimate": {
+    "method": "the flagged-versus-unflagged boundary of the client's gate is a client-anchored length; invert it: scale = cut_um / boundary_px",
+    "proxy": "side = max(w, h), the longer side of the annotation rectangle",
+    "scope": "production (the gate tag exists only in the production files)",
+    "new_cut_um": 300.0,
+    "old_cut_um": 647.0,
+    "new_boundaries_px": {
+      "P3_FM": {
+        "lower_px": 19.25,
+        "upper_px": 19.61
+      },
+      "P3_FIB": {
+        "lower_px": 19.41,
+        "upper_px": 19.9
+      }
+    },
+    "old_boundaries_px": {
+      "P3_FM": {
+        "lower_px": 41.78,
+        "upper_px": 42.79
+      },
+      "P3_FIB": {
+        "lower_px": 42.08,
+        "upper_px": 44.17
+      }
+    },
+    "implied_scale_new": {
+      "boundary_px_lower": 19.41,
+      "boundary_px_upper": 19.61,
+      "scale_um_per_px_low": 15.2983,
+      "scale_um_per_px_high": 15.456,
+      "scale_um_per_px_mid": 15.3767
+    },
+    "implied_scale_old": {
+      "boundary_px_lower": 42.08,
+      "boundary_px_upper": 42.79,
+      "scale_um_per_px_low": 15.1204,
+      "scale_um_per_px_high": 15.3755,
+      "scale_um_per_px_mid": 15.2468
+    },
+    "implied_scale_combined": {
+      "scale_um_per_px_low": 15.2983,
+      "scale_um_per_px_high": 15.3755,
+      "scale_um_per_px_mid": 15.3369,
+      "agrees_with_18_1165": false,
+      "agrees_with_18_25": false,
+      "agreement": "neither",
+      "resolves_the_two_candidate_scales": false
+    },
+    "assumptions": [
+      "the gate is applied to the LARGEST base-code box on the image",
+      "the annotation box edges delimit the debris (no systematic margin)",
+      "the client's declared cut (300 microns now, 647 before) is exact",
+      "the proxy that fits is the longer side max(w,h), which the data supports (0 misclassifications vs 39 for the diagonal)"
+    ],
+    "implies_at_our_scales": {
+      "note": "the same boundary read at our own scales gives the cut in microns, assuming our scale is right",
+      "cut_um_at_18_1165_low": 351.64,
+      "cut_um_at_18_1165_high": 355.26,
+      "cut_um_at_18_25_low": 354.23,
+      "cut_um_at_18_25_high": 357.88
+    }
+  },
+  "outputs": {
+    "gate_analysis.csv": {
+      "rows": 32,
+      "md5": "c04bca2505f3fb38b64a600877fa6a7d"
+    },
+    "gate_delta.csv": {
+      "rows": 170,
+      "md5": "5b59485051c8c58b55228c8506a2a990"
+    }
+  }
+}

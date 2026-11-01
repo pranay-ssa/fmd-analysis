@@ -1,0 +1,2361 @@
+{
+ "generated": "2026-10-15",
+ "title": "Full-coverage EDA across the three ICube library folders",
+ "census": {
+  "universe": "every picture in the three library folders, plus the production image folder",
+  "distinct_pictures": 10614,
+  "files_library": 12079,
+  "files_total": 13126,
+  "files_production": 1047,
+  "bytes_total": 65821403332,
+  "per_folder": {
+   "ICube Defects Library": {
+    "bytes": 7346362630,
+    "files": 1465
+   },
+   "PRODUCTION_20260925/images": {
+    "bytes": 5250267354,
+    "files": 1047
+   },
+   "Updated ICube Categorical Classes 20260915": {
+    "bytes": 32013091488,
+    "files": 6384
+   },
+   "Updated ICube Objects 20260915": {
+    "bytes": 21211681860,
+    "files": 4230
+   }
+  },
+  "per_folder_group": {
+   "Library": {
+    "bytes": 7346362630,
+    "files": 1465
+   },
+   "Production": {
+    "bytes": 5250267354,
+    "files": 1047
+   },
+   "Updated": {
+    "bytes": 53224773348,
+    "files": 10614
+   }
+  },
+  "per_line": {
+   "L24": {
+    "distinct_pictures": 4348,
+    "files": 5775
+   },
+   "L25": {
+    "distinct_pictures": 972,
+    "files": 1148
+   },
+   "L26": {
+    "distinct_pictures": 1503,
+    "files": 2056
+   },
+   "L27": {
+    "distinct_pictures": 1637,
+    "files": 1860
+   },
+   "L31": {
+    "distinct_pictures": 2154,
+    "files": 2287
+   }
+  },
+  "copy_distribution": {
+   "1": 8940,
+   "2": 972,
+   "3": 607,
+   "4": 54,
+   "5": 41
+  },
+  "hashes_in_more_than_one_folder": 1609,
+  "hashes_with_more_than_one_copy": 1674,
+  "production_files": 1047,
+  "production_distinct_contents": 1046,
+  "renamed_aliases": 187
+ },
+ "labels": {
+  "mentioned": 6690,
+  "with_shape": 4782,
+  "no_shape": 5832,
+  "nowhere": 3924,
+  "shapes_total": 20014,
+  "boxes": 14182,
+  "tags": 5832,
+  "pictures_with_box": 1130,
+  "pictures_with_tag": 4329,
+  "box_only": 4105,
+  "tag_only": 3652,
+  "both": 677,
+  "box_codes_per_image": {
+   "0": 0,
+   "1": 3371,
+   "2": 575,
+   "3": 341,
+   "4": 210,
+   "5": 157,
+   "6": 70,
+   "7": 36,
+   "8": 14,
+   "9": 2,
+   "10": 3,
+   "11": 3
+  },
+  "median_codes": 1.0,
+  "mean_codes": 1.68005,
+  "p90_codes": 4.0,
+  "max_codes": 11.0,
+  "wins_by_level": {
+   "1": 1046,
+   "2": 5387,
+   "3": 257
+  },
+  "wins_by_file": {
+   "Updated Annotations 20260922.xml": 5387,
+   "annotations.xml": 257,
+   "annotations_4521940.xml": 149,
+   "annotations_4521941.xml": 150,
+   "annotations_4521942.xml": 147,
+   "annotations_4521943.xml": 150,
+   "annotations_4521944.xml": 150,
+   "annotations_4521945.xml": 150,
+   "annotations_4521946.xml": 150
+  },
+  "canonical_defects": [
+   {
+    "id": "bubble",
+    "pictures": 819,
+    "shapes": 10869,
+    "name": "Bubble",
+    "kind": "box",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 819,
+    "tag_pictures": 0,
+    "box_shapes": 10869,
+    "tag_shapes": 0
+   },
+   {
+    "id": "bubble_cluster",
+    "pictures": 428,
+    "shapes": 1182,
+    "name": "Bubble Cluster",
+    "kind": "box",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 428,
+    "tag_pictures": 0,
+    "box_shapes": 1182,
+    "tag_shapes": 0
+   },
+   {
+    "id": "bubble_irregular",
+    "pictures": 147,
+    "shapes": 169,
+    "name": "Bubble Irregular",
+    "kind": "box",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 147,
+    "tag_pictures": 0,
+    "box_shapes": 169,
+    "tag_shapes": 0
+   },
+   {
+    "id": "bubble_on_123",
+    "pictures": 13,
+    "shapes": 79,
+    "name": "Bubble On 123",
+    "kind": "box",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": true,
+    "box_pictures": 13,
+    "tag_pictures": 0,
+    "box_shapes": 79,
+    "tag_shapes": 0
+   },
+   {
+    "id": "bubble_on_edge",
+    "pictures": 14,
+    "shapes": 90,
+    "name": "Bubble On Edge",
+    "kind": "box",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": true,
+    "box_pictures": 14,
+    "tag_pictures": 0,
+    "box_shapes": 90,
+    "tag_shapes": 0
+   },
+   {
+    "id": "bubble_scatter",
+    "pictures": 6,
+    "shapes": 6,
+    "name": "Bubble Scatter",
+    "kind": "tag",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 6,
+    "box_shapes": 0,
+    "tag_shapes": 6
+   },
+   {
+    "id": "cavity_off_center",
+    "pictures": 184,
+    "shapes": 184,
+    "name": "Cavity Off Center",
+    "kind": "tag",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 184,
+    "box_shapes": 0,
+    "tag_shapes": 184
+   },
+   {
+    "id": "dirty_camera",
+    "pictures": 329,
+    "shapes": 329,
+    "name": "Dirty Camera",
+    "kind": "tag",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 329,
+    "box_shapes": 0,
+    "tag_shapes": 329
+   },
+   {
+    "id": "dirty_strobe",
+    "pictures": 43,
+    "shapes": 43,
+    "name": "Dirty Strobe",
+    "kind": "tag",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 43,
+    "box_shapes": 0,
+    "tag_shapes": 43
+   },
+   {
+    "id": "extraneous_polymer",
+    "pictures": 144,
+    "shapes": 150,
+    "name": "Extraneous Polymer",
+    "kind": "box",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 144,
+    "tag_pictures": 0,
+    "box_shapes": 150,
+    "tag_shapes": 0
+   },
+   {
+    "id": "extraneous_polymer_micron_gate",
+    "pictures": 33,
+    "shapes": 33,
+    "name": "Extraneous Polymer micron gate",
+    "kind": "gate",
+    "kind_conflict": false,
+    "is_size_gate": true,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 33,
+    "box_shapes": 0,
+    "tag_shapes": 33
+   },
+   {
+    "id": "fiber",
+    "pictures": 178,
+    "shapes": 245,
+    "name": "Fiber",
+    "kind": "box",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 178,
+    "tag_pictures": 0,
+    "box_shapes": 245,
+    "tag_shapes": 0
+   },
+   {
+    "id": "fiber_micron_gate",
+    "pictures": 136,
+    "shapes": 136,
+    "name": "Fiber micron gate",
+    "kind": "gate",
+    "kind_conflict": false,
+    "is_size_gate": true,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 136,
+    "box_shapes": 0,
+    "tag_shapes": 136
+   },
+   {
+    "id": "folded_lens",
+    "pictures": 237,
+    "shapes": 237,
+    "name": "Folded Lens",
+    "kind": "tag",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 237,
+    "box_shapes": 0,
+    "tag_shapes": 237
+   },
+   {
+    "id": "foreign_matter",
+    "pictures": 331,
+    "shapes": 626,
+    "name": "Foreign Matter",
+    "kind": "box",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 331,
+    "tag_pictures": 0,
+    "box_shapes": 626,
+    "tag_shapes": 0
+   },
+   {
+    "id": "foreign_matter_micron_gate",
+    "pictures": 171,
+    "shapes": 171,
+    "name": "Foreign Matter micron gate",
+    "kind": "gate",
+    "kind_conflict": false,
+    "is_size_gate": true,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 171,
+    "box_shapes": 0,
+    "tag_shapes": 171
+   },
+   {
+    "id": "hema_fragment",
+    "pictures": 7,
+    "shapes": 8,
+    "name": "HEMA Fragment",
+    "kind": "box",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 7,
+    "tag_pictures": 0,
+    "box_shapes": 8,
+    "tag_shapes": 0
+   },
+   {
+    "id": "hema_micron_gate",
+    "pictures": 94,
+    "shapes": 94,
+    "name": "HEMA micron gate",
+    "kind": "gate",
+    "kind_conflict": false,
+    "is_size_gate": true,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 94,
+    "box_shapes": 0,
+    "tag_shapes": 94
+   },
+   {
+    "id": "hema_obstruction",
+    "pictures": 180,
+    "shapes": 181,
+    "name": "HEMA Obstruction",
+    "kind": "box|tag",
+    "kind_conflict": true,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 94,
+    "tag_pictures": 86,
+    "box_shapes": 95,
+    "tag_shapes": 86
+   },
+   {
+    "id": "lens_off_center",
+    "pictures": 957,
+    "shapes": 957,
+    "name": "Lens Off Center",
+    "kind": "tag",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 957,
+    "box_shapes": 0,
+    "tag_shapes": 957
+   },
+   {
+    "id": "low_dose",
+    "pictures": 215,
+    "shapes": 215,
+    "name": "Low Dose",
+    "kind": "tag",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 215,
+    "box_shapes": 0,
+    "tag_shapes": 215
+   },
+   {
+    "id": "missing_lens",
+    "pictures": 325,
+    "shapes": 325,
+    "name": "Missing Lens",
+    "kind": "tag",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 325,
+    "box_shapes": 0,
+    "tag_shapes": 325
+   },
+   {
+    "id": "missing_primary_package",
+    "pictures": 1426,
+    "shapes": 1551,
+    "name": "Missing Primary Package",
+    "kind": "tag",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 1426,
+    "box_shapes": 0,
+    "tag_shapes": 1551
+   },
+   {
+    "id": "multiple_lenses",
+    "pictures": 1439,
+    "shapes": 1439,
+    "name": "Multiple Lenses",
+    "kind": "tag",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 1439,
+    "box_shapes": 0,
+    "tag_shapes": 1439
+   },
+   {
+    "id": "package_misalignment",
+    "pictures": 2,
+    "shapes": 2,
+    "name": "Package Misalignment",
+    "kind": "tag",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 2,
+    "box_shapes": 0,
+    "tag_shapes": 2
+   },
+   {
+    "id": "stretched_bubble",
+    "pictures": 6,
+    "shapes": 7,
+    "name": "Stretched Bubble",
+    "kind": "box",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 6,
+    "tag_pictures": 0,
+    "box_shapes": 7,
+    "tag_shapes": 0
+   },
+   {
+    "id": "view_obstructed",
+    "pictures": 24,
+    "shapes": 24,
+    "name": "View Obstructed",
+    "kind": "tag",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 0,
+    "tag_pictures": 24,
+    "box_shapes": 0,
+    "tag_shapes": 24
+   },
+   {
+    "id": "wet_package",
+    "pictures": 146,
+    "shapes": 662,
+    "name": "Wet Package",
+    "kind": "box",
+    "kind_conflict": false,
+    "is_size_gate": false,
+    "library_only": false,
+    "box_pictures": 146,
+    "tag_pictures": 0,
+    "box_shapes": 662,
+    "tag_shapes": 0
+   }
+  ],
+  "canonical_count": 28
+ },
+ "box_geometry": {
+  "axis_aligned": 660,
+  "rotated": 13522,
+  "total": 14182,
+  "share_axis_aligned": 0.046538,
+  "by_defect": {
+   "bubble": {
+    "diag_px_p25": 7.8569,
+    "diag_px_p50": 9.3024,
+    "diag_px_p75": 12.5653,
+    "diag_um_at_18_1165_p25": 142.3395,
+    "diag_um_at_18_1165_p50": 168.5269,
+    "diag_um_at_18_1165_p75": 227.6393,
+    "diag_um_at_18_25_p25": 143.3884,
+    "diag_um_at_18_25_p50": 169.7688,
+    "diag_um_at_18_25_p75": 229.3167,
+    "n": 10869,
+    "diag_um_adopted_p50": 142.7,
+    "diag_um_adopted_p25": 120.5,
+    "diag_um_adopted_p75": 192.7
+   },
+   "bubble_cluster": {
+    "diag_px_p25": 12.3754,
+    "diag_px_p50": 16.7722,
+    "diag_px_p75": 25.7528,
+    "diag_um_at_18_1165_p25": 224.1989,
+    "diag_um_at_18_1165_p50": 303.8536,
+    "diag_um_at_18_1165_p75": 466.5506,
+    "diag_um_at_18_25_p25": 225.8511,
+    "diag_um_at_18_25_p50": 306.0927,
+    "diag_um_at_18_25_p75": 469.9886,
+    "n": 1182,
+    "diag_um_adopted_p50": 257.2,
+    "diag_um_adopted_p25": 189.8,
+    "diag_um_adopted_p75": 395.0
+   },
+   "bubble_irregular": {
+    "diag_px_p25": 20.605,
+    "diag_px_p50": 58.1074,
+    "diag_px_p75": 114.814,
+    "diag_um_at_18_1165_p25": 373.2905,
+    "diag_um_at_18_1165_p50": 1052.7027,
+    "diag_um_at_18_1165_p75": 2080.0278,
+    "diag_um_at_18_25_p25": 376.0412,
+    "diag_um_at_18_25_p50": 1060.46,
+    "diag_um_at_18_25_p75": 2095.3555,
+    "n": 169,
+    "diag_um_adopted_p50": 891.2,
+    "diag_um_adopted_p25": 316.0,
+    "diag_um_adopted_p75": 1760.9
+   },
+   "bubble_on_123": {
+    "diag_px_p25": 6.2339,
+    "diag_px_p50": 7.5713,
+    "diag_px_p75": 9.7521,
+    "diag_um_at_18_1165_p25": 112.9364,
+    "diag_um_at_18_1165_p50": 137.1655,
+    "diag_um_at_18_1165_p75": 176.6739,
+    "diag_um_at_18_25_p25": 113.7687,
+    "diag_um_at_18_25_p50": 138.1762,
+    "diag_um_at_18_25_p75": 177.9758,
+    "n": 79,
+    "diag_um_adopted_p50": 116.1,
+    "diag_um_adopted_p25": 95.6,
+    "diag_um_adopted_p75": 149.6
+   },
+   "bubble_on_edge": {
+    "diag_px_p25": 8.9836,
+    "diag_px_p50": 13.9689,
+    "diag_px_p75": 19.6905,
+    "diag_um_at_18_1165_p25": 162.7514,
+    "diag_um_at_18_1165_p50": 253.0676,
+    "diag_um_at_18_1165_p75": 356.7229,
+    "diag_um_at_18_25_p25": 163.9507,
+    "diag_um_at_18_25_p50": 254.9324,
+    "diag_um_at_18_25_p75": 359.3516,
+    "n": 90,
+    "diag_um_adopted_p50": 214.2,
+    "diag_um_adopted_p25": 137.8,
+    "diag_um_adopted_p75": 302.0
+   },
+   "extraneous_polymer": {
+    "diag_px_p25": 96.8947,
+    "diag_px_p50": 279.8937,
+    "diag_px_p75": 618.3853,
+    "diag_um_at_18_1165_p25": 1755.3928,
+    "diag_um_at_18_1165_p50": 5070.6942,
+    "diag_um_at_18_1165_p75": 11202.9773,
+    "diag_um_at_18_25_p25": 1768.3283,
+    "diag_um_at_18_25_p50": 5108.06,
+    "diag_um_at_18_25_p75": 11285.5317,
+    "n": 150,
+    "diag_um_adopted_p50": 4292.7,
+    "diag_um_adopted_p25": 1486.1,
+    "diag_um_adopted_p75": 9484.2
+   },
+   "fiber": {
+    "diag_px_p25": 29.2106,
+    "diag_px_p50": 46.0299,
+    "diag_px_p75": 75.3149,
+    "diag_um_at_18_1165_p25": 529.1938,
+    "diag_um_at_18_1165_p50": 833.9007,
+    "diag_um_at_18_1165_p75": 1364.4424,
+    "diag_um_at_18_25_p25": 533.0934,
+    "diag_um_at_18_25_p50": 840.0457,
+    "diag_um_at_18_25_p75": 1374.4969,
+    "n": 245,
+    "diag_um_adopted_p50": 706.0,
+    "diag_um_adopted_p25": 448.0,
+    "diag_um_adopted_p75": 1155.1
+   },
+   "foreign_matter": {
+    "diag_px_p25": 10.7336,
+    "diag_px_p50": 19.0305,
+    "diag_px_p75": 34.2132,
+    "diag_um_at_18_1165_p25": 194.4553,
+    "diag_um_at_18_1165_p50": 344.7661,
+    "diag_um_at_18_1165_p75": 619.8234,
+    "diag_um_at_18_25_p25": 195.8882,
+    "diag_um_at_18_25_p50": 347.3066,
+    "diag_um_at_18_25_p75": 624.3909,
+    "n": 626,
+    "diag_um_adopted_p50": 291.9,
+    "diag_um_adopted_p25": 164.6,
+    "diag_um_adopted_p75": 524.7
+   },
+   "hema_fragment": {
+    "diag_px_p25": 444.4202,
+    "diag_px_p50": 617.7712,
+    "diag_px_p75": 681.8388,
+    "diag_um_at_18_1165_p25": 8051.3386,
+    "diag_um_at_18_1165_p50": 11191.8519,
+    "diag_um_at_18_1165_p75": 12352.5326,
+    "diag_um_at_18_25_p25": 8110.6687,
+    "diag_um_at_18_25_p50": 11274.3244,
+    "diag_um_at_18_25_p75": 12443.5581,
+    "n": 8,
+    "diag_um_adopted_p50": 9474.8,
+    "diag_um_adopted_p25": 6816.1,
+    "diag_um_adopted_p75": 10457.4
+   },
+   "hema_obstruction": {
+    "diag_px_p25": 1068.7593,
+    "diag_px_p50": 1224.4804,
+    "diag_px_p75": 1348.5356,
+    "diag_um_at_18_1165_p25": 19362.1779,
+    "diag_um_at_18_1165_p50": 22183.2992,
+    "diag_um_at_18_1165_p75": 24430.7452,
+    "diag_um_at_18_25_p25": 19504.8572,
+    "diag_um_at_18_25_p50": 22346.7673,
+    "diag_um_at_18_25_p75": 24610.7747,
+    "n": 95,
+    "diag_um_adopted_p50": 18779.9,
+    "diag_um_adopted_p25": 16391.6,
+    "diag_um_adopted_p75": 20682.5
+   },
+   "stretched_bubble": {
+    "diag_px_p25": 59.2935,
+    "diag_px_p50": 101.6182,
+    "diag_px_p75": 368.0665,
+    "diag_um_at_18_1165_p25": 1074.1907,
+    "diag_um_at_18_1165_p50": 1840.9661,
+    "diag_um_at_18_1165_p75": 6668.0767,
+    "diag_um_at_18_25_p25": 1082.1064,
+    "diag_um_at_18_25_p50": 1854.5322,
+    "diag_um_at_18_25_p75": 6717.2136,
+    "n": 7,
+    "diag_um_adopted_p50": 1558.5,
+    "diag_um_adopted_p25": 909.4,
+    "diag_um_adopted_p75": 5645.0
+   },
+   "wet_package": {
+    "diag_px_p25": 23.9868,
+    "diag_px_p50": 51.9931,
+    "diag_px_p75": 112.4955,
+    "diag_um_at_18_1165_p25": 434.5569,
+    "diag_um_at_18_1165_p50": 941.933,
+    "diag_um_at_18_1165_p75": 2038.0247,
+    "diag_um_at_18_25_p25": 437.7591,
+    "diag_um_at_18_25_p50": 948.8741,
+    "diag_um_at_18_25_p75": 2053.0429,
+    "n": 662,
+    "diag_um_adopted_p50": 797.4,
+    "diag_um_adopted_p25": 367.9,
+    "diag_um_adopted_p75": 1725.3
+   }
+  },
+  "by_folder_group": {
+   "Library": {
+    "diag_px_p25": 8.7896,
+    "diag_px_p50": 12.2047,
+    "diag_px_p75": 23.7706,
+    "diag_um_at_18_1165_p25": 159.2368,
+    "diag_um_at_18_1165_p50": 221.1064,
+    "diag_um_at_18_1165_p75": 430.6401,
+    "diag_um_at_18_25_p25": 160.4102,
+    "diag_um_at_18_25_p50": 222.7358,
+    "diag_um_at_18_25_p75": 433.8135,
+    "n": 1163,
+    "diag_um_adopted_p50": 187.2,
+    "diag_um_adopted_p25": 134.8,
+    "diag_um_adopted_p75": 364.6
+   },
+   "Updated": {
+    "diag_px_p25": 8.1345,
+    "diag_px_p50": 10.2612,
+    "diag_px_p75": 16.2889,
+    "diag_um_at_18_1165_p25": 147.3687,
+    "diag_um_at_18_1165_p50": 185.897,
+    "diag_um_at_18_1165_p75": 295.0979,
+    "diag_um_at_18_25_p25": 148.4546,
+    "diag_um_at_18_25_p50": 187.2669,
+    "diag_um_at_18_25_p75": 297.2724,
+    "n": 13019,
+    "diag_um_adopted_p50": 157.4,
+    "diag_um_adopted_p25": 124.8,
+    "diag_um_adopted_p75": 249.8
+   }
+  },
+  "by_line": {
+   "L24": {
+    "diag_px_p25": 8.0487,
+    "diag_px_p50": 10.1183,
+    "diag_px_p75": 15.4758,
+    "diag_um_at_18_1165_p25": 145.8143,
+    "diag_um_at_18_1165_p50": 183.3082,
+    "diag_um_at_18_1165_p75": 280.3673,
+    "diag_um_at_18_25_p25": 146.8888,
+    "diag_um_at_18_25_p50": 184.659,
+    "diag_um_at_18_25_p75": 282.4334,
+    "n": 7611,
+    "diag_um_adopted_p50": 155.2,
+    "diag_um_adopted_p25": 123.4,
+    "diag_um_adopted_p75": 237.4
+   },
+   "L25": {
+    "diag_px_p25": 9.6664,
+    "diag_px_p50": 14.7592,
+    "diag_px_p75": 37.0878,
+    "diag_um_at_18_1165_p25": 175.1213,
+    "diag_um_at_18_1165_p50": 267.385,
+    "diag_um_at_18_1165_p75": 671.9011,
+    "diag_um_at_18_25_p25": 176.4118,
+    "diag_um_at_18_25_p50": 269.3554,
+    "diag_um_at_18_25_p75": 676.8524,
+    "n": 569,
+    "diag_um_adopted_p50": 226.4,
+    "diag_um_adopted_p25": 148.3,
+    "diag_um_adopted_p75": 568.8
+   },
+   "L26": {
+    "diag_px_p25": 8.2879,
+    "diag_px_p50": 10.5097,
+    "diag_px_p75": 17.5266,
+    "diag_um_at_18_1165_p25": 150.1477,
+    "diag_um_at_18_1165_p50": 190.399,
+    "diag_um_at_18_1165_p75": 317.5206,
+    "diag_um_at_18_25_p25": 151.2542,
+    "diag_um_at_18_25_p50": 191.802,
+    "diag_um_at_18_25_p75": 319.8604,
+    "n": 3677,
+    "diag_um_adopted_p50": 161.2,
+    "diag_um_adopted_p25": 127.1,
+    "diag_um_adopted_p75": 268.8
+   },
+   "L27": {
+    "diag_px_p25": 8.2759,
+    "diag_px_p50": 10.4661,
+    "diag_px_p75": 17.187,
+    "diag_um_at_18_1165_p25": 149.9303,
+    "diag_um_at_18_1165_p50": 189.6091,
+    "diag_um_at_18_1165_p75": 311.3683,
+    "diag_um_at_18_25_p25": 151.0352,
+    "diag_um_at_18_25_p50": 191.0063,
+    "diag_um_at_18_25_p75": 313.6628,
+    "n": 2139,
+    "diag_um_adopted_p50": 160.5,
+    "diag_um_adopted_p25": 126.9,
+    "diag_um_adopted_p75": 263.6
+   },
+   "L31": {
+    "diag_px_p25": 7.5713,
+    "diag_px_p50": 15.1588,
+    "diag_px_p75": 41.8473,
+    "diag_um_at_18_1165_p25": 137.1655,
+    "diag_um_at_18_1165_p50": 274.6244,
+    "diag_um_at_18_1165_p75": 758.1266,
+    "diag_um_at_18_25_p25": 138.1762,
+    "diag_um_at_18_25_p50": 276.6481,
+    "diag_um_at_18_25_p75": 763.7132,
+    "n": 186,
+    "diag_um_adopted_p50": 232.5,
+    "diag_um_adopted_p25": 116.1,
+    "diag_um_adopted_p75": 641.8
+   }
+  }
+ },
+ "cavity": {
+  "read": {
+   "cavity_radius_px_p25": 417.25,
+   "cavity_radius_px_p50": 433.5,
+   "cavity_radius_px_p75": 444.5,
+   "failure_classes": {
+    "low_bright": 144,
+    "ok": 10470
+   },
+   "pictures": 10614,
+   "pictures_could_not_measure": 144,
+   "pictures_measured": 10470
+  }
+ },
+ "scale": {
+  "adopted_um_per_px": 15.337,
+  "adopted_source": "the customer's own 300 micron cut inverted through the gate boundary; central figure of the frozen scale-interval artifact",
+  "adopted_interval_um_per_px": [
+   15.2983,
+   15.3755
+  ],
+  "adopted_boundary_px": [
+   19.41,
+   19.61
+  ],
+  "adopted_boundary_um": [
+   297.7,
+   300.8
+  ],
+  "old_cut_boundary_px": [
+   42.08,
+   42.79
+  ],
+  "old_cut_implied_interval_um_per_px": [
+   15.1204,
+   15.3755
+  ],
+  "superseded": {
+   "ours_18_1165": {
+    "value": 18.1165,
+    "status": "superseded prior scale; it divided an unsourced 14,200 micron lens assumption by a lens pixel measurement"
+   },
+   "spoken_18_25": {
+    "value": 18.25,
+    "status": "superseded prior scale; written in no document we hold"
+   }
+  },
+  "per_line_um_per_px": {
+   "L24": 15.377,
+   "L25": 15.601,
+   "L26": 15.4,
+   "L27": 15.337,
+   "L31": null
+  },
+  "per_folder_um_per_px": {
+   "updated_folders_only": 15.377,
+   "pictures_also_in_the_old_defects_library": 15.4
+  },
+  "lens": {
+   "rim_median_diam_px": 789.0,
+   "rim_iqr_diam_px": [
+    764.4,
+    809.5
+   ],
+   "adopted_diam_um": 12101,
+   "prior_848_px_status": "REPRODUCED. The wide-band least-squares circle fit, 0.50 to 1.06 of R_cav, gives a median 841.4 px over the same library population (the earlier figure was 848). It is a blend of the two modes, not a single physical ring: restricted to the rim band the same fit gives 789.0 px.",
+   "nominal_status": "the lens nominal diameter is not documented in anything received; a written figure from the customer would close the remaining question"
+  },
+  "sanity_anchors": {
+   "bubble_median": {
+    "px": 9.3,
+    "um": 142.6
+   },
+   "foreign_matter_median": {
+    "px": 19.03,
+    "um": 291.9
+   },
+   "fiber_median": {
+    "px": 46.03,
+    "um": 706.0
+   },
+   "old_cut_647_um_in_px": 42.19
+  },
+  "blind": {
+   "between_stratum_clean_rim_p50_px": {
+    "max": 780.0,
+    "min": 728.0,
+    "range_pct_of_mean": 6.8,
+    "range_px": 52.0
+   },
+   "between_stratum_rim_p50_px": {
+    "max": 763.0,
+    "min": 688.0,
+    "range_pct_of_mean": 10.2,
+    "range_px": 75.0
+   },
+   "note": "between-stratum spread is compared with the within-stratum spread above; the clean band is 640 to 900 px",
+   "strata": [
+    "Updated|L24",
+    "Updated|L25",
+    "Updated|L26",
+    "Updated|L27",
+    "Updated|L31",
+    "Library|L24",
+    "Library|L25",
+    "Library|L26",
+    "Library|L27",
+    "Library|L31"
+   ],
+   "within_stratum_clean_rim_sd_px": {
+    "max": 51.7,
+    "min": 32.8
+   },
+   "within_stratum_rim_sd_px": {
+    "max": 169.7,
+    "min": 73.0
+   }
+  },
+  "strata": [
+   {
+    "stratum": "Library|L24",
+    "capped": false,
+    "cavity_px": {
+     "mean": 829.7,
+     "p25": 814.0,
+     "p50": 825.5,
+     "p75": 873.5
+    },
+    "clean_rim_px": {
+     "band_px": [
+      640.0,
+      900.0
+     ],
+     "mean": 746.3,
+     "n": 110,
+     "p25": 712.5,
+     "p50": 756.0,
+     "p75": 786.0,
+     "rel_spread_pct": 6.4,
+     "sd": 48.1
+    },
+    "contamination_pct": 41.8,
+    "failed_n": 11,
+    "flag_counts": {
+     "no_dip": 3,
+     "no_mask": 8,
+     "ok": 189
+    },
+    "folder_group": "Library",
+    "implied_um_per_px_at_our_14200um_reference": {
+     "from_mean": 22.1831,
+     "from_p50": 20.6395,
+     "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L24",
+    "measured_ok_n": 189,
+    "rim_px": {
+     "max": 838.0,
+     "mean": 640.1,
+     "min": 270.0,
+     "p25": 492.0,
+     "p50": 688.0,
+     "p75": 762.0,
+     "rel_spread_pct": 21.5,
+     "sd": 137.7,
+     "trimmed_mean_15pct": 650.8
+    },
+    "sampled_n": 200,
+    "target_n": 200,
+    "universe_n": 788
+   },
+   {
+    "stratum": "Library|L25",
+    "capped": true,
+    "cavity_px": {
+     "mean": 787.6,
+     "p25": 772.0,
+     "p50": 864.5,
+     "p75": 881.0
+    },
+    "clean_rim_px": {
+     "band_px": [
+      640.0,
+      900.0
+     ],
+     "mean": 769.2,
+     "n": 104,
+     "p25": 751.0,
+     "p50": 780.0,
+     "p75": 800.0,
+     "rel_spread_pct": 5.5,
+     "sd": 42.1
+    },
+    "contamination_pct": 32.0,
+    "failed_n": 2,
+    "flag_counts": {
+     "no_mask": 2,
+     "ok": 153
+    },
+    "folder_group": "Library",
+    "implied_um_per_px_at_our_14200um_reference": {
+     "from_mean": 21.4811,
+     "from_p50": 18.7831,
+     "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L25",
+    "measured_ok_n": 153,
+    "rim_px": {
+     "max": 862.0,
+     "mean": 661.0,
+     "min": 208.0,
+     "p25": 498.0,
+     "p50": 756.0,
+     "p75": 790.0,
+     "rel_spread_pct": 25.7,
+     "sd": 169.7,
+     "trimmed_mean_15pct": 693.4
+    },
+    "sampled_n": 155,
+    "target_n": 200,
+    "universe_n": 155
+   },
+   {
+    "stratum": "Library|L26",
+    "capped": false,
+    "cavity_px": {
+     "mean": 866.6,
+     "p25": 861.4,
+     "p50": 878.0,
+     "p75": 891.1
+    },
+    "clean_rim_px": {
+     "band_px": [
+      640.0,
+      900.0
+     ],
+     "mean": 764.1,
+     "n": 177,
+     "p25": 740.0,
+     "p50": 770.0,
+     "p75": 792.0,
+     "rel_spread_pct": 5.3,
+     "sd": 40.3
+    },
+    "contamination_pct": 11.5,
+    "failed_n": 0,
+    "flag_counts": {
+     "ok": 200
+    },
+    "folder_group": "Library",
+    "implied_um_per_px_at_our_14200um_reference": {
+     "from_mean": 19.3791,
+     "from_p50": 18.6107,
+     "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L26",
+    "measured_ok_n": 200,
+    "rim_px": {
+     "max": 870.0,
+     "mean": 732.8,
+     "min": 100.0,
+     "p25": 717.5,
+     "p50": 763.0,
+     "p75": 790.0,
+     "rel_spread_pct": 14.1,
+     "sd": 103.5,
+     "trimmed_mean_15pct": 757.9
+    },
+    "sampled_n": 200,
+    "target_n": 200,
+    "universe_n": 205
+   },
+   {
+    "stratum": "Library|L27",
+    "capped": true,
+    "cavity_px": {
+     "mean": 838.4,
+     "p25": 848.0,
+     "p50": 866.0,
+     "p75": 881.0
+    },
+    "clean_rim_px": {
+     "band_px": [
+      640.0,
+      900.0
+     ],
+     "mean": 727.3,
+     "n": 73,
+     "p25": 684.0,
+     "p50": 728.0,
+     "p75": 772.0,
+     "rel_spread_pct": 7.1,
+     "sd": 51.7
+    },
+    "contamination_pct": 30.5,
+    "failed_n": 10,
+    "flag_counts": {
+     "no_mask": 10,
+     "ok": 105
+    },
+    "folder_group": "Library",
+    "implied_um_per_px_at_our_14200um_reference": {
+     "from_mean": 21.5668,
+     "from_p50": 20.6395,
+     "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L27",
+    "measured_ok_n": 105,
+    "rim_px": {
+     "max": 926.0,
+     "mean": 658.4,
+     "min": 176.0,
+     "p25": 606.0,
+     "p50": 688.0,
+     "p75": 762.0,
+     "rel_spread_pct": 20.5,
+     "sd": 135.2,
+     "trimmed_mean_15pct": 680.6
+    },
+    "sampled_n": 115,
+    "target_n": 200,
+    "universe_n": 115
+   },
+   {
+    "stratum": "Library|L31",
+    "capped": true,
+    "cavity_px": {
+     "mean": 873.0,
+     "p25": 854.8,
+     "p50": 873.0,
+     "p75": 885.8
+    },
+    "clean_rim_px": {
+     "band_px": [
+      640.0,
+      900.0
+     ],
+     "mean": 754.6,
+     "n": 115,
+     "p25": 733.0,
+     "p50": 756.0,
+     "p75": 777.0,
+     "rel_spread_pct": 5.1,
+     "sd": 38.3
+    },
+    "contamination_pct": 17.3,
+    "failed_n": 0,
+    "flag_counts": {
+     "ok": 139
+    },
+    "folder_group": "Library",
+    "implied_um_per_px_at_our_14200um_reference": {
+     "from_mean": 19.6927,
+     "from_p50": 18.9333,
+     "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L31",
+    "measured_ok_n": 139,
+    "rim_px": {
+     "max": 934.0,
+     "mean": 721.1,
+     "min": 450.0,
+     "p25": 708.0,
+     "p50": 750.0,
+     "p75": 774.0,
+     "rel_spread_pct": 12.5,
+     "sd": 90.0,
+     "trimmed_mean_15pct": 740.1
+    },
+    "sampled_n": 139,
+    "target_n": 200,
+    "universe_n": 139
+   },
+   {
+    "stratum": "Updated|L24",
+    "capped": false,
+    "cavity_px": {
+     "mean": 860.5,
+     "p25": 817.8,
+     "p50": 880.5,
+     "p75": 900.0
+    },
+    "clean_rim_px": {
+     "band_px": [
+      640.0,
+      900.0
+     ],
+     "mean": 767.3,
+     "n": 135,
+     "p25": 745.0,
+     "p50": 774.0,
+     "p75": 802.0,
+     "rel_spread_pct": 6.0,
+     "sd": 46.2
+    },
+    "contamination_pct": 32.2,
+    "failed_n": 1,
+    "flag_counts": {
+     "no_dip": 1,
+     "ok": 199
+    },
+    "folder_group": "Updated",
+    "implied_um_per_px_at_our_14200um_reference": {
+     "from_mean": 20.6115,
+     "from_p50": 18.984,
+     "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L24",
+    "measured_ok_n": 199,
+    "rim_px": {
+     "max": 868.0,
+     "mean": 688.9,
+     "min": 392.0,
+     "p25": 595.0,
+     "p50": 748.0,
+     "p75": 786.0,
+     "rel_spread_pct": 18.2,
+     "sd": 125.7,
+     "trimmed_mean_15pct": 707.6
+    },
+    "sampled_n": 200,
+    "target_n": 200,
+    "universe_n": 4272
+   },
+   {
+    "stratum": "Updated|L25",
+    "capped": false,
+    "cavity_px": {
+     "mean": 832.8,
+     "p25": 824.5,
+     "p50": 858.5,
+     "p75": 886.5
+    },
+    "clean_rim_px": {
+     "band_px": [
+      640.0,
+      900.0
+     ],
+     "mean": 762.5,
+     "n": 129,
+     "p25": 728.0,
+     "p50": 768.0,
+     "p75": 796.0,
+     "rel_spread_pct": 6.1,
+     "sd": 46.1
+    },
+    "contamination_pct": 34.5,
+    "failed_n": 3,
+    "flag_counts": {
+     "no_mask": 3,
+     "ok": 197
+    },
+    "folder_group": "Updated",
+    "implied_um_per_px_at_our_14200um_reference": {
+     "from_mean": 21.0552,
+     "from_p50": 19.6676,
+     "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L25",
+    "measured_ok_n": 197,
+    "rim_px": {
+     "max": 862.0,
+     "mean": 674.4,
+     "min": 224.0,
+     "p25": 572.0,
+     "p50": 722.0,
+     "p75": 778.0,
+     "rel_spread_pct": 20.3,
+     "sd": 136.7,
+     "trimmed_mean_15pct": 694.6
+    },
+    "sampled_n": 200,
+    "target_n": 200,
+    "universe_n": 948
+   },
+   {
+    "stratum": "Updated|L26",
+    "capped": false,
+    "cavity_px": {
+     "mean": 861.9,
+     "p25": 850.6,
+     "p50": 866.0,
+     "p75": 884.5
+    },
+    "clean_rim_px": {
+     "band_px": [
+      640.0,
+      900.0
+     ],
+     "mean": 763.8,
+     "n": 153,
+     "p25": 742.0,
+     "p50": 770.0,
+     "p75": 792.0,
+     "rel_spread_pct": 5.3,
+     "sd": 40.2
+    },
+    "contamination_pct": 21.1,
+    "failed_n": 6,
+    "flag_counts": {
+     "no_dip": 4,
+     "no_mask": 2,
+     "ok": 194
+    },
+    "folder_group": "Updated",
+    "implied_um_per_px_at_our_14200um_reference": {
+     "from_mean": 19.8427,
+     "from_p50": 18.6842,
+     "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L26",
+    "measured_ok_n": 194,
+    "rim_px": {
+     "max": 846.0,
+     "mean": 715.6,
+     "min": 196.0,
+     "p25": 688.0,
+     "p50": 760.0,
+     "p75": 784.0,
+     "rel_spread_pct": 14.7,
+     "sd": 105.1,
+     "trimmed_mean_15pct": 738.7
+    },
+    "sampled_n": 200,
+    "target_n": 200,
+    "universe_n": 1475
+   },
+   {
+    "stratum": "Updated|L27",
+    "capped": false,
+    "cavity_px": {
+     "mean": 862.6,
+     "p25": 854.5,
+     "p50": 865.8,
+     "p75": 877.5
+    },
+    "clean_rim_px": {
+     "band_px": [
+      640.0,
+      900.0
+     ],
+     "mean": 738.6,
+     "n": 163,
+     "p25": 709.0,
+     "p50": 744.0,
+     "p75": 769.0,
+     "rel_spread_pct": 5.6,
+     "sd": 41.6
+    },
+    "contamination_pct": 14.2,
+    "failed_n": 10,
+    "flag_counts": {
+     "no_dip": 9,
+     "no_mask": 1,
+     "ok": 190
+    },
+    "folder_group": "Updated",
+    "implied_um_per_px_at_our_14200um_reference": {
+     "from_mean": 19.9367,
+     "from_p50": 19.3197,
+     "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L27",
+    "measured_ok_n": 190,
+    "rim_px": {
+     "max": 840.0,
+     "mean": 712.3,
+     "min": 398.0,
+     "p25": 682.0,
+     "p50": 735.0,
+     "p75": 762.0,
+     "rel_spread_pct": 11.3,
+     "sd": 80.3,
+     "trimmed_mean_15pct": 727.3
+    },
+    "sampled_n": 200,
+    "target_n": 200,
+    "universe_n": 1610
+   },
+   {
+    "stratum": "Updated|L31",
+    "capped": false,
+    "cavity_px": {
+     "mean": 852.3,
+     "p25": 830.2,
+     "p50": 851.5,
+     "p75": 876.8
+    },
+    "clean_rim_px": {
+     "band_px": [
+      640.0,
+      900.0
+     ],
+     "mean": 750.8,
+     "n": 170,
+     "p25": 732.5,
+     "p50": 758.0,
+     "p75": 772.0,
+     "rel_spread_pct": 4.4,
+     "sd": 32.8
+    },
+    "contamination_pct": 12.8,
+    "failed_n": 5,
+    "flag_counts": {
+     "no_mask": 5,
+     "ok": 195
+    },
+    "folder_group": "Updated",
+    "implied_um_per_px_at_our_14200um_reference": {
+     "from_mean": 19.5,
+     "from_p50": 18.9333,
+     "note": "our own 14,200 micron reference, not an independent check"
+    },
+    "line": "L31",
+    "measured_ok_n": 195,
+    "rim_px": {
+     "max": 920.0,
+     "mean": 728.2,
+     "min": 452.0,
+     "p25": 716.0,
+     "p50": 750.0,
+     "p75": 770.0,
+     "rel_spread_pct": 10.0,
+     "sd": 73.0,
+     "trimmed_mean_15pct": 744.8
+    },
+    "sampled_n": 200,
+    "target_n": 200,
+    "universe_n": 2132
+   }
+  ]
+ },
+ "micron_gate": {
+  "proxy": "side = max(w, h), the longer side of the annotation rectangle",
+  "cut_um": 300.0,
+  "old_cut_um": 647.0,
+  "base_codes": [
+   "P3_FM",
+   "P3_FIB",
+   "P3_EP",
+   "P3_HE"
+  ],
+  "new_boundaries_px": {
+   "P3_FM": {
+    "lower_px": 19.25,
+    "upper_px": 19.61
+   },
+   "P3_FIB": {
+    "lower_px": 19.41,
+    "upper_px": 19.9
+   }
+  },
+  "old_boundaries_px": {
+   "P3_FM": {
+    "lower_px": 41.78,
+    "upper_px": 42.79
+   },
+   "P3_FIB": {
+    "lower_px": 42.08,
+    "upper_px": 44.17
+   }
+  },
+  "implied_scale_new": {
+   "boundary_px_lower": 19.41,
+   "boundary_px_upper": 19.61,
+   "scale_um_per_px_low": 15.2983,
+   "scale_um_per_px_high": 15.456,
+   "scale_um_per_px_mid": 15.3767
+  },
+  "implied_scale_old": {
+   "boundary_px_lower": 42.08,
+   "boundary_px_upper": 42.79,
+   "scale_um_per_px_low": 15.1204,
+   "scale_um_per_px_high": 15.3755,
+   "scale_um_per_px_mid": 15.2468
+  },
+  "implied_scale_combined": {
+   "scale_um_per_px_low": 15.2983,
+   "scale_um_per_px_high": 15.3755,
+   "scale_um_per_px_mid": 15.3369,
+   "agrees_with_18_1165": false,
+   "agrees_with_18_25": false,
+   "agreement": "neither",
+   "resolves_the_two_candidate_scales": false
+  },
+  "implies_at_our_scales": {
+   "note": "the same boundary read at our own scales gives the cut in microns, assuming our scale is right",
+   "cut_um_at_18_1165_low": 351.64,
+   "cut_um_at_18_1165_high": 355.26,
+   "cut_um_at_18_25_low": 354.23,
+   "cut_um_at_18_25_high": 357.88
+  },
+  "assumptions": [
+   "the gate is applied to the LARGEST base-code box on the image",
+   "the annotation box edges delimit the debris (no systematic margin)",
+   "the client's declared cut (300 microns now, 647 before) is exact",
+   "the proxy that fits is the longer side max(w,h), which the data supports (0 misclassifications vs 39 for the diagonal)"
+  ],
+  "delta": {
+   "changed_pictures": 170,
+   "added_tags": {
+    "P3_EP_MICRON_THRESHOLD": 1,
+    "P3_FIB_MICRON_THRESHOLD": 51,
+    "P3_FM_MICRON_THRESHOLD": 118
+   },
+   "removed_tags": {
+    "P1_ML": 1
+   },
+   "geometry_changed_pictures": 0,
+   "unresolved_names": [],
+   "delta_rows": 170
+  },
+  "counts": {
+   "base_defect_boxes": {
+    "P3_EP": 150,
+    "P3_FIB": 245,
+    "P3_FM": 626,
+    "P3_HE": 95
+   }
+  }
+ },
+ "coverage": {
+  "strata": [
+   {
+    "type": "folder",
+    "value": "Updated ICube Objects 20260915",
+    "population": "census pictures assigned to the folder by winning_path (map decision 6)",
+    "distinct": 4230,
+    "mentioned": 698,
+    "with_shape": 551,
+    "no_shape": 3679,
+    "nowhere": 3532
+   },
+   {
+    "type": "folder",
+    "value": "Updated ICube Categorical Classes 20260915",
+    "population": "census pictures assigned to the folder by winning_path (map decision 6)",
+    "distinct": 6207,
+    "mentioned": 5821,
+    "with_shape": 4060,
+    "no_shape": 2147,
+    "nowhere": 386
+   },
+   {
+    "type": "folder",
+    "value": "ICube Defects Library",
+    "population": "census pictures assigned to the folder by winning_path (map decision 6)",
+    "distinct": 177,
+    "mentioned": 171,
+    "with_shape": 171,
+    "no_shape": 6,
+    "nowhere": 6
+   },
+   {
+    "type": "folder_group",
+    "value": "Updated",
+    "population": "census pictures in the folder group (winning_path folder)",
+    "distinct": 10437,
+    "mentioned": 6519,
+    "with_shape": 4611,
+    "no_shape": 5826,
+    "nowhere": 3918
+   },
+   {
+    "type": "folder_group",
+    "value": "Library",
+    "population": "census pictures in the folder group (winning_path folder)",
+    "distinct": 177,
+    "mentioned": 171,
+    "with_shape": 171,
+    "no_shape": 6,
+    "nowhere": 6
+   },
+   {
+    "type": "production_line",
+    "value": "L24",
+    "population": "census pictures on the line (from the filename)",
+    "distinct": 4348,
+    "mentioned": 2621,
+    "with_shape": 2519,
+    "no_shape": 1829,
+    "nowhere": 1727
+   },
+   {
+    "type": "production_line",
+    "value": "L25",
+    "population": "census pictures on the line (from the filename)",
+    "distinct": 972,
+    "mentioned": 675,
+    "with_shape": 617,
+    "no_shape": 355,
+    "nowhere": 297
+   },
+   {
+    "type": "production_line",
+    "value": "L26",
+    "population": "census pictures on the line (from the filename)",
+    "distinct": 1503,
+    "mentioned": 1015,
+    "with_shape": 881,
+    "no_shape": 622,
+    "nowhere": 488
+   },
+   {
+    "type": "production_line",
+    "value": "L27",
+    "population": "census pictures on the line (from the filename)",
+    "distinct": 1637,
+    "mentioned": 731,
+    "with_shape": 361,
+    "no_shape": 1276,
+    "nowhere": 906
+   },
+   {
+    "type": "production_line",
+    "value": "L31",
+    "population": "census pictures on the line (from the filename)",
+    "distinct": 2154,
+    "mentioned": 1648,
+    "with_shape": 404,
+    "no_shape": 1750,
+    "nowhere": 506
+   },
+   {
+    "type": "canonical_defect",
+    "value": "bubble",
+    "population": "pictures filed in the library class folder(s) named Bubble",
+    "distinct": 113,
+    "mentioned": 113,
+    "with_shape": 819,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "bubble_cluster",
+    "population": "pictures filed in the library class folder(s) named Bubble Cluster",
+    "distinct": 36,
+    "mentioned": 36,
+    "with_shape": 428,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "bubble_irregular",
+    "population": "pictures filed in the library class folder(s) named Bubble Irregular",
+    "distinct": 44,
+    "mentioned": 44,
+    "with_shape": 147,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "bubble_on_123",
+    "population": "pictures filed in the library class folder(s) named Bubble On 123",
+    "distinct": 14,
+    "mentioned": 13,
+    "with_shape": 13,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "bubble_on_edge",
+    "population": "pictures filed in the library class folder(s) named Bubble On Edge",
+    "distinct": 14,
+    "mentioned": 14,
+    "with_shape": 14,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "bubble_scatter",
+    "population": "pictures filed in the library class folder(s) named Bubble Scatter",
+    "distinct": 7,
+    "mentioned": 5,
+    "with_shape": 6,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "cavity_off_center",
+    "population": "pictures filed in the library class folder(s) named Cavity Off Center",
+    "distinct": 183,
+    "mentioned": 183,
+    "with_shape": 184,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "dirty_camera",
+    "population": "pictures filed in the library class folder(s) named Dirty Camera",
+    "distinct": 25,
+    "mentioned": 25,
+    "with_shape": 329,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "dirty_strobe",
+    "population": "pictures filed in the library class folder(s) named Dirty Strobe",
+    "distinct": 43,
+    "mentioned": 42,
+    "with_shape": 43,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "extraneous_polymer",
+    "population": "pictures filed in the library class folder(s) named Extraneous Polymer",
+    "distinct": 268,
+    "mentioned": 268,
+    "with_shape": 144,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "extraneous_polymer_micron_gate",
+    "population": "no library class folder is named for this defect",
+    "distinct": 0,
+    "mentioned": 0,
+    "with_shape": 33,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "fiber",
+    "population": "pictures filed in the library class folder(s) named Fiber",
+    "distinct": 362,
+    "mentioned": 95,
+    "with_shape": 178,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "fiber_micron_gate",
+    "population": "no library class folder is named for this defect",
+    "distinct": 0,
+    "mentioned": 0,
+    "with_shape": 136,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "folded_lens",
+    "population": "no library class folder is named for this defect",
+    "distinct": 0,
+    "mentioned": 0,
+    "with_shape": 237,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "foreign_matter",
+    "population": "pictures filed in the library class folder(s) named Foreign Matter",
+    "distinct": 1283,
+    "mentioned": 181,
+    "with_shape": 331,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "foreign_matter_micron_gate",
+    "population": "no library class folder is named for this defect",
+    "distinct": 0,
+    "mentioned": 0,
+    "with_shape": 171,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "hema_fragment",
+    "population": "pictures filed in the library class folder(s) named HEMA Fragment",
+    "distinct": 8,
+    "mentioned": 8,
+    "with_shape": 7,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "hema_micron_gate",
+    "population": "no library class folder is named for this defect",
+    "distinct": 0,
+    "mentioned": 0,
+    "with_shape": 94,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "hema_obstruction",
+    "population": "pictures filed in the library class folder(s) named HEMA Obstruction",
+    "distinct": 175,
+    "mentioned": 175,
+    "with_shape": 180,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "lens_off_center",
+    "population": "pictures filed in the library class folder(s) named Lens Off Center",
+    "distinct": 258,
+    "mentioned": 258,
+    "with_shape": 957,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "low_dose",
+    "population": "pictures filed in the library class folder(s) named Low Dose, Low Dose Obstructing Region of Interest",
+    "distinct": 1952,
+    "mentioned": 1952,
+    "with_shape": 215,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "missing_lens",
+    "population": "pictures filed in the library class folder(s) named Missing Lens",
+    "distinct": 324,
+    "mentioned": 324,
+    "with_shape": 325,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "missing_primary_package",
+    "population": "pictures filed in the library class folder(s) named Missing Primary Package",
+    "distinct": 1427,
+    "mentioned": 1427,
+    "with_shape": 1426,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "multiple_lenses",
+    "population": "pictures filed in the library class folder(s) named Multiple Lenses",
+    "distinct": 1439,
+    "mentioned": 1437,
+    "with_shape": 1439,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "package_misalignment",
+    "population": "pictures filed in the library class folder(s) named Package Misalignment",
+    "distinct": 293,
+    "mentioned": 2,
+    "with_shape": 2,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "stretched_bubble",
+    "population": "no library class folder is named for this defect",
+    "distinct": 0,
+    "mentioned": 0,
+    "with_shape": 6,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "view_obstructed",
+    "population": "pictures filed in the library class folder(s) named View Obstructed",
+    "distinct": 117,
+    "mentioned": 25,
+    "with_shape": 24,
+    "no_shape": 0,
+    "nowhere": 0
+   },
+   {
+    "type": "canonical_defect",
+    "value": "wet_package",
+    "population": "pictures filed in the library class folder(s) named Wet Package",
+    "distinct": 67,
+    "mentioned": 64,
+    "with_shape": 146,
+    "no_shape": 0,
+    "nowhere": 0
+   }
+  ],
+  "blob": {
+   "folder_total": 10438,
+   "annotated": 1047,
+   "share": 0.10030657214025675
+  },
+  "library_only_pictures": 177,
+  "library_only_classes": [
+   [
+    "Bubble",
+    72
+   ],
+   [
+    "Wet Package",
+    27
+   ],
+   [
+    "Bubble Irregular",
+    26
+   ],
+   [
+    "Bubble Cluster",
+    21
+   ],
+   [
+    "Bubble On 123",
+    14
+   ],
+   [
+    "Bubble On Edge",
+    14
+   ],
+   [
+    "Dirty Strobe",
+    1
+   ],
+   [
+    "Fiber",
+    1
+   ],
+   [
+    "Bubble Scatter",
+    1
+   ]
+  ]
+ },
+ "disagreement": {
+  "name_based_batch": 113,
+  "content_library": 279,
+  "content_batch": 129,
+  "rows": 886,
+  "sep22_mentions": 709,
+  "old_mentions": 177
+ },
+ "crosswalk": {
+  "count": 28,
+  "collision_flags": {
+   "P3_HE_shared_code": "P3_HE is HEMA Fragment (box) in the Sep-22 project and HEMA Obstruction (box) in the 7 production files.",
+   "F2_FOV_naming_anomaly": "View Obstructed is P2_FOV in the Sep-22 project and F2_FOV in the production files."
+  },
+  "table": [
+   {
+    "id": "bubble",
+    "name": "Bubble",
+    "kind": "box",
+    "kind_conflict": "no",
+    "p2": "Bubble",
+    "p22": "P2_BB",
+    "p25": "P2_BB",
+    "lib": "Bubble",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "bubble_cluster",
+    "name": "Bubble Cluster",
+    "kind": "box",
+    "kind_conflict": "no",
+    "p2": "Bubble Cluster",
+    "p22": "P2_BC",
+    "p25": "P2_BC",
+    "lib": "Bubble Cluster",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "bubble_irregular",
+    "name": "Bubble Irregular",
+    "kind": "box",
+    "kind_conflict": "no",
+    "p2": "Bubble Irregular",
+    "p22": "P2_BI",
+    "p25": "P2_BI",
+    "lib": "Bubble Irregular",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "stretched_bubble",
+    "name": "Stretched Bubble",
+    "kind": "box",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "P2_BST",
+    "p25": "P2_BST",
+    "lib": "",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "extraneous_polymer",
+    "name": "Extraneous Polymer",
+    "kind": "box",
+    "kind_conflict": "no",
+    "p2": "Extraneous Polymer",
+    "p22": "P3_EP",
+    "p25": "P3_EP",
+    "lib": "Extraneous Polymer",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "fiber",
+    "name": "Fiber",
+    "kind": "box",
+    "kind_conflict": "no",
+    "p2": "Fiber",
+    "p22": "P3_FIB",
+    "p25": "P3_FIB",
+    "lib": "Fiber",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "foreign_matter",
+    "name": "Foreign Matter",
+    "kind": "box",
+    "kind_conflict": "no",
+    "p2": "Foreign Matter",
+    "p22": "P3_FM",
+    "p25": "P3_FM",
+    "lib": "Foreign Matter",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "hema_fragment",
+    "name": "HEMA Fragment",
+    "kind": "box",
+    "kind_conflict": "no",
+    "p2": "HEMA Fragment",
+    "p22": "P3_HE",
+    "p25": "",
+    "lib": "HEMA Fragment",
+    "gate": "no",
+    "base": "",
+    "collision": "P3_HE_shared_code"
+   },
+   {
+    "id": "hema_obstruction",
+    "name": "HEMA Obstruction",
+    "kind": "box|tag",
+    "kind_conflict": "yes",
+    "p2": "",
+    "p22": "P2_HMO",
+    "p25": "P3_HE",
+    "lib": "",
+    "gate": "no",
+    "base": "",
+    "collision": "P3_HE_shared_code"
+   },
+   {
+    "id": "wet_package",
+    "name": "Wet Package",
+    "kind": "box",
+    "kind_conflict": "no",
+    "p2": "Wet Package",
+    "p22": "P2_WP",
+    "p25": "P2_WP",
+    "lib": "Wet Package",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "bubble_on_123",
+    "name": "Bubble On 123",
+    "kind": "box",
+    "kind_conflict": "no",
+    "p2": "Bubble On 123",
+    "p22": "",
+    "p25": "",
+    "lib": "Bubble On 123",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "bubble_on_edge",
+    "name": "Bubble On Edge",
+    "kind": "box",
+    "kind_conflict": "no",
+    "p2": "Bubble On Edge",
+    "p22": "",
+    "p25": "",
+    "lib": "Bubble On Edge",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "missing_primary_package",
+    "name": "Missing Primary Package",
+    "kind": "tag",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "P1_MPP",
+    "p25": "P1_MPP",
+    "lib": "",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "multiple_lenses",
+    "name": "Multiple Lenses",
+    "kind": "tag",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "P1_ML",
+    "p25": "P1_ML",
+    "lib": "",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "lens_off_center",
+    "name": "Lens Off Center",
+    "kind": "tag",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "P2_LOC",
+    "p25": "P2_LOC",
+    "lib": "",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "missing_lens",
+    "name": "Missing Lens",
+    "kind": "tag",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "P1_NL",
+    "p25": "P1_NL",
+    "lib": "",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "cavity_off_center",
+    "name": "Cavity Off Center",
+    "kind": "tag",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "P1_COC",
+    "p25": "P1_COC",
+    "lib": "",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "folded_lens",
+    "name": "Folded Lens",
+    "kind": "tag",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "P1_FL",
+    "p25": "P1_FL",
+    "lib": "",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "dirty_camera",
+    "name": "Dirty Camera",
+    "kind": "tag",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "P2_DC",
+    "p25": "P2_DC",
+    "lib": "",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "low_dose",
+    "name": "Low Dose",
+    "kind": "tag",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "P2_LD",
+    "p25": "P2_LD",
+    "lib": "",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "dirty_strobe",
+    "name": "Dirty Strobe",
+    "kind": "tag",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "P2_DS",
+    "p25": "P2_DS",
+    "lib": "",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "bubble_scatter",
+    "name": "Bubble Scatter",
+    "kind": "tag",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "P2_BSC",
+    "p25": "P2_BSC",
+    "lib": "",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "package_misalignment",
+    "name": "Package Misalignment",
+    "kind": "tag",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "P1_PPM",
+    "p25": "P1_PPM",
+    "lib": "",
+    "gate": "no",
+    "base": "",
+    "collision": ""
+   },
+   {
+    "id": "view_obstructed",
+    "name": "View Obstructed",
+    "kind": "tag",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "P2_FOV",
+    "p25": "F2_FOV",
+    "lib": "",
+    "gate": "no",
+    "base": "",
+    "collision": "F2_FOV_naming_anomaly"
+   },
+   {
+    "id": "foreign_matter_micron_gate",
+    "name": "Foreign Matter micron gate",
+    "kind": "gate",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "",
+    "p25": "P3_FM_MICRON_THRESHOLD",
+    "lib": "",
+    "gate": "yes",
+    "base": "P3_FM",
+    "collision": ""
+   },
+   {
+    "id": "fiber_micron_gate",
+    "name": "Fiber micron gate",
+    "kind": "gate",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "",
+    "p25": "P3_FIB_MICRON_THRESHOLD",
+    "lib": "",
+    "gate": "yes",
+    "base": "P3_FIB",
+    "collision": ""
+   },
+   {
+    "id": "extraneous_polymer_micron_gate",
+    "name": "Extraneous Polymer micron gate",
+    "kind": "gate",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "",
+    "p25": "P3_EP_MICRON_THRESHOLD",
+    "lib": "",
+    "gate": "yes",
+    "base": "P3_EP",
+    "collision": ""
+   },
+   {
+    "id": "hema_micron_gate",
+    "name": "HEMA micron gate",
+    "kind": "gate",
+    "kind_conflict": "no",
+    "p2": "",
+    "p22": "",
+    "p25": "P3_HE_MICRON_THRESHOLD",
+    "lib": "",
+    "gate": "yes",
+    "base": "P3_HE",
+    "collision": ""
+   }
+  ]
+ },
+ "verification": {
+  "assertions": 157,
+  "failures": 0,
+  "checks": 15,
+  "figures": 142
+ },
+ "superseded_20261013": {
+  "batch_pictures": 1047,
+  "boxes": 12793,
+  "tags": 1318,
+  "codes": 24,
+  "status": "superseded by the full-coverage EDA"
+ }
+}
