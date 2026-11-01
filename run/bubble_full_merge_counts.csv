@@ -1,0 +1,7 @@
+experiment,class,images_train,images_test,images_total,crops_train,crops_test,crops_total,avg_crops_per_image
+exp,Bubble,638,274,912,8656,3740,12396,13.59
+exp,Wet Package,105,42,147,346,317,663,4.51
+exp,Foreign Matter,229,103,332,460,167,627,1.89
+exp,Fiber,120,58,178,160,85,245,1.38
+exp,Extraneous Polymer,102,42,144,106,44,150,1.04
+exp,HEMA Fragment,67,34,101,67,36,103,1.02

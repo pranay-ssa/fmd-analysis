@@ -1,0 +1,2396 @@
+[
+ {
+  "file": "exp/test/Bubble/20241101_222125_L26_C7_9189_b00.bmp",
+  "true": "Bubble",
+  "pred": "Wet Package",
+  "src": "20241101_222125_L26_C7_9189"
+ },
+ {
+  "file": "exp/test/Bubble/20241101_222125_L26_C7_9189_b06.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241101_222125_L26_C7_9189"
+ },
+ {
+  "file": "exp/test/Bubble/20241101_222125_L26_C7_9189_b08.bmp",
+  "true": "Bubble",
+  "pred": "Wet Package",
+  "src": "20241101_222125_L26_C7_9189"
+ },
+ {
+  "file": "exp/test/Bubble/20241101_234557_L24_C6_9870_0.9386_0.5657_b18.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241101_234557_L24_C6_9870_0.9386_0.5657"
+ },
+ {
+  "file": "exp/test/Bubble/20241102_001617_L26_C1_9735_b02.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241102_001617_L26_C1_9735"
+ },
+ {
+  "file": "exp/test/Bubble/20241102_001617_L26_C1_9735_b10.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241102_001617_L26_C1_9735"
+ },
+ {
+  "file": "exp/test/Bubble/20241102_001617_L26_C1_9735_b12.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241102_001617_L26_C1_9735"
+ },
+ {
+  "file": "exp/test/Bubble/20241102_001617_L26_C1_9735_b20.bmp",
+  "true": "Bubble",
+  "pred": "Fiber",
+  "src": "20241102_001617_L26_C1_9735"
+ },
+ {
+  "file": "exp/test/Bubble/20241102_015234_L24_PalletGHB1102055112_Cavity2_B01778N_Fail6_Score(0.9761967)_0.9999_0.9967_b00.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241102_015234_L24_PalletGHB1102055112_Cavity2_B01778N_Fail6_Score(0.9761967)_0.9999_0.9967"
+ },
+ {
+  "file": "exp/test/Bubble/20241102_050553_L24_C1_9798_b21.bmp",
+  "true": "Bubble",
+  "pred": "Fiber",
+  "src": "20241102_050553_L24_C1_9798"
+ },
+ {
+  "file": "exp/test/Bubble/20241102_180130_L27_C15_9461_0.9896_b06.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241102_180130_L27_C15_9461_0.9896"
+ },
+ {
+  "file": "exp/test/Bubble/20241102_192117_L26_C12_9998_b04.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241102_192117_L26_C12_9998"
+ },
+ {
+  "file": "exp/test/Bubble/20241103_072341_L27_C10_1_0.9059_b17.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241103_072341_L27_C10_1_0.9059"
+ },
+ {
+  "file": "exp/test/Bubble/20241103_081847_L26_C3_9079_b00.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241103_081847_L26_C3_9079"
+ },
+ {
+  "file": "exp/test/Bubble/20241103_081847_L26_C3_9079_b10.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241103_081847_L26_C3_9079"
+ },
+ {
+  "file": "exp/test/Bubble/20241103_145455_L24_C7_9999_b06.bmp",
+  "true": "Bubble",
+  "pred": "Wet Package",
+  "src": "20241103_145455_L24_C7_9999"
+ },
+ {
+  "file": "exp/test/Bubble/20241103_152309_L24_PalletGHG1103202151_Cavity13_B01778W_Fail5_Score(0.961741)_0.9996_0.9546_b09.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241103_152309_L24_PalletGHG1103202151_Cavity13_B01778W_Fail5_Score(0.961741)_0.9996_0.9546"
+ },
+ {
+  "file": "exp/test/Bubble/20241103_172048_L26_C3_1_b67.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241103_172048_L26_C3_1"
+ },
+ {
+  "file": "exp/test/Bubble/20241103_174819_L26_C4_9998_b13.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241103_174819_L26_C4_9998"
+ },
+ {
+  "file": "exp/test/Bubble/20241103_174819_L26_C4_9998_b14.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241103_174819_L26_C4_9998"
+ },
+ {
+  "file": "exp/test/Bubble/20241103_174819_L26_C4_9998_b15.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241103_174819_L26_C4_9998"
+ },
+ {
+  "file": "exp/test/Bubble/20241103_174819_L26_C4_9998_b19.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241103_174819_L26_C4_9998"
+ },
+ {
+  "file": "exp/test/Bubble/20241103_204814_L27_C1_1_0.3676_b14.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241103_204814_L27_C1_1_0.3676"
+ },
+ {
+  "file": "exp/test/Bubble/20241103_205406_L27_C10_1_0.8890_b09.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241103_205406_L27_C10_1_0.8890"
+ },
+ {
+  "file": "exp/test/Bubble/20241103_214757_L26_C10_9965_b01.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241103_214757_L26_C10_9965"
+ },
+ {
+  "file": "exp/test/Bubble/20241104_002205_L27_C4_9800_0.7534_b03.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241104_002205_L27_C4_9800_0.7534"
+ },
+ {
+  "file": "exp/test/Bubble/20241104_014500_L26_C12_9999_b15.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241104_014500_L26_C12_9999"
+ },
+ {
+  "file": "exp/test/Bubble/20241104_035931_L24_PalletGHU1104085821_Cavity15_B01778W_Fail6_Score(0.9791)_0.9996_0.9752_b28.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241104_035931_L24_PalletGHU1104085821_Cavity15_B01778W_Fail6_Score(0.9791)_0.9996_0.9752"
+ },
+ {
+  "file": "exp/test/Bubble/20241104_072437_L24_PalletGHB1104122313_Cavity3_B01778W_Fail4_Score(0.9408574)_1.0000_0.9602_b02.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241104_072437_L24_PalletGHB1104122313_Cavity3_B01778W_Fail4_Score(0.9408574)_1.0000_0.9602"
+ },
+ {
+  "file": "exp/test/Bubble/20241104_142724_L27_C5_9283_0.7544_b01.bmp",
+  "true": "Bubble",
+  "pred": "Wet Package",
+  "src": "20241104_142724_L27_C5_9283_0.7544"
+ },
+ {
+  "file": "exp/test/Bubble/20241104_142724_L27_C5_9283_0.7544_b19.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241104_142724_L27_C5_9283_0.7544"
+ },
+ {
+  "file": "exp/test/Bubble/20241104_190817_L24_PalletGHD1105000705_Cavity9_B01792Q_Fail3_Score(0.9298699)_0.9997_0.9957_b03.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241104_190817_L24_PalletGHD1105000705_Cavity9_B01792Q_Fail3_Score(0.9298699)_0.9997_0.9957"
+ },
+ {
+  "file": "exp/test/Bubble/20241104_215849_L24_C1_9811_b08.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241104_215849_L24_C1_9811"
+ },
+ {
+  "file": "exp/test/Bubble/20241104_231315_L24_C15_9264_b11.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241104_231315_L24_C15_9264"
+ },
+ {
+  "file": "exp/test/Bubble/20241104_234231_L27_PalletGHG1105013351_Cavity10_B0178KN_Fail3_Score(0.9221716)_1.0000_0.9590_b06.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241104_234231_L27_PalletGHG1105013351_Cavity10_B0178KN_Fail3_Score(0.9221716)_1.0000_0.9590"
+ },
+ {
+  "file": "exp/test/Bubble/20241105_041941_L24_PalletGHL1105091832_Cavity14_B0178HX_Fail7_Score(0.9844898)_0.9999_0.9980_b06.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241105_041941_L24_PalletGHL1105091832_Cavity14_B0178HX_Fail7_Score(0.9844898)_0.9999_0.9980"
+ },
+ {
+  "file": "exp/test/Bubble/20241105_041941_L24_PalletGHL1105091832_Cavity14_B0178HX_Fail7_Score(0.9844898)_0.9999_0.9980_b13.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241105_041941_L24_PalletGHL1105091832_Cavity14_B0178HX_Fail7_Score(0.9844898)_0.9999_0.9980"
+ },
+ {
+  "file": "exp/test/Bubble/20241105_154834_L27_C13_9116_0.7803_b09.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241105_154834_L27_C13_9116_0.7803"
+ },
+ {
+  "file": "exp/test/Bubble/20241105_161345_L24_C6_9991_b08.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241105_161345_L24_C6_9991"
+ },
+ {
+  "file": "exp/test/Bubble/20241105_185355_L24_PalletGHU1105235247_Cavity15_B0178J4_Fail7_Score(0.9878549)_1.0000_0.9910_b00.bmp",
+  "true": "Bubble",
+  "pred": "Fiber",
+  "src": "20241105_185355_L24_PalletGHU1105235247_Cavity15_B0178J4_Fail7_Score(0.9878549)_1.0000_0.9910"
+ },
+ {
+  "file": "exp/test/Bubble/20241105_185355_L24_PalletGHU1105235247_Cavity15_B0178J4_Fail7_Score(0.9878549)_1.0000_0.9910_b09.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241105_185355_L24_PalletGHU1105235247_Cavity15_B0178J4_Fail7_Score(0.9878549)_1.0000_0.9910"
+ },
+ {
+  "file": "exp/test/Bubble/20241105_235059_L27_C10_9386_0.7665_b01.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241105_235059_L27_C10_9386_0.7665"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_003903_L24_C5_9829_b02.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241106_003903_L24_C5_9829"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_003903_L24_C5_9829_b10.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241106_003903_L24_C5_9829"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_004151_L26_C6_9981_b01.bmp",
+  "true": "Bubble",
+  "pred": "Wet Package",
+  "src": "20241106_004151_L26_C6_9981"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_011458_L26_C13_9999_b15.bmp",
+  "true": "Bubble",
+  "pred": "Fiber",
+  "src": "20241106_011458_L26_C13_9999"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_011458_L26_C13_9999_b16.bmp",
+  "true": "Bubble",
+  "pred": "Fiber",
+  "src": "20241106_011458_L26_C13_9999"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_013126_L26_C7_9835_b00.bmp",
+  "true": "Bubble",
+  "pred": "Fiber",
+  "src": "20241106_013126_L26_C7_9835"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_071634_L24_C9_1_b36.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241106_071634_L24_C9_1"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_071634_L24_C9_1_b39.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241106_071634_L24_C9_1"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_071634_L24_C9_1_b67.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241106_071634_L24_C9_1"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_074328_L24_C3_9035_0.9999_0.7487_b06.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241106_074328_L24_C3_9035_0.9999_0.7487"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_074328_L24_C3_9035_0.9999_0.7487_b08.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241106_074328_L24_C3_9035_0.9999_0.7487"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_104850_L27_PalletGHF1106124015_Cavity2_B0178KT_Fail5_Score(0.9619061)_0.9999_0.9590_b07.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241106_104850_L27_PalletGHF1106124015_Cavity2_B0178KT_Fail5_Score(0.9619061)_0.9999_0.9590"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_132025_L24_C10_9999_b24.bmp",
+  "true": "Bubble",
+  "pred": "Fiber",
+  "src": "20241106_132025_L24_C10_9999"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_150032_L24_C9_9993_b21.bmp",
+  "true": "Bubble",
+  "pred": "Wet Package",
+  "src": "20241106_150032_L24_C9_9993"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_151557_L24_C13_9958_0.9997_0.6834_b02.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241106_151557_L24_C13_9958_0.9997_0.6834"
+ },
+ {
+  "file": "exp/test/Bubble/20241106_163801_L26_C14_9621_b09.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241106_163801_L26_C14_9621"
+ },
+ {
+  "file": "exp/test/Bubble/20241107_120258_L24_C5_9772_0.9998_b16.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241107_120258_L24_C5_9772_0.9998"
+ },
+ {
+  "file": "exp/test/Bubble/20241107_161214_L27_C11_9962_b04.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241107_161214_L27_C11_9962"
+ },
+ {
+  "file": "exp/test/Bubble/20241107_162006_L24_C9_9749_b33.bmp",
+  "true": "Bubble",
+  "pred": "Wet Package",
+  "src": "20241107_162006_L24_C9_9749"
+ },
+ {
+  "file": "exp/test/Bubble/20241107_180500_L26_C3_9986_b06.bmp",
+  "true": "Bubble",
+  "pred": "Wet Package",
+  "src": "20241107_180500_L26_C3_9986"
+ },
+ {
+  "file": "exp/test/Bubble/20241108_012054_L26_C5_9722_b03.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241108_012054_L26_C5_9722"
+ },
+ {
+  "file": "exp/test/Bubble/20241108_021953_L24_C5_9887_0.9901_0.5717_b02.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241108_021953_L24_C5_9887_0.9901_0.5717"
+ },
+ {
+  "file": "exp/test/Bubble/20241108_083405_L24_C5_9866_b00.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241108_083405_L24_C5_9866"
+ },
+ {
+  "file": "exp/test/Bubble/20241108_083959_L24_PalletGHF1108133908_Cavity7_B0178JH_Fail3_Score(0.9225475)_0.9999_0.9942_b27.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241108_083959_L24_PalletGHF1108133908_Cavity7_B0178JH_Fail3_Score(0.9225475)_0.9999_0.9942"
+ },
+ {
+  "file": "exp/test/Bubble/20241108_111939_L24_PalletGHB1108161849_Cavity11_B0178JH_Fail3_Score(0.9275034)_0.9985_0.9548_b11.bmp",
+  "true": "Bubble",
+  "pred": "Fiber",
+  "src": "20241108_111939_L24_PalletGHB1108161849_Cavity11_B0178JH_Fail3_Score(0.9275034)_0.9985_0.9548"
+ },
+ {
+  "file": "exp/test/Bubble/20241108_111939_L24_PalletGHB1108161849_Cavity11_B0178JH_Fail3_Score(0.9275034)_0.9985_0.9548_b13.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241108_111939_L24_PalletGHB1108161849_Cavity11_B0178JH_Fail3_Score(0.9275034)_0.9985_0.9548"
+ },
+ {
+  "file": "exp/test/Bubble/20241108_111939_L24_PalletGHB1108161849_Cavity11_B0178JH_Fail3_Score(0.9275034)_0.9985_0.9548_b24.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241108_111939_L24_PalletGHB1108161849_Cavity11_B0178JH_Fail3_Score(0.9275034)_0.9985_0.9548"
+ },
+ {
+  "file": "exp/test/Bubble/20241108_163600_L24_C7_9082_b28.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241108_163600_L24_C7_9082"
+ },
+ {
+  "file": "exp/test/Bubble/20241108_163600_L24_C7_9082_b36.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241108_163600_L24_C7_9082"
+ },
+ {
+  "file": "exp/test/Bubble/20241108_163600_L24_C7_9082_b38.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241108_163600_L24_C7_9082"
+ },
+ {
+  "file": "exp/test/Bubble/20241108_163600_L24_C7_9082_b52.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241108_163600_L24_C7_9082"
+ },
+ {
+  "file": "exp/test/Bubble/20241108_211053_L27_C3_9651_0.2784_b16.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241108_211053_L27_C3_9651_0.2784"
+ },
+ {
+  "file": "exp/test/Bubble/20241109_004021_L24_C13_9744_b03.bmp",
+  "true": "Bubble",
+  "pred": "Wet Package",
+  "src": "20241109_004021_L24_C13_9744"
+ },
+ {
+  "file": "exp/test/Bubble/20241109_061414_L25_C11_9559_b14.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241109_061414_L25_C11_9559"
+ },
+ {
+  "file": "exp/test/Bubble/20241109_084324_L24_C5_9898_0.9834_0.6612_b17.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241109_084324_L24_C5_9898_0.9834_0.6612"
+ },
+ {
+  "file": "exp/test/Bubble/20241111_204640_L25_C3_9836_b06.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241111_204640_L25_C3_9836"
+ },
+ {
+  "file": "exp/test/Bubble/20241111_204640_L25_C3_9836_b07.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241111_204640_L25_C3_9836"
+ },
+ {
+  "file": "exp/test/Bubble/20241111_205842_L25_C3_9317_b02.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20241111_205842_L25_C3_9317"
+ },
+ {
+  "file": "exp/test/Bubble/20260814_093142_L31_PalletGHU0814140805_Cavity2_B01BGV7_Fail7_Score(0.9952422)_0.9336_b00.bmp",
+  "true": "Bubble",
+  "pred": "Fiber",
+  "src": "20260814_093142_L31_PalletGHU0814140805_Cavity2_B01BGV7_Fail7_Score(0.9952422)_0.9336"
+ },
+ {
+  "file": "exp/test/Bubble/20260820_023328_L31_PalletGHQ0820070909_Cavity12_B01BK81_Fail7_Score(0.9987876)_b02.bmp",
+  "true": "Bubble",
+  "pred": "Foreign Matter",
+  "src": "20260820_023328_L31_PalletGHQ0820070909_Cavity12_B01BK81_Fail7_Score(0.9987876)"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241101_183427_L27_C9_9426_0.5252_b03.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "Fiber",
+  "src": "20241101_183427_L27_C9_9426_0.5252"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241102_015234_L24_PalletGHB1102055112_Cavity2_B01778N_Fail6_Score(0.9761967)_0.9999_0.9967_b04.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "Foreign Matter",
+  "src": "20241102_015234_L24_PalletGHB1102055112_Cavity2_B01778N_Fail6_Score(0.9761967)_0.9999_0.9967"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241104_235947_L24_PalletGHR1105045838_Cavity1_B0178HV_Fail3_Score(0.9186684)_0.9972_0.9648_b07.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "Foreign Matter",
+  "src": "20241104_235947_L24_PalletGHR1105045838_Cavity1_B0178HV_Fail3_Score(0.9186684)_0.9972_0.9648"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241106_124828_L24_C5_9999_b15.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "HEMA Fragment",
+  "src": "20241106_124828_L24_C5_9999"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241106_132025_L24_C10_9999_b13.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "Bubble",
+  "src": "20241106_132025_L24_C10_9999"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241107_110545_L24_C8_9998_1.0000_b03.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "Foreign Matter",
+  "src": "20241107_110545_L24_C8_9998_1.0000"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241109_121757_L24_C13_9986_0.9907_0.4813_b03.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "Foreign Matter",
+  "src": "20241109_121757_L24_C13_9986_0.9907_0.4813"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241109_165254_L24_C8_9169_0.9993_0.3759_b00.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "Bubble",
+  "src": "20241109_165254_L24_C8_9169_0.9993_0.3759"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241110_093715_L24_PalletGHE1110143641_Cavity8_B0178JK_Fail7_Score(0.9840244)_1.0000_0.9782_b00.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "Foreign Matter",
+  "src": "20241110_093715_L24_PalletGHE1110143641_Cavity8_B0178JK_Fail7_Score(0.9840244)_1.0000_0.9782"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241112_114228_L24_C11_9999_0.9948_b02.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "Foreign Matter",
+  "src": "20241112_114228_L24_C11_9999_0.9948"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241112_135215_L25_C5_9254_b00.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "Fiber",
+  "src": "20241112_135215_L25_C5_9254"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241114_025309_L27_PalletGHI1114070951_Cavity6_B01796T_Fail7_Score(0.9997685)_1.0000_1.0000_b01.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "HEMA Fragment",
+  "src": "20241114_025309_L27_PalletGHI1114070951_Cavity6_B01796T_Fail7_Score(0.9997685)_1.0000_1.0000"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241115_061555_L24_PalletGHC1115111452_Cavity15_B01795M_Fail7_Score(0.9963451)_1.0000_0.9604_b00.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "Fiber",
+  "src": "20241115_061555_L24_PalletGHC1115111452_Cavity15_B01795M_Fail7_Score(0.9963451)_1.0000_0.9604"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241118_200759_L24_C11_9981_1.0000_b00.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "HEMA Fragment",
+  "src": "20241118_200759_L24_C11_9981_1.0000"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20241119_180420_L24_C15_9036_0.9985_b00.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "Fiber",
+  "src": "20241119_180420_L24_C15_9036_0.9985"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20260806_153211_L27_PalletGHK0806185735_Cavity3_B01BGMT_Fail7_Score(0.9998726)_0.9999_0.7055_b00.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "Wet Package",
+  "src": "20260806_153211_L27_PalletGHK0806185735_Cavity3_B01BGMT_Fail7_Score(0.9998726)_0.9999_0.7055"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20260808_110353_L27_PalletGHJ0808142936_Cavity5_B01BH56_Fail5_Score(0.9622378)_b00.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "Foreign Matter",
+  "src": "20260808_110353_L27_PalletGHJ0808142936_Cavity5_B01BH56_Fail5_Score(0.9622378)"
+ },
+ {
+  "file": "exp/test/Extraneous Polymer/20260907_151529_L26_PalletGHF0907193631_Cavity2_B01BMPG_Fail7_Score(0.999732)_b00.bmp",
+  "true": "Extraneous Polymer",
+  "pred": "HEMA Fragment",
+  "src": "20260907_151529_L26_PalletGHF0907193631_Cavity2_B01BMPG_Fail7_Score(0.999732)"
+ },
+ {
+  "file": "exp/test/Fiber/20241101_232312_L24_C9_9558_b08.bmp",
+  "true": "Fiber",
+  "pred": "Extraneous Polymer",
+  "src": "20241101_232312_L24_C9_9558"
+ },
+ {
+  "file": "exp/test/Fiber/20241101_232312_L24_C9_9558_b15.bmp",
+  "true": "Fiber",
+  "pred": "Wet Package",
+  "src": "20241101_232312_L24_C9_9558"
+ },
+ {
+  "file": "exp/test/Fiber/20241102_014746_L24_PalletGHB1102054618_Cavity15_B01778N_Fail7_Score(0.9930394)_0.9997_0.9779_b02.bmp",
+  "true": "Fiber",
+  "pred": "HEMA Fragment",
+  "src": "20241102_014746_L24_PalletGHB1102054618_Cavity15_B01778N_Fail7_Score(0.9930394)_0.9997_0.9779"
+ },
+ {
+  "file": "exp/test/Fiber/20241103_050302_L24_C15_9999_0.9687_b07.bmp",
+  "true": "Fiber",
+  "pred": "Foreign Matter",
+  "src": "20241103_050302_L24_C15_9999_0.9687"
+ },
+ {
+  "file": "exp/test/Fiber/20241103_050302_L24_C15_9999_0.9687_b08.bmp",
+  "true": "Fiber",
+  "pred": "Extraneous Polymer",
+  "src": "20241103_050302_L24_C15_9999_0.9687"
+ },
+ {
+  "file": "exp/test/Fiber/20241104_105438_L24_C15_9265_0.9997_0.4669_b06.bmp",
+  "true": "Fiber",
+  "pred": "Foreign Matter",
+  "src": "20241104_105438_L24_C15_9265_0.9997_0.4669"
+ },
+ {
+  "file": "exp/test/Fiber/20241104_182258_L24_C3_9284_b14.bmp",
+  "true": "Fiber",
+  "pred": "Bubble",
+  "src": "20241104_182258_L24_C3_9284"
+ },
+ {
+  "file": "exp/test/Fiber/20241104_210946_L26_PalletGHP1105022154_Cavity1_B0178LL_Fail3_Score(0.9332645)_b00.bmp",
+  "true": "Fiber",
+  "pred": "Extraneous Polymer",
+  "src": "20241104_210946_L26_PalletGHP1105022154_Cavity1_B0178LL_Fail3_Score(0.9332645)"
+ },
+ {
+  "file": "exp/test/Fiber/20241105_150803_L24_PalletGHO1105200702_Cavity4_B0178J4_Fail2_Score(0.9028395)_0.9999_0.9978_b13.bmp",
+  "true": "Fiber",
+  "pred": "Extraneous Polymer",
+  "src": "20241105_150803_L24_PalletGHO1105200702_Cavity4_B0178J4_Fail2_Score(0.9028395)_0.9999_0.9978"
+ },
+ {
+  "file": "exp/test/Fiber/20241105_213510_L24_C7_9976_b18.bmp",
+  "true": "Fiber",
+  "pred": "Foreign Matter",
+  "src": "20241105_213510_L24_C7_9976"
+ },
+ {
+  "file": "exp/test/Fiber/20241106_011458_L26_C13_9999_b17.bmp",
+  "true": "Fiber",
+  "pred": "Foreign Matter",
+  "src": "20241106_011458_L26_C13_9999"
+ },
+ {
+  "file": "exp/test/Fiber/20241106_022228_L24_C13_9630_b06.bmp",
+  "true": "Fiber",
+  "pred": "Foreign Matter",
+  "src": "20241106_022228_L24_C13_9630"
+ },
+ {
+  "file": "exp/test/Fiber/20241106_074328_L24_C3_9035_0.9999_0.7487_b14.bmp",
+  "true": "Fiber",
+  "pred": "Bubble",
+  "src": "20241106_074328_L24_C3_9035_0.9999_0.7487"
+ },
+ {
+  "file": "exp/test/Fiber/20241106_132025_L24_C10_9999_b14.bmp",
+  "true": "Fiber",
+  "pred": "Bubble",
+  "src": "20241106_132025_L24_C10_9999"
+ },
+ {
+  "file": "exp/test/Fiber/20241107_120258_L24_C5_9772_0.9998_b02.bmp",
+  "true": "Fiber",
+  "pred": "Extraneous Polymer",
+  "src": "20241107_120258_L24_C5_9772_0.9998"
+ },
+ {
+  "file": "exp/test/Fiber/20241108_002647_L24_C11_9677_b01.bmp",
+  "true": "Fiber",
+  "pred": "Foreign Matter",
+  "src": "20241108_002647_L24_C11_9677"
+ },
+ {
+  "file": "exp/test/Fiber/20241109_080332_L24_C15_9969_0.9799_0.6706_b04.bmp",
+  "true": "Fiber",
+  "pred": "Bubble",
+  "src": "20241109_080332_L24_C15_9969_0.9799_0.6706"
+ },
+ {
+  "file": "exp/test/Fiber/20241109_093929_L24_C8_9048_0.9995_0.6919_b03.bmp",
+  "true": "Fiber",
+  "pred": "Wet Package",
+  "src": "20241109_093929_L24_C8_9048_0.9995_0.6919"
+ },
+ {
+  "file": "exp/test/Fiber/20241109_101718_L24_C11_9241_1.0000_0.5640_b00.bmp",
+  "true": "Fiber",
+  "pred": "Bubble",
+  "src": "20241109_101718_L24_C11_9241_1.0000_0.5640"
+ },
+ {
+  "file": "exp/test/Fiber/20241109_124243_L24_C12_9911_b09.bmp",
+  "true": "Fiber",
+  "pred": "Extraneous Polymer",
+  "src": "20241109_124243_L24_C12_9911"
+ },
+ {
+  "file": "exp/test/Fiber/20241112_154940_L25_C8_9950_b00.bmp",
+  "true": "Fiber",
+  "pred": "Extraneous Polymer",
+  "src": "20241112_154940_L25_C8_9950"
+ },
+ {
+  "file": "exp/test/Fiber/20241112_171134_L25_C5_9714_b00.bmp",
+  "true": "Fiber",
+  "pred": "Extraneous Polymer",
+  "src": "20241112_171134_L25_C5_9714"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241102_014746_L24_PalletGHB1102054618_Cavity15_B01778N_Fail7_Score(0.9930394)_0.9997_0.9779_b01.bmp",
+  "true": "Foreign Matter",
+  "pred": "Extraneous Polymer",
+  "src": "20241102_014746_L24_PalletGHB1102054618_Cavity15_B01778N_Fail7_Score(0.9930394)_0.9997_0.9779"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241102_034931_L24_C14_9062_0.9995_0.7391_b07.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241102_034931_L24_C14_9062_0.9995_0.7391"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241102_050553_L24_C1_9798_b15.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241102_050553_L24_C1_9798"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241102_201209_L24_C3_9995_b06.bmp",
+  "true": "Foreign Matter",
+  "pred": "Wet Package",
+  "src": "20241102_201209_L24_C3_9995"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241102_223933_L24_PalletGHM1103023816_Cavity15_B01778T_Fail7_Score(0.9867722)_0.9979_0.9914_b00.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241102_223933_L24_PalletGHM1103023816_Cavity15_B01778T_Fail7_Score(0.9867722)_0.9979_0.9914"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241103_050302_L24_C15_9999_0.9687_b01.bmp",
+  "true": "Foreign Matter",
+  "pred": "Fiber",
+  "src": "20241103_050302_L24_C15_9999_0.9687"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241103_061455_L24_C3_9940_1.0000_0.8696_b02.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241103_061455_L24_C3_9940_1.0000_0.8696"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241103_061455_L24_C3_9940_1.0000_0.8696_b04.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241103_061455_L24_C3_9940_1.0000_0.8696"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241103_072102_L26_C11_9979_b01.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241103_072102_L26_C11_9979"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241103_081847_L26_C3_9079_b07.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241103_081847_L26_C3_9079"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241103_140229_L26_C2_9999_b00.bmp",
+  "true": "Foreign Matter",
+  "pred": "Fiber",
+  "src": "20241103_140229_L26_C2_9999"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241104_000808_L27_C15_9021_b11.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241104_000808_L27_C15_9021"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241104_035931_L24_PalletGHU1104085821_Cavity15_B01778W_Fail6_Score(0.9791)_0.9996_0.9752_b20.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241104_035931_L24_PalletGHU1104085821_Cavity15_B01778W_Fail6_Score(0.9791)_0.9996_0.9752"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241104_041829_L27_C8_9591_b05.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241104_041829_L27_C8_9591"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241104_055733_L27_C12_9071_0.6467_b13.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241104_055733_L27_C12_9071_0.6467"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241104_072437_L24_PalletGHB1104122313_Cavity3_B01778W_Fail4_Score(0.9408574)_1.0000_0.9602_b08.bmp",
+  "true": "Foreign Matter",
+  "pred": "Fiber",
+  "src": "20241104_072437_L24_PalletGHB1104122313_Cavity3_B01778W_Fail4_Score(0.9408574)_1.0000_0.9602"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241104_122612_L24_PalletGHJ1104172501_Cavity14_B0178HR_Fail5_Score(0.9611438)_0.9999_0.9980_b03.bmp",
+  "true": "Foreign Matter",
+  "pred": "Wet Package",
+  "src": "20241104_122612_L24_PalletGHJ1104172501_Cavity14_B0178HR_Fail5_Score(0.9611438)_0.9999_0.9980"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241104_122612_L24_PalletGHJ1104172501_Cavity14_B0178HR_Fail5_Score(0.9611438)_0.9999_0.9980_b06.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241104_122612_L24_PalletGHJ1104172501_Cavity14_B0178HR_Fail5_Score(0.9611438)_0.9999_0.9980"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241104_122612_L24_PalletGHJ1104172501_Cavity14_B0178HR_Fail5_Score(0.9611438)_0.9999_0.9980_b09.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241104_122612_L24_PalletGHJ1104172501_Cavity14_B0178HR_Fail5_Score(0.9611438)_0.9999_0.9980"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241104_142724_L27_C5_9283_0.7544_b20.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241104_142724_L27_C5_9283_0.7544"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241104_193339_L27_C4_9871_0.9927_b02.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241104_193339_L27_C4_9871_0.9927"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241104_193339_L27_C4_9871_0.9927_b03.bmp",
+  "true": "Foreign Matter",
+  "pred": "Fiber",
+  "src": "20241104_193339_L27_C4_9871_0.9927"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241104_215849_L24_C1_9811_b14.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241104_215849_L24_C1_9811"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241104_235947_L24_PalletGHR1105045838_Cavity1_B0178HV_Fail3_Score(0.9186684)_0.9972_0.9648_b03.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241104_235947_L24_PalletGHR1105045838_Cavity1_B0178HV_Fail3_Score(0.9186684)_0.9972_0.9648"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241105_135748_L24_C6_9593_b10.bmp",
+  "true": "Foreign Matter",
+  "pred": "Fiber",
+  "src": "20241105_135748_L24_C6_9593"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241105_185355_L24_PalletGHU1105235247_Cavity15_B0178J4_Fail7_Score(0.9878549)_1.0000_0.9910_b11.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241105_185355_L24_PalletGHU1105235247_Cavity15_B0178J4_Fail7_Score(0.9878549)_1.0000_0.9910"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241105_185355_L24_PalletGHU1105235247_Cavity15_B0178J4_Fail7_Score(0.9878549)_1.0000_0.9910_b13.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241105_185355_L24_PalletGHU1105235247_Cavity15_B0178J4_Fail7_Score(0.9878549)_1.0000_0.9910"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241105_185355_L24_PalletGHU1105235247_Cavity15_B0178J4_Fail7_Score(0.9878549)_1.0000_0.9910_b14.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241105_185355_L24_PalletGHU1105235247_Cavity15_B0178J4_Fail7_Score(0.9878549)_1.0000_0.9910"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241105_213510_L24_C7_9976_b01.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241105_213510_L24_C7_9976"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241105_213510_L24_C7_9976_b05.bmp",
+  "true": "Foreign Matter",
+  "pred": "Wet Package",
+  "src": "20241105_213510_L24_C7_9976"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241105_213510_L24_C7_9976_b08.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241105_213510_L24_C7_9976"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241105_213510_L24_C7_9976_b17.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241105_213510_L24_C7_9976"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241106_005851_L26_C10_9999_b05.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241106_005851_L26_C10_9999"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241106_011458_L26_C13_9999_b12.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241106_011458_L26_C13_9999"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241106_022228_L24_C13_9630_b00.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241106_022228_L24_C13_9630"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241106_022228_L24_C13_9630_b08.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241106_022228_L24_C13_9630"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241106_082739_L24_C3_9573_0.8266_b02.bmp",
+  "true": "Foreign Matter",
+  "pred": "Fiber",
+  "src": "20241106_082739_L24_C3_9573_0.8266"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241106_082851_L24_C11_9875_0.9992_0.3580_b00.bmp",
+  "true": "Foreign Matter",
+  "pred": "Extraneous Polymer",
+  "src": "20241106_082851_L24_C11_9875_0.9992_0.3580"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241106_082851_L24_C11_9875_0.9992_0.3580_b01.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241106_082851_L24_C11_9875_0.9992_0.3580"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241106_104850_L27_PalletGHF1106124015_Cavity2_B0178KT_Fail5_Score(0.9619061)_0.9999_0.9590_b01.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241106_104850_L27_PalletGHF1106124015_Cavity2_B0178KT_Fail5_Score(0.9619061)_0.9999_0.9590"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241106_151557_L24_C13_9958_0.9997_0.6834_b08.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241106_151557_L24_C13_9958_0.9997_0.6834"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241106_181033_L24_C8_9984_b08.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241106_181033_L24_C8_9984"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241106_194048_L24_PalletGHC1107003951_Cavity6_B0178HW_Fail7_Score(0.9992056)_0.9996_0.9582_b00.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241106_194048_L24_PalletGHC1107003951_Cavity6_B0178HW_Fail7_Score(0.9992056)_0.9996_0.9582"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241106_194048_L24_PalletGHC1107003951_Cavity6_B0178HW_Fail7_Score(0.9992056)_0.9996_0.9582_b08.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241106_194048_L24_PalletGHC1107003951_Cavity6_B0178HW_Fail7_Score(0.9992056)_0.9996_0.9582"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241107_162006_L24_C9_9749_b32.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241107_162006_L24_C9_9749"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241107_222435_L26_PalletGHO1108033659_Cavity2_B0178LM_Fail5_Score(0.9559855)_0.8839_b05.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241107_222435_L26_PalletGHO1108033659_Cavity2_B0178LM_Fail5_Score(0.9559855)_0.8839"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241108_045723_L24_PalletGHP1108095631_Cavity2_B0178JH_Fail7_Score(0.9996234)_0.9996_0.9905_b07.bmp",
+  "true": "Foreign Matter",
+  "pred": "Fiber",
+  "src": "20241108_045723_L24_PalletGHP1108095631_Cavity2_B0178JH_Fail7_Score(0.9996234)_0.9996_0.9905"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241108_083405_L24_C5_9866_b06.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241108_083405_L24_C5_9866"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241108_083405_L24_C5_9866_b07.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241108_083405_L24_C5_9866"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241108_083405_L24_C5_9866_b14.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241108_083405_L24_C5_9866"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241108_083405_L24_C5_9866_b17.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241108_083405_L24_C5_9866"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241108_111939_L24_PalletGHB1108161849_Cavity11_B0178JH_Fail3_Score(0.9275034)_0.9985_0.9548_b02.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241108_111939_L24_PalletGHB1108161849_Cavity11_B0178JH_Fail3_Score(0.9275034)_0.9985_0.9548"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241108_163600_L24_C7_9082_b07.bmp",
+  "true": "Foreign Matter",
+  "pred": "Fiber",
+  "src": "20241108_163600_L24_C7_9082"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241108_163600_L24_C7_9082_b26.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241108_163600_L24_C7_9082"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241108_163600_L24_C7_9082_b32.bmp",
+  "true": "Foreign Matter",
+  "pred": "Fiber",
+  "src": "20241108_163600_L24_C7_9082"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241108_201910_L24_C15_9865_b08.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241108_201910_L24_C15_9865"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241109_093805_L24_C15_9362_b03.bmp",
+  "true": "Foreign Matter",
+  "pred": "Wet Package",
+  "src": "20241109_093805_L24_C15_9362"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241109_111340_L24_C15_9865_b04.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241109_111340_L24_C15_9865"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241109_131523_L24_C15_9878_b01.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241109_131523_L24_C15_9878"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241109_131523_L24_C15_9878_b02.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241109_131523_L24_C15_9878"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241109_131523_L24_C15_9878_b11.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241109_131523_L24_C15_9878"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241109_131523_L24_C15_9878_b12.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241109_131523_L24_C15_9878"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241112_114228_L24_C11_9999_0.9948_b01.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20241112_114228_L24_C11_9999_0.9948"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20241120_004057_L27_C12_9817_b00.bmp",
+  "true": "Foreign Matter",
+  "pred": "Extraneous Polymer",
+  "src": "20241120_004057_L27_C12_9817"
+ },
+ {
+  "file": "exp/test/Foreign Matter/20260803_101254_L24_PalletGHA0803142833_Cavity4_D009G6C_Fail7_Score(0.9929036)_b00.bmp",
+  "true": "Foreign Matter",
+  "pred": "Bubble",
+  "src": "20260803_101254_L24_PalletGHA0803142833_Cavity4_D009G6C_Fail7_Score(0.9929036)"
+ },
+ {
+  "file": "exp/test/HEMA Fragment/20241104_060534_L24_C4_9340_b13.bmp",
+  "true": "HEMA Fragment",
+  "pred": "Extraneous Polymer",
+  "src": "20241104_060534_L24_C4_9340"
+ },
+ {
+  "file": "exp/test/HEMA Fragment/20241105_135748_L24_C6_9593_b00.bmp",
+  "true": "HEMA Fragment",
+  "pred": "Extraneous Polymer",
+  "src": "20241105_135748_L24_C6_9593"
+ },
+ {
+  "file": "exp/test/HEMA Fragment/20241108_134502_L24_C11_9999_b10.bmp",
+  "true": "HEMA Fragment",
+  "pred": "Extraneous Polymer",
+  "src": "20241108_134502_L24_C11_9999"
+ },
+ {
+  "file": "exp/test/HEMA Fragment/20260820_191329_L24_PalletGHQ0820232946_Cavity7_B01BHWT_Fail7_Score(0.9999622)_b00.bmp",
+  "true": "HEMA Fragment",
+  "pred": "Bubble",
+  "src": "20260820_191329_L24_PalletGHQ0820232946_Cavity7_B01BHWT_Fail7_Score(0.9999622)"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_001617_L26_C1_9735_b23.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241102_001617_L26_C1_9735"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_001617_L26_C1_9735_b24.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241102_001617_L26_C1_9735"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_001617_L26_C1_9735_b25.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241102_001617_L26_C1_9735"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_001617_L26_C1_9735_b26.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241102_001617_L26_C1_9735"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_001617_L26_C1_9735_b27.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241102_001617_L26_C1_9735"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_001617_L26_C1_9735_b28.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241102_001617_L26_C1_9735"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_001617_L26_C1_9735_b30.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241102_001617_L26_C1_9735"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_001617_L26_C1_9735_b37.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241102_001617_L26_C1_9735"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_004947_L26_C1_9010_b05.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241102_004947_L26_C1_9010"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_055824_L26_C15_9998_b02.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241102_055824_L26_C15_9998"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_093419_L26_PalletGHU1102134613_Cavity8_B0177KZ_Fail7_Score(0.9995976)_b00.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241102_093419_L26_PalletGHU1102134613_Cavity8_B0177KZ_Fail7_Score(0.9995976)"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_093419_L26_PalletGHU1102134613_Cavity8_B0177KZ_Fail7_Score(0.9995976)_b11.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241102_093419_L26_PalletGHU1102134613_Cavity8_B0177KZ_Fail7_Score(0.9995976)"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_093419_L26_PalletGHU1102134613_Cavity8_B0177KZ_Fail7_Score(0.9995976)_b12.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241102_093419_L26_PalletGHU1102134613_Cavity8_B0177KZ_Fail7_Score(0.9995976)"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_093419_L26_PalletGHU1102134613_Cavity8_B0177KZ_Fail7_Score(0.9995976)_b13.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241102_093419_L26_PalletGHU1102134613_Cavity8_B0177KZ_Fail7_Score(0.9995976)"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_161759_L26_C2_9316_b04.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241102_161759_L26_C2_9316"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_192117_L26_C12_9998_b03.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241102_192117_L26_C12_9998"
+ },
+ {
+  "file": "exp/test/Wet Package/20241102_192117_L26_C12_9998_b08.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241102_192117_L26_C12_9998"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_034709_L26_C12_9384_b03.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241103_034709_L26_C12_9384"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_034709_L26_C12_9384_b05.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241103_034709_L26_C12_9384"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_034856_L26_C9_9978_b00.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241103_034856_L26_C9_9978"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_063807_L26_C13_9731_b00.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241103_063807_L26_C13_9731"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_063807_L26_C13_9731_b01.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241103_063807_L26_C13_9731"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_063807_L26_C13_9731_b05.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241103_063807_L26_C13_9731"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_072102_L26_C11_9979_b09.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241103_072102_L26_C11_9979"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_072102_L26_C11_9979_b10.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241103_072102_L26_C11_9979"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_073210_L26_PalletGHL1103124407_Cavity10_B0178LJ_Fail3_Score(0.9319589)_b00.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241103_073210_L26_PalletGHL1103124407_Cavity10_B0178LJ_Fail3_Score(0.9319589)"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_073210_L26_PalletGHL1103124407_Cavity10_B0178LJ_Fail3_Score(0.9319589)_b01.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241103_073210_L26_PalletGHL1103124407_Cavity10_B0178LJ_Fail3_Score(0.9319589)"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_080643_L26_C7_9864_b12.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241103_080643_L26_C7_9864"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_080643_L26_C7_9864_b15.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241103_080643_L26_C7_9864"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_080643_L26_C7_9864_b21.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241103_080643_L26_C7_9864"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_080643_L26_C7_9864_b22.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241103_080643_L26_C7_9864"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_125550_L26_C15_9154_b05.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241103_125550_L26_C15_9154"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_125550_L26_C15_9154_b12.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241103_125550_L26_C15_9154"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_125550_L26_C15_9154_b14.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241103_125550_L26_C15_9154"
+ },
+ {
+  "file": "exp/test/Wet Package/20241103_140229_L26_C2_9999_b17.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241103_140229_L26_C2_9999"
+ },
+ {
+  "file": "exp/test/Wet Package/20241104_005949_L26_C2_9769_b08.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241104_005949_L26_C2_9769"
+ },
+ {
+  "file": "exp/test/Wet Package/20241104_005949_L26_C2_9769_b09.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241104_005949_L26_C2_9769"
+ },
+ {
+  "file": "exp/test/Wet Package/20241104_005949_L26_C2_9769_b11.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241104_005949_L26_C2_9769"
+ },
+ {
+  "file": "exp/test/Wet Package/20241104_005949_L26_C2_9769_b12.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241104_005949_L26_C2_9769"
+ },
+ {
+  "file": "exp/test/Wet Package/20241104_065354_L26_C11_9968_b11.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241104_065354_L26_C11_9968"
+ },
+ {
+  "file": "exp/test/Wet Package/20241104_065354_L26_C11_9968_b18.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241104_065354_L26_C11_9968"
+ },
+ {
+  "file": "exp/test/Wet Package/20241104_155329_L26_C1_9919_b08.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241104_155329_L26_C1_9919"
+ },
+ {
+  "file": "exp/test/Wet Package/20241105_083143_L26_C9_9927_b03.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241105_083143_L26_C9_9927"
+ },
+ {
+  "file": "exp/test/Wet Package/20241106_063610_L26_C8_9777_b01.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241106_063610_L26_C8_9777"
+ },
+ {
+  "file": "exp/test/Wet Package/20241106_063610_L26_C8_9777_b02.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241106_063610_L26_C8_9777"
+ },
+ {
+  "file": "exp/test/Wet Package/20241106_063610_L26_C8_9777_b03.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241106_063610_L26_C8_9777"
+ },
+ {
+  "file": "exp/test/Wet Package/20241106_063610_L26_C8_9777_b04.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241106_063610_L26_C8_9777"
+ },
+ {
+  "file": "exp/test/Wet Package/20241106_063610_L26_C8_9777_b05.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241106_063610_L26_C8_9777"
+ },
+ {
+  "file": "exp/test/Wet Package/20241106_124828_L24_C5_9999_b00.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241106_124828_L24_C5_9999"
+ },
+ {
+  "file": "exp/test/Wet Package/20241106_124828_L24_C5_9999_b01.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241106_124828_L24_C5_9999"
+ },
+ {
+  "file": "exp/test/Wet Package/20241106_124828_L24_C5_9999_b03.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241106_124828_L24_C5_9999"
+ },
+ {
+  "file": "exp/test/Wet Package/20241106_124828_L24_C5_9999_b04.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241106_124828_L24_C5_9999"
+ },
+ {
+  "file": "exp/test/Wet Package/20241106_124828_L24_C5_9999_b23.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241106_124828_L24_C5_9999"
+ },
+ {
+  "file": "exp/test/Wet Package/20241107_023803_L24_C12_9679_b01.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241107_023803_L24_C12_9679"
+ },
+ {
+  "file": "exp/test/Wet Package/20241107_023803_L24_C12_9679_b03.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241107_023803_L24_C12_9679"
+ },
+ {
+  "file": "exp/test/Wet Package/20241107_023803_L24_C12_9679_b08.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241107_023803_L24_C12_9679"
+ },
+ {
+  "file": "exp/test/Wet Package/20241107_045607_L26_C13_9120_b02.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241107_045607_L26_C13_9120"
+ },
+ {
+  "file": "exp/test/Wet Package/20241107_203759_L26_C11_9768_b04.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241107_203759_L26_C11_9768"
+ },
+ {
+  "file": "exp/test/Wet Package/20241108_021953_L24_C5_9887_0.9901_0.5717_b17.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241108_021953_L24_C5_9887_0.9901_0.5717"
+ },
+ {
+  "file": "exp/test/Wet Package/20241108_021953_L24_C5_9887_0.9901_0.5717_b18.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241108_021953_L24_C5_9887_0.9901_0.5717"
+ },
+ {
+  "file": "exp/test/Wet Package/20241108_021953_L24_C5_9887_0.9901_0.5717_b22.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241108_021953_L24_C5_9887_0.9901_0.5717"
+ },
+ {
+  "file": "exp/test/Wet Package/20241108_083959_L24_PalletGHF1108133908_Cavity7_B0178JH_Fail3_Score(0.9225475)_0.9999_0.9942_b09.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241108_083959_L24_PalletGHF1108133908_Cavity7_B0178JH_Fail3_Score(0.9225475)_0.9999_0.9942"
+ },
+ {
+  "file": "exp/test/Wet Package/20241108_083959_L24_PalletGHF1108133908_Cavity7_B0178JH_Fail3_Score(0.9225475)_0.9999_0.9942_b14.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241108_083959_L24_PalletGHF1108133908_Cavity7_B0178JH_Fail3_Score(0.9225475)_0.9999_0.9942"
+ },
+ {
+  "file": "exp/test/Wet Package/20241108_083959_L24_PalletGHF1108133908_Cavity7_B0178JH_Fail3_Score(0.9225475)_0.9999_0.9942_b15.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241108_083959_L24_PalletGHF1108133908_Cavity7_B0178JH_Fail3_Score(0.9225475)_0.9999_0.9942"
+ },
+ {
+  "file": "exp/test/Wet Package/20241108_153814_L24_C11_9821_0.9999_0.6638_b25.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241108_153814_L24_C11_9821_0.9999_0.6638"
+ },
+ {
+  "file": "exp/test/Wet Package/20241108_181257_L26_C7_9999_b09.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241108_181257_L26_C7_9999"
+ },
+ {
+  "file": "exp/test/Wet Package/20241108_181257_L26_C7_9999_b10.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241108_181257_L26_C7_9999"
+ },
+ {
+  "file": "exp/test/Wet Package/20241108_181257_L26_C7_9999_b11.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241108_181257_L26_C7_9999"
+ },
+ {
+  "file": "exp/test/Wet Package/20241108_181257_L26_C7_9999_b17.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241108_181257_L26_C7_9999"
+ },
+ {
+  "file": "exp/test/Wet Package/20241108_181257_L26_C7_9999_b28.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241108_181257_L26_C7_9999"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_030436_L24_C12_9872_b07.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_030436_L24_C12_9872"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_030436_L24_C12_9872_b08.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_030436_L24_C12_9872"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_030436_L24_C12_9872_b09.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_030436_L24_C12_9872"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_030436_L24_C12_9872_b10.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_030436_L24_C12_9872"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_030436_L24_C12_9872_b11.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_030436_L24_C12_9872"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_030436_L24_C12_9872_b21.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_030436_L24_C12_9872"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_030436_L24_C12_9872_b22.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_030436_L24_C12_9872"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_030436_L24_C12_9872_b23.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_030436_L24_C12_9872"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_030436_L24_C12_9872_b31.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_030436_L24_C12_9872"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b00.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b01.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b02.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b04.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b05.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b06.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b07.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b08.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b10.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b12.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b13.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b14.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b15.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b16.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b17.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b19.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b20.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b21.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b23.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b25.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b27.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b28.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b31.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b33.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b34.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b36.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b37.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b38.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b39.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b40.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b41.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b43.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b44.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b45.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b46.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b47.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b48.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b49.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b50.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b51.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b52.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b53.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b54.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b55.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b56.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b58.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b59.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b61.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b63.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b67.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b72.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b73.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b74.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b75.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b77.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b78.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b79.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b80.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b81.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b82.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b84.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b85.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b86.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b87.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b88.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b89.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b90.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b91.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C11_9352_b92.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C11_9352"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b02.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b03.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b05.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b06.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b09.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b17.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b18.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b19.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b21.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b22.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b23.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b25.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b27.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b28.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b30.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b31.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b32.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b33.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b34.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b35.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b37.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b38.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b39.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b40.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b41.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b42.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b43.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b44.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b46.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b47.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b48.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b49.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b50.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b51.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b52.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b53.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b56.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b57.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b58.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b59.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b60.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b62.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b63.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b64.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b65.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b66.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b67.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b68.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b70.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b72.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b73.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b74.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b76.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b77.bmp",
+  "true": "Wet Package",
+  "pred": "Foreign Matter",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061409_L25_C5_9955_b80.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061409_L25_C5_9955"
+ },
+ {
+  "file": "exp/test/Wet Package/20241109_061414_L25_C11_9559_b10.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241109_061414_L25_C11_9559"
+ },
+ {
+  "file": "exp/test/Wet Package/20241112_212736_L26_C14_9021_b00.bmp",
+  "true": "Wet Package",
+  "pred": "Fiber",
+  "src": "20241112_212736_L26_C14_9021"
+ },
+ {
+  "file": "exp/test/Wet Package/20241113_025847_L26_C8_9697_b01.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241113_025847_L26_C8_9697"
+ },
+ {
+  "file": "exp/test/Wet Package/20241113_025847_L26_C8_9697_b06.bmp",
+  "true": "Wet Package",
+  "pred": "Bubble",
+  "src": "20241113_025847_L26_C8_9697"
+ },
+ {
+  "file": "exp/test/Wet Package/20241114_001422_L25_PalletGHN1114030331_Cavity5_B017969_Fail6_Score(0.9744182)_b00.bmp",
+  "true": "Wet Package",
+  "pred": "Extraneous Polymer",
+  "src": "20241114_001422_L25_PalletGHN1114030331_Cavity5_B017969_Fail6_Score(0.9744182)"
+ }
+]
