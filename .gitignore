@@ -76,3 +76,15 @@ model_runs/
 
 # === Root Obsidian config (the vault at .obsidian-vault/ carries its own) ===
 /.obsidian/
+
+# === Superseded decisions: audit trail, kept and committed, never deleted ===
+# These stay tracked on purpose - they are the record of what was decided and why.
+# This line only stops the DEFAULT ripgrep walk returning them, so a keyword search
+# ranks a current document instead of a 91 KB archived handoff. git status stays
+# clean because tracked files are unaffected by gitignore. To read one anyway:
+# open it by path, use git grep, or rg --no-ignore. See AGENTS.md "Docs and the board".
+docs/archive/
+
+# === Local pre-edit backups (kept on disk for rollback, never committed) ===
+*.bak
+*.bak.*

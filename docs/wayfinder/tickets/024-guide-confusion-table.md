@@ -2,7 +2,7 @@
 title: "Ticket 024 - Guide confusion table: what can be mislabeled as what"
 date: 2026-10-22
 type: task
-status: done 2026-10-23
+status: done
 where: docs/wayfinder/tickets/024-guide-confusion-table.md
 ---
 

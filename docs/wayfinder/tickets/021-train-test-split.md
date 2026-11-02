@@ -2,7 +2,7 @@
 title: "Ticket 021 - Train/test split, 70/30"
 date: 2026-10-21
 type: task
-status: done 2026-10-23
+status: done
 where: docs/wayfinder/tickets/021-train-test-split.md
 ---
 

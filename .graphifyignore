@@ -1,0 +1,24 @@
+# Graphify exclusion list for this repository.
+#
+# gitignore syntax. Last match wins. This file is graphify's EXPLICIT pattern
+# set, which is why it is needed in addition to .gitignore:
+# detect._is_scan_ignored has a TRACKED-FILE EXEMPTION - .gitignore patterns
+# only exclude paths absent from `git ls-files`. docs/archive/ is tracked on
+# purpose (it is the audit trail), so .gitignore alone does not remove it from
+# the graph. This file does.
+#
+# docs/archive/ holds three documents marked status: superseded in their
+# frontmatter (2026-11-01). Two are large accumulated handoffs, 91,558 B and
+# 77,825 B. By sheer token volume they became the strongest match for 129 of
+# 231 mined standing instructions (55%), so retrieval kept returning stale
+# guidance instead of current decisions.
+#
+# Nothing here is deleted or moved. The files stay on disk, stay git-tracked,
+# stay readable by direct path, and can be reached with `git grep` or
+# `rg --no-ignore`. `tools/index_docs.py` also skips them by default and
+# `--include-status superseded` lists them again.
+#
+# Excluding them prunes ~126 of 3,374 graph nodes (~3.7%). The resulting
+# graph.json is smaller than the existing one, so the rebuild MUST pass
+# --force: graphify's #479 shrink guard silently refuses a smaller write.
+docs/archive/

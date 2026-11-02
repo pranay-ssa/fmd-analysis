@@ -1,3 +1,11 @@
+---
+title: Lens Presentation Defect Classifier inference package
+date: 2026-09-18
+type: reference
+status: active
+where: handover/model_package/README.md
+---
+
 # Lens Presentation Defect Classifier - Inference Package
 
 This package runs one image through the trained defect-classification model and

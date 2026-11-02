@@ -2,9 +2,15 @@
 title: Multi-label split strategy for the ResNet50 classifier, and how it differs from a YOLO split
 date: 2026-09-23
 type: method
-status: active
+status: superseded
 where: docs/multilabel_split_strategy_20260923.md
 ---
+
+> **Superseded by `docs/decisions/2026-10-26-split-considerations.md`.** The frozen split rules
+> replace this recommendation: two-way 70/30 and 80/20, no validation split, over the Draft 2
+> plus Clear label space (6,659 split rows). The method itself (iterative stratification,
+> content-md5 groups, seed 42, a saved split file) was adopted in
+> `docs/decisions/2026-10-21-multilabel-edge-frame.md` (item 8).
 
 # Split strategy: multi-label ResNet50 versus YOLO
 

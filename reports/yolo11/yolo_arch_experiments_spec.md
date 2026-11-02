@@ -173,7 +173,7 @@ Both add 2 backbone rows (11 -> 13) with the same head retaps as depth_plus2_dee
 
 ## 6. What we measure (per run)
 
-For every run, capture into a JSON (and later into the same `samples/ContactLensDefectResults_ours.xlsx`-style workbook, separate sheet per experiment id, per the existing `scripts/build_landing_pad.py` builder convention):
+For every run, capture into a JSON (and later into the same `samples/ContactLensDefectResults_ours.xlsx`-style workbook, separate sheet per experiment id, per the existing `experiments/cnn/build_landing_pad.py` builder convention):
 
 | Metric | Source | Why |
 |---|---|---|
@@ -217,7 +217,7 @@ For every run, capture into a JSON (and later into the same `samples/ContactLens
 
 ## 8. Results landing pad
 
-Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce a **new workbook** so we don't disturb the 4-arch CNN results:
+Reuse the existing builder pattern (`experiments/cnn/build_landing_pad.py`) but produce a **new workbook** so we don't disturb the 4-arch CNN results:
 - `samples/ContactLensDefectResults_yolo_arch.xlsx`
 - One row per `(exp_id, scale)` pair; columns: exp_id, idea, params, GFLOPs, mAP50, mAP50-95, precision, recall, train_s, val_inf_ms, best_epoch, final_loss_avg, pretrain_loadable, notes.
 - Build script: `scripts/build_yolo_arch_landing_pad.py` (copy of `build_landing_pad.py` with adjusted columns).
@@ -249,7 +249,7 @@ Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce 
 ---
 
 **Entry 0 — 2026-09-07T09:49:21+05:30 — Spec created.**
-- Drafted `reports/yolo_arch_experiments_spec.md` v0.
+- Drafted `reports/yolo11/yolo_arch_experiments_spec.md` v0.
 - Verified canonical `yolo11-obb.yaml` from upstream (raw.githubusercontent.com) — 196 layers, 2,695,747 params, 6.9 GFLOPs for the `n` scale; `OBB, [nc, 1]` is the fixed head signature.
 - Verified YOLO OBB label format `class_index x1 y1 x2 y2 x3 y3 x4 y4` (normalized 0-1) from `docs.ultralytics.com/datasets/obb`.
 - Verified CVAT annotations in `data/annotations.xml` carry `<box ... xtl= ytl= xbr= ybr= rotation="<deg>">` — 4 corners + explicit rotation; no angle estimation needed. Sample lines: 365, 367, 369, 373, 377.
@@ -303,7 +303,7 @@ Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce 
 - Teammate context: lead asked them to run experiments on the **single-size fixed crops** (`/home/pranayp/fmd_crop_output/single-size_fixed_crop/..._20260903/`). Teammate's previous workflow was on **full 2448x2048 images** and they generated ~2000 crops from the XML. **They do NOT use our OoI prep** — they consume the crops directly. Only convert if they want XML labels in the crop coordinate system.
 - **Built two artifacts:**
   - `vm/crop_usage_guide.md` (215 lines): the explanation — what's in a crop folder, how `(left, top)` is computed, all manifest columns with meanings, the three `status` cases (`ok` / `expanded` / `blank`), step-by-step XML→YOLO conversion math for both axis-aligned and OBB formats, common pitfalls (the `expanded` status trap, wrong date suffix, etc.), and a one-page mental-model summary.
-  - `vm/crop_coords.py` (240 lines, pure stdlib + numpy, Pillow optional): `obb2aabb` and `obb2obb` modes, writes `<stem>.txt` labels per image and (with `--preview`) per-image OBB-overlay PNGs into `<out>/_preview/`.
+  - `vm/ops/crop_coords.py` (240 lines, pure stdlib + numpy, Pillow optional): `obb2aabb` and `obb2obb` modes, writes `<stem>.txt` labels per image and (with `--preview`) per-image OBB-overlay PNGs into `<out>/_preview/`.
 - **Verified locally:**
   - `obb2aabb`: 434 label files, 2020 lines, all 5-token lines, all coords in [0,1], 0 outside-crop.
   - `obb2obb`: 434 label files, 2020 lines, all 9-token lines, all coords in [0,1], 0 outside-crop.
@@ -330,7 +330,7 @@ Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce 
 
 **Entry 6 — 2026-09-07T11:55:00+05:30 — VM online; yaml validation found 2 broken forks, fixed; dataset verified.**
 - VM came back: `vm-amd-a100-westus2`, kernel `6.17.0-1022-azure`, GPU A100 80GB PCIe, `/` 41% used (73 GB free). CUDA matmul on cuda:0 verified before any work.
-- **Bundle push:** 30 MB tarball extracted to `/home/pranayp/yolo_ooi/`. Contents: 5 yaml forks + `src/yolo_ooi/` (5 scripts) + `model_runs/yolo11/` (CSV + 434 labels + dataset.yaml + 30 preview PNGs) + `vm/crop_coords.py` + `vm/crop_usage_guide.md` + `reports/yolo_arch_experiments_spec.md`.
+- **Bundle push:** 30 MB tarball extracted to `/home/pranayp/yolo_ooi/`. Contents: 5 yaml forks + `src/yolo_ooi/` (5 scripts) + `model_runs/yolo11/` (CSV + 434 labels + dataset.yaml + 30 preview PNGs) + `vm/ops/crop_coords.py` + `vm/crop_usage_guide.md` + `reports/yolo11/yolo_arch_experiments_spec.md`.
 - **Env install:** `pip3 install --user --break-system-packages "torch==2.6.0+cu124" torchvision==0.21.0+cu124 ultralytics` -> `torch 2.6.0+cu124`, `ultralytics 8.4.142`. Real GPU matmul verified.
 - **Dataset verified on VM:** `check_det_dataset('dataset.yaml')` returns `train.txt` and `val.txt`, both `exists=True`, nc=10, all 10 class names loaded.
 - **CRITICAL yaml validation finding — 2 of 5 forks were silently broken:**
@@ -440,7 +440,7 @@ Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce 
 **Entry 11 — 2026-09-08T15:15:30+05:30 — Batch-2 initial test locked: fresh baseline + depth_plus2 pair, both at batch 8.**
 - User decision (2026-09-08): "we go with batch 8 for both baseline and baseline+2 for the initial test." Rationale: control and variant must sit on identical hyperparameters; the batch-1 control ran at batch 16, so it is NOT reused as the batch-2 control. The batch-1 baseline_obb run stays on file as cross-reference only (batch-1 vs batch-2 deltas are indicative, not exact - Section 7 note).
 - Config frozen identical to batch 1 except batch: frozen split 346 train / 88 val, seed 42, epochs 100, patience 50, imgsz 640, lr0 0.01, optimizer auto, workers 8, same dataset_obb dir layout, same VM env. Run names under project runs/yolo_arch: `baseline_b8`, then `depth_plus2_deep` (batch-1 folder `baseline_obb` stays intact).
-- Fork built: `experiments/depth_plus2_deep_obb.yaml`. Insertion: 2 x Conv [1024, 3, 1] after the final C3k2 (row 8), before SPPF. Retaps: P5 concat [-1, 10] -> [-1, 12]; head P4 ref [-1, 13] -> [-1, 15]; OBB inputs [16, 19, 22] -> [18, 21, 24]; P3/P4 backbone taps (rows 4, 6) untouched.
+- Fork built: `experiments/yolo11/depth_plus2_deep_obb.yaml`. Insertion: 2 x Conv [1024, 3, 1] after the final C3k2 (row 8), before SPPF. Retaps: P5 concat [-1, 10] -> [-1, 12]; head P4 ref [-1, 13] -> [-1, 15]; OBB inputs [16, 19, 22] -> [18, 21, 24]; P3/P4 backbone taps (rows 4, 6) untouched.
 - Validation: torch-free structural validator `experiments/validate_depth_plus2.py`, 23 checks ALL PASS: backbone = baseline + exactly 2 convs; every absolute index ref shifted by +2 only for rows after the insertion; shifted refs resolve to the same module semantics (C2PSA/C3k2 P3/P4/P5); OBB head signature unchanged. It caught a real copy error (fork row 4 had C3k2 [256] where baseline is [512, False, 0.25]) which is now corrected. Exact params/GFLOPs are confirmed on the VM via model.info() before training (Entry 6 pattern).
 - Metrics of record for the pair: mAP50, mAP50-95 and `iou_mean` (matched-box IoU on val, overall + per class, conf >= 0.25), per the lead (Section 6). Precision/recall still logged as diagnostics.
 - Ballpark-read guide (what each outcome means for the next move): baseline+2 ~ baseline => depth is not the lever, steer to width/attention or data work; baseline+2 clearly beats baseline => depth helps, pull depth-plus2-mid or deeper registry rows; if the gain tracks scale_wider's param class at half the GFLOPs, depth is the better capacity vehicle and combining depth with the attention swap (rows 6/8 C2PSA) is the next test.
@@ -450,7 +450,7 @@ Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce 
 ---
 
 **Entry 12 — completed 2026-09-08 (batch-2 initial test done: baseline_b8 + depth_plus2_deep, batch 8).**
-- Trained sequentially on the A100 (driver vm/run_batch2_b8.py, batch 8, frozen config). baseline_b8 train 413 s, depth_plus2_deep 895 s, ALL RUNS COMPLETE. Artifacts mirrored locally: model_runs/yolo11/yolo_arch/{baseline_b8,depth_plus2_deep}/{metrics.json, iou_metrics.json, results.csv} (+ best.pt/last.pt on VM).
+- Trained sequentially on the A100 (driver vm/drivers/run_batch2_b8.py, batch 8, frozen config). baseline_b8 train 413 s, depth_plus2_deep 895 s, ALL RUNS COMPLETE. Artifacts mirrored locally: model_runs/yolo11/yolo_arch/{baseline_b8,depth_plus2_deep}/{metrics.json, iou_metrics.json, results.csv} (+ best.pt/last.pt on VM).
 - Results (batch 8, seed 42, 88 val / 377 instances):
 
   | exp | params | best_ep | mAP50 | mAP50-95 | P | R | meanIoU | match% |
@@ -468,8 +468,8 @@ Reuse the existing builder pattern (`scripts/build_landing_pad.py`) but produce 
 **Entry 13 — 2026-09-08T16:08:42+05:30 — Batch 3 approved: depth-attribution ablation (Arm A type / Arm B location), start small.**
 - User decision (2026-09-08): "we will start with arm a and arm b ... start small." Also frames the goal: beyond better/worse results, we keep the learning opportunity - characterizing WHY a change moves (or does not move) the model, and exploring the inner workings.
 - Reframe recorded: the batch-2 null conflated fact + TYPE (plain convs) + LOCATION (deepest P5) + DOSE (n-width -> 256ch convs). We do NOT read it as "depth is useless". Control already in hand: C2PSA attention at the deep stages (batch 1) DID help, so the deep stages respond to a new mechanism, not to plain stacked depth. Booked into Registry Section 5d.
-- Forks built (both structurally validated, generic validator `experiments/validate_backbone_edit.py`, ALL PASS): `experiments/armA_residual_deep_obb.yaml` (2 x C3k2 [1024, True], insert after row 8) and `experiments/armB_conv_p4_obb.yaml` (2 x Conv [512, 3, 1], insert after row 6). The validator caught a real armB bug before training: the P5 stem row must be Conv [1024, 3, 2] (512 -> 1024), I had written 512.
-- Driver `vm/run_batch2_b8.py` refactored to accept run names on argv: `python3 -u run_batch2_b8.py armA_residual_deep armB_conv_p4`. Same frozen config (batch 8, seed 42, 100 ep, patience 50, imgsz 640, lr0 0.01, auto).
+- Forks built (both structurally validated, generic validator `experiments/validate_backbone_edit.py`, ALL PASS): `experiments/yolo11/armA_residual_deep_obb.yaml` (2 x C3k2 [1024, True], insert after row 8) and `experiments/yolo11/armB_conv_p4_obb.yaml` (2 x Conv [512, 3, 1], insert after row 6). The validator caught a real armB bug before training: the P5 stem row must be Conv [1024, 3, 2] (512 -> 1024), I had written 512.
+- Driver `vm/drivers/run_batch2_b8.py` refactored to accept run names on argv: `python3 -u run_batch2_b8.py armA_residual_deep armB_conv_p4`. Same frozen config (batch 8, seed 42, 100 ep, patience 50, imgsz 640, lr0 0.01, auto).
 - Next: VM param/GFLOPs check of both forks, train sequentially on the A100, then IoU eval (iou_eval.py) on all four (baseline_b8, depth_plus2_deep, armA, armB) to attribute the null to type vs location.
 - Status: forks ready locally; VM validation + launch pending (GPU free check first).
 ---

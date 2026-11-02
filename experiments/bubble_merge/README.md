@@ -45,8 +45,8 @@ classes. One tag per image, and the count table split by LP tag and OOI tag.
 | Labels for both variants plus split | `build_labels.py` -> `run/bubble_merge/20261006/` | 62 checks pass, rerun byte-identical |
 | Independent verifier | `verify_labels.py` | 62 checks, 0 failed |
 | Train/test tree builder for the trainer | `build_vm_trees.py` | full strict build pass on synthetic sources; missing-source test fails loudly |
-| Prediction + confusion dump | `../cnn/dump_outputs.py` | 6 unit tests pass (`tests/test_dump_outputs.py`) |
-| Trainer flags to switch the dump on | `../cnn/model_training.py` `--dump`, `--save-model` | compiles; TF path only testable on the VM |
+| Prediction + confusion dump | `experiments/cnn/dump_outputs.py` | 6 unit tests pass (`tests/test_dump_outputs.py`) |
+| Trainer flags to switch the dump on | `experiments/cnn/model_training.py` `--dump`, `--save-model` | compiles; TF path only testable on the VM |
 | Count table record | `reports/bubble_merge/count_table_20261006.md` | written, numbers from the verified CSVs |
 
 Dataset facts, all checked: 10,614 pictures, 8,409 tagged, 2,205 Clear,

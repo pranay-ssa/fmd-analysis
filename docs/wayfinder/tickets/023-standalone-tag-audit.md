@@ -2,7 +2,7 @@
 title: "Ticket 023 - Standalone-tag audit: P1_MPP, P1_PPM, P1_COC, P2_FOV"
 date: 2026-10-22
 type: task
-status: done 2026-10-23
+status: done
 where: docs/wayfinder/tickets/023-standalone-tag-audit.md
 ---
 

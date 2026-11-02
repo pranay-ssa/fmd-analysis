@@ -2,7 +2,7 @@
 title: "Ticket 025 - Draft-2 EDA, two parts: LP tags and OOI boxes"
 date: 2026-10-22
 type: task
-status: done 2026-10-23
+status: done
 where: docs/wayfinder/tickets/025-draft2-eda.md
 ---
 

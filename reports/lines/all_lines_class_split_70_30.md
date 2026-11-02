@@ -2,7 +2,8 @@
 title: Class-wise 70:30 split for all five lines (2026-09-16)
 date: 2026-09-18
 type: report
-status: active
+status: superseded
+superseded by: reports/lines/ALL_LINES_class_split_70_30_20260917.md
 where: reports/lines/all_lines_class_split_70_30.md
 ---
 

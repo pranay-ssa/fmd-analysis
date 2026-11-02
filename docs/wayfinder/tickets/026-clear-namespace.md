@@ -2,7 +2,7 @@
 title: "Ticket 026 - Clear as a third namespace"
 date: 2026-10-22
 type: task
-status: done, closed with Option A 2026-10-23
+status: done
 where: docs/wayfinder/tickets/026-clear-namespace.md
 ---
 

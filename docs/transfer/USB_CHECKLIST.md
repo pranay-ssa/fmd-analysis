@@ -51,9 +51,9 @@ Expected result: `E:/fmd-transfer/fmd-transfer-<date>/` with a pack size of abou
 
 It collects: a `git bundle` of every branch, the untracked working-tree files, the uncommitted diff,
 `/c/Users/HP/.ssh`, the blob connection file, the Hermes profile, `data/incoming`, all
-`model_runs/**/weights/*.pt`, and `notes/INVENTORY.txt` with the old laptop's own counts.
+`model_runs/**/weights/*.pt`, and `notes/INVENTORY.txt` (no longer in the repository) with the old laptop's own counts.
 
-Write down two numbers from `notes/INVENTORY.txt` before you leave:
+Write down two numbers from `notes/INVENTORY.txt` (no longer in the repository) before you leave:
 **`data/incoming BMPs`** and **`model_runs/**/weights .pt`**. You will compare them on the other side.
 
 ## C. If Git Bash on the old laptop is a problem — manual copy

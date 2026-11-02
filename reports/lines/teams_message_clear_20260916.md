@@ -2,7 +2,8 @@
 title: Teams message: the Clear tag numbers (2026-09-16)
 date: 2026-09-16
 type: report
-status: active
+status: superseded
+superseded by: reports/lines/teams_message_clear_verified_20260916.md
 where: reports/lines/teams_message_clear_20260916.md
 ---
 

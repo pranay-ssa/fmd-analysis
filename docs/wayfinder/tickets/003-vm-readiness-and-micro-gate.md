@@ -79,5 +79,5 @@ done as pranayp with `sudo -H -u pranayp` so the user-site TensorFlow loads.
    written, 58 s per epoch, 61.49 per cent test accuracy after one epoch.
    Three throwaway runs followed as the launcher's gate: all four 50-epoch
    runs started 2026-10-07 01:56-01:58 UTC under
-   `runs/launch_all.sh` + `runs/launch_missing.sh`, logged in
-   `runs/launch.log`.
+   `runs/launch_all.sh` + `runs/launch_missing.sh` (both scripts no longer
+   in the repository), logged in `runs/launch.log`.

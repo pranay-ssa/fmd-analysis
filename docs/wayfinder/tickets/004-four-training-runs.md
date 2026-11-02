@@ -59,8 +59,9 @@ old-order reference; the authoritative rerun lives in `runs2/` from
 `runs2/launch_all2.sh`, same recipe, same readout rule, new trees `trees2/`.
 
 All four runs started on the VM under `/home/pranayp/merge_analysis` at
-01:56-01:58 UTC: `runs/launch_all.sh` plus `runs/launch_missing.sh`,
-everything logged in `runs/launch.log`. The GPU was checked idle before the
+01:56-01:58 UTC: `runs/launch_all.sh` plus `runs/launch_missing.sh` (both
+scripts no longer in the repository), everything logged in
+`runs/launch.log`. The GPU was checked idle before the
 first launch (24 CPUs, A100 80 GB, no other compute process).
 
 Deviation from this ticket's "one at a time": the four runs were started

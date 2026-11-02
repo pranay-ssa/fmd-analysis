@@ -29,7 +29,7 @@ this machine; nothing about the old laptop's current contents is verified, becau
 | Augmentation previews | `run/augment/` 448 MB, six preview runs + diagnostics | `du -sh run/augment` |
 | Line/EDA outputs | `run/line_eda/` 3.3 MB, `run/client_eda/` 44 KB | present |
 | YOLO11 run logs and metrics | `model_runs/yolo11/` 75 MB — 9 arm dirs with `results.csv` and `metrics.json` | `find model_runs/yolo11/yolo_arch` |
-| CNN results | `model_runs/cnn/` 3.7 MB, six `epochs_50/metrics.json` + confusion matrices | present |
+| CNN results | `model_runs/cnn/` 3.7 MB, six `model_runs/cnn/combined22/resnet18/epochs_50/metrics.json` + confusion matrices | present |
 | Python env | **was broken, now repaired** (see §2.7) | `uv sync`, `cv2 5.0.0` |
 
 ## 2. What did NOT travel (the gap)
@@ -165,5 +165,5 @@ Both scripts were run end to end against a synthetic bundle in
 
 Still untested, because it needs the old laptop: the real `data/incoming` tar (7 GB), the actual
 `~/.ssh` contents, a real ssh connection with the passphrase, and whether `pack` sees more untracked
-files than this copy has. The pack script writes `notes/INVENTORY.txt` precisely so those numbers can
+files than this copy has. The pack script writes `notes/INVENTORY.txt` (no longer in the repository) precisely so those numbers can
 be compared rather than assumed.

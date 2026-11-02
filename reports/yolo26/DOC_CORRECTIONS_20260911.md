@@ -211,7 +211,7 @@ pretrained init, stock head (`reg_max=1`, one2one present), 0.5355 mAP50.
 | `README.md` (root) | C41. Spec path corrected to `reports/preprocessing/`. |
 | `vm/drivers/run_yolo26_multiclass.py` | C43. Per-class AP50 and P/R now collected via `v.summary()` (with the `v.ap50` fallback) so a run's own JSON carries the table. |
 | `.continue-here.md` | C40. Moved to `docs/archive/continue-here_20260903_fixed_size_crop.md`. |
-| `reports/yolo11/yolo_batch1_architecture_analysis.md` | C45 (found during the post-edit sweep). Two live pointers to `reports/yolo_arch_experiments_spec.md` corrected to `reports/yolo11/`. |
+| `reports/yolo11/yolo_batch1_architecture_analysis.md` | C45 (found during the post-edit sweep). Two live pointers to `reports/yolo11/yolo_arch_experiments_spec.md` corrected to `reports/yolo11/`. |
 
 Post-edit verification: `registry.json` parses and reports 30 rows with `pending_reruns` R1-R3; the three edited or added Python files compile; a repo-wide grep for the old paths, the old `.continue-here.md`, and `reports/fixed_size_crop_spec.md` returns no live hits (only historical entries inside the append-only spec log, which are intentionally left as written).
 

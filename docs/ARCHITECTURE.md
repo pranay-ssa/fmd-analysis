@@ -29,7 +29,7 @@ FMD-Preprocess/
 │   ├── preprocess.py         # OLD variable-size ROI-Crop (superseded, kept for reference)
 │   ├── eda_before_after.py   # Before/after invariance EDA (separate tool)
 │   └── make_deck.py          # Builds the lead-review deck (.pptx)
-├── scripts/
+├── experiments/cnn/
 │   ├── build_landing_pad.py          # Auto-fill 4-arch results into lead's workbook
 │   └── build_single50_landing_pad.py # Auto-fill single-scale results
 ├── samples/
@@ -86,7 +86,7 @@ vm/build_lens_presentation_split*.py  Split into train/test (hard-linked)
 samples/model_training*.py            Train on VM (A100 GPU)
     │
     ▼
-scripts/build_landing_pad*.py         Auto-fill results into lead's workbook
+experiments/cnn/build_landing_pad*.py Auto-fill results into lead's workbook
 ```
 
 ## 4. Algorithm (per image, detection runs once for both modes)

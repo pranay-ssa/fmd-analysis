@@ -2,7 +2,7 @@
 title: experiments/multilabel_resnet50/ - multi-label LP classification with ResNet50
 date: 2026-09-23
 type: experiment
-status: scaffold
+status: active
 where: experiments/multilabel_resnet50/README.md
 ---
 

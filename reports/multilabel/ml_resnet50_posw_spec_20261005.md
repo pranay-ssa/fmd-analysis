@@ -89,7 +89,7 @@ Reading rules:
 ## 6. Registry
 
 Row `ml_resnet50_posw` in `experiments/multilabel_resnet50/registry.json` is `planned`
-and flips to `done` when `runs/ml_resnet50_posw_20261005/metrics.json` exists and the
+and flips to `done` when `run/multilabel_lp_posw_20261005/metrics.json` exists and the
 12-check prediction recompute passes, mirroring `run/multilabel_lp_posw_20261005/`.
 
 ## 7. Result (2026-10-05)

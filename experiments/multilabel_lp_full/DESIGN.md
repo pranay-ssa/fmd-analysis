@@ -2,7 +2,7 @@
 title: Experiment design: multi-label CNN on all LP tags plus Clear
 date: 2026-10-27
 type: decision
-status: planned
+status: active
 where: experiments/multilabel_lp_full/DESIGN.md
 ---
 

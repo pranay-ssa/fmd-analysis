@@ -51,7 +51,7 @@ YOLO26 experiments use the same frozen split (346/88, seed 42) as YOLO11. Three 
 3. **Validate locally first**: run the structural validator (`vm/drivers/validate_yaml.py` for YOLO26, `experiments/validate_backbone_edit.py` for YOLO11). This catches routing bugs, channel mismatches, and future-row references before they burn GPU.
 4. **Validate on the VM**: `YOLO(fork, task="detect")` builds and prints a param count. Confirm the numbers match expectation. Check `layers[i].f` (from attribute) matches your intended routing.
 5. **Train** one run at a time on the shared A100 (never over a teammate's job; check `nvidia-smi --query-compute-apps` first). Batch 8, seed 42, 100 epochs, frozen split.
-6. **Measure** mAP50 / mAP50-95 / precision / recall from `results.csv` best epoch, and IoU from `vm/iou_eval_det2.py` (the correct one; `iou_eval_det.py` is BROKEN). For multiclass, also pull per-class AP50 via `v.summary()`. Write the results into `registry.json` and append a spec Entry with outcome AND reason.
+6. **Measure** mAP50 / mAP50-95 / precision / recall from `results.csv` best epoch, and IoU from `vm/eval/iou_eval_det2.py` (the correct one; `iou_eval_det.py` is BROKEN). For multiclass, also pull per-class AP50 via `v.summary()`. Write the results into `registry.json` and append a spec Entry with outcome AND reason.
 
 ## 4. Dos
 

@@ -2,7 +2,7 @@
 title: "Ticket 022 - Verification gate"
 date: 2026-10-21
 type: task
-status: open
+status: active
 where: docs/wayfinder/tickets/022-verification-gate.md
 ---
 

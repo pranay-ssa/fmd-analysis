@@ -67,7 +67,8 @@ Plus md5 pairs on every artifact that crosses a machine boundary.
 
 ## Deliverable
 
-- `experiments/eda_full/verify_eda_full.py`, the verifier, with its check count.
+- `experiments/eda_full/verify_eda_full.py`, the verifier, with its check
+  count. (The script itself is no longer in the repository.)
 - `run/eda_full_20261015/verification.json`: checks, failures, the rerun's md5
   pairs, and the second derivations.
 - `docs/reference/eda_full_verification.md`.

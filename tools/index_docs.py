@@ -31,7 +31,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "docs", "INDEX.md")
 
 SKIP_DIRS = {".git", ".venv", "run", "model_runs", ".obsidian", ".obsidian-vault",
-             "__pycache__", "node_modules", "data", "vm", "tests", "src", "notebooks"}
+             "__pycache__", "node_modules", "data", "vm", "tests", "src", "notebooks",
+             # Scratch and machine-generated trees: git worktree copies of this repo (.delta)
+             # and the rewritten-on-every-build knowledge graph output. Both duplicate or
+             # regenerate real documents, so indexing them double-counts the repo.
+             ".delta", "graphify-out"}
 
 # folder -> type, used when a file has no header
 TYPE_BY_DIR = [
@@ -48,7 +52,7 @@ TYPE_BY_DIR = [
 ]
 
 ORDER = ["state", "session", "result", "decision", "report", "experiment",
-         "protocol", "method", "reference", "doc", "transfer", "archive", "other"]
+         "protocol", "method", "reference", "doc", "transfer", "task", "archive", "other"]
 
 # root level files carry their own meaning
 ROOT_TYPES = {"HANDOFF.md": "state", "README.md": "reference", "AGENTS.md": "reference"}
@@ -122,6 +126,9 @@ def collect():
                 "date": h.get("date") or filename_date(fn) or "",
                 "type": h.get("type") or derive_type(rel),
                 "status": h.get("status") or ("done" if "archive" in rel else "active"),
+                # Kept separate from "status": filters must match only what the header
+                # actually says, never the derived fallback (see --skip-status).
+                "explicit_status": h.get("status") or "",
                 "where": h.get("where") or "",
                 "size": os.path.getsize(full),
             })
@@ -180,9 +187,41 @@ def build(rows):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true", help="fail if any file lacks a header")
+    ap.add_argument("--skip-status", action="append", default=None, metavar="STATUS",
+                    help="omit rows whose header status equals STATUS (repeatable, "
+                         "comma-separated allowed). Defaults to 'superseded'.")
+    ap.add_argument("--include-status", action="append", default=None, metavar="STATUS",
+                    help="countermand --skip-status for STATUS (repeatable). Use "
+                         "'--include-status superseded' to list archived decisions again.")
     args = ap.parse_args()
 
     rows = collect()
+
+    # Superseded documents are skipped by default so a bare run cannot resurface them:
+    # the whole point of this flag is that the route stops citing stale decisions, and
+    # an opt-in filter would be undone by the next person who regenerates the index.
+    skip = {"superseded"}
+    for raw in (args.skip_status or []):
+        skip.update(s.strip() for s in raw.split(",") if s.strip())
+    for raw in (args.include_status or []):
+        skip.difference_update(s.strip() for s in raw.split(",") if s.strip())
+    if skip:
+        # Status-keyed, not directory-keyed: superseded documents also live outside
+        # docs/archive/ (docs/reference/, reports/), so a directory filter misses them.
+        # Only an EXPLICIT header status is matched. A derived fallback would be wrong:
+        # collect() derives 'done' for headerless archive paths, and 'done' on its own
+        # means a finished ticket, not a superseded document -- filtering it would hide
+        # finished wayfinder tickets that are still part of the route.
+        kept, dropped = [], []
+        for r in rows:
+            explicit = r.get("explicit_status")
+            (dropped if explicit in skip else kept).append(r)
+        if dropped:
+            print(f"skipped {len(dropped)} row(s) with status in {sorted(skip)}:")
+            for r in sorted(dropped, key=lambda r: r["path"]):
+                print(f"  {r['path']}")
+        rows = kept
+
     text, missing = build(rows)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     open(OUT, "w", encoding="utf-8").write(text)

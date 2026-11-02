@@ -33,6 +33,21 @@ Working rules for this repository. Read this before starting.
 - `docs/sessions/` holds one file per week. `docs/decisions/` holds one short file per decision
   (create it when the first decision lands). `docs/reference/` holds stable how-tos.
 
+## Searching this repository
+
+- `docs/archive/` is **superseded** material: audit trail only. Keep it readable by path, but never
+  let it win a keyword search over current docs. The archived accumulated handoffs are 78-92 KB of
+  near-complete project vocabulary, so under plain keyword matching they beat the short current doc
+  for almost every query. That is how you end up answering from a retired rule.
+- Coverage is not currency: a doc matching the words of a rule does not mean the rule still stands.
+  Before quoting a doc, check its `status:` header and prefer the newest `docs/decisions/` file.
+- Default search already skips archive: `rg` honours `.gitignore` and `.graphifyignore`, and
+  `tools/index_docs.py` skips `status: superseded` (opt back in with `--include-status superseded`).
+- Reaching archive is deliberate and explicit: `git grep`, `rg --no-ignore`, or read it by path.
+  Do that when you are specifically after history, not when you want the current answer.
+- After changing code run `graphify update . --force` (plain `update` silently refuses to shrink a
+  stale graph), then `graphify query "<question>"` first. The graph holds no archive nodes.
+
 ## Reader-facing artifacts (reports, workbooks, decks, messages)
 
 Anything a lead or a client will read is written for them, not for us.

@@ -218,7 +218,7 @@ A separate number 20.460 ms/image for the teammate's ResNet50 appears in the Sep
 | Post-upgrade Lens no-warmup rerun | /home/pranayp/lens_single_rerun |
 | Teammate head-to-head source | /home/pranayp (Comparision workbook) |
 
-Local canonical scripts (repo `D:\02-SSA\FMD-Preprocess`): `samples/model_training.py`, `samples/run_warmup_corrected.sh`, `samples/diag_pipeline_timing.py`.
+Local canonical scripts (repo `D:\02-SSA\FMD-Preprocess`): `experiments/cnn/model_training.py`, `experiments/cnn/run_warmup_corrected.sh`, `experiments/cnn/diag_pipeline_timing.py`.
 
 ---
 

@@ -2,7 +2,8 @@
 title: OOI Single-Scale CNN Classification - Detailed Analysis
 date: 2026-09-07
 type: report
-status: done
+status: superseded
+superseded by: reports/cnn/OOI_CNN_Analysis_CORRECTED_20260908.md
 where: reports/cnn/archive/OOI_CNN_Analysis_20260907.md
 ---
 

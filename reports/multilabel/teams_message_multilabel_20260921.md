@@ -3,6 +3,7 @@ title: Teams message: multi-class and multi-label data, the three questions answ
 date: 2026-09-21
 type: report
 status: superseded
+superseded by: reports/multilabel/teams_message_correction_20260922.md
 where: reports/multilabel/teams_message_multilabel_20260921.md
 ---
 

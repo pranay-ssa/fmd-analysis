@@ -49,7 +49,7 @@ vm/build_lens_presentation_split*.py  (train/test split)
 samples/model_training*.py            (train on VM)
         │
         ▼
-scripts/build_landing_pad*.py         (results workbook)
+experiments/cnn/build_landing_pad*.py (results workbook)
 ```
 
 ## Layout
@@ -61,7 +61,7 @@ FMD-Preprocess/
 │   ├── config.py             # Canonical crop-size maps + thresholds
 │   ├── eda_before_after.py   # Before/after invariance EDA
 │   └── make_deck.py          # Lead-review deck builder
-├── scripts/
+├── experiments/cnn/
 │   ├── build_landing_pad.py          # 4-arch results workbook
 │   └── build_single50_landing_pad.py # Single-scale results workbook
 ├── samples/
@@ -114,5 +114,5 @@ FMD-Preprocess/
 | `experiments/registry.json` | Experiment registry: results, provenance per row, pending re-runs |
 | `experiments/README.md` | Experiment governance: dos and don'ts, pitfalls, ADRs, blast radius |
 | `samples/model_training 2.py` | 4-arch training script |
-| `scripts/build_landing_pad.py` | Results workbook builder |
+| `experiments/cnn/build_landing_pad.py` | Results workbook builder |
 | `HANDOFF.md` | Current operational handoff |
