@@ -86,6 +86,28 @@ Anything a lead or a client will read is written for them, not for us.
 - If an entry needs more than one line, it is a doc, not an entry. Put the detail in a doc and let the
   entry point at it.
 
+## Hermes profiles: where work runs
+
+Work on this repository is done by named Hermes profiles, not by one general agent. A profile carries its own model, memory and skill set, so a task is routed to the role that owns it. Profiles live outside the repository; this section records only which role owns what.
+
+| Profile | Owns | Route work here when |
+|---|---|---|
+| `default` | Interactive work: code, docs, analysis | Anything the rows below do not cover |
+| `orchestrator` | Decomposition and routing | A request spans several steps or several files |
+| `ml-runner` | VM training and evaluation runs | An experiment has to be launched or measured |
+| `researcher` | External evidence with citations | The answer is in the world, not in this repository |
+| `learning` | Unassigned | Nothing yet. It has never been given a task. |
+
+Rules:
+
+- **One executor per file.** A card or session owns the files it touches. Never run a generator such as `tools/index_docs.py` while another worker owns `docs/INDEX.md`. `--check` writes as well as checks, so it is not a safe concurrent read.
+- **The orchestrator routes, it does not execute.** A router that starts editing files becomes a second writer on the same file, which is exactly the failure the routing exists to prevent.
+- **`ml-runner` writes one `run.json` per run**, beside that run's artifacts, and never hand-edits it. The schema is fixed and includes `status` (ok, failed or crashed) and `metrics.primary`, the single number a report should lead with. A crashed run writes `status: crashed` with the traceback path in `notes`; it does not omit the file. This is the uniform source that `experiments/registry.json` is regenerated from. Before it existed, CNN runs wrote a per-arm `metrics.json` while YOLO runs wrote a `batch1_summary.json` array, so there was no common shape to regenerate from and the registry was only reproducible for one family.
+- **`ml-runner` runs on the VM only through `vm/ops/`**, piping the script over SSH so nothing loose is left on the shared box. The repository tree there is `/home/pranayp/fmd-analysis`.
+- **`ml-runner` does not write reports or decks.** It emits the run record and stops. The report is a separate step gated behind the run, and it follows the reader-facing rules above.
+
+Two skills carry rules that cross profiles. Load them rather than restating them: `verifier` (check a finished claim against the artifact, and sweep the diff for leaked secrets) and `vault-curator` (what may be written to the external knowledge base).
+
 ## Never pushed
 
 `notiondocs.md` and anything under `run/`, `model_runs/`, `.obsidian-vault/` or `data/incoming/`. The
