@@ -1,0 +1,246 @@
+{
+  "version": "v8",
+  "date": "2026-11-03",
+  "decision": "user 2026-11-03: move to 70/15/15 so the per-class decision threshold can be chosen on a validation split instead of on the test set. All frozen counting rules of 2026-10-26 are unchanged; only the split shape and the role of the middle share are new.",
+  "recipe": "iterative stratification (Sechidis 2011), three-way, content-md5 groups, deterministic (no random seed)",
+  "roles": {
+    "train": "training only",
+    "val": "decision threshold per class, nothing else",
+    "test": "read once at the end, never used to choose anything"
+  },
+  "input": {
+    "resolved_labels": "D:/fmd-analysis/run/eda_full_20261029/resolved_labels.csv",
+    "picture_table": "D:/fmd-analysis/run/eda_full_20261029/picture_table.csv"
+  },
+  "population": {
+    "examined": 10614,
+    "marked": 5500,
+    "clear": 2117,
+    "analysed": 7617
+  },
+  "rows": 7470,
+  "dropped": {
+    "legacy_only": 62,
+    "debris_without_gate_and_nothing_else": 85
+  },
+  "positives": {
+    "foreign_matter_micron_gate": 454,
+    "fiber_micron_gate": 362,
+    "extraneous_polymer_micron_gate": 135,
+    "hema_micron_gate": 151,
+    "bubble": 2171,
+    "bubble_cluster": 1132,
+    "wet_package": 314,
+    "missing_primary_package": 1428,
+    "multiple_lenses": 1426,
+    "no_lens": 326,
+    "cavity_off_center": 185,
+    "folded_lens": 333,
+    "lens_off_center": 1201,
+    "dirty_camera": 573,
+    "dirty_strobe": 33,
+    "low_dose": 677,
+    "view_obstructed": 63,
+    "package_misalignment": 33,
+    "bubble_scatter": 5,
+    "clear": 2117
+  },
+  "splits": {
+    "70_15_15": {
+      "ratios": {
+        "train": 0.7,
+        "val": 0.15,
+        "test": 0.15
+      },
+      "split_counts": {
+        "train": 5239,
+        "val": 1110,
+        "test": 1121
+      },
+      "per_class": {
+        "foreign_matter_micron_gate": {
+          "train": 320,
+          "val": 62,
+          "test": 72,
+          "expect_train": 317.8,
+          "expect_val": 68.1,
+          "expect_test": 68.1,
+          "val_share": 0.1366
+        },
+        "fiber_micron_gate": {
+          "train": 251,
+          "val": 55,
+          "test": 56,
+          "expect_train": 253.4,
+          "expect_val": 54.3,
+          "expect_test": 54.3,
+          "val_share": 0.1519
+        },
+        "extraneous_polymer_micron_gate": {
+          "train": 102,
+          "val": 16,
+          "test": 17,
+          "expect_train": 94.5,
+          "expect_val": 20.2,
+          "expect_test": 20.2,
+          "val_share": 0.1185
+        },
+        "hema_micron_gate": {
+          "train": 99,
+          "val": 25,
+          "test": 27,
+          "expect_train": 105.7,
+          "expect_val": 22.6,
+          "expect_test": 22.6,
+          "val_share": 0.1656
+        },
+        "bubble": {
+          "train": 1520,
+          "val": 326,
+          "test": 325,
+          "expect_train": 1519.7,
+          "expect_val": 325.6,
+          "expect_test": 325.6,
+          "val_share": 0.1502
+        },
+        "bubble_cluster": {
+          "train": 792,
+          "val": 170,
+          "test": 170,
+          "expect_train": 792.4,
+          "expect_val": 169.8,
+          "expect_test": 169.8,
+          "val_share": 0.1502
+        },
+        "wet_package": {
+          "train": 220,
+          "val": 47,
+          "test": 47,
+          "expect_train": 219.8,
+          "expect_val": 47.1,
+          "expect_test": 47.1,
+          "val_share": 0.1497
+        },
+        "missing_primary_package": {
+          "train": 1000,
+          "val": 214,
+          "test": 214,
+          "expect_train": 999.6,
+          "expect_val": 214.2,
+          "expect_test": 214.2,
+          "val_share": 0.1499
+        },
+        "multiple_lenses": {
+          "train": 998,
+          "val": 214,
+          "test": 214,
+          "expect_train": 998.2,
+          "expect_val": 213.9,
+          "expect_test": 213.9,
+          "val_share": 0.1501
+        },
+        "no_lens": {
+          "train": 228,
+          "val": 49,
+          "test": 49,
+          "expect_train": 228.2,
+          "expect_val": 48.9,
+          "expect_test": 48.9,
+          "val_share": 0.1503
+        },
+        "cavity_off_center": {
+          "train": 129,
+          "val": 28,
+          "test": 28,
+          "expect_train": 129.5,
+          "expect_val": 27.8,
+          "expect_test": 27.8,
+          "val_share": 0.1514
+        },
+        "folded_lens": {
+          "train": 249,
+          "val": 33,
+          "test": 51,
+          "expect_train": 233.1,
+          "expect_val": 49.9,
+          "expect_test": 49.9,
+          "val_share": 0.0991
+        },
+        "lens_off_center": {
+          "train": 841,
+          "val": 180,
+          "test": 180,
+          "expect_train": 840.7,
+          "expect_val": 180.2,
+          "expect_test": 180.2,
+          "val_share": 0.1499
+        },
+        "dirty_camera": {
+          "train": 401,
+          "val": 86,
+          "test": 86,
+          "expect_train": 401.1,
+          "expect_val": 86.0,
+          "expect_test": 86.0,
+          "val_share": 0.1501
+        },
+        "dirty_strobe": {
+          "train": 23,
+          "val": 8,
+          "test": 2,
+          "expect_train": 23.1,
+          "expect_val": 5.0,
+          "expect_test": 5.0,
+          "val_share": 0.2424
+        },
+        "low_dose": {
+          "train": 474,
+          "val": 101,
+          "test": 102,
+          "expect_train": 473.9,
+          "expect_val": 101.5,
+          "expect_test": 101.5,
+          "val_share": 0.1492
+        },
+        "view_obstructed": {
+          "train": 44,
+          "val": 9,
+          "test": 10,
+          "expect_train": 44.1,
+          "expect_val": 9.4,
+          "expect_test": 9.4,
+          "val_share": 0.1429
+        },
+        "package_misalignment": {
+          "train": 23,
+          "val": 5,
+          "test": 5,
+          "expect_train": 23.1,
+          "expect_val": 5.0,
+          "expect_test": 5.0,
+          "val_share": 0.1515
+        },
+        "bubble_scatter": {
+          "train": 3,
+          "val": 1,
+          "test": 1,
+          "expect_train": 3.5,
+          "expect_val": 0.8,
+          "expect_test": 0.8,
+          "val_share": 0.2
+        },
+        "clear": {
+          "train": 1482,
+          "val": 318,
+          "test": 317,
+          "expect_train": 1481.9,
+          "expect_val": 317.6,
+          "expect_test": 317.6,
+          "val_share": 0.1502
+        }
+      },
+      "group_crossings": 0,
+      "split_csv": "D:/fmd-analysis/run/split_20261103_v8/split_70_15_15.csv"
+    }
+  }
+}

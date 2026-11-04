@@ -1,0 +1,90 @@
+variant b: 7470 rows, 5239 train / 1110 val / 1121 test
+  class    name                        total  train   val  test
+  P1_MPP   Missing Primary Package      1428   1000    214    214
+  P1_ML    Multiple Lens                1426    998    214    214
+  P2_LOC   Lens Off Center              1201    841    180    180
+  P2_DC    Dirty Camera                  573    401     86     86
+  P1_NL    No Lens                       326    228     49     49
+  P1_FL    Folded Lens                   333    249     33     51
+  P2_LD    Low Dose                      677    474    101    102
+  P1_COC   Cavity Off Center             185    129     28     28
+  P2_DS    Dirty Strobe                   33     23      8      2
+  P2_FOV   View Obstructed                63     44      9     10
+  P2_BSC   Bubble Scatter                  5      3      1      1
+  P1_PPM   Package Misalignment           33     23      5      5
+  object   any object present           2247   1563    341    343
+  clear    all-zero rows                2117   1482    318    317
+image root ok: 40 sampled pictures found under /data/FMD_Data_26082026/fmd_temp_images
+/home/pranayp/fmd-analysis/experiments/multilabel_lp_full/train_lp_v8.py:514: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(device.type == "cuda"))
+/home/pranayp/fmd-analysis/experiments/multilabel_lp_full/train_lp_v8.py:525: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+epoch 01/50  train loss 0.5246
+epoch 02/50  train loss 0.3051
+epoch 03/50  train loss 0.2449
+epoch 04/50  train loss 0.2221
+epoch 05/50  train loss 0.2078
+epoch 06/50  train loss 0.1959
+epoch 07/50  train loss 0.1863
+epoch 08/50  train loss 0.1788
+epoch 09/50  train loss 0.1719
+epoch 10/50  train loss 0.1649
+epoch 11/50  train loss 0.1590
+epoch 12/50  train loss 0.1529
+epoch 13/50  train loss 0.1476
+epoch 14/50  train loss 0.1421
+epoch 15/50  train loss 0.1385
+epoch 16/50  train loss 0.1331
+epoch 17/50  train loss 0.1278
+epoch 18/50  train loss 0.1247
+epoch 19/50  train loss 0.1210
+epoch 20/50  train loss 0.1182
+epoch 21/50  train loss 0.1139
+epoch 22/50  train loss 0.1120
+epoch 23/50  train loss 0.1089
+epoch 24/50  train loss 0.1063
+epoch 25/50  train loss 0.1053
+epoch 26/50  train loss 0.1016
+epoch 27/50  train loss 0.1017
+epoch 28/50  train loss 0.0984
+epoch 29/50  train loss 0.0962
+epoch 30/50  train loss 0.0964
+epoch 31/50  train loss 0.0930
+epoch 32/50  train loss 0.0924
+epoch 33/50  train loss 0.0913
+epoch 34/50  train loss 0.0888
+epoch 35/50  train loss 0.0872
+epoch 36/50  train loss 0.0869
+epoch 37/50  train loss 0.0845
+epoch 38/50  train loss 0.0836
+epoch 39/50  train loss 0.0832
+epoch 40/50  train loss 0.0823
+epoch 41/50  train loss 0.0795
+epoch 42/50  train loss 0.0794
+epoch 43/50  train loss 0.0782
+epoch 44/50  train loss 0.0775
+epoch 45/50  train loss 0.0773
+epoch 46/50  train loss 0.0763
+epoch 47/50  train loss 0.0745
+epoch 48/50  train loss 0.0737
+epoch 49/50  train loss 0.0724
+epoch 50/50  train loss 0.0720
+/home/pranayp/fmd-analysis/experiments/multilabel_lp_full/train_lp_v8.py:474: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+thresholds chosen on 1110 val pictures: 9 tuned, 4 default
+  P1_MPP           0.25  (val, val F1 1.000 vs 0.998 at 0.5)
+  P1_ML            0.60  (val, val F1 0.912 vs 0.898 at 0.5)
+  P2_LOC           0.45  (val, val F1 0.760 vs 0.738 at 0.5)
+  P2_DC            0.30  (val, val F1 0.429 vs 0.045 at 0.5)
+  P1_NL            0.15  (val, val F1 0.917 vs 0.886 at 0.5)
+  P1_FL            0.45  (val, val F1 0.478 vs 0.275 at 0.5)
+  P2_LD            0.40  (val, val F1 0.873 vs 0.849 at 0.5)
+  P1_COC           0.30  (val, val F1 0.885 vs 0.840 at 0.5)
+  P2_DS            0.50  (default, val F1 0.000 vs 0.000 at 0.5)
+  P2_FOV           0.50  (default, val F1 0.000 vs 0.000 at 0.5)
+  P2_BSC           0.50  (default, val F1 0.000 vs 0.000 at 0.5)
+  P1_PPM           0.50  (default, val F1 0.000 vs 0.000 at 0.5)
+  object_present   0.55  (val, val F1 0.961 vs 0.959 at 0.5)
+metrics written: run/multilabel_lp_v8_20261103/b/metrics.json
+thresholds written: run/multilabel_lp_v8_20261103/b/thresholds.json
+timing: train 1463.0s (29.3s/epoch), val 6.4s, test 6.3s = 5.59 ms/image on 1121 test pictures

@@ -1,6 +1,6 @@
 ---
 title: Route through this repository
-date: 2026-11-02
+date: 2026-11-03
 type: reference
 status: active
 where: docs/INDEX.md
@@ -17,15 +17,15 @@ Files indexed: 144. Types: state (3), session (6), result (27), decision (10), r
 
 | File | Date | Status | What it is |
 |---|---|---|---|
+| [HANDOFF.md](../HANDOFF.md) | 2026-11-03 | active | Handoff (state of the work) |
 | [session_shakehand.md](../session_shakehand.md) | 2026-10-28 | active | Session shakehand (briefing for the next agent session) |
-| [HANDOFF.md](../HANDOFF.md) | 2026-10-28 | active | Handoff (state of the work) |
 | [docs/sessions/2026-W41.md](../docs/sessions/2026-W41.md) | 2026-10-05 | active | Session 2026-W41 |
 
 ## session
 
 | File | Date | Status | What it is |
 |---|---|---|---|
-| [docs/sessions/2026-W44.md](../docs/sessions/2026-W44.md) | 2026-10-28 | active | 2026-W44: re-export absorbed, merged record, 24-file EDA workbooks |
+| [docs/sessions/2026-W44.md](../docs/sessions/2026-W44.md) | 2026-11-03 | active | 2026-W44: re-export absorbed, merged record, 24-file EDA, retrain on v7 |
 | [docs/sessions/2026-W43.md](../docs/sessions/2026-W43.md) | 2026-10-23 | active | "Session 2026-W43: meeting follow-ups, Draft-2 EDA, split v3" |
 | [docs/sessions/2026-W40-crops.md](../docs/sessions/2026-W40-crops.md) | 2026-09-29 | active | Single-size crops of the updated folders (2026-09-29) |
 | [docs/sessions/2026-W40.md](../docs/sessions/2026-W40.md) | 2026-09-28 | active | Week 40, from 28 September 2026 |

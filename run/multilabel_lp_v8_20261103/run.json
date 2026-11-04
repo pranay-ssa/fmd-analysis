@@ -1,0 +1,54 @@
+{
+  "run_id": "multilabel_lp_v8_20261103_b",
+  "date": "2026-11-03",
+  "status": "ok",
+  "family": "multilabel_lp",
+  "variant": "b",
+  "title": "Variant b (12 LP classes + object flag) on the three-way 70/15/15 split, thresholds chosen on validation",
+  "script": "experiments/multilabel_lp_full/train_lp_v8.py",
+  "host": "amd-a100-vm (A100 80GB), user pranayp, repo /home/pranayp/fmd-analysis",
+  "split": {
+    "path": "run/split_20261103_v8/split_70_15_15.csv",
+    "md5": "1a71d66d2de384cf47a3fcf7d9115baa",
+    "counts": {"train": 5239, "val": 1110, "test": 1121}
+  },
+  "config": {
+    "arch": "resnet50", "imgsz": 224, "batch": 8, "epochs": 50, "lr": 0.0001,
+    "optimizer": "sgd momentum 0.9 nesterov, weight_decay 1e-4",
+    "pos_weight": false, "seed": 42, "columns": 13,
+    "threshold_source": "validation split, grid 0.05 to 0.95 step 0.05, maximum F1 per class",
+    "min_val_positives": 10
+  },
+  "metrics": {
+    "primary": 0.8182,
+    "primary_name": "macro_auprc_judgeable",
+    "primary_note": "mean average precision over the 8 classes with at least 20 test pictures; threshold-free",
+    "macro_auprc_all": 0.6423,
+    "macro_f1_judgeable_at_0.5": 0.7238,
+    "macro_f1_judgeable_at_val_thresholds": 0.7807,
+    "exact_match_at_0.5": 0.7645,
+    "exact_match_at_val_thresholds": 0.7618,
+    "hamming_at_0.5": 0.0242,
+    "hamming_at_val_thresholds": 0.025,
+    "object_flag_fire_rate_object_only": 0.975,
+    "object_flag_fire_rate_mixed": 0.946,
+    "object_flag_fire_rate_clear": 0.0
+  },
+  "timing": {"train_seconds": 1463.0, "seconds_per_epoch": 29.3, "val_seconds": 6.4,
+             "test_seconds": 6.3, "ms_per_image": 5.59},
+  "artifacts": {
+    "metrics": "run/multilabel_lp_v8_20261103/b/metrics.json",
+    "thresholds": "run/multilabel_lp_v8_20261103/b/thresholds.json",
+    "predictions": "run/multilabel_lp_v8_20261103/b/predictions.npz",
+    "log": "run/multilabel_lp_v8_20261103/train_b.log",
+    "checkpoint": "run/multilabel_lp_v8_20261103/b/final.pt (on the VM only, 94 MB)"
+  },
+  "checks": {
+    "split_verified_locally": "verify_split_v8.py PASS, tamper proof caught",
+    "split_reproducible": "builder re-run byte-identical (md5 1a71d66d)",
+    "labels_match_vm": "7,470 rows, 5,239/1,110/1,121 on both sides",
+    "predictions_reproduce_metrics": "test F1 recomputed from predictions.npz matches metrics.json for all 12 classes",
+    "md5_match_vm": "metrics.json c3207697, predictions.npz 73ccab04, split 1a71d66d"
+  },
+  "notes": "The only two differences from run/multilabel_lp_full_20261029/b are the split shape (70/15/15 instead of 80/20) and where the threshold comes from (val instead of test). Training recipe, seed and epochs are unchanged, so a difference between the two runs is attributable to those two things."
+}

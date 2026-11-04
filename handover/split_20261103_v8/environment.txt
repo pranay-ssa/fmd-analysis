@@ -1,0 +1,8 @@
+Python: 3.12.3
+torch: 2.14.1+cu126
+torchvision: 0.29.1+cu126
+CUDA runtime: 12.6
+NVIDIA driver: 580.178.04
+GPU: NVIDIA A100 80GB PCIe
+OS: Linux (shared VM), user pranayp
+Installed with: python -m pip install -r requirements-lock.txt
