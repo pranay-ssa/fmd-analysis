@@ -30,6 +30,11 @@ Nothing runs. The four arms of `run/multilabel_ooi_20261104/` are complete with 
 each `run.json`; the checkpoints (`final.pt`, 91 MB each) live on the VM only and are gitignored
 locally. The A100 is idle.
 
+**Parked for review:** the atomised plan for the next round is
+`docs/wayfinder/next_chain_lanes_20261105.md`. Nothing is created and nothing is dispatched. Read the
+plain-English walkthrough and the point-4 workbook first; approval of the plan creates the cards, and a
+second go releases the first dispatch.
+
 **Next, in order**
 
 1. Bubble-only false fails: 28 of 36, with Foreign Matter firing on 23 and Fiber on 11. Hard
