@@ -1,0 +1,69 @@
+image root ok: 40 sampled pictures found under /data/FMD_Data_26082026/fmd_temp_images
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:721: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(device.type == "cuda"))
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:732: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+epoch 01/50  train loss 0.4653
+epoch 02/50  train loss 0.2842
+epoch 03/50  train loss 0.2428
+epoch 04/50  train loss 0.2167
+epoch 05/50  train loss 0.1997
+epoch 06/50  train loss 0.1872
+epoch 07/50  train loss 0.1746
+epoch 08/50  train loss 0.1656
+epoch 09/50  train loss 0.1581
+epoch 10/50  train loss 0.1509
+epoch 11/50  train loss 0.1469
+epoch 12/50  train loss 0.1430
+epoch 13/50  train loss 0.1397
+epoch 14/50  train loss 0.1365
+epoch 15/50  train loss 0.1325
+epoch 16/50  train loss 0.1304
+epoch 17/50  train loss 0.1285
+epoch 18/50  train loss 0.1268
+epoch 19/50  train loss 0.1254
+epoch 20/50  train loss 0.1229
+epoch 21/50  train loss 0.1230
+epoch 22/50  train loss 0.1213
+epoch 23/50  train loss 0.1198
+epoch 24/50  train loss 0.1191
+epoch 25/50  train loss 0.1178
+epoch 26/50  train loss 0.1183
+epoch 27/50  train loss 0.1165
+epoch 28/50  train loss 0.1152
+epoch 29/50  train loss 0.1148
+epoch 30/50  train loss 0.1146
+epoch 31/50  train loss 0.1140
+epoch 32/50  train loss 0.1128
+epoch 33/50  train loss 0.1124
+epoch 34/50  train loss 0.1116
+epoch 35/50  train loss 0.1112
+epoch 36/50  train loss 0.1099
+epoch 37/50  train loss 0.1094
+epoch 38/50  train loss 0.1087
+epoch 39/50  train loss 0.1083
+epoch 40/50  train loss 0.1077
+epoch 41/50  train loss 0.1085
+epoch 42/50  train loss 0.1072
+epoch 43/50  train loss 0.1056
+epoch 44/50  train loss 0.1059
+epoch 45/50  train loss 0.1055
+epoch 46/50  train loss 0.1043
+epoch 47/50  train loss 0.1051
+epoch 48/50  train loss 0.1036
+epoch 49/50  train loss 0.1031
+epoch 50/50  train loss 0.1021
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:682: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+thresholds chosen on 1110 val pictures: 7 tuned, 0 default
+  class_bubble             0.20  (val, val F1 0.955 vs 0.950 at 0.5)
+  class_bubble_cluster     0.15  (val, val F1 0.689 vs 0.557 at 0.5)
+  class_foreign_matter     0.15  (val, val F1 0.509 vs 0.245 at 0.5)
+  class_fiber              0.25  (val, val F1 0.323 vs 0.000 at 0.5)
+  class_wet_package        0.15  (val, val F1 0.359 vs 0.000 at 0.5)
+  class_hema               0.15  (val, val F1 0.466 vs 0.000 at 0.5)
+  class_extraneous_polymer 0.10  (val, val F1 0.145 vs 0.000 at 0.5)
+metrics written: run/multilabel_ooi_20261104/class/metrics.json
+thresholds written: run/multilabel_ooi_20261104/class/thresholds.json
+timing: train 1466.2s (29.3s/epoch), val 6.4s, test 6.3s = 5.61 ms/image on 1121 test pictures
+primary: macro AP over the seven supported classes = 0.4955

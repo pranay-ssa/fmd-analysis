@@ -2,7 +2,7 @@
 title: "Ticket 031: round 2, class-weight arm on the round-1 winner"
 date: 2026-11-04
 type: protocol
-status: active
+status: done
 where: docs/wayfinder/tickets/031-round2-pos-weight.md
 ---
 Type: task, AFK. Map: Map: [OOI point 4](../ooi_point4_map.md)..

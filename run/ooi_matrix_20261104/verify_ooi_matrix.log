@@ -1,0 +1,14 @@
+inputs  resolved md5 f61ea0b90df095ebe52d1332f8bfdb8a
+        split    md5 1a71d66d2de384cf47a3fcf7d9115baa (frozen 1a71d66d2de384cf47a3fcf7d9115baa)
+        labels_b md5 764a412597aad359f644eb1414d31cda
+rows    7470   splits 5239 / 1110 / 1121
+class   bubble 2171  bubble_cluster 1132  foreign_matter 798  fiber 392  wet_package 314  hema 154  extraneous_polymer 142  surface_groove 0
+gate    foreign_matter 454  fiber 362  extraneous_polymer 135  hema 151
+val/test bubble 326-325  bubble_cluster 170-170  foreign_matter 110-112  fiber 60-58  wet_package 47-47  hema 25-27  extraneous_polymer 19-17  surface_groove 0-0
+lens + clear: 13 columns x 7470 rows verbatim from labels_b.csv
+HEMA: 154 with the obstruction tag-only picture excluded (d50402e0b6d5817615e343aecb3447df); 155 with it counted
+subset: gate inside class on all 7470 rows x 4 gates
+tamper proof class: caught -> cell 00037a3f158360ab0cd3dc6486f0103c class_bubble: table 0, annotation 1
+tamper proof gate: caught -> cell 000112fabecf4a8307a603fda0254878 gate_foreign_matter: table 1, annotation 0
+tamper proof lens: caught -> cell 000112fabecf4a8307a603fda0254878 P1_MPP: table '0', labels_b '1'
+PASS: ooi_labels.csv matches the annotation under ticket 027 rules; every count asserted, tamper proofs caught naming their cells

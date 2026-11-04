@@ -1,0 +1,81 @@
+image root ok: 40 sampled pictures found under /data/FMD_Data_26082026/fmd_temp_images
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:721: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(device.type == "cuda"))
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:732: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+epoch 01/50  train loss 1.2555
+epoch 02/50  train loss 1.1870
+epoch 03/50  train loss 1.0702
+epoch 04/50  train loss 0.9433
+epoch 05/50  train loss 0.8230
+epoch 06/50  train loss 0.6758
+epoch 07/50  train loss 0.5877
+epoch 08/50  train loss 0.5241
+epoch 09/50  train loss 0.4808
+epoch 10/50  train loss 0.4465
+epoch 11/50  train loss 0.4179
+epoch 12/50  train loss 0.3887
+epoch 13/50  train loss 0.3801
+epoch 14/50  train loss 0.3621
+epoch 15/50  train loss 0.3421
+epoch 16/50  train loss 0.3290
+epoch 17/50  train loss 0.3165
+epoch 18/50  train loss 0.3089
+epoch 19/50  train loss 0.2947
+epoch 20/50  train loss 0.2896
+epoch 21/50  train loss 0.2770
+epoch 22/50  train loss 0.2701
+epoch 23/50  train loss 0.2631
+epoch 24/50  train loss 0.2593
+epoch 25/50  train loss 0.2539
+epoch 26/50  train loss 0.2469
+epoch 27/50  train loss 0.2386
+epoch 28/50  train loss 0.2289
+epoch 29/50  train loss 0.2228
+epoch 30/50  train loss 0.2172
+epoch 31/50  train loss 0.2144
+epoch 32/50  train loss 0.2073
+epoch 33/50  train loss 0.2032
+epoch 34/50  train loss 0.1968
+epoch 35/50  train loss 0.1957
+epoch 36/50  train loss 0.1929
+epoch 37/50  train loss 0.1859
+epoch 38/50  train loss 0.1831
+epoch 39/50  train loss 0.1793
+epoch 40/50  train loss 0.1710
+epoch 41/50  train loss 0.1663
+epoch 42/50  train loss 0.1667
+epoch 43/50  train loss 0.1618
+epoch 44/50  train loss 0.1609
+epoch 45/50  train loss 0.1574
+epoch 46/50  train loss 0.1539
+epoch 47/50  train loss 0.1498
+epoch 48/50  train loss 0.1470
+epoch 49/50  train loss 0.1448
+epoch 50/50  train loss 0.1436
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:682: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+thresholds chosen on 1110 val pictures: 15 tuned, 4 default
+  P1_MPP                   0.45  (val, val F1 1.000 vs 0.998 at 0.5)
+  P1_ML                    0.65  (val, val F1 0.925 vs 0.913 at 0.5)
+  P2_LOC                   0.45  (val, val F1 0.758 vs 0.754 at 0.5)
+  P2_DC                    0.90  (val, val F1 0.719 vs 0.630 at 0.5)
+  P1_NL                    0.95  (val, val F1 0.990 vs 0.960 at 0.5)
+  P1_FL                    0.95  (val, val F1 0.557 vs 0.403 at 0.5)
+  P2_LD                    0.95  (val, val F1 0.924 vs 0.838 at 0.5)
+  P1_COC                   0.90  (val, val F1 0.964 vs 0.964 at 0.5)
+  P2_DS                    0.50  (default, val F1 0.941 vs 0.941 at 0.5)
+  P2_FOV                   0.50  (default, val F1 0.947 vs 0.947 at 0.5)
+  P2_BSC                   0.50  (default, val F1 0.000 vs 0.000 at 0.5)
+  P1_PPM                   0.50  (default, val F1 0.667 vs 0.667 at 0.5)
+  class_bubble             0.65  (val, val F1 0.958 vs 0.954 at 0.5)
+  class_bubble_cluster     0.25  (val, val F1 0.693 vs 0.674 at 0.5)
+  class_foreign_matter     0.45  (val, val F1 0.534 vs 0.510 at 0.5)
+  class_fiber              0.70  (val, val F1 0.414 vs 0.382 at 0.5)
+  class_wet_package        0.65  (val, val F1 0.423 vs 0.376 at 0.5)
+  class_hema               0.90  (val, val F1 0.830 vs 0.687 at 0.5)
+  class_extraneous_polymer 0.70  (val, val F1 0.333 vs 0.319 at 0.5)
+metrics written: run/multilabel_ooi_20261104/combined/metrics.json
+thresholds written: run/multilabel_ooi_20261104/combined/thresholds.json
+timing: train 1466.1s (29.3s/epoch), val 6.4s, test 6.3s = 5.64 ms/image on 1121 test pictures
+primary: macro AP over the seven supported classes = 0.6380

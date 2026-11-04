@@ -1,0 +1,113 @@
+{
+  "table": "run/ooi_matrix_20261104/ooi_labels.csv",
+  "rows": 7470,
+  "split_md5": "1a71d66d2de384cf47a3fcf7d9115baa",
+  "inputs": {
+    "resolved_labels.csv": {
+      "path": "run/eda_full_20261029/resolved_labels.csv",
+      "md5": "f61ea0b90df095ebe52d1332f8bfdb8a"
+    },
+    "split_70_15_15.csv": {
+      "path": "run/split_20261103_v8/split_70_15_15.csv",
+      "md5": "1a71d66d2de384cf47a3fcf7d9115baa"
+    },
+    "labels_b.csv": {
+      "path": "run/multilabel_lp_v8_20261103/labels_b.csv",
+      "md5": "764a412597aad359f644eb1414d31cda"
+    }
+  },
+  "split_totals": {
+    "train": 5239,
+    "val": 1110,
+    "test": 1121
+  },
+  "class_totals": {
+    "class_bubble": 2171,
+    "class_bubble_cluster": 1132,
+    "class_foreign_matter": 798,
+    "class_fiber": 392,
+    "class_wet_package": 314,
+    "class_hema": 154,
+    "class_extraneous_polymer": 142,
+    "class_surface_groove": 0
+  },
+  "gate_totals": {
+    "gate_foreign_matter": 454,
+    "gate_fiber": 362,
+    "gate_extraneous_polymer": 135,
+    "gate_hema": 151
+  },
+  "per_split": {
+    "class_bubble": {
+      "train": 1520,
+      "val": 326,
+      "test": 325
+    },
+    "class_bubble_cluster": {
+      "train": 792,
+      "val": 170,
+      "test": 170
+    },
+    "class_foreign_matter": {
+      "train": 576,
+      "val": 110,
+      "test": 112
+    },
+    "class_fiber": {
+      "train": 274,
+      "val": 60,
+      "test": 58
+    },
+    "class_wet_package": {
+      "train": 220,
+      "val": 47,
+      "test": 47
+    },
+    "class_hema": {
+      "train": 102,
+      "val": 25,
+      "test": 27
+    },
+    "class_extraneous_polymer": {
+      "train": 106,
+      "val": 19,
+      "test": 17
+    },
+    "class_surface_groove": {
+      "train": 0,
+      "val": 0,
+      "test": 0
+    },
+    "gate_foreign_matter": {
+      "train": 320,
+      "val": 62,
+      "test": 72
+    },
+    "gate_fiber": {
+      "train": 251,
+      "val": 55,
+      "test": 56
+    },
+    "gate_extraneous_polymer": {
+      "train": 102,
+      "val": 16,
+      "test": 17
+    },
+    "gate_hema": {
+      "train": 99,
+      "val": 25,
+      "test": 27
+    }
+  },
+  "notes": {
+    "class_columns": "presence of the object at any size; the micron gate is folded into its class",
+    "gate_columns": "the micron-gate rows for Foreign Matter, Fiber, Extraneous Polymer and HEMA, a subset of the class on every row",
+    "hema": "production boxes (hema_obstruction, shape_kind box) plus hema_fragment plus the gate rows; the legacy whole-image obstruction tag is not evidence, so the one tag-only picture in the split is excluded",
+    "excluded": [
+      "bubble_on_123",
+      "bubble_on_edge",
+      "hema_obstruction tag rows"
+    ],
+    "clear_and_lens": "verbatim from run/multilabel_lp_v8_20261103/labels_b.csv"
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "run_id": "cnn__combined__50__20261104-1028",
+  "family": "cnn",
+  "arm": "combined",
+  "epochs": 50,
+  "status": "ok",
+  "host": "vm",
+  "started_utc": "2026-11-04T10:28:09Z",
+  "ended_utc": "2026-11-04T10:52:52Z",
+  "git_sha": "5ab3467ff31b93870f6f50fde92f8eee67d9102c",
+  "data": {
+    "split": "split_20261103_v8 frozen 70/15/15 (md5 1a71d66d2de384cf47a3fcf7d9115baa)",
+    "n_train": 5239,
+    "n_val": 1110,
+    "n_test": 1121,
+    "classes": 19
+  },
+  "config": {
+    "imgsz": 224,
+    "batch": 8,
+    "seed": 42,
+    "lr0": 0.0001,
+    "columns": "combined",
+    "gated_target": "class",
+    "weight_mode": "on",
+    "pos_weight_formula": "(N - n) / n on the train split targets only, N = 5239",
+    "pos_weight_train_positives": {
+      "P1_MPP": 1000,
+      "P1_ML": 998,
+      "P2_LOC": 841,
+      "P2_DC": 401,
+      "P1_NL": 228,
+      "P1_FL": 249,
+      "P2_LD": 474,
+      "P1_COC": 129,
+      "P2_DS": 23,
+      "P2_FOV": 44,
+      "P2_BSC": 3,
+      "P1_PPM": 23,
+      "class_bubble": 1520,
+      "class_bubble_cluster": 792,
+      "class_foreign_matter": 576,
+      "class_fiber": 274,
+      "class_wet_package": 220,
+      "class_hema": 102,
+      "class_extraneous_polymer": 106
+    },
+    "pos_weights": {
+      "P1_MPP": 4.239,
+      "P1_ML": 4.249498997995992,
+      "P2_LOC": 5.2294887039239,
+      "P2_DC": 12.064837905236908,
+      "P1_NL": 21.978070175438596,
+      "P1_FL": 20.04016064257028,
+      "P2_LD": 10.052742616033756,
+      "P1_COC": 39.6124031007752,
+      "P2_DS": 226.7826086956522,
+      "P2_FOV": 118.06818181818181,
+      "P2_BSC": 1745.3333333333333,
+      "P1_PPM": 226.7826086956522,
+      "class_bubble": 2.4467105263157896,
+      "class_bubble_cluster": 5.61489898989899,
+      "class_foreign_matter": 8.09548611111111,
+      "class_fiber": 18.12043795620438,
+      "class_wet_package": 22.813636363636363,
+      "class_hema": 50.36274509803921,
+      "class_extraneous_polymer": 48.424528301886795
+    },
+    "arch": "resnet50",
+    "recipe": "resnet50, 224, batch 8, 50 epochs, no early stopping, SGD lr 1e-4 momentum 0.9 (nesterov, weight decay 1e-4), seed 42, BCEWithLogitsLoss",
+    "table_md5": "7fd1106e355464deac72da73aa6b2c4b",
+    "output_columns": [
+      "P1_MPP",
+      "P1_ML",
+      "P2_LOC",
+      "P2_DC",
+      "P1_NL",
+      "P1_FL",
+      "P2_LD",
+      "P1_COC",
+      "P2_DS",
+      "P2_FOV",
+      "P2_BSC",
+      "P1_PPM",
+      "class_bubble",
+      "class_bubble_cluster",
+      "class_foreign_matter",
+      "class_fiber",
+      "class_wet_package",
+      "class_hema",
+      "class_extraneous_polymer"
+    ]
+  },
+  "metrics": {
+    "primary": {
+      "name": "macro_auprc_judgeable",
+      "value": 0.881512349291059
+    },
+    "all": {
+      "primary_object_side": {
+        "name": "macro_ap_supported",
+        "value": 0.6380419265638101
+      },
+      "macro_ap_supported_object": 0.6380419265638101,
+      "macro_f1_0.5_object": 0.5952830493767183,
+      "macro_f1_chosen_object": 0.6357076081671809,
+      "per_class_object": {
+        "class_bubble": {
+          "name": "Bubble",
+          "support": 325,
+          "floor": 0.291,
+          "ap": 0.9473770596732427,
+          "threshold": 0.65,
+          "f1_0.5": 0.9343065693430657,
+          "f1_chosen": 0.9406528189910978
+        },
+        "class_bubble_cluster": {
+          "name": "Bubble Cluster",
+          "support": 170,
+          "floor": 0.152,
+          "ap": 0.5881386295882443,
+          "threshold": 0.25,
+          "f1_0.5": 0.6681318681318681,
+          "f1_chosen": 0.6790890269151139
+        },
+        "class_foreign_matter": {
+          "name": "Foreign Matter",
+          "support": 112,
+          "floor": 0.107,
+          "ap": 0.5081790019554412,
+          "threshold": 0.45,
+          "f1_0.5": 0.5517241379310346,
+          "f1_chosen": 0.5595567867036011
+        },
+        "class_fiber": {
+          "name": "Fiber",
+          "support": 58,
+          "floor": 0.052,
+          "ap": 0.3786329265219603,
+          "threshold": 0.7,
+          "f1_0.5": 0.40594059405940597,
+          "f1_chosen": 0.4050632911392405
+        },
+        "class_wet_package": {
+          "name": "Wet Package",
+          "support": 47,
+          "floor": 0.042,
+          "ap": 0.5402847186061392,
+          "threshold": 0.65,
+          "f1_0.5": 0.4805194805194805,
+          "f1_chosen": 0.5343511450381679
+        },
+        "class_hema": {
+          "name": "HEMA",
+          "support": 27,
+          "floor": 0.021,
+          "ap": 0.9904697497290089,
+          "threshold": 0.9,
+          "f1_0.5": 0.782608695652174,
+          "f1_chosen": 0.923076923076923
+        },
+        "class_extraneous_polymer": {
+          "name": "Extraneous Polymer",
+          "support": 17,
+          "floor": 0.019,
+          "ap": 0.5132113998726345,
+          "threshold": 0.7,
+          "f1_0.5": 0.34375,
+          "f1_chosen": 0.40816326530612246
+        }
+      },
+      "lens": {
+        "macro_auprc": 0.8348339904364636,
+        "macro_auprc_judgeable": 0.881512349291059,
+        "judgeable_classes": [
+          "P1_COC",
+          "P1_FL",
+          "P1_ML",
+          "P1_MPP",
+          "P1_NL",
+          "P2_DC",
+          "P2_LD",
+          "P2_LOC"
+        ],
+        "macro_f1_0.5": 0.8299012082898357,
+        "macro_f1_chosen": 0.836595048153018,
+        "per_class_f1_0.5": {
+          "P1_MPP": 0.9906103286384976,
+          "P1_ML": 0.9523809523809523,
+          "P2_LOC": 0.7645687645687644,
+          "P2_DC": 0.6341463414634146,
+          "P1_NL": 0.9245283018867925,
+          "P1_FL": 0.5818181818181818,
+          "P2_LD": 0.8281938325991188,
+          "P1_COC": 0.962962962962963,
+          "P2_DS": 0.4444444444444445,
+          "P2_FOV": 0.9473684210526316,
+          "P2_BSC": 0.0,
+          "P1_PPM": 0.5333333333333333
+        }
+      },
+      "november_reference": {
+        "macro_auprc_judgeable": 0.8182347078510195,
+        "delta": 0.06327764144003956,
+        "per_class_f1_0.5": {
+          "P1_MPP": 0.9906103286384976,
+          "P1_ML": 0.9276018099547513,
+          "P2_LOC": 0.7581047381546135,
+          "P2_DC": 0.1875,
+          "P1_NL": 0.8048780487804877,
+          "P1_FL": 0.4146341463414634,
+          "P2_LD": 0.873684210526316,
+          "P1_COC": 0.8333333333333333,
+          "P2_DS": 0.0,
+          "P2_FOV": 0.0,
+          "P2_BSC": 0.0,
+          "P1_PPM": 0.0
+        }
+      },
+      "recall_by_flag": {
+        "class_foreign_matter": {
+          "gated": {
+            "n": 72,
+            "recall_0.5": 0.916667,
+            "recall_chosen": 0.930556
+          },
+          "ungated": {
+            "n": 40,
+            "recall_0.5": 0.75,
+            "recall_chosen": 0.85
+          }
+        },
+        "class_fiber": {
+          "gated": {
+            "n": 56,
+            "recall_0.5": 0.714286,
+            "recall_chosen": 0.553571
+          },
+          "ungated": {
+            "n": 2,
+            "recall_0.5": 0.5,
+            "recall_chosen": 0.5
+          }
+        },
+        "class_extraneous_polymer": {
+          "gated": {
+            "n": 17,
+            "recall_0.5": 0.647059,
+            "recall_chosen": 0.588235
+          },
+          "ungated": {
+            "n": 0,
+            "recall_0.5": null,
+            "recall_chosen": null
+          }
+        },
+        "class_hema": {
+          "gated": {
+            "n": 27,
+            "recall_0.5": 1.0,
+            "recall_chosen": 0.888889
+          },
+          "ungated": {
+            "n": 0,
+            "recall_0.5": null,
+            "recall_chosen": null
+          }
+        }
+      },
+      "bubble_cluster_confusion": {
+        "note": "test split, truth pair vs predicted pair, order both / bubble_only / cluster_only / neither",
+        "at_0.5": {
+          "both": {
+            "both": 144,
+            "bubble_only": 13,
+            "cluster_only": 0,
+            "neither": 3
+          },
+          "bubble_only": {
+            "both": 124,
+            "bubble_only": 39,
+            "cluster_only": 0,
+            "neither": 2
+          },
+          "cluster_only": {
+            "both": 8,
+            "bubble_only": 1,
+            "cluster_only": 0,
+            "neither": 1
+          },
+          "neither": {
+            "both": 9,
+            "bubble_only": 22,
+            "cluster_only": 0,
+            "neither": 755
+          }
+        },
+        "at_chosen": {
+          "both": {
+            "both": 153,
+            "bubble_only": 2,
+            "cluster_only": 2,
+            "neither": 3
+          },
+          "bubble_only": {
+            "both": 132,
+            "bubble_only": 30,
+            "cluster_only": 0,
+            "neither": 3
+          },
+          "cluster_only": {
+            "both": 9,
+            "bubble_only": 0,
+            "cluster_only": 0,
+            "neither": 1
+          },
+          "neither": {
+            "both": 13,
+            "bubble_only": 10,
+            "cluster_only": 4,
+            "neither": 759
+          }
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "weights": "run/multilabel_ooi_20261104/combined/final.pt",
+    "log": "run/multilabel_ooi_20261104/combined/train.log",
+    "confusion": "run/multilabel_ooi_20261104/combined/metrics.json"
+  },
+  "notes": "Round-3 combined head (ticket 033): train_multilabel.py --columns combined --gated-target class --pos-weight on --out run/multilabel_ooi_20261104/combined, detached under nohup setsid on the A100, observed to completion. ATTEMPT 1 (09:56:03Z) trained all 50 epochs then CRASHED with KeyError 'f1' at train_multilabel.py:594 in the combined-only lens branch of evaluate_test (per_lens[c]['f1'] does not exist; the dict carries f1_0.5/f1_chosen). No metrics/thresholds/predictions/weights were written by attempt 1; its traceback is preserved at run/multilabel_ooi_20261104/combined/crash1_train.log (md5 9ecb80f6ad2e814fcad23ec05c938e79). The one-line fix (f1 -> f1_chosen, combined mode only, ooi paths untouched) was proven by driving the fixed evaluate_test on synthetic 19-column data locally, pushed to the VM with the 029 tee idiom; trainer md5 3ab959bf82d75a2d4ac6ac3b62948e7c -> c1a46c5eefc55d473e5914dea8897771 (identical both ends at launch). ATTEMPT 2 (10:28:09Z-10:52:52Z (final.pt mtime 10:52:51.8Z)) completed: metrics/thresholds/predictions/final.pt/train.log pulled, all six md5-identical to the VM (metrics c6ea49a0, thresholds 7a4d174a, predictions b0c4c975, final.pt 0bce7432, train.log 86738bd2). Nohup exit code not captured, so status ok rests on the completed log (ends with the primary line), the four artifacts, and an empty trainer process table. Primary here is the lens-side judgeable macro AP because ticket 033's question is lens stability against the November 13-column run (0.8182; delta +0.0633, within the 0.01 held-band if small, reported as a move otherwise); the trainer's own metrics.primary is macro_ap_supported (object side, 0.6380) and both are carried under all. pos_weights computed independently here from ooi_labels.csv train rows and cross-checked against the smoke rule of thumb; the trainer records pos_weight=on in metrics.config but not the vector. Object-flag analogue on the 120 object-only test pictures: any of the 7 object columns >= 0.5 fires on 117/120 = 0.9750 (November single flag: 0.9833 at 0.5); derived from predictions.npz. VM tree /home/pranayp/fmd-analysis has no .git, so git_sha is the work-laptop repo HEAD at launch and file identity was proven by md5 (table 7fd1106e355464deac72da73aa6b2c4b, split 1a71d66d2de384cf47a3fcf7d9115baa). confusion points at metrics.json, which carries the Bubble/Cluster confusion block. n_test and output_columns included beyond schema. seconds_total 1478.8 from metrics.json timing."
+}

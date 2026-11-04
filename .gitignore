@@ -88,3 +88,7 @@ docs/archive/
 # === Local pre-edit backups (kept on disk for rollback, never committed) ===
 *.bak
 *.bak.*
+
+# Model weights stay on the VM; local copies are for re-scoring only.
+run/**/*.pt
+run/**/*.pth

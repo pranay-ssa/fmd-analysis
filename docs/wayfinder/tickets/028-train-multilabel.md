@@ -2,7 +2,7 @@
 title: "Ticket 028: train_multilabel.py, one trainer for both column groups"
 date: 2026-11-04
 type: protocol
-status: active
+status: done
 where: docs/wayfinder/tickets/028-train-multilabel.md
 ---
 Type: build, AFK. Map: Map: [OOI point 4](../ooi_point4_map.md)..

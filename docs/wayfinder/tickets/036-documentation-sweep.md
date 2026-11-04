@@ -2,7 +2,7 @@
 title: "Ticket 036: documentation sweep"
 date: 2026-11-04
 type: protocol
-status: active
+status: done
 where: docs/wayfinder/tickets/036-documentation-sweep.md
 ---
 Type: docs, AFK. Map: Map: [OOI point 4](../ooi_point4_map.md)..

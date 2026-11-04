@@ -2,7 +2,7 @@
 title: "Ticket 029: round 1, class arm versus gate arm"
 date: 2026-11-04
 type: protocol
-status: active
+status: done
 where: docs/wayfinder/tickets/029-round1-class-vs-gate.md
 ---
 Type: task, AFK. Map: Map: [OOI point 4](../ooi_point4_map.md)..

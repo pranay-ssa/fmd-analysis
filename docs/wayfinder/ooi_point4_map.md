@@ -2,7 +2,7 @@
 title: "Map: OOI point 4 - class versus gate, then the pass/fail rule"
 date: 2026-11-04
 type: protocol
-status: active
+status: done
 where: docs/wayfinder/ooi_point4_map.md
 ---
 
@@ -80,7 +80,7 @@ reported that a verifier cannot recompute.
    Extraneous Polymer or HEMA, round 3 still runs, but the drop is surfaced
    to the user in the round-2 numbers.
 4. Round 3 uses the round-2 winner's weighting and target, in combined
-   20-column mode; its job is to prove the lens numbers did not move
+   nineteen-column mode; its job is to prove the lens numbers did not move
    (macro AP judgeable 0.8182 and the per-class November table are the
    reference).
 5. Verification gates the next round: a verify ticket that fails blocks its

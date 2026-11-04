@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "run_id": "cnn__class-posw__50__20261104-0835",
+  "family": "cnn",
+  "arm": "class-posw",
+  "epochs": 50,
+  "status": "ok",
+  "host": "vm",
+  "started_utc": "2026-11-04T08:35:02Z",
+  "ended_utc": "2026-11-04T08:59:40Z",
+  "git_sha": "5ab3467ff31b93870f6f50fde92f8eee67d9102c",
+  "data": {
+    "split": "split_20261103_v8 frozen 70/15/15 (md5 1a71d66d2de384cf47a3fcf7d9115baa)",
+    "n_train": 5239,
+    "n_val": 1110,
+    "n_test": 1121,
+    "classes": 7
+  },
+  "config": {
+    "imgsz": 224,
+    "batch": 8,
+    "seed": 42,
+    "lr0": 0.0001,
+    "columns": "ooi",
+    "gated_target": "class",
+    "weight_mode": "on",
+    "pos_weight_formula": "(N - n) / n on the train split targets only, N = 5239",
+    "pos_weight_train_positives": {
+      "class_bubble": 1520,
+      "class_bubble_cluster": 792,
+      "class_foreign_matter": 576,
+      "class_fiber": 274,
+      "class_wet_package": 220,
+      "class_hema": 102,
+      "class_extraneous_polymer": 106
+    },
+    "pos_weights": {
+      "class_bubble": 2.4467105865478516,
+      "class_bubble_cluster": 5.614899158477783,
+      "class_foreign_matter": 8.09548568725586,
+      "class_fiber": 18.120437622070312,
+      "class_wet_package": 22.813636779785156,
+      "class_hema": 50.36274337768555,
+      "class_extraneous_polymer": 48.424530029296875
+    },
+    "arch": "resnet50",
+    "recipe": "resnet50, 224, batch 8, 50 epochs, no early stopping, SGD lr 1e-4 momentum 0.9 (nesterov, weight decay 1e-4), seed 42, BCEWithLogitsLoss",
+    "table_md5": "7fd1106e355464deac72da73aa6b2c4b"
+  },
+  "metrics": {
+    "primary": {
+      "name": "macro_ap_supported",
+      "value": 0.6330478747403567
+    },
+    "all": {
+      "macro_f1_0.5": 0.6143284545506607,
+      "macro_f1_chosen": 0.6374667568077577,
+      "per_class": {
+        "class_bubble": {
+          "name": "Bubble",
+          "support": 325,
+          "floor": 0.291,
+          "ap": 0.9645514056271911,
+          "threshold": 0.1,
+          "f1_0.5": 0.9479940564635958,
+          "f1_chosen": 0.9487554904831625
+        },
+        "class_bubble_cluster": {
+          "name": "Bubble Cluster",
+          "support": 170,
+          "floor": 0.152,
+          "ap": 0.6308161842407161,
+          "threshold": 0.2,
+          "f1_0.5": 0.6509433962264151,
+          "f1_chosen": 0.6765327695560253
+        },
+        "class_foreign_matter": {
+          "name": "Foreign Matter",
+          "support": 112,
+          "floor": 0.107,
+          "ap": 0.528387839392591,
+          "threshold": 0.15,
+          "f1_0.5": 0.5624999999999999,
+          "f1_chosen": 0.5667574931880108
+        },
+        "class_fiber": {
+          "name": "Fiber",
+          "support": 58,
+          "floor": 0.052,
+          "ap": 0.34538356291186806,
+          "threshold": 0.35,
+          "f1_0.5": 0.37209302325581395,
+          "f1_chosen": 0.389937106918239
+        },
+        "class_wet_package": {
+          "name": "Wet Package",
+          "support": 47,
+          "floor": 0.042,
+          "ap": 0.5721854937683417,
+          "threshold": 0.55,
+          "f1_0.5": 0.5378151260504203,
+          "f1_chosen": 0.5535714285714286
+        },
+        "class_hema": {
+          "name": "HEMA",
+          "support": 27,
+          "floor": 0.021,
+          "ap": 0.9625102258967795,
+          "threshold": 0.95,
+          "f1_0.5": 0.8387096774193549,
+          "f1_chosen": 0.9056603773584906
+        },
+        "class_extraneous_polymer": {
+          "name": "Extraneous Polymer",
+          "support": 17,
+          "floor": 0.019,
+          "ap": 0.4275004113450093,
+          "threshold": 0.55,
+          "f1_0.5": 0.39024390243902435,
+          "f1_chosen": 0.42105263157894735
+        }
+      },
+      "recall_by_flag": {
+        "class_foreign_matter": {
+          "gated": {
+            "n": 72,
+            "recall_0.5": 0.791667,
+            "recall_chosen": 0.958333
+          },
+          "ungated": {
+            "n": 40,
+            "recall_0.5": 0.6,
+            "recall_chosen": 0.875
+          }
+        },
+        "class_fiber": {
+          "gated": {
+            "n": 56,
+            "recall_0.5": 0.410714,
+            "recall_chosen": 0.535714
+          },
+          "ungated": {
+            "n": 2,
+            "recall_0.5": 0.5,
+            "recall_chosen": 0.5
+          }
+        },
+        "class_extraneous_polymer": {
+          "gated": {
+            "n": 17,
+            "recall_0.5": 0.470588,
+            "recall_chosen": 0.470588
+          },
+          "ungated": {
+            "n": 0,
+            "recall_0.5": null,
+            "recall_chosen": null
+          }
+        },
+        "class_hema": {
+          "gated": {
+            "n": 27,
+            "recall_0.5": 0.962963,
+            "recall_chosen": 0.888889
+          },
+          "ungated": {
+            "n": 0,
+            "recall_0.5": null,
+            "recall_chosen": null
+          }
+        }
+      },
+      "bubble_cluster_confusion": {
+        "note": "test split, truth pair vs predicted pair, order both / bubble_only / cluster_only / neither",
+        "at_0.5": {
+          "both": {
+            "both": 133,
+            "bubble_only": 23,
+            "cluster_only": 0,
+            "neither": 4
+          },
+          "bubble_only": {
+            "both": 109,
+            "bubble_only": 54,
+            "cluster_only": 0,
+            "neither": 2
+          },
+          "cluster_only": {
+            "both": 5,
+            "bubble_only": 3,
+            "cluster_only": 0,
+            "neither": 2
+          },
+          "neither": {
+            "both": 7,
+            "bubble_only": 14,
+            "cluster_only": 0,
+            "neither": 765
+          }
+        },
+        "at_chosen": {
+          "both": {
+            "both": 154,
+            "bubble_only": 6,
+            "cluster_only": 0,
+            "neither": 0
+          },
+          "bubble_only": {
+            "both": 133,
+            "bubble_only": 31,
+            "cluster_only": 0,
+            "neither": 1
+          },
+          "cluster_only": {
+            "both": 6,
+            "bubble_only": 3,
+            "cluster_only": 0,
+            "neither": 1
+          },
+          "neither": {
+            "both": 10,
+            "bubble_only": 15,
+            "cluster_only": 0,
+            "neither": 761
+          }
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "weights": "run/multilabel_ooi_20261104/class-posw/final.pt",
+    "log": "run/multilabel_ooi_20261104/class-posw/train.log",
+    "confusion": "run/multilabel_ooi_20261104/class-posw/metrics.json"
+  },
+  "notes": "Round-2 weight arm: train_multilabel.py --columns ooi --gated-target class --pos-weight on, detached under nohup setsid on the A100, observed to completion (train.log ends with the primary line; metrics/thresholds/predictions/final.pt present; pulled copies md5-identical to the VM); nohup exit code not captured, so status ok rests on the completed log plus artifacts. Per-class pos_weights computed by the trainer's own pos_weight_from on the VM from the train split only (N = 5239) and cross-checked by an independent local replication (agree to float32; min 2.4467 max 50.3627, matching the recorded class/on smoke 2.45-50.36); the trainer records pos_weight=on in metrics.config but not the vector, so the vector is carried here from that computation. Comparison twin is the round-1 unweighted class arm (cnn__class__50__20261104-0646), not retrained. VM tree /home/pranayp/fmd-analysis has no .git, so git_sha is the work-laptop repo HEAD at launch and file identity was proven by md5 (table 7fd1106e355464deac72da73aa6b2c4b, trainer 3ab959bf82d75a2d4ac6ac3b62948e7c). confusion points at metrics.json, which carries the Bubble/Cluster confusion block. n_test included beyond schema. seconds_total 1477.1 from metrics.json timing."
+}

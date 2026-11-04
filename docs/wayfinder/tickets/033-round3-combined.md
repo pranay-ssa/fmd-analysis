@@ -1,8 +1,8 @@
 ---
-title: "Ticket 033: round 3, combined twenty-column head"
+title: "Ticket 033: round 3, combined nineteen-column head"
 date: 2026-11-04
 type: protocol
-status: active
+status: done
 where: docs/wayfinder/tickets/033-round3-combined.md
 ---
 Type: task, AFK. Map: Map: [OOI point 4](../ooi_point4_map.md)..
