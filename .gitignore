@@ -92,3 +92,6 @@ docs/archive/
 # Model weights stay on the VM; local copies are for re-scoring only.
 run/**/*.pt
 run/**/*.pth
+
+# === Timesheets (personal work records, local only, never pushed) ===
+timesheets/*.xlsx
