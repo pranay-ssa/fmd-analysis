@@ -64,10 +64,26 @@ stays. The bubble-only pass count is the number the block exists to move.
 | E3 | Notion staging lines, draft state |
 | E4 | Orphan sweep of parked cards |
 
+## F. Thresholds for the full-data rerun (added 2026-11-04)
+
+The protocol is written: `docs/reference/threshold_protocol.md`. It replaces the count guard with a
+validation precision floor, fixes the grid floor so a class cannot win by firing on everything, and
+requires cut stability across two seeds.
+
+| # | Lane | Card | Output |
+|---|---|---|---|
+| F1 | W | Re-derive every cut on the new model under the protocol, two seeds | selected-thresholds table |
+| F2 | W | Recompute F1, precision, recall and false positives from the saved scores | verifier exit 0 |
+| F3 | O | Workbook with a selected-thresholds sheet and a per-class error audit | revised workbook |
+
+F1 runs after the full-data model exists; it does not depend on blocks A to D, so it can sit parallel to
+them if the model lands at the same time.
+
 ## Counts and timing
 
-18 cards: 9 worker, 5 subagent, 4 operator. Four GPU runs at about 25 minutes each plus verification.
-Serial estimate 3 h 15 min; with the analyses inside the GPU windows, about 2 h 15 min.
+21 cards: 11 worker, 5 subagent, 5 operator. Four GPU runs at about 25 minutes each plus verification.
+Serial estimate 3 h 15 min; with the analyses inside the GPU windows, about 2 h 15 min. Block F adds
+about 30 minutes of measurement, not GPU time.
 
 ## Rules applied
 

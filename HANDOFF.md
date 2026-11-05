@@ -35,6 +35,11 @@ locally. The A100 is idle.
 plain-English walkthrough and the point-4 workbook first; approval of the plan creates the cards, and a
 second go releases the first dispatch.
 
+**Ready for the full-data rerun:** `docs/reference/threshold_protocol.md`. It fixes the rule we will use
+when the model is retrained on the complete data: validation precision floor instead of a picture-count
+guard, grid floor at 0.05, plateau centre instead of a single peak, two seeds, and a selected-thresholds
+sheet in the workbook. No approval needed, it is a method doc.
+
 **Next, in order**
 
 1. Bubble-only false fails: 28 of 36, with Foreign Matter firing on 23 and Fiber on 11. Hard
