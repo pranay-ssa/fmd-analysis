@@ -1,12 +1,19 @@
 ---
 title: Decks working folder and weekly cycle
-date: 2026-10-05
+date: 2026-11-05
 type: reference
 status: active
 where: decks/README.md
 ---
 
 # Decks working folder
+
+## Current draft
+
+`drafts/FMD_MultiLabel_2026W45_DRAFT.pptx` is the week-45 draft for Monday 9 November. It has 12
+slides: the multi-label explanation, the A/B results, the per-class threshold table and the split.
+The PDF beside it is the review copy; the spec and builder are in the same folder. It keeps
+pass/fail numbers out, per the scope for this week.
 
 ## Layout
 

@@ -1,45 +1,48 @@
 ---
-title: LP run on the 24-file annotation, results folder
-date: 2026-10-29
+title: Multilabel production reports
+date: 2026-11-05
 type: reference
 status: active
-where: reports/multilabel_lp_full_20261029/README.md
+where: reports/multilabel_production/README.md
 ---
 
-# LP run on the 24-file annotation (2026-10-29)
+# Multilabel production reports
 
-This folder holds the read-out of the current experiment: both variants rerun on the
-24-file annotation of record and split v7. **These results take priority over the
-2026-10-28 run in reports/multilabel/ in every quote, message and meeting.**
+This folder holds the client-safe workbooks and reports for the lens-presentation and object models.
 
-## Results in one look
+## Current read-out (2026-11-05)
 
-| Measure | 2026-10-28 run | This run |
-|---|---|---|
-| Variant 1 macro average precision, 8 judgeable classes | 0.783 | **0.851** (bar 0.85, met) |
-| Variant 2 macro average precision | 0.764 | **0.817** |
-| Object flag fires on OOI pictures | 84.5% | **99.3%** (target 90) |
-| Object flag fires on Clear pictures | 0.9% | **0.5%** (limit 5) |
-| Train / test pictures (variant 2) | 5,327 / 1,332 | 5,989 / 1,481 |
-| Train / test pictures (variant 1) | 4,971 / 1,248 | 5,403 / 1,344 |
+`FMD_MultiLabel_Runs_2026W45.xlsx` is the A/B comparison for the October story. Seven sheets:
+Summary, Per-class results, Thresholds, Threshold rule, Routing, Split, Definitions and method. It
+reads the frozen 70/15/15 split: 5,239 training, 1,110 validation, 1,121 test pictures.
 
-Underrepresented classes, average precision old to new: Low Dose 0.77 to 0.92,
-Dirty Camera 0.58 to 0.72, Folded Lens 0.27 to 0.49, Lens Off Center 0.75 to 0.82.
-Folded Lens remains below its 0.70 target; the fold-plus-multiple-lens overlap is a
-real limitation, not only a data shortage.
+| Measure | Lens only | Lens + object flag |
+|---|---:|---:|
+| Lens AUPRC, 8 classes | 0.836 | 0.818 |
+| Macro F1 at 0.5 | 0.722 | 0.724 |
+| Macro F1 at chosen thresholds | 0.801 | 0.781 |
+| Exact match at 0.5 | 0.789 | 0.764 |
+| Exact match at chosen thresholds | 0.777 | 0.762 |
+| Inference time per picture | 5.76 ms | 5.59 ms |
 
-## Where the evidence lives
+The workbook carries per-class thresholds, validation and test counts, the four 0.50 defaults, the
+object-flag routing table and the split. It is verified against the two run records (429 checks, plus
+a tamper proof). Pass/fail numbers are not in it; they are next week's subject.
 
-- Raw run: `run/multilabel_lp_full_20261029/` (metrics for both variants, log,
-  model checkpoints on the training machine).
-- Split: `run/split_20261029_v7/`, built from `run/eda_full_20261029/resolved_labels.csv`
-  through `run/multilabel_edge_20261029_rev4/label_matrix.csv` under the frozen rules.
-- Label tables: `run/multilabel_lp_full_20261029/labels_a.csv` (6,747 rows) and
-  `labels_b.csv` (7,470 rows).
+Sources: `run/multilabel_lp_v8_20261105/a/` (lens only) and
+`run/multilabel_lp_v8_20261103/b/` (lens plus flag).
 
-## Status of this folder
+## History
 
-`lp_full_results_20261029.xlsx` and `lp_full_report_20261029.html` are the current read-out,
-rebuilt from this run and verified cell by cell against the metrics (25 checks, including a
-tamper proof). The two 2026-10-28 files in this folder are the record of what was already
-sent, kept as history and not updated. Prose numbers in them are the old run's.
+- `ooi_point4_workbook_20261104.xlsx` - point 4 pass/fail workbook; the numbers are in the week-45
+  session doc.
+- `lp_thresholds_20261103.xlsx` - per-class thresholds from the 3 November lens-plus-flag run.
+- `FMD_Split_By_Class_20261030.xlsx` - split counts by class, 30 October.
+- `lp_full_results_20261029.xlsx` and `lp_full_report_20261029.html` - 2026-10-29 read-out on the
+  24-file annotation and split v7. They are history; do not quote them against the new split.
+- The 2026-10-28 files are the record of what was sent; do not update them.
+
+## Rule
+
+Every workbook in this folder is generated from a saved run record and re-checked after it is
+written. A number that cannot be traced to a run record does not go in.

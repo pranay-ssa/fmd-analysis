@@ -1,6 +1,6 @@
 ---
 title: Handoff (state of the work)
-date: 2026-11-04
+date: 2026-11-05
 type: state
 status: active
 where: HANDOFF.md
@@ -8,86 +8,81 @@ where: HANDOFF.md
 
 # fmd-analysis - Handoff
 
-**Resume here:** point 4 is complete. The object-of-interest flag is now seven trainable object
-classes plus a size-gate subset, trained in one nineteen-column head with inverse-frequency weights,
-and the pass/fail rule is read from that head. The delivered artifact is
-`reports/multilabel_production/ooi_point4_workbook_20261104.xlsx`; the decision record is
-`docs/decisions/2026-11-04-ooi-class-vs-gate.md`; the round-by-round record is
-`docs/sessions/2026-W45.md`.
+**Resume here:** the October story is drafted and the A/B workbook is built for the lead. The draft
+is `decks/drafts/FMD_MultiLabel_2026W45_DRAFT.pptx` (12 slides) with a PDF beside it; the workbook is
+`reports/multilabel_production/FMD_MultiLabel_Runs_2026W45.xlsx` (7 sheets). Point 4 remains
+complete; its workbook and decision are unchanged.
 
-**Numbers to quote**
+**Numbers to quote (frozen 70/15/15 split, validation-chosen thresholds)**
 
-- Class labels beat gate labels on identical truth: macro AP 0.4955 against 0.4391.
-- The weight beats no weight: 0.6330 against 0.4955, with HEMA 0.963 and Extraneous Polymer 0.428.
-- One head holds both jobs: object 0.6380, lens judgeable 0.8815 against November's 0.8182.
-- Pass/fail at 0.5: 760 of 768 fail pictures caught, 1 clear picture wrongly failed, 8 of 36
-  bubble-only pictures passed, 324 of 353 passed overall. Under the same rule November catches
-  710 of 768 and wrongly fails 3 clear pictures.
+- Lens only (A, 5 November): lens AUPRC 0.836, macro F1 0.722 at 0.5 and 0.801 at chosen
+  thresholds, exact match 0.789 at 0.5 and 0.777 at chosen, 5.76 ms per picture.
+- Lens plus object flag (B, 3 November): lens AUPRC 0.818, macro F1 0.724 at 0.5 and 0.781 at
+  chosen, exact match 0.764 at 0.5 and 0.762 at chosen, 5.59 ms per picture.
+- Object flag on 1,121 test pictures: object-only 117 of 120 (97.5%) at 0.55; mixed 211 of 223
+  (94.6%); Clear 0 of 317. The flag's threshold is 0.55.
+- Folded Lens: 0.42 alone, 0.49 with the flag, below the 0.70 target.
+- The four classes held at 0.50: Dirty Strobe (8 validation / 2 test), View Obstructed (9 / 10),
+  Bubble Scatter (1 / 1), Package Misalignment (5 / 5). The guard is validation; test never chooses
+  a threshold.
 
 **In flight**
 
-Nothing runs. The four arms of `run/multilabel_ooi_20261104/` are complete with `status: ok` in
-each `run.json`; the checkpoints (`final.pt`, 91 MB each) live on the VM only and are gitignored
-locally. The A100 is idle.
-
-**Parked for review:** the atomised plan for the next round is
-`docs/wayfinder/next_chain_lanes_20261105.md`. Nothing is created and nothing is dispatched. Read the
-plain-English walkthrough and the point-4 workbook first; approval of the plan creates the cards, and a
-second go releases the first dispatch.
-
-**Ready for the full-data rerun:** `docs/reference/threshold_protocol.md`. It fixes the rule we will use
-when the model is retrained on the complete data: validation precision floor instead of a picture-count
-guard, grid floor at 0.05, plateau centre instead of a single peak, two seeds, and a selected-thresholds
-sheet in the workbook. No approval needed, it is a method doc.
+Nothing runs. The draft and workbook are ready for the lead. Pass/fail numbers are deliberately out
+of the October story; they are next week's subject.
 
 **Next, in order**
 
-1. Bubble-only false fails: 28 of 36, with Foreign Matter firing on 23 and Fiber on 11. Hard
-   negatives from bubble-only pictures, or a specificity term on those two classes.
-2. Extend the threshold grid to 0.99 and rescore; HEMA and No Lens chose 0.95, the grid boundary.
-3. A second seed of the weighted and combined arms, to put an error bar on every delta.
-4. The gate-plus-weight arm, testing "the gate is worse" against the best gate, not an unweighted one.
-5. Client rulings, then the annotation owner's items, then ticket 022.
+1. Send the draft and the workbook to the lead; invite corrections on the slide face and the
+   per-class table.
+2. Build the pass/fail readout for the following week from the point-4 scores.
+3. Run the full-data retrain under `docs/reference/threshold_protocol.md`; the protocol uses a
+   validation precision floor, a 0.05 grid floor, plateau centre, two seeds, and a
+   selected-thresholds sheet.
+4. Bubble-only false fails, the 0.99 grid boundary, and a second seed remain open.
 
 **State to know**
 
-- The split is `run/split_20261103_v8/` (7,470 rows, md5 `1a71d66d2de384cf47a3fcf7d9115baa`) and is
-  unchanged since 2026-11-03. Every number above reads it.
-- The label table is `run/ooi_matrix_20261104/ooi_labels.csv` (7,470 x 27, md5 `7fd1106e`), carrying
-  both `class_*` and `gate_*` columns. The gate column is a subset, never a second class.
-- Surface Groove has zero pictures. Nineteen columns are trained, not twenty; the map and ticket 033
-  were corrected.
-- `train_multilabel.py` carries a fix for a lens-branch `KeyError` that only fired at the end of a
-  combined run. Its smoke still does not cover the evaluation branch; that is a known gap.
-- One seed only. Treat any delta below about 0.03 AP as unproven.
+- The split is `run/split_20261103_v8/` (7,470 rows, md5 `1a71d66d2de384cf47a3fcf7d9115baa`). The
+  counts are 5,239 training, 1,110 validation, 1,121 test.
+- Run records: `run/multilabel_lp_v8_20261103/b/` (lens plus flag) and
+  `run/multilabel_lp_v8_20261105/a/` (lens only). Arm a wrote metrics, thresholds and labels but no
+  `run.json`; b did. Fix that on the next run.
+- The threshold grid was 0.05 to 0.95 in 0.05 steps; the protocol reference asks for a finer grid on
+  the full-data run.
+- The deck and workbook use the field's standard terms: train, validation, test, threshold, AUPRC,
+  macro F1, exact match, inference time per picture. The decision is
+  `docs/decisions/2026-11-05-standard-terms.md`.
+- `docs/INDEX.md` is generated; do not hand-edit. `timesheets/*.xlsx` stay local; only the README is
+  tracked.
 
 **Open items that need a human**
 
-- P3_HE: HEMA Obstruction in the production files, HEMA Fragment in the September project. Until
-  the client rules, production boxes count as HEMA and the whole-image tag stays a reference row.
-- Fiber versus Extraneous Polymer naming, provisional until the next annotation.
-- Annotation owner: three pictures are listed twice in the export, and one is listed with no marks.
-- Ticket 022 picture-by-picture legs (Fiber gate 137-vs-136, Folded Lens 237-vs-178, the 84-picture
-  rescue set) were parked on the seven-file record and need re-reading against the current one.
-- Folded Lens stays below its 0.70 target; the overlap with Multiple Lens is a real limitation.
-- Whether `handover/model_package/config.json` should be corrected now, and whether the methodology
-  doc covers both the old and the new measurement.
+- P3_HE: HEMA Obstruction in production files, HEMA Fragment in September; until the client rules,
+  production boxes count as HEMA.
+- Fiber versus Extraneous Polymer naming, provisional.
+- Annotation owner: three pictures listed twice, one with no marks.
+- Folded Lens below 0.70; the overlap with Multiple Lens is a real limitation.
+- The client package still points at the 2026-10-29 checkpoint; the lead has not chosen a variant
+  for handover.
 
 **Decisions settled, do not relitigate**
 
 - Object classes, not the micron gate, are the training target. The gate is reported as "of which
-  size-flagged" and never fed to the same model as a second class.
+  size-flagged".
 - Pass/fail: a picture passes only when clear or carrying nothing but Bubble and Bubble Cluster.
 - Clear is exclusive. Unannotated pictures are out. Standalone tags carry no co-tags.
-- Bubble is one class: Bubble Irregular and Stretched Bubble fold in; Bubble On 123, Bubble On Edge
-  and HEMA Obstruction stay out of the split label space.
+- Bubble is one class; Bubble Irregular and Stretched Bubble fold in; Bubble On 123, Bubble On Edge
+  and HEMA Obstruction stay out.
 - Weighting is inverse frequency on the training split only. Thresholds come from validation only,
-  grid 0.05 to 0.95, highest F1, ties to the higher cut.
-- Reader-facing artifacts carry no internal names, paths, ticket ids or role attribution, and every
-  doc carries the five-line header. `docs/INDEX.md` is generated, never hand-edited.
+  highest F1, ties to the higher threshold.
+- The threshold table defaults a class to 0.50 when validation has fewer than 10 positives; test is
+  shown but never chooses.
+- Reader-facing artifacts carry no internal names, paths, ticket ids or role attribution; every doc
+  carries the five-line header.
 
 **Where the history lives**
 
-`docs/sessions/2026-W45.md` covers this work; `2026-W44.md` covers 26 October to 1 November.
-Decisions are in `docs/decisions/`, standing instructions in `docs/instruction.md`, and the
-working traps in `session_shakehand.md`, dated 2026-10-28 and stale on VM staging.
+`docs/sessions/2026-W45.md` covers this week; `2026-W44.md` covers 26 October to 1 November.
+Decisions are in `docs/decisions/`, standing instructions in `docs/instruction.md`, and the working
+traps in `session_shakehand.md` (dated 2026-10-28, stale on VM staging).

@@ -8,6 +8,11 @@ where: docs/reference/client-handover-lp-multilabel.md
 
 # Client handover package for the LP multilabel model
 
+> **Read this first (2026-11-05):** the October story now uses the frozen 70/15/15 split and the A/B
+> readout in `reports/multilabel_production/README.md`. The numbers below belong to the 2026-10-29
+> checkpoint, which is still the one in `handover/model_package/` until the lead chooses a variant.
+> Do not mix the two sets.
+
 How to ship the trained lens-presentation multilabel model to the client, without
 re-deriving any of it. The package is already built and verified; only the
 checkpoint choice is open.
