@@ -13,6 +13,8 @@ WHAT CHANGED FROM train_lp.py (the 2026-10-29 run)
    threshold, so the gain (or the loss) is visible and attributable.
 4. A class with fewer than 10 validation positives is not tuned. It keeps 0.5 and is
    labelled "default" rather than given a threshold that is really noise.
+5. With --all-rows, variant a also keeps the 723 object-only pictures, so a and b
+   read the same 7,470 rows and differ only in the thirteenth answer.
 
 Everything else is the 2026-10-29 protocol, unchanged on purpose: ResNet-50, 224 px,
 batch 8, 50 epochs fixed with no early stopping, SGD lr 1e-4 momentum 0.9, seed 42,
@@ -132,7 +134,7 @@ def lp_flags(codes):
     return flags
 
 
-def build_rows(variant, verbose=True):
+def build_rows(variant, verbose=True, all_rows=False):
     """Build the rows for one variant, carrying the three-way split assignment."""
     pictures = read_annotation()
     clear = read_clear()
@@ -143,7 +145,7 @@ def build_rows(variant, verbose=True):
         flags = lp_flags(entry["codes"])
         has_lp = any(flags.values())
         has_object = bool(entry["codes"] & OBJECT_CODES)
-        keep = has_lp if variant == "a" else (has_lp or has_object)
+        keep = has_lp or (has_object and (variant == "b" or all_rows))
         if not keep:
             continue
         rows.append({"md5": md5, "image_path": entry["path"], "split": split.get(md5),
@@ -172,7 +174,7 @@ def build_rows(variant, verbose=True):
 
     rows.sort(key=lambda r: r["md5"])
 
-    expected = EXPECTED[variant]
+    expected = EXPECTED["b"] if (variant == "b" or all_rows) else EXPECTED["a"]
     if len(rows) != expected["rows"]:
         raise SystemExit(f"variant {variant}: {len(rows)} rows, expected {expected['rows']}")
     for code, want in expected["positives"].items():
@@ -676,6 +678,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--variant", choices=["a", "b"], required=True)
     parser.add_argument("--labels-only", action="store_true")
+    parser.add_argument("--all-rows", action="store_true",
+                        help="variant a also keeps object-only pictures, so both variants read 7,470 rows")
     parser.add_argument("--smoke", action="store_true")
     parser.add_argument("--dump-predictions", action="store_true",
                         help="score val and test from --out/final.pt and write predictions.npz")
@@ -693,7 +697,7 @@ def main():
                         help="a class below this many val positives keeps 0.5")
     args = parser.parse_args()
 
-    rows = build_rows(args.variant)
+    rows = build_rows(args.variant, all_rows=args.all_rows)
 
     if args.labels_only:
         out = Path(args.out) if args.out else \
