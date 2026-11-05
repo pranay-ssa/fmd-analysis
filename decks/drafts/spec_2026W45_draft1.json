@@ -1,0 +1,1449 @@
+{
+  "slide_size": [
+    13.333,
+    7.5
+  ],
+  "slides": [
+    {
+      "bare": true,
+      "notes": "No agenda slide. Open on the idea: one picture can carry several defects, and the model answers each one on its own.",
+      "items": [
+        {
+          "kind": "text",
+          "l": 0.9,
+          "t": 1.95,
+          "w": 11.5,
+          "h": 1.2,
+          "text": "One picture, several answers",
+          "size": 40,
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 0.9,
+          "t": 3.25,
+          "w": 11.5,
+          "h": 0.6,
+          "text": "What multi-label reading does, and how it becomes the edge check",
+          "size": 20,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 0.9,
+          "t": 4.1,
+          "w": 11.5,
+          "h": 0.4,
+          "text": "Weekly review, Monday 9 November 2026",
+          "size": 14
+        },
+        {
+          "kind": "line",
+          "x1": 0.9,
+          "y1": 5.05,
+          "x2": 4.2,
+          "y2": 5.05,
+          "color": "#9CA3AF",
+          "width": 0.8
+        },
+        {
+          "kind": "text",
+          "l": 0.9,
+          "t": 6.25,
+          "w": 11.5,
+          "h": 0.5,
+          "text": "All numbers are measured on the annotation of record. The population is named on every table.",
+          "size": 10,
+          "color": "#6B7280"
+        }
+      ]
+    },
+    {
+      "title": "The record now covers all 24 production files",
+      "subtitle": "17 new files and 7 revised files. The older libraries are unchanged.",
+      "notes": "The EDA was presented last week. This slide only fixes the population that every later number reads. The 24 files are 17 new and 7 revised, not 24 new. The record counts one annotation per picture. The 147 pictures outside the experiment carry a retired class or no usable object label; they are 62 legacy-only and 85 un-gated object-only.",
+      "items": [
+        {
+          "kind": "table",
+          "l": 0.5,
+          "t": 1.7,
+          "w": 6.6,
+          "h": 3.0,
+          "font": 11.5,
+          "row_h": 0.42,
+          "col_widths": [
+            4.4,
+            2.2
+          ],
+          "rows": [
+            [
+              "Measure",
+              "Now"
+            ],
+            [
+              "Pictures examined",
+              "10,614"
+            ],
+            [
+              "Pictures with a mark",
+              "5,500"
+            ],
+            [
+              "Clear pictures",
+              "2,117"
+            ],
+            [
+              "Pictures in the labelled record",
+              "7,617"
+            ],
+            [
+              "Object marks",
+              "37,199 on 2,332 pictures"
+            ],
+            [
+              "Production files at the top of the record",
+              "24"
+            ]
+          ]
+        },
+        {
+          "kind": "bullets",
+          "l": 7.45,
+          "t": 1.75,
+          "w": 5.35,
+          "h": 3.8,
+          "size": 12.5,
+          "space": 12,
+          "items": [
+            "The 24 files hold 3,597 picture entries. 719 of those pictures are new to the record; the rest repeat pictures already there.",
+            "The revised files changed 133 of their 1,047 pictures. Most changes merged three bubble labels into one.",
+            "The experiment uses 7,470 of the 7,617 labelled pictures. The 147 left out carry a retired class or no usable object label."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "One picture can carry more than one defect",
+      "subtitle": "The guide records each condition separately. A single-label model would have to choose one and drop the rest.",
+      "notes": "2,739 is 36.7 percent of 7,470. The old five-tag figure of 178 of 3,377 was a different label set and is not comparable. Almost every folded lens picture also carries multiple lens, which is the clearest example of why one label is not enough.",
+      "items": [
+        {
+          "kind": "rect",
+          "l": 0.5,
+          "t": 1.7,
+          "w": 5.9,
+          "h": 3.85,
+          "fill": "#FFFFFF",
+          "line": "#D1D5DB"
+        },
+        {
+          "kind": "rect",
+          "l": 6.9,
+          "t": 1.7,
+          "w": 5.9,
+          "h": 3.85,
+          "fill": "#FFFFFF",
+          "line": "#D1D5DB"
+        },
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 1.85,
+          "w": 5.5,
+          "h": 0.35,
+          "text": "Single label",
+          "size": 16,
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 7.1,
+          "t": 1.85,
+          "w": 5.5,
+          "h": 0.35,
+          "text": "Multi-label",
+          "size": 16,
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "l": 0.8,
+          "t": 2.45,
+          "w": 2.2,
+          "h": 1.2,
+          "text": "One picture",
+          "size": 10,
+          "fill": "#F3F4F6",
+          "line": "#D1D5DB"
+        },
+        {
+          "kind": "rect",
+          "l": 7.2,
+          "t": 2.45,
+          "w": 2.2,
+          "h": 1.2,
+          "text": "One picture",
+          "size": 10,
+          "fill": "#F3F4F6",
+          "line": "#D1D5DB"
+        },
+        {
+          "kind": "pill",
+          "l": 3.35,
+          "t": 2.55,
+          "w": 2.9,
+          "h": 0.45,
+          "text": "Multiple Lens: yes",
+          "size": 10,
+          "fill": "#DCFCE7",
+          "line": "#86EFAC",
+          "color": "#166534"
+        },
+        {
+          "kind": "pill",
+          "l": 3.35,
+          "t": 3.2,
+          "w": 2.9,
+          "h": 0.45,
+          "text": "Folded Lens: dropped",
+          "size": 10,
+          "fill": "#F3F4F6",
+          "line": "#D1D5DB",
+          "color": "#6B7280"
+        },
+        {
+          "kind": "line",
+          "x1": 3.35,
+          "y1": 3.42,
+          "x2": 6.25,
+          "y2": 3.42,
+          "color": "#6B7280",
+          "width": 1.2
+        },
+        {
+          "kind": "pill",
+          "l": 9.75,
+          "t": 2.45,
+          "w": 2.9,
+          "h": 0.42,
+          "text": "Multiple Lens: yes",
+          "size": 10,
+          "fill": "#DCFCE7",
+          "line": "#86EFAC",
+          "color": "#166534"
+        },
+        {
+          "kind": "pill",
+          "l": 9.75,
+          "t": 2.95,
+          "w": 2.9,
+          "h": 0.42,
+          "text": "Folded Lens: yes",
+          "size": 10,
+          "fill": "#DCFCE7",
+          "line": "#86EFAC",
+          "color": "#166534"
+        },
+        {
+          "kind": "pill",
+          "l": 9.75,
+          "t": 3.45,
+          "w": 2.9,
+          "h": 0.42,
+          "text": "Foreign Matter: no",
+          "size": 10,
+          "fill": "#F3F4F6",
+          "line": "#D1D5DB",
+          "color": "#6B7280"
+        },
+        {
+          "kind": "pill",
+          "l": 9.75,
+          "t": 3.95,
+          "w": 2.9,
+          "h": 0.42,
+          "text": "Clear: no",
+          "size": 10,
+          "fill": "#F3F4F6",
+          "line": "#D1D5DB",
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 0.5,
+          "t": 5.75,
+          "w": 12.3,
+          "h": 1.1,
+          "size": 13.5,
+          "spacing": 5,
+          "text": "2,739 of the 7,470 pictures carry two or more answers.\n1,524 carry both a lens condition and an object.\nAlmost every folded lens picture is also a multiple lens picture. A single label drops one of the two."
+        }
+      ]
+    },
+    {
+      "title": "One pass, an answer for each class",
+      "subtitle": "Twelve lens conditions and one object flag. Thirteen answers, each with its own threshold.",
+      "notes": "The network is a ResNet-50 with one output per class and binary cross-entropy. There is no softmax, because the answers are not exclusive. The threshold is chosen later, on validation pictures. Surface Groove has no pictures in this data, so it has no trained answer.",
+      "items": [
+        {
+          "kind": "rect",
+          "l": 0.5,
+          "t": 2.0,
+          "w": 1.8,
+          "h": 1.0,
+          "text": "One picture",
+          "size": 10,
+          "fill": "#F3F4F6",
+          "line": "#D1D5DB"
+        },
+        {
+          "kind": "arrow",
+          "x1": 2.3,
+          "y1": 2.5,
+          "x2": 2.82,
+          "y2": 2.5
+        },
+        {
+          "kind": "text",
+          "l": 2.3,
+          "t": 2.18,
+          "w": 0.5,
+          "h": 0.25,
+          "text": "one pass",
+          "size": 8,
+          "color": "#6B7280",
+          "align": "center"
+        },
+        {
+          "kind": "rect",
+          "l": 2.82,
+          "t": 1.8,
+          "w": 2.6,
+          "h": 1.4,
+          "text": "Shared image reading\nthe same pass for every answer",
+          "size": 11,
+          "fill": "#FFFFFF",
+          "line": "#9CA3AF"
+        },
+        {
+          "kind": "arrow",
+          "x1": 5.42,
+          "y1": 2.5,
+          "x2": 5.98,
+          "y2": 2.5
+        },
+        {
+          "kind": "text",
+          "l": 5.42,
+          "t": 2.18,
+          "w": 0.6,
+          "h": 0.25,
+          "text": "scores",
+          "size": 8.5,
+          "color": "#6B7280",
+          "align": "center"
+        },
+        {
+          "kind": "rect",
+          "l": 5.98,
+          "t": 1.55,
+          "w": 6.85,
+          "h": 3.55,
+          "fill": "#FFFFFF",
+          "line": "#D1D5DB"
+        },
+        {
+          "kind": "text",
+          "l": 6.2,
+          "t": 1.7,
+          "w": 3.2,
+          "h": 0.3,
+          "text": "Lens conditions (12)",
+          "size": 10.5,
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 10.15,
+          "t": 1.7,
+          "w": 2.4,
+          "h": 0.3,
+          "text": "Object (1)",
+          "size": 10.5,
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 6.2,
+          "t": 2.12,
+          "w": 1.55,
+          "h": 0.25,
+          "text": "Multiple Lens",
+          "size": 9.5
+        },
+        {
+          "kind": "bar",
+          "l": 7.85,
+          "t": 2.18,
+          "w": 1.05,
+          "h": 0.12,
+          "frac": 0.93,
+          "fill": "#374151",
+          "track": "#E5E7EB"
+        },
+        {
+          "kind": "line",
+          "x1": 8.375,
+          "y1": 2.14,
+          "x2": 8.375,
+          "y2": 2.34,
+          "color": "#EF4444",
+          "width": 1.2
+        },
+        {
+          "kind": "pill",
+          "l": 9.1,
+          "t": 2.08,
+          "w": 0.62,
+          "h": 0.3,
+          "text": "Yes",
+          "size": 9,
+          "fill": "#DCFCE7",
+          "line": "#86EFAC",
+          "color": "#166534"
+        },
+        {
+          "kind": "text",
+          "l": 6.2,
+          "t": 2.67,
+          "w": 1.55,
+          "h": 0.25,
+          "text": "Folded Lens",
+          "size": 9.5
+        },
+        {
+          "kind": "bar",
+          "l": 7.85,
+          "t": 2.73,
+          "w": 1.05,
+          "h": 0.12,
+          "frac": 0.87,
+          "fill": "#374151",
+          "track": "#E5E7EB"
+        },
+        {
+          "kind": "line",
+          "x1": 8.375,
+          "y1": 2.69,
+          "x2": 8.375,
+          "y2": 2.89,
+          "color": "#EF4444",
+          "width": 1.2
+        },
+        {
+          "kind": "pill",
+          "l": 9.1,
+          "t": 2.63,
+          "w": 0.62,
+          "h": 0.3,
+          "text": "Yes",
+          "size": 9,
+          "fill": "#DCFCE7",
+          "line": "#86EFAC",
+          "color": "#166534"
+        },
+        {
+          "kind": "text",
+          "l": 6.2,
+          "t": 3.22,
+          "w": 1.55,
+          "h": 0.25,
+          "text": "Lens Off Center",
+          "size": 9.5
+        },
+        {
+          "kind": "bar",
+          "l": 7.85,
+          "t": 3.28,
+          "w": 1.05,
+          "h": 0.12,
+          "frac": 0.31,
+          "fill": "#374151",
+          "track": "#E5E7EB"
+        },
+        {
+          "kind": "line",
+          "x1": 8.375,
+          "y1": 3.24,
+          "x2": 8.375,
+          "y2": 3.44,
+          "color": "#EF4444",
+          "width": 1.2
+        },
+        {
+          "kind": "pill",
+          "l": 9.1,
+          "t": 3.18,
+          "w": 0.62,
+          "h": 0.3,
+          "text": "No",
+          "size": 9,
+          "fill": "#F3F4F6",
+          "line": "#D1D5DB",
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 10.15,
+          "t": 2.12,
+          "w": 1.35,
+          "h": 0.25,
+          "text": "Any object",
+          "size": 9.5
+        },
+        {
+          "kind": "bar",
+          "l": 11.55,
+          "t": 2.18,
+          "w": 0.65,
+          "h": 0.12,
+          "frac": 0.18,
+          "fill": "#374151",
+          "track": "#E5E7EB"
+        },
+        {
+          "kind": "line",
+          "x1": 11.875,
+          "y1": 2.14,
+          "x2": 11.875,
+          "y2": 2.34,
+          "color": "#EF4444",
+          "width": 1.2
+        },
+        {
+          "kind": "pill",
+          "l": 12.28,
+          "t": 2.08,
+          "w": 0.44,
+          "h": 0.3,
+          "text": "No",
+          "size": 8.5,
+          "fill": "#F3F4F6",
+          "line": "#D1D5DB",
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 10.15,
+          "t": 2.62,
+          "w": 2.55,
+          "h": 0.8,
+          "text": "One answer for all eight object classes. It says an object is there, not which one.",
+          "size": 9,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 6.2,
+          "t": 4.3,
+          "w": 6.4,
+          "h": 0.55,
+          "text": "The threshold is the small vertical line: the score above which the answer is yes. Each class has its own.",
+          "size": 9,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "bullets",
+          "l": 0.5,
+          "t": 5.3,
+          "w": 12.3,
+          "h": 1.5,
+          "size": 13,
+          "space": 6,
+          "items": [
+            "Each answer is a score from 0 to 1, not a choice between classes.",
+            "The object flag is one answer for all eight object classes.",
+            "The model does not need a separate pass for each question."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The screen decides the route. The detector does the measuring.",
+      "subtitle": "This is where the multi-label model sits in the edge check.",
+      "notes": "The detector and the size check are the next stage. This deck reports the screen only. Bubbles take the pass route unless a lens condition is also present. The 2,332 object pictures are the record, not a production rate.",
+      "items": [
+        {
+          "kind": "rect",
+          "l": 0.5,
+          "t": 2.75,
+          "w": 1.4,
+          "h": 0.9,
+          "text": "One picture",
+          "size": 10,
+          "fill": "#F3F4F6",
+          "line": "#D1D5DB"
+        },
+        {
+          "kind": "arrow",
+          "x1": 1.9,
+          "y1": 3.2,
+          "x2": 2.22,
+          "y2": 3.2
+        },
+        {
+          "kind": "rect",
+          "l": 2.22,
+          "t": 2.35,
+          "w": 2.78,
+          "h": 1.7,
+          "text": "Screen\nlens conditions + object flag",
+          "size": 11,
+          "fill": "#FFFFFF",
+          "line": "#374151",
+          "line_width": 1.4
+        },
+        {
+          "kind": "arrow",
+          "x1": 5.0,
+          "y1": 3.2,
+          "x2": 5.52,
+          "y2": 1.975
+        },
+        {
+          "kind": "arrow",
+          "x1": 5.0,
+          "y1": 3.2,
+          "x2": 5.52,
+          "y2": 3.2
+        },
+        {
+          "kind": "arrow",
+          "x1": 5.0,
+          "y1": 3.2,
+          "x2": 5.52,
+          "y2": 4.425
+        },
+        {
+          "kind": "text",
+          "l": 4.0,
+          "t": 2.0,
+          "w": 1.0,
+          "h": 0.25,
+          "text": "lens condition",
+          "size": 8.5,
+          "color": "#6B7280",
+          "align": "right"
+        },
+        {
+          "kind": "text",
+          "l": 5.05,
+          "t": 2.95,
+          "w": 0.45,
+          "h": 0.25,
+          "text": "object",
+          "size": 8.5,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 3.9,
+          "t": 4.1,
+          "w": 1.1,
+          "h": 0.25,
+          "text": "nothing found",
+          "size": 8.5,
+          "color": "#6B7280",
+          "align": "right"
+        },
+        {
+          "kind": "rect",
+          "l": 5.52,
+          "t": 1.55,
+          "w": 2.25,
+          "h": 0.85,
+          "text": "Fail, named reason",
+          "size": 10,
+          "fill": "#FEF2F2",
+          "line": "#FCA5A5",
+          "color": "#991B1B"
+        },
+        {
+          "kind": "rect",
+          "l": 5.52,
+          "t": 2.775,
+          "w": 2.25,
+          "h": 0.85,
+          "text": "Detector\nfind and measure",
+          "size": 10,
+          "fill": "#FFFFFF",
+          "line": "#9CA3AF"
+        },
+        {
+          "kind": "rect",
+          "l": 5.52,
+          "t": 4.0,
+          "w": 2.25,
+          "h": 0.85,
+          "text": "Pass",
+          "size": 10,
+          "fill": "#F0FDF4",
+          "line": "#86EFAC",
+          "color": "#166534"
+        },
+        {
+          "kind": "arrow",
+          "x1": 7.77,
+          "y1": 3.2,
+          "x2": 8.23,
+          "y2": 3.2
+        },
+        {
+          "kind": "rect",
+          "l": 8.23,
+          "t": 2.775,
+          "w": 2.3,
+          "h": 0.85,
+          "text": "Size check\nagainst the limit",
+          "size": 10,
+          "fill": "#FFFFFF",
+          "line": "#9CA3AF"
+        },
+        {
+          "kind": "arrow",
+          "x1": 10.53,
+          "y1": 3.2,
+          "x2": 10.98,
+          "y2": 3.2
+        },
+        {
+          "kind": "rect",
+          "l": 10.98,
+          "t": 2.775,
+          "w": 1.8,
+          "h": 0.85,
+          "text": "Decision",
+          "size": 10,
+          "fill": "#FFFFFF",
+          "line": "#9CA3AF"
+        },
+        {
+          "kind": "bullets",
+          "l": 0.5,
+          "t": 5.2,
+          "w": 12.3,
+          "h": 1.4,
+          "size": 12.5,
+          "space": 4,
+          "items": [
+            "The screen answers two questions in one pass: is the lens or package wrong, and is there an object at all.",
+            "Only the detector measures size. The model decides which pictures need it.",
+            "2,332 of the 7,617 labelled pictures carry an object mark. The detector would see those, not all of them."
+          ]
+        },
+        {
+          "kind": "text",
+          "l": 0.5,
+          "t": 6.75,
+          "w": 12.3,
+          "h": 0.25,
+          "text": "Bubbles take the pass route unless a lens condition is also present.",
+          "size": 9,
+          "color": "#6B7280"
+        }
+      ]
+    },
+    {
+      "title": "The two runs, on all 7,470 pictures",
+      "subtitle": "The October design, remeasured on the three-way split. The second run adds one object flag.",
+      "notes": "Both runs read 5,239 training pictures, 1,110 validation pictures and 1,121 test pictures. The lens-only run finished on 5 November: lens AUPRC 0.836, F1 0.722 at 0.5, 0.801 at the chosen thresholds, exact match 0.789 at 0.5 and 0.777 at the chosen thresholds, 5.76 ms per picture. The lens-plus-flag run on 3 November: 0.818, 0.724, 0.781, 0.764, 0.762, 5.59 ms. The flag costs 0.018 on the lens AUPRC. The loss is concentrated in Dirty Camera; Folded Lens is slightly better with the flag. The 5.76 and 5.59 ms are the A100 used for training, not the edge device.",
+      "items": [
+        {
+          "kind": "table",
+          "l": 0.5,
+          "t": 1.7,
+          "w": 8.0,
+          "h": 3.05,
+          "font": 11,
+          "row_h": 0.38,
+          "col_widths": [
+            3.8,
+            2.1,
+            2.1
+          ],
+          "rows": [
+            [
+              "",
+              "Lens only",
+              "Lens + object flag"
+            ],
+            [
+              "Answers per picture",
+              "12",
+              "13"
+            ],
+            [
+              "Lens AUPRC (8 classes)",
+              "0.836",
+              "0.818"
+            ],
+            [
+              "Macro F1 at 0.5",
+              "0.722",
+              "0.724"
+            ],
+            [
+              "Macro F1 at chosen thresholds",
+              "0.801",
+              "0.781"
+            ],
+            [
+              "Exact match at 0.5",
+              "0.789",
+              "0.764"
+            ],
+            [
+              "Exact match at chosen thresholds",
+              "0.777",
+              "0.762"
+            ],
+            [
+              "Inference time per picture",
+              "5.76 ms",
+              "5.59 ms"
+            ]
+          ]
+        },
+        {
+          "kind": "text",
+          "l": 8.9,
+          "t": 1.7,
+          "w": 1.1,
+          "h": 0.45,
+          "text": "5,239",
+          "size": 21,
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 8.9,
+          "t": 2.14,
+          "w": 1.1,
+          "h": 0.25,
+          "text": "train",
+          "size": 10,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 10.15,
+          "t": 1.7,
+          "w": 1.1,
+          "h": 0.45,
+          "text": "1,110",
+          "size": 21,
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 10.15,
+          "t": 2.14,
+          "w": 1.1,
+          "h": 0.25,
+          "text": "validation",
+          "size": 10,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 11.4,
+          "t": 1.7,
+          "w": 1.1,
+          "h": 0.45,
+          "text": "1,121",
+          "size": 21,
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 11.4,
+          "t": 2.14,
+          "w": 1.1,
+          "h": 0.25,
+          "text": "test",
+          "size": 10,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 8.9,
+          "t": 2.85,
+          "w": 3.9,
+          "h": 0.9,
+          "text": "Both runs read the same 7,470 pictures.",
+          "size": 12
+        },
+        {
+          "kind": "bullets",
+          "l": 0.5,
+          "t": 5.2,
+          "w": 12.3,
+          "h": 1.6,
+          "size": 13.5,
+          "space": 8,
+          "items": [
+            "AUPRC is average precision and does not need a threshold. F1 balances misses and false alarms at a threshold. 1 is perfect on both.",
+            "The chosen thresholds raise macro F1 but not the exact-match count. A picture is an exact match only when all twelve lens answers are right.",
+            "The October readout used a two-way split and chose thresholds on the test split. These runs use a three-way split and choose thresholds on validation, so the new scores replace the old ones."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The object flag is accurate enough to route",
+      "subtitle": "Measured on the 1,121 test pictures, at the default threshold and at the threshold chosen on validation.",
+      "notes": "These are the 3 November flag numbers on the same 7,470-picture split. The October 80/20 numbers were 99.3, 94.7 and 0.5 on a different test set; do not mix them. The chosen threshold is 0.55. A miss sends a dirty picture down the pass route; a false alarm sends a good picture to the detector.",
+      "items": [
+        {
+          "kind": "table",
+          "l": 0.5,
+          "t": 1.7,
+          "w": 12.3,
+          "h": 2.2,
+          "font": 12,
+          "row_h": 0.55,
+          "col_widths": [
+            4.8,
+            2.5,
+            2.5,
+            2.5
+          ],
+          "rows": [
+            [
+              "Group",
+              "At 0.5",
+              "At chosen threshold",
+              "Target"
+            ],
+            [
+              "Object, no lens condition",
+              "118 of 120 (98.3%)",
+              "117 of 120 (97.5%)",
+              "at least 90%"
+            ],
+            [
+              "Lens condition and object",
+              "212 of 223 (95.1%)",
+              "211 of 223 (94.6%)",
+              "none"
+            ],
+            [
+              "Clear",
+              "1 of 317 (0.3%)",
+              "0 of 317",
+              "at most 5%"
+            ]
+          ]
+        },
+        {
+          "kind": "bullets",
+          "l": 0.5,
+          "t": 4.35,
+          "w": 12.3,
+          "h": 2.2,
+          "size": 14,
+          "space": 10,
+          "items": [
+            "A miss sends a dirty picture down the pass route. A false alarm sends a good picture to the detector. Both are counted here.",
+            "The chosen threshold is 0.55. The numbers barely move from the default, so the flag is not sensitive to the threshold.",
+            "The flag covers all eight object classes together. It says an object is there, not which one."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The threshold is chosen on validation, not on test",
+      "subtitle": "The threshold is part of the method, not a setting copied from the last data set.",
+      "notes": "This run uses the best F1 on validation with a 10-positive guard. The four default classes also have thin test counts: three are under 10, and View Obstructed has 10. The full-data rerun will use the stricter rule with a precision floor. The per-class thresholds are on the next slide.",
+      "items": [
+        {
+          "kind": "rect",
+          "l": 0.5,
+          "t": 1.8,
+          "w": 2.25,
+          "h": 0.95,
+          "text": "Score the\nvalidation set",
+          "size": 10.5,
+          "fill": "#FFFFFF",
+          "line": "#9CA3AF"
+        },
+        {
+          "kind": "rect",
+          "l": 2.95,
+          "t": 1.8,
+          "w": 2.25,
+          "h": 0.95,
+          "text": "Sweep\nevery threshold",
+          "size": 10.5,
+          "fill": "#FFFFFF",
+          "line": "#9CA3AF"
+        },
+        {
+          "kind": "rect",
+          "l": 5.4,
+          "t": 1.8,
+          "w": 2.25,
+          "h": 0.95,
+          "text": "Keep the best\nF1",
+          "size": 10.5,
+          "fill": "#FFFFFF",
+          "line": "#9CA3AF"
+        },
+        {
+          "kind": "rect",
+          "l": 7.85,
+          "t": 1.8,
+          "w": 2.25,
+          "h": 0.95,
+          "text": "Freeze\nthe thresholds",
+          "size": 10.5,
+          "fill": "#FFFFFF",
+          "line": "#9CA3AF"
+        },
+        {
+          "kind": "rect",
+          "l": 10.3,
+          "t": 1.8,
+          "w": 2.25,
+          "h": 0.95,
+          "text": "Read the test\npictures once",
+          "size": 10.5,
+          "fill": "#FFFFFF",
+          "line": "#9CA3AF"
+        },
+        {
+          "kind": "arrow",
+          "x1": 2.75,
+          "y1": 2.27,
+          "x2": 2.95,
+          "y2": 2.27
+        },
+        {
+          "kind": "arrow",
+          "x1": 5.2,
+          "y1": 2.27,
+          "x2": 5.4,
+          "y2": 2.27
+        },
+        {
+          "kind": "arrow",
+          "x1": 7.65,
+          "y1": 2.27,
+          "x2": 7.85,
+          "y2": 2.27
+        },
+        {
+          "kind": "arrow",
+          "x1": 10.1,
+          "y1": 2.27,
+          "x2": 10.3,
+          "y2": 2.27
+        },
+        {
+          "kind": "bullets",
+          "l": 0.5,
+          "t": 3.3,
+          "w": 12.3,
+          "h": 2.9,
+          "size": 14,
+          "space": 10,
+          "items": [
+            "Choose on validation pictures the model never trained on. Score the test pictures once, after the thresholds are frozen.",
+            "Pick the threshold with the highest F1 on validation. A class with fewer than 10 validation positives keeps 0.5.",
+            "Thresholds do not carry over between data sets. The full-data model gets its own.",
+            "For routing, only the object flag's threshold matters. The per-class thresholds apply to the lens answers."
+          ]
+        },
+        {
+          "kind": "text",
+          "l": 0.5,
+          "t": 6.35,
+          "w": 12.3,
+          "h": 0.3,
+          "text": "0.5 is the default threshold. The chosen threshold is picked for each class on validation.",
+          "size": 9.5,
+          "color": "#6B7280"
+        }
+      ]
+    },
+    {
+      "title": "The threshold each class uses",
+      "subtitle": "The lens-plus-flag run. Four classes keep 0.5 because they have fewer than 10 validation positives.",
+      "notes": "These are the 3 November lens-plus-flag thresholds. Each threshold is the one that gave the highest F1 on the validation split. The four default classes have fewer than 10 validation positives: Dirty Strobe 8, View Obstructed 9, Bubble Scatter 1, Package Misalignment 5. In this split, three of the four are also under 10 in test; View Obstructed has 10. The object flag's threshold is 0.55, chosen on 341 validation positives. The lens-only run chooses its own thresholds; this table is for the routing run.",
+      "items": [
+        {
+          "kind": "table",
+          "l": 0.5,
+          "t": 1.55,
+          "w": 12.3,
+          "h": 4.2,
+          "font": 9.5,
+          "row_h": 0.3,
+          "col_widths": [
+            4.5,
+            1.5,
+            1.2,
+            1.5,
+            3.6
+          ],
+          "rows": [
+            [
+              "Class",
+              "Validation",
+              "Test",
+              "Threshold",
+              "Basis"
+            ],
+            [
+              "Missing Primary Package",
+              "214",
+              "214",
+              "0.25",
+              "Chosen on validation"
+            ],
+            [
+              "Multiple Lens",
+              "214",
+              "214",
+              "0.60",
+              "Chosen on validation"
+            ],
+            [
+              "Lens Off Center",
+              "180",
+              "180",
+              "0.45",
+              "Chosen on validation"
+            ],
+            [
+              "Dirty Camera",
+              "86",
+              "86",
+              "0.30",
+              "Chosen on validation"
+            ],
+            [
+              "No Lens",
+              "49",
+              "49",
+              "0.15",
+              "Chosen on validation"
+            ],
+            [
+              "Folded Lens",
+              "33",
+              "51",
+              "0.45",
+              "Chosen on validation"
+            ],
+            [
+              "Low Dose",
+              "101",
+              "102",
+              "0.40",
+              "Chosen on validation"
+            ],
+            [
+              "Cavity Off Center",
+              "28",
+              "28",
+              "0.30",
+              "Chosen on validation"
+            ],
+            [
+              "Dirty Strobe",
+              "8",
+              "2",
+              "0.50",
+              "Default, under 10"
+            ],
+            [
+              "View Obstructed",
+              "9",
+              "10",
+              "0.50",
+              "Default, under 10"
+            ],
+            [
+              "Bubble Scatter",
+              "1",
+              "1",
+              "0.50",
+              "Default, under 10"
+            ],
+            [
+              "Package Misalignment",
+              "5",
+              "5",
+              "0.50",
+              "Default, under 10"
+            ],
+            [
+              "Any object (one flag)",
+              "341",
+              "343",
+              "0.55",
+              "Chosen on validation"
+            ]
+          ]
+        },
+        {
+          "kind": "text",
+          "l": 0.5,
+          "t": 6.05,
+          "w": 12.3,
+          "h": 0.9,
+          "size": 9.5,
+          "color": "#6B7280",
+          "spacing": 3,
+          "text": "The threshold is chosen on validation by the highest F1. A class with fewer than 10 validation positives keeps 0.5 and is marked Default. The test count is shown beside it.\nClear has no threshold; it is the all-zero row. Surface Groove has no pictures in this data."
+        }
+      ]
+    },
+    {
+      "title": "Pictures per class: train, validation, test",
+      "subtitle": "One frozen split of 7,470 pictures. A picture can appear in more than one row.",
+      "notes": "The split is stratified on labels, so each class keeps roughly 70/15/15. Six classes have fewer than 20 test pictures; their scores are in the workbook but not used in the averages. Surface Groove has no pictures. The eight object classes are one flag in this run; their per-class breakdown is the next stage.",
+      "items": [
+        {
+          "kind": "table",
+          "l": 0.5,
+          "t": 1.5,
+          "w": 12.3,
+          "h": 4.4,
+          "font": 9.5,
+          "row_h": 0.275,
+          "col_widths": [
+            6.3,
+            1.5,
+            1.5,
+            1.5,
+            1.5
+          ],
+          "rows": [
+            [
+              "Class",
+              "Train",
+              "Validation",
+              "Test",
+              "All"
+            ],
+            [
+              "Missing Primary Package",
+              "1,000",
+              "214",
+              "214",
+              "1,428"
+            ],
+            [
+              "Multiple Lens",
+              "998",
+              "214",
+              "214",
+              "1,426"
+            ],
+            [
+              "Lens Off Center",
+              "841",
+              "180",
+              "180",
+              "1,201"
+            ],
+            [
+              "Dirty Camera",
+              "401",
+              "86",
+              "86",
+              "573"
+            ],
+            [
+              "No Lens",
+              "228",
+              "49",
+              "49",
+              "326"
+            ],
+            [
+              "Folded Lens",
+              "249",
+              "33",
+              "51",
+              "333"
+            ],
+            [
+              "Low Dose",
+              "474",
+              "101",
+              "102",
+              "677"
+            ],
+            [
+              "Cavity Off Center",
+              "129",
+              "28",
+              "28",
+              "185"
+            ],
+            [
+              "Dirty Strobe",
+              "23",
+              "8",
+              "2",
+              "33"
+            ],
+            [
+              "View Obstructed",
+              "44",
+              "9",
+              "10",
+              "63"
+            ],
+            [
+              "Bubble Scatter",
+              "3",
+              "1",
+              "1",
+              "5"
+            ],
+            [
+              "Package Misalignment",
+              "23",
+              "5",
+              "5",
+              "33"
+            ],
+            [
+              "Any object (one flag)",
+              "1,563",
+              "341",
+              "343",
+              "2,247"
+            ],
+            [
+              "Clear pictures",
+              "1,482",
+              "318",
+              "317",
+              "2,117"
+            ],
+            [
+              "All pictures",
+              "5,239",
+              "1,110",
+              "1,121",
+              "7,470"
+            ]
+          ]
+        },
+        {
+          "kind": "text",
+          "l": 0.5,
+          "t": 6.05,
+          "w": 12.3,
+          "h": 0.9,
+          "size": 9.5,
+          "color": "#6B7280",
+          "spacing": 3,
+          "text": "Train: used to fit the model. Validation: used only to choose the thresholds. Test: read once, at the end.\nCounts are pictures carrying the class, not the size-flagged subset. The eight object classes are one flag in this run."
+        }
+      ]
+    },
+    {
+      "title": "What we learned",
+      "notes": "The lens AUPRC is 0.836 with twelve answers and 0.818 with thirteen. The loss is concentrated in Dirty Camera; Folded Lens is slightly better with the flag. Folded Lens is the agreed weak class and the one with a clear data gap: the pictures that are both folded and multiple lens are hard to separate.",
+      "items": [
+        {
+          "kind": "bullets",
+          "l": 0.7,
+          "t": 1.75,
+          "w": 12.0,
+          "h": 4.4,
+          "size": 16,
+          "space": 16,
+          "items": [
+            {
+              "lead": "The lens job held.",
+              "text": " The lens AUPRC is 0.836 with twelve answers and 0.818 with thirteen. Dirty Camera accounts for most of the difference."
+            },
+            {
+              "lead": "The flag routes.",
+              "text": " 97.5 percent of object-only pictures at the chosen threshold. No clear picture fired."
+            },
+            {
+              "lead": "The screen is fast.",
+              "text": " 5.6 to 5.8 ms per picture on the A100, measured over 1,121 pictures."
+            },
+            {
+              "lead": "Folded Lens is still weak.",
+              "text": " 0.42 on its own and 0.49 with the flag, under the 0.70 target."
+            }
+          ]
+        },
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 6.2,
+          "w": 12.0,
+          "h": 0.6,
+          "text": "The routing idea holds: the screen decides, the detector measures, and the size check stays.",
+          "size": 14,
+          "bold": true
+        }
+      ]
+    },
+    {
+      "title": "What we do next",
+      "notes": "The first item is the next experiment. The fourth is about stability, not a new model. The detector work is the next stage of the edge algorithm.",
+      "items": [
+        {
+          "kind": "bullets",
+          "l": 0.7,
+          "t": 1.75,
+          "w": 12.0,
+          "h": 4.3,
+          "size": 15,
+          "space": 14,
+          "numbered": true,
+          "items": [
+            {
+              "lead": "Split the object flag into the eight classes.",
+              "text": " Every fail then has a name, not just a flag."
+            },
+            {
+              "lead": "Connect the detector.",
+              "text": " Object location, size in microns, and the size check."
+            },
+            {
+              "lead": "Collect more folded lens pictures.",
+              "text": " The ones that are not also multiple lens."
+            },
+            {
+              "lead": "Run both again with a second starting point.",
+              "text": " So a small difference can be told from noise."
+            }
+          ]
+        },
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 6.2,
+          "w": 12.0,
+          "h": 0.6,
+          "text": "The screen is the first stage of the edge algorithm. The detector and the size check are the second.",
+          "size": 13,
+          "bold": true
+        }
+      ]
+    }
+  ]
+}
