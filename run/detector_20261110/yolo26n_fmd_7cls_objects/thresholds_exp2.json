@@ -1,0 +1,25 @@
+{
+  "lens": {
+    "P1_MPP": 0.45,
+    "P1_ML": 0.65,
+    "P2_LOC": 0.45,
+    "P2_DC": 0.9,
+    "P1_NL": 0.95,
+    "P1_FL": 0.95,
+    "P2_LD": 0.95,
+    "P1_COC": 0.9,
+    "P2_DS": 0.5,
+    "P2_FOV": 0.5,
+    "P2_BSC": 0.5,
+    "P1_PPM": 0.5
+  },
+  "object": {
+    "class_bubble": 0.56,
+    "class_bubble_cluster": 0.12,
+    "class_wet_package": 0.33,
+    "class_fiber": 0.13,
+    "class_extraneous_polymer": 0.03,
+    "class_hema": 0.53,
+    "class_foreign_matter": 0.31
+  }
+}

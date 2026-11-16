@@ -1,0 +1,121 @@
+{
+  "split": {
+    "train": 5239,
+    "val": 1110,
+    "test": 1121
+  },
+  "pictures_with_boxes": {
+    "train": 1563,
+    "val": 341,
+    "test": 343
+  },
+  "empty_labels": {
+    "train": 3676,
+    "val": 769,
+    "test": 778
+  },
+  "per_class": {
+    "Bubble": {
+      "train": {
+        "pictures": 1520,
+        "boxes": 20154
+      },
+      "val": {
+        "pictures": 326,
+        "boxes": 4338
+      },
+      "test": {
+        "pictures": 325,
+        "boxes": 4249
+      }
+    },
+    "Bubble Cluster": {
+      "train": {
+        "pictures": 792,
+        "boxes": 2397
+      },
+      "val": {
+        "pictures": 170,
+        "boxes": 529
+      },
+      "test": {
+        "pictures": 170,
+        "boxes": 493
+      }
+    },
+    "Wet Package": {
+      "train": {
+        "pictures": 220,
+        "boxes": 987
+      },
+      "val": {
+        "pictures": 47,
+        "boxes": 153
+      },
+      "test": {
+        "pictures": 47,
+        "boxes": 202
+      }
+    },
+    "Fiber": {
+      "train": {
+        "pictures": 274,
+        "boxes": 567
+      },
+      "val": {
+        "pictures": 60,
+        "boxes": 90
+      },
+      "test": {
+        "pictures": 58,
+        "boxes": 83
+      }
+    },
+    "Extraneous Polymer": {
+      "train": {
+        "pictures": 106,
+        "boxes": 116
+      },
+      "val": {
+        "pictures": 19,
+        "boxes": 21
+      },
+      "test": {
+        "pictures": 17,
+        "boxes": 18
+      }
+    },
+    "HEMA": {
+      "train": {
+        "pictures": 102,
+        "boxes": 107
+      },
+      "val": {
+        "pictures": 25,
+        "boxes": 27
+      },
+      "test": {
+        "pictures": 27,
+        "boxes": 27
+      }
+    },
+    "Foreign Matter": {
+      "train": {
+        "pictures": 576,
+        "boxes": 1905
+      },
+      "val": {
+        "pictures": 110,
+        "boxes": 249
+      },
+      "test": {
+        "pictures": 112,
+        "boxes": 400
+      }
+    }
+  },
+  "skipped_codes": {},
+  "facts": "7 class detector dataset on the frozen split"
+}
+
+OK: dataset matches the frozen split and the annotation of record.

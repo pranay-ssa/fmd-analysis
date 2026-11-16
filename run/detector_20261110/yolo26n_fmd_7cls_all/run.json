@@ -1,0 +1,105 @@
+{
+  "run": "yolo26n_fmd_7cls_all",
+  "data": "/data/FMD_Data_26082026/fmd_detector_20261110/data_all.yaml",
+  "weights": "/home/pranayp/yolo_ooi/yolo26n.pt",
+  "config": {
+    "epochs": 100,
+    "imgsz": 1280,
+    "batch": 8,
+    "device": 0,
+    "patience": 50,
+    "seed": 42,
+    "optimizer": "auto",
+    "workers": 8,
+    "exist_ok": true,
+    "plots": true,
+    "data": "/data/FMD_Data_26082026/fmd_detector_20261110/data_all.yaml"
+  },
+  "started": "2026-11-10T07:43:01",
+  "status": "ok",
+  "metrics": {
+    "primary": 0.1707,
+    "primary_name": "mAP50-95",
+    "mAP50": 0.3317,
+    "mAP50-95": 0.1707,
+    "precision": 0.4123,
+    "recall": 0.3825,
+    "per_class": [
+      {
+        "class": "Bubble",
+        "images": 325,
+        "instances": 4249,
+        "precision": 0.557,
+        "recall": 0.7569,
+        "f1": 0.6417,
+        "AP50": 0.6969,
+        "AP50-95": 0.3877
+      },
+      {
+        "class": "Bubble Cluster",
+        "images": 170,
+        "instances": 493,
+        "precision": 0.3153,
+        "recall": 0.2333,
+        "f1": 0.2682,
+        "AP50": 0.1777,
+        "AP50-95": 0.0514
+      },
+      {
+        "class": "Wet Package",
+        "images": 47,
+        "instances": 202,
+        "precision": 0.4936,
+        "recall": 0.4257,
+        "f1": 0.4572,
+        "AP50": 0.3679,
+        "AP50-95": 0.1578
+      },
+      {
+        "class": "Fiber",
+        "images": 58,
+        "instances": 83,
+        "precision": 0.3889,
+        "recall": 0.0539,
+        "f1": 0.0947,
+        "AP50": 0.0727,
+        "AP50-95": 0.0232
+      },
+      {
+        "class": "Extraneous Polymer",
+        "images": 17,
+        "instances": 18,
+        "precision": 0.185,
+        "recall": 0.0556,
+        "f1": 0.0854,
+        "AP50": 0.0309,
+        "AP50-95": 0.0042
+      },
+      {
+        "class": "HEMA",
+        "images": 27,
+        "instances": 27,
+        "precision": 0.6477,
+        "recall": 0.8148,
+        "f1": 0.7217,
+        "AP50": 0.7594,
+        "AP50-95": 0.4976
+      },
+      {
+        "class": "Foreign Matter",
+        "images": 112,
+        "instances": 400,
+        "precision": 0.2987,
+        "recall": 0.3375,
+        "f1": 0.3169,
+        "AP50": 0.2163,
+        "AP50-95": 0.0727
+      }
+    ],
+    "per_class_source": "test split, best.pt, ultralytics summary()"
+  },
+  "train_s": 7760.1,
+  "best_weights": "/home/pranayp/fmd-analysis/run/detector_20261110/yolo26n_fmd_7cls_all/weights/best.pt",
+  "test_dir": "/home/pranayp/fmd-analysis/run/detector_20261110/yolo26n_fmd_7cls_all_test",
+  "metrics_repaired_at": "2026-11-10T10:00:07"
+}

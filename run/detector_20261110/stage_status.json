@@ -1,0 +1,104 @@
+{
+  "checked_at": "2026-11-10T05:58:02+00:00",
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "memory_used_mib": 38445,
+  "memory_total_mib": 81920,
+  "utilization_pct": 94,
+  "compute_processes": [
+    {
+      "pid": 149292,
+      "user": "srikantht",
+      "process": "streamlit run app.py --server.port 8501",
+      "memory_mib": 2482,
+      "elapsed": "6-13:32:56"
+    },
+    {
+      "pid": 266026,
+      "user": "srikantht",
+      "process": "../backoffice_yolo.py train",
+      "memory_mib": 35920,
+      "elapsed": "08:02:21"
+    }
+  ],
+  "pranayp_gpu_processes": 0,
+  "decision": "both arms complete; all pictures stays primary (0.1707 against 0.1475; 1 Clear false fail against 47)",
+  "watcher": {
+    "pid": 287348,
+    "started_at": "2026-11-10T06:09:55+00:00",
+    "log": "run/detector_20261110/yolo26n_fmd_7cls_all.log",
+    "policy": "10-minute quiet window below 10,000 MiB and 20%; any new compute process resets it"
+  },
+  "training": {
+    "status": "done",
+    "pid": 287348,
+    "gpu_free_at": "2026-11-10T07:33:00+00:00",
+    "started_at": "2026-11-10T07:43:00+00:00",
+    "finished_at": "2026-11-10T09:51:00+00:00",
+    "train_s": 7760.1,
+    "quiet_window_seconds": 600,
+    "run_dir": "run/detector_20261110/yolo26n_fmd_7cls_all",
+    "log": "run/detector_20261110/yolo26n_fmd_7cls_all.log",
+    "best_epoch": 96,
+    "metrics": {
+      "primary": 0.1707,
+      "primary_name": "mAP50-95",
+      "mAP50": 0.3317,
+      "precision": 0.4123,
+      "recall": 0.3825,
+      "test_pictures": 1121,
+      "test_instances": 5472
+    }
+  },
+  "training_objects": {
+    "status": "done",
+    "pid": 301512,
+    "started_at": "2026-11-10T10:10:21+00:00",
+    "finished_at": "2026-11-10T10:57:16+00:00",
+    "train_s": 2814.8,
+    "run_dir": "run/detector_20261110/yolo26n_fmd_7cls_objects",
+    "log": "run/detector_20261110/yolo26n_fmd_7cls_objects.log",
+    "best_epoch": 82,
+    "metrics": {
+      "primary": 0.1475,
+      "primary_name": "mAP50-95",
+      "mAP50": 0.2624,
+      "precision": 0.2899,
+      "recall": 0.4237,
+      "test_pictures": 1121,
+      "test_instances": 5472
+    },
+    "passfail_bubble_cluster_chosen": {
+      "fail_caught": "743 of 768",
+      "clear_passed": "270 of 317",
+      "overall_passed": "293 of 353"
+    }
+  },
+  "staged_arms": [
+    {
+      "arm": "all",
+      "data": "/data/FMD_Data_26082026/fmd_detector_20261110/data_all.yaml",
+      "name": "yolo26n_fmd_7cls_all",
+      "command": "sudo -u pranayp -H bash vm/drivers/launch_exp2_training.sh all wait",
+      "status": "done"
+    },
+    {
+      "arm": "objects",
+      "data": "/data/FMD_Data_26082026/fmd_detector_20261110/data_objects.yaml",
+      "name": "yolo26n_fmd_7cls_objects",
+      "command": "sudo -u pranayp -H bash vm/drivers/launch_exp2_training.sh objects wait",
+      "status": "done",
+      "pid": 301512,
+      "started_at": "2026-11-10T10:10:21+00:00",
+      "finished_at": "2026-11-10T10:57:16+00:00",
+      "train_s": 2814.8,
+      "best_epoch": 82,
+      "metrics": {
+        "primary": 0.1475,
+        "mAP50": 0.2624,
+        "precision": 0.2899,
+        "recall": 0.4237
+      }
+    }
+  ],
+  "wait_policy": "10-minute quiet window below 10,000 MiB used and 20% utilization; a new compute process resets the window"
+}

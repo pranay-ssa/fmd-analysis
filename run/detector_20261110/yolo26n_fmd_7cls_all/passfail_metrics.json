@@ -1,0 +1,120 @@
+{
+  "source": "Experiment 2 detector, all pictures, validation-chosen object cuts",
+  "test_population": {
+    "pictures": 1121,
+    "fail": 768,
+    "clear": 317,
+    "bubble-only": 36
+  },
+  "object_cut_selection": {
+    "class_bubble": {
+      "cut": 0.04,
+      "val_f1": 0.9636,
+      "val_positives": 326
+    },
+    "class_bubble_cluster": {
+      "cut": 0.03,
+      "val_f1": 0.7485,
+      "val_positives": 170
+    },
+    "class_wet_package": {
+      "cut": 0.16,
+      "val_f1": 0.6067,
+      "val_positives": 47
+    },
+    "class_fiber": {
+      "cut": 0.04,
+      "val_f1": 0.5841,
+      "val_positives": 60
+    },
+    "class_extraneous_polymer": {
+      "cut": 0.05,
+      "val_f1": 0.5143,
+      "val_positives": 19
+    },
+    "class_hema": {
+      "cut": 0.23,
+      "val_f1": 0.92,
+      "val_positives": 25
+    },
+    "class_foreign_matter": {
+      "cut": 0.15,
+      "val_f1": 0.6237,
+      "val_positives": 110
+    }
+  },
+  "lens_cuts": {
+    "P1_MPP": 0.45,
+    "P1_ML": 0.65,
+    "P2_LOC": 0.45,
+    "P2_DC": 0.9,
+    "P1_NL": 0.95,
+    "P1_FL": 0.95,
+    "P2_LD": 0.95,
+    "P1_COC": 0.9,
+    "P2_DS": 0.5,
+    "P2_FOV": 0.5,
+    "P2_BSC": 0.5,
+    "P1_PPM": 0.5
+  },
+  "rule_a_0.5": {
+    "rule": "Bubble and Bubble Cluster pass",
+    "population": {
+      "fail": 768,
+      "clear": 317,
+      "bubble-only": 36,
+      "pass": 353
+    },
+    "fail_pictures_caught": "730 of 768",
+    "clear_passed": "316 of 317",
+    "clear_wrongly_failed": 1,
+    "bubble_only_passed": "21 of 36",
+    "pictures_passed_overall": "337 of 353"
+  },
+  "rule_a_chosen": {
+    "rule": "Bubble and Bubble Cluster pass",
+    "population": {
+      "fail": 768,
+      "clear": 317,
+      "bubble-only": 36,
+      "pass": 353
+    },
+    "fail_pictures_caught": "746 of 768",
+    "clear_passed": "316 of 317",
+    "clear_wrongly_failed": 1,
+    "bubble_only_passed": "24 of 36",
+    "pictures_passed_overall": "340 of 353"
+  },
+  "rule_b_0.5": {
+    "rule": "only Bubble passes",
+    "population": {
+      "fail": 768,
+      "clear": 317,
+      "bubble-family": 36,
+      "pass": 343,
+      "cluster-only-excluded": 10
+    },
+    "fail_pictures_caught": "730 of 768",
+    "clear_passed": "316 of 317",
+    "clear_wrongly_failed": 1,
+    "bubble_only_passed": "16 of 26",
+    "cluster_only_passed_unexpectedly": 4,
+    "pictures_passed_overall": "332 of 343"
+  },
+  "rule_b_chosen": {
+    "rule": "only Bubble passes",
+    "population": {
+      "fail": 768,
+      "clear": 317,
+      "bubble-family": 36,
+      "pass": 343,
+      "cluster-only-excluded": 10
+    },
+    "fail_pictures_caught": "751 of 768",
+    "clear_passed": "316 of 317",
+    "clear_wrongly_failed": 1,
+    "bubble_only_passed": "10 of 26",
+    "cluster_only_passed_unexpectedly": 1,
+    "pictures_passed_overall": "326 of 343"
+  }
+}
