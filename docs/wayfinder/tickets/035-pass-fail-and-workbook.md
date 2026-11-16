@@ -96,3 +96,12 @@ scripts under `experiments/multilabel_ooi/` and the workbook under
 `tools/index_docs.py --check` regeneration of `docs/INDEX.md` are the only edits to
 tracked files; nothing was committed. Client-safe sweep of the finished workbook:
 0 breaches.
+
+## Provenance correction (2026-11-09, ticket 035)
+
+The line "Rule, agreed 2026-11-04" in the Spec overstated the status. The first written source is the
+assistant's 3 November proposal; no user message confirms it, and the lead has not confirmed Bubble
+Cluster as a pass class. The working rule as of 9 November is Bubble and Clear pass for now, with
+Cluster reported separately and put to the lead. The Experiment 1 workbook reports both variants. The
+numbers in the Resolution are unaffected: they are the rule as applied, not a claim about who agreed
+it.

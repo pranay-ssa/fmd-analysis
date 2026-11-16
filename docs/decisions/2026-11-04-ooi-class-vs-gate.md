@@ -93,3 +93,11 @@ those two classes; it is the first experiment queued after this decision.
   quoted as maxima.
 - Every number here is reproducible from `run/multilabel_ooi_20261104/{class,gate,class-posw,combined}/`
   and was re-derived independently by a verifier card per round.
+
+## Correction (2026-11-09)
+
+The pass set above is the working reading for Experiment 1, not a client-confirmed rule. No user
+message and no client document establishes it; the first written source is the assistant's
+3 November proposal. On 9 November the user kept Bubble and Clear as the pass conditions for now and
+took Bubble Cluster to the lead. The Experiment 1 workbook reports both variants, and the rule as
+applied is unchanged. The earlier "agreed 2026-11-04" wording in ticket 035 is corrected there.
