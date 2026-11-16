@@ -1,0 +1,57 @@
+{
+  "source": "decks/weekly_decks/FM3_11092026_StatusUpdate_Deck.pptx",
+  "presented": "2026-11-09",
+  "note": "Reference only. Do not copy branding, logo or confidentiality text into a draft.",
+  "canvas": {
+    "width_in": 13.333,
+    "height_in": 7.5,
+    "aspect": "16:9"
+  },
+  "grid": {
+    "title": {"x": 0.58, "y": 0.37, "w": 12.18, "h": 0.92, "align": "left", "anchor": "middle"},
+    "body": {"x": 0.58, "y": 1.57, "w": 12.18, "h": 5.19},
+    "two_column": {"left_x": 0.56, "left_w": 6.24, "right_x": 7.0, "gutter": 0.3},
+    "footer_band": {"y": 6.87, "h": 0.63, "style": "white_to_transparent_gradient"},
+    "footer_text": {"x": 0.42, "y": 7.1, "w": 7.86, "h": 0.27, "size_pt": 10},
+    "logo": {"x": 10.06, "y": 6.96, "w": 2.71, "h": 0.46},
+    "slide_number": {"x": 12.84, "y": 7.1, "w": 0.49, "h": 0.4, "size_pt": 12}
+  },
+  "colors": {
+    "accent1": "0074D3",
+    "accent2": "FF8900",
+    "accent3": "37957C",
+    "accent4": "ABA9AE",
+    "accent5": "4E509F",
+    "accent6": "0E4B7E",
+    "dk2": "44546A",
+    "lt2": "E7E6E6",
+    "table_header": "1F4E78",
+    "status_highlight": "FFFF00"
+  },
+  "typography": {
+    "theme_major": "Arial",
+    "theme_minor": "Arial",
+    "title": {"base_pt": 36, "observed_pt": [28, 32], "weight": "regular", "color": "accent2", "line_spacing": 0.9, "autofit": true},
+    "body": {"observed_pt": 11, "master_style_pt": 24, "color": "accent6"},
+    "section_pt": [14, 16, 20],
+    "table_pt": [9.5, 10, 11],
+    "footer_pt": 10,
+    "slide_number_pt": 12
+  },
+  "motifs": [
+    "orange title",
+    "white content field",
+    "dark blue table header",
+    "white and light grey row banding",
+    "yellow exception row only",
+    "grayscale evidence image grid",
+    "footer fade with logo",
+    "left aligned text"
+  ],
+  "do_not_copy": [
+    "Intuceo logo",
+    "confidentiality footer text",
+    "cover texture",
+    "yellow status highlight outside a status table"
+  ]
+}

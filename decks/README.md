@@ -10,10 +10,16 @@ where: decks/README.md
 
 ## Current draft
 
-`drafts/FMD_MultiLabel_2026W45_DRAFT.pptx` is the week-45 draft for Monday 9 November. It has 12
-slides: the multi-label explanation, the A/B results, the per-class threshold table and the split.
-The PDF beside it is the review copy; the spec and builder are in the same folder. It keeps
-pass/fail numbers out, per the scope for this week.
+`drafts/FMD_MultiLabel_2026W46_DRAFT.pptx` is the week-46 draft. It has 15 slides: a dark title, the
+production rail, the nineteen-answer class-level screen, the object classes, the Bubble and Cluster
+comparison, why classes rather than the size gate, one head with rare-class weighting, the AP chart,
+the pass rule, the same-population pass result, the Cluster confusion cost, the 17-picture decision
+table, the detector stage, the detector questions, and a dark closing. The PDF beside it is the review
+copy; the spec and builder are in the same folder.
+
+The wider Bubble + Cluster rule is compared on the same 353 pass candidates, not against the smaller
+336 denominator. Experiment 2 numbers are not in the deck; the detector slides cover design and
+expected questions only.
 
 ## Layout
 
@@ -21,6 +27,8 @@ pass/fail numbers out, per the scope for this week.
   here. Nothing here is client-facing; it gets rebuilt into the office template.
 - `weekly_decks/` - the presented decks, one per Monday, dropped in by Pranay after
   the presentation. Use these as the reference for tone and layout when drafting.
+- `reference/` - extracted style notes and tokens from the presented decks. Reference only; no
+  branding, logo or footer text goes into a draft.
 
 ## The weekly cycle (as run by Pranay)
 

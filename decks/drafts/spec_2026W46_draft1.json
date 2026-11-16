@@ -1,0 +1,1988 @@
+{
+  "slide_size": [
+    13.333,
+    7.5
+  ],
+  "slides": [
+    {
+      "bare": true,
+      "bg": "#1F2A24",
+      "dark": true,
+      "notes": "This deck follows the multi-label explanation. It covers the class-level screen, why Bubble Cluster should be included in the pass set, the pass/fail rule, the results, and the detector stage. The detector read-out is not in this draft.",
+      "items": [
+        {
+          "kind": "text",
+          "l": 0.9,
+          "t": 1.55,
+          "w": 11.0,
+          "h": 0.35,
+          "text": "FMD  /  WEEKLY REVIEW",
+          "size": 10,
+          "bold": true,
+          "color": "#97BC62"
+        },
+        {
+          "kind": "text",
+          "l": 0.9,
+          "t": 1.95,
+          "w": 11.4,
+          "h": 1.55,
+          "text": "From one flag\nto a named reason",
+          "size": 46,
+          "bold": true,
+          "color": "#FFFFFF",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 0.9,
+          "t": 3.55,
+          "w": 10.8,
+          "h": 0.9,
+          "text": "How the class-level screen reads a picture, why Bubble Cluster changes the pass result, and what the detector stage adds.",
+          "size": 18,
+          "bold": false,
+          "color": "#D1D5DB"
+        },
+        {
+          "kind": "text",
+          "l": 0.9,
+          "t": 4.75,
+          "w": 10.0,
+          "h": 0.35,
+          "text": "November 2026",
+          "size": 12,
+          "bold": false,
+          "color": "#A7BEAE"
+        },
+        {
+          "kind": "text",
+          "l": 0.9,
+          "t": 6.35,
+          "w": 11.0,
+          "h": 0.35,
+          "text": "Every number is measured on the frozen split. The population is named on every table.",
+          "size": 10,
+          "bold": false,
+          "color": "#A7BEAE"
+        }
+      ]
+    },
+    {
+      "title": "The flag could route. It could not explain.",
+      "subtitle": "A single object flag says something is present. It cannot name it, locate it, or decide whether it should pass.",
+      "notes": "The previous deck ended with two next steps: split the object flag into classes, and connect the detector. This deck is that next step. The flag was enough to route a picture, but it could not name the object or measure it.",
+      "items": [
+        {
+          "kind": "line",
+          "x1": 0.9,
+          "y1": 2.18,
+          "x2": 12.4,
+          "y2": 2.18,
+          "color": "#D1D5DB",
+          "width": 1.2
+        },
+        {
+          "kind": "pill",
+          "l": 0.8,
+          "t": 1.98,
+          "w": 0.4,
+          "h": 0.4,
+          "text": "1",
+          "size": 11,
+          "fill": "#2C5F2D",
+          "line": "#2C5F2D",
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 0.8,
+          "t": 2.55,
+          "w": 2.7,
+          "h": 0.4,
+          "text": "Camera",
+          "size": 18,
+          "bold": true,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.8,
+          "t": 2.98,
+          "w": 2.65,
+          "h": 0.9,
+          "text": "A picture arrives from the line.",
+          "size": 12.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "pill",
+          "l": 3.6999999999999997,
+          "t": 1.98,
+          "w": 0.4,
+          "h": 0.4,
+          "text": "2",
+          "size": 11,
+          "fill": "#2C5F2D",
+          "line": "#2C5F2D",
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 3.6999999999999997,
+          "t": 2.55,
+          "w": 2.7,
+          "h": 0.4,
+          "text": "Screen",
+          "size": 18,
+          "bold": true,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 3.6999999999999997,
+          "t": 2.98,
+          "w": 2.65,
+          "h": 0.9,
+          "text": "Lens conditions and object classes.",
+          "size": 12.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 3.6999999999999997,
+          "t": 3.95,
+          "w": 1.2,
+          "h": 0.28,
+          "text": "CURRENT",
+          "size": 9,
+          "bold": true,
+          "color": "#2C5F2D"
+        },
+        {
+          "kind": "pill",
+          "l": 6.6,
+          "t": 1.98,
+          "w": 0.4,
+          "h": 0.4,
+          "text": "3",
+          "size": 11,
+          "fill": "#2C5F2D",
+          "line": "#2C5F2D",
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 6.6,
+          "t": 2.55,
+          "w": 2.7,
+          "h": 0.4,
+          "text": "Detector",
+          "size": 18,
+          "bold": true,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 6.6,
+          "t": 2.98,
+          "w": 2.65,
+          "h": 0.9,
+          "text": "A box, a class and a location.",
+          "size": 12.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 6.6,
+          "t": 3.95,
+          "w": 1.2,
+          "h": 0.28,
+          "text": "NEXT",
+          "size": 9,
+          "bold": true,
+          "color": "#B45309"
+        },
+        {
+          "kind": "pill",
+          "l": 9.5,
+          "t": 1.98,
+          "w": 0.4,
+          "h": 0.4,
+          "text": "4",
+          "size": 11,
+          "fill": "#2C5F2D",
+          "line": "#2C5F2D",
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 9.5,
+          "t": 2.55,
+          "w": 2.7,
+          "h": 0.4,
+          "text": "Decision",
+          "size": 18,
+          "bold": true,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 9.5,
+          "t": 2.98,
+          "w": 2.65,
+          "h": 0.9,
+          "text": "Pass, or send to review. Size joins here.",
+          "size": 12.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "rect",
+          "l": 0.6,
+          "t": 4.35,
+          "w": 12.1,
+          "h": 1.0,
+          "text": "",
+          "size": 11,
+          "fill": "#F4F6F2",
+          "line": "#F4F6F2",
+          "line_width": 0.0,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.9,
+          "t": 4.55,
+          "w": 11.5,
+          "h": 0.65,
+          "text": "The flag is enough to route a picture to review. It is not enough to pass it: a bubble and a strand of foreign matter look identical in the output.",
+          "size": 13.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.7,
+          "w": 12.0,
+          "h": 0.45,
+          "text": "The screen has to name what it sees before the pass rule can act.",
+          "size": 18,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        }
+      ]
+    },
+    {
+      "title": "One pass, nineteen answers",
+      "subtitle": "The screen shares one image reading across twelve lens conditions and seven object classes.",
+      "notes": "Nineteen trained columns. The eighth object class, Surface Groove, has no pictures in this data and is excluded from the averages. Every class has its own cut, chosen later on validation. There is no softmax, because the answers are not exclusive.",
+      "items": [
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 2.15,
+          "w": 2.0,
+          "h": 0.4,
+          "text": "One picture",
+          "size": 17,
+          "bold": true,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 2.6,
+          "w": 2.1,
+          "h": 0.35,
+          "text": "arrives from the line",
+          "size": 11,
+          "bold": false,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "arrow",
+          "x1": 3.0,
+          "y1": 2.35,
+          "x2": 3.65,
+          "y2": 2.35,
+          "color": "#6B7280",
+          "width": 1.2
+        },
+        {
+          "kind": "text",
+          "l": 3.7,
+          "t": 2.15,
+          "w": 2.1,
+          "h": 0.4,
+          "text": "One pass",
+          "size": 17,
+          "bold": true,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 3.7,
+          "t": 2.6,
+          "w": 2.2,
+          "h": 0.35,
+          "text": "shared image reading",
+          "size": 11,
+          "bold": false,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 3.7,
+          "t": 4.25,
+          "w": 2.2,
+          "h": 0.8,
+          "text": "19",
+          "size": 44,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 3.7,
+          "t": 5.08,
+          "w": 2.2,
+          "h": 0.3,
+          "text": "answers",
+          "size": 12,
+          "bold": false,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 6.3,
+          "t": 1.95,
+          "w": 3.4,
+          "h": 0.4,
+          "text": "12 lens conditions",
+          "size": 18,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "bullets",
+          "l": 6.3,
+          "t": 2.45,
+          "w": 3.5,
+          "h": 2.9,
+          "size": 11.5,
+          "space": 3,
+          "numbered": false,
+          "items": [
+            "Missing Primary Package",
+            "Multiple Lens",
+            "Lens Off Center",
+            "Dirty Camera",
+            "No Lens",
+            "Folded Lens",
+            "Low Dose",
+            "Cavity Off Center",
+            "Dirty Strobe",
+            "View Obstructed",
+            "Bubble Scatter",
+            "Package Misalignment"
+          ],
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 9.9,
+          "t": 1.95,
+          "w": 2.8,
+          "h": 0.4,
+          "text": "7 object classes",
+          "size": 18,
+          "bold": true,
+          "color": "#B45309",
+          "font": "Cambria"
+        },
+        {
+          "kind": "bullets",
+          "l": 9.9,
+          "t": 2.45,
+          "w": 2.8,
+          "h": 2.7,
+          "size": 12.5,
+          "space": 4,
+          "numbered": false,
+          "items": [
+            "Bubble",
+            "Bubble Cluster",
+            "Wet Package",
+            "Fiber",
+            "Extraneous Polymer",
+            "HEMA",
+            "Foreign Matter"
+          ],
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.75,
+          "w": 12.0,
+          "h": 0.4,
+          "text": "Each answer has its own cut, chosen on validation. The rule reads the nineteen scores later.",
+          "size": 12.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 6.3,
+          "w": 12.0,
+          "h": 0.35,
+          "text": "Surface Groove is the eighth guide class. It has no pictures in this data, so it is not trained and is excluded from every average.",
+          "size": 9.5,
+          "bold": false,
+          "color": "#6B7280"
+        }
+      ]
+    },
+    {
+      "title": "The object side now has names",
+      "subtitle": "Seven classes are learnable. Bubble passes; Bubble Cluster and the five contamination classes fail.",
+      "notes": "Taught as classes, the object score is 0.4955 against 0.4391 for a model taught on the size gate. The gate costs ranking quality, not coverage. Rare classes are weighted by inverse training frequency. Surface Groove is shown so the gap is visible, not hidden.",
+      "items": [
+        {
+          "kind": "table",
+          "l": 0.6,
+          "t": 1.65,
+          "w": 12.1,
+          "h": 3.95,
+          "font": 10.5,
+          "row_h": 0.4,
+          "col_widths": [
+            3.0,
+            6.1,
+            3.0
+          ],
+          "rows": [
+            [
+              "Object class",
+              "What it looks like",
+              "In the pass rule"
+            ],
+            [
+              "Bubble",
+              "A single bubble",
+              "Pass"
+            ],
+            [
+              "Bubble Cluster",
+              "Two or more bubbles close together, appearing to touch",
+              "Fail"
+            ],
+            [
+              "Wet Package",
+              "Moisture inside the package",
+              "Fail"
+            ],
+            [
+              "Fiber",
+              "A strand",
+              "Fail"
+            ],
+            [
+              "Extraneous Polymer",
+              "A polymer fragment",
+              "Fail"
+            ],
+            [
+              "HEMA",
+              "An obstruction",
+              "Fail"
+            ],
+            [
+              "Foreign Matter",
+              "Contamination",
+              "Fail"
+            ],
+            [
+              "Surface Groove",
+              "A surface mark",
+              "No pictures in this data"
+            ]
+          ],
+          "header_fill": "#2C5F2D",
+          "body_fill": "#FFFFFF",
+          "alt_fill": "#F4F6F2",
+          "header_color": "#FFFFFF",
+          "font_family": "Calibri"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.9,
+          "w": 11.9,
+          "h": 0.65,
+          "text": "A single flag treats a harmless bubble and a strand of foreign matter the same. The pass rule needs the name, not just presence.",
+          "size": 13,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 6.62,
+          "w": 11.9,
+          "h": 0.3,
+          "text": "The size flag is not a class. It stays as a reporting subset, \"of which size-flagged.\"",
+          "size": 10.5,
+          "bold": false,
+          "color": "#6B7280"
+        }
+      ]
+    },
+    {
+      "title": "Bubble and Cluster are nearly identical",
+      "subtitle": "98% of Cluster pictures also carry Bubble. On the same 353 pass candidates, including Cluster improves the pass result.",
+      "notes": "Experiment 1 measured this on the frozen split. The same 353 pass candidates means the clear pictures plus the 36 bubble-family pictures with no other fail. Only Bubble passes: 322 of 353, 31 false fails. Bubble + Cluster pass: 324 of 353, 29 false fails. The strict rule catches 776 of 785 fails; the wider rule catches 760 of 768. The 17 pictures that carry Cluster and no other fail explain the difference. Cluster is a separate class; the decision is whether it is acceptable in the pass rule.",
+      "items": [
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 1.75,
+          "w": 4.7,
+          "h": 0.4,
+          "text": "Cluster and Bubble travel together",
+          "size": 17,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 2.2,
+          "w": 2.4,
+          "h": 0.9,
+          "text": "98%",
+          "size": 54,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 3.15,
+          "w": 4.5,
+          "h": 0.45,
+          "text": "of Cluster pictures also carry Bubble",
+          "size": 13,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 3.68,
+          "w": 4.5,
+          "h": 0.35,
+          "text": "1,110 of 1,132. Only 22 are Cluster-only.",
+          "size": 12,
+          "bold": false,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 4.08,
+          "w": 4.5,
+          "h": 0.35,
+          "text": "On test: 160 of 170 carry both. 10 are Cluster-only.",
+          "size": 10.5,
+          "bold": false,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "table",
+          "l": 5.9,
+          "t": 1.7,
+          "w": 6.7,
+          "h": 2.8,
+          "font": 11.5,
+          "row_h": 0.52,
+          "col_widths": [
+            2.9,
+            1.9,
+            1.9
+          ],
+          "rows": [
+            [
+              "Same 353 pass candidates",
+              "Only Bubble",
+              "Bubble + Cluster"
+            ],
+            [
+              "Clear passed",
+              "316 / 317",
+              "316 / 317"
+            ],
+            [
+              "Bubble-family passed",
+              "6 / 36",
+              "8 / 36"
+            ],
+            [
+              "Overall passed",
+              "322 / 353",
+              "324 / 353"
+            ],
+            [
+              "False fails",
+              "31",
+              "29"
+            ]
+          ],
+          "header_fill": "#2C5F2D",
+          "body_fill": "#FFFFFF",
+          "alt_fill": "#F4F6F2",
+          "header_color": "#FFFFFF",
+          "font_family": "Calibri"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 4.95,
+          "w": 12.0,
+          "h": 0.55,
+          "text": "Including Cluster raises the same-population pass count from 322 to 324 and cuts false fails from 31 to 29.",
+          "size": 15,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.65,
+          "w": 12.0,
+          "h": 0.7,
+          "text": "The catch count is the cost: 776 of 785 fails under the strict rule, 760 of 768 under the wider rule. The 17 pictures that move explain the gap.",
+          "size": 12.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 6.45,
+          "w": 12.0,
+          "h": 0.3,
+          "text": "Cluster is a separate class in the guide. The open question is whether it is acceptable in the pass rule, not whether it exists.",
+          "size": 10,
+          "bold": false,
+          "color": "#6B7280"
+        }
+      ]
+    },
+    {
+      "title": "Why classes, not the size gate",
+      "subtitle": "The gate groups a small bubble and a small strand. The class labels keep them apart.",
+      "notes": "Round 1 trained two arms on identical truth. Class labels: 0.4955 macro AP, 0.5100 macro F1. Gate labels: 0.4391 macro AP, 0.4828 macro F1. The gate arm recalled 0.800 of un-gated Foreign Matter test pictures, so it generalised beyond the gate; the loss is ranking quality, not coverage. The gate remains a reporting subset.",
+      "items": [
+        {
+          "kind": "table",
+          "l": 0.6,
+          "t": 1.75,
+          "w": 5.8,
+          "h": 2.35,
+          "font": 12,
+          "row_h": 0.55,
+          "col_widths": [
+            2.4,
+            1.7,
+            1.7
+          ],
+          "rows": [
+            [
+              "Same truth",
+              "Class labels",
+              "Gate labels"
+            ],
+            [
+              "Macro AP",
+              "0.4955",
+              "0.4391"
+            ],
+            [
+              "Macro F1",
+              "0.5100",
+              "0.4828"
+            ],
+            [
+              "Gate model, un-gated FM recall",
+              "",
+              "0.800"
+            ]
+          ],
+          "header_fill": "#2C5F2D",
+          "body_fill": "#FFFFFF",
+          "alt_fill": "#F4F6F2",
+          "header_color": "#FFFFFF",
+          "font_family": "Calibri"
+        },
+        {
+          "kind": "bullets",
+          "l": 6.9,
+          "t": 1.75,
+          "w": 5.6,
+          "h": 3.1,
+          "size": 13,
+          "space": 12,
+          "numbered": false,
+          "items": [
+            {
+              "lead": "The gate hides small objects.",
+              "text": " 344 of 798 Foreign Matter positives are outside it, 43% of the class."
+            },
+            {
+              "lead": "Coverage was not the problem.",
+              "text": " The gate-trained model still found 80% of the un-gated test pictures. Ranking was worse."
+            },
+            {
+              "lead": "The gate stays as a subset.",
+              "text": " It is a reporting column, not a class the model learns."
+            }
+          ],
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.25,
+          "w": 12.0,
+          "h": 0.55,
+          "text": "On identical truth, classes won: 0.4955 against 0.4391 macro AP.",
+          "size": 16,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.95,
+          "w": 12.0,
+          "h": 0.4,
+          "text": "A gate label answers whether an object is large enough. A class label answers what the object is.",
+          "size": 12,
+          "bold": false,
+          "color": "#1F2937"
+        }
+      ]
+    },
+    {
+      "title": "One head, weighted for the rare classes",
+      "subtitle": "Three choices carry the screen: one model, a weighted loss, and cuts chosen on validation.",
+      "notes": "The combined head holds both jobs: object 0.638 against 0.633 without lens columns, lens 0.882 against the November 0.818. Inverse-frequency weighting lifts four rare classes from unusable to solid; macro AP 0.4955 to 0.6330, HEMA 0.569 to 0.963. Cuts are chosen on validation only, grid 0.05 to 0.95, highest F1, ties to the higher cut, guard 10.",
+      "items": [
+        {
+          "kind": "pill",
+          "l": 0.7,
+          "t": 1.8,
+          "w": 0.4,
+          "h": 0.4,
+          "text": "01",
+          "size": 11,
+          "fill": "#2C5F2D",
+          "line": "#2C5F2D",
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 2.35,
+          "w": 3.5,
+          "h": 0.35,
+          "text": "One head",
+          "size": 19,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 2.85,
+          "w": 3.45,
+          "h": 1.9,
+          "text": "Lens and object share one pass. Object 0.638 against 0.633 alone; lens 0.882 against 0.818.",
+          "size": 13.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "pill",
+          "l": 4.55,
+          "t": 1.8,
+          "w": 0.4,
+          "h": 0.4,
+          "text": "02",
+          "size": 11,
+          "fill": "#2C5F2D",
+          "line": "#2C5F2D",
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 4.55,
+          "t": 2.35,
+          "w": 3.5,
+          "h": 0.35,
+          "text": "Rare-class weight",
+          "size": 19,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 4.55,
+          "t": 2.85,
+          "w": 3.45,
+          "h": 1.9,
+          "text": "Inverse training frequency. Four rare classes became usable: macro AP 0.4955 to 0.6330; HEMA 0.569 to 0.963.",
+          "size": 13.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "pill",
+          "l": 8.4,
+          "t": 1.8,
+          "w": 0.4,
+          "h": 0.4,
+          "text": "03",
+          "size": 11,
+          "fill": "#2C5F2D",
+          "line": "#2C5F2D",
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 8.4,
+          "t": 2.35,
+          "w": 3.5,
+          "h": 0.35,
+          "text": "Cuts on validation",
+          "size": 19,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 8.4,
+          "t": 2.85,
+          "w": 3.45,
+          "h": 1.9,
+          "text": "Each class cut chosen on validation; test read once. Both 0.5 and the chosen cuts are reported.",
+          "size": 13.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.45,
+          "w": 12.0,
+          "h": 0.5,
+          "text": "Every choice has a measured reason. None was tuned on the test pictures.",
+          "size": 18,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 6.1,
+          "w": 12.0,
+          "h": 0.35,
+          "text": "The weights come from the training split only. The test split never chooses a cut.",
+          "size": 11,
+          "bold": false,
+          "color": "#6B7280"
+        }
+      ]
+    },
+    {
+      "title": "The screen ranks the classes well",
+      "subtitle": "Fiber is the weak class at 0.379. Bubble Cluster is 0.588, the class the stricter rule depends on.",
+      "notes": "Average precision ranks the class across all cuts. The floor is the share of test pictures that carry the class, so it is the score from always answering present. Macro AP weights each class equally. Exact match means all twelve lens answers are right. The 5.6 ms is on the training GPU, not the edge device.",
+      "items": [
+        {
+          "kind": "chart",
+          "l": 0.6,
+          "t": 1.7,
+          "w": 7.3,
+          "h": 4.45,
+          "bar": true,
+          "title": "Average precision against the no-skill floor",
+          "categories": [
+            "Extraneous Polymer",
+            "HEMA",
+            "Wet Package",
+            "Fiber",
+            "Foreign Matter",
+            "Bubble Cluster",
+            "Bubble"
+          ],
+          "series": [
+            {
+              "name": "Model AP",
+              "color": "#2C5F2D",
+              "values": [
+                0.513,
+                0.99,
+                0.54,
+                0.379,
+                0.508,
+                0.588,
+                0.947
+              ]
+            },
+            {
+              "name": "No-skill floor",
+              "color": "#D1D5DB",
+              "values": [
+                0.019,
+                0.021,
+                0.042,
+                0.052,
+                0.107,
+                0.152,
+                0.291
+              ]
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0,
+          "unit": 0.2,
+          "labels": true,
+          "label_font": 7.5,
+          "category_font": 8.5,
+          "legend": true,
+          "font_family": "Calibri"
+        },
+        {
+          "kind": "text",
+          "l": 8.2,
+          "t": 1.65,
+          "w": 4.5,
+          "h": 0.55,
+          "text": "0.638",
+          "size": 32,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 8.2,
+          "t": 2.2,
+          "w": 4.5,
+          "h": 0.3,
+          "text": "Object macro AP",
+          "size": 11,
+          "bold": false,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 8.2,
+          "t": 2.75,
+          "w": 4.5,
+          "h": 0.55,
+          "text": "0.882",
+          "size": 32,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 8.2,
+          "t": 3.3,
+          "w": 4.5,
+          "h": 0.45,
+          "text": "Lens macro AP\nup from 0.818",
+          "size": 11,
+          "bold": false,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 8.2,
+          "t": 3.95,
+          "w": 4.5,
+          "h": 0.55,
+          "text": "0.811",
+          "size": 32,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 8.2,
+          "t": 4.5,
+          "w": 4.5,
+          "h": 0.3,
+          "text": "Exact match at chosen cuts",
+          "size": 11,
+          "bold": false,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 8.2,
+          "t": 5.15,
+          "w": 4.5,
+          "h": 0.45,
+          "text": "5.6 ms",
+          "size": 24,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 8.2,
+          "t": 5.65,
+          "w": 4.5,
+          "h": 0.3,
+          "text": "per picture, training GPU",
+          "size": 11,
+          "bold": false,
+          "color": "#6B7280"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 6.25,
+          "w": 12.0,
+          "h": 0.4,
+          "text": "1,121 test pictures. AP is average precision; the floor is the no-skill score.",
+          "size": 10.5,
+          "bold": false,
+          "color": "#6B7280"
+        }
+      ]
+    },
+    {
+      "title": "Pass is Clear or Bubble only",
+      "subtitle": "The rule reads nineteen scores at picture level. It is not a second model.",
+      "notes": "The failing classes are the twelve lens conditions plus Wet Package, Fiber, Extraneous Polymer, HEMA and Foreign Matter. Bubble Cluster fails in this read. One class firing is enough. There is no ranking and no severity. Bubble Scatter is a lens tag, so it fails a picture. Cuts are chosen on validation; test read once.",
+      "items": [
+        {
+          "kind": "table",
+          "l": 0.6,
+          "t": 1.7,
+          "w": 6.4,
+          "h": 2.2,
+          "font": 12.5,
+          "row_h": 0.55,
+          "col_widths": [
+            2.7,
+            3.7
+          ],
+          "rows": [
+            [
+              "Check",
+              "Verdict"
+            ],
+            [
+              "Any failing class fires",
+              "Fail, with the class named"
+            ],
+            [
+              "No failing class, Clear or Bubble only",
+              "Pass"
+            ],
+            [
+              "No failing class, Bubble Cluster present",
+              "Fail"
+            ]
+          ],
+          "header_fill": "#2C5F2D",
+          "body_fill": "#FFFFFF",
+          "alt_fill": "#F4F6F2",
+          "header_color": "#FFFFFF",
+          "font_family": "Calibri"
+        },
+        {
+          "kind": "table",
+          "l": 7.2,
+          "t": 1.7,
+          "w": 5.5,
+          "h": 2.9,
+          "font": 11.5,
+          "row_h": 0.4,
+          "col_widths": [
+            2.9,
+            1.2,
+            1.4
+          ],
+          "rows": [
+            [
+              "Truth population",
+              "Pictures",
+              "Under the rule"
+            ],
+            [
+              "Clear",
+              "317",
+              "Pass"
+            ],
+            [
+              "Bubble only",
+              "19",
+              "Pass"
+            ],
+            [
+              "Bubble and Cluster, no other fail",
+              "7",
+              "Fail"
+            ],
+            [
+              "Cluster only",
+              "10",
+              "Fail"
+            ],
+            [
+              "Any other failing class",
+              "768",
+              "Fail"
+            ],
+            [
+              "Total",
+              "1,121",
+              "336 pass"
+            ]
+          ],
+          "header_fill": "#2C5F2D",
+          "body_fill": "#FFFFFF",
+          "alt_fill": "#F4F6F2",
+          "header_color": "#FFFFFF",
+          "font_family": "Calibri"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.15,
+          "w": 11.9,
+          "h": 0.65,
+          "text": "One OR, no ranking. Every failure has a name, which is what makes the result reviewable.",
+          "size": 15,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.9,
+          "w": 11.9,
+          "h": 0.4,
+          "text": "The cut is per class, chosen on validation. The test pictures are read once.",
+          "size": 12,
+          "bold": false,
+          "color": "#1F2937"
+        }
+      ]
+    },
+    {
+      "title": "Cluster pass improves the pass result",
+      "subtitle": "At both cuts, including Cluster adds passes and removes false fails. The strict rule catches more fails.",
+      "notes": "The denominator is the same 353 pass candidates: 317 clear plus 36 bubble-family pictures with no other fail. At 0.5: 322 pass under only Bubble, 324 under Bubble + Cluster; false fails 31 and 29. At chosen: 319 and 325; false fails 34 and 28. Fails caught: 776 of 785 and 778 of 785 under only Bubble; 760 of 768 and 759 of 768 under Bubble + Cluster. The strict rule catches more fails because 17 pictures move into the fail population.",
+      "items": [
+        {
+          "kind": "table",
+          "l": 0.6,
+          "t": 1.7,
+          "w": 12.1,
+          "h": 3.0,
+          "font": 11,
+          "row_h": 0.55,
+          "col_widths": [
+            3.1,
+            2.2,
+            2.3,
+            2.2,
+            2.3
+          ],
+          "rows": [
+            [
+              "Same 353 pass candidates",
+              "Only Bubble 0.5",
+              "Bubble + Cluster 0.5",
+              "Only Bubble chosen",
+              "Bubble + Cluster chosen"
+            ],
+            [
+              "Clear passed",
+              "316 / 317",
+              "316 / 317",
+              "315 / 317",
+              "316 / 317"
+            ],
+            [
+              "Bubble-family passed",
+              "6 / 36",
+              "8 / 36",
+              "4 / 36",
+              "9 / 36"
+            ],
+            [
+              "Overall passed",
+              "322 / 353",
+              "324 / 353",
+              "319 / 353",
+              "325 / 353"
+            ],
+            [
+              "False fails",
+              "31",
+              "29",
+              "34",
+              "28"
+            ]
+          ],
+          "header_fill": "#2C5F2D",
+          "body_fill": "#FFFFFF",
+          "alt_fill": "#F4F6F2",
+          "header_color": "#FFFFFF",
+          "font_family": "Calibri"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.2,
+          "w": 12.0,
+          "h": 0.5,
+          "text": "The pass/fail numbers favor including Cluster. The catch count favors failing it.",
+          "size": 16,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.85,
+          "w": 12.0,
+          "h": 0.6,
+          "text": "Fails caught: 776 of 785 and 778 of 785 under only Bubble; 760 of 768 and 759 of 768 under Bubble + Cluster.",
+          "size": 11.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 6.45,
+          "w": 12.0,
+          "h": 0.3,
+          "text": "0.5 is the cleaner headline. The chosen cuts optimize per-class presence, not the pass/fail outcome.",
+          "size": 10,
+          "bold": false,
+          "color": "#6B7280"
+        }
+      ]
+    },
+    {
+      "title": "The strict rule pays for Cluster confusion",
+      "subtitle": "13 of 19 Bubble-only pictures fail at 0.5; 11 fire Cluster.",
+      "notes": "At 0.5, 13 of 19 Bubble-only pictures fail; 11 of those fire Cluster. At the chosen cuts, 15 fail; 14 fire Cluster. Under the wider rule, 28 of 36 bubble-family pictures fail, mostly Foreign Matter and Fiber. The grid shows the 19 Bubble-only test pictures at 0.5.",
+      "items": [
+        {
+          "kind": "grid",
+          "l": 0.8,
+          "t": 1.9,
+          "cols": 5,
+          "size": 0.45,
+          "gap": 0.12,
+          "pattern": [
+            "pass",
+            "pass",
+            "pass",
+            "pass",
+            "pass",
+            "pass",
+            "cluster",
+            "cluster",
+            "cluster",
+            "cluster",
+            "cluster",
+            "cluster",
+            "cluster",
+            "cluster",
+            "cluster",
+            "cluster",
+            "cluster",
+            "lens",
+            "lens"
+          ],
+          "colors": {
+            "pass": {
+              "fill": "#DCFCE7",
+              "line": "#86EFAC"
+            },
+            "cluster": {
+              "fill": "#FEF3C7",
+              "line": "#F59E0B"
+            },
+            "lens": {
+              "fill": "#FEE2E2",
+              "line": "#EF4444"
+            }
+          }
+        },
+        {
+          "kind": "rect",
+          "l": 0.8,
+          "t": 4.2,
+          "w": 0.18,
+          "h": 0.18,
+          "text": "",
+          "size": 11,
+          "fill": "#DCFCE7",
+          "line": "#86EFAC",
+          "line_width": 0.0,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 1.05,
+          "t": 4.15,
+          "w": 1.0,
+          "h": 0.3,
+          "text": "Pass",
+          "size": 10,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "rect",
+          "l": 2.1,
+          "t": 4.2,
+          "w": 0.18,
+          "h": 0.18,
+          "text": "",
+          "size": 11,
+          "fill": "#FEF3C7",
+          "line": "#F59E0B",
+          "line_width": 0.0,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 2.35,
+          "t": 4.15,
+          "w": 1.8,
+          "h": 0.3,
+          "text": "Cluster fires",
+          "size": 10,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "rect",
+          "l": 4.2,
+          "t": 4.2,
+          "w": 0.18,
+          "h": 0.18,
+          "text": "",
+          "size": 11,
+          "fill": "#FEE2E2",
+          "line": "#EF4444",
+          "line_width": 0.0,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 4.45,
+          "t": 4.15,
+          "w": 1.8,
+          "h": 0.3,
+          "text": "No object fires",
+          "size": 10,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "table",
+          "l": 6.5,
+          "t": 1.8,
+          "w": 5.8,
+          "h": 2.4,
+          "font": 11.5,
+          "row_h": 0.42,
+          "col_widths": [
+            3.0,
+            1.4,
+            1.4
+          ],
+          "rows": [
+            [
+              "Bubble-only pictures",
+              "0.5",
+              "Chosen"
+            ],
+            [
+              "Wrongly failed",
+              "13 of 19",
+              "15 of 19"
+            ],
+            [
+              "Cluster fires",
+              "11",
+              "14"
+            ],
+            [
+              "No object fires",
+              "2",
+              "1"
+            ],
+            [
+              "Passed",
+              "6 of 19",
+              "4 of 19"
+            ]
+          ],
+          "header_fill": "#2C5F2D",
+          "body_fill": "#FFFFFF",
+          "alt_fill": "#F4F6F2",
+          "header_color": "#FFFFFF",
+          "font_family": "Calibri"
+        },
+        {
+          "kind": "text",
+          "l": 6.5,
+          "t": 4.45,
+          "w": 5.8,
+          "h": 0.9,
+          "text": "Bubble and Cluster share texture and proximity. The model reads a nearby bubble as a cluster. This is a class-separation cost, not a lens problem.",
+          "size": 12.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 6.3,
+          "w": 12.0,
+          "h": 0.3,
+          "text": "Under the wider rule, 28 of 36 bubble-family pictures fail, mostly Foreign Matter and Fiber.",
+          "size": 10,
+          "bold": false,
+          "color": "#6B7280"
+        }
+      ]
+    },
+    {
+      "title": "The Cluster choice moves 17 test pictures",
+      "subtitle": "10 are Cluster-only. 7 carry Bubble and Cluster with no other fail.",
+      "notes": "Across the full set, 1,132 pictures carry Cluster and 1,110 of them also carry Bubble. Only 22 are Cluster-only. The pass truth has 196 bubble-family pictures: 47 both, 128 Bubble only, 21 Cluster only. If Cluster becomes a fail, 68 pictures move, 17 of them in test. No retraining is needed.",
+      "items": [
+        {
+          "kind": "table",
+          "l": 0.6,
+          "t": 1.7,
+          "w": 12.1,
+          "h": 3.15,
+          "font": 11.5,
+          "row_h": 0.42,
+          "col_widths": [
+            5.0,
+            1.9,
+            2.4,
+            2.5
+          ],
+          "rows": [
+            [
+              "Truth population",
+              "Pictures",
+              "If Cluster fails",
+              "If Cluster passes"
+            ],
+            [
+              "Clear",
+              "317",
+              "Pass",
+              "Pass"
+            ],
+            [
+              "Bubble only",
+              "19",
+              "Pass",
+              "Pass"
+            ],
+            [
+              "Bubble and Cluster, no other fail",
+              "7",
+              "Fail",
+              "Pass"
+            ],
+            [
+              "Cluster only",
+              "10",
+              "Fail",
+              "Pass"
+            ],
+            [
+              "Any other failing class",
+              "768",
+              "Fail",
+              "Fail"
+            ],
+            [
+              "Total",
+              "1,121",
+              "336 pass",
+              "353 pass"
+            ]
+          ],
+          "header_fill": "#2C5F2D",
+          "body_fill": "#FFFFFF",
+          "alt_fill": "#F4F6F2",
+          "header_color": "#FFFFFF",
+          "font_family": "Calibri"
+        },
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 5.25,
+          "w": 5.7,
+          "h": 0.9,
+          "text": "Why 17: 10 are Cluster-only. 7 carry Bubble and Cluster with no other fail. The 7 are easy to miss.",
+          "size": 12.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 6.8,
+          "t": 5.25,
+          "w": 5.8,
+          "h": 0.9,
+          "text": "What changes: fail 768 to 785; pass 353 to 336. Clear pass stays 316 of 317 at 0.5. No retraining.",
+          "size": 12.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 6.35,
+          "w": 12.0,
+          "h": 0.3,
+          "text": "Across all 7,470 pictures, 68 move: 47 carry both and 21 carry Cluster only.",
+          "size": 10,
+          "bold": false,
+          "color": "#6B7280"
+        }
+      ]
+    },
+    {
+      "title": "The detector stage adds a location",
+      "subtitle": "The lens answers stay the same. The object answers move from a whole-picture score to a box.",
+      "notes": "Experiment 2. The detector is a small YOLO26n model. It reads the same 7,470 pictures and the same frozen split. The lens head is reused from Experiment 1, so the only changed variable is the object source. The same pass/fail block reads the result. Two training recipes are compared: all pictures, including empty frames, against only pictures that carry an object. The detector read-out is not in this draft.",
+      "items": [
+        {
+          "kind": "text",
+          "l": 0.7,
+          "t": 1.75,
+          "w": 5.6,
+          "h": 0.4,
+          "text": "Class-level screen",
+          "size": 19,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "bullets",
+          "l": 0.7,
+          "t": 2.3,
+          "w": 5.4,
+          "h": 1.5,
+          "size": 14,
+          "space": 10,
+          "numbered": false,
+          "items": [
+            "One score per object class.",
+            "Whole picture.",
+            "No location, no size."
+          ],
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 6.9,
+          "t": 1.75,
+          "w": 5.6,
+          "h": 0.4,
+          "text": "Detector stage",
+          "size": 19,
+          "bold": true,
+          "color": "#B45309",
+          "font": "Cambria"
+        },
+        {
+          "kind": "bullets",
+          "l": 6.9,
+          "t": 2.3,
+          "w": 5.4,
+          "h": 1.6,
+          "size": 14,
+          "space": 10,
+          "numbered": false,
+          "items": [
+            "A box, a class and a confidence for each object.",
+            "Location in the picture.",
+            "Box dimensions give a size basis."
+          ],
+          "color": "#1F2937"
+        },
+        {
+          "kind": "line",
+          "x1": 0.9,
+          "y1": 4.25,
+          "x2": 12.4,
+          "y2": 4.25,
+          "color": "#D1D5DB",
+          "width": 1.2
+        },
+        {
+          "kind": "pill",
+          "l": 0.8,
+          "t": 4.05,
+          "w": 0.4,
+          "h": 0.4,
+          "text": "1",
+          "size": 11,
+          "fill": "#2C5F2D",
+          "line": "#2C5F2D",
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 0.8,
+          "t": 4.65,
+          "w": 2.8,
+          "h": 0.6,
+          "text": "Picture",
+          "size": 12,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "pill",
+          "l": 3.6999999999999997,
+          "t": 4.05,
+          "w": 0.4,
+          "h": 0.4,
+          "text": "2",
+          "size": 11,
+          "fill": "#2C5F2D",
+          "line": "#2C5F2D",
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 3.6999999999999997,
+          "t": 4.65,
+          "w": 2.8,
+          "h": 0.6,
+          "text": "Lens head (unchanged)",
+          "size": 12,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "pill",
+          "l": 6.6,
+          "t": 4.05,
+          "w": 0.4,
+          "h": 0.4,
+          "text": "3",
+          "size": 11,
+          "fill": "#2C5F2D",
+          "line": "#2C5F2D",
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 6.6,
+          "t": 4.65,
+          "w": 2.8,
+          "h": 0.6,
+          "text": "Detector (7 classes)",
+          "size": 12,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "pill",
+          "l": 9.5,
+          "t": 4.05,
+          "w": 0.4,
+          "h": 0.4,
+          "text": "4",
+          "size": 11,
+          "fill": "#2C5F2D",
+          "line": "#2C5F2D",
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "l": 9.5,
+          "t": 4.65,
+          "w": 2.8,
+          "h": 0.6,
+          "text": "Same pass/fail rule",
+          "size": 12,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.55,
+          "w": 12.0,
+          "h": 0.55,
+          "text": "A whole-picture score cannot give a box. Without a box there is no location and no size basis.",
+          "size": 13.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 6.2,
+          "w": 12.0,
+          "h": 0.4,
+          "text": "Only the object source changes. That keeps the comparison clean.",
+          "size": 15,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 6.75,
+          "w": 12.0,
+          "h": 0.25,
+          "text": "The detector read-out is not in this draft.",
+          "size": 9,
+          "bold": false,
+          "color": "#6B7280"
+        }
+      ]
+    },
+    {
+      "title": "What the detector can answer",
+      "subtitle": "Four questions, and what would count as an answer.",
+      "notes": "These are the expected benefits, not results. Detector average precision and screen average precision are different measurements because one scores boxes and the other scores whole pictures. A size claim needs the scale calibrated first. Fiber and Extraneous Polymer are small objects and are the hardest test of the detector. One seed only.",
+      "items": [
+        {
+          "kind": "table",
+          "l": 0.6,
+          "t": 1.7,
+          "w": 12.1,
+          "h": 3.2,
+          "font": 12.5,
+          "row_h": 0.65,
+          "col_widths": [
+            4.3,
+            7.8
+          ],
+          "rows": [
+            [
+              "Question",
+              "What would count as an answer"
+            ],
+            [
+              "Which object is it?",
+              "The named class is right on the same test pictures."
+            ],
+            [
+              "Where is it?",
+              "The box covers the object; the location is usable."
+            ],
+            [
+              "How big is it?",
+              "Box size maps to microns after the scale is calibrated."
+            ],
+            [
+              "Does background help or hurt?",
+              "The two training recipes are compared under the same pass rule."
+            ]
+          ],
+          "header_fill": "#2C5F2D",
+          "body_fill": "#FFFFFF",
+          "alt_fill": "#F4F6F2",
+          "header_color": "#FFFFFF",
+          "font_family": "Calibri"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.2,
+          "w": 12.0,
+          "h": 0.55,
+          "text": "The test is the decision, not the score. A detector that ranks well but passes the wrong pictures has not helped.",
+          "size": 15,
+          "bold": true,
+          "color": "#2C5F2D",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.95,
+          "w": 12.0,
+          "h": 0.45,
+          "text": "What we expect: a name, a box and a size basis for each object, under the same pass rule.",
+          "size": 12.5,
+          "bold": false,
+          "color": "#1F2937"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 6.6,
+          "w": 12.0,
+          "h": 0.25,
+          "text": "The detector read-out is not in this draft.",
+          "size": 9,
+          "bold": false,
+          "color": "#6B7280"
+        }
+      ]
+    },
+    {
+      "title": "What we will not claim yet",
+      "subtitle": "The detector stage is a measurement step, not a production claim.",
+      "dark": true,
+      "bg": "#1F2A24",
+      "title_color": "#FFFFFF",
+      "subtitle_color": "#D1D5DB",
+      "notes": "The detector read-out is being checked and is not part of this draft. The next decision is whether the detector stage earns a place beside the screen, not whether its headline score is higher. The cluster pass rule is still to be confirmed.",
+      "items": [
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 1.7,
+          "w": 5.8,
+          "h": 0.4,
+          "text": "Not yet",
+          "size": 18,
+          "bold": true,
+          "color": "#97BC62",
+          "font": "Cambria"
+        },
+        {
+          "kind": "bullets",
+          "l": 0.6,
+          "t": 2.2,
+          "w": 5.7,
+          "h": 3.2,
+          "size": 14,
+          "space": 12,
+          "numbered": false,
+          "items": [
+            "No production accuracy claim.",
+            "No size claim until the scale is calibrated.",
+            "No winner between the screen and the detector until both are read on the same test pictures.",
+            "One seed only. Small differences are not proven."
+          ],
+          "color": "#E5E7EB"
+        },
+        {
+          "kind": "text",
+          "l": 6.6,
+          "t": 1.7,
+          "w": 6.1,
+          "h": 0.4,
+          "text": "Next steps",
+          "size": 18,
+          "bold": true,
+          "color": "#97BC62",
+          "font": "Cambria"
+        },
+        {
+          "kind": "bullets",
+          "l": 6.6,
+          "t": 2.2,
+          "w": 6.1,
+          "h": 3.3,
+          "size": 14,
+          "space": 10,
+          "numbered": true,
+          "items": [
+            "Read the detector result against the screen on the same test pictures.",
+            "Confirm the Bubble Cluster pass rule.",
+            "Target the bubble-only false fails with bubble-only examples or a specificity term.",
+            "Run a second seed so small differences are not mistaken for real ones.",
+            "If size is the next gate, calibrate the scale and test tiled detection for small objects."
+          ],
+          "color": "#E5E7EB"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 5.9,
+          "w": 12.0,
+          "h": 0.5,
+          "text": "The screen is the first stage. The detector and the size check are the next.",
+          "size": 17,
+          "bold": true,
+          "color": "#FFFFFF",
+          "font": "Cambria"
+        },
+        {
+          "kind": "text",
+          "l": 0.6,
+          "t": 6.5,
+          "w": 12.0,
+          "h": 0.3,
+          "text": "The detector read-out is being checked and is not in this draft.",
+          "size": 9.5,
+          "bold": false,
+          "color": "#A7BEAE"
+        }
+      ]
+    }
+  ]
+}

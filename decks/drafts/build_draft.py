@@ -16,7 +16,9 @@ from pathlib import Path
 
 from lxml import etree
 from pptx import Presentation
+from pptx.chart.data import CategoryChartData
 from pptx.dml.color import RGBColor
+from pptx.enum.chart import XL_CHART_TYPE, XL_LABEL_POSITION, XL_LEGEND_POSITION
 from pptx.enum.shapes import MSO_CONNECTOR, MSO_SHAPE
 from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
 from pptx.oxml.ns import qn
@@ -24,11 +26,14 @@ from pptx.util import Inches, Pt
 
 INK = RGBColor(0x1F, 0x29, 0x37)
 MUTED = RGBColor(0x6B, 0x72, 0x80)
-LINE = RGBColor(0x9C, 0xA3, 0xAF)
-LIGHT = RGBColor(0xF3, 0xF4, 0xF6)
+LINE = RGBColor(0xD1, 0xD5, 0xDB)
+LIGHT = RGBColor(0xF4, 0xF6, 0xF2)
 WHITE = RGBColor(0xFF, 0xFF, 0xFF)
-HEADER = RGBColor(0x37, 0x41, 0x51)
-ZEBRA = RGBColor(0xF9, 0xFA, 0xFB)
+HEADER = RGBColor(0x2C, 0x5F, 0x2D)
+ZEBRA = RGBColor(0xF7, 0xF7, 0xF5)
+DARK = RGBColor(0x1F, 0x2A, 0x24)
+TITLE_FONT = "Cambria"
+BODY_FONT = "Calibri"
 
 
 def rgb(value: str | None, default: RGBColor) -> RGBColor:
@@ -48,7 +53,7 @@ def anchor_of(value: str | None):
             "bottom": MSO_ANCHOR.BOTTOM}.get(value or "top", MSO_ANCHOR.TOP)
 
 
-def style_run(run, size=None, bold=None, color=None, italic=None, font="Calibri"):
+def style_run(run, size=None, bold=None, color=None, italic=None, font=BODY_FONT):
     if size is not None:
         run.font.size = Pt(size)
     if bold is not None:
@@ -76,7 +81,8 @@ def add_text(slide, item):
         run = p.add_run()
         run.text = line
         style_run(run, item.get("size", 12), item.get("bold", False),
-                  rgb(item.get("color"), INK), item.get("italic", False))
+                  rgb(item.get("color"), INK), item.get("italic", False),
+                  item.get("font", BODY_FONT))
     return box
 
 
@@ -98,14 +104,17 @@ def add_bullets(slide, item):
         if isinstance(entry, dict):
             lead = p.add_run()
             lead.text = prefix + entry["lead"]
-            style_run(lead, size, True, rgb(item.get("color"), INK))
+            style_run(lead, size, True, rgb(item.get("color"), INK),
+                      font=item.get("font", BODY_FONT))
             rest = p.add_run()
             rest.text = entry.get("text", "")
-            style_run(rest, size, False, rgb(item.get("color"), INK))
+            style_run(rest, size, False, rgb(item.get("color"), INK),
+                      font=item.get("font", BODY_FONT))
         else:
             run = p.add_run()
             run.text = prefix + str(entry)
-            style_run(run, size, False, rgb(item.get("color"), INK))
+            style_run(run, size, False, rgb(item.get("color"), INK),
+                      font=item.get("font", BODY_FONT))
     return box
 
 
@@ -133,7 +142,8 @@ def add_rect(slide, item):
         run = p.add_run()
         run.text = line
         style_run(run, item.get("size", 11), item.get("bold", False),
-                  rgb(item.get("color"), INK), item.get("italic", False))
+                  rgb(item.get("color"), INK), item.get("italic", False),
+                  item.get("font", BODY_FONT))
     return shape
 
 
@@ -193,7 +203,12 @@ def add_table(slide, item):
     style = tbl_pr.find(qn("a:tableStyleId"))
     if style is None:
         style = etree.SubElement(tbl_pr, qn("a:tableStyleId"))
-    style.text = "{5940675A-B579-460E-94D1-54222C63F5DA}"
+    # No grid, no fill: the cells carry the minimal style explicitly.
+    style.text = "{2D5ABB26-0587-4C30-8999-92F81FD0307C}"
+    header_fill = rgb(item.get("header_fill"), HEADER)
+    body_fill = rgb(item.get("body_fill"), WHITE)
+    alt_fill = rgb(item.get("alt_fill"), ZEBRA)
+    header_color = rgb(item.get("header_color"), WHITE)
     for j, width in enumerate(item["col_widths"]):
         table.columns[j].width = Inches(width)
     for i, row in enumerate(rows):
@@ -206,9 +221,9 @@ def add_table(slide, item):
             cell.vertical_anchor = MSO_ANCHOR.MIDDLE
             cell.fill.solid()
             if item.get("header", True) and i == 0:
-                cell.fill.fore_color.rgb = HEADER
+                cell.fill.fore_color.rgb = header_fill
             else:
-                cell.fill.fore_color.rgb = WHITE if i % 2 else ZEBRA
+                cell.fill.fore_color.rgb = body_fill if i % 2 else alt_fill
             tf = cell.text_frame
             tf.word_wrap = True
             p = tf.paragraphs[0]
@@ -218,19 +233,112 @@ def add_table(slide, item):
             header = item.get("header", True) and i == 0
             pending = str(value).strip().lower() == "pending"
             style_run(run, item.get("font", 11), header or pending,
-                      WHITE if header else (MUTED if pending else INK),
-                      pending)
+                      header_color if header else (MUTED if pending else INK),
+                      pending, item.get("font_family", BODY_FONT))
     return table
+
+
+def add_chart(slide, item):
+    """Native, editable chart from categories and series in the spec."""
+    data = CategoryChartData()
+    data.categories = item["categories"]
+    for series in item["series"]:
+        data.add_series(series["name"], series["values"])
+    chart_type = XL_CHART_TYPE.BAR_CLUSTERED if item.get("bar", True) else XL_CHART_TYPE.COLUMN_CLUSTERED
+    frame = slide.shapes.add_chart(chart_type, Inches(item["l"]), Inches(item["t"]),
+                                   Inches(item["w"]), Inches(item["h"]), data)
+    chart = frame.chart
+    chart.font.name = item.get("font_family", BODY_FONT)
+    chart.font.size = Pt(item.get("font", 9))
+    chart.font.color.rgb = INK
+    chart.has_title = bool(item.get("title"))
+    if item.get("title"):
+        chart.chart_title.text_frame.text = item["title"]
+        chart.chart_title.text_frame.paragraphs[0].font.size = Pt(10)
+        chart.chart_title.text_frame.paragraphs[0].font.bold = False
+        chart.chart_title.text_frame.paragraphs[0].font.color.rgb = MUTED
+    chart.has_legend = item.get("legend", True)
+    if chart.has_legend:
+        chart.legend.position = XL_LEGEND_POSITION.BOTTOM
+        chart.legend.include_in_layout = False
+        chart.legend.font.size = Pt(9)
+        chart.legend.font.color.rgb = MUTED
+    plot = chart.plots[0]
+    plot.gap_width = item.get("gap_width", 70)
+    plot.overlap = item.get("overlap", -10)
+    if item.get("labels", True):
+        plot.has_data_labels = True
+        labels = plot.data_labels
+        labels.font.size = Pt(item.get("label_font", 8))
+        labels.font.color.rgb = INK
+        labels.number_format = item.get("number_format", "0.00")
+        labels.number_format_is_linked = False
+        labels.position = XL_LABEL_POSITION.OUTSIDE_END
+    for idx, series in enumerate(chart.series):
+        spec = item["series"][idx]
+        series.format.fill.solid()
+        series.format.fill.fore_color.rgb = rgb(spec.get("color"), HEADER)
+        series.format.line.fill.background()
+    value_axis = chart.value_axis
+    value_axis.minimum_scale = item.get("min", 0.0)
+    value_axis.maximum_scale = item.get("max", 1.0)
+    value_axis.major_unit = item.get("unit", 0.2)
+    value_axis.has_major_gridlines = True
+    value_axis.major_gridlines.format.line.color.rgb = RGBColor(0xE5, 0xE7, 0xEB)
+    value_axis.major_gridlines.format.line.width = Pt(0.5)
+    value_axis.tick_labels.font.size = Pt(8)
+    value_axis.tick_labels.font.color.rgb = MUTED
+    value_axis.tick_labels.number_format = "0.0"
+    value_axis.tick_labels.number_format_is_linked = False
+    value_axis.format.line.color.rgb = LINE
+    category_axis = chart.category_axis
+    category_axis.tick_labels.font.size = Pt(item.get("category_font", 8))
+    category_axis.tick_labels.font.color.rgb = INK
+    category_axis.format.line.color.rgb = LINE
+    return chart
+
+
+def add_grid(slide, item):
+    """A small grid of squares, one per picture, for a population read."""
+    cols = int(item["cols"])
+    size = float(item["size"])
+    gap = float(item.get("gap", 0.1))
+    colors = item["colors"]
+    for i, kind in enumerate(item["pattern"]):
+        row, col = divmod(i, cols)
+        cell = {
+            "kind": "rect",
+            "l": item["l"] + col * (size + gap),
+            "t": item["t"] + row * (size + gap),
+            "w": size,
+            "h": size,
+            "text": "",
+            "fill": colors[kind]["fill"],
+            "line": colors[kind]["line"],
+            "size": 8,
+        }
+        add_rect(slide, cell)
 
 
 def add_slide(prs, spec):
     slide = prs.slides.add_slide(prs.slide_layouts[6])
+    if spec.get("bg"):
+        slide.background.fill.solid()
+        slide.background.fill.fore_color.rgb = rgb(spec["bg"], WHITE)
+    dark = bool(spec.get("dark"))
     if not spec.get("bare"):
-        add_text(slide, {"l": 0.5, "t": 0.3, "w": 12.33, "h": 0.62,
-                         "text": spec.get("title", ""), "size": 25, "bold": True})
+        add_text(slide, {"l": 0.6, "t": 0.32, "w": 12.1, "h": 0.78,
+                         "text": spec.get("title", ""),
+                         "size": spec.get("title_size", 34),
+                         "bold": spec.get("title_bold", True),
+                         "font": spec.get("title_font", TITLE_FONT),
+                         "color": spec.get("title_color", "#FFFFFF" if dark else "#1F2937")})
         if spec.get("subtitle"):
-            add_text(slide, {"l": 0.5, "t": 0.98, "w": 12.33, "h": 0.42,
-                             "text": spec["subtitle"], "size": 12.5, "color": "#6B7280"})
+            add_text(slide, {"l": 0.6, "t": 1.14, "w": 12.1, "h": 0.42,
+                             "text": spec["subtitle"],
+                             "size": spec.get("subtitle_size", 13.5),
+                             "color": spec.get("subtitle_color", "#D1D5DB" if dark else "#6B7280"),
+                             "font": BODY_FONT})
     for item in spec.get("items", []):
         kind = item.get("kind", "text")
         if kind == "text":
@@ -247,14 +355,18 @@ def add_slide(prs, spec):
             add_bar(slide, item)
         elif kind == "table":
             add_table(slide, item)
+        elif kind == "chart":
+            add_chart(slide, item)
+        elif kind == "grid":
+            add_grid(slide, item)
         else:
             raise SystemExit(f"unknown item kind: {kind}")
     if spec.get("notes"):
         slide.notes_slide.notes_text_frame.text = spec["notes"]
     if not spec.get("bare"):
-        add_text(slide, {"l": 12.45, "t": 7.12, "w": 0.55, "h": 0.25,
+        add_text(slide, {"l": 12.35, "t": 7.12, "w": 0.55, "h": 0.25,
                          "text": str(len(prs.slides)), "size": 9,
-                         "color": "#9CA3AF", "align": "right"})
+                         "color": "#9CA3AF" if not dark else "#A7BEAE", "align": "right"})
     return slide
 
 
