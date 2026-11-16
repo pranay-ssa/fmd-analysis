@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "run_id": "cnn__gate4__448__20261116",
+  "family": "cnn",
+  "arm": "gate4_448",
+  "epochs": 50,
+  "status": "ok",
+  "host": "vm",
+  "data": {
+    "split": "run/split_exp3_1_20261116/labels.csv (md5 222c873f17a9f101d32b0b36e210e5e3)",
+    "n_train": 4964,
+    "n_val": 1058,
+    "n_test": 1533,
+    "classes": 4
+  },
+  "config": {
+    "columns": "gate4",
+    "gated_target": "ignored",
+    "pos_weight": "on",
+    "output_columns": [
+      "fm_gated",
+      "fiber_gated",
+      "ep_gated",
+      "hema_gated"
+    ],
+    "arch": "resnet50",
+    "imgsz": 448,
+    "batch": 8,
+    "epochs": 50,
+    "lr": 0.0001,
+    "seed": 42,
+    "device": "cuda",
+    "split_shape": "70/15/15",
+    "threshold_source": "val",
+    "table": "run/split_exp3_1_20261116/labels.csv",
+    "table_md5": "222c873f17a9f101d32b0b36e210e5e3",
+    "recipe": "resnet50, 448, batch 8, 50 epochs, no early stopping, SGD lr 1e-4 momentum 0.9 (nesterov, weight decay 1e-4), seed 42, BCEWithLogitsLoss"
+  },
+  "metrics": {
+    "primary": {
+      "name": "fm_auroc_test",
+      "value": 0.7592105263157894
+    },
+    "all": {
+      "trainer_primary": {
+        "name": "macro_auprc_four_gates",
+        "value": 0.48250886840686474
+      },
+      "macro_auprc": 0.48250886840686474,
+      "per_class": {
+        "foreign_matter": {
+          "auroc": 0.7592105263157894,
+          "gated_n": 79,
+          "unflagged_n": 380,
+          "decisive_n": 51,
+          "recall_at_cut": 0.43037974683544306,
+          "false_fire_all": 0.12368421052631579,
+          "false_fire_decisive": 0.0196078431372549,
+          "cut": 0.95
+        },
+        "fiber": {
+          "auroc": 0.6638222055513878,
+          "gated_n": 124,
+          "unflagged_n": 43,
+          "decisive_n": 14,
+          "recall_at_cut": 0.5,
+          "false_fire_all": 0.3953488372093023,
+          "false_fire_decisive": 0.0,
+          "cut": 0.2
+        },
+        "extraneous_polymer": {
+          "auroc": 0.8703125,
+          "gated_n": 40,
+          "unflagged_n": 40,
+          "decisive_n": 34,
+          "recall_at_cut": 0.25,
+          "false_fire_all": 0.0,
+          "false_fire_decisive": 0.0,
+          "cut": 0.9
+        },
+        "hema": {
+          "auroc": 0.9583333333333334,
+          "gated_n": 52,
+          "unflagged_n": 6,
+          "decisive_n": 3,
+          "recall_at_cut": 0.9038461538461539,
+          "false_fire_all": 0.0,
+          "false_fire_decisive": 0.0,
+          "cut": 0.8
+        }
+      },
+      "timing": {
+        "seconds_total": 1063.4,
+        "seconds_training": 1052.6,
+        "seconds_per_epoch": 21.1,
+        "seconds_validation": 4.5,
+        "seconds_inference": 6.3,
+        "inference_images": 1533,
+        "inference_ms_per_image": 4.09
+      }
+    }
+  },
+  "artifacts": {
+    "weights": "run/exp3_1_gate4_448_20261117/final.pt",
+    "log": "run/exp3_1_gate4_448_20261117/launch.log",
+    "metrics": "run/exp3_1_gate4_448_20261117/metrics.json",
+    "predictions": "run/exp3_1_gate4_448_20261117/predictions.npz",
+    "thresholds": "run/exp3_1_gate4_448_20261117/thresholds.json"
+  },
+  "notes": "Run record written after the fact from metrics.json and the scored per-class table; the trainer does not write run.json. Primary is the Foreign Matter AUROC against unflagged test pictures, recomputed from predictions.npz by the scorer. The trainer primary is macro AUPRC over the four gates. Thresholds chosen on validation only."
+}

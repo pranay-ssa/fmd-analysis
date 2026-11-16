@@ -22,6 +22,19 @@ Column groups and switches:
                        appears only in the --labels-only report.
   --columns combined   the 12 lens columns plus the same 7 object columns
                        (19 outputs, 20 minus Surface Groove).
+  --columns gate4      Experiment 3.1's four gate columns: fm_gated,
+                       fiber_gated, ep_gated, hema_gated, read from their own
+                       table, run/split_exp3_1_20261116/labels.csv. Truth is the
+                       column itself, so a picture carrying the class unflagged
+                       is a negative, never masked; that is what makes the
+                       false-fire rate measurable. The table carries its own
+                       split and image path, so no v8 artifact is read.
+                       --gated-target is ignored in this mode, --pos-weight
+                       defaults to on, and the threshold grid extends to 0.99
+                       when the maximum lands on 0.95.
+  --table PATH         label table to read. Defaults per mode to the v8 table
+                       for ooi/combined and the Exp 3.1 table for gate4, so an
+                       existing command is unchanged.
   --gated-target class the four gated classes (foreign_matter, fiber,
                        extraneous_polymer, hema) train on their class_* column.
   --gated-target gate  those four train on their gate_* column. No model ever
@@ -57,6 +70,14 @@ A real arm (VM):
         --image-root /data/FMD_Data_26082026/fmd_temp_images \
         --out run/multilabel_ooi_20261104/class
 
+Experiment 3.1 (VM), four gate columns from their own table:
+    .venv/bin/python experiments/multilabel_ooi/train_multilabel.py \
+        --columns gate4 --image-root /data/FMD_Data_26082026/fmd_temp_images \
+        --out run/gate4_exp3_1_20261116/gate4_224
+
+Counts for the gate4 table, no torch needed:
+    ... --columns gate4 --labels-only
+
 --out defaults to run/multilabel_ooi_20261104/<gated-target> for ooi with
 pos-weight off, adds _posw when it is on, and prefixes combined_ in combined
 mode. The runner passes --out explicitly.
@@ -82,6 +103,10 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
 TABLE = ROOT / os.environ.get("OOI_TABLE", "run/ooi_matrix_20261104/ooi_labels.csv")
+GATE4_TABLE = ROOT / os.environ.get(
+    "OOI_TABLE_GATE4", "run/split_exp3_1_20261116/labels.csv")
+GATE4_SPLIT = ROOT / os.environ.get(
+    "OOI_SPLIT_GATE4", "run/split_exp3_1_20261116/split.csv")
 RESOLVED = ROOT / os.environ.get("OOI_RESOLVED", "run/eda_full_20261029/resolved_labels.csv")
 MATRIX = ROOT / os.environ.get("OOI_MATRIX", "run/multilabel_edge_20261029_rev4/label_matrix.csv")
 SPLIT = ROOT / os.environ.get("OOI_SPLIT", "run/split_20261103_v8/split_70_15_15.csv")
@@ -131,6 +156,36 @@ GATED_COLUMNS = {
     "class_hema": "gate_hema",
 }
 GATE_ORDER = ["gate_foreign_matter", "gate_fiber", "gate_extraneous_polymer", "gate_hema"]
+
+# ---------------------------------------------- Experiment 3.1, --columns gate4
+# A second, self-contained label space: four gate columns, their own table and
+# their own split (ticket 037). Nothing here is read by the ooi or combined
+# modes, and no v8 artifact is read by this one.
+GATE4_COLUMNS = ["fm_gated", "fiber_gated", "ep_gated", "hema_gated"]
+GATE4_TAGS = [
+    ("fm_gated", "Foreign Matter"),
+    ("fiber_gated", "Fiber"),
+    ("ep_gated", "Extraneous Polymer"),
+    ("hema_gated", "HEMA"),
+]
+GATE4_TABLE_COLUMNS = ["picture_md5", "image_path", "split"] + GATE4_COLUMNS
+
+# ------------------------------------- Experiment 3.2, --columns cond15
+# The condition specialist: the twelve lens columns plus the three non-gated
+# object classes. The four gated classes are a separate model, so no size
+# question enters this one and no picture is moved out of training.
+COND15_COLUMNS = list(LENS_COLUMNS) + ["class_bubble", "class_bubble_cluster",
+                                      "class_wet_package"]
+COND15_TABLE = ROOT / "run/split_exp3_2_20261116/labels_conditions.csv"
+COND15_EXPECTED_SPLIT = {"train": 5239, "val": 1110, "test": 1121}
+# Frozen from the Experiment 3.1 split table; asserted on every run of the mode.
+GATE4_EXPECTED_SPLIT = {"train": 4964, "val": 1058, "test": 1533}
+GATE4_EXPECTED_POSITIVES = {
+    "fm_gated": {"train": 315, "val": 60, "test": 79},
+    "fiber_gated": {"train": 195, "val": 43, "test": 124},
+    "ep_gated": {"train": 81, "val": 14, "test": 40},
+    "hema_gated": {"train": 79, "val": 20, "test": 52},
+}
 
 # AP floor for a constant score is prevalence, frozen in the OOI point 4 map.
 # Each value is asserted against the table total at read time.
@@ -183,25 +238,32 @@ def md5_of(path: Path) -> str:
     return hashlib.md5(path.read_bytes()).hexdigest()
 
 
-def _expect(label, got, want):
+def _expect(label, got, want, where=None):
     if got != want:
-        raise SystemExit(f"{TABLE.name}: {label} is {got}, expected {want}")
+        raise SystemExit(f"{(where or TABLE).name}: {label} is {got}, expected {want}")
 
 
-def read_table():
+def read_table(columns_mode="ooi", table=None, expect_counts=True):
     """Read the ticket-027 label table and assert every frozen count.
 
     Returns the rows as dicts: picture_md5, split, and all 25 numeric columns
-    as ints. This is the only place labels enter the trainer.
+    as ints. This is the only place labels enter the trainer. In gate4 mode the
+    Experiment 3.1 table is read instead, by read_gate4_table.
     """
-    table_md5 = md5_of(TABLE)
+    if columns_mode == "gate4":
+        return read_gate4_table(Path(table) if table else GATE4_TABLE, expect_counts)
+    if columns_mode == "cond15":
+        return read_cond15_table(Path(table) if table else COND15_TABLE, expect_counts)
+
+    table = Path(table) if table else TABLE
+    table_md5 = md5_of(table)
     if table_md5 != TABLE_MD5:
-        raise SystemExit(f"{TABLE} md5 {table_md5}, expected {TABLE_MD5}")
+        raise SystemExit(f"{table} md5 {table_md5}, expected {TABLE_MD5}")
     split_md5 = md5_of(SPLIT)
     if split_md5 != SPLIT_MD5:
         raise SystemExit(f"{SPLIT} md5 {split_md5}, expected {SPLIT_MD5}")
 
-    with open(TABLE, newline="", encoding="utf-8") as fh:
+    with open(table, newline="", encoding="utf-8") as fh:
         raw = list(csv.DictReader(fh))
     rows = []
     for record in raw:
@@ -254,6 +316,64 @@ def read_table():
     return rows
 
 
+def read_gate4_table(table, expect_counts=True):
+    """Read the Experiment 3.1 four-column table (ticket 037).
+
+    Schema: picture_md5, image_path, split, fm_gated, fiber_gated, ep_gated,
+    hema_gated. The table carries its own split and its own image path, so no
+    v8 artifact is opened in this mode. The four frozen per-split counts are
+    asserted on every real run; --expect-counts off is for a synthetic table
+    only, and says so loudly.
+    """
+    if not table.is_file():
+        raise SystemExit(f"gate4 label table not found: {table}")
+    table_md5 = md5_of(table)
+    with open(table, newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
+        present = list(reader.fieldnames or [])
+        missing = [c for c in GATE4_TABLE_COLUMNS if c not in present]
+        if missing:
+            raise SystemExit(f"{table.name}: missing columns {missing}")
+        raw = list(reader)
+
+    rows = []
+    for record in raw:
+        row = {"picture_md5": record["picture_md5"], "split": record["split"],
+               "image_path": record["image_path"]}
+        for column in GATE4_COLUMNS:
+            row[column] = int(record[column])
+        rows.append(row)
+
+    totals = Counter(r["split"] for r in rows)
+    print(f"table: {table} md5 {table_md5}")
+    print(f"rows: {len(rows)}: {totals['train']} train / {totals['val']} val / "
+          f"{totals['test']} test")
+
+    # The split of record beside the table must agree picture for picture with
+    # the split column this run trains on. Skipped for a synthetic table.
+    split_path = GATE4_SPLIT if table.parent == GATE4_TABLE.parent \
+        else table.parent / "split.csv"
+    if expect_counts and split_path.is_file():
+        with open(split_path, newline="", encoding="utf-8") as fh:
+            split_of = {r["picture_md5"]: r["split"] for r in csv.DictReader(fh)}
+        _expect("picture set", {r["picture_md5"] for r in rows}, set(split_of), table)
+        disagreed = [r["picture_md5"] for r in rows
+                     if split_of.get(r["picture_md5"]) != r["split"]]
+        _expect(f"rows disagreeing with {split_path.name}", len(disagreed), 0, table)
+        print(f"split cross-check: {split_path.name} agrees on all {len(split_of)} pictures")
+
+    if expect_counts:
+        for side, want in GATE4_EXPECTED_SPLIT.items():
+            _expect(f"{side} rows", totals[side], want, table)
+        for column, per in GATE4_EXPECTED_POSITIVES.items():
+            for side in SPLITS:
+                got = sum(r[column] for r in rows if r["split"] == side)
+                _expect(f"{column} {side} positives", got, per[side], table)
+    else:
+        print("frozen counts NOT asserted: --expect-counts off, synthetic table only")
+    return rows
+
+
 def read_paths():
     """winning_path per md5: resolved labels first, label matrix as fallback.
 
@@ -269,12 +389,54 @@ def read_paths():
     return path_of
 
 
+def read_cond15_table(table, expect_counts=True):
+    """Read the condition specialist's 15-column table (Experiment 3.2).
+
+    The table is self-contained: it carries image_path and split, so no v8
+    artifact is opened. Counts are asserted against the frozen assignment.
+    """
+    table = Path(table)
+    if not table.is_file():
+        raise SystemExit(f"cond15 label table not found: {table}")
+    with open(table, newline="", encoding="utf-8") as fh:
+        raw = list(csv.DictReader(fh))
+    if not raw:
+        raise SystemExit(f"empty cond15 table: {table}")
+    required = ["picture_md5", "image_path", "split"] + COND15_COLUMNS
+    missing = [c for c in required if c not in raw[0]]
+    if missing:
+        raise SystemExit(f"cond15 table missing columns: {missing}")
+    rows = []
+    for record in raw:
+        row = {"picture_md5": record["picture_md5"], "split": record["split"],
+               "image_path": record["image_path"]}
+        for column in COND15_COLUMNS:
+            row[column] = int(record[column])
+        rows.append(row)
+    counts = Counter(r["split"] for r in rows)
+    print(f"cond15 table: {table} md5 {md5_of(table)}")
+    print(f"rows: {len(rows)}: " + " / ".join(f"{counts[s]} {s}" for s in ("train", "val", "test")))
+    if expect_counts:
+        _expect("cond15 rows", len(rows), sum(COND15_EXPECTED_SPLIT.values()))
+        for side, want in COND15_EXPECTED_SPLIT.items():
+            _expect(f"cond15 {side} rows", counts[side], want)
+        positives = {c: sum(r[c] for r in rows if r["split"] == "train")
+                     for c in COND15_COLUMNS}
+        print("cond15 train positives: "
+              + ", ".join(f"{c}={n}" for c, n in positives.items()))
+    return rows
+
+
 def output_columns(columns_mode):
     """The model's output columns, in fixed order, for one column group."""
     if columns_mode == "ooi":
         return list(OBJECT_COLUMNS)
     if columns_mode == "combined":
         return list(LENS_COLUMNS) + list(OBJECT_COLUMNS)
+    if columns_mode == "gate4":
+        return list(GATE4_COLUMNS)
+    if columns_mode == "cond15":
+        return list(COND15_COLUMNS)
     raise SystemExit(f"unknown columns mode {columns_mode}")
 
 
@@ -286,6 +448,38 @@ def build_rows(raw, columns_mode, gated_target, with_paths=True):
     every metric is computed on: always the class column, never the gate.
     """
     columns = output_columns(columns_mode)
+    if columns_mode == "cond15":
+        rows = []
+        for record in raw:
+            values = [record[c] for c in COND15_COLUMNS]
+            row = {"md5": record["picture_md5"], "split": record["split"],
+                   "truth": list(values), "target": list(values), "gate": [0, 0, 0, 0]}
+            if with_paths:
+                row["image_path"] = record.get("image_path")
+            rows.append(row)
+        if with_paths:
+            missing = [r["md5"] for r in rows if not r["image_path"]]
+            if missing:
+                raise SystemExit(f"{len(missing)} rows have no image path, first {missing[0]}")
+        return rows, columns
+    if columns_mode == "gate4":
+        # gate4 trains on the gate columns themselves, so target and truth are
+        # the same vector, and --gated-target has nothing to swap. The table
+        # carries the image path, so the v8 path tables are not opened.
+        rows = []
+        for record in raw:
+            values = [record[c] for c in GATE4_COLUMNS]
+            row = {"md5": record["picture_md5"], "split": record["split"],
+                   "truth": list(values), "target": list(values), "gate": list(values)}
+            if with_paths:
+                row["image_path"] = record.get("image_path")
+            rows.append(row)
+        if with_paths:
+            missing = [r["md5"] for r in rows if not r["image_path"]]
+            if missing:
+                raise SystemExit(f"{len(missing)} rows have no image path, first {missing[0]}")
+        return rows, columns
+
     path_of = read_paths() if with_paths else {}
     rows = []
     for record in raw:
@@ -312,6 +506,22 @@ def build_rows(raw, columns_mode, gated_target, with_paths=True):
 
 def labels_report(raw, args):
     """Print the per-split counts of every column group and confirm the frozen numbers."""
+    if args.columns == "cond15":
+        counts = Counter(r["split"] for r in raw)
+        print(f"cond15 rows: {len(raw)}: {counts['train']} train / {counts['val']} val / "
+              f"{counts['test']} test")
+        print("  column                      total  train   val  test")
+        for column in COND15_COLUMNS:
+            total = sum(int(r[column]) for r in raw)
+            tr = sum(int(r[column]) for r in raw if r["split"] == "train")
+            va = sum(int(r[column]) for r in raw if r["split"] == "val")
+            te = sum(int(r[column]) for r in raw if r["split"] == "test")
+            print(f"  {column:24s} {total:6d} {tr:6d} {va:5d} {te:5d}")
+        print(f"model outputs ({len(COND15_COLUMNS)}): {', '.join(COND15_COLUMNS)}")
+        return
+    if args.columns == "gate4":
+        gate4_labels_report(raw, args)
+        return
     split_totals = Counter(r["split"] for r in raw)
 
     def counts(column):
@@ -348,6 +558,43 @@ def labels_report(raw, args):
           + ", split " + "/".join(str(EXPECTED_SPLIT[s]) for s in SPLITS))
     columns = output_columns(args.columns)
     print(f"flags: --columns {args.columns} --gated-target {args.gated_target} "
+          f"--pos-weight {args.pos_weight}")
+    print(f"model outputs ({len(columns)}): {', '.join(columns)}")
+
+
+def gate4_labels_report(raw, args):
+    """The Experiment 3.1 read: four gate columns, per-split counts, weights.
+
+    There is no class/gate/lens split to report here: the table holds the four
+    gate columns only, one per gated class, positive on the size flag.
+    """
+    totals = Counter(r["split"] for r in raw)
+
+    def per(column):
+        return {s: sum(r[column] for r in raw if r["split"] == s) for s in SPLITS}
+
+    print(f"  {'column':14s} {'total':>6s} {'train':>6s} {'val':>5s} {'test':>5s}")
+    counts = {}
+    for column, name in GATE4_TAGS:
+        counts[column] = per(column)
+        print(f"  {column:14s} {sum(counts[column].values()):6d} {counts[column]['train']:6d} "
+              f"{counts[column]['val']:5d} {counts[column]['test']:5d}   ({name})")
+
+    train_rows = totals["train"]
+    weights = []
+    for column, _name in GATE4_TAGS:
+        n = counts[column]["train"]
+        weights.append((train_rows - n) / n if n else float("inf"))
+    print("training positives: " + " / ".join(str(counts[c]["train"]) for c, _ in GATE4_TAGS))
+    print(f"inverse-frequency pos_weight on train only, N = {train_rows}: "
+          + " / ".join(f"{w:.1f}" for w in weights))
+    if args.expect_counts == "on":
+        print("frozen counts match ticket 037: split "
+              + "/".join(str(GATE4_EXPECTED_SPLIT[s]) for s in SPLITS)
+              + ", train positives "
+              + "/".join(str(GATE4_EXPECTED_POSITIVES[c]["train"]) for c, _ in GATE4_TAGS))
+    columns = output_columns(args.columns)
+    print(f"flags: --columns {args.columns} --gated-target {args.gated_target} (ignored) "
           f"--pos-weight {args.pos_weight}")
     print(f"model outputs ({len(columns)}): {', '.join(columns)}")
 
@@ -396,17 +643,24 @@ def precision_recall_f1(y_true, y_score, threshold, columns):
 
 
 THRESHOLD_GRID = [round(float(t), 2) for t in np.arange(0.05, 1.0, 0.05)]
+# Extended only when gate4's maximum F1 lands on the top of the grid.
+CEILING_GRID = [0.96, 0.97, 0.98, 0.99]
 DEFAULT_THRESHOLD = 0.5
 MIN_VAL_POSITIVES = 10
 
 
-def choose_thresholds(val_true, val_score, columns, min_positives=MIN_VAL_POSITIVES):
+def choose_thresholds(val_true, val_score, columns, min_positives=MIN_VAL_POSITIVES,
+                      extend_ceiling=False):
     """Pick one threshold per class by maximum F1 on the validation split.
 
     Returns {column: {...}} with the chosen threshold, where it came from, the full
     validation curve, and the 0.5 numbers for comparison. A class with fewer than
     `min_positives` validation positives is not tuned: the F1 curve at that support is
     noise, so it keeps 0.5 and says so.
+
+    With extend_ceiling, a class whose best cut is the top of the grid (0.95) is
+    re-picked over 0.96 to 0.99, so a saturated class is not cut short by the
+    grid. Off by default: the ooi and combined grids are unchanged.
     """
     chosen = {}
     for j, name in enumerate(columns):
@@ -417,6 +671,7 @@ def choose_thresholds(val_true, val_score, columns, min_positives=MIN_VAL_POSITI
             curve.append({"threshold": t, "precision": round(m["precision"], 6),
                           "recall": round(m["recall"], 6), "f1": round(m["f1"], 6)})
         at_half = next(c for c in curve if c["threshold"] == DEFAULT_THRESHOLD)
+        extended = False
         if support < min_positives:
             best = max(curve, key=lambda c: (c["f1"], c["threshold"]))
             chosen[name] = {"threshold": DEFAULT_THRESHOLD, "source": "default",
@@ -426,16 +681,28 @@ def choose_thresholds(val_true, val_score, columns, min_positives=MIN_VAL_POSITI
                             "val_best_f1_seen": best["f1"],
                             "val_best_threshold_seen": best["threshold"],
                             "curve": curve}
+            if extend_ceiling:
+                chosen[name]["grid_extended"] = False
             continue
         # Tie-break towards the higher threshold: at equal F1 the stricter cut is the
         # safer operating point, and it keeps the choice off the very low scores.
         best = max(curve, key=lambda c: (c["f1"], c["threshold"]))
+        if extend_ceiling and best["threshold"] == THRESHOLD_GRID[-1]:
+            for t in CEILING_GRID:
+                m = precision_recall_f1(val_true[:, j:j + 1], val_score[:, j:j + 1], t,
+                                        [name])[name]
+                curve.append({"threshold": t, "precision": round(m["precision"], 6),
+                              "recall": round(m["recall"], 6), "f1": round(m["f1"], 6)})
+            best = max(curve, key=lambda c: (c["f1"], c["threshold"]))
+            extended = True
         chosen[name] = {"threshold": best["threshold"], "source": "val",
                         "reason": "max F1 on val", "val_support": support,
                         "val_f1_at_threshold": best["f1"], "val_f1_at_0.5": at_half["f1"],
                         "val_best_f1_seen": best["f1"],
                         "val_best_threshold_seen": best["threshold"],
                         "curve": curve}
+        if extend_ceiling:
+            chosen[name]["grid_extended"] = extended
     return chosen
 
 
@@ -609,6 +876,78 @@ def evaluate_test(y_true, y_score, test_rows, thresholds, columns):
     return result
 
 
+def evaluate_test_cond15(y_true, y_score, columns):
+    """AUPRC and F1 for the fifteen condition columns. No object/gate split."""
+    macro, ap = macro_ap(y_true, y_score, columns)
+    at_half = precision_recall_f1(y_true, y_score, DEFAULT_THRESHOLD, columns)
+    return {"rows": int(y_true.shape[0]), "macro_ap_cond15": macro,
+            "per_class": at_half, "ap": ap}
+
+
+def evaluate_test_gate4(y_true, y_score, test_rows, thresholds, columns):
+    """The test read for the four gate columns.
+
+    Truth is the gate column itself, so one column answers one question: gated
+    against unflagged. Every metric here is read on that truth, at 0.5 and at
+    the validation-chosen cut; there is no class/gate split to reconcile and no
+    Bubble/Cluster or lens block in this label space.
+    """
+    truth = y_true.astype(int)
+    cut = np.array([thresholds[c]["threshold"] for c in columns])
+    pred_half = (y_score >= DEFAULT_THRESHOLD).astype(int)
+    pred_cut = (y_score >= cut).astype(int)
+
+    per_class = {}
+    auprc = {}
+    f1_half, f1_cut = [], []
+    for j, column in enumerate(columns):
+        ap = average_precision(truth[:, j], y_score[:, j])
+        auprc[column] = ap
+        at_half = precision_recall_f1(truth[:, j:j + 1], y_score[:, j:j + 1],
+                                      DEFAULT_THRESHOLD, [column])[column]
+
+        def read(pred):
+            tp = float(((pred[:, j] == 1) & (truth[:, j] == 1)).sum())
+            fp = float(((pred[:, j] == 1) & (truth[:, j] == 0)).sum())
+            fn = float(((pred[:, j] == 0) & (truth[:, j] == 1)).sum())
+            precision = tp / (tp + fp) if (tp + fp) else 0.0
+            recall = tp / (tp + fn) if (tp + fn) else 0.0
+            f1 = 2 * precision * recall / (precision + recall) if (precision + recall) else 0.0
+            return precision, recall, f1, int((pred[:, j] == 1).sum())
+
+        precision, recall, f1, fired = read(pred_cut)
+        per_class[column] = {
+            "name": dict(GATE4_TAGS)[column],
+            "support": int(truth[:, j].sum()),
+            "negatives": int(len(truth) - truth[:, j].sum()),
+            "test_prevalence": round(float(truth[:, j].mean()), 6),
+            "auprc": ap,
+            "threshold": thresholds[column]["threshold"],
+            "threshold_source": thresholds[column]["source"],
+            "precision_0.5": at_half["precision"],
+            "recall_0.5": at_half["recall"],
+            "f1_0.5": at_half["f1"],
+            "fired_0.5": int((pred_half[:, j] == 1).sum()),
+            "precision_chosen": precision,
+            "recall_chosen": recall,
+            "f1_chosen": f1,
+            "fired_chosen": fired,
+        }
+        f1_half.append(at_half["f1"])
+        f1_cut.append(f1)
+
+    judged = [c for c in columns if not np.isnan(auprc[c])]
+    return {
+        "rows": len(test_rows),
+        "note": ("gate4: truth is the gate column, one column per gated class, "
+                 "gated against unflagged"),
+        "macro_auprc": float(np.mean([auprc[c] for c in judged])) if judged else float("nan"),
+        "per_class": per_class,
+        "macro_f1_0.5": float(np.mean(f1_half)),
+        "macro_f1_chosen": float(np.mean(f1_cut)),
+    }
+
+
 # ---------------------------------------------------------------- part 3: torch
 
 def build_model(n_outputs, arch="resnet50"):
@@ -698,6 +1037,10 @@ def run_training(rows, columns, args):
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     n_cols = len(columns)
+    gate4 = args.columns == "gate4"
+    cond15 = args.columns == "cond15"
+    table_path = table_of(args)
+    table_md5 = md5_of(table_path)
 
     train_rows = [r for r in rows if r["split"] == "train"]
     val_rows = [r for r in rows if r["split"] == "val"]
@@ -716,6 +1059,16 @@ def run_training(rows, columns, args):
     model = build_model(n_cols, args.arch).to(device)
     weight = pos_weight_from(train_rows, n_cols).to(device) if args.pos_weight == "on" else None
     criterion = nn.BCEWithLogitsLoss(pos_weight=weight)
+    pos_weight_vector = None
+    if gate4:
+        # The Experiment 3.1 arm is weighted by inverse frequency on the train
+        # split only: (N - n) / n per gate column, N = train rows. Recorded in
+        # the run record so the weighting is readable without the table.
+        base = pos_weight_from(train_rows, n_cols)
+        pos_weight_vector = {c: round(float(v), 3) for c, v in zip(columns, base)}
+        print("pos_weight on train only: "
+              + ", ".join(f"{c} {v:.1f}" for c, v in pos_weight_vector.items()),
+              flush=True)
     optimizer = torch.optim.SGD(model.parameters(), lr=args.lr, momentum=0.9,
                                 nesterov=True, weight_decay=1e-4)
     scaler = torch.cuda.amp.GradScaler(enabled=(device.type == "cuda"))
@@ -746,7 +1099,8 @@ def run_training(rows, columns, args):
     # object columns whatever this arm trained on.
     val_started = time.time()
     val_true, val_score = predict(model, loaders["val"], device)
-    thresholds = choose_thresholds(val_true, val_score, columns, args.min_val_positives)
+    thresholds = choose_thresholds(val_true, val_score, columns, args.min_val_positives,
+                                  extend_ceiling=gate4)
     val_seconds = time.time() - val_started
     tuned = [c for c in columns if thresholds[c]["source"] == "val"]
     print(f"thresholds chosen on {len(val_rows)} val pictures: "
@@ -761,11 +1115,20 @@ def run_training(rows, columns, args):
     test_true, test_score = predict(model, loaders["test"], device)
     test_seconds = time.time() - test_started
 
-    metrics = evaluate_test(test_true, test_score, test_rows, thresholds, columns)
-    metrics["primary"] = {"name": "macro_ap_supported",
-                          "value": metrics["macro_ap_supported"]}
+    if gate4:
+        metrics = evaluate_test_gate4(test_true, test_score, test_rows, thresholds, columns)
+        metrics["primary"] = {"name": "macro_auprc_four_gates",
+                              "value": metrics["macro_auprc"]}
+    elif cond15:
+        metrics = evaluate_test_cond15(test_true, test_score, columns)
+        metrics["primary"] = {"name": "macro_ap_cond15",
+                              "value": metrics["macro_ap_cond15"]}
+    else:
+        metrics = evaluate_test(test_true, test_score, test_rows, thresholds, columns)
+        metrics["primary"] = {"name": "macro_ap_supported",
+                              "value": metrics["macro_ap_supported"]}
     metrics["columns_mode"] = args.columns
-    metrics["gated_target"] = args.gated_target
+    metrics["gated_target"] = "ignored" if (gate4 or cond15) else args.gated_target
     metrics["thresholds"] = {
         "objective": "maximum F1 per class on the validation split",
         "grid": THRESHOLD_GRID,
@@ -775,13 +1138,29 @@ def run_training(rows, columns, args):
         "tuned": tuned,
         "default": [c for c in columns if thresholds[c]["source"] != "val"],
     }
-    metrics["split"] = {
-        "path": str(SPLIT), "md5": md5_of(SPLIT),
-        "counts": {"train": len(train_rows), "val": len(val_rows), "test": len(test_rows)},
-    }
+    if gate4 or cond15:
+        if gate4:
+            metrics["thresholds"]["ceiling_extension"] = CEILING_GRID
+        metrics["thresholds"]["ceiling_rule"] = (
+            "the grid runs 0.05 to 0.95 and extends to 0.99 only when the maximum F1 "
+            "lands on 0.95; ties go to the higher cut")
+        metrics["split"] = {
+            "path": table_path.relative_to(ROOT).as_posix() if table_path.is_relative_to(ROOT)
+            else str(table_path),
+            "md5": table_md5,
+            "source": ("split column of the gate4 label table" if gate4
+                       else "split column of the cond15 label table"),
+            "counts": {"train": len(train_rows), "val": len(val_rows), "test": len(test_rows)},
+            "frozen": GATE4_EXPECTED_SPLIT if gate4 else COND15_EXPECTED_SPLIT,
+        }
+    else:
+        metrics["split"] = {
+            "path": str(SPLIT), "md5": md5_of(SPLIT),
+            "counts": {"train": len(train_rows), "val": len(val_rows), "test": len(test_rows)},
+        }
     metrics["config"] = {
         "columns": args.columns,
-        "gated_target": args.gated_target,
+        "gated_target": "ignored" if gate4 else args.gated_target,
         "pos_weight": args.pos_weight,
         "output_columns": columns,
         "arch": args.arch, "imgsz": args.imgsz, "batch": args.batch,
@@ -791,11 +1170,18 @@ def run_training(rows, columns, args):
         "recipe": ("resnet50, 224, batch 8, 50 epochs, no early stopping, "
                    "SGD lr 1e-4 momentum 0.9 (nesterov, weight decay 1e-4), "
                    "seed 42, BCEWithLogitsLoss"),
-        "table": TABLE.relative_to(ROOT).as_posix(),
-        "table_md5": TABLE_MD5,
-        "split_md5": SPLIT_MD5,
-        "truth": "class-level for the object columns whatever the arm trained on",
+        "table": table_path.relative_to(ROOT).as_posix()
+        if table_path.is_relative_to(ROOT) else str(table_path),
+        "table_md5": table_md5,
+        "split_md5": table_md5 if gate4 else SPLIT_MD5,
+        "truth": ("the gate column itself: gated against unflagged"
+                  if gate4 else
+                  "class-level for the object columns whatever the arm trained on"),
     }
+    if gate4:
+        metrics["config"]["pos_weight_vector"] = pos_weight_vector
+        metrics["config"]["pos_weight_rule"] = "(N - n) / n on the train split only"
+        metrics["config"]["counts_asserted"] = args.expect_counts == "on"
     metrics["predictions_keys"] = ["val_md5", "val_true", "val_score", "val_gate",
                                    "test_md5", "test_true", "test_score", "test_gate",
                                    "columns", "gated_columns"]
@@ -825,15 +1211,20 @@ def run_training(rows, columns, args):
         test_true=test_true, test_score=test_score,
         test_gate=np.array([r["gate"] for r in test_rows], dtype=np.int64),
         columns=np.array(columns),
-        gated_columns=np.array(GATE_ORDER),
+        gated_columns=np.array(columns if gate4 else GATE_ORDER),
     )
     with open(out_dir / "metrics.json", "w", encoding="utf-8") as fh:
         json.dump(metrics, fh, indent=2)
     with open(out_dir / "thresholds.json", "w", encoding="utf-8") as fh:
-        json.dump({"columns": args.columns, "gated_target": args.gated_target,
-                   "split": metrics["split"],
-                   "objective": metrics["thresholds"]["objective"],
-                   "grid": THRESHOLD_GRID, "per_class": thresholds}, fh, indent=2)
+        record = {"columns": args.columns,
+                  "gated_target": "ignored" if gate4 else args.gated_target,
+                  "split": metrics["split"],
+                  "objective": metrics["thresholds"]["objective"],
+                  "grid": THRESHOLD_GRID, "per_class": thresholds}
+        if gate4:
+            record["ceiling_extension"] = CEILING_GRID
+            record["ceiling_rule"] = metrics["thresholds"]["ceiling_rule"]
+        json.dump(record, fh, indent=2)
     torch.save(model.state_dict(), out_dir / "final.pt")
     print(f"metrics written: {out_dir / 'metrics.json'}")
     print(f"thresholds written: {out_dir / 'thresholds.json'}")
@@ -841,8 +1232,15 @@ def run_training(rows, columns, args):
     print(f"timing: train {t['seconds_training']}s ({t['seconds_per_epoch']}s/epoch), "
           f"val {t['seconds_validation']}s, test {t['seconds_inference']}s = "
           f"{t['inference_ms_per_image']} ms/image on {t['inference_images']} test pictures")
-    print(f"primary: macro AP over the seven supported classes = "
-          f"{metrics['macro_ap_supported']:.4f}")
+    if gate4:
+        print(f"primary: {metrics['primary']['name']} = {metrics['primary']['value']:.4f}")
+    else:
+        if "macro_ap_supported" in metrics:
+            print(f"primary: macro AP over the seven supported classes = "
+                  f"{metrics['macro_ap_supported']:.4f}")
+        else:
+            print(f"primary: {metrics['primary']['name']} = "
+                  f"{metrics['primary']['value']:.4f}")
     return metrics
 
 
@@ -874,7 +1272,7 @@ def dump_predictions(rows, columns, args):
         test_md5=np.array(arrays["test"][2]), test_true=arrays["test"][0],
         test_score=arrays["test"][1], test_gate=arrays["test"][3],
         columns=np.array(columns),
-        gated_columns=np.array(GATE_ORDER),
+        gated_columns=np.array(columns if args.columns == "gate4" else GATE_ORDER),
     )
     print(f"predictions written: {out_dir / 'predictions.npz'}")
 
@@ -906,9 +1304,11 @@ def run_smoke(rows, columns, args):
     print(f"threshold chooser ok: {chosen['toy']['threshold']} "
           f"(val F1 {chosen['toy']['val_f1_at_threshold']:.3f})")
     # Prove the gated-target switch changed the training targets, using the
-    # real train rows this run would have trained on.
+    # real train rows this run would have trained on. gate4 has no switch: its
+    # four outputs are the gate columns themselves.
+    gated_columns = list(GATE4_COLUMNS) if args.columns == "gate4" else list(GATED_COLUMNS)
     gated_positives = {}
-    for class_column in GATED_COLUMNS:
+    for class_column in gated_columns:
         j = columns.index(class_column)
         gated_positives[class_column] = int(sum(r["target"][j] for r in train_rows))
     print(f"train target positives under --gated-target {args.gated_target}: "
@@ -924,14 +1324,36 @@ def run_smoke(rows, columns, args):
 
 # ---------------------------------------------------------------- command line
 
+def table_of(args):
+    """The label table this run reads: gate4 defaults to its own, else the v8 table."""
+    if args.table:
+        return Path(args.table)
+    if args.columns == "gate4":
+        return GATE4_TABLE
+    if args.columns == "cond15":
+        return COND15_TABLE
+    return TABLE
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--columns", choices=["ooi", "combined"], default="ooi",
-                        help="ooi = 7 object columns, combined = 12 lens + 7 object")
+    parser.add_argument("--columns", choices=["ooi", "combined", "gate4", "cond15"],
+                        default="ooi",
+                        help="ooi = 7 object columns, combined = 12 lens + 7 object, "
+                             "gate4 = the four Experiment 3.1 gate columns, "
+                             "cond15 = the twelve lens columns plus the three non-gated "
+                             "object classes (Experiment 3.2)")
     parser.add_argument("--gated-target", choices=["class", "gate"], default="class",
-                        help="which column group feeds the four gated classes")
-    parser.add_argument("--pos-weight", choices=["on", "off"], default="off",
-                        help="per-class (N - n) / n on the train split only")
+                        help="which column group feeds the four gated classes "
+                             "(ignored by --columns gate4)")
+    parser.add_argument("--pos-weight", choices=["on", "off"], default=None,
+                        help="per-class (N - n) / n on the train split only; "
+                             "default on for gate4, off otherwise")
+    parser.add_argument("--table", default="",
+                        help="label table path; default is the v8 table, or the "
+                             "Experiment 3.1 table for --columns gate4")
+    parser.add_argument("--expect-counts", choices=["on", "off"], default="on",
+                        help="off skips the frozen count assertions; synthetic tables only")
     parser.add_argument("--labels-only", action="store_true",
                         help="print the per-split counts and stop")
     parser.add_argument("--smoke", action="store_true",
@@ -951,7 +1373,10 @@ def main():
                         help="a class below this many val positives keeps 0.5")
     args = parser.parse_args()
 
-    raw = read_table()
+    if args.pos_weight is None:
+        args.pos_weight = "on" if args.columns in ("gate4", "cond15") else "off"
+
+    raw = read_table(args.columns, table_of(args), expect_counts=args.expect_counts == "on")
 
     if args.labels_only:
         labels_report(raw, args)
@@ -978,8 +1403,11 @@ def main():
             f"  the root must hold all three top folders, not one of them")
     print(f"image root ok: {len(sample)} sampled pictures found under {root}")
     if not args.out:
-        arm = args.gated_target if args.columns == "ooi" else f"combined_{args.gated_target}"
-        if args.pos_weight == "on":
+        if args.columns == "gate4":
+            arm = "gate4"
+        else:
+            arm = args.gated_target if args.columns == "ooi" else f"combined_{args.gated_target}"
+        if args.pos_weight == "on" and args.columns not in ("gate4", "cond15"):
             arm = f"{arm}_posw"
         args.out = str(ROOT / f"run/multilabel_ooi_20261104/{arm}")
     if args.dump_predictions:

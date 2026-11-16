@@ -1,0 +1,104 @@
+arm=448 mode=wait host=vm-amd-a100-westus2 started=2026-11-16T06:49:39+00:00
+2026-11-16T06:49:39+00:00 busy mem=8244MiB util=36% new=430701
+2026-11-16T06:50:09+00:00 busy mem=8244MiB util=37% new=430701
+2026-11-16T06:50:39+00:00 busy mem=8244MiB util=0% new=430701
+2026-11-16T06:51:09+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T06:51:39+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T06:52:09+00:00 busy mem=8244MiB util=36% new=430701
+2026-11-16T06:52:39+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T06:53:09+00:00 busy mem=8244MiB util=25% new=430701
+2026-11-16T06:53:39+00:00 busy mem=8244MiB util=37% new=430701
+2026-11-16T06:54:09+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T06:54:39+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T06:55:09+00:00 busy mem=8244MiB util=39% new=430701
+2026-11-16T06:55:39+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T06:56:10+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T06:56:40+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T06:57:10+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T06:57:40+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T06:58:10+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T06:58:40+00:00 busy mem=8244MiB util=37% new=430701
+2026-11-16T06:59:10+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T06:59:40+00:00 busy mem=8244MiB util=36% new=430701
+2026-11-16T07:00:10+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T07:00:40+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T07:01:10+00:00 busy mem=8244MiB util=38% new=430701
+2026-11-16T07:01:40+00:00 busy mem=7041MiB util=0% new=293442
+2026-11-16T07:02:10+00:00 busy mem=7041MiB util=0% new=293442
+2026-11-16T07:02:40+00:00 busy mem=7041MiB util=0% new=293442
+2026-11-16T07:03:10+00:00 busy mem=7041MiB util=0% new=293442
+2026-11-16T07:03:40+00:00 busy mem=7041MiB util=0% new=293442
+2026-11-16T07:04:10+00:00 busy mem=7041MiB util=0% new=293442
+2026-11-16T07:04:40+00:00 busy mem=7041MiB util=0% new=293442
+2026-11-16T07:05:10+00:00 busy mem=7041MiB util=0% new=293442
+arm=448 mode=now host=vm-amd-a100-westus2 started=2026-11-16T07:05:14+00:00
+launch 2026-11-16T07:05:14+00:00 arm=448 imgsz=448
+table: run/split_exp3_1_20261116/labels.csv md5 222c873f17a9f101d32b0b36e210e5e3
+rows: 7555: 4964 train / 1058 val / 1533 test
+image root ok: 40 sampled pictures found under /data/FMD_Data_26082026/fmd_temp_images
+pos_weight on train only: fm_gated 14.8, fiber_gated 24.5, ep_gated 60.3, hema_gated 61.8
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:992: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(device.type == "cuda"))
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:1003: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+epoch 01/50  train loss 1.3165
+epoch 02/50  train loss 1.2089
+epoch 03/50  train loss 0.9904
+epoch 04/50  train loss 0.7895
+epoch 05/50  train loss 0.6749
+epoch 06/50  train loss 0.5649
+epoch 07/50  train loss 0.5251
+epoch 08/50  train loss 0.4761
+epoch 09/50  train loss 0.4345
+epoch 10/50  train loss 0.4014
+epoch 11/50  train loss 0.3796
+epoch 12/50  train loss 0.3452
+epoch 13/50  train loss 0.3146
+epoch 14/50  train loss 0.3045
+epoch 15/50  train loss 0.2798
+epoch 16/50  train loss 0.2626
+epoch 17/50  train loss 0.2446
+epoch 18/50  train loss 0.2334
+epoch 19/50  train loss 0.2127
+epoch 20/50  train loss 0.2051
+epoch 21/50  train loss 0.2095
+epoch 22/50  train loss 0.1886
+epoch 23/50  train loss 0.1729
+epoch 24/50  train loss 0.1630
+epoch 25/50  train loss 0.1602
+epoch 26/50  train loss 0.1459
+epoch 27/50  train loss 0.1343
+epoch 28/50  train loss 0.1342
+epoch 29/50  train loss 0.1309
+epoch 30/50  train loss 0.1286
+epoch 31/50  train loss 0.1243
+epoch 32/50  train loss 0.1246
+epoch 33/50  train loss 0.1108
+epoch 34/50  train loss 0.1010
+epoch 35/50  train loss 0.0938
+epoch 36/50  train loss 0.0849
+epoch 37/50  train loss 0.0722
+epoch 38/50  train loss 0.0791
+epoch 39/50  train loss 0.0616
+epoch 40/50  train loss 0.0588
+epoch 41/50  train loss 0.0543
+epoch 42/50  train loss 0.0599
+epoch 43/50  train loss 0.0464
+epoch 44/50  train loss 0.0390
+epoch 45/50  train loss 0.0372
+epoch 46/50  train loss 0.0355
+epoch 47/50  train loss 0.0308
+epoch 48/50  train loss 0.0358
+epoch 49/50  train loss 0.0374
+epoch 50/50  train loss 0.0244
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:940: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+thresholds chosen on 1058 val pictures: 4 tuned, 0 default
+  fm_gated                 0.95  (val, val F1 0.618 vs 0.539 at 0.5)
+  fiber_gated              0.20  (val, val F1 0.308 vs 0.253 at 0.5)
+  ep_gated                 0.90  (val, val F1 0.400 vs 0.312 at 0.5)
+  hema_gated               0.80  (val, val F1 0.900 vs 0.857 at 0.5)
+metrics written: run/exp3_1_gate4_448_20261117/metrics.json
+thresholds written: run/exp3_1_gate4_448_20261117/thresholds.json
+timing: train 1052.6s (21.1s/epoch), val 4.5s, test 6.3s = 4.09 ms/image on 1533 test pictures
+primary: macro_auprc_four_gates = 0.4825

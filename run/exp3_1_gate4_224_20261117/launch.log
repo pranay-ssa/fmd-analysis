@@ -1,0 +1,77 @@
+arm=224 mode=wait host=vm-amd-a100-westus2 started=2026-11-16T06:46:14+00:00
+2026-11-16T06:46:14+00:00 GPU free, quiet window starts
+2026-11-16T06:46:14+00:00 free 0s/60 mem=7041MiB util=0% new=none
+2026-11-16T06:46:34+00:00 free 20s/60 mem=7041MiB util=0% new=none
+2026-11-16T06:46:54+00:00 free 40s/60 mem=7041MiB util=0% new=none
+2026-11-16T06:47:14+00:00 free 60s/60 mem=7041MiB util=0% new=none
+2026-11-16T06:47:14+00:00 starting training
+launch 2026-11-16T06:47:14+00:00 arm=224 imgsz=224
+table: run/split_exp3_1_20261116/labels.csv md5 222c873f17a9f101d32b0b36e210e5e3
+rows: 7555: 4964 train / 1058 val / 1533 test
+image root ok: 40 sampled pictures found under /data/FMD_Data_26082026/fmd_temp_images
+pos_weight on train only: fm_gated 14.8, fiber_gated 24.5, ep_gated 60.3, hema_gated 61.8
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:992: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(device.type == "cuda"))
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:1003: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+epoch 01/50  train loss 1.2956
+epoch 02/50  train loss 1.1047
+epoch 03/50  train loss 0.8633
+epoch 04/50  train loss 0.6852
+epoch 05/50  train loss 0.5910
+epoch 06/50  train loss 0.4941
+epoch 07/50  train loss 0.4206
+epoch 08/50  train loss 0.3812
+epoch 09/50  train loss 0.3321
+epoch 10/50  train loss 0.2885
+epoch 11/50  train loss 0.2914
+epoch 12/50  train loss 0.2654
+epoch 13/50  train loss 0.2353
+epoch 14/50  train loss 0.2357
+epoch 15/50  train loss 0.2117
+epoch 16/50  train loss 0.2515
+epoch 17/50  train loss 0.2166
+epoch 18/50  train loss 0.1893
+epoch 19/50  train loss 0.1930
+epoch 20/50  train loss 0.1777
+epoch 21/50  train loss 0.1578
+epoch 22/50  train loss 0.1569
+epoch 23/50  train loss 0.1573
+epoch 24/50  train loss 0.1322
+epoch 25/50  train loss 0.1232
+epoch 26/50  train loss 0.1113
+epoch 27/50  train loss 0.0992
+epoch 28/50  train loss 0.0921
+epoch 29/50  train loss 0.0896
+epoch 30/50  train loss 0.0752
+epoch 31/50  train loss 0.0744
+epoch 32/50  train loss 0.0700
+epoch 33/50  train loss 0.0859
+epoch 34/50  train loss 0.1317
+epoch 35/50  train loss 0.0919
+epoch 36/50  train loss 0.0860
+epoch 37/50  train loss 0.0737
+epoch 38/50  train loss 0.0632
+epoch 39/50  train loss 0.0532
+epoch 40/50  train loss 0.0349
+epoch 41/50  train loss 0.0420
+epoch 42/50  train loss 0.0387
+epoch 43/50  train loss 0.0420
+epoch 44/50  train loss 0.0262
+epoch 45/50  train loss 0.0234
+epoch 46/50  train loss 0.0318
+epoch 47/50  train loss 0.0267
+epoch 48/50  train loss 0.0276
+epoch 49/50  train loss 0.0248
+epoch 50/50  train loss 0.0175
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:940: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+thresholds chosen on 1058 val pictures: 4 tuned, 0 default
+  fm_gated                 0.25  (val, val F1 0.510 vs 0.481 at 0.5)
+  fiber_gated              0.15  (val, val F1 0.373 vs 0.298 at 0.5)
+  ep_gated                 0.10  (val, val F1 0.457 vs 0.308 at 0.5)
+  hema_gated               0.98  (val, val F1 0.919 vs 0.829 at 0.5)
+metrics written: run/exp3_1_gate4_224_20261117/metrics.json
+thresholds written: run/exp3_1_gate4_224_20261117/thresholds.json
+timing: train 838.8s (16.8s/epoch), val 3.5s, test 4.8s = 3.16 ms/image on 1533 test pictures
+primary: macro_auprc_four_gates = 0.4769

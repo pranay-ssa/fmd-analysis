@@ -1,0 +1,13 @@
+set,class,cut,auroc,gated_n,unflagged_n,decisive_n,recall_at_cut,false_fire_all,false_fire_decisive,measurable
+stage0,foreign_matter,0.45,0.6126249167221852,79,380,51,0.9367088607594937,0.8447368421052631,0.23529411764705882,yes
+stage0,fiber,0.7,0.5722993248312078,124,43,14,0.7338709677419355,0.6976744186046512,0.14285714285714285,yes
+stage0,extraneous_polymer,0.7,0.921875,40,40,34,0.775,0.1,0.0,yes
+stage0,hema,0.9,0.7788461538461539,52,6,3,0.9230769230769231,0.5,0.0,"not measurable: the unflagged pictures are unassessed September fragments, not below-cut production pictures"
+gate4_224,foreign_matter,0.25,0.7454197201865423,79,380,51,0.8354430379746836,0.49473684210526314,0.09803921568627451,yes
+gate4_224,fiber,0.15,0.6872655663915979,124,43,14,0.5887096774193549,0.32558139534883723,0.0,yes
+gate4_224,extraneous_polymer,0.1,0.879375,40,40,34,0.375,0.0,0.0,yes
+gate4_224,hema,0.98,0.9743589743589743,52,6,3,0.8461538461538461,0.0,0.0,"not measurable: the unflagged pictures are unassessed September fragments, not below-cut production pictures"
+gate4_448,foreign_matter,0.95,0.7592105263157894,79,380,51,0.43037974683544306,0.12368421052631579,0.0196078431372549,yes
+gate4_448,fiber,0.2,0.6638222055513878,124,43,14,0.5,0.3953488372093023,0.0,yes
+gate4_448,extraneous_polymer,0.9,0.8703125,40,40,34,0.25,0.0,0.0,yes
+gate4_448,hema,0.8,0.9583333333333334,52,6,3,0.9038461538461539,0.0,0.0,"not measurable: the unflagged pictures are unassessed September fragments, not below-cut production pictures"

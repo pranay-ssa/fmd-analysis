@@ -1,0 +1,129 @@
+{
+  "version": "exp3_1_v1",
+  "date": "2026-11-16",
+  "ticket": "docs/wayfinder/tickets/037-exp3-1-split-label-table.md",
+  "map": "docs/wayfinder/exp3_1_size_gate_20261116.md",
+  "derived_from": "run/split_20261103_v8/split_70_15_15.csv (read only, unmodified)",
+  "rule": {
+    "identity": "picture_md5, one annotation per picture, newest file wins",
+    "class_present": "shape_kind == box with canonical id foreign_matter / fiber / extraneous_polymer; HEMA is any of hema, hema_obstruction, hema_fragment",
+    "size_flagged": "that class's gate code present as a tag row: P3_FM_MICRON_THRESHOLD, P3_FIB_MICRON_THRESHOLD, P3_EP_MICRON_THRESHOLD, P3_HE_MICRON_THRESHOLD",
+    "unflagged": "class box present and that class's gate code absent",
+    "gate_is_subset": "the gate is a subset of its class, never a label of its own",
+    "move": "a picture leaves train or validation for test when it carries a box of any of the four classes without that class's gate tag; a picture gated in every gated class it carries keeps its v8 assignment; a picture outside v8 that is unflagged for any of the four classes is added as a test row",
+    "union_reason": "one model is scored on one split",
+    "decisive": "carries that class unflagged and carries no other fail label, where other fail labels are any of the 12 lens canonical ids in a box or tag row, wet_package, bubble_cluster, surface_groove, or another of the four classes present and gated",
+    "lens_ids": [
+      "bubble_scatter",
+      "cavity_off_center",
+      "dirty_camera",
+      "dirty_strobe",
+      "folded_lens",
+      "lens_off_center",
+      "low_dose",
+      "missing_primary_package",
+      "multiple_lenses",
+      "no_lens",
+      "package_misalignment",
+      "view_obstructed"
+    ],
+    "correction_note": "The map and the ticket print decisive totals of foreign matter 105, fiber 18, polymer 37, HEMA 6 (160 pictures). Those came from a tag-blind scratch calculation and are superseded on 2026-11-16: decisive counts lens canonical ids carried as tag rows, not only lens boxes. The totals this build asserts are foreign matter 51 (36 outside v8), fiber 14 (13), polymer 34 (33), HEMA 3 (3), i.e. 102 decisive pictures, with 329 / 29 / 6 / 3 unflagged pictures failing on another fail label. Separately, the export has no canonical_id 'no_lens'; it uses 'missing_lens' (P1_NL). Counting that alias as a lens id gives 42 / 14 / 33 / 3, so it is not counted, and picture_detail.csv carries trailing columns showing the arithmetic under both readings."
+  },
+  "inputs": [
+    {
+      "path": "run/eda_full_20261029/resolved_labels.csv",
+      "md5": "f61ea0b90df095ebe52d1332f8bfdb8a"
+    },
+    {
+      "path": "run/eda_full_20261029/picture_table.csv",
+      "md5": "a03ddeead53bae370c17bd8ea15c0df0"
+    },
+    {
+      "path": "run/split_20261103_v8/split_70_15_15.csv",
+      "md5": "1a71d66d2de384cf47a3fcf7d9115baa"
+    }
+  ],
+  "outputs": {
+    "split.csv": "picture_md5,group_id,split, same schema as v8",
+    "labels.csv": "picture_md5,image_path,split,fm_gated,fiber_gated,ep_gated,hema_gated",
+    "picture_detail.csv": "presence, gate, decisive and largest-box columns; largest_*_px is max(xbr-xtl, ybr-ytl) of the largest box of that class in native pixels; other_fail_labels is a semicolon list of the lens and non-class fail labels present; the trailing *_alias_counted columns add the missing_lens alias"
+  },
+  "counts": {
+    "rows": 7555,
+    "train": 4964,
+    "val": 1058,
+    "test": 1533,
+    "moved_out_of_train_or_val": 327,
+    "added_from_outside_v8": 85,
+    "unflagged_already_in_v8_test": 41,
+    "entering_test": 412,
+    "unflagged_left_in_train_or_val": 0,
+    "v8_rows": 7470,
+    "v8_train": 5239,
+    "v8_val": 1110,
+    "v8_test": 1121
+  },
+  "by_class": {
+    "fm": {
+      "present": 834,
+      "gated": 454,
+      "unflagged": 380,
+      "train_gated": 315,
+      "val_gated": 60,
+      "test_gated": 79,
+      "test_unflagged": 380,
+      "decisive_total": 51,
+      "decisive_outside_v8": 36,
+      "unflagged_failing_another_label": 329
+    },
+    "fiber": {
+      "present": 405,
+      "gated": 362,
+      "unflagged": 43,
+      "train_gated": 195,
+      "val_gated": 43,
+      "test_gated": 124,
+      "test_unflagged": 43,
+      "decisive_total": 14,
+      "decisive_outside_v8": 13,
+      "unflagged_failing_another_label": 29
+    },
+    "ep": {
+      "present": 175,
+      "gated": 135,
+      "unflagged": 40,
+      "train_gated": 81,
+      "val_gated": 14,
+      "test_gated": 40,
+      "test_unflagged": 40,
+      "decisive_total": 34,
+      "decisive_outside_v8": 33,
+      "unflagged_failing_another_label": 6
+    },
+    "hema": {
+      "present": 157,
+      "gated": 151,
+      "unflagged": 6,
+      "train_gated": 79,
+      "val_gated": 20,
+      "test_gated": 52,
+      "test_unflagged": 6,
+      "decisive_total": 3,
+      "decisive_outside_v8": 3,
+      "unflagged_failing_another_label": 3
+    }
+  },
+  "decisive_with_missing_lens_alias": {
+    "fm": 42,
+    "fiber": 14,
+    "ep": 33,
+    "hema": 3
+  },
+  "class_weights_train": {
+    "n_train": 4964,
+    "fm": 14.8,
+    "fiber": 24.5,
+    "ep": 60.3,
+    "hema": 61.8
+  }
+}

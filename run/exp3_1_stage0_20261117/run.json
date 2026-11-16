@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "run_id": "score__exp1_combined__224__stage0",
+  "family": "score",
+  "arm": "stage0_exp1_combined",
+  "status": "ok",
+  "host": "vm",
+  "data": {
+    "table": "run/split_exp3_1_20261116/labels.csv",
+    "split": "test",
+    "n_test": 1533,
+    "classes": 4,
+    "image_root": "/data/FMD_Data_26082026/fmd_temp_images"
+  },
+  "config": {
+    "imgsz": 224,
+    "batch": 16,
+    "ckpt": "run/multilabel_ooi_20261104/combined/final.pt"
+  },
+  "metrics": {
+    "primary": {
+      "name": "fm_auroc_test",
+      "value": 0.6126249167221852
+    },
+    "per_class": {
+      "class_foreign_matter": {
+        "auroc": 0.6126249167221852,
+        "gated_n": 79,
+        "unflagged_n": 380,
+        "median_gated": 0.8818359375,
+        "median_unflagged": 0.843017578125
+      },
+      "class_fiber": {
+        "auroc": 0.5722993248312078,
+        "gated_n": 124,
+        "unflagged_n": 43,
+        "median_gated": 0.917724609375,
+        "median_unflagged": 0.9013671875
+      },
+      "class_extraneous_polymer": {
+        "auroc": 0.921875,
+        "gated_n": 40,
+        "unflagged_n": 40,
+        "median_gated": 0.983642578125,
+        "median_unflagged": 0.0072231292724609375
+      },
+      "class_hema": {
+        "auroc": 0.7788461538461539,
+        "gated_n": 52,
+        "unflagged_n": 6,
+        "median_gated": 0.99853515625,
+        "median_unflagged": 0.5021896362304688
+      }
+    }
+  },
+  "artifacts": {
+    "predictions": "run/exp3_1_stage0_20261117/predictions.npz"
+  },
+  "notes": "Stage 0 baseline. 327 of the 1,533 test pictures were in this checkpoint's training set, so their scores are contaminated; the 85 out-of-split and 41 already-in-test pictures are clean. Summary recomputed from predictions.npz after the in-script column-index bug; the npz is authoritative."
+}

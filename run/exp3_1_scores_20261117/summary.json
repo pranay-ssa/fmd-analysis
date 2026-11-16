@@ -1,0 +1,193 @@
+{
+  "sets": {
+    "stage0": {
+      "n": 1533,
+      "classes": {
+        "foreign_matter": {
+          "set": "stage0",
+          "class": "foreign_matter",
+          "cut": 0.45,
+          "auroc": 0.6126249167221852,
+          "gated_n": 79,
+          "unflagged_n": 380,
+          "decisive_n": 51,
+          "recall_at_cut": 0.9367088607594937,
+          "false_fire_all": 0.8447368421052631,
+          "false_fire_decisive": 0.23529411764705882,
+          "measurable": "yes"
+        },
+        "fiber": {
+          "set": "stage0",
+          "class": "fiber",
+          "cut": 0.7,
+          "auroc": 0.5722993248312078,
+          "gated_n": 124,
+          "unflagged_n": 43,
+          "decisive_n": 14,
+          "recall_at_cut": 0.7338709677419355,
+          "false_fire_all": 0.6976744186046512,
+          "false_fire_decisive": 0.14285714285714285,
+          "measurable": "yes"
+        },
+        "extraneous_polymer": {
+          "set": "stage0",
+          "class": "extraneous_polymer",
+          "cut": 0.7,
+          "auroc": 0.921875,
+          "gated_n": 40,
+          "unflagged_n": 40,
+          "decisive_n": 34,
+          "recall_at_cut": 0.775,
+          "false_fire_all": 0.1,
+          "false_fire_decisive": 0.0,
+          "measurable": "yes"
+        },
+        "hema": {
+          "set": "stage0",
+          "class": "hema",
+          "cut": 0.9,
+          "auroc": 0.7788461538461539,
+          "gated_n": 52,
+          "unflagged_n": 6,
+          "decisive_n": 3,
+          "recall_at_cut": 0.9230769230769231,
+          "false_fire_all": 0.5,
+          "false_fire_decisive": 0.0,
+          "measurable": "not measurable: the unflagged pictures are unassessed September fragments, not below-cut production pictures"
+        }
+      },
+      "pass_fail_decisive": {
+        "population": 98,
+        "failed": 13,
+        "passed": 85,
+        "scope": "object side only; decisive pictures carry no other fail label"
+      }
+    },
+    "gate4_224": {
+      "n": 1533,
+      "classes": {
+        "foreign_matter": {
+          "set": "gate4_224",
+          "class": "foreign_matter",
+          "cut": 0.25,
+          "auroc": 0.7454197201865423,
+          "gated_n": 79,
+          "unflagged_n": 380,
+          "decisive_n": 51,
+          "recall_at_cut": 0.8354430379746836,
+          "false_fire_all": 0.49473684210526314,
+          "false_fire_decisive": 0.09803921568627451,
+          "measurable": "yes"
+        },
+        "fiber": {
+          "set": "gate4_224",
+          "class": "fiber",
+          "cut": 0.15,
+          "auroc": 0.6872655663915979,
+          "gated_n": 124,
+          "unflagged_n": 43,
+          "decisive_n": 14,
+          "recall_at_cut": 0.5887096774193549,
+          "false_fire_all": 0.32558139534883723,
+          "false_fire_decisive": 0.0,
+          "measurable": "yes"
+        },
+        "extraneous_polymer": {
+          "set": "gate4_224",
+          "class": "extraneous_polymer",
+          "cut": 0.1,
+          "auroc": 0.879375,
+          "gated_n": 40,
+          "unflagged_n": 40,
+          "decisive_n": 34,
+          "recall_at_cut": 0.375,
+          "false_fire_all": 0.0,
+          "false_fire_decisive": 0.0,
+          "measurable": "yes"
+        },
+        "hema": {
+          "set": "gate4_224",
+          "class": "hema",
+          "cut": 0.98,
+          "auroc": 0.9743589743589743,
+          "gated_n": 52,
+          "unflagged_n": 6,
+          "decisive_n": 3,
+          "recall_at_cut": 0.8461538461538461,
+          "false_fire_all": 0.0,
+          "false_fire_decisive": 0.0,
+          "measurable": "not measurable: the unflagged pictures are unassessed September fragments, not below-cut production pictures"
+        }
+      },
+      "pass_fail_decisive": {
+        "population": 98,
+        "failed": 9,
+        "passed": 89,
+        "scope": "object side only; decisive pictures carry no other fail label"
+      }
+    },
+    "gate4_448": {
+      "n": 1533,
+      "classes": {
+        "foreign_matter": {
+          "set": "gate4_448",
+          "class": "foreign_matter",
+          "cut": 0.95,
+          "auroc": 0.7592105263157894,
+          "gated_n": 79,
+          "unflagged_n": 380,
+          "decisive_n": 51,
+          "recall_at_cut": 0.43037974683544306,
+          "false_fire_all": 0.12368421052631579,
+          "false_fire_decisive": 0.0196078431372549,
+          "measurable": "yes"
+        },
+        "fiber": {
+          "set": "gate4_448",
+          "class": "fiber",
+          "cut": 0.2,
+          "auroc": 0.6638222055513878,
+          "gated_n": 124,
+          "unflagged_n": 43,
+          "decisive_n": 14,
+          "recall_at_cut": 0.5,
+          "false_fire_all": 0.3953488372093023,
+          "false_fire_decisive": 0.0,
+          "measurable": "yes"
+        },
+        "extraneous_polymer": {
+          "set": "gate4_448",
+          "class": "extraneous_polymer",
+          "cut": 0.9,
+          "auroc": 0.8703125,
+          "gated_n": 40,
+          "unflagged_n": 40,
+          "decisive_n": 34,
+          "recall_at_cut": 0.25,
+          "false_fire_all": 0.0,
+          "false_fire_decisive": 0.0,
+          "measurable": "yes"
+        },
+        "hema": {
+          "set": "gate4_448",
+          "class": "hema",
+          "cut": 0.8,
+          "auroc": 0.9583333333333334,
+          "gated_n": 52,
+          "unflagged_n": 6,
+          "decisive_n": 3,
+          "recall_at_cut": 0.9038461538461539,
+          "false_fire_all": 0.0,
+          "false_fire_decisive": 0.0,
+          "measurable": "not measurable: the unflagged pictures are unassessed September fragments, not below-cut production pictures"
+        }
+      },
+      "pass_fail_decisive": {
+        "population": 98,
+        "failed": 4,
+        "passed": 94,
+        "scope": "object side only; decisive pictures carry no other fail label"
+      }
+    }
+  }
+}
