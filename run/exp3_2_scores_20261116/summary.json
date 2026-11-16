@@ -1,0 +1,180 @@
+{
+  "population": 1121,
+  "pass_fail": [
+    {
+      "rule": "primary",
+      "population": 1121,
+      "fail_pictures": 784,
+      "caught": 778,
+      "missed": 6,
+      "passed_ok": 311,
+      "wrongly_failed": 26,
+      "share_fail_caught": 0.9923,
+      "share_pass_passed": 0.9228
+    },
+    {
+      "rule": "secondary",
+      "population": 1121,
+      "fail_pictures": 766,
+      "caught": 760,
+      "missed": 6,
+      "passed_ok": 325,
+      "wrongly_failed": 30,
+      "share_fail_caught": 0.9922,
+      "share_pass_passed": 0.9155
+    }
+  ],
+  "conditions": [
+    {
+      "class": "P1_MPP",
+      "population": 1121,
+      "support": 214,
+      "auroc": 0.9998711990849983,
+      "threshold": 0.8,
+      "precision": 0.9953,
+      "recall": 0.986,
+      "f1": 0.9906
+    },
+    {
+      "class": "P1_ML",
+      "population": 1121,
+      "support": 214,
+      "auroc": 0.9937969479335181,
+      "threshold": 0.65,
+      "precision": 0.8889,
+      "recall": 0.972,
+      "f1": 0.9286
+    },
+    {
+      "class": "P2_LOC",
+      "population": 1121,
+      "support": 180,
+      "auroc": 0.9652231668437832,
+      "threshold": 0.45,
+      "precision": 0.6473,
+      "recall": 0.9278,
+      "f1": 0.7626
+    },
+    {
+      "class": "P2_DC",
+      "population": 1121,
+      "support": 86,
+      "auroc": 0.9670093247949668,
+      "threshold": 0.7,
+      "precision": 0.6034,
+      "recall": 0.814,
+      "f1": 0.6931
+    },
+    {
+      "class": "P1_NL",
+      "population": 1121,
+      "support": 49,
+      "auroc": 1.0,
+      "threshold": 0.9,
+      "precision": 0.98,
+      "recall": 1.0,
+      "f1": 0.9899
+    },
+    {
+      "class": "P1_FL",
+      "population": 1121,
+      "support": 51,
+      "auroc": 0.9712296133406634,
+      "threshold": 0.8,
+      "precision": 0.4805,
+      "recall": 0.7255,
+      "f1": 0.5781
+    },
+    {
+      "class": "P2_LD",
+      "population": 1121,
+      "support": 102,
+      "auroc": 0.992601358502184,
+      "threshold": 0.85,
+      "precision": 0.9674,
+      "recall": 0.8725,
+      "f1": 0.9175
+    },
+    {
+      "class": "P1_COC",
+      "population": 1121,
+      "support": 28,
+      "auroc": 0.9960789439288982,
+      "threshold": 0.65,
+      "precision": 0.8667,
+      "recall": 0.9286,
+      "f1": 0.8966
+    },
+    {
+      "class": "P2_DS",
+      "population": 1121,
+      "support": 2,
+      "auroc": 1.0,
+      "threshold": 0.5,
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "class": "P2_FOV",
+      "population": 1121,
+      "support": 10,
+      "auroc": 0.998019801980198,
+      "threshold": 0.5,
+      "precision": 0.5,
+      "recall": 0.9,
+      "f1": 0.6429
+    },
+    {
+      "class": "P2_BSC",
+      "population": 1121,
+      "support": 1,
+      "auroc": 0.9821428571428571,
+      "threshold": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "class": "P1_PPM",
+      "population": 1121,
+      "support": 5,
+      "auroc": 0.9983870967741936,
+      "threshold": 0.5,
+      "precision": 0.5714,
+      "recall": 0.8,
+      "f1": 0.6667
+    },
+    {
+      "class": "class_bubble",
+      "population": 1121,
+      "support": 321,
+      "auroc": 0.9869976635514018,
+      "threshold": 0.5,
+      "precision": 0.8949,
+      "recall": 0.9813,
+      "f1": 0.9361
+    },
+    {
+      "class": "class_bubble_cluster",
+      "population": 1121,
+      "support": 170,
+      "auroc": 0.9305406074101565,
+      "threshold": 0.3,
+      "precision": 0.5331,
+      "recall": 0.9471,
+      "f1": 0.6822
+    },
+    {
+      "class": "class_wet_package",
+      "population": 1121,
+      "support": 47,
+      "auroc": 0.952672451364951,
+      "threshold": 0.55,
+      "precision": 0.4348,
+      "recall": 0.6383,
+      "f1": 0.5172
+    }
+  ],
+  "note": "Both rules use the same two models. The primary rule fails Bubble Cluster; the secondary rule passes it."
+}

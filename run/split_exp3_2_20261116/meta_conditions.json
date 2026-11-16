@@ -1,0 +1,115 @@
+{
+  "version": "exp3_2_cond15_v1",
+  "date": "2026-11-16",
+  "rows": 7470,
+  "splits": {
+    "train": 5239,
+    "test": 1121,
+    "val": 1110
+  },
+  "columns": [
+    "P1_MPP",
+    "P1_ML",
+    "P2_LOC",
+    "P2_DC",
+    "P1_NL",
+    "P1_FL",
+    "P2_LD",
+    "P1_COC",
+    "P2_DS",
+    "P2_FOV",
+    "P2_BSC",
+    "P1_PPM",
+    "class_bubble",
+    "class_bubble_cluster",
+    "class_wet_package"
+  ],
+  "rule": "Twelve lens columns plus the three non-gated object classes.",
+  "assignment": "Frozen 70/15/15 picture assignment, so lens results compare with Experiment 1.",
+  "inputs": {
+    "annotation": "f61ea0b90df095ebe52d1332f8bfdb8a",
+    "pictures": "a03ddeead53bae370c17bd8ea15c0df0",
+    "split": "1a71d66d2de384cf47a3fcf7d9115baa"
+  },
+  "positives": {
+    "P1_MPP": {
+      "train": 1000,
+      "val": 214,
+      "test": 214
+    },
+    "P1_ML": {
+      "train": 998,
+      "val": 214,
+      "test": 214
+    },
+    "P2_LOC": {
+      "train": 841,
+      "val": 180,
+      "test": 180
+    },
+    "P2_DC": {
+      "train": 401,
+      "val": 86,
+      "test": 86
+    },
+    "P1_NL": {
+      "train": 228,
+      "val": 49,
+      "test": 49
+    },
+    "P1_FL": {
+      "train": 249,
+      "val": 33,
+      "test": 51
+    },
+    "P2_LD": {
+      "train": 474,
+      "val": 101,
+      "test": 102
+    },
+    "P1_COC": {
+      "train": 129,
+      "val": 28,
+      "test": 28
+    },
+    "P2_DS": {
+      "train": 23,
+      "val": 8,
+      "test": 2
+    },
+    "P2_FOV": {
+      "train": 44,
+      "val": 9,
+      "test": 10
+    },
+    "P2_BSC": {
+      "train": 3,
+      "val": 1,
+      "test": 1
+    },
+    "P1_PPM": {
+      "train": 23,
+      "val": 5,
+      "test": 5
+    },
+    "class_bubble": {
+      "train": 1495,
+      "val": 322,
+      "test": 321
+    },
+    "class_bubble_cluster": {
+      "train": 792,
+      "val": 170,
+      "test": 170
+    },
+    "class_wet_package": {
+      "train": 220,
+      "val": 47,
+      "test": 47
+    }
+  },
+  "output": {
+    "path": "run\\split_exp3_2_20261116\\labels_conditions.csv",
+    "md5": "9f3ef6bc582f3e4586de414510de01e7"
+  }
+}

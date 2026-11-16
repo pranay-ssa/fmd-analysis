@@ -1,0 +1,88 @@
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:1074: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(device.type == "cuda"))
+cond15 table: run/split_exp3_2_20261116/labels_conditions.csv md5 9f3ef6bc582f3e4586de414510de01e7
+rows: 7470: 5239 train / 1110 val / 1121 test
+cond15 train positives: P1_MPP=1000, P1_ML=998, P2_LOC=841, P2_DC=401, P1_NL=228, P1_FL=249, P2_LD=474, P1_COC=129, P2_DS=23, P2_FOV=44, P2_BSC=3, P1_PPM=23, class_bubble=1495, class_bubble_cluster=792, class_wet_package=220
+image root ok: 40 sampled pictures found under /data/FMD_Data_26082026/fmd_temp_images
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:1085: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+epoch 01/50  train loss 1.2370
+epoch 02/50  train loss 1.1455
+epoch 03/50  train loss 0.9830
+epoch 04/50  train loss 0.7919
+epoch 05/50  train loss 0.6411
+epoch 06/50  train loss 0.5349
+epoch 07/50  train loss 0.4745
+epoch 08/50  train loss 0.4239
+epoch 09/50  train loss 0.3845
+epoch 10/50  train loss 0.3551
+epoch 11/50  train loss 0.3361
+epoch 12/50  train loss 0.3177
+epoch 13/50  train loss 0.3009
+epoch 14/50  train loss 0.2843
+epoch 15/50  train loss 0.2720
+epoch 16/50  train loss 0.2599
+epoch 17/50  train loss 0.2522
+epoch 18/50  train loss 0.2382
+epoch 19/50  train loss 0.2321
+epoch 20/50  train loss 0.2264
+epoch 21/50  train loss 0.2162
+epoch 22/50  train loss 0.2117
+epoch 23/50  train loss 0.1978
+epoch 24/50  train loss 0.1960
+epoch 25/50  train loss 0.1886
+epoch 26/50  train loss 0.1806
+epoch 27/50  train loss 0.1745
+epoch 28/50  train loss 0.1700
+epoch 29/50  train loss 0.1610
+epoch 30/50  train loss 0.1579
+epoch 31/50  train loss 0.1521
+epoch 32/50  train loss 0.1522
+epoch 33/50  train loss 0.1437
+epoch 34/50  train loss 0.1420
+epoch 35/50  train loss 0.1334
+epoch 36/50  train loss 0.1330
+epoch 37/50  train loss 0.1293
+epoch 38/50  train loss 0.1252
+epoch 39/50  train loss 0.1219
+epoch 40/50  train loss 0.1170
+epoch 41/50  train loss 0.1176
+epoch 42/50  train loss 0.1090
+epoch 43/50  train loss 0.1099
+epoch 44/50  train loss 0.1054
+epoch 45/50  train loss 0.1030
+epoch 46/50  train loss 0.0988
+epoch 47/50  train loss 0.0982
+epoch 48/50  train loss 0.0930
+epoch 49/50  train loss 0.0916
+epoch 50/50  train loss 0.0903
+/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py:1021: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(device.type == "cuda")):
+thresholds chosen on 1110 val pictures: 11 tuned, 4 default
+  P1_MPP                   0.80  (val, val F1 1.000 vs 1.000 at 0.5)
+  P1_ML                    0.65  (val, val F1 0.919 vs 0.902 at 0.5)
+  P2_LOC                   0.45  (val, val F1 0.757 vs 0.748 at 0.5)
+  P2_DC                    0.70  (val, val F1 0.757 vs 0.708 at 0.5)
+  P1_NL                    0.90  (val, val F1 1.000 vs 0.980 at 0.5)
+  P1_FL                    0.80  (val, val F1 0.472 vs 0.419 at 0.5)
+  P2_LD                    0.85  (val, val F1 0.930 vs 0.869 at 0.5)
+  P1_COC                   0.65  (val, val F1 0.982 vs 0.949 at 0.5)
+  P2_DS                    0.50  (default, val F1 0.941 vs 0.941 at 0.5)
+  P2_FOV                   0.50  (default, val F1 0.750 vs 0.750 at 0.5)
+  P2_BSC                   0.50  (default, val F1 0.000 vs 0.000 at 0.5)
+  P1_PPM                   0.50  (default, val F1 0.769 vs 0.769 at 0.5)
+  class_bubble             0.50  (val, val F1 0.957 vs 0.957 at 0.5)
+  class_bubble_cluster     0.30  (val, val F1 0.677 vs 0.670 at 0.5)
+  class_wet_package        0.55  (val, val F1 0.458 vs 0.443 at 0.5)
+metrics written: run/exp3_2_cond15_20261116/metrics.json
+thresholds written: run/exp3_2_cond15_20261116/thresholds.json
+timing: train 886.0s (17.7s/epoch), val 3.7s, test 3.7s = 3.32 ms/image on 1121 test pictures
+Traceback (most recent call last):
+  File "/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py", line 1416, in <module>
+    main()
+  File "/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py", line 1412, in main
+    run_training(rows, columns, args)
+  File "/home/pranayp/fmd-analysis/experiments/multilabel_ooi/train_multilabel.py", line 1239, in run_training
+    f"{metrics['macro_ap_supported']:.4f}")
+       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'macro_ap_supported'

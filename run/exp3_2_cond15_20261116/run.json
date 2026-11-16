@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "run_id": "cnn__cond15__224__20261116",
+  "family": "cnn",
+  "arm": "cond15",
+  "epochs": 50,
+  "status": "ok",
+  "host": "vm",
+  "data": {
+    "split": "run/split_exp3_2_20261116/labels_conditions.csv (md5 9f3ef6bc582f3e4586de414510de01e7)",
+    "n_train": 5239,
+    "n_val": 1110,
+    "n_test": 1121,
+    "classes": 15
+  },
+  "config": {
+    "columns": "cond15",
+    "gated_target": "ignored",
+    "pos_weight": "on",
+    "output_columns": [
+      "P1_MPP",
+      "P1_ML",
+      "P2_LOC",
+      "P2_DC",
+      "P1_NL",
+      "P1_FL",
+      "P2_LD",
+      "P1_COC",
+      "P2_DS",
+      "P2_FOV",
+      "P2_BSC",
+      "P1_PPM",
+      "class_bubble",
+      "class_bubble_cluster",
+      "class_wet_package"
+    ],
+    "arch": "resnet50",
+    "imgsz": 224,
+    "batch": 8,
+    "epochs": 50,
+    "lr": 0.0001,
+    "seed": 42,
+    "device": "cuda",
+    "split_shape": "70/15/15",
+    "threshold_source": "val",
+    "table": "run/split_exp3_2_20261116/labels_conditions.csv",
+    "table_md5": "9f3ef6bc582f3e4586de414510de01e7",
+    "recipe": "resnet50, 224, batch 8, 50 epochs, no early stopping, SGD lr 1e-4 momentum 0.9 (nesterov, weight decay 1e-4), seed 42, BCEWithLogitsLoss"
+  },
+  "metrics": {
+    "primary": {
+      "name": "macro_ap_cond15",
+      "value": 0.8017414138789957
+    },
+    "all": {
+      "macro_ap_cond15": 0.8017414138789957,
+      "per_class_at_0.5": {
+        "P1_MPP": {
+          "precision": 0.9952830188679245,
+          "recall": 0.985981308411215,
+          "f1": 0.9906103286384976,
+          "support": 214
+        },
+        "P1_ML": {
+          "precision": 0.8647540983606558,
+          "recall": 0.985981308411215,
+          "f1": 0.9213973799126639,
+          "support": 214
+        },
+        "P2_LOC": {
+          "precision": 0.6600790513833992,
+          "recall": 0.9277777777777778,
+          "f1": 0.7713625866050808,
+          "support": 180
+        },
+        "P2_DC": {
+          "precision": 0.5138888888888888,
+          "recall": 0.8604651162790697,
+          "f1": 0.6434782608695652,
+          "support": 86
+        },
+        "P1_NL": {
+          "precision": 0.9074074074074074,
+          "recall": 1.0,
+          "f1": 0.9514563106796117,
+          "support": 49
+        },
+        "P1_FL": {
+          "precision": 0.4,
+          "recall": 0.8627450980392157,
+          "f1": 0.5465838509316772,
+          "support": 51
+        },
+        "P2_LD": {
+          "precision": 0.8532110091743119,
+          "recall": 0.9117647058823529,
+          "f1": 0.8815165876777251,
+          "support": 102
+        },
+        "P1_COC": {
+          "precision": 0.8666666666666667,
+          "recall": 0.9285714285714286,
+          "f1": 0.896551724137931,
+          "support": 28
+        },
+        "P2_DS": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "support": 2
+        },
+        "P2_FOV": {
+          "precision": 0.5,
+          "recall": 0.9,
+          "f1": 0.6428571428571429,
+          "support": 10
+        },
+        "P2_BSC": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "P1_PPM": {
+          "precision": 0.5714285714285714,
+          "recall": 0.8,
+          "f1": 0.6666666666666666,
+          "support": 5
+        },
+        "class_bubble": {
+          "precision": 0.8948863636363636,
+          "recall": 0.9813084112149533,
+          "f1": 0.936106983655275,
+          "support": 321
+        },
+        "class_bubble_cluster": {
+          "precision": 0.5434782608695652,
+          "recall": 0.8823529411764706,
+          "f1": 0.672645739910314,
+          "support": 170
+        },
+        "class_wet_package": {
+          "precision": 0.4246575342465753,
+          "recall": 0.6595744680851063,
+          "f1": 0.5166666666666666,
+          "support": 47
+        }
+      },
+      "timing": {
+        "seconds_total": 893.5,
+        "seconds_training": 886.0,
+        "seconds_per_epoch": 17.7,
+        "seconds_validation": 3.7,
+        "seconds_inference": 3.7,
+        "inference_images": 1121,
+        "inference_ms_per_image": 3.32
+      }
+    }
+  },
+  "artifacts": {
+    "weights": "run/exp3_2_cond15_20261116/final.pt",
+    "log": "run/exp3_2_cond15_20261116/train.log",
+    "metrics": "run/exp3_2_cond15_20261116/metrics.json",
+    "predictions": "run/exp3_2_cond15_20261116/predictions.npz",
+    "thresholds": "run/exp3_2_cond15_20261116/thresholds.json"
+  },
+  "notes": "Option B condition specialist: twelve lens columns plus Bubble, Bubble Cluster and Wet Package, on the frozen 70/15/15 assignment. Per-class figures in metrics.json are at 0.5; the published table uses the validation-chosen cut. The process printed a traceback after writing every artifact (a missing key in the closing print), so the exit code is non-zero; no artifact is affected."
+}

@@ -1,0 +1,5 @@
+class,read_by,population,flagged,threshold,auroc,precision,recall,f1
+Foreign Matter,Size model,459,79,0.25,0.745,0.26,0.835,0.396
+Fiber,Size model,167,124,0.15,0.687,0.839,0.589,0.692
+Extraneous Polymer,Size model,80,40,0.1,0.879,1.0,0.375,0.545
+HEMA,Size model,58,52,0.98,0.974,1.0,0.846,0.917
