@@ -126,3 +126,24 @@ Rules:
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
 - A committed graphify-out/graph.json is rewritten whole on every build, so a large diff to it in a pull request is expected. Do not flag it as churn or suggest skipping the graph rebuild or its hooks.
+
+## Project knowledge base
+
+A compiled knowledge base for FMD, SAP and the habit-tracker build lives at `D:/SecondBrain`. It is
+read-only for an agent working here. Use it before answering from this repository alone, because it has
+already resolved the source question this repository still contains.
+
+```
+index     D:/SecondBrain/20 - Wiki/index.md          every page, one line each
+search    python D:/SecondBrain/.sb/tools/sb.py find "<words>"
+page      D:/SecondBrain/20 - Wiki/<domain>/<Page Name>.md
+evidence  the page's sources: field names its snapshot under 40 - Sources/<domain>/
+```
+
+Rules:
+
+- Quote a number with the population or arena the page states. A figure without its arena is a defect.
+- Cite the page name, not the original path in this repository.
+- Never write into the vault. If a page is wrong, say so in the answer; the vault is edited by its own
+  session, through `sb put` and a compile.
+- If `sb find` returns nothing, the vault does not know. Say that rather than guessing from this repository.

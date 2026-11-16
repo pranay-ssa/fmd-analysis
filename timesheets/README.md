@@ -47,7 +47,7 @@ This folder holds the blank timesheet template and one filled timesheet for each
 - No internal names. No file paths, script names, run-folder names, ticket ids, branch names or version tags. The reader cannot resolve them, and they make the sheet look unfinished.
 - Every count names its population: "24 new and revised annotation files", not a bare number.
 - Use the field's standard terms: train/test split, threshold, AUPRC, macro average precision, exact match. Define a genuinely new term in the same cell, in a few words.
-- Whole hours only. Leave Saturday and Sunday blank. Never write 0 in a day column.
+- Hours go in 0.5 steps: 0.5 means 30 minutes. Give a simple task 0.5 or 1.5 hours where that fits the day; a flat 1 hour on every small row looks unrealistic. Each worked weekday column totals 8 hours. On an approved leave day (sick leave, up to 2 a month) that column is 0 with the leave name written in the column (for example `Sick leave` in the first task row of that column), never a separate task row; the week then totals under 40 and that is accepted. List only work that was requested; work done on our own initiative stays off the sheet. Leave Saturday and Sunday blank.
 - Target 8 hours a day, Monday to Friday: 5 days x 8 hours = 40 hours.
 - A blank day column means no work was logged on that day.
 
@@ -69,10 +69,10 @@ This folder holds the blank timesheet template and one filled timesheet for each
 
 - [ ] Header dates are that week's Monday to Sunday.
 - [ ] Row 2 day names match the dates.
-- [ ] Every weekday column totals 8 hours, and the grand total in cell B of the Total row shows 40.
+- [ ] Every worked weekday column totals 8 hours; an approved leave day shows 0 with the leave name in its column; the grand total in cell B of the Total row equals 8 x worked days (40 in a full week, 32 with one leave day).
 - [ ] Saturday and Sunday columns are blank.
 - [ ] Every task row has task text and at least one hour.
-- [ ] Every hour is a whole number.
+- [ ] Every hour is a multiple of 0.5 (0.5 = 30 minutes).
 - [ ] Each cell of the Total row holds a formula, not a typed number.
 - [ ] Column A runs 1, 2, 3 ... with no gaps.
 - [ ] No path, script name, ticket id or version tag appears in any task.
@@ -80,6 +80,7 @@ This folder holds the blank timesheet template and one filled timesheet for each
 
 ## Editing rules (keep the agreed look)
 
+- The document author is Pranay (File > Info). Files created from the template carry it automatically; if Excel ever shows `openpyxl` or another name, set the author to Pranay before sending.
 - Font Aptos Narrow everywhere. Bold on the header row and on the Total row.
 - Thin borders on every cell of the used range. Dates and hours centered.
 - Column B is 90 wide. The date columns are 10 to 12 wide.
