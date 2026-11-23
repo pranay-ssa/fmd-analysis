@@ -1,0 +1,57 @@
+[
+ {
+  "pair": 3,
+  "record_a": "20241110_024940_L24_C13_9997.bmp",
+  "record_b": "20241110_024940_L24_C13_9997_0.6242.bmp",
+  "boxes_a": 10,
+  "boxes_b": 17,
+  "crop": {
+   "x0": 384,
+   "y0": 149,
+   "x1": 2068,
+   "y1": 1778
+  },
+  "matched": 10,
+  "median_iou": 1.0,
+  "median_corner_shift_px": 0.0,
+  "largest_corner_shift_px": 13.066,
+  "boxes_only_in_a": 0,
+  "boxes_only_in_b": 7,
+  "job": "4521947",
+  "mode": "oriented",
+  "panels": [
+   {
+    "record": "Record A",
+    "basename": "20241110_024940_L24_C13_9997.bmp",
+    "crop": {
+     "x0": 384,
+     "y0": 149,
+     "x1": 2068,
+     "y1": 1778
+    },
+    "line_px": 3,
+    "x": 40,
+    "y": 266,
+    "w": 760,
+    "h": 735,
+    "scale": 0.4513064133016627
+   },
+   {
+    "record": "Record B",
+    "basename": "20241110_024940_L24_C13_9997_0.6242.bmp",
+    "crop": {
+     "x0": 384,
+     "y0": 149,
+     "x1": 2068,
+     "y1": 1778
+    },
+    "line_px": 3,
+    "x": 812,
+    "y": 266,
+    "w": 760,
+    "h": 735,
+    "scale": 0.4513064133016627
+   }
+  ]
+ }
+]

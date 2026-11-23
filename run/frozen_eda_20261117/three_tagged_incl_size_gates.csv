@@ -1,0 +1,17 @@
+tag,class,pictures
+P1_ML,Multiple Lenses,631
+P2_LOC,Lens Off Center,578
+P2_DC,Dirty Camera,325
+P1_FL,Folded Lens,273
+P3_FIB_MICRON_THRESHOLD,Fiber size gate,248
+P3_FM_MICRON_THRESHOLD,Foreign Matter size gate,170
+P2_LD,Low Dose,129
+P3_EP_MICRON_THRESHOLD,Extraneous Polymer size gate,80
+P1_NL,Missing Lens,53
+P3_HE_MICRON_THRESHOLD,HEMA size gate,34
+P1_TL,Torn Lens,31
+P1_LR,Lens Rupture,14
+P1_EBC,Edge Bottle-Capped,8
+P1_MPP,Missing Primary Package,1
+P2_BSC,Bubble Scatter,1
+P2_DS,Dirty Strobe,1

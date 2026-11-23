@@ -95,3 +95,10 @@ run/**/*.pth
 
 # === Timesheets (personal work records, local only, never pushed) ===
 timesheets/*.xlsx
+
+# === Frozen annotation export (raw CVAT XML, ~40 MB across 27 files; input to the frozen split) ===
+# Local only. What git carries is the derived evidence: split.csv, labels_17.csv and gates_4.csv with
+# their md5s under experiments/frozen_data_experiments/. Both entries below are redundant with data
+# already tracked (Annotations.zip repacks the PRODUCTION_20260925_300 XMLs) or re-exportable from CVAT.
+data/Annotations.zip
+data/Frozen Annotation Dataset/

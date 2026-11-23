@@ -1,0 +1,205 @@
+{
+ "clear_folder_pictures_in_frozen": 2333,
+ "clear_state": {
+  "bubbles only": 1712,
+  "other box only": 255,
+  "presentation tag present": 324,
+  "no mark at all": 42
+ },
+ "clear_definition_count": 42,
+ "empty_pictures": 47,
+ "empty_not_clear": [
+  "20241105_204620_L24_C14_9270.bmp",
+  "20241112_153448_L27_C11_1_0.2771.bmp",
+  "20260806_071407_L31_PalletGHH0806114425_Cavity14_B01BGTR_Fail7_Score(0.9992587)_0.3519.bmp",
+  "20260825_015716_L26_PalletGHN0825061809_Cavity1_B01BKM2_Fail7_Score(1).bmp",
+  "20260925_102723_L30_PalletGHK0925145029_Cavity15_B01BPLC_Fail7_Score(1).bmp"
+ ],
+ "population_split": {
+  "lp tag only": 3603,
+  "ooi box only": 4383,
+  "both": 5649,
+  "clear, no mark": 42,
+  "no mark, not a clear picture": 5
+ },
+ "labels_per_picture_client_convention": {
+  "1": 4153,
+  "2": 4236,
+  "3": 2756,
+  "4": 1263,
+  "5": 716,
+  "6": 361,
+  "7": 155,
+  "8": 33,
+  "9": 4
+ },
+ "pictures_with_at_least_one_label": 13677,
+ "year_mix": {
+  "2024": 3671,
+  "2026": 10011
+ },
+ "label_top": [
+  [
+   "P2_BB",
+   9775
+  ],
+  [
+   "P2_BC",
+   4991
+  ],
+  [
+   "P3_FM",
+   2367
+  ],
+  [
+   "P2_LD",
+   2124
+  ],
+  [
+   "P2_DC",
+   1992
+  ],
+  [
+   "P2_LOC",
+   1570
+  ],
+  [
+   "P1_ML",
+   1511
+  ],
+  [
+   "P1_MPP",
+   1427
+  ],
+  [
+   "P3_FIB",
+   1396
+  ],
+  [
+   "P1_PPM",
+   1055
+  ],
+  [
+   "P3_EP",
+   1018
+  ],
+  [
+   "P1_COC",
+   816
+  ],
+  [
+   "P2_WP",
+   813
+  ],
+  [
+   "P1_NL",
+   721
+  ],
+  [
+   "P1_FL",
+   586
+  ],
+  [
+   "P3_HE",
+   340
+  ],
+  [
+   "F2_FOV",
+   222
+  ],
+  [
+   "P1_TL",
+   117
+  ],
+  [
+   "P1_SG",
+   88
+  ],
+  [
+   "Clear",
+   42
+  ],
+  [
+   "P1_LR",
+   36
+  ],
+  [
+   "P2_DS",
+   33
+  ],
+  [
+   "P1_EBC",
+   24
+  ],
+  [
+   "P2_BSC",
+   12
+  ]
+ ],
+ "gate_coverage": [
+  {
+   "class": "Foreign Matter",
+   "code": "P3_FM",
+   "pictures_with_class": 2367,
+   "pictures_with_gate": 1400,
+   "pictures_with_gate_and_class": 1400,
+   "gate_without_class": 0,
+   "below_cut": 967,
+   "share_flagging": 59.1
+  },
+  {
+   "class": "Fiber",
+   "code": "P3_FIB",
+   "pictures_with_class": 1396,
+   "pictures_with_gate": 1306,
+   "pictures_with_gate_and_class": 1306,
+   "gate_without_class": 0,
+   "below_cut": 90,
+   "share_flagging": 93.6
+  },
+  {
+   "class": "Extraneous Polymer",
+   "code": "P3_EP",
+   "pictures_with_class": 1018,
+   "pictures_with_gate": 1014,
+   "pictures_with_gate_and_class": 1014,
+   "gate_without_class": 0,
+   "below_cut": 4,
+   "share_flagging": 99.6
+  },
+  {
+   "class": "HEMA",
+   "code": "P3_HE",
+   "pictures_with_class": 340,
+   "pictures_with_gate": 340,
+   "pictures_with_gate_and_class": 340,
+   "gate_without_class": 0,
+   "below_cut": 0,
+   "share_flagging": 100.0
+  }
+ ],
+ "legacy": [
+  {
+   "legacy_class": "hema_obstruction",
+   "pictures_in_previous_record": 36,
+   "pictures_in_frozen": 36,
+   "not_in_frozen": 0,
+   "carrying_now": "P3_HE_MICRON_THRESHOLD 35; P3_HE 35; P2_BB 34; P2_DC 16; P2_BC 13; P3_EP_MICRON_THRESHOLD 2"
+  },
+  {
+   "legacy_class": "bubble_on_123",
+   "pictures_in_previous_record": 13,
+   "pictures_in_frozen": 0,
+   "not_in_frozen": 13,
+   "carrying_now": ""
+  },
+  {
+   "legacy_class": "bubble_on_edge",
+   "pictures_in_previous_record": 14,
+   "pictures_in_frozen": 0,
+   "not_in_frozen": 14,
+   "carrying_now": ""
+  }
+ ],
+ "duplicate_tag_pictures": 4
+}

@@ -1,0 +1,19 @@
+tag,class,pictures
+P2_LD,Low Dose,1564
+P1_MPP,Missing Primary Package,1376
+P1_PPM,Package Misalignment,962
+P1_COC,Cavity Off Center,808
+P3_FM_MICRON_THRESHOLD,Foreign Matter size gate,766
+P3_EP_MICRON_THRESHOLD,Extraneous Polymer size gate,516
+P3_FIB_MICRON_THRESHOLD,Fiber size gate,491
+P2_DC,Dirty Camera,465
+P1_NL,Missing Lens,439
+F2_FOV,View Obstructed,221
+P2_LOC,Lens Off Center,217
+P3_HE_MICRON_THRESHOLD,HEMA size gate,197
+P1_ML,Multiple Lenses,52
+P2_DS,Dirty Strobe,21
+P1_FL,Folded Lens,5
+P1_LR,Lens Rupture,4
+P1_TL,Torn Lens,4
+P2_BSC,Bubble Scatter,4

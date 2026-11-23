@@ -1,0 +1,37 @@
+code,shape_kind,mentions,pictures
+P2_BB,box,27982,2069
+P2_BC,box,3315,1114
+P1_MPP,tag,2809,1431
+P3_FM,box,2563,799
+P1_ML,tag,1893,1447
+Bubble,box,1298,113
+P2_WP,box,1273,290
+P2_LOC,tag,1262,1223
+P3_FIB,box,744,394
+P2_LD,tag,689,681
+P2_DC,tag,573,573
+P1_NL,tag,555,327
+P3_FM_MICRON_THRESHOLD,tag,454,454
+P3_FIB_MICRON_THRESHOLD,tag,364,364
+P1_FL,tag,333,333
+P1_COC,tag,303,186
+P3_EP,box,282,191
+Wet Package,box,189,60
+P2_HMO,tag,174,174
+P3_HE,box,164,157
+Bubble Cluster,box,154,36
+P3_HE_MICRON_THRESHOLD,tag,154,154
+P3_EP_MICRON_THRESHOLD,tag,136,136
+Bubble On Edge,box,90,14
+Bubble On 123,box,79,13
+Foreign Matter,box,77,69
+P2_DS,tag,75,44
+F2_FOV,tag,63,63
+Fiber,box,62,61
+Bubble Irregular,box,46,43
+P1_PPM,tag,33,33
+Extraneous Polymer,box,17,17
+HEMA Fragment,box,8,8
+P2_BSC,tag,8,7
+P2_BST,box,4,4
+P2_BI,box,1,1

@@ -17,6 +17,18 @@ This folder holds the blank timesheet template and one filled timesheet for each
 - Tasks go in the Task column. Hours go in the date columns.
 - The first submission is a one-off exception: it covers the week of 26 October 2026 and is due on Thursday 5 November 2026 by 4:00 PM, because the requirement arrived that morning. The Monday cycle starts with the submission on Monday 9 November 2026, covering the week of 2 to 6 November.
 
+## The weekly flow (agreed 23 November 2026)
+
+Standing: this format is provisional until feedback arrives. The sheet for 16-20 November was shared as agreed; when feedback comes back from the review, fold it into this README and the `weekly-timesheet` skill the same day, and work from the next sheet onwards.
+
+1. On a Monday the user asks "prepare last week's timesheet" in chat, adding that week's meeting days and lengths and any leave. Run `date` first, derive the previous Monday-to-Friday from it, and state the range in the reply.
+2. Gather evidence: the week's session doc in `docs/sessions/`, git log, artifact folders and file times.
+3. Fold the work into the five categories (Data understanding, Data preparation, Modeling, Evaluation, Studying), then fold the same category on the same day into one row.
+4. Show the approval table: current task | category | restructured name | weekly hours | M/T/W/Th/F. The day's rows plus the Meetings cell add to 8. Build only after the user says go.
+5. Build from `Timesheet_TEMPLATE.xlsx`: file name `Timesheet_<name>_<DDMon>_.xlsx`, dates re-dated to that week, row text `<Category> - <name>` (the Meetings row plain), simple names, at most four superscript footnotes below the Total row.
+6. Verify programmatically against the checklist below, then the user reviews and sends by 4:00 PM.
+7. After sending, stay open to feedback; any change to this flow lands in this README and the skill before the next sheet is built.
+
 ## Folder contents
 
 | File | What it is | Rule |
@@ -45,6 +57,10 @@ This folder holds the blank timesheet template and one filled timesheet for each
 - Source: the current week's session doc in `docs/sessions/`. Tasks come from the dated entries, which record work that was done, not the plan.
 - One row per piece of work. Write what was done and to what: "Train/test split rebuild on the merged record".
 - No internal names. No file paths, script names, run-folder names, ticket ids, branch names or version tags. The reader cannot resolve them, and they make the sheet look unfinished.
+- Fold every task into one of five categories, prefixed on the row name: `Data understanding` (EDA and exploration), `Data preparation` (splits, cropping, preprocessing, augmentations, dataset builds), `Modeling` (building, running and monitoring training), `Evaluation` (exploring results and presenting them), `Studying` (learning how a model works, reading the code, exploring ideas). Name pattern: `Category - short description`, written for a reader who knows the project at a high level and no internal names. A task that fits none goes to the nearest category at discretion, flagged in the chat for feedback.
+- Fold same category on the same day into one row before proposing, so the name tells the story and the day's rows plus the Meetings cell add to 8. Propose in chat first with the approval table (current task, category, restructured name, week hours, per day); build only after approval. In the sheet each task row follows `<Category> - <name>`: the approved restructured name with its category prefix, no separate category column, and the template's columns stay as they are (the Meetings row is plain).
+- Names stay simple: no counts or pixel details inside the name. Where a short name would drop numbers a reader needs, end it with a Unicode superscript mark (¹ ² ³ ⁴, at most four) and put the note below the Total row, outside the bordered block, Aptos Narrow size 10, starting with the same mark. Every mark must have its note and every note its mark; never use Excel's rich-text superscript, it drops when the cell is edited.
+- Keep a separate `Meetings` row in the task block for class and meeting hours, at most 1 hour a day; the meeting hours come out of that day's 8, not on top. The weekly request names the meeting days and their lengths.
 - Every count names its population: "24 new and revised annotation files", not a bare number.
 - Use the field's standard terms: train/test split, threshold, AUPRC, macro average precision, exact match. Define a genuinely new term in the same cell, in a few words.
 - Hours go in 0.5 steps: 0.5 means 30 minutes. Give a simple task 0.5 or 1.5 hours where that fits the day; a flat 1 hour on every small row looks unrealistic. Each worked weekday column totals 8 hours. On an approved leave day (sick leave, up to 2 a month) that column is 0 with the leave name written in the column (for example `Sick leave` in the first task row of that column), never a separate task row; the week then totals under 40 and that is accepted. List only work that was requested; work done on our own initiative stays off the sheet. Leave Saturday and Sunday blank.

@@ -1,0 +1,123 @@
+blobs,boxes,class,code,content,corner_hits,corners_in_panel,edges_ok,grey_diff,panel_grey,record,rotation,source_grey,stray_px,worst_dist_px,xbr,xtl,ybr,ytl
+,,Bubble Cluster,P2_BC,n/a (too small at this scale),4,True,,,,20241102_004906_L24_C5_9471.bmp,90.0,,,,1705.24,1688.82,924.37,915.39
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241102_004906_L24_C5_9471.bmp,0.0,,,,1227.16,1217.56,454.39,444.79
+,,HEMA,P3_HE,ok,4,True,,0.01,96.69,20241102_004906_L24_C5_9471.bmp,97.97,96.68,,,1094.7,849.4,1701.22,860.51
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241102_004906_L24_C5_9471.bmp,0.0,,,,1151.03,1139.83,447.33,435.73
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241102_004906_L24_C5_9471.bmp,0.0,,,,1199.12,1189.06,451.14,440.45
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241102_004906_L24_C5_9471.bmp,48.2,,,,1589.85,1576.71,601.98,590.75
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241102_004906_L24_C5_9471.bmp,216.2,,,,1065.62,1057.57,911.52,905.52
+5,5,Bubble,P2_BB,,,,True,,,20241102_004906_L24_C5_9471.bmp,,,0,2.46,,,,
+1,1,Bubble Cluster,P2_BC,,,,True,,,20241102_004906_L24_C5_9471.bmp,,,0,2.22,,,,
+1,1,HEMA,P3_HE,,,,True,,,20241102_004906_L24_C5_9471.bmp,,,0,2.92,,,,
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241102_004906_L24_C5_9471_0.6629.bmp,48.2,,,,1589.52,1576.39,602.0,590.77
+,,HEMA,P3_HE,ok,4,True,,0.22,95.77,20241102_004906_L24_C5_9471_0.6629.bmp,97.97,95.99,,,1095.3,845.25,1701.3,860.59
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241102_004906_L24_C5_9471_0.6629.bmp,0.0,,,,1151.03,1139.83,447.63,436.03
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241102_004906_L24_C5_9471_0.6629.bmp,0.0,,,,1227.53,1217.93,454.63,445.03
+,,Bubble Cluster,P2_BC,n/a (too small at this scale),4,True,,,,20241102_004906_L24_C5_9471_0.6629.bmp,90.0,,,,1705.21,1688.79,924.21,915.22
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241102_004906_L24_C5_9471_0.6629.bmp,0.0,,,,1199.26,1189.2,451.38,440.69
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241102_004906_L24_C5_9471_0.6629.bmp,216.2,,,,1065.22,1057.17,911.38,905.38
+5,5,Bubble,P2_BB,,,,True,,,20241102_004906_L24_C5_9471_0.6629.bmp,,,0,2.57,,,,
+1,1,Bubble Cluster,P2_BC,,,,True,,,20241102_004906_L24_C5_9471_0.6629.bmp,,,0,2.21,,,,
+1,1,HEMA,P3_HE,,,,True,,,20241102_004906_L24_C5_9471_0.6629.bmp,,,0,3.23,,,,
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,147.1,,,,1375.26,1366.69,1329.29,1321.13
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,0.0,,,,1254.0,1247.22,442.2,435.48
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,289.5,,,,991.38,981.02,871.45,863.17
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,163.5,,,,1295.64,1285.26,1349.1,1339.33
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,258.1,,,,821.31,814.52,958.34,952.03
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,356.6,,,,1225.6,1220.3,497.88,492.8
+,,HEMA,P3_HE,ok,4,True,,0.1,90.43,20241109_174228_L24_C4_9649.bmp,307.6,90.53,,,1075.81,923.78,902.54,328.41
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,340.5,,,,1141.49,1135.89,458.75,453.75
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,140.0,,,,1392.35,1386.33,1154.45,1149.13
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,270.7,,,,1005.32,997.44,798.99,792.13
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,145.2,,,,1418.82,1413.45,1354.95,1349.36
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,267.5,,,,991.81,982.82,819.29,807.88
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,138.9,,,,1508.17,1502.96,1253.17,1248.02
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,130.3,,,,1626.64,1620.73,1212.4,1206.42
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,240.6,,,,911.33,905.89,1072.14,1066.93
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,273.9,,,,1135.75,1129.78,855.94,850.32
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,190.1,,,,1206.54,1195.2,1347.96,1335.71
+,,Bubble Cluster,P2_BC,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,0.0,,,,1248.8,1241.69,543.5,536.3
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,178.5,,,,1194.75,1189.47,991.84,985.97
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,181.0,,,,1177.71,1172.51,926.7,921.4
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,22.6,,,,1333.47,1326.41,507.96,501.35
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,90.0,,,,1422.46,1416.56,844.31,838.66
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,261.4,,,,1062.55,1056.85,936.17,930.52
+,,Fiber,P3_FIB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649.bmp,206.8,,,,989.27,983.29,693.33,672.24
+21,21,Bubble,P2_BB,,,,True,,,20241109_174228_L24_C4_9649.bmp,,,0,2.74,,,,
+1,1,Bubble Cluster,P2_BC,,,,True,,,20241109_174228_L24_C4_9649.bmp,,,0,1.91,,,,
+1,1,Fiber,P3_FIB,,,,True,,,20241109_174228_L24_C4_9649.bmp,,,0,1.77,,,,
+1,1,HEMA,P3_HE,,,,True,,,20241109_174228_L24_C4_9649.bmp,,,0,3.7,,,,
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,126.8,,,,1626.61,1619.95,1212.95,1206.08
+,,Fiber,P3_FIB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,296.8,,,,997.01,975.08,686.67,680.11
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,289.5,,,,991.25,980.86,871.41,863.4
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,0.0,,,,1253.78,1247.0,442.52,435.81
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,342.0,,,,1141.21,1135.61,458.71,453.61
+,,Bubble Cluster,P2_BC,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,0.0,,,,1249.16,1242.11,543.8,536.2
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,181.0,,,,1177.62,1172.42,926.65,921.35
+,,HEMA,P3_HE,ok,4,True,,0.06,90.39,20241109_174228_L24_C4_9649_0.9824.bmp,307.6,90.33,,,1074.67,922.65,903.19,329.07
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,245.8,,,,911.45,906.09,1072.45,1067.01
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,258.1,,,,821.17,814.39,958.52,952.21
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,270.7,,,,1005.4,997.51,799.14,792.29
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,356.6,,,,1225.7,1220.4,497.97,492.9
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,140.0,,,,1392.36,1386.35,1154.67,1149.36
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,145.2,,,,1418.73,1413.36,1354.88,1349.77
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,267.5,,,,991.88,982.88,819.36,807.95
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,88.0,,,,1422.44,1416.71,844.63,839.01
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,270.9,,,,1135.56,1130.2,855.74,850.38
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,22.6,,,,1332.47,1325.41,506.7,500.09
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,260.5,,,,1062.62,1056.92,936.39,930.74
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,190.1,,,,1206.32,1194.98,1347.71,1336.72
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,147.1,,,,1374.87,1367.28,1329.11,1321.76
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,181.4,,,,1195.03,1189.29,991.41,985.97
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241109_174228_L24_C4_9649_0.9824.bmp,163.5,,,,1295.4,1285.7,1348.8,1339.56
+20,20,Bubble,P2_BB,,,,True,,,20241109_174228_L24_C4_9649_0.9824.bmp,,,0,2.64,,,,
+1,1,Bubble Cluster,P2_BC,,,,True,,,20241109_174228_L24_C4_9649_0.9824.bmp,,,0,2.14,,,,
+1,1,Fiber,P3_FIB,,,,True,,,20241109_174228_L24_C4_9649_0.9824.bmp,,,0,1.92,,,,
+1,1,HEMA,P3_HE,,,,True,,,20241109_174228_L24_C4_9649_0.9824.bmp,,,0,3.33,,,,
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997.bmp,138.98,,,,1195.51,1189.86,1349.58,1343.68
+,,Fiber,P3_FIB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997.bmp,5.88,,,,999.97,943.4,518.61,505.23
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997.bmp,23.75,,,,1198.71,1187.89,490.26,479.78
+,,HEMA,P3_HE,ok,4,True,,0.02,96.45,20241110_024940_L24_C13_9997.bmp,200.12,96.47,,,1825.03,635.6,1511.66,415.74
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997.bmp,138.58,,,,1295.16,1289.11,1323.34,1317.74
+,,Foreign Matter,P3_FM,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997.bmp,84.1,,,,1549.82,1545.65,623.77,615.03
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997.bmp,133.78,,,,1340.83,1329.91,1335.63,1325.01
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997.bmp,28.29,,,,1210.6,1203.91,491.25,484.85
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997.bmp,351.03,,,,1142.56,1135.66,501.54,496.34
+,,Extraneous Polymer,P3_EP,ok,4,True,,0.64,34.83,20241110_024940_L24_C13_9997.bmp,274.88,34.19,,,736.23,691.02,1025.37,978.48
+6,6,Bubble,P2_BB,,,,True,,,20241110_024940_L24_C13_9997.bmp,,,0,1.85,,,,
+1,1,Extraneous Polymer,P3_EP,,,,True,,,20241110_024940_L24_C13_9997.bmp,,,0,3.32,,,,
+1,1,Fiber,P3_FIB,,,,True,,,20241110_024940_L24_C13_9997.bmp,,,0,2.54,,,,
+1,1,Foreign Matter,P3_FM,,,,True,,,20241110_024940_L24_C13_9997.bmp,,,0,1.2,,,,
+1,1,HEMA,P3_HE,,,,True,,,20241110_024940_L24_C13_9997.bmp,,,0,3.38,,,,
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,23.75,,,,1198.71,1187.89,490.26,479.78
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,12.3,,,,1315.26,1308.87,459.88,453.49
+,,HEMA,P3_HE,ok,4,True,,0.02,96.66,20241110_024940_L24_C13_9997_0.6242.bmp,200.12,96.68,,,1809.07,629.42,1517.95,408.69
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,0.0,,,,1224.1,1208.03,457.51,446.24
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,16.9,,,,1303.88,1296.71,467.68,461.6
+,,Fiber,P3_FIB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,5.88,,,,999.97,943.4,518.61,505.23
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,28.29,,,,1210.6,1203.91,491.25,484.85
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,138.98,,,,1195.51,1189.86,1349.58,1343.68
+,,Extraneous Polymer,P3_EP,ok,4,True,,0.64,34.83,20241110_024940_L24_C13_9997_0.6242.bmp,274.88,34.19,,,736.23,691.02,1025.37,978.48
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,351.03,,,,1142.56,1135.66,501.54,496.34
+,,Bubble Cluster,P2_BC,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,0.0,,,,1284.23,1275.03,461.28,453.96
+,,Bubble Cluster,P2_BC,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,9.4,,,,1349.25,1338.8,470.79,462.22
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,133.78,,,,1340.83,1329.91,1335.63,1325.01
+,,Foreign Matter,P3_FM,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,84.1,,,,1549.82,1545.65,623.77,615.03
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,138.58,,,,1295.16,1289.11,1323.34,1317.74
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,0.0,,,,1248.68,1238.7,461.44,456.29
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20241110_024940_L24_C13_9997_0.6242.bmp,0.0,,,,1265.99,1256.95,463.47,458.79
+11,11,Bubble,P2_BB,,,,True,,,20241110_024940_L24_C13_9997_0.6242.bmp,,,0,2.24,,,,
+2,2,Bubble Cluster,P2_BC,,,,True,,,20241110_024940_L24_C13_9997_0.6242.bmp,,,0,1.75,,,,
+1,1,Extraneous Polymer,P3_EP,,,,True,,,20241110_024940_L24_C13_9997_0.6242.bmp,,,0,3.32,,,,
+1,1,Fiber,P3_FIB,,,,True,,,20241110_024940_L24_C13_9997_0.6242.bmp,,,0,2.54,,,,
+1,1,Foreign Matter,P3_FM,,,,True,,,20241110_024940_L24_C13_9997_0.6242.bmp,,,0,1.2,,,,
+1,1,HEMA,P3_HE,,,,True,,,20241110_024940_L24_C13_9997_0.6242.bmp,,,0,3.43,,,,
+,,Bubble,P2_BB,ok,4,True,,1.82,53.69,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757).bmp,359.1,51.87,,,1075.67,1066.0,932.2,918.85
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757).bmp,50.3,,,,1371.69,1362.35,831.46,822.19
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757).bmp,92.0,,,,1480.49,1472.05,1108.79,1100.17
+3,3,Bubble,P2_BB,,,,True,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757).bmp,,,0,2.72,,,,
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp,77.9,,,,1480.33,1471.44,1108.77,1099.86
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp,55.1,,,,1370.74,1362.35,831.36,822.86
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp,359.1,,,,1345.46,1340.48,839.57,834.54
+,,Bubble,P2_BB,ok,4,True,,1.36,51.04,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp,359.1,49.68,,,1076.87,1066.0,932.58,918.39
+4,4,Bubble,P2_BB,,,,True,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp,,,0,3.38,,,,

@@ -1,0 +1,51 @@
+class_a,name_a,class_b,name_b,composition,pictures
+P2_BB,Bubble,P2_BC,Bubble Cluster,OOI + OOI,1212
+P2_BB,Bubble,P2_LD,Low Dose,OOI + LP,848
+P2_BB,Bubble,P3_FM,Foreign Matter,OOI + OOI,677
+P1_NL,No Lens,P2_BB,Bubble,LP + OOI,283
+P2_BB,Bubble,P3_FIB,Fiber,OOI + OOI,272
+P2_BB,Bubble,P3_EP,Extraneous Polymer,OOI + OOI,246
+P2_BB,Bubble,P2_DC,Dirty Camera,OOI + LP,190
+P1_PPM,Package Misalignment,P2_DC,Dirty Camera,LP + LP,88
+P2_BB,Bubble,P3_HE,HEMA,OOI + OOI,87
+P2_BB,Bubble,P2_LOC,Lens Off Center,OOI + LP,68
+P2_BB,Bubble,P2_WP,Wet Package,OOI + OOI,59
+P1_MPP,Missing Primary Package,P2_DC,Dirty Camera,LP + LP,50
+P1_NL,No Lens,P2_WP,Wet Package,LP + OOI,25
+P1_NL,No Lens,P3_FIB,Fiber,LP + OOI,16
+P1_ML,Multiple Lens,P2_BB,Bubble,LP + OOI,15
+P1_NL,No Lens,P2_DC,Dirty Camera,LP + LP,11
+P2_BB,Bubble,P2_DS,Dirty Strobe,OOI + LP,9
+P1_NL,No Lens,P3_FM,Foreign Matter,LP + OOI,9
+P1_COC,Cavity Off Center,P2_DC,Dirty Camera,LP + LP,7
+P2_BC,Bubble Cluster,P2_LD,Low Dose,OOI + LP,6
+P2_DC,Dirty Camera,P3_EP,Extraneous Polymer,LP + OOI,5
+P1_PPM,Package Misalignment,P2_BB,Bubble,LP + OOI,4
+P2_BC,Bubble Cluster,P2_DC,Dirty Camera,OOI + LP,4
+P2_LD,Low Dose,P3_FM,Foreign Matter,LP + OOI,3
+P2_BC,Bubble Cluster,P3_FM,Foreign Matter,OOI + OOI,3
+P1_COC,Cavity Off Center,P2_BB,Bubble,LP + OOI,3
+P2_DC,Dirty Camera,P3_FM,Foreign Matter,LP + OOI,3
+P1_NL,No Lens,P2_BC,Bubble Cluster,LP + OOI,3
+P2_BC,Bubble Cluster,P3_EP,Extraneous Polymer,OOI + OOI,3
+P1_PPM,Package Misalignment,P2_BSC,Bubble Scatter,LP + LP,2
+P2_BC,Bubble Cluster,P2_LOC,Lens Off Center,OOI + LP,2
+P2_BC,Bubble Cluster,P3_FIB,Fiber,OOI + OOI,2
+P2_LD,Low Dose,P3_EP,Extraneous Polymer,LP + OOI,2
+P2_DC,Dirty Camera,P3_HE,HEMA,LP + OOI,2
+P1_TL,Torn Lens,P2_BB,Bubble,LP + OOI,2
+P2_LOC,Lens Off Center,P3_FM,Foreign Matter,LP + OOI,1
+P2_WP,Wet Package,P3_FIB,Fiber,OOI + OOI,1
+P2_LD,Low Dose,P2_LOC,Lens Off Center,LP + LP,1
+P2_LOC,Lens Off Center,P2_WP,Wet Package,LP + OOI,1
+P1_NL,No Lens,P3_EP,Extraneous Polymer,LP + OOI,1
+P2_BB,Bubble,P2_BSC,Bubble Scatter,OOI + LP,1
+P1_ML,Multiple Lens,P2_LD,Low Dose,LP + LP,1
+P1_SG,Surface Groove,P2_BB,Bubble,OOI + OOI,1
+P2_BC,Bubble Cluster,P3_HE,HEMA,OOI + OOI,1
+P1_FL,Folded Lens,P2_BB,Bubble,LP + OOI,1
+P2_WP,Wet Package,P3_HE,HEMA,OOI + OOI,1
+P2_BSC,Bubble Scatter,P2_LD,Low Dose,LP + LP,1
+P1_EBC,Edge Bottle-Capped,P2_LOC,Lens Off Center,LP + LP,1
+P2_BSC,Bubble Scatter,P2_DC,Dirty Camera,LP + LP,1
+F2_FOV,View Obstructed,P2_DC,Dirty Camera,LP + LP,1

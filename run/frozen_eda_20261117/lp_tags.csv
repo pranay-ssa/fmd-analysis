@@ -1,0 +1,16 @@
+code,class,tag_instances,pictures
+F2_FOV,View Obstructed,223,222
+P1_COC,Cavity Off Center,817,816
+P1_EBC,Edge Bottle-Capped,24,24
+P1_FL,Folded Lens,586,586
+P1_LR,Lens Rupture,36,36
+P1_ML,Multiple Lenses,1514,1511
+P1_MPP,Missing Primary Package,1427,1427
+P1_NL,Missing Lens,721,721
+P1_PPM,Package Misalignment,1055,1055
+P1_TL,Torn Lens,117,117
+P2_BSC,Bubble Scatter,12,12
+P2_DC,Dirty Camera,1992,1992
+P2_DS,Dirty Strobe,33,33
+P2_LD,Low Dose,2124,2124
+P2_LOC,Lens Off Center,1571,1570

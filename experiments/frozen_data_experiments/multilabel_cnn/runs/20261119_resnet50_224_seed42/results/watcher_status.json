@@ -1,0 +1,12 @@
+{
+ "pid": 618061,
+ "status": "launched",
+ "started_at": "2026-11-19T16:15:56+00:00",
+ "checked_at": "2026-11-19T19:24:08+00:00",
+ "mode": "wait",
+ "policy": {"quiet_seconds": 600, "check_seconds": 60, "max_wait_seconds": 44100, "memory_ceiling_mib": 10000, "utilization_ceiling_pct": 20},
+ "gpu": {"memory_used_mib": 7041, "utilization_pct": 0, "quiet_seconds_so_far": 601},
+ "launched_at": "2026-11-19T19:24:08+00:00",
+ "log": "/home/pranayp/frozen_data_experiments/multilabel_cnn/runs/20261119_resnet50_224_seed42/watcher.log",
+ "run_log": "/home/pranayp/frozen_data_experiments/multilabel_cnn/runs/20261119_resnet50_224_seed42/run.log"
+}

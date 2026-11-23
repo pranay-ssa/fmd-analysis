@@ -1,0 +1,41 @@
+triple,names,pictures
+P2_BB;P2_BC;P2_LD,Bubble;Bubble Cluster;Low Dose,572
+P2_BB;P2_BC;P3_FM,Bubble;Bubble Cluster;Foreign Matter,388
+P2_BB;P2_BC;P3_EP,Bubble;Bubble Cluster;Extraneous Polymer,223
+P2_BB;P2_BC;P2_DC,Bubble;Bubble Cluster;Dirty Camera,205
+P2_BB;P2_BC;P3_FIB,Bubble;Bubble Cluster;Fiber,166
+P2_BB;P2_BC;P2_LOC,Bubble;Bubble Cluster;Lens Off Center,104
+P2_BB;P2_DC;P3_EP,Bubble;Dirty Camera;Extraneous Polymer,101
+P2_BB;P2_DC;P3_FM,Bubble;Dirty Camera;Foreign Matter,80
+P2_BB;P2_BC;P3_HE,Bubble;Bubble Cluster;HEMA,77
+P1_ML;P2_BB;P2_LOC,Multiple Lens;Bubble;Lens Off Center,76
+P1_NL;P2_BB;P3_FIB,No Lens;Bubble;Fiber,75
+P2_BB;P2_LD;P3_FM,Bubble;Low Dose;Foreign Matter,62
+P2_BB;P2_DC;P2_LD,Bubble;Dirty Camera;Low Dose,60
+P2_BB;P2_BC;P2_WP,Bubble;Bubble Cluster;Wet Package,56
+P1_NL;P2_BB;P3_FM,No Lens;Bubble;Foreign Matter,41
+P2_BB;P2_LD;P3_EP,Bubble;Low Dose;Extraneous Polymer,33
+P2_BB;P3_FIB;P3_FM,Bubble;Fiber;Foreign Matter,32
+P2_BB;P2_DC;P3_FIB,Bubble;Dirty Camera;Fiber,27
+P2_BB;P2_LD;P2_WP,Bubble;Low Dose;Wet Package,26
+P1_NL;P2_BB;P2_BC,No Lens;Bubble;Bubble Cluster,23
+P2_BB;P2_LD;P3_FIB,Bubble;Low Dose;Fiber,22
+P2_BB;P2_DC;P3_HE,Bubble;Dirty Camera;HEMA,18
+P1_NL;P2_BB;P2_DC,No Lens;Bubble;Dirty Camera,16
+P1_ML;P2_BB;P2_BC,Multiple Lens;Bubble;Bubble Cluster,15
+P2_BB;P3_FM;P3_HE,Bubble;Foreign Matter;HEMA,15
+P2_BB;P2_LOC;P2_WP,Bubble;Lens Off Center;Wet Package,13
+P2_BB;P2_DC;P2_LOC,Bubble;Dirty Camera;Lens Off Center,13
+P2_BB;P2_WP;P3_FM,Bubble;Wet Package;Foreign Matter,11
+P2_BB;P3_EP;P3_FM,Bubble;Extraneous Polymer;Foreign Matter,11
+P2_BB;P3_EP;P3_FIB,Bubble;Extraneous Polymer;Fiber,10
+P2_BB;P3_FIB;P3_HE,Bubble;Fiber;HEMA,10
+P1_NL;P2_WP;P3_FIB,No Lens;Wet Package;Fiber,9
+P2_BB;P2_LOC;P3_FM,Bubble;Lens Off Center;Foreign Matter,8
+P2_BB;P2_BC;P2_DS,Bubble;Bubble Cluster;Dirty Strobe,8
+P2_BB;P2_LD;P2_LOC,Bubble;Low Dose;Lens Off Center,8
+P2_BB;P2_DC;P2_WP,Bubble;Dirty Camera;Wet Package,8
+P1_NL;P2_BB;P2_WP,No Lens;Bubble;Wet Package,8
+P1_NL;P3_FIB;P3_FM,No Lens;Fiber;Foreign Matter,7
+P1_ML;P2_BB;P3_FIB,Multiple Lens;Bubble;Fiber,6
+P2_BB;P2_WP;P3_EP,Bubble;Wet Package;Extraneous Polymer,6

@@ -1,0 +1,16 @@
+tag,class,pictures
+P2_LD,Low Dose,1778
+P1_MPP,Missing Primary Package,1376
+P2_DC,Dirty Camera,1030
+P1_PPM,Package Misalignment,963
+P1_COC,Cavity Off Center,808
+P1_NL,Missing Lens,625
+P2_LOC,Lens Off Center,262
+F2_FOV,View Obstructed,221
+P1_ML,Multiple Lenses,114
+P2_DS,Dirty Strobe,30
+P1_EBC,Edge Bottle-Capped,10
+P1_TL,Torn Lens,6
+P1_FL,Folded Lens,5
+P2_BSC,Bubble Scatter,5
+P1_LR,Lens Rupture,4

@@ -1,0 +1,965 @@
+{
+  "summary": {
+    "annotation_records": 13682,
+    "unique_images": 13678,
+    "duplicate_records_removed": 4,
+    "labelled_population": 13673,
+    "clear": 42,
+    "unannotated": 5,
+    "marked": 13631,
+    "lp_pictures": 9251,
+    "ooi_pictures": 10028,
+    "lp_and_ooi": 5648,
+    "single_lp": 3439,
+    "single_ooi": 672,
+    "single_total": 4111,
+    "multi_total": 9520,
+    "labels": {
+      "Clear": 42,
+      "1": 4111,
+      "2": 4236,
+      "3": 2754,
+      "4": 1262,
+      "5": 715,
+      "6": 361,
+      "7": 155,
+      "8": 33,
+      "9": 4
+    }
+  },
+  "lp": [
+    {
+      "code": "P1_COC",
+      "class": "Cavity Off Center",
+      "pictures": 816,
+      "tags": 817,
+      "share_of_labelled": 0.05967966064506692
+    },
+    {
+      "code": "P1_EBC",
+      "class": "Edge Bottle-Capped",
+      "pictures": 24,
+      "tags": 24,
+      "share_of_labelled": 0.0017552841366196153
+    },
+    {
+      "code": "P1_FL",
+      "class": "Folded Lens",
+      "pictures": 586,
+      "tags": 586,
+      "share_of_labelled": 0.04285818766912894
+    },
+    {
+      "code": "P1_LR",
+      "class": "Lens Rupture",
+      "pictures": 35,
+      "tags": 35,
+      "share_of_labelled": 0.002559789365903606
+    },
+    {
+      "code": "P1_ML",
+      "class": "Multiple Lens",
+      "pictures": 1511,
+      "tags": 1514,
+      "share_of_labelled": 0.11050976376800994
+    },
+    {
+      "code": "P1_MPP",
+      "class": "Missing Primary Package",
+      "pictures": 1427,
+      "tags": 1427,
+      "share_of_labelled": 0.10436626928984129
+    },
+    {
+      "code": "P1_NL",
+      "class": "No Lens",
+      "pictures": 721,
+      "tags": 721,
+      "share_of_labelled": 0.05273166093761428
+    },
+    {
+      "code": "P1_PPM",
+      "class": "Primary Package Misalignment",
+      "pictures": 1055,
+      "tags": 1055,
+      "share_of_labelled": 0.07715936517223726
+    },
+    {
+      "code": "P1_TL",
+      "class": "Torn Lens",
+      "pictures": 117,
+      "tags": 117,
+      "share_of_labelled": 0.008557010166020625
+    },
+    {
+      "code": "P2_BSC",
+      "class": "Bubble Scatter",
+      "pictures": 12,
+      "tags": 12,
+      "share_of_labelled": 0.0008776420683098077
+    },
+    {
+      "code": "P2_DC",
+      "class": "Dirty Camera",
+      "pictures": 1991,
+      "tags": 1991,
+      "share_of_labelled": 0.14561544650040226
+    },
+    {
+      "code": "P2_DS",
+      "class": "Dirty Strobe",
+      "pictures": 33,
+      "tags": 33,
+      "share_of_labelled": 0.002413515687851971
+    },
+    {
+      "code": "P2_LD",
+      "class": "Low Dose",
+      "pictures": 2124,
+      "tags": 2124,
+      "share_of_labelled": 0.15534264609083595
+    },
+    {
+      "code": "P2_LOC",
+      "class": "Lens Off Center",
+      "pictures": 1570,
+      "tags": 1571,
+      "share_of_labelled": 0.11482483727053316
+    },
+    {
+      "code": "F2_FOV",
+      "class": "Field of View Obstructed",
+      "pictures": 222,
+      "tags": 223,
+      "share_of_labelled": 0.016236378263731442
+    }
+  ],
+  "ooi": [
+    {
+      "code": "P2_BB",
+      "class": "Bubble",
+      "pictures": 9771,
+      "boxes": 92189,
+      "size_flagged": 0,
+      "share_of_labelled": 0.7146200541212608
+    },
+    {
+      "code": "P2_BC",
+      "class": "Bubble Cluster",
+      "pictures": 4989,
+      "boxes": 14698,
+      "size_flagged": 0,
+      "share_of_labelled": 0.3648796898998025
+    },
+    {
+      "code": "P2_WP",
+      "class": "Wet Package",
+      "pictures": 813,
+      "boxes": 3159,
+      "size_flagged": 0,
+      "share_of_labelled": 0.059460250127989465
+    },
+    {
+      "code": "P1_SG",
+      "class": "Surface Groove",
+      "pictures": 88,
+      "boxes": 132,
+      "size_flagged": 0,
+      "share_of_labelled": 0.006436041834271922
+    },
+    {
+      "code": "P3_FM",
+      "class": "Foreign Matter",
+      "pictures": 2366,
+      "boxes": 4812,
+      "size_flagged": 1400,
+      "share_of_labelled": 0.17304176113508374
+    },
+    {
+      "code": "P3_FIB",
+      "class": "Fiber",
+      "pictures": 1394,
+      "boxes": 2828,
+      "size_flagged": 1304,
+      "share_of_labelled": 0.10195275360198933
+    },
+    {
+      "code": "P3_EP",
+      "class": "Extraneous Polymer",
+      "pictures": 1017,
+      "boxes": 1083,
+      "size_flagged": 1013,
+      "share_of_labelled": 0.0743801652892562
+    },
+    {
+      "code": "P3_HE",
+      "class": "HEMA",
+      "pictures": 337,
+      "boxes": 348,
+      "size_flagged": 337,
+      "share_of_labelled": 0.024647114751700432
+    }
+  ],
+  "single_labels": [
+    {
+      "code": "P1_MPP",
+      "class": "Missing Primary Package",
+      "pictures": 1376
+    },
+    {
+      "code": "P1_PPM",
+      "class": "Primary Package Misalignment",
+      "pictures": 958
+    },
+    {
+      "code": "P1_COC",
+      "class": "Cavity Off Center",
+      "pictures": 805
+    },
+    {
+      "code": "P2_BB",
+      "class": "Bubble",
+      "pictures": 576
+    },
+    {
+      "code": "F2_FOV",
+      "class": "Field of View Obstructed",
+      "pictures": 221
+    },
+    {
+      "code": "P1_NL",
+      "class": "No Lens",
+      "pictures": 45
+    },
+    {
+      "code": "P3_FM",
+      "class": "Foreign Matter",
+      "pictures": 39
+    },
+    {
+      "code": "P3_FIB",
+      "class": "Fiber",
+      "pictures": 32
+    },
+    {
+      "code": "P2_LD",
+      "class": "Low Dose",
+      "pictures": 29
+    },
+    {
+      "code": "P2_BC",
+      "class": "Bubble Cluster",
+      "pictures": 10
+    },
+    {
+      "code": "P3_EP",
+      "class": "Extraneous Polymer",
+      "pictures": 9
+    },
+    {
+      "code": "P3_HE",
+      "class": "HEMA",
+      "pictures": 3
+    },
+    {
+      "code": "P2_LOC",
+      "class": "Lens Off Center",
+      "pictures": 3
+    },
+    {
+      "code": "P2_WP",
+      "class": "Wet Package",
+      "pictures": 3
+    },
+    {
+      "code": "P2_DC",
+      "class": "Dirty Camera",
+      "pictures": 2
+    }
+  ],
+  "composition1": [
+    {
+      "composition": "1 LP + 0 OOI",
+      "pictures": 3439
+    },
+    {
+      "composition": "0 LP + 1 OOI",
+      "pictures": 672
+    }
+  ],
+  "top1": [
+    {
+      "labels": [
+        "P1_MPP"
+      ],
+      "pictures": 1376
+    },
+    {
+      "labels": [
+        "P1_PPM"
+      ],
+      "pictures": 958
+    },
+    {
+      "labels": [
+        "P1_COC"
+      ],
+      "pictures": 805
+    },
+    {
+      "labels": [
+        "P2_BB"
+      ],
+      "pictures": 576
+    },
+    {
+      "labels": [
+        "F2_FOV"
+      ],
+      "pictures": 221
+    },
+    {
+      "labels": [
+        "P1_NL"
+      ],
+      "pictures": 45
+    },
+    {
+      "labels": [
+        "P3_FM"
+      ],
+      "pictures": 39
+    },
+    {
+      "labels": [
+        "P3_FIB"
+      ],
+      "pictures": 32
+    },
+    {
+      "labels": [
+        "P2_LD"
+      ],
+      "pictures": 29
+    },
+    {
+      "labels": [
+        "P2_BC"
+      ],
+      "pictures": 10
+    },
+    {
+      "labels": [
+        "P3_EP"
+      ],
+      "pictures": 9
+    },
+    {
+      "labels": [
+        "P3_HE"
+      ],
+      "pictures": 3
+    },
+    {
+      "labels": [
+        "P2_LOC"
+      ],
+      "pictures": 3
+    },
+    {
+      "labels": [
+        "P2_WP"
+      ],
+      "pictures": 3
+    },
+    {
+      "labels": [
+        "P2_DC"
+      ],
+      "pictures": 2
+    }
+  ],
+  "composition2": [
+    {
+      "composition": "0 LP + 2 OOI",
+      "pictures": 2565
+    },
+    {
+      "composition": "1 LP + 1 OOI",
+      "pictures": 1507
+    },
+    {
+      "composition": "2 LP + 0 OOI",
+      "pictures": 164
+    }
+  ],
+  "top2": [
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC"
+      ],
+      "pictures": 1212
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_LD"
+      ],
+      "pictures": 848
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P3_FM"
+      ],
+      "pictures": 677
+    },
+    {
+      "labels": [
+        "P1_NL",
+        "P2_BB"
+      ],
+      "pictures": 283
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P3_FIB"
+      ],
+      "pictures": 272
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P3_EP"
+      ],
+      "pictures": 246
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_DC"
+      ],
+      "pictures": 190
+    },
+    {
+      "labels": [
+        "P1_PPM",
+        "P2_DC"
+      ],
+      "pictures": 88
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P3_HE"
+      ],
+      "pictures": 87
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_LOC"
+      ],
+      "pictures": 68
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_WP"
+      ],
+      "pictures": 59
+    },
+    {
+      "labels": [
+        "P1_MPP",
+        "P2_DC"
+      ],
+      "pictures": 50
+    },
+    {
+      "labels": [
+        "P1_NL",
+        "P2_WP"
+      ],
+      "pictures": 25
+    },
+    {
+      "labels": [
+        "P1_NL",
+        "P3_FIB"
+      ],
+      "pictures": 16
+    },
+    {
+      "labels": [
+        "P1_ML",
+        "P2_BB"
+      ],
+      "pictures": 15
+    }
+  ],
+  "top_inclusive": [
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC"
+      ],
+      "pictures": 4941
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P3_FM"
+      ],
+      "pictures": 2277
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_LD"
+      ],
+      "pictures": 2073
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_DC"
+      ],
+      "pictures": 1785
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_LOC"
+      ],
+      "pictures": 1555
+    },
+    {
+      "labels": [
+        "P1_ML",
+        "P2_BB"
+      ],
+      "pictures": 1505
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P3_FIB"
+      ],
+      "pictures": 1298
+    },
+    {
+      "labels": [
+        "P1_ML",
+        "P2_LOC"
+      ],
+      "pictures": 1220
+    },
+    {
+      "labels": [
+        "P2_BC",
+        "P3_FM"
+      ],
+      "pictures": 1078
+    },
+    {
+      "labels": [
+        "P2_BC",
+        "P2_DC"
+      ],
+      "pictures": 1028
+    },
+    {
+      "labels": [
+        "P1_ML",
+        "P2_BC"
+      ],
+      "pictures": 1006
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P3_EP"
+      ],
+      "pictures": 992
+    },
+    {
+      "labels": [
+        "P2_BC",
+        "P2_LOC"
+      ],
+      "pictures": 989
+    },
+    {
+      "labels": [
+        "P2_BC",
+        "P2_LD"
+      ],
+      "pictures": 914
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_WP"
+      ],
+      "pictures": 750
+    }
+  ],
+  "composition3": [
+    {
+      "composition": "1 LP + 2 OOI",
+      "pictures": 1529
+    },
+    {
+      "composition": "0 LP + 3 OOI",
+      "pictures": 1018
+    },
+    {
+      "composition": "2 LP + 1 OOI",
+      "pictures": 207
+    }
+  ],
+  "top3": [
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P2_LD"
+      ],
+      "pictures": 572
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P3_FM"
+      ],
+      "pictures": 388
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P3_EP"
+      ],
+      "pictures": 223
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P2_DC"
+      ],
+      "pictures": 205
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P3_FIB"
+      ],
+      "pictures": 166
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P2_LOC"
+      ],
+      "pictures": 104
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_DC",
+        "P3_EP"
+      ],
+      "pictures": 101
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_DC",
+        "P3_FM"
+      ],
+      "pictures": 80
+    },
+    {
+      "labels": [
+        "P1_ML",
+        "P2_BB",
+        "P2_LOC"
+      ],
+      "pictures": 76
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P3_HE"
+      ],
+      "pictures": 76
+    },
+    {
+      "labels": [
+        "P1_NL",
+        "P2_BB",
+        "P3_FIB"
+      ],
+      "pictures": 75
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_LD",
+        "P3_FM"
+      ],
+      "pictures": 62
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_DC",
+        "P2_LD"
+      ],
+      "pictures": 60
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P2_WP"
+      ],
+      "pictures": 56
+    },
+    {
+      "labels": [
+        "P1_NL",
+        "P2_BB",
+        "P3_FM"
+      ],
+      "pictures": 41
+    }
+  ],
+  "composition4": [
+    {
+      "composition": "1 LP + 3 OOI",
+      "pictures": 627
+    },
+    {
+      "composition": "2 LP + 2 OOI",
+      "pictures": 438
+    },
+    {
+      "composition": "0 LP + 4 OOI",
+      "pictures": 112
+    },
+    {
+      "composition": "3 LP + 1 OOI",
+      "pictures": 85
+    }
+  ],
+  "top4": [
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P2_DC",
+        "P3_EP"
+      ],
+      "pictures": 133
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P2_DC",
+        "P3_FM"
+      ],
+      "pictures": 116
+    },
+    {
+      "labels": [
+        "P1_ML",
+        "P2_BB",
+        "P2_BC",
+        "P2_LOC"
+      ],
+      "pictures": 87
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P2_DC",
+        "P2_LD"
+      ],
+      "pictures": 70
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P2_LD",
+        "P3_FM"
+      ],
+      "pictures": 65
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P2_DC",
+        "P3_FIB"
+      ],
+      "pictures": 41
+    },
+    {
+      "labels": [
+        "P1_FL",
+        "P1_ML",
+        "P2_BB",
+        "P2_LOC"
+      ],
+      "pictures": 37
+    },
+    {
+      "labels": [
+        "P1_FL",
+        "P1_ML",
+        "P2_BB",
+        "P2_BC"
+      ],
+      "pictures": 33
+    },
+    {
+      "labels": [
+        "P1_ML",
+        "P2_BB",
+        "P2_DC",
+        "P2_LOC"
+      ],
+      "pictures": 31
+    },
+    {
+      "labels": [
+        "P1_ML",
+        "P2_BB",
+        "P2_LOC",
+        "P3_FIB"
+      ],
+      "pictures": 28
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P3_FIB",
+        "P3_FM"
+      ],
+      "pictures": 27
+    },
+    {
+      "labels": [
+        "P1_NL",
+        "P2_BB",
+        "P3_FIB",
+        "P3_FM"
+      ],
+      "pictures": 26
+    },
+    {
+      "labels": [
+        "P1_NL",
+        "P2_BB",
+        "P2_DC",
+        "P3_FIB"
+      ],
+      "pictures": 25
+    },
+    {
+      "labels": [
+        "P2_BB",
+        "P2_BC",
+        "P2_LD",
+        "P2_WP"
+      ],
+      "pictures": 25
+    },
+    {
+      "labels": [
+        "P1_ML",
+        "P2_BB",
+        "P2_LOC",
+        "P2_WP"
+      ],
+      "pictures": 24
+    }
+  ],
+  "size_untagged": {
+    "P3_FM": {
+      "pictures": 2366,
+      "flagged": 1400,
+      "untagged": 966,
+      "pass_strict": 237,
+      "pass_extended": 377,
+      "reasons": {
+        "LP tag present": 514,
+        "Bubble Cluster": 452,
+        "Another size flag present": 258,
+        "Surface Groove": 15,
+        "Wet Package": 100
+      }
+    },
+    "P3_FIB": {
+      "pictures": 1394,
+      "flagged": 1304,
+      "untagged": 90,
+      "pass_strict": 6,
+      "pass_extended": 8,
+      "reasons": {
+        "LP tag present": 69,
+        "Another size flag present": 27,
+        "Wet Package": 17,
+        "Bubble Cluster": 41,
+        "Surface Groove": 2
+      }
+    },
+    "P3_EP": {
+      "pictures": 1017,
+      "flagged": 1013,
+      "untagged": 4,
+      "pass_strict": 1,
+      "pass_extended": 2,
+      "reasons": {
+        "LP tag present": 2,
+        "Another size flag present": 2,
+        "Bubble Cluster": 3,
+        "Wet Package": 2
+      }
+    },
+    "P3_HE": {
+      "pictures": 337,
+      "flagged": 337,
+      "untagged": 0,
+      "pass_strict": 0,
+      "pass_extended": 0,
+      "reasons": {}
+    },
+    "UNION": {
+      "pictures": 4494,
+      "flagged": 3739,
+      "untagged": 755,
+      "pass_strict": 243,
+      "pass_extended": 385,
+      "reasons": {
+        "LP tag present": 370,
+        "Bubble Cluster": 339,
+        "Wet Package": 76,
+        "Surface Groove": 14
+      }
+    }
+  }
+}

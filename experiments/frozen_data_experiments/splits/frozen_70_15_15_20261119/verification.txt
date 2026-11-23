@@ -1,0 +1,33 @@
+PASS  split.csv has 13,631 rows  [13631]
+PASS  labels_17.csv has 13,631 rows  [13631]
+PASS  no duplicate picture in the table  [13631 rows, 13631 unique]
+PASS  split and label tables name the same pictures
+PASS  picture set equals the store recomputation  [table 13631, store 13631]
+PASS  every split value is train, val or test  [{'test', 'val', 'train'}]
+PASS  split counts are 9,537 / 2,049 / 2,045  [{'train': 9537, 'test': 2045, 'val': 2049}]
+PASS  train share within 1 point of 70%  [69.97%]
+PASS  val share within 1 point of 15%  [15.03%]
+PASS  test share within 1 point of 15%  [15.00%]
+PASS  every label row matches the store  [0 mismatches]
+PASS  every row has at least one positive
+PASS  class totals match the store  [{}]
+PASS  class totals match meta.json
+PASS  Clear is absent  [0 present]
+PASS  the five unmarked pictures are absent
+PASS  the four dropped duplicate records are absent  [[]]
+PASS  the kept duplicate record is present: 20241102_004906_L24_C5_9471.bmp
+PASS  the kept duplicate record is present: 20241109_174228_L24_C4_9649.bmp
+PASS  the kept duplicate record is present: 20241110_024940_L24_C13_9997_0.6242.bmp
+PASS  the kept duplicate record is present: 20260816_093047_L26_PalletGHF0816135159_
+PASS  no excluded class is a column
+PASS  17 columns  [17]
+PASS  gates_4.csv has 13,631 rows  [13631]
+PASS  gate table names the same pictures
+PASS  gate totals match the store  [{}]
+PASS  gate totals match meta
+PASS  a gate only sits on a picture of its class  [0 leaks]
+PASS  gates_4.csv md5 matches meta
+PASS  split.csv md5 matches meta
+PASS  labels_17.csv md5 matches meta
+
+31 passed, 0 failed

@@ -1,0 +1,199 @@
+basename,prev_files,prev_labels,in_manifest,in_picture_table
+20241102_082407_L26_PalletGHK1102123553_Cavity13_B0177KZ_Fail7_Score(0.983468).bmp,annotations.xml,Foreign Matter,True,False
+20241102_140219_L27_C5_9182.bmp,annotations.xml,Bubble Irregular,True,False
+20241102_141640_L27_C8_9246.bmp,annotations.xml,Bubble Irregular,True,True
+20241102_143656_L27_C15_9231.bmp,annotations.xml,Bubble Irregular,True,True
+20241102_170721_L27_C2_9599.bmp,annotations.xml,Bubble Irregular,True,True
+20241102_173420_L27_C15_9991.bmp,annotations.xml,Bubble Irregular,True,True
+20241102_202559_L26_C12_9399.bmp,annotations.xml,Bubble Irregular,True,True
+20241103_063558_L27_C12_9633.bmp,annotations.xml,Bubble Irregular,True,True
+20241104_010614_L24_C7_9784.bmp,Updated Annotations 20260922.xml,P2_HMO,True,False
+20241104_105211_L24_C2_9753.bmp,annotations.xml,Bubble Irregular,True,True
+20241104_151305_L24_C7_9206.bmp,annotations.xml,Bubble Irregular,True,True
+20241104_195821_L26_PalletGHI1105011027_Cavity2_B0178LL_Fail5_Score(0.9646114).bmp,annotations.xml,Wet Package,True,True
+20241104_201441_L26_PalletGHN1105012656_Cavity10_B0178LL_Fail5_Score(0.95096).bmp,annotations.xml,Wet Package,True,True
+20241104_210536_L26_PalletGHC1105021743_Cavity8_B0178LL_Fail6_Score(0.9721047).bmp,annotations.xml,Wet Package,True,True
+20241104_210946_L26_PalletGHP1105022154_Cavity1_B0178LL_Fail3_Score(0.9332645).bmp,annotations.xml,Fiber,True,True
+20241104_224911_L26_PalletGHS1105040115_Cavity1_B0178LL_Fail7_Score(0.9982086).bmp,annotations.xml,Wet Package,True,False
+20241105_030638_L26_PalletGHL1105081849_Cavity8_B0178LN_Fail5_Score(0.9601004).bmp,annotations.xml,Wet Package,True,True
+20241105_031204_L26_PalletGHL1105082416_Cavity14_B0178LN_Fail7_Score(0.9971284).bmp,annotations.xml,Wet Package,True,True
+20241105_052129_L26_PalletGHQ1105103340_Cavity7_B0178LN_Fail5_Score(0.9524736).bmp,annotations.xml,Wet Package,True,True
+20241105_063516_L26_PalletGHI1105114730_Cavity15_B0178LN_Fail2_Score(0.9056665).bmp,annotations.xml,Wet Package,True,True
+20241105_071146_L26_PalletGHE1105122405_Cavity2_B0178LN_Fail7_Score(0.9980523).bmp,annotations.xml,Wet Package,True,False
+20241105_191956_L27_C4_9065.bmp,annotations.xml,Bubble Irregular,True,True
+20241105_222703_L27_C15_9959.bmp,annotations.xml,Bubble Irregular,True,True
+20241106_001022_L27_C12_9504.bmp,annotations.xml,Bubble Irregular,True,True
+20241106_083307_L24_C11_9201.bmp,annotations.xml,Bubble Irregular,True,True
+20241106_091559_L24_C8_9440.bmp,annotations.xml,Bubble Irregular,True,True
+20241106_092421_L27_C11_9149.bmp,annotations.xml,Bubble Irregular,True,True
+20241106_092701_L24_C11_9148.bmp,annotations.xml,Bubble,True,True
+20241106_092943_L24_C10_9567.bmp,annotations.xml,Bubble Irregular,True,False
+20241106_093336_L24_C5_9968.bmp,annotations.xml,Bubble,True,True
+20241106_093655_L24_C14_9759.bmp,annotations.xml,Bubble,True,True
+20241106_095939_L27_C9_9713.bmp,annotations.xml,Bubble Irregular,True,True
+20241106_102110_L24_C3_9823.bmp,annotations.xml,Bubble,True,True
+20241106_110332_L27_C15_9209.bmp,annotations.xml,Bubble Irregular,True,True
+20241106_114517_L24_C14_9714.bmp,annotations.xml,Bubble,True,True
+20241106_125840_L24_C3_9756.bmp,annotations.xml,Bubble,True,True
+20241106_144506_L24_C9_9870.bmp,annotations.xml,Bubble Irregular,True,True
+20241106_145408_L24_C7_9188.bmp,annotations.xml,Bubble,True,True
+20241106_150559_L27_C1_9556.bmp,annotations.xml,Bubble Irregular,True,True
+20241106_165443_L24_C6_9949.bmp,annotations.xml,Wet Package,True,True
+20241106_174048_L27_PalletGHA1106193211_Cavity13_B0178KV_Fail6_Score(0.9752264).bmp,annotations.xml,Extraneous Polymer,True,False
+20241106_181317_L24_C6_9662.bmp,annotations.xml,Bubble,True,True
+20241106_185031_L24_C15_9521.bmp,annotations.xml,Bubble,True,False
+20241106_194358_L24_C7_9640.bmp,annotations.xml,Bubble,True,True
+20241106_194725_L27_C14_9308.bmp,annotations.xml,Bubble Irregular,True,True
+20241107_005834_L24_C3_9079.bmp,annotations.xml,Bubble,True,True
+20241107_025129_L26_C7_9990.bmp,annotations.xml,Wet Package,True,True
+20241107_035652_L24_C13_9774.bmp,annotations.xml,Bubble,True,False
+20241107_043504_L26_C9_9812.bmp,annotations.xml,Wet Package,True,True
+20241107_045607_L26_C13_9120.bmp,annotations.xml,Wet Package,True,True
+20241107_052316_L24_C3_9396.bmp,annotations.xml,Bubble,True,True
+20241107_053445_L24_C3_9591.bmp,annotations.xml,Bubble,True,True
+20241107_054508_L24_C3_9712.bmp,annotations.xml,Bubble,True,True
+20241107_062323_L24_C2_9878.bmp,annotations.xml,Bubble,True,True
+20241107_090843_L24_C14_9357.bmp,annotations.xml,Bubble,True,True
+20241107_095807_L24_C5_9469.bmp,annotations.xml,Bubble,True,True
+20241107_110254_L24_C13_9107.bmp,annotations.xml,Bubble,True,True
+20241107_115407_L24_C13_9732.bmp,annotations.xml,Bubble,True,True
+20241107_132904_L24_C13_9064.bmp,annotations.xml,Bubble,True,True
+20241107_155622_L26_C15_9977.bmp,annotations.xml,Wet Package,True,True
+20241107_193349_L24_C2_9332.bmp,annotations.xml,Bubble,True,True
+20241107_200439_L24_C2_9204.bmp,annotations.xml,Bubble,True,True
+20241108_013651_L24_C4_9669.bmp,annotations.xml,Bubble,True,True
+20241108_021953_L24_C5_9887.bmp,annotations.xml,Wet Package,True,False
+20241108_045733_L24_C4_9845.bmp,annotations.xml,Wet Package,True,True
+20241108_071455_L24_C12_9600.bmp,annotations.xml,Wet Package,True,False
+20241108_120803_L26_C7_9482.bmp,annotations.xml,Bubble Irregular,True,True
+20241108_153814_L24_C11_9821.bmp,annotations.xml,Wet Package,True,False
+20241108_171956_L26_C7_9249.bmp,annotations.xml,Bubble Irregular,True,True
+20241108_184745_L24_C9_9550.bmp,annotations.xml,Fiber,True,False
+20241109_003645_L26_C11_9340.bmp,annotations.xml,Bubble Irregular,True,True
+20241109_064802_L24_C6_9771.bmp,annotations.xml,Bubble,True,True
+20241109_083707_L24_C11_9765.bmp,annotations.xml,Bubble,True,False
+20241109_094515_L24_C5_9633.bmp,annotations.xml,Bubble,True,False
+20241109_095317_L24_C11_9261.bmp,annotations.xml,Bubble,True,True
+20241109_095458_L24_C5_9786.bmp,annotations.xml,Bubble,True,True
+20241109_100233_L24_C11_9778.bmp,annotations.xml,Wet Package,True,True
+20241109_113854_L24_C2_9552.bmp,annotations.xml,Bubble,True,True
+20241109_121652_L24_C13_9816.bmp,annotations.xml,Bubble,True,True
+20241109_125007_L24_C1_9062.bmp,annotations.xml,Bubble,True,True
+20241109_152835_L24_C1_9310.bmp,annotations.xml,Bubble,True,True
+20241109_153402_L26_C12_9479.bmp,annotations.xml,Bubble On Edge,True,True
+20241109_180846_L24_C8_9999.bmp,annotations.xml,Bubble,True,True
+20241109_201340_L24_C12_9217.bmp,annotations.xml,Bubble,True,True
+20241109_202018_L24_C15_9730.bmp,annotations.xml,Bubble,True,True
+20241109_212741_L24_C2_9249.bmp,annotations.xml,Bubble Cluster,True,True
+20241109_212928_L24_C9_9998.bmp,annotations.xml,Bubble,True,True
+20241109_213824_L24_C10_9460.bmp,annotations.xml,Bubble,True,False
+20241110_005124_L24_C1_9812.bmp,annotations.xml,Bubble,True,True
+20241110_012942_L24_C10_9046.bmp,annotations.xml,Bubble,True,True
+20241110_040620_L24_C1_9761.bmp,annotations.xml,Bubble,True,False
+20241110_053221_L24_C8_9347.bmp,annotations.xml,Bubble,True,True
+20241110_054132_L24_C2_9612.bmp,annotations.xml,Bubble,True,True
+20241110_060953_L24_C6_9354.bmp,annotations.xml,Bubble Cluster,True,False
+20241110_105145_L24_C8_9923.bmp,annotations.xml,Bubble,True,True
+20241110_121133_L24_C1_9757.bmp,annotations.xml,Bubble,True,True
+20241110_150730_L24_C11_9011.bmp,annotations.xml,Wet Package,True,True
+20241110_152128_L24_C10_9185.bmp,annotations.xml,Bubble,True,True
+20241110_190603_L25_C15_9243.bmp,annotations.xml,Bubble,True,True
+20241110_194706_L25_C9_9090.bmp,annotations.xml,Bubble On Edge,True,True
+20241110_210318_L25_C15_9515.bmp,annotations.xml,Bubble,True,True
+20241110_234333_L25_C1_9922.bmp,annotations.xml,Bubble Cluster,True,True
+20241110_235002_L25_C2_9502.bmp,annotations.xml,Bubble,True,True
+20241111_000607_L25_C10_9689.bmp,annotations.xml,Bubble,True,True
+20241111_001402_L25_C15_9995.bmp,annotations.xml,Bubble,True,True
+20241111_001527_L25_PalletGHH1111030423_Cavity8_B017963_Fail3_Score(0.9299055).bmp,annotations.xml,Wet Package,True,True
+20241111_051848_L24_C11_1.bmp,annotations.xml,Bubble,True,True
+20241111_053351_L24_C1_1.bmp,annotations.xml,Bubble,True,True
+20241111_055029_L24_C1_1.bmp,annotations.xml,Bubble,True,True
+20241111_055504_L24_C9_1.bmp,annotations.xml,Bubble,True,True
+20241111_055534_L24_C4_1.bmp,annotations.xml,Bubble,True,True
+20241111_063752_L24_C4_9350.bmp,annotations.xml,Bubble,True,True
+20241111_124549_L24_C13_9905.bmp,annotations.xml,Bubble Cluster,True,True
+20241111_130708_L24_C14_9790.bmp,annotations.xml,Bubble,True,True
+20241111_132823_L24_C9_9272.bmp,annotations.xml,Bubble Cluster,True,True
+20241111_181753_L24_C10_9280.bmp,annotations.xml,Bubble,True,True
+20241111_185144_L24_C7_9787.bmp,annotations.xml,Bubble,True,True
+20241111_190049_L24_C14_9891.bmp,annotations.xml,Bubble,True,True
+20241111_203541_L25_C15_9130.bmp,annotations.xml,Bubble,True,True
+20241111_203813_L25_C14_9168.bmp,annotations.xml,Bubble,True,True
+20241111_204640_L25_C3_9836.bmp,annotations.xml,Bubble On Edge,True,True
+20241111_205832_L25_C8_9593.bmp,annotations.xml,Bubble,True,True
+20241111_205842_L25_C3_9317.bmp,annotations.xml,Bubble,True,True
+20241111_210557_L25_C15_9319.bmp,annotations.xml,Bubble,True,True
+20241111_213726_L25_C15_9345.bmp,annotations.xml,Bubble On Edge,True,True
+20241111_230435_L25_C4_9879.bmp,annotations.xml,Bubble,True,True
+20241111_231002_L25_PalletGHN1112015902_Cavity5_B017960_Fail4_Score(0.9480445).bmp,annotations.xml,Foreign Matter,True,False
+20241112_110859_L26_C6_9857.bmp,annotations.xml,Wet Package,True,True
+20241112_152811_L25_C7_9966.bmp,annotations.xml,Fiber,True,False
+20241112_162047_L25_C3_9947.bmp,annotations.xml,Fiber,True,False
+20241112_190158_L26_C9_9629.bmp,annotations.xml,Wet Package,True,True
+20241112_202049_L26_C13_9450.bmp,annotations.xml,Wet Package,True,True
+20241112_212736_L26_C14_9021.bmp,annotations.xml,Wet Package,True,True
+20241113_025847_L26_C8_9697.bmp,annotations.xml,Wet Package,True,True
+20241113_080405_L26_C12_9564.bmp,annotations.xml,Wet Package,True,True
+20241113_105717_L26_C3_9988.bmp,annotations.xml,Wet Package,True,True
+20241113_113149_L26_C2_9096.bmp,annotations.xml,Wet Package,True,True
+20241113_155322_L26_PalletGHP1113210610_Cavity9_B0179G8_Fail4_Score(0.9390881).bmp,annotations.xml,Bubble,True,True
+20241114_001422_L25_C5_9744.bmp,Updated Annotations 20260922.xml,P1_ML,True,True
+20241114_001422_L25_PalletGHN1114030331_Cavity5_B017969_Fail6_Score(0.9744182).bmp,annotations.xml,Wet Package,True,False
+20241114_012631_L26_PalletGHA1114063920_Cavity10_B0179GB_Fail3_Score(0.9225338).bmp,annotations.xml,Bubble,True,True
+20241114_015030_L26_C14_9073.bmp,annotations.xml,Bubble Irregular,True,True
+20241114_125100_L24_PalletGHF1114175023_Cavity15_B01795H_Fail7_Score(1).bmp,annotations.xml,Bubble Cluster,True,True
+20241114_125105_L24_PalletGHI1114175031_Cavity15_B01795H_Fail7_Score(1).bmp,annotations.xml,Bubble Cluster,True,True
+20241114_134259_L25_C1_1.bmp,annotations.xml,Bubble,True,True
+20241114_140044_L25_C10_9011.bmp,annotations.xml,Bubble,True,True
+20241114_141248_L25_C1_1.bmp,annotations.xml,Bubble,True,True
+20241114_142803_L25_C1_1.bmp,annotations.xml,Bubble,True,True
+20241114_144710_L25_C1_1.bmp,annotations.xml,Bubble,True,True
+20241114_144721_L25_C1_1.bmp,annotations.xml,Bubble,True,True
+20241114_191942_L25_C15_9120.bmp,annotations.xml,Bubble,True,True
+20241117_024641_L27_C12_9867.bmp,annotations.xml,Bubble Irregular,True,True
+20241117_104827_L27_C6_9167.bmp,annotations.xml,Bubble Cluster,True,True
+20241117_125203_L27_C10_9695.bmp,annotations.xml,Bubble Cluster,True,True
+20241117_131502_L27_C12_9639.bmp,annotations.xml,Bubble Irregular,True,True
+20241117_131628_L27_C3_9855.bmp,annotations.xml,Bubble Irregular,True,True
+20241117_141409_L27_C7_9405.bmp,annotations.xml,Bubble Cluster,True,True
+20241117_151658_L27_C10_9558.bmp,annotations.xml,Bubble Cluster,True,True
+20241117_161456_L27_C9_9914.bmp,annotations.xml,Bubble On Edge,True,True
+20241117_173107_L27_C4_9604.bmp,annotations.xml,Bubble Cluster,True,True
+20241117_180538_L27_C2_9815.bmp,annotations.xml,Bubble Cluster,True,True
+20241117_191050_L27_C5_9850.bmp,annotations.xml,Bubble Cluster,True,True
+20241117_205925_L27_C1_9800.bmp,annotations.xml,Bubble Cluster,True,True
+20241118_010623_L27_C2_9980.bmp,annotations.xml,Bubble Cluster,True,True
+20241118_055435_L27_C5_9033.bmp,annotations.xml,Bubble Cluster,True,True
+20241118_065204_L24_C10_9730_0.8552.bmp,Updated Annotations 20260922.xml,P1_ML,True,True
+20241119_142725_L24_C4_9300.bmp,annotations.xml,Bubble On Edge,True,True
+20241215_173616_L24_C6_1.bmp,annotations.xml,Bubble On Edge,True,True
+20241215_173635_L24_C6_1.bmp,annotations.xml,Bubble Cluster,True,True
+20241215_174000_L24_C6_1.bmp,annotations.xml,Bubble,True,True
+20241215_174449_L24_C6_1.bmp,annotations.xml,Bubble On Edge,True,True
+20241215_174500_L24_C6_1.bmp,annotations.xml,Bubble Cluster,True,True
+20260728_133621_L24_PalletGHI0728175231_Cavity5_D009FTK_Fail6_Score(0.9830682).bmp,annotations.xml,Wet Package,True,True
+20260805_063014_L24_PalletGHQ0805104535_Cavity11_D009G9N_Fail7_Score(0.9915763).bmp,annotations.xml,Bubble,True,True
+20260805_085607_L31_PalletGHI0805133145_Cavity9_B01BH5J_Fail7_Score(0.9998533).bmp,annotations.xml,Bubble On 123,True,True
+20260805_085703_L31_PalletGHI0805133242_Cavity4_B01BH5J_Fail7_Score(0.9999605).bmp,annotations.xml,Bubble On 123,True,True
+20260805_090800_L31_PalletGHP0805134315_Cavity8_B01BH5J_Fail7_Score(0.9998168).bmp,annotations.xml,Bubble On 123,True,True
+20260805_140220_L31_PalletGHB0805183759_Cavity8_B01BGTV_Fail7_Score(0.9999998).bmp,annotations.xml,Foreign Matter,True,False
+20260807_223901_L24_PalletGHR0808025232_Cavity3_D009GGC_Fail7_Score(0.985067).bmp,annotations.xml,Bubble Cluster,True,True
+20260808_145520_L31_PalletGHA0808193114_Cavity14_B01BGTZ_Fail6_Score(0.9804375).bmp,annotations.xml,Bubble Cluster,True,True
+20260809_160103_L31_PalletGHI0809203708_Cavity14_B01BGVB_Fail7_Score(0.9930445).bmp,Updated Annotations 20260922.xml,P1_ML,True,True
+20260813_075849_L31_PalletGHD0813123502_Cavity3_B01BHKF_Fail7_Score(0.999911).bmp,annotations.xml,Bubble Cluster,True,True
+20260820_002028_L31_PalletGHM0820045613_Cavity11_B01BK80_Fail7_Score(0.9978441).bmp,annotations.xml,Bubble On 123,True,True
+20260820_002527_L31_PalletGHE0820050114_Cavity10_B01BK80_Fail7_Score(0.9976335).bmp,annotations.xml,Bubble On 123,True,True
+20260820_003214_L31_PalletGHP0820050810_Cavity8_B01BK80_Fail7_Score(0.9999973).bmp,annotations.xml,Bubble On 123,True,True
+20260820_004039_L31_PalletGHF0820051631_Cavity15_B01BK80_Fail7_Score(0.9930503).bmp,annotations.xml,Bubble On Edge,True,True
+20260820_004355_L31_PalletGHU0820051951_Cavity5_B01BK80_Fail3_Score(0.9256573).bmp,annotations.xml,Bubble On 123,True,True
+20260820_005110_L31_PalletGHE0820052658_Cavity4_B01BK80_Fail7_Score(0.999971).bmp,annotations.xml,Bubble On 123,True,True
+20260820_005417_L31_PalletGHI0820053009_Cavity11_B01BK80_Fail6_Score(0.9775637).bmp,annotations.xml,Bubble On 123,True,True
+20260820_011654_L31_PalletGHN0820055240_Cavity4_B01BK80_Fail7_Score(0.9998396).bmp,annotations.xml,Bubble On 123,True,True
+20260820_012945_L31_PalletGHU0820060527_Cavity14_B01BK80_Fail6_Score(0.9819713).bmp,annotations.xml,Bubble On 123,True,True
+20260820_015628_L31_PalletGHL0820063224_Cavity7_B01BK81_Fail7_Score(0.9992353).bmp,annotations.xml,Bubble On Edge,True,True
+20260820_022349_L31_PalletGHO0820065945_Cavity8_B01BK81_Fail7_Score(0.9996321).bmp,annotations.xml,Bubble On 123,True,True
+20260820_022929_L31_PalletGHC0820070524_Cavity1_B01BK81_Fail5_Score(0.9564127).bmp,annotations.xml,Bubble On 123,True,True
+20260820_023328_L31_PalletGHQ0820070909_Cavity12_B01BK81_Fail7_Score(0.9987876).bmp,annotations.xml,Bubble On Edge,True,True
+20260820_025001_L31_PalletGHH0820072546_Cavity13_B01BK81_Fail6_Score(0.9826609).bmp,annotations.xml,Bubble On Edge,True,True
+20260820_032520_L31_PalletGHR0820080109_Cavity4_B01BK81_Fail7_Score(0.9988727).bmp,annotations.xml,Bubble On Edge,True,True
+20260820_040332_L31_PalletGHK0820083923_Cavity4_B01BK81_Fail5_Score(0.9653919).bmp,annotations.xml,Bubble On Edge,True,True

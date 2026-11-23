@@ -1,0 +1,57 @@
+[
+ {
+  "pair": 4,
+  "record_a": "20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757).bmp",
+  "record_b": "20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp",
+  "boxes_a": 3,
+  "boxes_b": 4,
+  "crop": {
+   "x0": 1040,
+   "y0": 795,
+   "x1": 1507,
+   "y1": 1135
+  },
+  "matched": 3,
+  "median_iou": 0.8002,
+  "median_corner_shift_px": 0.887,
+  "largest_corner_shift_px": 1.564,
+  "boxes_only_in_a": 0,
+  "boxes_only_in_b": 1,
+  "job": "4521992",
+  "mode": "oriented",
+  "panels": [
+   {
+    "record": "Record A",
+    "basename": "20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757).bmp",
+    "crop": {
+     "x0": 1040,
+     "y0": 795,
+     "x1": 1507,
+     "y1": 1135
+    },
+    "line_px": 3,
+    "x": 40,
+    "y": 357,
+    "w": 760,
+    "h": 553,
+    "scale": 1.6274089935760172
+   },
+   {
+    "record": "Record B",
+    "basename": "20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp",
+    "crop": {
+     "x0": 1040,
+     "y0": 795,
+     "x1": 1507,
+     "y1": 1135
+    },
+    "line_px": 3,
+    "x": 812,
+    "y": 357,
+    "w": 760,
+    "h": 553,
+    "scale": 1.6274089935760172
+   }
+  ]
+ }
+]

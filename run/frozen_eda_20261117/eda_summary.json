@@ -1,0 +1,44 @@
+{
+ "image_entries": 13682,
+ "annotated_pictures": 13635,
+ "pictures_with_no_shape": 47,
+ "pictures_without_any_tag": 2302,
+ "pictures_by_source_folder": {
+  "PRODUCTION-20260925": 10435,
+  "PRODUCTION-20261031": 3247
+ },
+ "lp_tag_codes_with_data": 15,
+ "lp_tag_instances": 12252,
+ "lp_tag_instances_distinct_per_picture": 12246,
+ "pictures_with_repeated_identical_tag": 4,
+ "pictures_with_lp_tag": 9252,
+ "ooi_codes_with_data": 8,
+ "pictures_with_ooi_box": 10032,
+ "ooi_boxes": 119292,
+ "size_gate_tags": 4060,
+ "pictures_with_size_gate": 3742,
+ "pictures_by_tag_count_all_tags": {
+  "0": 2302,
+  "1": 8112,
+  "2": 1957,
+  "3": 859,
+  "4": 333,
+  "5": 62,
+  "6": 9,
+  "7": 1
+ },
+ "pictures_by_tag_count_lp_only": {
+  "0": 4383,
+  "1": 7237,
+  "2": 1244,
+  "3": 580,
+  "4": 174,
+  "5": 17
+ },
+ "clear_folder_pictures_in_frozen": 0,
+ "clear_folder_pictures_with_no_shape": 0,
+ "unmapped_tag_codes": [],
+ "unmapped_box_codes": [],
+ "client_reconciliation_rows": 27,
+ "client_reconciliation_all_match": false
+}

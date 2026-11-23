@@ -1,0 +1,168 @@
+{
+ "name": "frozen_70_15_15_20261119",
+ "date": "2026-11-19",
+ "source_store": "D:/fmd-analysis/run/frozen_eda_20261117/store",
+ "builder": "build_frozen_split.py",
+ "seed": 42,
+ "ratios": {
+  "train": 0.7,
+  "val": 0.15,
+  "test": 0.15
+ },
+ "strategy": "iterative multi-label stratification (iterstrat), 70/15/15",
+ "population": {
+  "records": 13682,
+  "duplicate_records_dropped": 4,
+  "distinct_pictures": 13678,
+  "clear_excluded": 42,
+  "unmarked_excluded": 5,
+  "rows": 13631,
+  "addbacks_included": 0
+ },
+ "duplicate_rule": "keep the record with the most boxes; on a tie keep the plain name",
+ "duplicate_pairs": [
+  {
+   "md5": "70c2ca20dccb39f27b71ab5329c9f9b3",
+   "kept": "20241109_174228_L24_C4_9649.bmp",
+   "boxes": {
+    "20241109_174228_L24_C4_9649.bmp": 24,
+    "20241109_174228_L24_C4_9649_0.9824.bmp": 23
+   }
+  },
+  {
+   "md5": "7ad1f8cc175d08c7df6546221c83b767",
+   "kept": "20241102_004906_L24_C5_9471.bmp",
+   "boxes": {
+    "20241102_004906_L24_C5_9471.bmp": 7,
+    "20241102_004906_L24_C5_9471_0.6629.bmp": 7
+   }
+  },
+  {
+   "md5": "aa99013cd03fa81a752a1eefb8e580e5",
+   "kept": "20241110_024940_L24_C13_9997_0.6242.bmp",
+   "boxes": {
+    "20241110_024940_L24_C13_9997.bmp": 10,
+    "20241110_024940_L24_C13_9997_0.6242.bmp": 17
+   }
+  },
+  {
+   "md5": "b85f173d6c44df6258d57866eac3dc56",
+   "kept": "20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp",
+   "boxes": {
+    "20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757).bmp": 3,
+    "20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp": 4
+   }
+  }
+ ],
+ "excluded_classes": {
+  "P1_EBC": {
+   "name": "Edge Bottle-Capped",
+   "pictures": 24
+  },
+  "P1_LR": {
+   "name": "Lens Rupture",
+   "pictures": 35
+  },
+  "P1_TL": {
+   "name": "Torn Lens",
+   "pictures": 117
+  },
+  "P2_BSC": {
+   "name": "Bubble Scatter",
+   "pictures": 12
+  },
+  "P2_DS": {
+   "name": "Dirty Strobe",
+   "pictures": 33
+  },
+  "P1_SG": {
+   "name": "Surface Groove",
+   "pictures": 88
+  }
+ },
+ "columns": [
+  "P1_MPP",
+  "P1_ML",
+  "P2_LOC",
+  "P2_DC",
+  "P1_NL",
+  "P1_FL",
+  "P2_LD",
+  "P1_COC",
+  "P2_FOV",
+  "P1_PPM",
+  "class_bubble",
+  "class_bubble_cluster",
+  "class_foreign_matter",
+  "class_fiber",
+  "class_wet_package",
+  "class_hema",
+  "class_extraneous_polymer"
+ ],
+ "column_sources": {
+  "P1_MPP": "P1_MPP",
+  "P1_ML": "P1_ML",
+  "P2_LOC": "P2_LOC",
+  "P2_DC": "P2_DC",
+  "P1_NL": "P1_NL",
+  "P1_FL": "P1_FL",
+  "P2_LD": "P2_LD",
+  "P1_COC": "P1_COC",
+  "P2_FOV": "F2_FOV",
+  "P1_PPM": "P1_PPM",
+  "class_bubble": "P2_BB",
+  "class_bubble_cluster": "P2_BC",
+  "class_foreign_matter": "P3_FM",
+  "class_fiber": "P3_FIB",
+  "class_wet_package": "P2_WP",
+  "class_hema": "P3_HE",
+  "class_extraneous_polymer": "P3_EP"
+ },
+ "split_counts": {
+  "train": 9537,
+  "val": 2049,
+  "test": 2045
+ },
+ "class_totals": {
+  "P1_MPP": 1427,
+  "P1_ML": 1511,
+  "P2_LOC": 1570,
+  "P2_DC": 1991,
+  "P1_NL": 721,
+  "P1_FL": 586,
+  "P2_LD": 2124,
+  "P1_COC": 816,
+  "P2_FOV": 222,
+  "P1_PPM": 1055,
+  "class_bubble": 9771,
+  "class_bubble_cluster": 4989,
+  "class_foreign_matter": 2366,
+  "class_fiber": 1394,
+  "class_wet_package": 813,
+  "class_hema": 337,
+  "class_extraneous_polymer": 1017
+ },
+ "files": {
+  "split.csv": "31a41925e0c349608ff77bf24d801585",
+  "labels_17.csv": "0d76b29097bc3a95e1b4bb14e9c172cb",
+  "gates_4.csv": "c97cc04314d2e2b925cdd343e0b80058"
+ },
+ "aux_columns": [
+  "gate_foreign_matter",
+  "gate_fiber",
+  "gate_extraneous_polymer",
+  "gate_hema"
+ ],
+ "gate_sources": {
+  "gate_foreign_matter": "P3_FM_MICRON_THRESHOLD",
+  "gate_fiber": "P3_FIB_MICRON_THRESHOLD",
+  "gate_extraneous_polymer": "P3_EP_MICRON_THRESHOLD",
+  "gate_hema": "P3_HE_MICRON_THRESHOLD"
+ },
+ "gate_totals": {
+  "gate_foreign_matter": 1400,
+  "gate_fiber": 1304,
+  "gate_extraneous_polymer": 1013,
+  "gate_hema": 337
+ }
+}

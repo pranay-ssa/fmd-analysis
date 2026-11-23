@@ -1,0 +1,2 @@
+experiment,status,split,run,primary_metric,path
+multilabel_cnn,done,frozen_70_15_15_20261119,20261119_resnet50_224_seed42,"macro AUROC 0.9624; macro F1 0.8040 at 0.5",/home/pranayp/frozen_data_experiments/multilabel_cnn

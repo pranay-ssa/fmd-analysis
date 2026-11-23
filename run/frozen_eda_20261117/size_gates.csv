@@ -1,0 +1,5 @@
+code,class,gate_tags,pictures_with_gate
+P3_FM_MICRON_THRESHOLD,Foreign Matter size gate,1400,1400
+P3_FIB_MICRON_THRESHOLD,Fiber size gate,1306,1306
+P3_EP_MICRON_THRESHOLD,Extraneous Polymer size gate,1014,1014
+P3_HE_MICRON_THRESHOLD,HEMA size gate,340,340

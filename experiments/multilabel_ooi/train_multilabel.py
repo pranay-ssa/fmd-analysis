@@ -187,6 +187,35 @@ GATE4_EXPECTED_POSITIVES = {
     "hema_gated": {"train": 79, "val": 20, "test": 52},
 }
 
+# ------------------------------------- Frozen dataset, --columns frozen17
+# The frozen 70/15/15 split. Seventeen class columns: ten lens conditions and
+# the seven object classes. Clear and the six classes below 200 pictures are
+# excluded. The four gate flags are auxiliary only; they are saved with the
+# predictions so the flagged and unflagged reads need no second pass.
+FROZEN17_COLUMNS = [
+    "P1_MPP", "P1_ML", "P2_LOC", "P2_DC", "P1_NL", "P1_FL", "P2_LD", "P1_COC",
+    "P2_FOV", "P1_PPM",
+    "class_bubble", "class_bubble_cluster", "class_foreign_matter", "class_fiber",
+    "class_wet_package", "class_hema", "class_extraneous_polymer",
+]
+FROZEN17_TABLE = ROOT / "experiments/frozen_data_experiments/splits/frozen_70_15_15_20261119/labels_17.csv"
+FROZEN17_SPLIT = FROZEN17_TABLE.parent / "split.csv"
+FROZEN17_GATES = FROZEN17_TABLE.parent / "gates_4.csv"
+FROZEN17_EXPECTED_SPLIT = {"train": 9537, "val": 2049, "test": 2045}
+FROZEN17_EXPECTED_TOTAL = {
+    "P1_MPP": 1427, "P1_ML": 1511, "P2_LOC": 1570, "P2_DC": 1991,
+    "P1_NL": 721, "P1_FL": 586, "P2_LD": 2124, "P1_COC": 816,
+    "P2_FOV": 222, "P1_PPM": 1055,
+    "class_bubble": 9771, "class_bubble_cluster": 4989,
+    "class_foreign_matter": 2366, "class_fiber": 1394,
+    "class_wet_package": 813, "class_hema": 337,
+    "class_extraneous_polymer": 1017,
+}
+FROZEN17_GATE_TOTAL = {
+    "gate_foreign_matter": 1400, "gate_fiber": 1304,
+    "gate_extraneous_polymer": 1013, "gate_hema": 337,
+}
+
 # AP floor for a constant score is prevalence, frozen in the OOI point 4 map.
 # Each value is asserted against the table total at read time.
 PREVALENCE_FLOORS = {
@@ -254,6 +283,8 @@ def read_table(columns_mode="ooi", table=None, expect_counts=True):
         return read_gate4_table(Path(table) if table else GATE4_TABLE, expect_counts)
     if columns_mode == "cond15":
         return read_cond15_table(Path(table) if table else COND15_TABLE, expect_counts)
+    if columns_mode == "frozen17":
+        return read_frozen17_table(Path(table) if table else FROZEN17_TABLE, expect_counts)
 
     table = Path(table) if table else TABLE
     table_md5 = md5_of(table)
@@ -427,6 +458,75 @@ def read_cond15_table(table, expect_counts=True):
     return rows
 
 
+def read_frozen17_table(table, expect_counts=True):
+    """Read the frozen 17-column table and its four gate flags.
+
+    Schema: md5, image_path, split, then the 17 columns. gates_4.csv sits beside
+    it and carries md5, image_path and the four gate flags. The gate flags are
+    attached to each row as a four-value list in GATE_ORDER, so the run can save
+    them with the predictions and the results can split flagged from unflagged
+    without another pass over the store.
+    """
+    table = Path(table)
+    if not table.is_file():
+        raise SystemExit(f"frozen17 label table not found: {table}")
+    with open(table, newline="", encoding="utf-8") as fh:
+        raw = list(csv.DictReader(fh))
+    if not raw:
+        raise SystemExit(f"empty frozen17 table: {table}")
+    required = ["md5", "image_path", "split"] + FROZEN17_COLUMNS
+    missing = [c for c in required if c not in raw[0]]
+    if missing:
+        raise SystemExit(f"frozen17 table missing columns: {missing}")
+
+    gate_of = {}
+    gates_path = table.parent / "gates_4.csv"
+    if gates_path.is_file():
+        with open(gates_path, newline="", encoding="utf-8") as fh:
+            for record in csv.DictReader(fh):
+                gate_of[(record["md5"], record["image_path"])] = [
+                    int(record[c]) for c in GATE_ORDER]
+    elif expect_counts:
+        raise SystemExit(f"frozen17 gate table not found: {gates_path}")
+    else:
+        print(f"gate table not found: {gates_path}; gate flags read as zero")
+
+    rows = []
+    for record in raw:
+        key = (record["md5"], record["image_path"])
+        row = {"picture_md5": record["md5"], "split": record["split"],
+               "image_path": record["image_path"],
+               "gate": gate_of.get(key, [0, 0, 0, 0])}
+        for column in FROZEN17_COLUMNS:
+            row[column] = int(record[column])
+        rows.append(row)
+
+    counts = Counter(r["split"] for r in rows)
+    print(f"frozen17 table: {table} md5 {md5_of(table)}")
+    print(f"rows: {len(rows)}: " + " / ".join(f"{counts[s]} {s}" for s in ("train", "val", "test")))
+    if expect_counts:
+        _expect("frozen17 rows", len(rows), sum(FROZEN17_EXPECTED_SPLIT.values()))
+        for side, want in FROZEN17_EXPECTED_SPLIT.items():
+            _expect(f"frozen17 {side} rows", counts[side], want)
+        for column, want in FROZEN17_EXPECTED_TOTAL.items():
+            _expect(f"frozen17 {column} total", sum(r[column] for r in rows), want)
+        for column, want in FROZEN17_GATE_TOTAL.items():
+            j = GATE_ORDER.index(column)
+            _expect(f"frozen17 {column} total", sum(r["gate"][j] for r in rows), want)
+        split_path = table.parent / "split.csv"
+        if split_path.is_file():
+            with open(split_path, newline="", encoding="utf-8") as fh:
+                split_of = {r["md5"]: r["split"] for r in csv.DictReader(fh)}
+            _expect("frozen17 split rows", len(split_of), len(rows))
+            disagreed = [r["picture_md5"] for r in rows
+                         if split_of.get(r["picture_md5"]) != r["split"]]
+            _expect("rows disagreeing with split.csv", len(disagreed), 0)
+        print("frozen17 train positives: "
+              + ", ".join(f"{c}={sum(r[c] for r in rows if r['split'] == 'train')}"
+                          for c in FROZEN17_COLUMNS))
+    return rows
+
+
 def output_columns(columns_mode):
     """The model's output columns, in fixed order, for one column group."""
     if columns_mode == "ooi":
@@ -437,6 +537,8 @@ def output_columns(columns_mode):
         return list(GATE4_COLUMNS)
     if columns_mode == "cond15":
         return list(COND15_COLUMNS)
+    if columns_mode == "frozen17":
+        return list(FROZEN17_COLUMNS)
     raise SystemExit(f"unknown columns mode {columns_mode}")
 
 
@@ -454,6 +556,21 @@ def build_rows(raw, columns_mode, gated_target, with_paths=True):
             values = [record[c] for c in COND15_COLUMNS]
             row = {"md5": record["picture_md5"], "split": record["split"],
                    "truth": list(values), "target": list(values), "gate": [0, 0, 0, 0]}
+            if with_paths:
+                row["image_path"] = record.get("image_path")
+            rows.append(row)
+        if with_paths:
+            missing = [r["md5"] for r in rows if not r["image_path"]]
+            if missing:
+                raise SystemExit(f"{len(missing)} rows have no image path, first {missing[0]}")
+        return rows, columns
+    if columns_mode == "frozen17":
+        rows = []
+        for record in raw:
+            values = [record[c] for c in FROZEN17_COLUMNS]
+            row = {"md5": record["picture_md5"], "split": record["split"],
+                   "truth": list(values), "target": list(values),
+                   "gate": list(record.get("gate", [0, 0, 0, 0]))}
             if with_paths:
                 row["image_path"] = record.get("image_path")
             rows.append(row)
@@ -518,6 +635,26 @@ def labels_report(raw, args):
             te = sum(int(r[column]) for r in raw if r["split"] == "test")
             print(f"  {column:24s} {total:6d} {tr:6d} {va:5d} {te:5d}")
         print(f"model outputs ({len(COND15_COLUMNS)}): {', '.join(COND15_COLUMNS)}")
+        return
+    if args.columns == "frozen17":
+        counts = Counter(r["split"] for r in raw)
+        print(f"frozen17 rows: {len(raw)}: {counts['train']} train / "
+              f"{counts['val']} val / {counts['test']} test")
+        print("  column                      total  train   val  test")
+        for column in FROZEN17_COLUMNS:
+            total = sum(int(r[column]) for r in raw)
+            tr = sum(int(r[column]) for r in raw if r["split"] == "train")
+            va = sum(int(r[column]) for r in raw if r["split"] == "val")
+            te = sum(int(r[column]) for r in raw if r["split"] == "test")
+            print(f"  {column:24s} {total:6d} {tr:6d} {va:5d} {te:5d}")
+        print("  gate flags (auxiliary, not model outputs)")
+        for j, gate in enumerate(GATE_ORDER):
+            total = sum(int(r["gate"][j]) for r in raw)
+            tr = sum(int(r["gate"][j]) for r in raw if r["split"] == "train")
+            va = sum(int(r["gate"][j]) for r in raw if r["split"] == "val")
+            te = sum(int(r["gate"][j]) for r in raw if r["split"] == "test")
+            print(f"  {gate:24s} {total:6d} {tr:6d} {va:5d} {te:5d}")
+        print(f"model outputs ({len(FROZEN17_COLUMNS)}): {', '.join(FROZEN17_COLUMNS)}")
         return
     if args.columns == "gate4":
         gate4_labels_report(raw, args)
@@ -884,6 +1021,84 @@ def evaluate_test_cond15(y_true, y_score, columns):
             "per_class": at_half, "ap": ap}
 
 
+def evaluate_test_frozen17(y_true, y_score, test_rows, thresholds, columns):
+    """The frozen read: all 17 columns, at 0.5 and at the validation cuts.
+
+    Every column gets support, prevalence, AUPRC, its chosen threshold, and
+    precision, recall and F1 at both cuts. The seven object columns also get the
+    Bubble/Cluster joint confusion and recall split by the size flag. The gate
+    flags are auxiliary; they never enter a metric as truth.
+    """
+    truth = y_true.astype(int)
+    at_half = precision_recall_f1(y_true, y_score, DEFAULT_THRESHOLD, columns)
+    macro, ap = macro_ap(y_true, y_score, columns)
+    cut = np.array([thresholds[c]["threshold"] for c in columns])
+    pred_half = (y_score >= DEFAULT_THRESHOLD).astype(int)
+    pred_cut = (y_score >= cut).astype(int)
+    name_of = dict(LP_TAGS + OBJECT_TAGS)
+
+    per_class = {}
+    f1_half, f1_cut = [], []
+    n_rows = truth.shape[0]
+    for j, column in enumerate(columns):
+        tp = float(((pred_cut[:, j] == 1) & (truth[:, j] == 1)).sum())
+        fp = float(((pred_cut[:, j] == 1) & (truth[:, j] == 0)).sum())
+        fn = float(((pred_cut[:, j] == 0) & (truth[:, j] == 1)).sum())
+        tp_05 = int(((pred_half[:, j] == 1) & (truth[:, j] == 1)).sum())
+        fp_05 = int(((pred_half[:, j] == 1) & (truth[:, j] == 0)).sum())
+        fn_05 = int(((pred_half[:, j] == 0) & (truth[:, j] == 1)).sum())
+        precision = tp / (tp + fp) if (tp + fp) else 0.0
+        recall = tp / (tp + fn) if (tp + fn) else 0.0
+        f1 = 2 * precision * recall / (precision + recall) if (precision + recall) else 0.0
+        per_class[column] = {
+            "name": name_of.get(column, column),
+            "support": int(truth[:, j].sum()),
+            "prevalence": round(float(truth[:, j].mean()), 6),
+            "auprc": ap.get(column, float("nan")),
+            "threshold": thresholds[column]["threshold"],
+            "threshold_source": thresholds[column]["source"],
+            "precision_0.5": at_half[column]["precision"],
+            "recall_0.5": at_half[column]["recall"],
+            "f1_0.5": at_half[column]["f1"],
+            "fired_0.5": int((pred_half[:, j] == 1).sum()),
+            "tp_0.5": tp_05, "fp_0.5": fp_05, "fn_0.5": fn_05,
+            "tn_0.5": int(n_rows - tp_05 - fp_05 - fn_05),
+            "precision_chosen": precision,
+            "recall_chosen": recall,
+            "f1_chosen": f1,
+            "fired_chosen": int((pred_cut[:, j] == 1).sum()),
+            "tp_chosen": int(tp), "fp_chosen": int(fp), "fn_chosen": int(fn),
+            "tn_chosen": int(n_rows - tp - fp - fn),
+        }
+        f1_half.append(at_half[column]["f1"])
+        f1_cut.append(f1)
+
+    obj_idx = [j for j, c in enumerate(columns) if c in OBJECT_COLUMNS]
+    truth_obj = truth[:, obj_idx]
+    pred_obj_half = pred_half[:, obj_idx]
+    pred_obj_cut = pred_cut[:, obj_idx]
+    pair_idx = [OBJECT_COLUMNS.index("class_bubble"),
+                OBJECT_COLUMNS.index("class_bubble_cluster")]
+
+    return {
+        "rows": len(test_rows),
+        "macro_auprc": macro,
+        "macro_f1_0.5": float(np.mean(f1_half)),
+        "macro_f1_chosen": float(np.mean(f1_cut)),
+        "per_class": per_class,
+        "bubble_cluster_confusion": {
+            "note": ("test split, truth pair vs predicted pair, order "
+                     + " / ".join(JOINT_ORDER)),
+            "at_0.5": bubble_cluster_confusion(truth_obj[:, pair_idx],
+                                               pred_obj_half[:, pair_idx]),
+            "at_chosen": bubble_cluster_confusion(truth_obj[:, pair_idx],
+                                                  pred_obj_cut[:, pair_idx]),
+        },
+        "recall_by_flag": recall_by_flag(test_rows, truth_obj,
+                                         pred_obj_half, pred_obj_cut),
+    }
+
+
 def evaluate_test_gate4(y_true, y_score, test_rows, thresholds, columns):
     """The test read for the four gate columns.
 
@@ -1039,6 +1254,7 @@ def run_training(rows, columns, args):
     n_cols = len(columns)
     gate4 = args.columns == "gate4"
     cond15 = args.columns == "cond15"
+    frozen17 = args.columns == "frozen17"
     table_path = table_of(args)
     table_md5 = md5_of(table_path)
 
@@ -1123,12 +1339,17 @@ def run_training(rows, columns, args):
         metrics = evaluate_test_cond15(test_true, test_score, columns)
         metrics["primary"] = {"name": "macro_ap_cond15",
                               "value": metrics["macro_ap_cond15"]}
+    elif frozen17:
+        metrics = evaluate_test_frozen17(test_true, test_score, test_rows,
+                                         thresholds, columns)
+        metrics["primary"] = {"name": "macro_auprc_17",
+                              "value": metrics["macro_auprc"]}
     else:
         metrics = evaluate_test(test_true, test_score, test_rows, thresholds, columns)
         metrics["primary"] = {"name": "macro_ap_supported",
                               "value": metrics["macro_ap_supported"]}
     metrics["columns_mode"] = args.columns
-    metrics["gated_target"] = "ignored" if (gate4 or cond15) else args.gated_target
+    metrics["gated_target"] = "ignored" if (gate4 or cond15 or frozen17) else args.gated_target
     metrics["thresholds"] = {
         "objective": "maximum F1 per class on the validation split",
         "grid": THRESHOLD_GRID,
@@ -1153,6 +1374,23 @@ def run_training(rows, columns, args):
             "counts": {"train": len(train_rows), "val": len(val_rows), "test": len(test_rows)},
             "frozen": GATE4_EXPECTED_SPLIT if gate4 else COND15_EXPECTED_SPLIT,
         }
+    elif frozen17:
+        split_path = table_path.parent / "split.csv"
+        gates_path = table_path.parent / "gates_4.csv"
+        metrics["split"] = {
+            "path": table_path.relative_to(ROOT).as_posix()
+            if table_path.is_relative_to(ROOT) else str(table_path),
+            "md5": table_md5,
+            "source": "split column of the frozen17 label table",
+            "counts": {"train": len(train_rows), "val": len(val_rows), "test": len(test_rows)},
+            "frozen": FROZEN17_EXPECTED_SPLIT,
+            "split_file": split_path.relative_to(ROOT).as_posix()
+            if split_path.is_relative_to(ROOT) else str(split_path),
+            "split_file_md5": md5_of(split_path) if split_path.is_file() else None,
+            "gates_file": gates_path.relative_to(ROOT).as_posix()
+            if gates_path.is_relative_to(ROOT) else str(gates_path),
+            "gates_file_md5": md5_of(gates_path) if gates_path.is_file() else None,
+        }
     else:
         metrics["split"] = {
             "path": str(SPLIT), "md5": md5_of(SPLIT),
@@ -1160,7 +1398,7 @@ def run_training(rows, columns, args):
         }
     metrics["config"] = {
         "columns": args.columns,
-        "gated_target": "ignored" if gate4 else args.gated_target,
+        "gated_target": "ignored" if (gate4 or frozen17) else args.gated_target,
         "pos_weight": args.pos_weight,
         "output_columns": columns,
         "arch": args.arch, "imgsz": args.imgsz, "batch": args.batch,
@@ -1173,17 +1411,20 @@ def run_training(rows, columns, args):
         "table": table_path.relative_to(ROOT).as_posix()
         if table_path.is_relative_to(ROOT) else str(table_path),
         "table_md5": table_md5,
-        "split_md5": table_md5 if gate4 else SPLIT_MD5,
+        "split_md5": (table_md5 if gate4 else
+                      md5_of(table_path.parent / "split.csv") if frozen17 else SPLIT_MD5),
         "truth": ("the gate column itself: gated against unflagged"
                   if gate4 else
+                  "class-level for all 17 columns; no gate swap"
+                  if frozen17 else
                   "class-level for the object columns whatever the arm trained on"),
     }
     if gate4:
         metrics["config"]["pos_weight_vector"] = pos_weight_vector
         metrics["config"]["pos_weight_rule"] = "(N - n) / n on the train split only"
         metrics["config"]["counts_asserted"] = args.expect_counts == "on"
-    metrics["predictions_keys"] = ["val_md5", "val_true", "val_score", "val_gate",
-                                   "test_md5", "test_true", "test_score", "test_gate",
+    metrics["predictions_keys"] = ["val_md5", "val_image_path", "val_true", "val_score", "val_gate",
+                                   "test_md5", "test_image_path", "test_true", "test_score", "test_gate",
                                    "columns", "gated_columns"]
     metrics["timing"] = {
         "seconds_total": round(time.time() - started, 1),
@@ -1205,9 +1446,11 @@ def run_training(rows, columns, args):
     np.savez_compressed(
         out_dir / "predictions.npz",
         val_md5=np.array([r["md5"] for r in val_rows]),
+        val_image_path=np.array([r["image_path"] for r in val_rows]),
         val_true=val_true, val_score=val_score,
         val_gate=np.array([r["gate"] for r in val_rows], dtype=np.int64),
         test_md5=np.array([r["md5"] for r in test_rows]),
+        test_image_path=np.array([r["image_path"] for r in test_rows]),
         test_true=test_true, test_score=test_score,
         test_gate=np.array([r["gate"] for r in test_rows], dtype=np.int64),
         columns=np.array(columns),
@@ -1217,7 +1460,7 @@ def run_training(rows, columns, args):
         json.dump(metrics, fh, indent=2)
     with open(out_dir / "thresholds.json", "w", encoding="utf-8") as fh:
         record = {"columns": args.columns,
-                  "gated_target": "ignored" if gate4 else args.gated_target,
+                  "gated_target": "ignored" if (gate4 or frozen17) else args.gated_target,
                   "split": metrics["split"],
                   "objective": metrics["thresholds"]["objective"],
                   "grid": THRESHOLD_GRID, "per_class": thresholds}
@@ -1263,14 +1506,19 @@ def dump_predictions(rows, columns, args):
                             batch_size=args.batch, shuffle=False, num_workers=args.workers)
         truth, score = predict(model, loader, device)
         arrays[name] = (truth, score, [r["md5"] for r in part],
+                        [r["image_path"] for r in part],
                         np.array([r["gate"] for r in part], dtype=np.int64))
         print(f"{name}: {len(part)} pictures scored")
     np.savez_compressed(
         out_dir / "predictions.npz",
-        val_md5=np.array(arrays["val"][2]), val_true=arrays["val"][0], val_score=arrays["val"][1],
-        val_gate=arrays["val"][3],
-        test_md5=np.array(arrays["test"][2]), test_true=arrays["test"][0],
-        test_score=arrays["test"][1], test_gate=arrays["test"][3],
+        val_md5=np.array(arrays["val"][2]),
+        val_image_path=np.array(arrays["val"][3]),
+        val_true=arrays["val"][0], val_score=arrays["val"][1],
+        val_gate=arrays["val"][4],
+        test_md5=np.array(arrays["test"][2]),
+        test_image_path=np.array(arrays["test"][3]),
+        test_true=arrays["test"][0],
+        test_score=arrays["test"][1], test_gate=arrays["test"][4],
         columns=np.array(columns),
         gated_columns=np.array(columns if args.columns == "gate4" else GATE_ORDER),
     )
@@ -1332,26 +1580,30 @@ def table_of(args):
         return GATE4_TABLE
     if args.columns == "cond15":
         return COND15_TABLE
+    if args.columns == "frozen17":
+        return FROZEN17_TABLE
     return TABLE
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--columns", choices=["ooi", "combined", "gate4", "cond15"],
+    parser.add_argument("--columns", choices=["ooi", "combined", "gate4", "cond15", "frozen17"],
                         default="ooi",
                         help="ooi = 7 object columns, combined = 12 lens + 7 object, "
                              "gate4 = the four Experiment 3.1 gate columns, "
                              "cond15 = the twelve lens columns plus the three non-gated "
-                             "object classes (Experiment 3.2)")
+                             "object classes (Experiment 3.2), "
+                             "frozen17 = the frozen split, 10 lens + 7 object")
     parser.add_argument("--gated-target", choices=["class", "gate"], default="class",
                         help="which column group feeds the four gated classes "
-                             "(ignored by --columns gate4)")
+                             "(ignored by --columns gate4 and frozen17)")
     parser.add_argument("--pos-weight", choices=["on", "off"], default=None,
-                        help="per-class (N - n) / n on the train split only; "
-                             "default on for gate4, off otherwise")
+                        help="per-class (N - n) / n on the train split only; default "
+                             "on for gate4, cond15 and frozen17, off otherwise")
     parser.add_argument("--table", default="",
-                        help="label table path; default is the v8 table, or the "
-                             "Experiment 3.1 table for --columns gate4")
+                        help="label table path; default is the v8 table, the "
+                             "Experiment 3.1 table for gate4, the Experiment 3.2 "
+                             "table for cond15, or the frozen table for frozen17")
     parser.add_argument("--expect-counts", choices=["on", "off"], default="on",
                         help="off skips the frozen count assertions; synthetic tables only")
     parser.add_argument("--labels-only", action="store_true",
@@ -1374,7 +1626,7 @@ def main():
     args = parser.parse_args()
 
     if args.pos_weight is None:
-        args.pos_weight = "on" if args.columns in ("gate4", "cond15") else "off"
+        args.pos_weight = "on" if args.columns in ("gate4", "cond15", "frozen17") else "off"
 
     raw = read_table(args.columns, table_of(args), expect_counts=args.expect_counts == "on")
 
@@ -1403,6 +1655,8 @@ def main():
             f"  the root must hold all three top folders, not one of them")
     print(f"image root ok: {len(sample)} sampled pictures found under {root}")
     if not args.out:
+        if args.columns == "frozen17":
+            raise SystemExit("pass --out for frozen17: the run folder in the experiment tree")
         if args.columns == "gate4":
             arm = "gate4"
         else:

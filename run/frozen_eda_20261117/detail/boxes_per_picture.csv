@@ -1,0 +1,9 @@
+code,class,pictures,boxes,boxes_per_picture_mean,median,max
+P2_BB,Bubble,9775,92223,9.43,7,126
+P2_BC,Bubble Cluster,4991,14700,2.95,2,38
+P3_FM,Foreign Matter,2367,4813,2.03,1,147
+P3_FIB,Fiber,1396,2830,2.03,1.0,35
+P3_EP,Extraneous Polymer,1018,1084,1.06,1.0,5
+P2_WP,Wet Package,813,3159,3.89,2,91
+P3_HE,HEMA,340,351,1.03,1.0,4
+P1_SG,Surface Groove,88,132,1.5,1.0,5

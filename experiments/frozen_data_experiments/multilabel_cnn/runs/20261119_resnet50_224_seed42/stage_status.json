@@ -1,0 +1,98 @@
+{
+ "experiment": "multilabel_cnn",
+ "run_id": "20261119_resnet50_224_seed42",
+ "date": "2026-11-19",
+ "status": "done",
+ "completed_at": "2026-11-19T19:51:00+00:00",
+ "result": {
+  "test_pictures": 2045,
+  "macro_auprc_17": 0.8423,
+  "macro_auroc_17": 0.9624,
+  "macro_f1_0.5": 0.8040,
+  "macro_precision_0.5": 0.7500,
+  "macro_recall_0.5": 0.8801,
+  "macro_f1_chosen": 0.8187,
+  "inference_ms_per_image": 3.05
+ },
+ "split": {
+  "path": "/home/pranayp/frozen_data_experiments/splits/frozen_70_15_15_20261119",
+  "rows": 13631,
+  "counts": {"train": 9537, "val": 2049, "test": 2045},
+  "split_csv_md5": "31a41925e0c349608ff77bf24d801585",
+  "labels_md5": "0d76b29097bc3a95e1b4bb14e9c172cb",
+  "gates_md5": "c97cc04314d2e2b925cdd343e0b80058",
+  "verified": "31 of 31 checks pass"
+ },
+ "image_root": "/data/FMD_Data_26082026/frozen_data_20261117/images",
+ "image_check": {"rows": 13631, "missing": 0},
+ "trainer": {
+  "path": "experiments/multilabel_ooi/train_multilabel.py",
+  "md5": "52341c8b2d47d2ec792c075ec009408f",
+  "columns_mode": "frozen17",
+  "outputs": 17,
+  "checks": [
+   "--labels-only on the VM: 13,631 rows, 17 columns, gate totals match",
+   "--smoke on the VM: 17 outputs, loss falls, threshold chooser returns, pos-weight on"
+  ],
+  "recipe": "ResNet50, 224 px, BCEWithLogitsLoss, SGD 1e-4 momentum 0.9 Nesterov, batch 8, 50 epochs, seed 42, inverse-frequency weighting"
+ },
+ "gpu_check_utc": "2026-11-20T02:49:19Z",
+ "gpu": {
+  "name": "NVIDIA A100 80GB PCIe",
+  "memory_used_mib": 7041,
+  "utilization_pct": 0,
+  "holders": [
+   {"pid": 149292, "user": "srikantht", "memory_mib": 2482, "what": "streamlit, running 15 days"},
+   {"pid": 293442, "user": "srikantht", "memory_mib": 4538, "what": "streamlit, running 9 days"}
+  ]
+ },
+ "watcher": {
+  "script": "vm/drivers/launch_frozen17_training.sh",
+  "mode": "wait",
+  "status": "launched, finished",
+  "pid": 618061,
+  "pid_running": false,
+  "tmux_session": "frozen17",
+  "started_at": "2026-11-19T16:15:56+00:00",
+  "launched_at": "2026-11-19T19:24:08+00:00",
+  "finished_at": "2026-11-19T19:51:00+00:00",
+  "deadline": "2026-11-20T04:30:56Z (10:00:56 IST)",
+  "policy": "10-minute quiet window below 10,000 MiB used and 20% utilization; a new compute process resets the window",
+  "check_seconds": 60,
+  "max_wait_seconds": 44100,
+  "log": "/home/pranayp/frozen_data_experiments/multilabel_cnn/runs/20261119_resnet50_224_seed42/watcher.log",
+  "status_file": "/home/pranayp/frozen_data_experiments/multilabel_cnn/runs/20261119_resnet50_224_seed42/watcher_status.json",
+  "run_log": "/home/pranayp/frozen_data_experiments/multilabel_cnn/runs/20261119_resnet50_224_seed42/run.log",
+  "stop": "touch /home/pranayp/frozen_data_experiments/multilabel_cnn/runs/20261119_resnet50_224_seed42/watcher.stop or kill $(cat /home/pranayp/frozen_data_experiments/multilabel_cnn/runs/20261119_resnet50_224_seed42/watcher.pid)"
+ },
+ "launch_command": "cd /home/pranayp/fmd-analysis && sudo -u pranayp .venv/bin/python experiments/multilabel_ooi/train_multilabel.py --columns frozen17 --table /home/pranayp/frozen_data_experiments/splits/frozen_70_15_15_20261119/labels_17.csv --image-root /data/FMD_Data_26082026/frozen_data_20261117/images --out /home/pranayp/frozen_data_experiments/multilabel_cnn/runs/20261119_resnet50_224_seed42 --arch resnet50 --imgsz 224 --epochs 50 --batch 8 --lr 1e-4 --seed 42 --pos-weight on --expect-counts on 2>&1 | tee /home/pranayp/frozen_data_experiments/multilabel_cnn/runs/20261119_resnet50_224_seed42/run.log",
+ "launch_blocker": "None; the run completed at 2026-11-19T19:51Z.",
+ "artifacts_written": {
+  "metrics.json": [
+   "primary macro_auprc_17",
+   "per_class: support, prevalence, auprc, threshold, precision/recall/f1 and TP/FP/FN/TN at 0.5 and at the chosen cut, fired counts",
+   "macro_f1_0.5, macro_f1_chosen",
+   "bubble_cluster_confusion at 0.5 and at the chosen cut",
+   "recall_by_flag for FM, Fiber, EP and HEMA",
+   "split counts, table md5, split md5, gates md5, recipe, timing, history"
+  ],
+  "thresholds.json": ["per-class threshold, source, val F1 at the threshold and at 0.5"],
+  "predictions.npz": [
+   "val and test md5 and image_path",
+   "val and test truth (17 columns)",
+   "val and test scores (17 columns)",
+   "val and test gate flags (four size flags)",
+   "columns, gated_columns"
+  ],
+  "final.pt": ["last-epoch checkpoint; the trainer does not restore a best state"],
+  "run.log": ["full console output"]
+ },
+ "local_copy": {
+  "results": "experiments/frozen_data_experiments/multilabel_cnn/runs/20261119_resnet50_224_seed42/results",
+  "workbook": "experiments/frozen_data_experiments/multilabel_cnn/results/frozen_multilabel_results.xlsx",
+  "workbook_checks": "7,385 checks pass",
+  "weights": "final.pt stays on the VM; not copied"
+ },
+ "readout": "Counts first. The workbook reports macro F1, precision, recall, AUROC, AUPRC and inference per picture at 0.5, with per-class counts, a provisional selected-threshold sheet, a Pass fail block, the 148 truth-pass pictures by class and exact set, and per-class train/validation/test counts. The Pass fail sheet gives one verdict per picture under the agreed rule (TA, FR, TR, FA; TAR, TRR, FAR, FRR). AUROC is computed from the saved test scores; AUPRC is the run's primary.",
+ "next": "Review the workbook with the user and decide the operating point and the presentation. No re-run is needed."
+}

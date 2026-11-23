@@ -1,0 +1,28 @@
+{
+ "frozen_pictures": 13682,
+ "frozen_pictures_by_source_folder": {
+  "PRODUCTION-20260925": 10435,
+  "PRODUCTION-20261031": 3247
+ },
+ "frozen_only_pictures": 6911,
+ "frozen_only_pictures_by_source_folder": {
+  "PRODUCTION-20261031": 3247,
+  "PRODUCTION-20260925": 3664
+ },
+ "duplicate_pictures_covered_before": 6771,
+ "duplicates_with_identical_label_set": 3269,
+ "duplicates_with_changed_label_set": 3502,
+ "previous_only_pictures": 198,
+ "previous_only_by_source_file": {
+  "annotations.xml": 194,
+  "Updated Annotations 20260922.xml": 4
+ },
+ "previous_only_in_manifest": 198,
+ "previous_only_in_picture_table": 175,
+ "previous_pictures": 6969,
+ "frozen_empty_images": 47,
+ "knownness": {
+  "old_in_manifest": 10435,
+  "new_not_in_manifest": 3247
+ }
+}

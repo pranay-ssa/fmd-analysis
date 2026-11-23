@@ -1,6 +1,6 @@
 ---
 title: Handoff (state of the work)
-date: 2026-11-16
+date: 2026-11-23
 type: state
 status: active
 where: HANDOFF.md
@@ -8,112 +8,92 @@ where: HANDOFF.md
 
 # fmd-analysis - Handoff
 
-**Resume here:** both pieces of 16 November are done and reported. The four-class size pilot
-(Experiment 3.1) and the Experiment 1 redo under the new rule order (Experiment 3.2) are built,
-scored, verified and written up. The redo workbook is with the lead; the user holds a copy on the
-desktop. The one open decision is which rule order is the working rule. The two differ by 18
-pictures, all Bubble Cluster.
+**Resume here:** housekeeping. The frozen work is complete and verified but nothing is committed. The
+annotation export is now out of git, so the commit can be cut. Five questions are still with the lead;
+do not build on their answers until they land.
 
-**Numbers to quote (Experiment 3.1, four gated classes, 1,533-picture test set)**
+## Settled on 23 November
 
-- Stage 0, the Experiment 1 checkpoint: Foreign Matter AUROC 0.613, false-fire on below-cut pictures
-  84.5%, recall 93.7%; Fiber 0.572; Extraneous Polymer 0.922; HEMA 0.779, not judgeable.
-- `gate4_224`: Foreign Matter 0.745, false-fire 49.5%, recall 83.5%; Fiber 0.687; EP 0.879; HEMA
-  0.974. `gate4_448`: 0.759, 12.4%, 43.0%; Fiber 0.664.
-- Size-bin curve: the old model's mean Foreign Matter score falls with box size, 0.792 at 8-12
-  native pixels to 0.554 at 36-64; the gate arm rises across the cut at about 19.5 pixels, 0.445 to
-  0.556. First evidence the network can read size.
-- Pass/fail where size alone decides, 98 pictures: current model fails 13, 224 fails 9, 448 fails 4.
-  Quote beside recall.
+- **"FM and Debris" means the four size-tagged classes:** Foreign Matter, Fiber, Extraneous Polymer,
+  HEMA.
+- **Strict PASS allows an untagged object of another debris class.** A picture passes when none of the
+  four carries a size tag, provided it also has no presentation tag, no Bubble Cluster and no Wet
+  Package.
+- The doubt that this case might not occur in the data is answered: on the frozen split 755 pictures
+  carry one of the four classes with no size flag at all, and 244 of them pass, 32 in the test split.
+- Recount and decisions: `docs/decisions/2026-11-23-fm-debris-scope.md`.
+- **New point for the lead:** 18 of those 244 carry no Bubble box at all and still pass. If a Bubble-free
+  object set should not pass, the rule needs one more sentence.
 
-**Numbers to quote (Experiment 3.2 redo, same 1,121 test pictures as Experiment 1)**
+## Frozen split and run
 
-- Primary rule, Bubble Cluster fails: 784 fail, 778 caught (99.2%), 6 missed; 337 pass, 311 passed
-  (92.3%), 26 wrongly failed.
-- Secondary rule, Cluster passes: 766 fail, 760 caught, 6 missed; 355 pass, 325 passed (91.5%), 30
-  wrongly failed.
-- Decomposition: the Experiment 1 reading on the same two models gives 768 fail and 353 pass, exactly
-  the earlier number. Size correction 2 pictures; new order 18.
-- Condition model: macro AP 0.8017 over fifteen columns, per-class AUROC 0.931 to 1.000. Weak by F1:
-  Folded Lens 0.578 at precision 0.480, Wet Package 0.517, Bubble Cluster 0.682 at precision 0.533.
-- Size model at its cuts on the pictures carrying each class: Foreign Matter precision 0.260, recall
-  0.835, F1 0.396; Fiber 0.839 / 0.589 / 0.692; EP 1.000 / 0.375 / 0.545; HEMA 1.000 / 0.846 / 0.917
-  on 6 untagged pictures.
+| Item | Value |
+|---|---:|
+| Pictures | 13,631 |
+| Train / Validation / Test | 9,537 / 2,049 / 2,045 |
+| Columns | 17 (10 lens, 7 object) |
 
-**Earlier numbers still standing**
+- md5: `split.csv` `31a41925e0c349608ff77bf24d801585`, `labels_17.csv`
+  `0d76b29097bc3a95e1b4bb14e9c172cb`, `gates_4.csv` `c97cc04314d2e2b925cdd343e0b80058`. Verifier: 31 of
+  31 checks pass.
+- Run: 50 epochs, ResNet-50 at 224, seed 42, 26.8 minutes, no errors. Macro AUPRC 0.8423, macro AUROC
+  0.9624, macro F1 0.8040 at 0.5 and 0.8187 at the validation-chosen cuts. Inference 3.05 ms per
+  picture.
+- Pass/fail at 0.5: TA 11, FR 137, TR 1,896, FA 1. TAR 7.4 percent, TRR 99.9 percent, FAR 0.1 percent,
+  FRR 92.6 percent. Object-presence proxy; the run has no size output.
+- Workbook: `experiments/frozen_data_experiments/multilabel_cnn/results/frozen_multilabel_results.xlsx`,
+  verifier 7,385 checks pass. Weights stay on the VM. No re-run is needed to get another metric.
+- Lead-facing model review: `reports/frozen_multilabel_cnn_20261119/` (docx and pdf).
+- Duplicate pairs, reissued 23 November with oriented boxes, are with the lead:
+  `reports/frozen_pairs_20261117/pairs_obb.png` and the four single sheets. Renderer and verifier in
+  `experiments/annotations/`. Oriented boxes are now the standing rule:
+  `docs/decisions/2026-11-23-oriented-boxes-default.md`.
 
-- Experiment 1, frozen split: object macro AUPRC 0.6380, lens macro AUPRC 0.8815, exact match 0.811.
-  Rule as run: 760 of 768 failing pictures caught, 324 of 353 pass overall at 0.5. Only Bubble: 776
-  of 785, 322 of 336.
-- Experiment 2 detector, all pictures: test mAP50-95 0.1707 over 1,121 pictures and 5,472 boxes;
-  boxed-only arm 0.1475. All pictures stays primary.
+## Open with the lead
 
-**In flight**
+1. Sign-off on the pass/fail counts.
+2. The 147 held add-backs wait on client confirmation; 27 legacy pictures are discarded.
+3. The four duplicate pairs: the split keeps the highest-box copy; not yet confirmed.
+4. **Surface Groove**: 88 pictures carry it, it has no object boxes and is not one of the 17 columns, so
+   under the current text it passes unless another fail class is present. Is it a defect?
+5. The 18 Bubble-free pictures that pass under strict PASS.
 
-Nothing on the GPU. The VM holds three checkpoints, all git-ignored: `combined/final.pt` 91 MB
-`0bce7432`, `exp3_1_gate4_224_20261117/final.pt` 90 MB `36e5d7e0`,
-`exp3_1_gate4_448_20261117/final.pt` 90 MB `ff217331`; the condition model's checkpoint is at
-`run/exp3_2_cond15_20261116/final.pt`.
+## Next, in order
 
-**Next, in order**
+1. Commit the frozen work. `data/Annotations.zip` and `data/Frozen Annotation Dataset/` are gitignored;
+   the derived split, labels and gates stay tracked.
+2. Review the workbook with the user.
+3. Decide whether the main table stays at 0.5 or moves to the provisional validation cuts.
+4. Confirm the AUROC and AUPRC framing with the lead.
+5. Finalize the workbook.
 
-1. The lead's rule decision. If she takes the primary order, nothing re-runs. If she takes the
-   secondary order, the headline becomes 766 / 760 / 355 / 325 without retraining.
-2. A second seed for the condition model if the 18-picture gap has to be separated from run noise.
-3. A threshold sweep for `gate4_448` if its 43% recall is to be read as tuning rather than a model
-   difference.
-4. After the rule is settled, the production wiring: one verdict path, the two rule ids in
-   `pass_fail_block.py`, and a reader-facing definition of the guard set.
+## Housekeeping state
 
-**State to know**
+- `.gitignore` now excludes the raw annotation export (40 MB, 27 XML files, re-exportable from CVAT).
+  `data/Annotations.zip` goes too, because it only repacks XMLs already tracked.
+- `notiondocs.md` is deprioritised: the board is rarely used and the knowledge base at `D:/SecondBrain`
+  is where information is kept. Backlog if it is ever resumed: 12 entries verified but unpushed,
+  5 still draft.
+- `docs/INDEX.md` regenerated: 197 files, 0 without a header.
+- The wayfinder effort for OOI point 4 is closed; its kanban card is an index card only.
 
-- Frozen split v8: `run/split_20261103_v8/` (7,470 rows, md5 `1a71d66d2de384cf47a3fcf7d9115baa`);
-  5,239 / 1,110 / 1,121. Untouched.
-- Pilot split: `run/split_exp3_1_20261116/` (7,555 rows, 4,964 / 1,058 / 1,533); labels md5
-  `222c873f17a9f101d32b0b36e210e5e3`; 327 pictures left train or validation, 85 added from outside
-  v8, 41 already in v8 test.
-- Redo condition table: `run/split_exp3_2_20261116/labels_conditions.csv`, md5
-  `9f3ef6bc582f3e4586de414510de01e7`, 7,470 rows on the frozen assignment, fifteen columns.
-- Annotation of record: `run/eda_full_20261029/resolved_labels.csv` (44,791 rows, md5
-  `f61ea0b90df095ebe52d1332f8bfdb8a`); `picture_table.csv` keyed on `md5`, path column
-  `winning_path`.
-- Images on the VM at `/data/FMD_Data_26082026/fmd_temp_images/{winning_path}`, 2448 by 2048.
-- Workbooks: `reports/multilabel_production/size_gate_pilot_20261116.xlsx` (7 sheets) and
-  `size_gate_redo_20261116.xlsx` (9 sheets, including the all-class table). Both verified.
-- Kanban is not in use. The nine cards from 16 November are archived; work runs through subagents
-  and direct SSH on the VM.
+## Decisions settled, do not relitigate
 
-**Open items that need a human**
+- Clear is excluded: 42 pictures.
+- The six classes under 200 pictures are removed as columns only; no picture drops.
+- One copy per duplicate pair, highest box count; the 7/7 tie keeps the plain name.
+- Split 70/15/15, seed 42, rows sorted by md5 before assignment.
+- Counts first, not percentages.
+- The workbook main table uses 0.5; the validation-chosen cuts are a separate provisional sheet.
+- Pass/fail rule as written in `docs/decisions/2026-11-20-pass-fail-rule.md`, with the scope confirmed in
+  `docs/decisions/2026-11-23-fm-debris-scope.md`.
+- Oriented boxes everywhere; upright only on request and labelled as upright.
+- The watcher uses a 10-minute quiet window below 10,000 MiB and 20 percent; a new compute process resets
+  it.
 
-- Which rule order is the working rule: the lead's call. Bubble Cluster is the only difference.
-- The size flag reads about 353 microns at our scale, not the client's 300; the scale source is
-  unresolved.
-- HEMA has 6 untagged test pictures, so its size read says little.
-- One run per model. No repeat-seed comparison on this line yet.
-- Bubble Scatter has one test picture; its F1 is noise.
+## Where the history lives
 
-**Decisions settled, do not relitigate**
-
-- Two specialists, one verdict. A picture cannot be a training example for its lens tag and an
-  unseen example for its size class.
-- The rule order is a presentation change, not a recount. Experiment 1 already counted both orders;
-  the primary order now leads.
-- Size truth for the four gated classes: below the cut passes on that class and only that class. A
-  lens condition or Wet Package still fails the picture.
-- No pre-registered bars on the size pilot; it is a placeholder judged by the lead.
-- `gate4_224` is the reference size arm; `gate4_448` is a trade, not a better model.
-- Weighting is inverse frequency on the training split only; thresholds come from validation only,
-  highest F1, ties to the higher threshold.
-- Object classes, not the micron gate, are the training target for the condition model; the gate is
-  the size model's truth.
-- Clear is exclusive; unannotated pictures are out; Bubble Irregular and Stretched Bubble fold into
-  Bubble.
-- Reader-facing artifacts carry no internal names, paths, ticket ids or role attribution; every doc
-  carries the five-line header.
-
-**Where the history lives**
-
-`docs/sessions/2026-W47.md` covers 16 November; `2026-W46.md` the week before. The pilot map is
-`docs/wayfinder/exp3_1_size_gate_20261116.md`; the redo is
-`docs/wayfinder/exp3_2_redo_20261116.md`; the rules are
-`docs/decisions/2026-11-16-size-rule-order-and-gate-truth.md`.
+`docs/sessions/2026-W47.md` covers 16 to 19 November. Decisions are one file each under
+`docs/decisions/`. Split and run records are under `experiments/frozen_data_experiments/`. The EDA
+workbook and its verifier are in `reports/frozen_eda_20261118/`, with state in
+`docs/frozen_eda_workbook_20261118.md`.

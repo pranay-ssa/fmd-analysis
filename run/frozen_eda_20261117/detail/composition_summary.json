@@ -1,0 +1,43 @@
+{
+ "pictures": 13682,
+ "classes_per_picture": {
+  "0": 5,
+  "1": 4153,
+  "2": 4236,
+  "3": 2756,
+  "4": 1263,
+  "5": 716,
+  "6": 361,
+  "7": 155,
+  "8": 33,
+  "9": 4
+ },
+ "single": {
+  "one OOI box class": 672,
+  "one LP tag": 3439,
+  "clear, no mark": 42
+ },
+ "single_total": 4153,
+ "single_by_class_total": 4111,
+ "two": {
+  "OOI + OOI": 2565,
+  "LP + OOI": 1507,
+  "LP + LP": 164
+ },
+ "two_total": 4236,
+ "three": {
+  "1 LP + 2 OOI": 1529,
+  "3 OOI": 1019,
+  "2 LP + 1 OOI": 208
+ },
+ "three_total": 2756,
+ "multi_total": 9524,
+ "pairs_distinct": 152,
+ "top_pair": [
+  [
+   "P2_BB",
+   "P2_BC"
+  ],
+  4943
+ ]
+}

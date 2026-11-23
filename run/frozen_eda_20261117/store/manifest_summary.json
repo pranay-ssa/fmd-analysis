@@ -1,0 +1,24 @@
+{
+ "rows": 13682,
+ "with_marks": 13635,
+ "no_marks": 47,
+ "status": {
+  "duplicate": 6771,
+  "new_old_batch": 3664,
+  "new_upload": 3247
+ },
+ "clear_source": 2333,
+ "tag_rows": 16306,
+ "box_rows": 119292,
+ "addback_candidates_by_name": 175,
+ "addback_final_rows": 174,
+ "addback_ready": 121,
+ "addback_fold_into_bubble": 26,
+ "addback_hold_reference": 27,
+ "addback_pending_client": 147,
+ "addback_discarded": 27,
+ "addback_dropped": 1,
+ "missing_picture_key": 0,
+ "duplicate_picture_keys": 4,
+ "content_duplicate_rows": 8
+}

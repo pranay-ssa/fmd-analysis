@@ -1,0 +1,23 @@
+[
+ {
+  "pair": 1,
+  "record_a": "20241102_004906_L24_C5_9471.bmp",
+  "record_b": "20241102_004906_L24_C5_9471_0.6629.bmp",
+  "boxes_a": 7,
+  "boxes_b": 7,
+  "crop": {
+   "x0": 466,
+   "y0": 365,
+   "x1": 1772,
+   "y1": 1533
+  },
+  "matched": 7,
+  "median_iou": 0.9304,
+  "median_corner_shift_px": 0.326,
+  "largest_corner_shift_px": 2.955,
+  "boxes_only_in_a": 0,
+  "boxes_only_in_b": 0,
+  "job": "4521940",
+  "mode": "oriented"
+ }
+]

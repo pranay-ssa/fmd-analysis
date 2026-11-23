@@ -1,0 +1,16 @@
+class,name,kind,pictures
+P1_MPP,Missing Primary Package,LP,1376
+P1_PPM,Package Misalignment,LP,958
+P1_COC,Cavity Off Center,LP,805
+P2_BB,Bubble,OOI,576
+F2_FOV,View Obstructed,LP,221
+P1_NL,No Lens,LP,45
+P3_FM,Foreign Matter,OOI,39
+P3_FIB,Fiber,OOI,32
+P2_LD,Low Dose,LP,29
+P2_BC,Bubble Cluster,OOI,10
+P3_EP,Extraneous Polymer,OOI,9
+P2_WP,Wet Package,OOI,3
+P2_LOC,Lens Off Center,LP,3
+P3_HE,HEMA,OOI,3
+P2_DC,Dirty Camera,LP,2

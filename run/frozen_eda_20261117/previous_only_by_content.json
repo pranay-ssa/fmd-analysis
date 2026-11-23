@@ -1,0 +1,21 @@
+{
+ "previous_only_by_name": 198,
+ "same_content_present_in_frozen": 23,
+ "genuinely_absent_from_frozen": 175,
+ "carrying_labels": 198,
+ "genuinely_absent_and_labelled": 175,
+ "by_prev_file": {
+  "annotations.xml": 194,
+  "Updated Annotations 20260922.xml": 4
+ },
+ "label_counts": {
+  "Bubble Irregular": 26,
+  "Wet Package": 25,
+  "Fiber": 1,
+  "Bubble": 72,
+  "Bubble On Edge": 14,
+  "Bubble Cluster": 21,
+  "P1_ML": 3,
+  "Bubble On 123": 13
+ }
+}
