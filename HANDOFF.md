@@ -8,9 +8,8 @@ where: HANDOFF.md
 
 # fmd-analysis - Handoff
 
-**Resume here:** housekeeping. The frozen work is complete and verified but nothing is committed. The
-annotation export is now out of git, so the commit can be cut. Five questions are still with the lead;
-do not build on their answers until they land.
+**Resume here:** the frozen work is committed at `3214483` (173 files); nothing is pushed yet. Five
+questions are still with the lead; do not build on their answers until they land.
 
 ## Settled on 23 November
 
@@ -60,8 +59,7 @@ do not build on their answers until they land.
 
 ## Next, in order
 
-1. Commit the frozen work. `data/Annotations.zip` and `data/Frozen Annotation Dataset/` are gitignored;
-   the derived split, labels and gates stay tracked.
+1. Push `3214483` when an off-machine copy is wanted.
 2. Review the workbook with the user.
 3. Decide whether the main table stays at 0.5 or moves to the provisional validation cuts.
 4. Confirm the AUROC and AUPRC framing with the lead.
