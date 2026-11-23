@@ -47,8 +47,12 @@ not from a rule change.
 
 ## Still open
 
-- **Surface Groove.** 88 pictures carry it, it has no object boxes, and it is not one of the 17 columns.
-  The pass/fail rule does not mention it, so under the current text a Surface Groove picture passes
-  unless it also carries another fail class. The lead has not ruled on whether it is a defect.
+- **Surface Groove.** 88 pictures carry it, as 132 boxes over the frozen export, but it was removed as a
+  column under the 200-picture cut, so it is not one of the 17 columns and the pass/fail rule does not
+  mention it. Under the current text a Surface Groove picture passes unless it also carries another fail
+  class. The lead has not ruled on whether it is a defect.
+  - The cost of the ruling is one picture. Of the 88, 87 already fail for another reason; the single
+    exception is a train picture with one Surface Groove box and seven Bubble boxes and no tags. Counted
+    per split: 61 train, 15 validation, 12 test, and all 12 test pictures already fail.
 - **The model limit still stands.** This run has no size output, so a predicted gated class is a
   predicted fail and only the truth uses the flag. The 244 figure is a truth-side count.

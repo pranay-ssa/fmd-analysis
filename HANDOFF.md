@@ -53,8 +53,11 @@ questions are still with the lead; do not build on their answers until they land
 1. Sign-off on the pass/fail counts.
 2. The 147 held add-backs wait on client confirmation; 27 legacy pictures are discarded.
 3. The four duplicate pairs: the split keeps the highest-box copy; not yet confirmed.
-4. **Surface Groove**: 88 pictures carry it, it has no object boxes and is not one of the 17 columns, so
-   under the current text it passes unless another fail class is present. Is it a defect?
+4. **Surface Groove**: 88 pictures carry it, as 132 boxes, but it is one of the six classes removed as
+   columns under the 200-picture cut, so it is not one of the 17 columns. Under the current text such a
+   picture passes unless another fail class is present. Exactly one picture in the whole split (train)
+   changes verdict if it counts as a defect; all 12 test pictures carrying it already fail for other
+   reasons. Is it a defect?
 5. The 18 Bubble-free pictures that pass under strict PASS.
 
 ## Next, in order
