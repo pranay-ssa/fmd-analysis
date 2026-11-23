@@ -112,12 +112,12 @@ blobs,boxes,class,code,content,corner_hits,corners_in_panel,edges_ok,grey_diff,p
 1,1,Fiber,P3_FIB,,,,True,,,20241110_024940_L24_C13_9997_0.6242.bmp,,,0,2.54,,,,
 1,1,Foreign Matter,P3_FM,,,,True,,,20241110_024940_L24_C13_9997_0.6242.bmp,,,0,1.2,,,,
 1,1,HEMA,P3_HE,,,,True,,,20241110_024940_L24_C13_9997_0.6242.bmp,,,0,3.43,,,,
-,,Bubble,P2_BB,ok,4,True,,1.82,53.69,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757).bmp,359.1,51.87,,,1075.67,1066.0,932.2,918.85
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757).bmp,359.1,,,,1075.67,1066.0,932.2,918.85
 ,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757).bmp,50.3,,,,1371.69,1362.35,831.46,822.19
 ,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757).bmp,92.0,,,,1480.49,1472.05,1108.79,1100.17
-3,3,Bubble,P2_BB,,,,True,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757).bmp,,,0,2.72,,,,
+3,3,Bubble,P2_BB,,,,True,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757).bmp,,,0,1.33,,,,
 ,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp,77.9,,,,1480.33,1471.44,1108.77,1099.86
 ,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp,55.1,,,,1370.74,1362.35,831.36,822.86
 ,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp,359.1,,,,1345.46,1340.48,839.57,834.54
-,,Bubble,P2_BB,ok,4,True,,1.36,51.04,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp,359.1,49.68,,,1076.87,1066.0,932.58,918.39
-4,4,Bubble,P2_BB,,,,True,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp,,,0,3.38,,,,
+,,Bubble,P2_BB,n/a (too small at this scale),4,True,,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp,359.1,,,,1076.87,1066.0,932.58,918.39
+4,4,Bubble,P2_BB,,,,True,,,20260816_093047_L26_PalletGHF0816135159_Cavity12_B01BJQ6_Fail7_Score(0.989757)_0.9833_0.5392.bmp,,,0,1.02,,,,

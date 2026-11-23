@@ -21,8 +21,15 @@ questions are still with the lead; do not build on their answers until they land
 - The doubt that this case might not occur in the data is answered: on the frozen split 755 pictures
   carry one of the four classes with no size flag at all, and 244 of them pass, 32 in the test split.
 - Recount and decisions: `docs/decisions/2026-11-23-fm-debris-scope.md`.
-- **New point for the lead:** 18 of those 244 carry no Bubble box at all and still pass. If a Bubble-free
-  object set should not pass, the rule needs one more sentence.
+- **Surface Groove is not a fail class today.** It sits below the 200-picture cut, so it is neither a
+  column nor a fail condition. When augmentation brings the class to about 200 pictures it becomes a fail
+  class and takes a column, on the same trigger, with no new decision needed. 88 pictures carry it and 87
+  already fail for another reason, so today it changes one train verdict and no test number.
+- **Precedence, restated by the lead:** fail dominates. A picture fails if any fail condition is on it,
+  and passes only when none is. Pass conditions are a Bubble box or an untagged size-gated class. That
+  settles the 18 Bubble-free passes: they pass on their untagged class, not on an empty mark set. No
+  picture in the split has an empty mark set.
+- Decision file: `docs/decisions/2026-11-23-surface-groove-threshold.md`.
 
 ## Frozen split and run
 
@@ -47,18 +54,22 @@ questions are still with the lead; do not build on their answers until they land
   `reports/frozen_pairs_20261117/pairs_obb.png` and the four single sheets. Renderer and verifier in
   `experiments/annotations/`. Oriented boxes are now the standing rule:
   `docs/decisions/2026-11-23-oriented-boxes-default.md`.
+- Pair 4 framing, from the lead's feedback: only the black border is removed. The window is the
+  specimen extent from lit runs (>= 24 px) padded 5 percent, plus 5 percent at the top and right,
+  which the user marked as too tight. 823 lit pixels of 1.36 million fall outside it, all 4 to 15
+  grey levels in 267 isolated clusters (sensor speckle). Panel scale 0.483, lens about 660 px in a
+  760 px panel, visible margins 73/68/68/76. Pairs 1 to 3 keep the annotated region.
+  `--frame trim|whole|crop` switches the modes.
+- The pair-4 framing is not a new method: it is the content-anchored border crop specified on
+  2026-09-03 in `reports/preprocessing/fixed_size_crop_spec.md`. The run-length detection there
+  answers that spec's own guard-cause note about a far streak inflating the content box. Noted in
+  that doc and in the figure reference; present it as the original border crop.
 
 ## Open with the lead
 
 1. Sign-off on the pass/fail counts.
 2. The 147 held add-backs wait on client confirmation; 27 legacy pictures are discarded.
 3. The four duplicate pairs: the split keeps the highest-box copy; not yet confirmed.
-4. **Surface Groove**: 88 pictures carry it, as 132 boxes, but it is one of the six classes removed as
-   columns under the 200-picture cut, so it is not one of the 17 columns. Under the current text such a
-   picture passes unless another fail class is present. Exactly one picture in the whole split (train)
-   changes verdict if it counts as a defect; all 12 test pictures carrying it already fail for other
-   reasons. Is it a defect?
-5. The 18 Bubble-free pictures that pass under strict PASS.
 
 ## Next, in order
 
@@ -67,6 +78,8 @@ questions are still with the lead; do not build on their answers until they land
 3. Decide whether the main table stays at 0.5 or moves to the provisional validation cuts.
 4. Confirm the AUROC and AUPRC framing with the lead.
 5. Finalize the workbook.
+6. When the Surface Groove augmentation lands and the class clears 200 pictures: add it as an 18th column,
+   retrain, and say in the report that the result is not comparable with the 17-column run.
 
 ## Housekeeping state
 

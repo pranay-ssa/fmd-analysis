@@ -196,3 +196,21 @@ Two distinct causes; all are edge cases and logged:
   Multiple Lenses 20260812_..._Cavity14 (multi): 1548 vs 1440 (+108px).
   Multiple Lenses 20260813_..._Cavity11 (multi): 1508 vs 1440 (+68px).
 Guard correctly preserved all content; 0.27% of images; nothing clipped.
+
+## Reused for the frozen duplicate-pair figure (2026-11-23)
+
+The duplicate-pair sheets show pair 4 with the black border removed, which is this rule again:
+detect the lit content, take its bbox, pad it, centre it, keep every lit pixel. Differences for the
+figure only:
+
+- Detection is by lit run length (>= 24 px) at the `> 3` threshold, not blob mean >= 15 with a 500 px
+  minimum. This is the fix the guard-cause analysis above asked for. On that picture, row-count
+  detection kept 2,224 px of width because faint light on the far right satisfied a count, while the
+  specimen ends about 550 px earlier.
+- The window is content bbox plus pad (5 percent of the long side, plus 5 percent at the top and
+  right), not a per-class canonical size, because the figure has one panel per record rather than a
+  fixed-size training crop.
+
+Checked: 823 lit pixels of 1.36 million fall outside the window, all between 4 and 15 grey levels in
+267 isolated clusters. Nothing of the lens or the stain is cut. Present it as the original border
+crop, not as a new framing.

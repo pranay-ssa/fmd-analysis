@@ -12,13 +12,13 @@
   "total": 95
  },
  "content": {
-  "passed": 10,
-  "total": 10
+  "passed": 8,
+  "total": 8
  },
  "stray": {
   "passed": 27,
   "total": 27
  },
- "content_not_measured": 85,
+ "content_not_measured": 87,
  "all_passed": true
 }

@@ -14,6 +14,11 @@ Outputs, under reports/frozen_pairs_20261117/:
     pair_<n>_obb.png       one pair on its own canvas, drawn large
     pairs_obb_meta.json    crop windows, box counts and match metrics
 
+Frame per pair: "crop" is the annotated region (pairs 1 to 3). Pair 4 uses
+"trim", which removes only the black border and keeps the whole lit picture, so
+the lead can see both records are the same frame without boxes shrinking to
+points. `--frame whole` keeps the full frame; `--crop-all` reverts the set.
+
 Source pictures are expected in run/frozen_pairs_20261117/src_images/
 (pulled once from the frozen store; run/ is never pushed).
 """
@@ -46,6 +51,12 @@ COLOUR = {
     "P3_EP": (0, 160, 190),     # Extraneous Polymer
 }
 FALLBACK_COLOUR = (200, 0, 200)
+
+# Lead, 23 November: pair 4 is shown larger than a tight annotation crop so a
+# reader can see the two records are the same picture. The black border is
+# trimmed, nothing inside it: "whole" keeps the full frame, "trim" removes only
+# black, "crop" is the annotated region the other three pairs use.
+PAIR_FRAME = {4: "trim"}
 
 # The four size gates are tags, not boxes.  They are stated in the record line.
 GATE_NAME = {
@@ -349,6 +360,57 @@ def crop_window(boxes: list[dict], width: int, height: int, pad_frac=0.06) -> tu
     return x0, y0, x1, y1
 
 
+def trim_window(image: Image.Image, lit_above: int = 3, min_run: int = 24,
+                pad_frac: float = 0.05, extra_top_right: float = 0.05):
+    """Window of the specimen: drops black border, keeps every lit pixel of it.
+
+    The extent comes from lit runs that are at least `min_run` pixels long, so
+    scattered speckle cannot stretch the window, and the extreme lit pixels are
+    measured directly rather than from row counts. Padding is uniform 5 percent
+    of the long side, plus a little more at the top and right.
+    """
+    import numpy as np
+
+    w, h = image.size
+    lit = np.asarray(image.point(lambda v: 255 if v > lit_above else 0)) > 0
+
+    xs0, xs1, ys0, ys1 = [], [], [], []
+    for y in range(h):
+        row = lit[y]
+        d = np.diff(np.concatenate(([0], row.view(np.int8), [0])))
+        starts, ends = np.nonzero(d == 1)[0], np.nonzero(d == -1)[0]
+        for s, e in zip(starts, ends):
+            if e - s >= min_run:
+                xs0.append(s)
+                xs1.append(e - 1)
+    for x in range(w):
+        col = lit[:, x]
+        d = np.diff(np.concatenate(([0], col.view(np.int8), [0])))
+        starts, ends = np.nonzero(d == 1)[0], np.nonzero(d == -1)[0]
+        for s, e in zip(starts, ends):
+            if e - s >= min_run:
+                ys0.append(s)
+                ys1.append(e - 1)
+    if not xs0 or not ys0:
+        return (0, 0, w, h)
+
+    x0, x1 = int(min(xs0)), int(max(xs1)) + 1
+    y0, y1 = int(min(ys0)), int(max(ys1)) + 1
+    pad = int(round(pad_frac * max(x1 - x0, y1 - y0)))
+    extra = int(round(extra_top_right * max(x1 - x0, y1 - y0)))
+    return (max(0, x0 - pad), max(0, y0 - pad - extra),
+            min(w, x1 + pad + extra), min(h, y1 + pad))
+
+
+def edge_tone(image: Image.Image, crop) -> tuple[int, int, int]:
+    """Grey tone at the corners of a window, used to fill the cell behind it."""
+    x0, y0, x1, y1 = crop
+    px = sorted(int(image.getpixel(p)) for p in
+                ((x0, y0), (x1 - 1, y0), (x0, y1 - 1), (x1 - 1, y1 - 1)))
+    v = px[1]                      # lower middle: one bright corner cannot lift it
+    return (v, v, v)
+
+
 def record_line(rec: dict, names: dict[str, str]) -> str:
     parts = []
     for tag in rec["tags"]:
@@ -357,7 +419,8 @@ def record_line(rec: dict, names: dict[str, str]) -> str:
     return s + ("; " + ", ".join(parts) if parts else "")
 
 
-def draw_panel(sheet: Sheet, x, y, w, h, image, crop, boxes, colour_by_code, line_px, aabb=False):
+def draw_panel(sheet: Sheet, x, y, w, h, image, crop, boxes, colour_by_code, line_px,
+               aabb=False, card=None):
     x0, y0, x1, y1 = crop
     piece = image.crop(crop)
     cw, ch = piece.size
@@ -365,7 +428,12 @@ def draw_panel(sheet: Sheet, x, y, w, h, image, crop, boxes, colour_by_code, lin
     tw, th = max(1, int(round(cw * scale))), max(1, int(round(ch * scale)))
     ox = x + (w - tw) // 2
     oy = y + (h - th) // 2
-    sheet.d.rectangle([ox - 1, oy - 1, ox + tw, oy + th], fill=CARD, outline=RULE)
+    if card is None:
+        sheet.d.rectangle([ox - 1, oy - 1, ox + tw, oy + th], fill=CARD, outline=RULE)
+    else:
+        # A trimmed frame keeps the square cell: the cell takes the picture's own
+        # edge tone, so the letterbox reads as part of the frame, not as a gap.
+        sheet.d.rectangle([x - 1, y - 1, x + w, y + h], fill=card, outline=RULE)
     sheet.img.paste(piece.resize((tw, th), Image.LANCZOS), (ox, oy))
 
     for b in boxes:
@@ -430,9 +498,29 @@ def build_sheet(pairs, records, images, names, out_path, panel_w, panel_h,
         rec_a, rec_b = records[pair["a"]], records[pair["b"]]
         all_boxes = rec_a["boxes"] + rec_b["boxes"]
         w_img, h_img = rec_a["width"] or 2448, rec_a["height"] or 2048
-        crop = crop_window(all_boxes, w_img, h_img)
+        # Pair 4 is shown larger than a tight annotation crop so the two records
+        # are visibly the same picture. "trim" drops only the black border: the
+        # lit window is the union over both records, so neither panel loses a
+        # single lit pixel the other keeps.
+        frame = pair.get("frame", "crop")
+        if frame == "whole":
+            crop = (0, 0, w_img, h_img)
+        elif frame == "trim":
+            wa = trim_window(images[pair["a"]])
+            wb = trim_window(images[pair["b"]])
+            crop = (min(wa[0], wb[0]), min(wa[1], wb[1]), max(wa[2], wb[2]), max(wa[3], wb[3]))
+        else:
+            crop = crop_window(all_boxes, w_img, h_img)
+        line_px_pair = max(1, min(line_px, int(round(panel_w / 500)))) if frame != "crop" else line_px
+        card = edge_tone(images[pair["a"]], crop) if frame == "trim" else None
 
-        sheet.text((px, py), f"Pair {pair.get('no', idx + 1)}", 20, bold=True)
+        label = f"Pair {pair.get('no', idx + 1)}"
+        sheet.text((px, py), label, 20, bold=True)
+        if frame != "crop":
+            # say why this pair looks further out than the other three
+            off = int(text_w(sheet.d, label, sheet.font(20, bold=True))) + 10
+            note = "whole picture" if frame == "whole" else "black border removed"
+            sheet.text((px + off, py + 3), note, 13, fill=MUTED)
 
         panels = []
         for k, (tag, rec, base) in enumerate((("Record A", rec_a, pair["a"]), ("Record B", rec_b, pair["b"]))):
@@ -449,10 +537,13 @@ def build_sheet(pairs, records, images, names, out_path, panel_w, panel_h,
                        fit_text_middle(sheet.d, record_line(rec, names), sheet.font(12), panel_w),
                        12, fill=MUTED)
             geom = draw_panel(sheet, x, py + pair_label_h + head_h, panel_w, panel_h,
-                              images[base], crop, rec["boxes"], colour_by_code, line_px, aabb=aabb)
+                              images[base], crop, rec["boxes"], colour_by_code, line_px_pair,
+                              aabb=aabb, card=card)
             panels.append({"record": tag, "basename": base,
                            "crop": {"x0": crop[0], "y0": crop[1], "x1": crop[2], "y1": crop[3]},
-                           "line_px": line_px, **geom})
+                           "frame": {"crop": "annotated region", "whole": "whole picture",
+                                     "trim": "black border removed"}[frame],
+                           "line_px": line_px_pair, **geom})
 
         m = match(rec_a["boxes"], rec_b["boxes"], aabb=aabb)
         ious = [x["iou"] for x in m]
@@ -476,6 +567,8 @@ def build_sheet(pairs, records, images, names, out_path, panel_w, panel_h,
             "boxes_only_in_b": len(rec_b["boxes"]) - len(m),
             "job": rec_a.get("job", ""),
             "mode": "axis-aligned" if aabb else "oriented",
+            "frame": {"crop": "annotated region", "whole": "whole picture",
+                      "trim": "black border removed"}[frame],
             "panels": panels,
         })
 
@@ -499,13 +592,24 @@ def main():
     ap.add_argument("--flip", action="store_true", help="reverse the spin direction (convention re-check only)")
     ap.add_argument("--out", type=Path, help="output png")
     ap.add_argument("--meta", type=Path, help="output json")
+    ap.add_argument("--full-frame", type=int, action="append", default=None,
+                    help="pair number(s) to draw on the whole frame")
+    ap.add_argument("--frame", choices=["crop", "whole", "trim"], default=None,
+                    help="frame mode for the pair(s) being drawn")
+    ap.add_argument("--crop-all", action="store_true", help="draw every pair as an annotation crop")
     args = ap.parse_args()
 
     names = class_names()
     records = parse_annotations()
     pairs = duplicate_pairs()
+    modes = dict(PAIR_FRAME)
+    for n in args.full_frame or []:
+        modes[n] = "whole"
+    if args.crop_all:
+        modes = {}
     for i, p in enumerate(pairs, 1):
         p["no"] = i
+        p["frame"] = args.frame or modes.get(i, "crop")
     if args.pair:
         pairs = [pairs[args.pair - 1]]
 

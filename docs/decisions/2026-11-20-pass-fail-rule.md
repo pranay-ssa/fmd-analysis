@@ -27,6 +27,11 @@ The pass/fail verdict is one per picture, under this rule and no other:
 The size-gated classes are Foreign Matter, Fiber, Extraneous Polymer and HEMA. Clear is excluded from
 the frozen set, so it does not enter the counts.
 
+Fail dominates. A picture that carries any fail condition fails, whatever pass condition is also on it,
+and a picture passes only when no fail condition is present. Surface Groove is not a fail class at the
+current cut, because the class sits below the 200-picture cut; it becomes one when the class clears that
+cut. See `2026-11-23-surface-groove-threshold.md`.
+
 Per class, the four counts are one-versus-rest: for that class, TA is class absent and predicted
 absent; FR is class absent and predicted present; TR is class present and predicted present; FA is
 class present and predicted absent. Each class row uses all 2,045 test pictures. These rows are not
