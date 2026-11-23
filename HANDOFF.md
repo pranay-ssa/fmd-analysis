@@ -47,8 +47,13 @@ questions are still with the lead; do not build on their answers until they land
   picture.
 - Pass/fail at 0.5: TA 11, FR 137, TR 1,896, FA 1. TAR 7.4 percent, TRR 99.9 percent, FAR 0.1 percent,
   FRR 92.6 percent. Object-presence proxy; the run has no size output.
-- Workbook: `experiments/frozen_data_experiments/multilabel_cnn/results/frozen_multilabel_results.xlsx`,
-  verifier 7,385 checks pass. Weights stay on the VM. No re-run is needed to get another metric.
+- Workbook: `experiments/frozen_data_experiments/multilabel_cnn/results/frozen_multilabel_results.xlsx`. A
+  fresh build from the builder passes all 7,385 verifier checks. The file in the repository is not that
+  build: it was re-saved in Excel on 20 November, which inserted a row in Summary, typed an AUROC caveat
+  sentence into Per class and dropped the freeze panes on two sheets. It does not pass its own verifier.
+  Decide whether to fold that sentence into the builder and rebuild, or to keep the hand-edited file as
+  the delivered one and quote no verifier count for it. Weights stay on the VM. No re-run is needed to
+  get another metric.
 - Lead-facing model review: `reports/frozen_multilabel_cnn_20261119/` (docx and pdf).
 - Duplicate pairs, reissued 23 November with oriented boxes, are with the lead:
   `reports/frozen_pairs_20261117/pairs_obb.png` and the four single sheets. Renderer and verifier in
@@ -88,8 +93,11 @@ questions are still with the lead; do not build on their answers until they land
 - `notiondocs.md` is deprioritised: the board is rarely used and the knowledge base at `D:/SecondBrain`
   is where information is kept. Backlog if it is ever resumed: 12 entries verified but unpushed,
   5 still draft.
-- `docs/INDEX.md` regenerated: 197 files, 0 without a header.
+- `docs/INDEX.md` regenerated: 199 files, 0 without a header.
 - The wayfinder effort for OOI point 4 is closed; its kanban card is an index card only.
+- Stale Word lock file removed from `reports/frozen_multilabel_cnn_20261119/`. The `.bak` files stay: the
+  ignore rules keep them on disk on purpose.
+- Split verifier re-run today: 31 of 31 checks pass, md5s unchanged.
 
 ## Decisions settled, do not relitigate
 
